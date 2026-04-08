@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SettleSmart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing-page">
+  <div class="page-glow glow-left"></div>
+  <div class="page-glow glow-right"></div>
+
+  <nav class="navbar navbar-expand-lg ss-navbar sticky-top">
+    <div class="container-xxl">
+      <a class="navbar-brand ss-brand" href="index.html">
+        <span class="ss-brand-mark">S</span>
+        <span>SettleSmart</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-it-works">Why students use it</a></li>
+          <li class="nav-item"><a class="nav-link" href="#what-you-get">What you get</a></li>
+          <li class="nav-item mt-3 mt-lg-0"><button class="btn btn-primary ss-btn ss-btn-primary" data-open-onboarding>Start my shortlist</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-wrap">
+      <div class="container-xxl">
+        <div class="hero-shell">
+          <div class="row align-items-center g-5">
+            <div class="col-12 col-lg-6">
+              <span class="ss-pill">For international students moving to Australian cities</span>
+              <h1 class="hero-title">Shortlist suburbs that feel right for your student life.</h1>
+              <p class="hero-copy">
+                SettleSmart helps you move beyond scattered advice and discover suburbs through culture, language comfort,
+                budget, commute, and everyday student lifestyle fit.
+              </p>
+
+              <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                <button class="btn btn-primary ss-btn ss-btn-primary" data-open-onboarding>Start my shortlist</button>
+                <a href="#how-it-works" class="hero-text-link">See how it works <span>→</span></a>
+              </div>
+
+              <div class="hero-info-strip">
+                <div class="info-chip-static">City → preferences → suburb shortlist</div>
+                <div class="info-chip-static">Student-first decisions</div>
+                <div class="info-chip-static accent">Visual and confidence-building</div>
+              </div>
+
+              <div class="row g-3 hero-metrics mt-1">
+                <div class="col-12 col-sm-6 col-xl-4">
+                  <div class="metric-card">
+                    <strong>Suburb-focused</strong>
+                    <span>Not just city-level browsing</span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                  <div class="metric-card">
+                    <strong>6 guided steps</strong>
+                    <span>Fast onboarding with clear progress</span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                  <div class="metric-card">
+                    <strong>Student-fit logic</strong>
+                    <span>Budget, belonging, and daily routine</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="hero-visual-panel">
+                <div class="city-stack" id="heroCityStack"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="how-it-works">
+      <div class="container-xxl">
+        <div class="section-header text-center">
+          <span class="ss-pill ss-pill-light">How it works</span>
+          <h2>A smoother path from uncertainty to shortlist</h2>
+          <p>
+            The experience is designed to feel simple and reassuring: choose your city, tell us what matters,
+            and review suburbs with clearer reasons.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card static-card h-100">
+              <div class="feature-icon">01</div>
+              <h3>Choose your city</h3>
+              <p>Start with where you plan to study so every suggestion stays relevant.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card static-card h-100">
+              <div class="feature-icon">02</div>
+              <h3>Set your priorities</h3>
+              <p>Answer a few questions about rent, housing style, language comfort, and routine.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card static-card h-100">
+              <div class="feature-icon">03</div>
+              <h3>See suburb matches</h3>
+              <p>Get suburb cards that are easy to scan instead of hunting across multiple sources.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <div class="feature-card static-card h-100">
+              <div class="feature-icon">04</div>
+              <h3>Shortlist with confidence</h3>
+              <p>Review why each place fits so your final choice feels more informed and less random.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="why-it-works">
+      <div class="container-xxl">
+        <div class="section-header text-center">
+          <span class="ss-pill ss-pill-light">Why students use it</span>
+          <h2>Built to feel supportive, not overwhelming</h2>
+          <p>The best first impression is a product that feels trustworthy, visual, and easy to move through.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="value-card static-card h-100">
+              <div class="value-icon">✦</div>
+              <h3>Belonging matters</h3>
+              <p>We surface signals around language comfort, cultural familiarity, and community feel so the shortlist feels more personal.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="value-card static-card h-100">
+              <div class="value-icon">↺</div>
+              <h3>Less friction</h3>
+              <p>Progressive steps, quick feedback, and visual cards reduce the mental load of choosing a suburb for the first time.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="value-card static-card h-100">
+              <div class="value-icon">✓</div>
+              <h3>Clearer decisions</h3>
+              <p>Short reasons, fit tags, and a review summary help students understand why a suburb is showing up in their results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="what-you-get">
+      <div class="container-xxl">
+        <div class="split-showcase">
+          <div>
+            <span class="ss-pill ss-pill-light">What you get</span>
+            <h2>Designed to guide the next step, not just display data</h2>
+            <p>
+              Instead of turning every element into a button, the experience focuses on one clear action at a time.
+              Informative cards stay calm and readable, while interactive choices are visually distinct during the matching flow.
+            </p>
+            <ul class="check-list">
+              <li>One clear primary action on each screen</li>
+              <li>Onboarding in a focused pop-up flow</li>
+              <li>Separate results page for suburb recommendations</li>
+              <li>Visual reasons behind each suburb match</li>
+            </ul>
+          </div>
+          <div class="info-card showcase-panel">
+            <div class="showcase-row">
+              <span>Start flow</span>
+              <strong>Modal onboarding</strong>
+            </div>
+            <div class="showcase-row">
+              <span>After step 6</span>
+              <strong>Redirect to results page</strong>
+            </div>
+            <div class="showcase-row">
+              <span>Epic 2 support</span>
+              <strong>Fit score + why recommended</strong>
+            </div>
+            <div class="showcase-row">
+              <span>Epic 4 support</span>
+              <strong>Culture and language fit explorer</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ss-footer mt-5">
+    <div class="container-xxl">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-4">
+          <div class="ss-brand mb-3">
+            <span class="ss-brand-mark">S</span>
+            <span>SettleSmart</span>
+          </div>
+          <p class="footer-copy">Helping international students explore suburbs with more clarity, confidence, and belonging.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4 class="footer-title">Explore</h4>
+          <a href="#how-it-works" class="footer-link">How it works</a>
+          <a href="#why-it-works" class="footer-link">Why students use it</a>
+          <a href="#what-you-get" class="footer-link">What you get</a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h4 class="footer-title">Product</h4>
+          <span class="footer-meta">Guided onboarding</span>
+          <span class="footer-meta">Suburb shortlist</span>
+          <span class="footer-meta">Culture and language fit</span>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h4 class="footer-title">Start</h4>
+          <p class="footer-copy small">Ready to build your suburb shortlist?</p>
+          <button class="btn btn-primary ss-btn ss-btn-primary w-100 w-lg-auto" data-open-onboarding>Start my shortlist</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="onboardingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content ss-modal">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="ss-pill ss-pill-light small-pill">Smart Match Journey</span>
+            <h2 class="modal-title mt-3 mb-1" id="modalStepTitle">Choose your destination city</h2>
+            <p class="modal-subtitle" id="modalStepLabel">Step 1 of 6</p>
+          </div>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-3">
+          <div class="modal-progress-wrap">
+            <div class="progress-dots modal-progress-dots" id="progressDots"></div>
+          </div>
+          <div class="step-content modal-step-content" id="stepContent"></div>
+        </div>
+        <div class="modal-footer border-0 pt-0 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <button class="btn ss-btn ss-btn-secondary" id="backBtn">Back</button>
+          <span class="step-hint text-center flex-grow-1" id="stepHint">Complete this step to continue</span>
+          <button class="btn btn-primary ss-btn ss-btn-primary" id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading-overlay hidden" id="loadingOverlay">
+    <div class="loading-box">
+      <div class="loader"></div>
+      <h3>Building your shortlist…</h3>
+      <p>Matching your preferences with student-friendly suburb options.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
