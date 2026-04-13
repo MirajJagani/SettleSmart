@@ -331,6 +331,15 @@ function renderMatches(list) {
           <ul class="inline-reason-list">
             ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
           </ul>
+          <ul class="inline-reason-list">
+            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
+          </ul>
+
+          <button 
+            class="btn btn-sm ss-btn ss-btn-primary more-btn mt-2"
+            data-suburb="${match.suburb}">
+            View cultural details →
+          </button>
         </div>
       </article>
     </div>
