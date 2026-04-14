@@ -53,6 +53,23 @@
           <h2>Suburb matches shaped around your preferences</h2>
           <p>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</p>
         </div>
+        
+        <div class="results-toolbar mb-4">
+          <div class="results-toolbar-left">
+            <span class="results-count" id="resultsCount">0 suburbs found</span>
+          </div>
+
+          <div class="results-toolbar-right">
+            <label for="sortSelect" class="results-sort-label">Sort by</label>
+            <select id="sortSelect" class="form-select ss-sort-select">
+              <option value="match-desc">Match High → Low</option>
+              <option value="match-asc">Match Low → High</option>
+              <option value="name-asc">A-Z</option>
+              <option value="name-desc">Z-A</option>
+            </select>
+          </div>
+        </div>
+
         <div class="top-match-panel info-card mb-4" id="topMatchPanel"></div>
         <div class="row g-4" id="resultsGrid"></div>
       </div>
@@ -66,10 +83,26 @@
           <p>Use these signals to understand where language familiarity and cultural comfort may feel stronger.</p>
         </div>
         <div class="row g-4 align-items-stretch">
-          <div class="col-12">
+          <div class="col-12 col-lg-7">
             <div class="info-card h-100 culture-panel">
               <h3 class="panel-heading">Best culture-fit suburbs from your shortlist</h3>
               <div id="cultureList" class="culture-list"></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="info-card h-100 explorer-panel">
+              <h3 class="panel-heading">Signals to show from datasets</h3>
+              <ul class="check-list compact">
+                <li>Common languages spoken at home</li>
+                <li>Overseas-born share</li>
+                <li>Recent-arrival community signals</li>
+                <li>English proficiency support indicators</li>
+                <li>University-access and transport convenience</li>
+              </ul>
+              <div class="dataset-note">
+                <strong>Developer note</strong>
+                <p>Results are currently UI-driven. Comments in <code>results.js</code> show where your database admin can place suburb dataset queries.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -107,6 +140,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="suburb-data.js"></script>
   <script src="results.js"></script>
 </body>
 </html>
