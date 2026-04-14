@@ -941,3 +941,9 @@ code {
   align-items: center;
   margin-bottom: 14px;
 }
+
+.ss-brand-icon {
+  width: 45px;
+  height: 40px;
+  object-fit: contain;
+}
