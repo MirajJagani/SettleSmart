@@ -37,281 +37,21 @@
   -- ORDER BY culture_score DESC;
 */
 
-const suburbs = [
-  {
-    suburb: "Carlton",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "high",
-    transport: "high",
-    culture: "high",
-    university: "high",
-    housing: ["shared", "studio", "apartment"],
-    lifestyle: ["cafe", "urban", "culture", "study"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Close to major universities, lively student activity, and strong transport links.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "300m" },
-      { name: "Indian restaurants", distance: "500m" },
-      { name: "City mosque", distance: "1.2km" }
-    ],
-    events: ["International student festival", "Food street events monthly"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Clayton",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "high",
-    university: "high",
-    housing: ["shared", "studio"],
-    lifestyle: ["quiet", "culture", "food", "study"],
-    commonLanguages: ["English", "Hindi", "Malayalam"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Known for Monash access, shared housing options, and strong multicultural communities.",
-    culturalAmenities: [
-      { name: "Indian supermarkets", distance: "800m" },
-      { name: "Sri Lankan grocery", distance: "1km" },
-      { name: "Hindu temple", distance: "2km" }
-    ],
-    events: ["Diwali celebrations", "Cultural student meetups"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Footscray",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "low",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment"],
-    lifestyle: ["culture", "food", "urban", "cafe"],
-    commonLanguages: ["Vietnamese", "English", "Mandarin"],
-    recentArrival: "strong",
-    englishSupport: "medium",
-    description: "Popular for value, food culture, and easy CBD connectivity.",
-    culturalAmenities: [
-      { name: "Vietnamese supermarkets", distance: "400m" },
-      { name: "Asian food market", distance: "600m" },
-      { name: "Buddhist temple", distance: "1.5km" }
-    ],
-    events: ["Lunar New Year festival", "Night market events"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Box Hill",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment", "studio"],
-    lifestyle: ["culture", "food", "quiet"],
-    commonLanguages: ["Mandarin", "English", "Cantonese"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "A strong cultural hub with transport convenience and a comfortable suburban feel.",
-    culturalAmenities: [
-      { name: "Asian supermarkets", distance: "200m" },
-      { name: "Chinese restaurants", distance: "300m" },
-      { name: "Buddhist temple", distance: "1km" }
-    ],
-    events: ["Chinese New Year festival", "Community food events"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Burwood",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment"],
-    lifestyle: ["food", "culture", "urban"],
-    commonLanguages: ["Mandarin", "English", "Korean"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Well-connected suburb with diverse communities and student-friendly rental patterns.",
-    culturalAmenities: [
-      { name: "Korean grocery stores", distance: "500m" },
-      { name: "Asian supermarkets", distance: "300m" },
-      { name: "Local church", distance: "1km" }
-    ],
-    events: ["Korean food festivals", "Community gatherings"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Parramatta",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment", "studio"],
-    lifestyle: ["urban", "food", "culture"],
-    commonLanguages: ["Hindi", "English", "Arabic"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "A major western Sydney hub with trains, services, and diverse community support.",
-    culturalAmenities: [
-      { name: "Indian supermarkets", distance: "400m" },
-      { name: "Halal butcher", distance: "800m" },
-      { name: "Mosque", distance: "1.5km" }
-    ],
-    events: ["Diwali Mela", "Eid celebrations"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Kensington",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "high",
-    transport: "high",
-    culture: "medium",
-    university: "high",
-    housing: ["studio", "apartment", "shared"],
-    lifestyle: ["study", "urban", "cafe"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Close to UNSW and useful for students who want stronger campus access.",
-    culturalAmenities: [
-      { name: "Campus food outlets", distance: "300m" },
-      { name: "Asian groceries", distance: "700m" }
-    ],
-    events: ["University cultural events"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "St Lucia",
-    city: "Brisbane",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "apartment"],
-    lifestyle: ["study", "quiet", "nature"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Known for UQ access and a quieter student-oriented living environment.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "600m" },
-      { name: "Local temples", distance: "2km" }
-    ],
-    events: ["Campus festivals"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "South Brisbane",
-    city: "Brisbane",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "medium",
-    university: "medium",
-    housing: ["apartment", "studio"],
-    lifestyle: ["urban", "cafe", "food"],
-    commonLanguages: ["English", "Mandarin", "Spanish"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "A central option with river access, culture, and strong transport links.",
-    culturalAmenities: [
-      { name: "International food markets", distance: "400m" }
-    ],
-    events: ["River cultural festivals"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "North Adelaide",
-    city: "Adelaide",
-    image: "https://images.unsplash.com/photo-1564419439572-1f478fe9ad4f?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["apartment", "shared"],
-    lifestyle: ["quiet", "cafe", "study"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Comfortable for students wanting a quieter city and easier campus proximity.",
-    culturalAmenities: [
-      { name: "Local cafes and shops", distance: "300m" }
-    ],
-    events: ["Community markets"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Bentley",
-    city: "Perth",
-    image: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "low",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "studio"],
-    lifestyle: ["study", "quiet", "food"],
-    commonLanguages: ["English", "Hindi", "Malay"],
-    recentArrival: "medium",
-    englishSupport: "medium",
-    description: "Strong for Curtin access and more affordable student housing patterns.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "700m" }
-    ],
-    events: ["Student community events"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Bruce",
-    city: "Canberra",
-    image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "apartment"],
-    lifestyle: ["study", "quiet", "nature"],
-    commonLanguages: ["English", "Hindi", "Mandarin"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Good for students looking for a quieter academic environment and campus access.",
-    culturalAmenities: [
-      { name: "Local shopping centre", distance: "500m" }
-    ],
-    events: ["University events"],
-    photos: ["https://via.placeholder.com/200"]
-  }
-];
-
 const preferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+
+const appState = {
+  sortBy: localStorage.getItem("settlesmart_sort") || "match-desc",
+  rankedSuburbs: []
+};
+
 const resultsHeroTitle = document.getElementById("resultsHeroTitle");
 const resultsHeroCopy = document.getElementById("resultsHeroCopy");
 const resultsSummary = document.getElementById("resultsSummary");
 const topMatchPanel = document.getElementById("topMatchPanel");
 const resultsGrid = document.getElementById("resultsGrid");
 const cultureList = document.getElementById("cultureList");
+const sortSelect = document.getElementById("sortSelect");
+const resultsCount = document.getElementById("resultsCount");
 
 init();
 
@@ -321,38 +61,117 @@ function init() {
     return;
   }
 
-  const ranked = rankSuburbs().slice(0, 6);
-  renderHero(ranked);
-  renderTopMatch(ranked[0]);
-  renderMatches(ranked.slice(0, 4));
-  renderCultureExplorer(ranked.slice(0, 3));
+  sortSelect.value = appState.sortBy;
+  sortSelect.addEventListener("change", handleSortChange);
+
+  appState.rankedSuburbs = rankSuburbs();
+  renderPage();
+}
+
+function renderPage() {
+  const bestMatchList = [...appState.rankedSuburbs].sort((a, b) => b.score - a.score);
+  const bestMatch = bestMatchList[0];
+  const displayList = applySort(appState.rankedSuburbs, appState.sortBy);
+
+  renderHero(displayList);
+  renderTopMatch(bestMatch);
+  renderMatches(displayList, bestMatch?.slug);
+  renderCultureExplorer(bestMatchList.slice(0, 3));
+
+  resultsCount.textContent = `${displayList.length} suburbs found`;
+}
+
+function handleSortChange(event) {
+  appState.sortBy = event.target.value;
+  localStorage.setItem("settlesmart_sort", appState.sortBy);
+  renderPage();
 }
 
 function rankSuburbs() {
   return suburbs
     .filter(suburb => suburb.city === preferences.city)
-    .map(suburb => ({ ...suburb, score: getSuburbScore(suburb) }))
-    .sort((a, b) => b.score - a.score);
+    .map(suburb => {
+      const score = getSuburbScore(suburb);
+      return {
+        ...suburb,
+        score,
+        reasons: buildReasonList(suburb)
+      };
+    });
 }
 
 function getSuburbScore(suburb) {
-  let score = 52;
+  const budgetBand = getBudgetBand(preferences.budget);
 
-  if (preferences.city === suburb.city) score += 16;
+  let points = 0;
+  let total = 0;
 
-  if (preferences.budget <= 300 && suburb.rentBand === "low") score += 12;
-  if (preferences.budget > 300 && preferences.budget <= 500 && suburb.rentBand === "medium") score += 10;
-  if (preferences.budget > 500 && suburb.rentBand === "high") score += 8;
+  total += 20;
+  if (suburb.city === preferences.city) points += 20;
 
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) score += 8;
-  if (preferences.commute === "public-transport" && suburb.transport === "high") score += 8;
-  if (preferences.commute !== "public-transport" && suburb.transport === "medium") score += 4;
-  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) score += 10;
-  if (preferences.culture && suburb.culture === "high") score += 8;
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) score += 8;
-  if (suburb.university === "high") score += 6;
+  total += 18;
+  points += getRentScore(suburb.rentBand, budgetBand);
 
-  return Math.min(score, 98);
+  total += 12;
+  if (preferences.housing && suburb.housing.includes(preferences.housing)) {
+    points += 12;
+  }
+
+  total += 12;
+  points += getCommuteScore(suburb);
+
+  total += 14;
+  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) {
+    points += 14;
+  }
+
+  total += 12;
+  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
+    points += 12;
+  }
+
+  total += 12;
+  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
+    points += 12;
+  }
+
+  return Math.round((points / total) * 100);
+}
+
+function getBudgetBand(budget) {
+  if (budget <= 300) return "low";
+  if (budget <= 500) return "medium";
+  return "high";
+}
+
+function getRentScore(suburbBand, targetBand) {
+  const rank = { low: 1, medium: 2, high: 3 };
+  const distance = Math.abs(rank[suburbBand] - rank[targetBand]);
+
+  if (distance === 0) return 18;
+  if (distance === 1) return 9;
+  return 3;
+}
+
+function getCommuteScore(suburb) {
+  if (preferences.commute === "public-transport") {
+    if (suburb.transport === "high") return 12;
+    if (suburb.transport === "medium") return 6;
+    return 2;
+  }
+
+  if (preferences.commute === "low-commute") {
+    if (suburb.university === "high") return 12;
+    if (suburb.university === "medium") return 6;
+    return 2;
+  }
+
+  if (preferences.commute === "bike-walk") {
+    if (suburb.transport === "high" || suburb.lifestyle.includes("cafe")) return 10;
+    return 5;
+  }
+
+  return 0;
 }
 
 function renderHero(ranked) {
@@ -370,65 +189,81 @@ function renderHero(ranked) {
 
 function renderTopMatch(match) {
   if (!match) return;
+
   topMatchPanel.innerHTML = `
     <div class="top-match-copy">
       <span class="preview-kicker">Top match</span>
       <h3>${match.suburb}, ${match.city}</h3>
-      <p>${match.description} Recommended because ${buildReasonList(match).join(", ")}.</p>
+      <p>${match.description} Recommended because ${match.reasons.join(", ")}.</p>
+
       <div class="top-match-meta">
         <span class="meta-pill">Fit score ${match.score}/100</span>
+        <!-- <span class="meta-pill">Rent ${match.rentRange}</span> -->
         <span class="meta-pill">${match.transport} transport</span>
-        <span class="meta-pill">${match.culture} culture fit</span>
         <span class="meta-pill">${match.university} university access</span>
       </div>
     </div>
+
     <div class="top-match-highlights">
       <div class="highlight-card">
         <span>Best for</span>
-        <strong>${formatChoice(preferences.lifestyle)} and ${formatChoice(preferences.commute)} priorities</strong>
+        <strong>${formatChoice(preferences.lifestyle)} and ${formatChoice(preferences.commute)}</strong>
       </div>
+
       <div class="highlight-card">
         <span>Language comfort</span>
         <strong>${match.commonLanguages.join(", ")}</strong>
       </div>
+
       <div class="highlight-card">
         <span>Student cue</span>
-        <strong>${match.university === "high" ? "Strong university access" : "Balanced campus connectivity"}</strong>
+        <strong>${(match.lifestyleTags || []).join(", ")}</strong>
       </div>
     </div>
   `;
 }
 
-function renderMatches(list) {
-  resultsGrid.innerHTML = list.map(match => `
-    <div class="col-12 col-md-6 col-xl-3">
-      <article class="result-card">
-        <div class="result-image" style="background-image:url('${match.image}')"></div>
+function renderMatches(list, bestMatchSlug) {
+  resultsGrid.innerHTML = list.map((match) => `
+    <div class="col-12 col-md-6 col-xl-4">
+      <article class="result-card ${match.slug === bestMatchSlug ? "best-match-card" : ""}">
+        <div class="result-image" style="background-image:url('${match.image}')">
+        </div>
+
         <div class="result-body">
           <span class="result-city-label">${match.city}</span>
           <h3>${match.suburb}</h3>
           <p>${match.description}</p>
-          <div class="result-tags">
-            <span class="result-tag">Fit ${match.score}/100</span>
-            <span class="result-tag">${match.transport} transport</span>
-            <span class="result-tag">${match.culture} culture</span>
+
+          <div class="result-meta-row">
+            <span class="result-tag">Match ${match.score}%</span>
+            ${(match.lifestyleTags || []).slice(0, 3).map(tag => `
+              <span class="result-chip">${tag}</span>
+            `).join("")}
           </div>
+
           <ul class="inline-reason-list">
-            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
-          </ul>
-          <ul class="inline-reason-list">
-            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
+            ${(match.reasons || []).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
           </ul>
 
-          <button 
-            class="btn btn-sm ss-btn ss-btn-primary more-btn mt-2"
-            data-suburb="${match.suburb}">
-            View cultural details →
+          <button
+            class="btn ss-btn ss-btn-secondary w-100 view-details-btn"
+            data-slug="${match.slug}"
+          >
+            View Details
           </button>
         </div>
       </article>
     </div>
   `).join("");
+
+  document.querySelectorAll(".view-details-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const { slug } = button.dataset;
+      localStorage.setItem("settlesmart_sort", appState.sortBy);
+      window.location.href = `suburb.html?slug=${slug}`;
+    });
+  });
 }
 
 function renderCultureExplorer(list) {
@@ -452,32 +287,39 @@ function buildReasonList(suburb) {
   const reasons = [];
 
   if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
-    reasons.push(`your language appears more familiar here`);
-  }
-  if (preferences.culture && suburb.culture === "high") {
-    reasons.push(`it shows stronger multicultural community signals`);
-  }
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) {
-    reasons.push(`its housing pattern suits your preferred living style`);
-  }
-  if (preferences.commute === "public-transport" && suburb.transport === "high") {
-    reasons.push(`it supports stronger public transport access`);
-  }
-  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) {
-    reasons.push(`its local lifestyle aligns with your priority`);
-  }
-  if (preferences.budget <= 300 && suburb.rentBand === "low") {
-    reasons.push(`it is friendlier for tighter student budgets`);
-  }
-  if (preferences.budget > 300 && preferences.budget <= 500 && suburb.rentBand === "medium") {
-    reasons.push(`it fits a balanced student rent range`);
-  }
-  if (suburb.university === "high") {
-    reasons.push(`it has stronger university access signals`);
+    reasons.push("your language is commonly spoken here");
   }
 
-  if (!reasons.length) reasons.push("it offers a balanced overall fit for your selected city");
-  return reasons;
+  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
+    reasons.push(`it has stronger ${preferences.culture} community signals`);
+  }
+
+  if (preferences.housing && suburb.housing.includes(preferences.housing)) {
+    reasons.push("its housing options match your preferred living style");
+  }
+
+  if (preferences.commute === "public-transport" && suburb.transport === "high") {
+    reasons.push("it offers strong public transport access");
+  }
+
+  if (preferences.commute === "low-commute" && suburb.university === "high") {
+    reasons.push("it supports a shorter study commute");
+  }
+
+  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) {
+    reasons.push("its daily lifestyle aligns with your priority");
+  }
+
+  const budgetBand = getBudgetBand(preferences.budget);
+  if (suburb.rentBand === budgetBand) {
+    reasons.push("it fits your expected weekly budget");
+  }
+
+  if (!reasons.length) {
+    reasons.push("it offers a balanced overall match for your selected city");
+  }
+
+  return reasons.slice(0, 4);
 }
 
 function getCultureFitScore(suburb) {
@@ -492,13 +334,22 @@ function formatChoice(value) {
   if (!value) return "-";
   return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("more-btn")) {
-    const suburb = e.target.dataset.suburb;
 
-    localStorage.setItem("selected_suburb", suburb);
-    localStorage.setItem("suburb_data", JSON.stringify(suburbs));
+function applySort(list, sortBy) {
+  const sorted = [...list];
 
-    window.location.href = "suburb.html";
+  switch (sortBy) {
+    case "name-asc":
+      return sorted.sort((a, b) => a.suburb.localeCompare(b.suburb));
+
+    case "name-desc":
+      return sorted.sort((a, b) => b.suburb.localeCompare(a.suburb));
+
+    case "match-asc":
+      return sorted.sort((a, b) => a.score - b.score);
+
+    case "match-desc":
+    default:
+      return sorted.sort((a, b) => b.score - a.score);
   }
-});
+}
