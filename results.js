@@ -407,3 +407,13 @@ function formatChoice(value) {
   if (!value) return "-";
   return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("more-btn")) {
+    const suburb = e.target.dataset.suburb;
+
+    localStorage.setItem("selected_suburb", suburb);
+    localStorage.setItem("suburb_data", JSON.stringify(suburbs));
+
+    window.location.href = "suburb.html";
+  }
+});
