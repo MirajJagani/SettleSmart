@@ -1,504 +1,161 @@
 /*
-  SettleSmart - Results page
-  --------------------------
-  This file supports Epic 2 (Personalised Suburb Matching)
-  and Epic 4 (Culture and Language Fit Explorer).
+  SettleSmart - Results page logic
+  --------------------------------
+  This file handles Epic 4 (Culture and Language Fit Explorer).
 
-  DATABASE ADMIN NOTES:
-  Replace the sample suburbs array with a Supabase / PostgreSQL query.
+  The user's preferences are stored in localStorage under the key
+  "settlesmart_preferences" by the onboarding flow (Epic 1).
 
-  Fields that would be useful from suburb datasets:
-  - suburb_name
-  - city_name
-  - rent_band or median_weekly_rent
-  - transport_score / public_transport_access
-  - culture_score / cultural_diversity_score
-  - university_access_score
-  - common_languages (array or joined string)
-  - overseas_born_share
-  - recent_arrival_signal
-  - english_support_signal
-  - grocery_access / daily_life_score
-  - student_housing_types (array)
-  - hero_image_url
-
-  Example SQL comments for DB admin:
-  -- SELECT suburb_name, city_name, rent_band, transport_score, culture_score,
-  --        university_access_score, common_languages, overseas_born_share,
-  --        recent_arrival_signal, english_support_signal, daily_life_score,
-  --        hero_image_url
-  -- FROM suburb_profiles
-  -- WHERE city_name = :selected_city;
-
-  -- SELECT suburb_name, common_languages, overseas_born_share,
-  --        recent_arrival_signal, english_support_signal
-  -- FROM suburb_profiles
-  -- WHERE city_name = :selected_city
-  -- ORDER BY culture_score DESC;
+  For this prototype, we use a small set of sample suburb data.
+  In a future iteration, replace the sampleSuburbs array with
+  database queries (for example, Supabase) to retrieve real
+  demographic and community information.
 */
 
-const suburbs = [
-  {
-    suburb: "Carlton",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "high",
-    transport: "high",
-    culture: "high",
-    university: "high",
-    housing: ["shared", "studio", "apartment"],
-    lifestyle: ["cafe", "urban", "culture", "study"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Close to major universities, lively student activity, and strong transport links.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "300m" },
-      { name: "Indian restaurants", distance: "500m" },
-      { name: "City mosque", distance: "1.2km" }
-    ],
-    events: ["International student festival", "Food street events monthly"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Clayton",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "high",
-    university: "high",
-    housing: ["shared", "studio"],
-    lifestyle: ["quiet", "culture", "food", "study"],
-    commonLanguages: ["English", "Hindi", "Malayalam"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Known for Monash access, shared housing options, and strong multicultural communities.",
-    culturalAmenities: [
-      { name: "Indian supermarkets", distance: "800m" },
-      { name: "Sri Lankan grocery", distance: "1km" },
-      { name: "Hindu temple", distance: "2km" }
-    ],
-    events: ["Diwali celebrations", "Cultural student meetups"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Footscray",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "low",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment"],
-    lifestyle: ["culture", "food", "urban", "cafe"],
-    commonLanguages: ["Vietnamese", "English", "Mandarin"],
-    recentArrival: "strong",
-    englishSupport: "medium",
-    description: "Popular for value, food culture, and easy CBD connectivity.",
-    culturalAmenities: [
-      { name: "Vietnamese supermarkets", distance: "400m" },
-      { name: "Asian food market", distance: "600m" },
-      { name: "Buddhist temple", distance: "1.5km" }
-    ],
-    events: ["Lunar New Year festival", "Night market events"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Box Hill",
-    city: "Melbourne",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment", "studio"],
-    lifestyle: ["culture", "food", "quiet"],
-    commonLanguages: ["Mandarin", "English", "Cantonese"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "A strong cultural hub with transport convenience and a comfortable suburban feel.",
-    culturalAmenities: [
-      { name: "Asian supermarkets", distance: "200m" },
-      { name: "Chinese restaurants", distance: "300m" },
-      { name: "Buddhist temple", distance: "1km" }
-    ],
-    events: ["Chinese New Year festival", "Community food events"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Burwood",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment"],
-    lifestyle: ["food", "culture", "urban"],
-    commonLanguages: ["Mandarin", "English", "Korean"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "Well-connected suburb with diverse communities and student-friendly rental patterns.",
-    culturalAmenities: [
-      { name: "Korean grocery stores", distance: "500m" },
-      { name: "Asian supermarkets", distance: "300m" },
-      { name: "Local church", distance: "1km" }
-    ],
-    events: ["Korean food festivals", "Community gatherings"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Parramatta",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "high",
-    university: "medium",
-    housing: ["shared", "apartment", "studio"],
-    lifestyle: ["urban", "food", "culture"],
-    commonLanguages: ["Hindi", "English", "Arabic"],
-    recentArrival: "strong",
-    englishSupport: "good",
-    description: "A major western Sydney hub with trains, services, and diverse community support.",
-    culturalAmenities: [
-      { name: "Indian supermarkets", distance: "400m" },
-      { name: "Halal butcher", distance: "800m" },
-      { name: "Mosque", distance: "1.5km" }
-    ],
-    events: ["Diwali Mela", "Eid celebrations"],
-    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Kensington",
-    city: "Sydney",
-    image: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "high",
-    transport: "high",
-    culture: "medium",
-    university: "high",
-    housing: ["studio", "apartment", "shared"],
-    lifestyle: ["study", "urban", "cafe"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Close to UNSW and useful for students who want stronger campus access.",
-    culturalAmenities: [
-      { name: "Campus food outlets", distance: "300m" },
-      { name: "Asian groceries", distance: "700m" }
-    ],
-    events: ["University cultural events"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "St Lucia",
-    city: "Brisbane",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "apartment"],
-    lifestyle: ["study", "quiet", "nature"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Known for UQ access and a quieter student-oriented living environment.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "600m" },
-      { name: "Local temples", distance: "2km" }
-    ],
-    events: ["Campus festivals"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "South Brisbane",
-    city: "Brisbane",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "high",
-    culture: "medium",
-    university: "medium",
-    housing: ["apartment", "studio"],
-    lifestyle: ["urban", "cafe", "food"],
-    commonLanguages: ["English", "Mandarin", "Spanish"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "A central option with river access, culture, and strong transport links.",
-    culturalAmenities: [
-      { name: "International food markets", distance: "400m" }
-    ],
-    events: ["River cultural festivals"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "North Adelaide",
-    city: "Adelaide",
-    image: "https://images.unsplash.com/photo-1564419439572-1f478fe9ad4f?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["apartment", "shared"],
-    lifestyle: ["quiet", "cafe", "study"],
-    commonLanguages: ["English", "Mandarin", "Hindi"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Comfortable for students wanting a quieter city and easier campus proximity.",
-    culturalAmenities: [
-      { name: "Local cafes and shops", distance: "300m" }
-    ],
-    events: ["Community markets"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Bentley",
-    city: "Perth",
-    image: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "low",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "studio"],
-    lifestyle: ["study", "quiet", "food"],
-    commonLanguages: ["English", "Hindi", "Malay"],
-    recentArrival: "medium",
-    englishSupport: "medium",
-    description: "Strong for Curtin access and more affordable student housing patterns.",
-    culturalAmenities: [
-      { name: "Asian grocery stores", distance: "700m" }
-    ],
-    events: ["Student community events"],
-    photos: ["https://via.placeholder.com/200"]
-  },
-
-  {
-    suburb: "Bruce",
-    city: "Canberra",
-    image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=80",
-    rentBand: "medium",
-    transport: "medium",
-    culture: "medium",
-    university: "high",
-    housing: ["shared", "apartment"],
-    lifestyle: ["study", "quiet", "nature"],
-    commonLanguages: ["English", "Hindi", "Mandarin"],
-    recentArrival: "medium",
-    englishSupport: "good",
-    description: "Good for students looking for a quieter academic environment and campus access.",
-    culturalAmenities: [
-      { name: "Local shopping centre", distance: "500m" }
-    ],
-    events: ["University events"],
-    photos: ["https://via.placeholder.com/200"]
-  }
-];
-
-const preferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
-const resultsHeroTitle = document.getElementById("resultsHeroTitle");
-const resultsHeroCopy = document.getElementById("resultsHeroCopy");
-const resultsSummary = document.getElementById("resultsSummary");
-const topMatchPanel = document.getElementById("topMatchPanel");
-const resultsGrid = document.getElementById("resultsGrid");
-const cultureList = document.getElementById("cultureList");
-
-init();
-
-function init() {
-  if (!preferences.city) {
-    window.location.href = "index.html";
-    return;
+(() => {
+  /**
+   * Load the preferences saved during onboarding. If none are found
+   * or parsing fails, return null. Preferences include the user's
+   * selected city, language, culture, budget, housing style, commute,
+   * and lifestyle priorities.
+   */
+  function loadPreferences() {
+    const raw = localStorage.getItem("settlesmart_preferences");
+    if (!raw) return null;
+    try {
+      return JSON.parse(raw);
+    } catch (err) {
+      console.warn("Failed to parse preferences:", err);
+      return null;
+    }
   }
 
-  const ranked = rankSuburbs().slice(0, 6);
-  renderHero(ranked);
-  renderTopMatch(ranked[0]);
-  renderMatches(ranked.slice(0, 4));
-  renderCultureExplorer(ranked.slice(0, 3));
-}
+  /**
+   * A simple catalogue of suburbs with associated languages,
+   * cultures, and a one-sentence reason explaining the community fit.
+   * This data is illustrative only; real datasets should be used
+   * when connecting to a backend service.
+   */
+  const sampleSuburbs = [
+    {
+      name: "Box Hill",
+      languages: ["Mandarin", "Cantonese"],
+      cultures: ["Chinese"],
+      reason: "Large Chinese community with Mandarin and Cantonese support."
+    },
+    {
+      name: "Footscray",
+      languages: ["Vietnamese"],
+      cultures: ["Vietnamese"],
+      reason: "Vietnamese restaurants and supermarkets dominate this area."
+    },
+    {
+      name: "Springvale",
+      languages: ["Vietnamese", "Khmer"],
+      cultures: ["Vietnamese"],
+      reason: "Strong Vietnamese community with language schools."
+    },
+    {
+      name: "Clayton",
+      languages: ["Hindi", "Mandarin"],
+      cultures: ["Indian", "Chinese"],
+      reason: "Multicultural area near Monash University with Indian and Chinese groceries."
+    },
+    {
+      name: "Dandenong",
+      languages: ["Punjabi"],
+      cultures: ["Indian"],
+      reason: "Known for its Indian temples and Punjabi restaurants."
+    },
+    {
+      name: "Glen Waverley",
+      languages: ["Mandarin"],
+      cultures: ["Chinese"],
+      reason: "Popular for Chinese dining and Mandarin signage."
+    },
+    {
+      name: "Carlton",
+      languages: ["Italian"],
+      cultures: ["European"],
+      reason: "Heritage European cafés and Italian restaurants."
+    }
+  ];
 
-function rankSuburbs() {
-  return suburbs
-    .filter(suburb => suburb.city === preferences.city)
-    .map(suburb => ({ ...suburb, score: getSuburbScore(suburb) }))
-    .sort((a, b) => b.score - a.score);
-}
+  /**
+   * Compute a simple culture fit score for each suburb based on the
+   * user's preferred language and culture. A language match is
+   * weighted more heavily than a culture match. The list is
+   * sorted descending by score, and only the top three suburbs are
+   * returned. If no preferences are set, the first three suburbs
+   * in the list are returned as default suggestions.
+   */
+  function computeCultureFit(prefs) {
+    const { language, culture } = prefs || {};
+    // If no prefs, return first three as placeholder results.
+    if (!language && !culture) {
+      return sampleSuburbs.slice(0, 3).map((s) => ({ ...s, score: 0 }));
+    }
+    const matches = sampleSuburbs.map((sub) => {
+      let score = 0;
+      if (
+        language &&
+        sub.languages
+          .map((l) => l.toLowerCase())
+          .includes(language.toLowerCase())
+      ) {
+        score += 2;
+      }
+      if (
+        culture &&
+        sub.cultures
+          .map((c) => c.toLowerCase())
+          .includes(culture.toLowerCase())
+      ) {
+        score += 1;
+      }
+      return { ...sub, score };
+    });
+    matches.sort((a, b) => b.score - a.score);
+    return matches.slice(0, 3);
+  }
 
-function getSuburbScore(suburb) {
-  let score = 52;
-
-  if (preferences.city === suburb.city) score += 16;
-
-  if (preferences.budget <= 300 && suburb.rentBand === "low") score += 12;
-  if (preferences.budget > 300 && preferences.budget <= 500 && suburb.rentBand === "medium") score += 10;
-  if (preferences.budget > 500 && suburb.rentBand === "high") score += 8;
-
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) score += 8;
-  if (preferences.commute === "public-transport" && suburb.transport === "high") score += 8;
-  if (preferences.commute !== "public-transport" && suburb.transport === "medium") score += 4;
-  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) score += 10;
-  if (preferences.culture && suburb.culture === "high") score += 8;
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) score += 8;
-  if (suburb.university === "high") score += 6;
-
-  return Math.min(score, 98);
-}
-
-function renderHero(ranked) {
-  resultsHeroTitle.textContent = `Your ${preferences.city} shortlist is ready.`;
-  resultsHeroCopy.textContent = `These suburb recommendations are shaped by your budget, housing style, commute needs, language preferences, and lifestyle priorities.`;
-  resultsSummary.innerHTML = `
-    <span class="summary-chip">City: ${preferences.city}</span>
-    <span class="summary-chip">Budget: $${preferences.budget}/week</span>
-    <span class="summary-chip">Housing: ${formatChoice(preferences.housing)}</span>
-    <span class="summary-chip">Commute: ${formatChoice(preferences.commute)}</span>
-    <span class="summary-chip">Lifestyle: ${formatChoice(preferences.lifestyle)}</span>
-    <span class="summary-chip">Language: ${preferences.language || "Not set"}</span>
-  `;
-}
-
-function renderTopMatch(match) {
-  if (!match) return;
-  topMatchPanel.innerHTML = `
-    <div class="top-match-copy">
-      <span class="preview-kicker">Top match</span>
-      <h3>${match.suburb}, ${match.city}</h3>
-      <p>${match.description} Recommended because ${buildReasonList(match).join(", ")}.</p>
-      <div class="top-match-meta">
-        <span class="meta-pill">Fit score ${match.score}/100</span>
-        <span class="meta-pill">${match.transport} transport</span>
-        <span class="meta-pill">${match.culture} culture fit</span>
-        <span class="meta-pill">${match.university} university access</span>
-      </div>
-    </div>
-    <div class="top-match-highlights">
-      <div class="highlight-card">
-        <span>Best for</span>
-        <strong>${formatChoice(preferences.lifestyle)} and ${formatChoice(preferences.commute)} priorities</strong>
-      </div>
-      <div class="highlight-card">
-        <span>Language comfort</span>
-        <strong>${match.commonLanguages.join(", ")}</strong>
-      </div>
-      <div class="highlight-card">
-        <span>Student cue</span>
-        <strong>${match.university === "high" ? "Strong university access" : "Balanced campus connectivity"}</strong>
-      </div>
-    </div>
-  `;
-}
-
-function renderMatches(list) {
-  resultsGrid.innerHTML = list.map(match => `
-    <div class="col-12 col-md-6 col-xl-3">
-      <article class="result-card">
-        <div class="result-image" style="background-image:url('${match.image}')"></div>
-        <div class="result-body">
-          <span class="result-city-label">${match.city}</span>
-          <h3>${match.suburb}</h3>
-          <p>${match.description}</p>
-          <div class="result-tags">
-            <span class="result-tag">Fit ${match.score}/100</span>
-            <span class="result-tag">${match.transport} transport</span>
-            <span class="result-tag">${match.culture} culture</span>
-          </div>
-          <ul class="inline-reason-list">
-            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
-          </ul>
-          <ul class="inline-reason-list">
-            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
-          </ul>
-
-          <button 
-            class="btn btn-sm ss-btn ss-btn-primary more-btn mt-2"
-            data-suburb="${match.suburb}">
-            View cultural details →
-          </button>
+  /**
+   * Render the list of top culture-fit suburbs into the page. Each
+   * item displays the suburb name, a simple fit ranking, a short
+   * description explaining why it fits, and a set of signal pills
+   * showing the languages associated with that suburb.
+   */
+  function renderCultureList(prefs) {
+    const container = document.getElementById("cultureList");
+    if (!container) return;
+    const topSuburbs = computeCultureFit(prefs);
+    container.innerHTML = "";
+    topSuburbs.forEach((sub) => {
+      const item = document.createElement("div");
+      item.className = "culture-item";
+      let fitLabel;
+      if (sub.score >= 2) fitLabel = "High fit";
+      else if (sub.score === 1) fitLabel = "Medium fit";
+      else fitLabel = "Low fit";
+      item.innerHTML = `
+        <div class="culture-item-head">
+          <strong>${sub.name}</strong>
+          <span class="culture-score">${fitLabel}</span>
         </div>
-      </article>
-    </div>
-  `).join("");
-}
-
-function renderCultureExplorer(list) {
-  cultureList.innerHTML = list.map(match => `
-    <div class="culture-item">
-      <div class="culture-item-head">
-        <strong>${match.suburb}</strong>
-        <span class="culture-score">Culture fit ${getCultureFitScore(match)}/10</span>
-      </div>
-      <p class="muted-line mb-2">Common language cues: ${match.commonLanguages.join(", ")}</p>
-      <div class="culture-signals">
-        <span class="signal-pill">Recent arrivals: ${match.recentArrival}</span>
-        <span class="signal-pill">English support: ${match.englishSupport}</span>
-        <span class="signal-pill">${match.culture} diversity signal</span>
-      </div>
-    </div>
-  `).join("");
-}
-
-function buildReasonList(suburb) {
-  const reasons = [];
-
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
-    reasons.push(`your language appears more familiar here`);
-  }
-  if (preferences.culture && suburb.culture === "high") {
-    reasons.push(`it shows stronger multicultural community signals`);
-  }
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) {
-    reasons.push(`its housing pattern suits your preferred living style`);
-  }
-  if (preferences.commute === "public-transport" && suburb.transport === "high") {
-    reasons.push(`it supports stronger public transport access`);
-  }
-  if (preferences.lifestyle && suburb.lifestyle.includes(preferences.lifestyle)) {
-    reasons.push(`its local lifestyle aligns with your priority`);
-  }
-  if (preferences.budget <= 300 && suburb.rentBand === "low") {
-    reasons.push(`it is friendlier for tighter student budgets`);
-  }
-  if (preferences.budget > 300 && preferences.budget <= 500 && suburb.rentBand === "medium") {
-    reasons.push(`it fits a balanced student rent range`);
-  }
-  if (suburb.university === "high") {
-    reasons.push(`it has stronger university access signals`);
+        <p>${sub.reason}</p>
+        <div class="culture-signals">
+          ${sub.languages
+            .map((lang) => `<span class="signal-pill">${lang}</span>`)
+            .join("")}
+        </div>
+      `;
+      container.appendChild(item);
+    });
   }
 
-  if (!reasons.length) reasons.push("it offers a balanced overall fit for your selected city");
-  return reasons;
-}
-
-function getCultureFitScore(suburb) {
-  let score = 6;
-  if (suburb.culture === "high") score += 2;
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) score += 1;
-  if (suburb.recentArrival === "strong") score += 1;
-  return score;
-}
-
-function formatChoice(value) {
-  if (!value) return "-";
-  return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
-}
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("more-btn")) {
-    const suburb = e.target.dataset.suburb;
-
-    localStorage.setItem("selected_suburb", suburb);
-    localStorage.setItem("suburb_data", JSON.stringify(suburbs));
-
-    window.location.href = "suburb.html";
-  }
-});
+  // Kick off rendering once the DOM is ready
+  window.addEventListener("DOMContentLoaded", () => {
+    const prefs = loadPreferences();
+    renderCultureList(prefs);
+  });
+})();
