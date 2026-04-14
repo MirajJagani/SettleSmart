@@ -38,25 +38,25 @@ const cities = [
     name: "Brisbane",
     slug: "brisbane",
     subtitle: "Warm weather, good growth, easier pace",
-    image: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1589976567749-2f011d95ffec?q=80&w=735?auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Adelaide",
     slug: "adelaide",
     subtitle: "Calmer lifestyle and student-friendly feel",
-    image: "https://images.unsplash.com/photo-1564419439572-1f478fe9ad4f?auto=format&fit=crop&w=1200&q=80"
+    image: "https://plus.unsplash.com/premium_photo-1697730252622-0e1cec87d8c4?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Perth",
     slug: "perth",
     subtitle: "Spacious, coastal, independent lifestyle",
-    image: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1574471101497-d958f6e3ebd4?q=80&w=1074?auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Canberra",
     slug: "canberra",
     subtitle: "Safe, planned, academic and policy hub",
-    image: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
   }
 ];
 
