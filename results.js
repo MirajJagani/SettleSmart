@@ -51,8 +51,16 @@ const suburbs = [
     commonLanguages: ["English", "Mandarin", "Hindi"],
     recentArrival: "strong",
     englishSupport: "good",
-    description: "Close to major universities, lively student activity, and strong transport links."
+    description: "Close to major universities, lively student activity, and strong transport links.",
+    culturalAmenities: [
+      { name: "Asian grocery stores", distance: "300m" },
+      { name: "Indian restaurants", distance: "500m" },
+      { name: "City mosque", distance: "1.2km" }
+    ],
+    events: ["International student festival", "Food street events monthly"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Clayton",
     city: "Melbourne",
@@ -66,8 +74,16 @@ const suburbs = [
     commonLanguages: ["English", "Hindi", "Malayalam"],
     recentArrival: "strong",
     englishSupport: "good",
-    description: "Known for Monash access, shared housing options, and strong multicultural communities."
+    description: "Known for Monash access, shared housing options, and strong multicultural communities.",
+    culturalAmenities: [
+      { name: "Indian supermarkets", distance: "800m" },
+      { name: "Sri Lankan grocery", distance: "1km" },
+      { name: "Hindu temple", distance: "2km" }
+    ],
+    events: ["Diwali celebrations", "Cultural student meetups"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Footscray",
     city: "Melbourne",
@@ -81,8 +97,16 @@ const suburbs = [
     commonLanguages: ["Vietnamese", "English", "Mandarin"],
     recentArrival: "strong",
     englishSupport: "medium",
-    description: "Popular for value, food culture, and easy CBD connectivity."
+    description: "Popular for value, food culture, and easy CBD connectivity.",
+    culturalAmenities: [
+      { name: "Vietnamese supermarkets", distance: "400m" },
+      { name: "Asian food market", distance: "600m" },
+      { name: "Buddhist temple", distance: "1.5km" }
+    ],
+    events: ["Lunar New Year festival", "Night market events"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Box Hill",
     city: "Melbourne",
@@ -96,8 +120,16 @@ const suburbs = [
     commonLanguages: ["Mandarin", "English", "Cantonese"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "A strong cultural hub with transport convenience and a comfortable suburban feel."
+    description: "A strong cultural hub with transport convenience and a comfortable suburban feel.",
+    culturalAmenities: [
+      { name: "Asian supermarkets", distance: "200m" },
+      { name: "Chinese restaurants", distance: "300m" },
+      { name: "Buddhist temple", distance: "1km" }
+    ],
+    events: ["Chinese New Year festival", "Community food events"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Burwood",
     city: "Sydney",
@@ -111,8 +143,16 @@ const suburbs = [
     commonLanguages: ["Mandarin", "English", "Korean"],
     recentArrival: "strong",
     englishSupport: "good",
-    description: "Well-connected suburb with diverse communities and student-friendly rental patterns."
+    description: "Well-connected suburb with diverse communities and student-friendly rental patterns.",
+    culturalAmenities: [
+      { name: "Korean grocery stores", distance: "500m" },
+      { name: "Asian supermarkets", distance: "300m" },
+      { name: "Local church", distance: "1km" }
+    ],
+    events: ["Korean food festivals", "Community gatherings"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Parramatta",
     city: "Sydney",
@@ -126,8 +166,16 @@ const suburbs = [
     commonLanguages: ["Hindi", "English", "Arabic"],
     recentArrival: "strong",
     englishSupport: "good",
-    description: "A major western Sydney hub with trains, services, and diverse community support."
+    description: "A major western Sydney hub with trains, services, and diverse community support.",
+    culturalAmenities: [
+      { name: "Indian supermarkets", distance: "400m" },
+      { name: "Halal butcher", distance: "800m" },
+      { name: "Mosque", distance: "1.5km" }
+    ],
+    events: ["Diwali Mela", "Eid celebrations"],
+    photos: ["https://via.placeholder.com/200", "https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Kensington",
     city: "Sydney",
@@ -141,8 +189,15 @@ const suburbs = [
     commonLanguages: ["English", "Mandarin", "Hindi"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "Close to UNSW and useful for students who want stronger campus access."
+    description: "Close to UNSW and useful for students who want stronger campus access.",
+    culturalAmenities: [
+      { name: "Campus food outlets", distance: "300m" },
+      { name: "Asian groceries", distance: "700m" }
+    ],
+    events: ["University cultural events"],
+    photos: ["https://via.placeholder.com/200"]
   },
+
   {
     suburb: "St Lucia",
     city: "Brisbane",
@@ -156,8 +211,15 @@ const suburbs = [
     commonLanguages: ["English", "Mandarin", "Hindi"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "Known for UQ access and a quieter student-oriented living environment."
+    description: "Known for UQ access and a quieter student-oriented living environment.",
+    culturalAmenities: [
+      { name: "Asian grocery stores", distance: "600m" },
+      { name: "Local temples", distance: "2km" }
+    ],
+    events: ["Campus festivals"],
+    photos: ["https://via.placeholder.com/200"]
   },
+
   {
     suburb: "South Brisbane",
     city: "Brisbane",
@@ -171,8 +233,14 @@ const suburbs = [
     commonLanguages: ["English", "Mandarin", "Spanish"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "A central option with river access, culture, and strong transport links."
+    description: "A central option with river access, culture, and strong transport links.",
+    culturalAmenities: [
+      { name: "International food markets", distance: "400m" }
+    ],
+    events: ["River cultural festivals"],
+    photos: ["https://via.placeholder.com/200"]
   },
+
   {
     suburb: "North Adelaide",
     city: "Adelaide",
@@ -186,8 +254,14 @@ const suburbs = [
     commonLanguages: ["English", "Mandarin", "Hindi"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "Comfortable for students wanting a quieter city and easier campus proximity."
+    description: "Comfortable for students wanting a quieter city and easier campus proximity.",
+    culturalAmenities: [
+      { name: "Local cafes and shops", distance: "300m" }
+    ],
+    events: ["Community markets"],
+    photos: ["https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Bentley",
     city: "Perth",
@@ -201,8 +275,14 @@ const suburbs = [
     commonLanguages: ["English", "Hindi", "Malay"],
     recentArrival: "medium",
     englishSupport: "medium",
-    description: "Strong for Curtin access and more affordable student housing patterns."
+    description: "Strong for Curtin access and more affordable student housing patterns.",
+    culturalAmenities: [
+      { name: "Asian grocery stores", distance: "700m" }
+    ],
+    events: ["Student community events"],
+    photos: ["https://via.placeholder.com/200"]
   },
+
   {
     suburb: "Bruce",
     city: "Canberra",
@@ -216,7 +296,12 @@ const suburbs = [
     commonLanguages: ["English", "Hindi", "Mandarin"],
     recentArrival: "medium",
     englishSupport: "good",
-    description: "Good for students looking for a quieter academic environment and campus access."
+    description: "Good for students looking for a quieter academic environment and campus access.",
+    culturalAmenities: [
+      { name: "Local shopping centre", distance: "500m" }
+    ],
+    events: ["University events"],
+    photos: ["https://via.placeholder.com/200"]
   }
 ];
 
@@ -331,6 +416,15 @@ function renderMatches(list) {
           <ul class="inline-reason-list">
             ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
           </ul>
+          <ul class="inline-reason-list">
+            ${buildReasonList(match).slice(0, 3).map(reason => `<li>${reason}</li>`).join("")}
+          </ul>
+
+          <button 
+            class="btn btn-sm ss-btn ss-btn-primary more-btn mt-2"
+            data-suburb="${match.suburb}">
+            View cultural details →
+          </button>
         </div>
       </article>
     </div>
@@ -398,3 +492,13 @@ function formatChoice(value) {
   if (!value) return "-";
   return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("more-btn")) {
+    const suburb = e.target.dataset.suburb;
+
+    localStorage.setItem("selected_suburb", suburb);
+    localStorage.setItem("suburb_data", JSON.stringify(suburbs));
+
+    window.location.href = "suburb.html";
+  }
+});
