@@ -89,3 +89,108 @@ function initSuburbPage() {
     </section>
     `;
 }
+
+/* =========================
+   Epic 4 profile enhancement
+   Append only - do not edit existing code
+========================= */
+
+(() => {
+  if (!suburbProfile) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("slug");
+  const suburb = window.suburbs.find(item => item.slug === slug);
+
+  if (!suburb) return;
+
+  const community = typeof window.getEpic4CommunityData === "function"
+    ? window.getEpic4CommunityData(suburb)
+    : null;
+
+  const cultureScore = typeof window.getEpic4ProfileCultureScore === "function"
+    ? window.getEpic4ProfileCultureScore(suburb, preferences)
+    : 7;
+
+  const photoCards = [
+    {
+      title: "Community grocery access",
+      caption: "Prototype cultural support photo",
+      image: suburb.image
+    },
+    {
+      title: "Local food and social strip",
+      caption: "Prototype food and restaurant signal",
+      image: suburb.image
+    },
+    {
+      title: "Community venue / worship access",
+      caption: "Prototype support and belonging signal",
+      image: suburb.image
+    }
+  ];
+
+  const section = document.createElement("section");
+  section.className = "info-card detail-profile-section epic4-profile-section mt-4";
+  section.innerHTML = `
+    <div class="detail-profile-header">
+      <h3>Multicultural support signals</h3>
+    </div>
+
+    <div class="epic4-profile-topline">
+      <span class="epic4-profile-score">Culture fit ${cultureScore}/10</span>
+      <span class="epic4-profile-score">Community strength ${community.communityStrength}%</span>
+      <span class="epic4-profile-score">Overseas-born share ${community.overseasBornShare}</span>
+    </div>
+
+    <div class="epic4-profile-grid">
+      <article class="profile-card">
+        <span class="profile-kicker">Cultural amenities</span>
+        <ul class="epic4-detail-list">
+          ${community.keyPlaces.map(place => `
+            <li>
+              <strong>${place}</strong>
+              <span>${community.highlightDistance}</span>
+            </li>
+          `).join("")}
+        </ul>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-kicker">Practical community support</span>
+        <div class="culture-signals">
+          <span class="signal-pill">Specialty shops: ${community.specialtyShops}</span>
+          <span class="signal-pill">Places of worship: ${community.placesOfWorship}</span>
+          <span class="signal-pill">English support: ${suburb.englishSupport}</span>
+          <span class="signal-pill">Recent arrivals: ${suburb.recentArrival}</span>
+        </div>
+      </article>
+
+      <article class="profile-card">
+        <span class="profile-kicker">Event calendar hints</span>
+        <ul class="epic4-detail-list">
+          ${community.events.map(event => `
+            <li>
+              <strong>${event}</strong>
+              <span>Nearby cultural activity</span>
+            </li>
+          `).join("")}
+        </ul>
+      </article>
+    </div>
+
+    <div class="epic4-photo-grid">
+      ${photoCards.map(photo => `
+        <article class="epic4-photo-card">
+          <div class="epic4-photo-image" style="background-image:url('${photo.image}')"></div>
+          <div class="epic4-photo-copy">
+            <strong>${photo.title}</strong>
+            <span>${photo.caption}</span>
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+
+  suburbProfile.insertAdjacentElement("beforeend", section);
+})();

@@ -353,3 +353,414 @@ function applySort(list, sortBy) {
       return sorted.sort((a, b) => b.score - a.score);
   }
 }
+
+/* =========================
+   Epic 4 additive enhancement
+   Append only - do not edit existing code
+========================= */
+
+(() => {
+  const epic4State = {
+    tab: "explore",
+    search: "",
+    showMap: false
+  };
+
+  const originalRenderPage = renderPage;
+
+  function getRankedListForEpic4() {
+    return [...appState.rankedSuburbs].sort((a, b) => b.score - a.score);
+  }
+
+  function getEpic4CultureScore(suburb) {
+    let score = getCultureFitScore(suburb);
+
+    if (
+      preferences.culture &&
+      suburb.culturalGroups &&
+      suburb.culturalGroups.includes(preferences.culture)
+    ) {
+      score += 1;
+    }
+
+    return Math.min(score, 10);
+  }
+
+  function getCultureConnectionLabel(suburb) {
+    if (
+      preferences.culture &&
+      suburb.culturalGroups &&
+      suburb.culturalGroups.includes(preferences.culture)
+    ) {
+      return `Strong ${preferences.culture} community`;
+    }
+
+    if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
+      return `${preferences.language} spoken here`;
+    }
+
+    if (suburb.culture === "high") return "High cultural diversity";
+    if (suburb.culture === "medium") return "Growing multicultural mix";
+    return "Emerging community support";
+  }
+
+  function getPriorityLanguageBadges(suburb) {
+    const badges = [];
+
+    if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
+      badges.push(`${preferences.language} spoken`);
+    }
+
+    suburb.commonLanguages.forEach(language => {
+      if (badges.length < 3 && !badges.includes(language) && !badges.includes(`${language} spoken`)) {
+        badges.push(language);
+      }
+    });
+
+    return badges.slice(0, 3);
+  }
+
+  function getCommunityData(suburb) {
+    if (typeof window.getEpic4CommunityData === "function") {
+      return window.getEpic4CommunityData(suburb);
+    }
+
+    return {
+      communityStrength: suburb.culture === "high" ? 82 : 68,
+      overseasBornShare: "35%",
+      specialtyShops: "4+",
+      placesOfWorship: "2+",
+      keyPlaces: ["International grocery options", "Community food access", "Support venues nearby"],
+      highlightDistance: "800m walk",
+      events: ["Seasonal community event", "Student meetup"]
+    };
+  }
+
+  function ensureCultureToolbar() {
+    const panel = document.querySelector(".culture-panel");
+    const heading = panel ? panel.querySelector(".panel-heading") : null;
+
+    if (!panel || !heading || document.getElementById("epic4CultureToolbar")) {
+      return;
+    }
+
+    const toolbar = document.createElement("div");
+    toolbar.id = "epic4CultureToolbar";
+    toolbar.className = "epic4-culture-toolbar";
+    toolbar.innerHTML = `
+      <div class="epic4-culture-toolbar-row">
+        <div class="epic4-tab-group">
+          <button type="button" class="epic4-tab-btn active" data-epic4-tab="explore">Explore</button>
+          <button type="button" class="epic4-tab-btn" data-epic4-tab="culture">Culture Fit</button>
+          <button type="button" class="epic4-tab-btn" data-epic4-tab="compare">Compare</button>
+        </div>
+
+        <div class="epic4-toolbar-actions">
+          <input
+            type="text"
+            id="epic4LanguageSearch"
+            class="epic4-language-search"
+            placeholder="Search language e.g. Mandarin"
+          />
+          <button type="button" class="epic4-map-toggle" id="epic4MapToggle">Toggle density map</button>
+        </div>
+      </div>
+
+      <div id="epic4CultureTitle" class="epic4-culture-title"></div>
+      <div id="epic4CultureMap" class="epic4-culture-map hidden"></div>
+    `;
+
+    heading.insertAdjacentElement("afterend", toolbar);
+
+    toolbar.querySelectorAll("[data-epic4-tab]").forEach(button => {
+      button.addEventListener("click", () => {
+        epic4State.tab = button.dataset.epic4Tab;
+        renderEpic4CultureArea();
+      });
+    });
+
+    const searchInput = document.getElementById("epic4LanguageSearch");
+    searchInput.addEventListener("input", (event) => {
+      epic4State.search = event.target.value.trim();
+      renderEpic4CultureArea();
+    });
+
+    document.getElementById("epic4MapToggle").addEventListener("click", () => {
+      epic4State.showMap = !epic4State.showMap;
+      renderEpic4CultureArea();
+    });
+  }
+
+  function enhanceResultCards() {
+    document.querySelectorAll("#resultsGrid .result-card").forEach(card => {
+      const existingRow = card.querySelector(".epic4-badge-row");
+      if (existingRow) existingRow.remove();
+
+      const suburbName = card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : "";
+      const suburb = appState.rankedSuburbs.find(item => item.suburb === suburbName);
+
+      if (!suburb) return;
+
+      const badgeRow = document.createElement("div");
+      badgeRow.className = "epic4-badge-row";
+      badgeRow.innerHTML = `
+        ${getPriorityLanguageBadges(suburb).map(badge => `
+          <span class="epic4-language-badge">${badge}</span>
+        `).join("")}
+        <span class="epic4-connection-badge">${getCultureConnectionLabel(suburb)}</span>
+      `;
+
+      const metaRow = card.querySelector(".result-meta-row");
+      if (metaRow) {
+        metaRow.insertAdjacentElement("beforebegin", badgeRow);
+      }
+    });
+  }
+
+  function updateToolbarState() {
+    const toolbar = document.getElementById("epic4CultureToolbar");
+    if (!toolbar) return;
+
+    toolbar.querySelectorAll("[data-epic4-tab]").forEach(button => {
+      button.classList.toggle("active", button.dataset.epic4Tab === epic4State.tab);
+    });
+
+    const searchInput = document.getElementById("epic4LanguageSearch");
+    if (searchInput) {
+      searchInput.value = epic4State.search;
+    }
+  }
+
+  function getFilteredCultureList() {
+    let list = getRankedListForEpic4();
+
+    if (epic4State.search) {
+      const keyword = epic4State.search.toLowerCase();
+      list = list.filter(suburb =>
+        suburb.commonLanguages.some(language => language.toLowerCase().includes(keyword))
+      );
+    }
+
+    return list;
+  }
+
+  function renderEpic4Map(list) {
+    const map = document.getElementById("epic4CultureMap");
+    if (!map) return;
+
+    if (!epic4State.showMap) {
+      map.classList.add("hidden");
+      map.innerHTML = "";
+      return;
+    }
+
+    map.classList.remove("hidden");
+    map.innerHTML = `
+      <div class="epic4-map-inner">
+        <h4>Community density guide</h4>
+        <p class="muted-line">Prototype density view based on community strength signals.</p>
+
+        ${list.slice(0, 5).map(suburb => {
+          const community = getCommunityData(suburb);
+          return `
+            <div class="epic4-density-item">
+              <div class="epic4-density-head">
+                <strong>${suburb.suburb}</strong>
+                <span>${community.communityStrength}%</span>
+              </div>
+              <div class="epic4-density-bar">
+                <span style="width:${community.communityStrength}%"></span>
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }
+
+  function renderExploreView(list) {
+    const title = document.getElementById("epic4CultureTitle");
+
+    title.innerHTML = `
+      <h4>Best culture-fit suburbs from your shortlist</h4>
+      <p class="muted-line">Search by language and compare cultural connection signals before opening suburb details.</p>
+    `;
+
+    cultureList.innerHTML = list.map(suburb => {
+      const community = getCommunityData(suburb);
+
+      return `
+        <div class="culture-item epic4-culture-item">
+          <div class="culture-item-head">
+            <strong>${suburb.suburb}</strong>
+            <span class="culture-score">Culture fit ${getEpic4CultureScore(suburb)}/10</span>
+          </div>
+
+          <div class="epic4-inline-badges">
+            ${getPriorityLanguageBadges(suburb).map(badge => `
+              <span class="epic4-language-badge">${badge}</span>
+            `).join("")}
+            <span class="epic4-connection-badge">${getCultureConnectionLabel(suburb)}</span>
+          </div>
+
+          <p class="muted-line mb-2">
+            Common language cues: ${suburb.commonLanguages.join(", ")}
+          </p>
+
+          <div class="culture-signals">
+            <span class="signal-pill">Community strength: ${community.communityStrength}%</span>
+            <span class="signal-pill">Overseas-born share: ${community.overseasBornShare}</span>
+            <span class="signal-pill">Shops: ${community.specialtyShops}</span>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  function renderCultureFitView(list) {
+    const title = document.getElementById("epic4CultureTitle");
+
+    title.innerHTML = `
+      <h4>${preferences.culture ? `Top ${preferences.culture} communities` : "Top culture communities"}</h4>
+      <p class="muted-line">Ranked by community strength, cultural connection, and language familiarity.</p>
+    `;
+
+    const ranked = [...list].sort((a, b) => {
+      return getCommunityData(b).communityStrength - getCommunityData(a).communityStrength;
+    });
+
+    cultureList.innerHTML = ranked.map((suburb, index) => {
+      const community = getCommunityData(suburb);
+
+      return `
+        <div class="epic4-rank-card">
+          <div class="epic4-rank-number">#${index + 1}</div>
+
+          <div class="epic4-rank-content">
+            <div class="culture-item-head">
+              <strong>${suburb.suburb}</strong>
+              <span class="culture-score">Culture fit ${getEpic4CultureScore(suburb)}/10</span>
+            </div>
+
+            <div class="epic4-inline-badges">
+              ${getPriorityLanguageBadges(suburb).map(badge => `
+                <span class="epic4-language-badge">${badge}</span>
+              `).join("")}
+              <span class="epic4-connection-badge">${getCultureConnectionLabel(suburb)}</span>
+            </div>
+
+            <div class="epic4-metric-grid">
+              <div class="epic4-metric-card">
+                <span>Community strength</span>
+                <strong>${community.communityStrength}%</strong>
+              </div>
+              <div class="epic4-metric-card">
+                <span>Overseas-born</span>
+                <strong>${community.overseasBornShare}</strong>
+              </div>
+              <div class="epic4-metric-card">
+                <span>Specialty shops</span>
+                <strong>${community.specialtyShops}</strong>
+              </div>
+              <div class="epic4-metric-card">
+                <span>Places of worship</span>
+                <strong>${community.placesOfWorship}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  function renderCompareView(list) {
+    const title = document.getElementById("epic4CultureTitle");
+
+    title.innerHTML = `
+      <h4>Compare community signals</h4>
+      <p class="muted-line">Quick comparison of your strongest culture-fit suburbs.</p>
+    `;
+
+    const compareList = [...list]
+      .sort((a, b) => getEpic4CultureScore(b) - getEpic4CultureScore(a))
+      .slice(0, 3);
+
+    cultureList.innerHTML = `
+      <div class="epic4-compare-grid">
+        ${compareList.map(suburb => {
+          const community = getCommunityData(suburb);
+
+          return `
+            <div class="epic4-compare-card">
+              <span class="result-city-label">${suburb.city}</span>
+              <h4>${suburb.suburb}</h4>
+
+              <div class="epic4-inline-badges">
+                ${getPriorityLanguageBadges(suburb).map(badge => `
+                  <span class="epic4-language-badge">${badge}</span>
+                `).join("")}
+              </div>
+
+              <div class="epic4-compare-line">
+                <span>Culture fit</span>
+                <strong>${getEpic4CultureScore(suburb)}/10</strong>
+              </div>
+              <div class="epic4-compare-line">
+                <span>Community strength</span>
+                <strong>${community.communityStrength}%</strong>
+              </div>
+              <div class="epic4-compare-line">
+                <span>Overseas-born share</span>
+                <strong>${community.overseasBornShare}</strong>
+              </div>
+              <div class="epic4-compare-line">
+                <span>Shops</span>
+                <strong>${community.specialtyShops}</strong>
+              </div>
+              <div class="epic4-compare-line">
+                <span>Worship places</span>
+                <strong>${community.placesOfWorship}</strong>
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }
+
+  function renderEpic4CultureArea() {
+    ensureCultureToolbar();
+    updateToolbarState();
+
+    const filteredList = getFilteredCultureList();
+
+    if (!filteredList.length) {
+      cultureList.innerHTML = `
+        <div class="epic4-empty-state">
+          <h4>No suburbs match that language search</h4>
+          <p>Try another language or clear the search field.</p>
+        </div>
+      `;
+      renderEpic4Map([]);
+      return;
+    }
+
+    if (epic4State.tab === "culture") {
+      renderCultureFitView(filteredList);
+    } else if (epic4State.tab === "compare") {
+      renderCompareView(filteredList);
+    } else {
+      renderExploreView(filteredList);
+    }
+
+    renderEpic4Map(filteredList);
+  }
+
+  renderPage = function () {
+    originalRenderPage();
+    enhanceResultCards();
+    renderEpic4CultureArea();
+  };
+
+  renderPage();
+})();

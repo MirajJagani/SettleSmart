@@ -402,3 +402,136 @@ window.buildReasonList = function (suburb, preferences) {
 
   return reasons.slice(0, 4);
 };
+
+/* =========================
+   Epic 4 additive helpers
+   Append only - do not edit existing code
+========================= */
+
+window.epic4CommunityDatabase = {
+  "box-hill": {
+    communityStrength: 92,
+    overseasBornShare: "54%",
+    specialtyShops: "9+",
+    placesOfWorship: "4+",
+    keyPlaces: [
+      "Asian supermarkets and fresh produce stores",
+      "Chinese and Indian restaurants",
+      "Temple / worship access within short travel distance"
+    ],
+    highlightDistance: "800m walk",
+    events: [
+      "Lunar New Year celebrations nearby",
+      "Weekend multicultural food activity"
+    ]
+  },
+  "clayton": {
+    communityStrength: 90,
+    overseasBornShare: "49%",
+    specialtyShops: "8+",
+    placesOfWorship: "4+",
+    keyPlaces: [
+      "Indian grocery stores and South Asian food spots",
+      "Student-friendly shared housing area",
+      "Temple and community support venues"
+    ],
+    highlightDistance: "900m walk",
+    events: [
+      "Diwali celebration nearby",
+      "Monash multicultural student events"
+    ]
+  },
+  "footscray": {
+    communityStrength: 88,
+    overseasBornShare: "46%",
+    specialtyShops: "8+",
+    placesOfWorship: "3+",
+    keyPlaces: [
+      "Vietnamese groceries and food streets",
+      "Fresh produce and specialty shops",
+      "Community venues for migrant support"
+    ],
+    highlightDistance: "600m walk",
+    events: [
+      "Weekend food market atmosphere",
+      "Community cultural pop-up events"
+    ]
+  },
+  "carlton": {
+    communityStrength: 84,
+    overseasBornShare: "43%",
+    specialtyShops: "6+",
+    placesOfWorship: "3+",
+    keyPlaces: [
+      "International groceries close to student areas",
+      "Late-night food and social streets",
+      "City-access worship and community spaces"
+    ],
+    highlightDistance: "700m walk",
+    events: [
+      "Student cultural market activity",
+      "Seasonal community events"
+    ]
+  },
+  "parramatta": {
+    communityStrength: 87,
+    overseasBornShare: "45%",
+    specialtyShops: "7+",
+    placesOfWorship: "4+",
+    keyPlaces: [
+      "South Asian groceries and halal food options",
+      "Large transport-connected shopping area",
+      "Mosque / temple / church access nearby"
+    ],
+    highlightDistance: "850m walk",
+    events: [
+      "Community food festival activity",
+      "Seasonal multicultural council events"
+    ]
+  }
+};
+
+window.getEpic4CommunityData = function (suburb) {
+  const fallback = {
+    communityStrength: suburb.culture === "high" ? 82 : suburb.culture === "medium" ? 68 : 54,
+    overseasBornShare: suburb.culture === "high" ? "42%" : suburb.culture === "medium" ? "31%" : "22%",
+    specialtyShops: suburb.culture === "high" ? "6+" : "3+",
+    placesOfWorship: suburb.culture === "high" ? "3+" : "1+",
+    keyPlaces: [
+      "International grocery options",
+      "Culturally familiar food venues",
+      "Community / worship support nearby"
+    ],
+    highlightDistance: "800m walk",
+    events: [
+      "Seasonal cultural festival nearby",
+      "Student community meetup"
+    ]
+  };
+
+  return {
+    ...fallback,
+    ...(window.epic4CommunityDatabase[suburb.slug] || {})
+  };
+};
+
+window.getEpic4ProfileCultureScore = function (suburb, preferences) {
+  let score = 6;
+
+  if (suburb.culture === "high") score += 2;
+  if (suburb.culture === "medium") score += 1;
+
+  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) {
+    score += 1;
+  }
+
+  if (preferences.culture && suburb.culturalGroups && suburb.culturalGroups.includes(preferences.culture)) {
+    score += 1;
+  }
+
+  if (suburb.recentArrival === "strong") {
+    score += 1;
+  }
+
+  return Math.min(score, 10);
+};

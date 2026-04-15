@@ -947,3 +947,291 @@ code {
   height: 40px;
   object-fit: contain;
 }
+
+/* =========================
+   Epic 4 additive styles
+   Append only - do not edit existing code
+========================= */
+
+.epic4-badge-row,
+.epic4-inline-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.epic4-language-badge,
+.epic4-connection-badge,
+.epic4-profile-score {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.epic4-language-badge {
+  background: rgba(47, 201, 177, 0.12);
+  color: #15907f;
+}
+
+.epic4-connection-badge,
+.epic4-profile-score {
+  background: rgba(115, 92, 255, 0.10);
+  color: var(--primary-dark);
+}
+
+.epic4-culture-toolbar {
+  margin: 18px 0 20px;
+}
+
+.epic4-culture-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.epic4-tab-group,
+.epic4-toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.epic4-tab-btn,
+.epic4-map-toggle {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.epic4-tab-btn:hover,
+.epic4-map-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.epic4-tab-btn.active {
+  background: rgba(115, 92, 255, 0.10);
+  color: var(--primary-dark);
+  border-color: rgba(115, 92, 255, 0.4);
+}
+
+.epic4-language-search {
+  min-width: 260px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 14px;
+  padding: 11px 14px;
+  outline: none;
+}
+
+.epic4-language-search:focus {
+  border-color: rgba(115, 92, 255, 0.45);
+  box-shadow: 0 0 0 4px rgba(115, 92, 255, 0.08);
+}
+
+.epic4-culture-title {
+  margin-bottom: 12px;
+}
+
+.epic4-culture-title h4 {
+  margin: 0 0 6px;
+}
+
+.epic4-map-inner,
+.epic4-empty-state,
+.epic4-rank-card,
+.epic4-compare-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.92);
+  padding: 18px;
+}
+
+.epic4-culture-map {
+  margin-bottom: 18px;
+}
+
+.epic4-density-item + .epic4-density-item {
+  margin-top: 14px;
+}
+
+.epic4-density-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.epic4-density-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(115, 92, 255, 0.10);
+  overflow: hidden;
+}
+
+.epic4-density-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), #8d67ff);
+}
+
+.epic4-rank-card {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.epic4-rank-number {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), #8d67ff);
+}
+
+.epic4-rank-content {
+  display: grid;
+  gap: 14px;
+}
+
+.epic4-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.epic4-metric-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  background: #fff;
+}
+
+.epic4-metric-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+.epic4-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.epic4-compare-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.epic4-compare-line:last-child {
+  border-bottom: 0;
+}
+
+.epic4-profile-section {
+  padding: 24px;
+}
+
+.epic4-profile-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.epic4-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.epic4-detail-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.epic4-detail-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(115, 92, 255, 0.06);
+}
+
+.epic4-detail-list li span {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.epic4-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.epic4-photo-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.epic4-photo-image {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+
+.epic4-photo-copy {
+  padding: 14px;
+  display: grid;
+  gap: 6px;
+}
+
+.epic4-photo-copy span {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 991.98px) {
+  .epic4-metric-grid,
+  .epic4-compare-grid,
+  .epic4-profile-grid,
+  .epic4-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .epic4-rank-card {
+    grid-template-columns: 1fr;
+  }
+
+  .epic4-language-search {
+    min-width: 100%;
+  }
+}
