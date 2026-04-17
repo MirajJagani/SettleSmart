@@ -16,7 +16,10 @@ const appState = {
   rankedSuburbs: [],
   activeTab: "explore",
   search: "",
-  showMap: false
+  showMap: false,
+  currentPage: 1,
+  pageSize: 4,
+  suburbQuery: ""
 };
 
 const resultsHeroBanner = document.getElementById("resultsHeroBanner");
@@ -25,6 +28,8 @@ const resultsHeroCopy = document.getElementById("resultsHeroCopy");
 const resultsSummary = document.getElementById("resultsSummary");
 const topMatchPanel = document.getElementById("topMatchPanel");
 const resultsGrid = document.getElementById("resultsGrid");
+const resultsPagination = document.getElementById("resultsPagination");
+const suburbSearch = document.getElementById("suburbSearch");
 const sortSelect = document.getElementById("sortSelect");
 const resultsCount = document.getElementById("resultsCount");
 
@@ -66,6 +71,16 @@ function init() {
     sortSelect.addEventListener("change", handleSortChange);
   }
 
+  if (suburbSearch) {
+    suburbSearch.value = appState.suburbQuery;
+
+    suburbSearch.addEventListener("input", (event) => {
+      appState.suburbQuery = event.target.value.trim().toLowerCase();
+      appState.currentPage = 1;
+      renderPage();
+    });
+  }
+
   communityTabs.forEach((button) => {
     button.addEventListener("click", () => {
       appState.activeTab = button.dataset.communityTab;
@@ -101,15 +116,45 @@ function rankSuburbs() {
     .sort((a, b) => b.score - a.score);
 }
 
+function getSortedShortlistForDisplay() {
+  return applySort(getFilteredShortlist(appState.rankedSuburbs), appState.sortBy);
+}
+
+function getCurrentPageSuburbs() {
+  const sorted = getSortedShortlistForDisplay();
+  const totalPages = sorted.length ? Math.ceil(sorted.length / appState.pageSize) : 0;
+
+  if (totalPages === 0) return [];
+
+  const safePage = Math.min(Math.max(appState.currentPage, 1), totalPages);
+  const startIndex = (safePage - 1) * appState.pageSize;
+
+  return sorted.slice(startIndex, startIndex + appState.pageSize);
+}
+
 function renderPage() {
-  const bestMatchList = [...appState.rankedSuburbs].sort((a, b) => b.score - a.score);
-  const sorted = applySort(appState.rankedSuburbs, appState.sortBy);
-  const bestMatch = bestMatchList[0];
+  const filtered = getFilteredShortlist(appState.rankedSuburbs);
+  const sorted = getSortedShortlistForDisplay();
+  const bestMatch = [...sorted].sort((a, b) => b.score - a.score)[0] || null;
+
+  const totalPages = sorted.length ? Math.ceil(sorted.length / appState.pageSize) : 0;
+
+  if (totalPages === 0) {
+    appState.currentPage = 1;
+  } else {
+    if (appState.currentPage > totalPages) appState.currentPage = totalPages;
+    if (appState.currentPage < 1) appState.currentPage = 1;
+  }
+
+  const startIndex = (appState.currentPage - 1) * appState.pageSize;
+  const endIndex = startIndex + appState.pageSize;
+  const currentPageItems = getCurrentPageSuburbs();
 
   renderHero();
   renderTopMatch(bestMatch);
-  renderSpinWheel(bestMatchList.slice(0, 4));
-  renderMatches(sorted, bestMatch ? bestMatch.slug : "");
+  renderSpinWheel(currentPageItems);
+  renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
+  renderPagination(totalPages);
   renderCommunityExplorer();
 
   if (resultsCount) {
@@ -119,6 +164,7 @@ function renderPage() {
 
 function handleSortChange(event) {
   appState.sortBy = event.target.value;
+  appState.currentPage = 1;
   localStorage.setItem("settlesmart_sort", appState.sortBy);
   renderPage();
 }
@@ -229,6 +275,17 @@ function renderTopMatch(match) {
 }
 
 function renderMatches(list, bestMatchSlug) {
+  if (!list.length) {
+    resultsGrid.innerHTML = `
+      <div class="col-12">
+        <div class="info-card p-4">
+          <h3 class="mb-2">No suburbs found</h3>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
   resultsGrid.innerHTML = list
     .map((match) => {
       const languageBadges = getPriorityLanguageBadges(match)
@@ -259,20 +316,20 @@ function renderMatches(list, bestMatchSlug) {
 
             <div class="suburb-stat-grid">
               <div class="suburb-stat-box">
-                <span>Your budget</span>
-                <strong>$${preferences.budget}/week</strong>
+                <span>Rent range</span>
+                <strong>${match.rentRange || "Not available"}</strong>
               </div>
               <div class="suburb-stat-box">
-                <span>Your housing</span>
-                <strong>${window.formatChoice(preferences.housing)}</strong>
+                <span>Transport</span>
+                <strong>${window.formatChoice(match.transport)}</strong>
               </div>
               <div class="suburb-stat-box">
-                <span>Your commute</span>
-                <strong>${window.formatChoice(preferences.commute)}</strong>
+                <span>University access</span>
+                <strong>${window.formatChoice(match.university)}</strong>
               </div>
               <div class="suburb-stat-box">
-                <span>Your lifestyle</span>
-                <strong>${window.formatChoice(preferences.lifestyle)}</strong>
+                <span>Language comfort</span>
+                <strong>${match.commonLanguages?.slice(0, 2).join(", ") || "Not available"}</strong>
               </div>
             </div>
 
@@ -302,6 +359,78 @@ function renderMatches(list, bestMatchSlug) {
       window.location.href = `suburb.html?slug=${button.dataset.slug}`;
     });
   });
+}
+
+function renderPagination(totalPages) {
+  if (!resultsPagination) return;
+
+  if (totalPages <= 1) {
+    resultsPagination.innerHTML = "";
+    return;
+  }
+
+  const visibleItems = getVisiblePaginationItems(totalPages, appState.currentPage);
+
+  const html = visibleItems.map((item) => {
+    if (item === "ellipsis") {
+      return `<span class="pagination-ellipsis">...</span>`;
+    }
+
+    return `
+      <button
+        class="pagination-btn ${item === appState.currentPage ? "active" : ""}"
+        data-page="${item}"
+      >
+        ${item}
+      </button>
+    `;
+  }).join("");
+
+  resultsPagination.innerHTML = html;
+
+  resultsPagination.querySelectorAll("[data-page]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextPage = Number(button.dataset.page);
+
+      if (nextPage !== appState.currentPage) {
+        appState.currentPage = nextPage;
+        renderPage();
+      }
+    });
+  });
+}
+
+function getVisiblePaginationItems(totalPages, currentPage) {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+
+  const pages = new Set([
+    1,
+    totalPages,
+    currentPage - 1,
+    currentPage,
+    currentPage + 1
+  ]);
+
+  const validPages = [...pages]
+    .filter((page) => page >= 1 && page <= totalPages)
+    .sort((a, b) => a - b);
+
+  const items = [];
+
+  for (let i = 0; i < validPages.length; i++) {
+    const page = validPages[i];
+    const prev = validPages[i - 1];
+
+    if (i > 0 && page - prev > 1) {
+      items.push("ellipsis");
+    }
+
+    items.push(page);
+  }
+
+  return items;
 }
 
 /* ===== Spin wheel ===== */
@@ -511,10 +640,14 @@ function updateCommunityTabs() {
 }
 
 function getFilteredCommunityList() {
-  if (!appState.search) return [...appState.rankedSuburbs];
+  const baseList = getCurrentPageSuburbs();
 
-  return appState.rankedSuburbs.filter((suburb) =>
-    suburb.commonLanguages.some((language) => language.toLowerCase().includes(appState.search))
+  if (!appState.search) return [...baseList];
+
+  return baseList.filter((suburb) =>
+    suburb.commonLanguages.some((language) =>
+      language.toLowerCase().includes(appState.search)
+    )
   );
 }
 
@@ -768,4 +901,12 @@ function applySort(list, sortBy) {
     default:
       return sorted.sort((a, b) => b.score - a.score);
   }
+}
+
+function getFilteredShortlist(list) {
+  if (!appState.suburbQuery) return [...list];
+
+  return list.filter((suburb) =>
+    suburb.suburb.toLowerCase().includes(appState.suburbQuery)
+  );
 }

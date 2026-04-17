@@ -66,7 +66,7 @@
       <span class="section-kicker">Need help deciding?</span>
       <h3 class="spin-wheel-title">Spin the shortlist wheel</h3>
       <p class="spin-wheel-copy">
-        Let SettleSmart randomly choose one suburb from your current top 4 shortlist,
+        Let SettleSmart randomly choose one suburb from the 4 suburbs shown on this page,
         so you know which one to explore first.
       </p>
 
@@ -91,6 +91,19 @@
         <div class="results-toolbar mb-4">
           <div class="results-toolbar-left">
             <span class="results-count" id="resultsCount">0 suburbs found</span>
+          </div>
+
+          <div class="results-toolbar-center">
+            <div class="results-toolbar-center-inner">
+              <div class="results-pagination" id="resultsPagination"></div>
+
+              <input
+                type="text"
+                id="suburbSearch"
+                class="results-suburb-search"
+                placeholder="Search suburb"
+              />
+            </div>
           </div>
 
           <div class="results-toolbar-right">
