@@ -133,10 +133,7 @@ function getCurrentPageSuburbs() {
 }
 
 function renderPage() {
-  const filtered = getFilteredShortlist(appState.rankedSuburbs);
   const sorted = getSortedShortlistForDisplay();
-  const bestMatch = [...sorted].sort((a, b) => b.score - a.score)[0] || null;
-
   const totalPages = sorted.length ? Math.ceil(sorted.length / appState.pageSize) : 0;
 
   if (totalPages === 0) {
@@ -146,13 +143,13 @@ function renderPage() {
     if (appState.currentPage < 1) appState.currentPage = 1;
   }
 
-  const startIndex = (appState.currentPage - 1) * appState.pageSize;
-  const endIndex = startIndex + appState.pageSize;
   const currentPageItems = getCurrentPageSuburbs();
+  const bestMatch = appState.rankedSuburbs[0] || null;
+  const topWheelItems = appState.rankedSuburbs.slice(0, 4);
 
   renderHero();
   renderTopMatch(bestMatch);
-  renderSpinWheel(currentPageItems);
+  renderSpinWheel(topWheelItems);
   renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
   renderPagination(totalPages);
   renderCommunityExplorer();
