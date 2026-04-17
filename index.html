@@ -28,7 +28,9 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="#how-it-works">How it works</a></li>
-          <li class="nav-item mt-3 mt-lg-0"><button class="btn btn-primary ss-btn ss-btn-primary" data-open-onboarding>Start my shortlist</button></li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <button class="btn btn-primary ss-btn ss-btn-primary" data-scroll-shortlist>Start my shortlist</button>
+          </li>
         </ul>
       </div>
     </div>
@@ -39,7 +41,7 @@
       <div class="container-xxl">
         <div class="hero-shell">
           <div class="row align-items-center g-5">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 hero-copy-col">
               <span class="ss-pill">For international students moving to Australian cities</span>
               <h1 class="hero-title">Shortlist suburbs that feel right for your student life.</h1>
               <p class="hero-copy">
@@ -48,13 +50,13 @@
               </p>
 
               <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
-                <button class="btn btn-primary ss-btn ss-btn-primary" data-open-onboarding>Start my shortlist</button>
+                <button class="btn btn-primary ss-btn ss-btn-primary" data-scroll-shortlist>Start my shortlist</button>
                 <a href="#how-it-works" class="hero-text-link">See how it works <span>→</span></a>
               </div>
             </div>
 
             <div class="col-12 col-lg-6">
-              <div class="hero-visual-panel">
+              <div class="hero-visual-panel" aria-hidden="true">
                 <div class="city-stack" id="heroCityStack"></div>
               </div>
             </div>
@@ -105,7 +107,35 @@
           </div>
         </div>
       </div>
-    </section>    
+    </section>
+
+    <section class="section-pad" id="shortlist-builder">
+      <div class="container-xxl">
+        <div class="section-header text-center">
+          <span class="ss-pill ss-pill-light">Start your shortlist</span>
+          <h2>Build your suburb shortlist in 6 guided steps</h2>
+          <p>Choose your destination city, then tell us what matters most for study, rent, commute, and everyday comfort.</p>
+        </div>
+
+        <div class="onpage-builder-card">
+          <div class="onpage-builder-top d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+            <div>
+              <h3 class="builder-title mb-1" id="pageStepTitle">Choose your destination city</h3>
+              <p class="builder-subtitle mb-0" id="pageStepLabel">Step 1 of 6</p>
+            </div>
+            <div class="progress-dots onpage-progress-dots" id="progressDots"></div>
+          </div>
+
+          <div class="step-content page-step-content" id="stepContent"></div>
+
+          <div class="onpage-builder-actions d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <button class="btn ss-btn ss-btn-secondary" id="backBtn">Back</button>
+            <span class="step-hint text-center flex-grow-1" id="stepHint">Complete this step to continue</span>
+            <button class="btn btn-primary ss-btn ss-btn-primary" id="nextBtn">Next</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="ss-footer mt-5">
@@ -131,37 +161,11 @@
         <div class="col-12 col-lg-3">
           <h4 class="footer-title">Start</h4>
           <p class="footer-copy small">Ready to build your suburb shortlist?</p>
-          <button class="btn btn-primary ss-btn ss-btn-primary w-100 w-lg-auto" data-open-onboarding>Start my shortlist</button>
+          <button class="btn btn-primary ss-btn ss-btn-primary w-100 w-lg-auto" data-scroll-shortlist>Start my shortlist</button>
         </div>
       </div>
     </div>
   </footer>
-
-  <div class="modal fade" id="onboardingModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content ss-modal">
-        <div class="modal-header border-0 pb-0">
-          <div>
-            <span class="ss-pill ss-pill-light small-pill">Smart Match Journey</span>
-            <h2 class="modal-title mt-3 mb-1" id="modalStepTitle">Choose your destination city</h2>
-            <p class="modal-subtitle" id="modalStepLabel">Step 1 of 6</p>
-          </div>
-          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body pt-3">
-          <div class="modal-progress-wrap">
-            <div class="progress-dots modal-progress-dots" id="progressDots"></div>
-          </div>
-          <div class="step-content modal-step-content" id="stepContent"></div>
-        </div>
-        <div class="modal-footer border-0 pt-0 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
-          <button class="btn ss-btn ss-btn-secondary" id="backBtn">Back</button>
-          <span class="step-hint text-center flex-grow-1" id="stepHint">Complete this step to continue</span>
-          <button class="btn btn-primary ss-btn ss-btn-primary" id="nextBtn">Next</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="loading-overlay hidden" id="loadingOverlay">
     <div class="loading-box">

@@ -20,6 +20,7 @@
         <img src="img/ss-logo-icon.png" alt="SettleSmart" class="ss-brand-icon">
         <span>SettleSmart</span>
       </a>
+
       <div class="ms-auto d-flex gap-2 align-items-center">
         <a href="index.html" class="hero-text-link d-none d-md-inline-flex">Back to home <span>→</span></a>
         <a href="index.html" class="btn ss-btn ss-btn-secondary">Refine answers</a>
@@ -30,17 +31,21 @@
   <main>
     <section class="section-pad pt-4">
       <div class="container-xxl">
-        <div class="results-hero">
-          <div class="results-hero-copy">
-            <span class="ss-pill">Your personalised suburb shortlist</span>
-            <h1 id="resultsHeroTitle">Finding your best-fit suburbs…</h1>
-            <p id="resultsHeroCopy">These recommendations are shaped by your budget, commute, lifestyle, and culture-related preferences.</p>
-            <div class="summary-inline" id="resultsSummary"></div>
-          </div>
-          <div class="info-card results-side-note">
-            <span class="preview-kicker">How to use this page</span>
-            <h3>Start with the top match</h3>
-            <p>Use the fit reasons first, then compare transport, language fit, and daily-life cues before shortlisting.</p>
+        <div class="results-hero-banner" id="resultsHeroBanner">
+          <div class="results-hero-overlay"></div>
+
+          <div class="results-hero-inner row g-4 align-items-end">
+            <div class="col-12 col-lg-7">
+              <span class="ss-pill">Your personalised suburb shortlist</span>
+              <h1 id="resultsHeroTitle" class="results-hero-title mt-3">Finding your best-fit suburbs…</h1>
+              <p id="resultsHeroCopy" class="results-hero-copy">
+                Review the suburbs that best align with your budget, housing style, commute, language familiarity, and lifestyle priorities.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="row g-3" id="resultsSummary"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,12 +53,41 @@
 
     <section class="section-pad pt-4">
       <div class="container-xxl">
-        <div class="section-header text-center mb-4">
+        <div class="section-header mb-4">
           <span class="ss-pill ss-pill-light">Your shortlist</span>
-          <h2>Suburb matches shaped around your preferences</h2>
-          <p>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</p>
+          <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
+          <h6>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</h6>
         </div>
-        
+
+        <div class="top-match-panel info-card mb-4" id="topMatchPanel"></div>
+		<div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
+  <div class="row g-4 align-items-center">
+    <div class="col-12 col-lg-5">
+      <span class="section-kicker">Need help deciding?</span>
+      <h3 class="spin-wheel-title">Spin the shortlist wheel</h3>
+      <p class="spin-wheel-copy">
+        Let SettleSmart randomly choose one suburb from your current top 4 shortlist,
+        so you know which one to explore first.
+      </p>
+
+      <div class="spin-wheel-candidates" id="wheelCandidates"></div>
+
+      <div class="d-flex flex-wrap gap-2 mt-3">
+        <button class="btn ss-btn ss-btn-primary" id="spinWheelBtn">Spin the wheel</button>
+        <button class="btn ss-btn ss-btn-secondary" id="viewWinnerBtn" disabled>View winning suburb</button>
+      </div>
+
+      <div class="spin-wheel-result hidden mt-3" id="spinWheelResult"></div>
+    </div>
+
+    <div class="col-12 col-lg-7">
+      <div class="wheel-stage">
+        <div class="wheel-pointer"></div>
+        <canvas id="shortlistWheel" width="420" height="420"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="results-toolbar mb-4">
           <div class="results-toolbar-left">
             <span class="results-count" id="resultsCount">0 suburbs found</span>
@@ -70,7 +104,6 @@
           </div>
         </div>
 
-        <div class="top-match-panel info-card mb-4" id="topMatchPanel"></div>
         <div class="row g-4" id="resultsGrid"></div>
       </div>
     </section>
@@ -78,17 +111,32 @@
     <section class="section-pad pt-4">
       <div class="container-xxl">
         <div class="section-header text-center mb-4">
-          
-          <h2>Culture and language fit explorer</h2>
-          <p>Use these signals to understand where language familiarity and cultural comfort may feel stronger.</p>
+          <h2 class="results-section-title">Community comfort explorer</h2>
+          <h6>Explore language familiarity, multicultural signals, and community comfort across your shortlisted suburbs.</h6>
         </div>
-        <div class="row g-4 align-items-stretch">
-          <div class="col-12">
-            <div class="info-card h-100 culture-panel">
-              <h3 class="panel-heading">Best culture-fit suburbs from your shortlist</h3>
-              <div id="cultureList" class="culture-list"></div>
+
+        <div class="community-explorer-shell info-card">
+          <div class="community-toolbar">
+            <div class="community-tab-group">
+              <button type="button" class="community-tab-btn active" data-community-tab="explore">Explore</button>
+              <button type="button" class="community-tab-btn" data-community-tab="culture">Culture Fit</button>
+              <button type="button" class="community-tab-btn" data-community-tab="compare">Compare</button>
+            </div>
+
+            <div class="community-toolbar-actions">
+              <input
+                type="text"
+                id="communitySearch"
+                class="community-search-input"
+                placeholder="Search language e.g. Mandarin"
+              />
+              <button type="button" class="community-map-btn" id="communityMapToggle">Toggle density map</button>
             </div>
           </div>
+
+          <div id="communityViewTitle" class="community-view-title"></div>
+          <div id="communityMap" class="community-map-wrap hidden"></div>
+          <div id="cultureList" class="community-content-grid"></div>
         </div>
       </div>
     </section>
@@ -107,7 +155,7 @@
         <div class="col-6 col-lg-3">
           <h4 class="footer-title">Results</h4>
           <span class="footer-meta">Fit score and reasoning</span>
-          <span class="footer-meta">Culture and language explorer</span>
+          <span class="footer-meta">Community comfort explorer</span>
           <span class="footer-meta">Student-friendly suburb cues</span>
         </div>
         <div class="col-6 col-lg-2">
@@ -117,7 +165,7 @@
         </div>
         <div class="col-12 col-lg-3">
           <h4 class="footer-title">Status</h4>
-          <p class="footer-copy small">This version uses sample suburb logic. It is ready for Supabase-backed suburb datasets next.</p>
+          <p class="footer-copy small">This version uses sample suburb logic. It is ready for ABS/Supabase-backed suburb datasets next.</p>
         </div>
       </div>
     </div>

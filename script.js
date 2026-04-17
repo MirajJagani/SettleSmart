@@ -38,25 +38,25 @@ const cities = [
     name: "Brisbane",
     slug: "brisbane",
     subtitle: "Warm weather, good growth, easier pace",
-    image: "https://images.unsplash.com/photo-1589976567749-2f011d95ffec?q=80&w=735?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1589976567749-2f011d95ffec?q=80&w=735&auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Adelaide",
     slug: "adelaide",
     subtitle: "Calmer lifestyle and student-friendly feel",
-    image: "https://plus.unsplash.com/premium_photo-1697730252622-0e1cec87d8c4?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
+    image: "https://plus.unsplash.com/premium_photo-1697730252622-0e1cec87d8c4?q=80&w=1170&auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Perth",
     slug: "perth",
     subtitle: "Spacious, coastal, independent lifestyle",
-    image: "https://images.unsplash.com/photo-1574471101497-d958f6e3ebd4?q=80&w=1074?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1574471101497-d958f6e3ebd4?q=80&w=1074&auto=format&fit=crop&w=1200&q=80"
   },
   {
     name: "Canberra",
     slug: "canberra",
     subtitle: "Safe, planned, academic and policy hub",
-    image: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1170?auto=format&fit=crop&w=1200&q=80"
+    image: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1170&auto=format&fit=crop&w=1200&q=80"
   }
 ];
 
@@ -115,25 +115,25 @@ const stepMeta = {
 };
 
 const stepContent = document.getElementById("stepContent");
-const stepLabel = document.getElementById("modalStepLabel");
-const stepTitle = document.getElementById("modalStepTitle");
+const stepLabel = document.getElementById("pageStepLabel");
+const stepTitle = document.getElementById("pageStepTitle");
 const progressDots = document.getElementById("progressDots");
 const backBtn = document.getElementById("backBtn");
 const nextBtn = document.getElementById("nextBtn");
 const stepHint = document.getElementById("stepHint");
 const heroCityStack = document.getElementById("heroCityStack");
 const loadingOverlay = document.getElementById("loadingOverlay");
-const onboardingModalEl = document.getElementById("onboardingModal");
-const onboardingModal = new bootstrap.Modal(onboardingModalEl);
+const shortlistSection = document.getElementById("shortlist-builder");
 
-document.querySelectorAll("[data-open-onboarding]").forEach(btn => {
-  btn.addEventListener("click", () => onboardingModal.show());
+document.querySelectorAll("[data-scroll-shortlist]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    shortlistSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 });
 
 backBtn.addEventListener("click", handleBack);
 nextBtn.addEventListener("click", handleNext);
 window.addEventListener("resize", renderHeroCards);
-onboardingModalEl.addEventListener("hidden.bs.modal", resetStepValidationText);
 
 function init() {
   renderHeroCards();
@@ -231,7 +231,7 @@ function renderLanguageStep() {
           <h3 class="section-mini-title">Select your primary language</h3>
           <div class="search-wrap"><input type="text" class="search-input" id="languageSearch" placeholder="Search language e.g. Hindi, Vietnamese" /></div>
           <div class="chips" id="languageChips">
-            ${filteredLanguages.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}">${lang}</button>`).join("")}
+            ${filteredLanguages.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("")}
           </div>
         </div>
       </div>
@@ -239,7 +239,7 @@ function renderLanguageStep() {
         <div class="panel-card">
           <h3 class="section-mini-title">Select your cultural background</h3>
           <div class="chips" id="cultureChips">
-            ${cultures.map(culture => `<button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}">${culture}</button>`).join("")}
+            ${cultures.map(culture => `<button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}" type="button">${culture}</button>`).join("")}
           </div>
         </div>
       </div>
@@ -257,7 +257,7 @@ function renderLanguageStep() {
   search.addEventListener("input", (e) => {
     const list = getFilteredLanguages(e.target.value);
     const container = document.getElementById("languageChips");
-    container.innerHTML = list.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}">${lang}</button>`).join("");
+    container.innerHTML = list.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("");
     container.querySelectorAll("[data-language]").forEach(chip => {
       chip.addEventListener("click", () => { appState.language = chip.dataset.language; renderStep(); });
     });
@@ -371,7 +371,6 @@ function handleNext() {
     return;
   }
   localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
-  onboardingModal.hide();
   loadingOverlay.classList.remove("hidden");
   setTimeout(() => {
     window.location.href = "results.html";
@@ -404,10 +403,6 @@ function updateNextButtonState() {
     stepHint.textContent = "Looks good — continue to the next step";
     nextBtn.textContent = "Next";
   }
-}
-
-function resetStepValidationText() {
-  updateNextButtonState();
 }
 
 function getFilteredLanguages(searchTerm) {
