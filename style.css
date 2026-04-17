@@ -1420,24 +1420,16 @@ code {
   border-radius: 999px;
   background: linear-gradient(90deg, var(--primary), #8d67ff);
 }
-
-/* spin wheel */
-
-.results-page .wheel-candidate-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  border-radius: 999px;
-  margin: 0 8px 8px 0;
-  background: rgba(115, 92, 255, 0.08);
-  color: var(--primary-dark);
-  font-size: 0.82rem;
-  font-weight: 700;
-}
+/* =========================
+   Spin wheel
+========================= */
 
 .results-page .spin-wheel-panel {
   padding: 24px;
   border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
 }
 
 .results-page .spin-wheel-title {
@@ -1454,9 +1446,23 @@ code {
 .results-page .spin-wheel-result {
   padding: 14px 16px;
   border-radius: 16px;
-  background: rgba(47, 201, 177, 0.10);
-  border: 1px solid rgba(47, 201, 177, 0.18);
+  background: linear-gradient(135deg, rgba(115, 92, 255, 0.10), rgba(139, 114, 255, 0.16));
+  border: 1px solid rgba(115, 92, 255, 0.18);
   color: var(--text);
+  box-shadow: 0 12px 24px rgba(115, 92, 255, 0.10);
+}
+
+.results-page .wheel-candidate-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin: 0 8px 8px 0;
+  background: rgba(115, 92, 255, 0.08);
+  color: var(--primary-dark);
+  border: 1px solid rgba(115, 92, 255, 0.10);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .results-page .wheel-stage {
@@ -1476,15 +1482,27 @@ code {
   height: 0;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
-  border-top: 28px solid var(--text);
+  border-top: 28px solid #5542d5;
   z-index: 2;
+  filter: drop-shadow(0 6px 10px rgba(84, 66, 213, 0.18));
 }
 
 .results-page #shortlistWheel {
   max-width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 18px 40px rgba(31, 27, 50, 0.12));
+  filter: drop-shadow(0 20px 42px rgba(84, 66, 213, 0.18));
+}
+
+@media (max-width: 991.98px) {
+  .results-page .wheel-stage {
+    min-height: 360px;
+  }
+
+  .results-page #shortlistWheel {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 /* =========================

@@ -354,7 +354,15 @@ function drawWheel() {
   const center = size / 2;
   const radius = center - 16;
   const anglePerItem = (Math.PI * 2) / items.length;
-  const colors = ["#735cff", "#8b72ff", "#2fc9b1", "#a78bfa", "#7c3aed", "#14b8a6"];
+
+  const segmentThemes = [
+    ["#735cff", "#8b72ff"],
+    ["#5f49f2", "#7b68ff"],
+    ["#8d67ff", "#a78bfa"],
+    ["#5542d5", "#735cff"],
+    ["#6d59ff", "#8f7bff"],
+    ["#4f3cc7", "#735cff"]
+  ];
 
   ctx.clearRect(0, 0, size, size);
 
@@ -366,12 +374,23 @@ function drawWheel() {
     const start = index * anglePerItem;
     const end = start + anglePerItem;
 
+    const [colorA, colorB] = segmentThemes[index % segmentThemes.length];
+    const grad = ctx.createLinearGradient(-radius, -radius, radius, radius);
+    grad.addColorStop(0, colorA);
+    grad.addColorStop(1, colorB);
+
     ctx.beginPath();
     ctx.moveTo(0, 0);
     ctx.arc(0, 0, radius, start, end);
     ctx.closePath();
-    ctx.fillStyle = colors[index % colors.length];
+    ctx.fillStyle = grad;
     ctx.fill();
+
+    ctx.save();
+    ctx.strokeStyle = "rgba(255,255,255,0.18)";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.restore();
 
     ctx.save();
     ctx.rotate(start + anglePerItem / 2);
@@ -383,8 +402,13 @@ function drawWheel() {
   });
 
   ctx.beginPath();
-  ctx.arc(0, 0, radius * 0.16, 0, Math.PI * 2);
+  ctx.arc(0, 0, radius * 0.17, 0, Math.PI * 2);
   ctx.fillStyle = "#ffffff";
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(0, 0, radius * 0.11, 0, Math.PI * 2);
+  ctx.fillStyle = "#735cff";
   ctx.fill();
 
   ctx.restore();
