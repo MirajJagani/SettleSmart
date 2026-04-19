@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="landing-page">
+<body class="landing-page site-locked">
   <div class="page-glow glow-left"></div>
   <div class="page-glow glow-right"></div>
 
@@ -64,6 +64,7 @@
         </div>
       </div>
     </section>
+
     <section class="section-pad" id="shortlist-builder">
       <div class="container-xxl">
         <div class="section-header text-center">
@@ -91,6 +92,7 @@
         </div>
       </div>
     </section>
+
     <section class="section-pad" id="how-it-works">
       <div class="container-xxl">
         <div class="section-header text-center">
@@ -134,7 +136,6 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="ss-footer mt-5">
@@ -171,6 +172,44 @@
       <div class="loader"></div>
       <h3>Building your shortlist…</h3>
       <p>Matching your preferences with student-friendly suburb options.</p>
+    </div>
+  </div>
+
+  <div class="modal fade access-gate-modal" id="accessGateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content access-gate-card">
+        <div class="access-gate-top">
+          <span class="ss-pill ss-pill-light">Private preview access</span>
+          <h2 class="access-gate-title">Welcome to the SettleSmart pilot build</h2>
+          <p class="access-gate-copy">
+            This website is currently in deployment and review stage. Access is limited while we finalise
+            testing, data validation, and experience improvements. Please enter the project password to continue.
+          </p>
+        </div>
+
+        <div class="access-gate-form">
+          <label for="accessPassword" class="access-gate-label">Project password</label>
+          <input
+            type="password"
+            id="accessPassword"
+            class="form-control access-gate-input"
+            placeholder="Enter password"
+            autocomplete="off"
+          />
+          <p class="access-gate-helper mb-0">
+            Thank you for helping us review the experience thoughtfully before public release.
+          </p>
+          <div id="accessGateError" class="access-gate-error hidden">
+            Incorrect password. Please try again.
+          </div>
+        </div>
+
+        <div class="access-gate-actions">
+          <button type="button" class="btn btn-primary ss-btn ss-btn-primary w-100" id="accessGateSubmit">
+            Enter website
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 

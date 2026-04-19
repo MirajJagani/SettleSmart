@@ -21,6 +21,9 @@
   -- SELECT culture_name FROM cultures ORDER BY culture_name;
 */
 
+const SITE_PASSWORD = "COUNT ON US";
+const ACCESS_SESSION_KEY = "settlesmart_access_granted";
+
 const cities = [
   {
     name: "Melbourne",
@@ -125,7 +128,14 @@ const heroCityStack = document.getElementById("heroCityStack");
 const loadingOverlay = document.getElementById("loadingOverlay");
 const shortlistSection = document.getElementById("shortlist-builder");
 
-document.querySelectorAll("[data-scroll-shortlist]").forEach(btn => {
+const accessGateModalEl = document.getElementById("accessGateModal");
+const accessPasswordInput = document.getElementById("accessPassword");
+const accessGateSubmit = document.getElementById("accessGateSubmit");
+const accessGateError = document.getElementById("accessGateError");
+
+let accessGateModal = null;
+
+document.querySelectorAll("[data-scroll-shortlist]").forEach((btn) => {
   btn.addEventListener("click", () => {
     shortlistSection.scrollIntoView({ behavior: "smooth", block: "start" });
   });
@@ -139,6 +149,61 @@ function init() {
   renderHeroCards();
   renderProgress();
   renderStep();
+}
+
+function setupAccessGate() {
+  if (!accessGateModalEl || typeof bootstrap === "undefined") return;
+
+  accessGateModal = new bootstrap.Modal(accessGateModalEl, {
+    backdrop: "static",
+    keyboard: false
+  });
+
+  if (sessionStorage.getItem(ACCESS_SESSION_KEY) === "true") {
+    unlockSite();
+    return;
+  }
+
+  lockSite();
+  accessGateModal.show();
+
+  accessGateModalEl.addEventListener("shown.bs.modal", () => {
+    accessPasswordInput?.focus();
+  });
+
+  accessGateSubmit?.addEventListener("click", validateAccessPassword);
+
+  accessPasswordInput?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      validateAccessPassword();
+    }
+  });
+}
+
+function validateAccessPassword() {
+  const enteredPassword = accessPasswordInput?.value.trim() || "";
+
+  if (enteredPassword === SITE_PASSWORD) {
+    sessionStorage.setItem(ACCESS_SESSION_KEY, "true");
+    accessGateError?.classList.add("hidden");
+    accessPasswordInput.value = "";
+    unlockSite();
+    accessGateModal?.hide();
+    return;
+  }
+
+  accessGateError?.classList.remove("hidden");
+  accessPasswordInput?.focus();
+  accessPasswordInput?.select();
+}
+
+function lockSite() {
+  document.body.classList.add("site-locked");
+}
+
+function unlockSite() {
+  document.body.classList.remove("site-locked");
 }
 
 function renderHeroCards() {
@@ -205,7 +270,7 @@ function renderStep() {
 function renderCityStep() {
   stepContent.innerHTML = `
     <div class="row g-4 selection-grid" id="cityGrid">
-      ${cities.map(city => `
+      ${cities.map((city) => `
         <div class="col-12 col-md-6 col-xl-4">
           <div class="city-choice ${appState.city === city.name ? "selected" : ""}" data-city="${city.name}" style="background-image:url('${city.image}')">
             <div class="city-info">
@@ -217,49 +282,75 @@ function renderCityStep() {
       `).join("")}
     </div>
   `;
-  document.querySelectorAll(".city-choice").forEach(card => {
-    card.addEventListener("click", () => { appState.city = card.dataset.city; renderStep(); });
+
+  document.querySelectorAll(".city-choice").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.city = card.dataset.city;
+      renderStep();
+    });
   });
 }
 
 function renderLanguageStep() {
   const filteredLanguages = getFilteredLanguages("");
+
   stepContent.innerHTML = `
     <div class="row g-4">
       <div class="col-12 col-lg-6">
         <div class="panel-card">
           <h3 class="section-mini-title">Select your primary language</h3>
-          <div class="search-wrap"><input type="text" class="search-input" id="languageSearch" placeholder="Search language e.g. Hindi, Vietnamese" /></div>
+          <div class="search-wrap">
+            <input type="text" class="search-input" id="languageSearch" placeholder="Search language e.g. Hindi, Vietnamese" />
+          </div>
           <div class="chips" id="languageChips">
-            ${filteredLanguages.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("")}
+            ${filteredLanguages.map((lang) => `
+              <button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>
+            `).join("")}
           </div>
         </div>
       </div>
+
       <div class="col-12 col-lg-6">
         <div class="panel-card">
           <h3 class="section-mini-title">Select your cultural background</h3>
           <div class="chips" id="cultureChips">
-            ${cultures.map(culture => `<button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}" type="button">${culture}</button>`).join("")}
+            ${cultures.map((culture) => `
+              <button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}" type="button">${culture}</button>
+            `).join("")}
           </div>
         </div>
       </div>
     </div>
   `;
 
-  document.querySelectorAll("[data-language]").forEach(chip => {
-    chip.addEventListener("click", () => { appState.language = chip.dataset.language; renderStep(); });
+  document.querySelectorAll("[data-language]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.language = chip.dataset.language;
+      renderStep();
+    });
   });
-  document.querySelectorAll("[data-culture]").forEach(chip => {
-    chip.addEventListener("click", () => { appState.culture = chip.dataset.culture; renderStep(); });
+
+  document.querySelectorAll("[data-culture]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.culture = chip.dataset.culture;
+      renderStep();
+    });
   });
 
   const search = document.getElementById("languageSearch");
   search.addEventListener("input", (e) => {
     const list = getFilteredLanguages(e.target.value);
     const container = document.getElementById("languageChips");
-    container.innerHTML = list.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("");
-    container.querySelectorAll("[data-language]").forEach(chip => {
-      chip.addEventListener("click", () => { appState.language = chip.dataset.language; renderStep(); });
+
+    container.innerHTML = list.map((lang) => `
+      <button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>
+    `).join("");
+
+    container.querySelectorAll("[data-language]").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        appState.language = chip.dataset.language;
+        renderStep();
+      });
     });
   });
 }
@@ -274,14 +365,17 @@ function renderBudgetStep() {
         </div>
         <strong id="budgetValue">$${appState.budget}/week</strong>
       </div>
+
       <input type="range" id="budgetSlider" min="200" max="800" step="10" value="${appState.budget}" />
       <div class="range-meta"><span>$200</span><span>$800</span></div>
+
       <div class="panel-card mt-4">
         <h3 class="section-mini-title">Budget note</h3>
         <p id="budgetNote" class="muted-line">${getBudgetNote(appState.budget)}</p>
       </div>
     </div>
   `;
+
   const slider = document.getElementById("budgetSlider");
   slider.addEventListener("input", (e) => {
     appState.budget = Number(e.target.value);
@@ -294,7 +388,7 @@ function renderBudgetStep() {
 function renderHousingStep() {
   stepContent.innerHTML = `
     <div class="row g-4 preference-grid">
-      ${housingOptions.map(option => `
+      ${housingOptions.map((option) => `
         <div class="col-12 col-md-6 col-lg-4">
           <div class="pref-card ${appState.housing === option.key ? "selected" : ""}" data-housing="${option.key}">
             <h4>${option.title}</h4>
@@ -304,15 +398,19 @@ function renderHousingStep() {
       `).join("")}
     </div>
   `;
-  document.querySelectorAll("[data-housing]").forEach(card => {
-    card.addEventListener("click", () => { appState.housing = card.dataset.housing; renderStep(); });
+
+  document.querySelectorAll("[data-housing]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.housing = card.dataset.housing;
+      renderStep();
+    });
   });
 }
 
 function renderCommuteStep() {
   stepContent.innerHTML = `
     <div class="row g-4 preference-grid">
-      ${commuteOptions.map(option => `
+      ${commuteOptions.map((option) => `
         <div class="col-12 col-md-6 col-lg-4">
           <div class="pref-card ${appState.commute === option.key ? "selected" : ""}" data-commute="${option.key}">
             <h4>${option.title}</h4>
@@ -322,8 +420,12 @@ function renderCommuteStep() {
       `).join("")}
     </div>
   `;
-  document.querySelectorAll("[data-commute]").forEach(card => {
-    card.addEventListener("click", () => { appState.commute = card.dataset.commute; renderStep(); });
+
+  document.querySelectorAll("[data-commute]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.commute = card.dataset.commute;
+      renderStep();
+    });
   });
 }
 
@@ -332,7 +434,7 @@ function renderLifestyleReviewStep() {
     <div class="panel-card mb-4">
       <h3 class="section-mini-title">Choose your main lifestyle priority</h3>
       <div class="row g-4 preference-grid">
-        ${lifestyleOptions.map(option => `
+        ${lifestyleOptions.map((option) => `
           <div class="col-12 col-md-6 col-lg-4">
             <div class="pref-card ${appState.lifestyle === option.key ? "selected" : ""}" data-lifestyle="${option.key}">
               <h4>${option.title}</h4>
@@ -342,6 +444,7 @@ function renderLifestyleReviewStep() {
         `).join("")}
       </div>
     </div>
+
     <div class="row g-4">
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
@@ -351,8 +454,12 @@ function renderLifestyleReviewStep() {
       <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priority</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
     </div>
   `;
-  document.querySelectorAll("[data-lifestyle]").forEach(card => {
-    card.addEventListener("click", () => { appState.lifestyle = card.dataset.lifestyle; renderStep(); });
+
+  document.querySelectorAll("[data-lifestyle]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.lifestyle = card.dataset.lifestyle;
+      renderStep();
+    });
   });
 }
 
@@ -365,13 +472,16 @@ function handleBack() {
 
 function handleNext() {
   if (!isStepValid(appState.step)) return;
+
   if (appState.step < totalSteps) {
     appState.step += 1;
     renderStep();
     return;
   }
+
   localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
   loadingOverlay.classList.remove("hidden");
+
   setTimeout(() => {
     window.location.href = "results.html";
   }, 1400);
@@ -394,6 +504,7 @@ function updateNextButtonState() {
   nextBtn.disabled = !valid;
   nextBtn.style.opacity = valid ? "1" : "0.55";
   nextBtn.style.cursor = valid ? "pointer" : "not-allowed";
+
   if (!valid) {
     stepHint.textContent = "Complete this step to continue";
   } else if (appState.step === totalSteps) {
@@ -406,7 +517,7 @@ function updateNextButtonState() {
 }
 
 function getFilteredLanguages(searchTerm) {
-  return languages.filter(lang => lang.toLowerCase().includes(searchTerm.toLowerCase()));
+  return languages.filter((lang) => lang.toLowerCase().includes(searchTerm.toLowerCase()));
 }
 
 function getBudgetNote(budget) {
@@ -417,7 +528,18 @@ function getBudgetNote(budget) {
 
 function formatChoice(value) {
   if (!value) return "-";
-  return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+  return value
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
+function getStoredPreferences() {
+  return JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+}
+
+window.getStoredPreferences = getStoredPreferences;
+window.formatChoice = formatChoice;
+
 init();
+setupAccessGate();
