@@ -104079,29 +104079,29 @@ window.getRentScore = function (rentRange, budget) {
   if (!parsedRange || Number.isNaN(numericBudget)) return 0;
 
   if (numericBudget >= parsedRange.min) {
-    return 18;
+    return 25;
   }
 
   const distance = parsedRange.min - numericBudget;
-  return Math.max(0, Math.round(18 * (1 - distance / 300)));
+  return Math.max(0, Math.round(25 * (1 - distance / 300)));
 };
 
 window.getCommuteScore = function (suburb, preferences) {
   if (preferences.commute === "public-transport") {
-    if (suburb.transport === "high") return 12;
-    if (suburb.transport === "medium") return 6;
+    if (suburb.transport === "high") return 15;
+    if (suburb.transport === "medium") return 10;
     return 2;
   }
 
   if (preferences.commute === "low-commute") {
-    if (suburb.university === "high") return 12;
-    if (suburb.university === "medium") return 6;
+    if (suburb.university === "high") return 15;
+    if (suburb.university === "medium") return 10;
     return 2;
   }
 
   if (preferences.commute === "bike-walk") {
-    if (suburb.transport === "high" || suburb.lifestyle.includes("cafe")) return 10;
-    return 5;
+    if (suburb.transport === "high" || suburb.lifestyle.includes("cafe")) return 12;
+    return 7;
   }
 
   return 0;
@@ -104126,23 +104126,23 @@ window.getSuburbScore = function (suburb, preferences) {
   total += 60;
   if (suburb.city === preferences.city) points += 60;
 
-  total += 18;
+  total += 25;
   points += window.getRentScore(suburb.rentRange, preferences.budget);
 
-  total += 12;
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) points += 12;
+  total += 18;
+  if (preferences.housing && suburb.housing.includes(preferences.housing)) points += 18;
 
-  total += 12;
+  total += 15;
   points += window.getCommuteScore(suburb, preferences);
 
   total += 12;
   points += window.getLifestyleScore(suburb, preferences);
 
-  total += 12;
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) points += 12;
+  total += 16;
+  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) points += 16;
 
-  total += 12;
-  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) points += 12;
+  total += 10;
+  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) points += 10;
 
   return Math.round((points / total) * 100);
 };
