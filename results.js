@@ -25,7 +25,6 @@ const appState = {
 
 const resultsHeroBanner = document.getElementById("resultsHeroBanner");
 const resultsHeroTitle = document.getElementById("resultsHeroTitle");
-const resultsHeroCopy = document.getElementById("resultsHeroCopy");
 const resultsSummary = document.getElementById("resultsSummary");
 const topMatchPanel = document.getElementById("topMatchPanel");
 const resultsGrid = document.getElementById("resultsGrid");
@@ -214,8 +213,6 @@ function renderHero() {
   }
 
   resultsHeroTitle.textContent = `Your ${preferences.city} shortlist is ready.`;
-  resultsHeroCopy.textContent =
-    "Review the suburbs that best align with your budget, housing style, commute, language familiarity, and lifestyle priorities.";
 
   resultsSummary.innerHTML = `
     <div class="col-12 col-sm-6">

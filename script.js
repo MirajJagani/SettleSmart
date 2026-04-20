@@ -104,7 +104,7 @@ const appState = {
   budget: 300,
   housing: "",
   commute: "",
-  lifestyle: ""
+  lifestyle: []
 };
 
 const totalSteps = 6;
@@ -430,13 +430,16 @@ function renderCommuteStep() {
 }
 
 function renderLifestyleReviewStep() {
+  const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
+
   stepContent.innerHTML = `
     <div class="panel-card mb-4">
-      <h3 class="section-mini-title">Choose your main lifestyle priority</h3>
-      <div class="row g-4 preference-grid">
+      <h3 class="section-mini-title">Select up to 3 of your main lifestyle priorities</h3>
+
+      <div class="row g-4 preference-grid mt-1">
         ${lifestyleOptions.map((option) => `
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="pref-card ${appState.lifestyle === option.key ? "selected" : ""}" data-lifestyle="${option.key}">
+            <div class="pref-card ${selectedLifestyle.includes(option.key) ? "selected" : ""}" data-lifestyle="${option.key}">
               <h4>${option.title}</h4>
               <p>${option.desc}</p>
             </div>
@@ -451,13 +454,13 @@ function renderLifestyleReviewStep() {
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Housing preference</span><strong>${formatChoice(appState.housing)}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Commute preference</span><strong>${formatChoice(appState.commute)}</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priority</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priorities</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
     </div>
   `;
 
   document.querySelectorAll("[data-lifestyle]").forEach((card) => {
     card.addEventListener("click", () => {
-      appState.lifestyle = card.dataset.lifestyle;
+      toggleLifestyleSelection(card.dataset.lifestyle);
       renderStep();
     });
   });
@@ -494,7 +497,10 @@ function isStepValid(step) {
     case 3: return !!appState.budget;
     case 4: return !!appState.housing;
     case 5: return !!appState.commute;
-    case 6: return !!appState.lifestyle;
+    case 6: {
+      const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
+      return selectedLifestyle.length >= 1 && selectedLifestyle.length <= 3;
+    }
     default: return false;
   }
 }
@@ -526,7 +532,32 @@ function getBudgetNote(budget) {
   return "This budget sits within a common student-friendly range.";
 }
 
+function getSelectedLifestyleValues(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string" && value.trim()) return [value];
+  return [];
+}
+
+function toggleLifestyleSelection(nextLifestyle) {
+  const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
+
+  if (selectedLifestyle.includes(nextLifestyle)) {
+    appState.lifestyle = selectedLifestyle.filter((item) => item !== nextLifestyle);
+    return;
+  }
+
+  if (selectedLifestyle.length >= 3) {
+    return;
+  }
+
+  appState.lifestyle = [...selectedLifestyle, nextLifestyle];
+}
+
 function formatChoice(value) {
+  if (Array.isArray(value)) {
+    return value.length ? value.map((item) => formatChoice(item)).join(", ") : "-";
+  }
+
   if (!value) return "-";
   return value
     .split("-")
@@ -535,7 +566,9 @@ function formatChoice(value) {
 }
 
 function getStoredPreferences() {
-  return JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+  const storedPreferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+  storedPreferences.lifestyle = getSelectedLifestyleValues(storedPreferences.lifestyle);
+  return storedPreferences;
 }
 
 window.getStoredPreferences = getStoredPreferences;
