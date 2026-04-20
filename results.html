@@ -36,6 +36,7 @@
   </nav>
 
   <main>
+    <!-- page 1 -->
     <section class="section-pad pt-4">
       <div class="container-xxl">
         <div class="results-hero-banner" id="resultsHeroBanner">
@@ -58,16 +59,28 @@
       </div>
     </section>
 
-    <section class="section-pad pt-4">
+    <section class="section-pad pt-4" id="summaryView">
       <div class="container-xxl">
-        <div class="section-header mb-4">
-          <span class="ss-pill ss-pill-light">Your shortlist</span>
-          <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
-          <h6>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</h6>
-        </div>
-
         <div class="top-match-panel info-card mb-4" id="topMatchPanel"></div>
 
+        <div class="results-view-actions">
+          <button type="button" class="hero-text-link view-more-link" id="viewMoreBtn">
+            View more <span>→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- page 2 -->
+    <section class="section-pad pt-4 hidden" id="detailView">
+      <div class="container-xxl">
+        <div class="results-view-actions results-view-actions-top">
+          <button type="button" class="hero-text-link back-text-link" id="backToTopMatchBtn">
+            <span>←</span> Top match
+          </button>
+        </div>
+
+        <!-- spin wheel -->
         <div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
           <div class="row g-4 align-items-center">
             <div class="col-12 col-lg-5">
@@ -95,6 +108,12 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="section-header mb-4">
+          <span class="ss-pill ss-pill-light">Your shortlist</span>
+          <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
+          <h6>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</h6>
         </div>
 
         <div class="results-toolbar mb-4">
@@ -125,18 +144,15 @@
           </div>
         </div>
 
-        <div class="row g-4" id="resultsGrid"></div>
-      </div>
-    </section>
+        <div class="row g-4 mb-5" id="resultsGrid"></div>
 
-    <section class="section-pad pt-4">
-      <div class="container-xxl">
+        <!-- community explorer -->
         <div class="section-header text-center mb-4">
           <h2 class="results-section-title">Community comfort explorer</h2>
           <h6>Explore language familiarity, multicultural signals, and community comfort across your shortlisted suburbs.</h6>
         </div>
 
-        <div class="community-explorer-shell info-card">
+        <div class="community-explorer-shell info-card mb-5">
           <div class="community-toolbar">
             <div class="community-tab-group">
               <button type="button" class="community-tab-btn active" data-community-tab="explore">Explore</button>
@@ -159,6 +175,7 @@
           <div id="communityMap" class="community-map-wrap hidden"></div>
           <div id="cultureList" class="community-content-grid"></div>
         </div>
+
       </div>
     </section>
   </main>

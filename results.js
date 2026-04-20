@@ -19,7 +19,8 @@ const appState = {
   showMap: false,
   currentPage: 1,
   pageSize: 4,
-  suburbQuery: ""
+  suburbQuery: "",
+  view: "summary"
 };
 
 const resultsHeroBanner = document.getElementById("resultsHeroBanner");
@@ -32,6 +33,11 @@ const resultsPagination = document.getElementById("resultsPagination");
 const suburbSearch = document.getElementById("suburbSearch");
 const sortSelect = document.getElementById("sortSelect");
 const resultsCount = document.getElementById("resultsCount");
+
+const summaryView = document.getElementById("summaryView");
+const detailView = document.getElementById("detailView");
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+const backToTopMatchBtn = document.getElementById("backToTopMatchBtn");
 
 const communityTabs = document.querySelectorAll("[data-community-tab]");
 const communitySearch = document.getElementById("communitySearch");
@@ -55,6 +61,8 @@ const wheelState = {
   winner: null,
   listenersBound: false
 };
+
+const DEFAULT_SHORTLIST_LIMIT = 20;
 
 init();
 
@@ -102,6 +110,18 @@ function init() {
     });
   }
 
+  if (viewMoreBtn) {
+    viewMoreBtn.addEventListener("click", () => {
+      setResultsView("detail");
+    });
+  }
+
+  if (backToTopMatchBtn) {
+    backToTopMatchBtn.addEventListener("click", () => {
+      setResultsView("summary");
+    });
+  }
+
   renderPage();
 }
 
@@ -113,11 +133,23 @@ function rankSuburbs() {
       score: window.getSuburbScore(suburb, preferences),
       reasons: window.buildReasonList(suburb, preferences)
     }))
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) => b.score - a.score)
 }
 
 function getSortedShortlistForDisplay() {
-  return applySort(getFilteredShortlist(appState.rankedSuburbs), appState.sortBy);
+  const hasSearch = !!appState.suburbQuery;
+
+  if (hasSearch) {
+    return applySort(
+      getFilteredShortlist(appState.rankedSuburbs),
+      appState.sortBy
+    );
+  }
+
+  return applySort(
+    appState.rankedSuburbs.slice(0, DEFAULT_SHORTLIST_LIMIT),
+    appState.sortBy
+  );
 }
 
 function getCurrentPageSuburbs() {
@@ -149,14 +181,22 @@ function renderPage() {
 
   renderHero();
   renderTopMatch(bestMatch);
-  renderSpinWheel(topWheelItems);
   renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
   renderPagination(totalPages);
   renderCommunityExplorer();
+  renderSpinWheel(topWheelItems);
 
   if (resultsCount) {
-    resultsCount.textContent = `${sorted.length} suburbs found`;
+    if (resultsCount) {
+      if (appState.suburbQuery) {
+        resultsCount.textContent = `${sorted.length} suburbs found`;
+      } else {
+        resultsCount.textContent = `Top ${sorted.length} suburbs`;
+      }
+    }
   }
+
+  setResultsView(appState.view);
 }
 
 function handleSortChange(event) {
@@ -231,6 +271,14 @@ function renderTopMatch(match) {
         <ul class="result-reason-list mt-3">
           ${match.reasons.map((reason) => `<li>${reason}</li>`).join("")}
         </ul>
+
+        <button
+          class="btn ss-btn ss-btn-secondary w-100 view-details-btn"
+          id="topMatchViewDetailsBtn"
+          data-slug="${match.slug}"
+        >
+          View Details
+        </button>
       </div>
 
       <div class="top-match-aside">
@@ -265,6 +313,7 @@ function renderTopMatch(match) {
             <span class="signal-pill">Lifestyle: ${window.formatChoice(preferences.lifestyle)}</span>
             <span class="signal-pill">Community: ${window.formatChoice(match.culture)}</span>
           </div>
+
         </div>
       </div>
     </div>
@@ -906,4 +955,17 @@ function getFilteredShortlist(list) {
   return list.filter((suburb) =>
     suburb.suburb.toLowerCase().includes(appState.suburbQuery)
   );
+}
+
+function setResultsView(view) {
+  appState.view = view;
+
+  if (view === "detail") {
+    summaryView?.classList.add("hidden");
+    detailView?.classList.remove("hidden");
+  } else {
+    detailView?.classList.add("hidden");
+    summaryView?.classList.remove("hidden");
+  }
+
 }

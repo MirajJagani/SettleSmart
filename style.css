@@ -1014,11 +1014,18 @@ code {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
   gap: 30px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .top-match-main {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-match-main .section-kicker {
+  align-self: flex-start;
 }
 
 .top-match-aside {
@@ -2407,4 +2414,27 @@ body.landing-page.site-locked .page-glow {
 .results-suburb-search:focus {
   border-color: rgba(115, 92, 255, 0.42);
   box-shadow: 0 0 0 4px rgba(115, 92, 255, 0.08);
+}
+
+.results-view-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.results-view-actions-top {
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.view-more-link,
+.back-text-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.view-more-link:hover,
+.back-text-link:hover {
+  color: var(--text);
 }
