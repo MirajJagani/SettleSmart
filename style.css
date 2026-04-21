@@ -100,6 +100,7 @@ button, input, select, textarea { font-family: inherit; }
   transition: 0.22s ease;
 }
 
+
 .ss-btn-primary {
   background: linear-gradient(135deg, var(--primary), #8b72ff);
   box-shadow: 0 14px 28px rgba(115, 92, 255, 0.24);
@@ -796,30 +797,38 @@ input[type="range"] {
 .ss-footer {
   margin-top: 72px;
   padding: 34px 0 38px;
-  border-top: 1px solid rgba(64, 54, 112, 0.08);
-  background: rgba(255,255,255,0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  background: linear-gradient(135deg, #19152d, #241b48 64%, #2c2555);
   backdrop-filter: blur(8px);
+  color: #ffffff;
 }
 
-.footer-title {
+.ss-footer .footer-title {
   margin: 0 0 14px;
   font-size: 0.98rem;
+  color: #ffffff;
 }
 
-.footer-copy {
+.ss-footer .footer-copy {
   margin: 0;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
 }
 
-.footer-link,
-.footer-meta {
+.ss-footer .footer-link,
+.ss-footer .footer-meta {
   display: block;
   margin-bottom: 10px;
-  color: var(--text-soft);
+  color: rgba(255, 255, 255, 0.82);
 }
 
-.footer-link:hover { color: var(--text); }
+.ss-footer .footer-link:hover {
+  color: #ffffff;
+}
+
+.ss-footer .ss-brand span {
+  color: #ffffff;
+}
 
 .loading-overlay {
   position: fixed;

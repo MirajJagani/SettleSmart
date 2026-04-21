@@ -109,7 +109,7 @@ const appState = {
 
 const totalSteps = 6;
 const stepMeta = {
-  1: { label: "Step 1 of 6", title: "Choose your destination city" },
+  1: { label: "Step 1 of 6", title: "Choose From Our Popular Destinations" },
   2: { label: "Step 2 of 6", title: "Language and cultural background" },
   3: { label: "Step 3 of 6", title: "Set your weekly rent budget" },
   4: { label: "Step 4 of 6", title: "Choose your housing style" },
