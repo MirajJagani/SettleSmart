@@ -104087,62 +104087,76 @@ window.getRentScore = function (rentRange, budget) {
 };
 
 window.getCommuteScore = function (suburb, preferences) {
-  if (preferences.commute === "public-transport") {
-    if (suburb.transport === "high") return 15;
-    if (suburb.transport === "medium") return 10;
-    return 2;
-  }
+  const selectedCommute = window.getPreferenceArray(preferences.commute);
 
-  if (preferences.commute === "low-commute") {
-    if (suburb.university === "high") return 15;
-    if (suburb.university === "medium") return 10;
-    return 2;
-  }
+  if (!selectedCommute.length) return 0;
 
-  if (preferences.commute === "bike-walk") {
-    if (suburb.transport === "high" || suburb.lifestyle.includes("cafe")) return 12;
-    return 7;
-  }
+  const scores = selectedCommute.map((commuteChoice) => {
+    if (commuteChoice === "public-transport") {
+      if (suburb.transport === "high") return 12;
+      if (suburb.transport === "medium") return 6;
+      return 2;
+    }
 
-  return 0;
+    if (commuteChoice === "low-commute") {
+      if (suburb.university === "high") return 12;
+      if (suburb.university === "medium") return 6;
+      return 2;
+    }
+
+    if (commuteChoice === "bike-walk") {
+      if (suburb.transport === "high" || suburb.lifestyle.includes("cafe")) return 10;
+      return 5;
+    }
+
+    return 0;
+  });
+
+  return Math.max(...scores, 0);
 };
 
-window.getLifestyleScore = function (suburb, preferences) {
-  const selectedLifestyle = window.getPreferenceArray(preferences.lifestyle);
+window.getHousingScore = function (suburb, preferences) {
+  const selectedHousing = window.getPreferenceArray(preferences.housing);
 
-  if (!selectedLifestyle.length) return 0;
+  if (!selectedHousing.length) return 0;
 
-  const matchedLifestyleCount = selectedLifestyle.filter((item) =>
-    suburb.lifestyle.includes(item)
+  const matchedHousingCount = selectedHousing.filter((item) =>
+    suburb.housing.includes(item)
   ).length;
 
-  return Math.round((matchedLifestyleCount / selectedLifestyle.length) * 12);
+  return Math.round((matchedHousingCount / selectedHousing.length) * 12);
 };
 
 window.getSuburbScore = function (suburb, preferences) {
+  const budgetBand = window.getBudgetBand(preferences.budget);
+
   let points = 0;
   let total = 0;
 
-  total += 60;
-  if (suburb.city === preferences.city) points += 60;
-
-  total += 25;
-  points += window.getRentScore(suburb.rentRange, preferences.budget);
+  total += 20;
+  if (suburb.city === preferences.city) points += 20;
 
   total += 18;
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) points += 18;
-
-  total += 15;
-  points += window.getCommuteScore(suburb, preferences);
+  points += window.getRentScore(suburb.rentBand, budgetBand);
 
   total += 12;
-  points += window.getLifestyleScore(suburb, preferences);
+  points += window.getHousingScore(suburb, preferences);
 
-  total += 16;
-  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) points += 16;
+  total += 12;
+  points += window.getCommuteScore(suburb, preferences);
 
-  total += 10;
-  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) points += 10;
+  total += 14;
+  const selectedLifestyle = window.getPreferenceArray(preferences.lifestyle);
+  const matchedLifestyleCount = selectedLifestyle.filter((item) => suburb.lifestyle.includes(item)).length;
+  if (selectedLifestyle.length) {
+    points += Math.round((matchedLifestyleCount / selectedLifestyle.length) * 14);
+  }
+
+  total += 12;
+  if (preferences.language && suburb.commonLanguages.includes(preferences.language)) points += 12;
+
+  total += 12;
+  if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) points += 12;
 
   return Math.round((points / total) * 100);
 };
@@ -104158,20 +104172,31 @@ window.buildReasonList = function (suburb, preferences) {
     reasons.push(`it has stronger ${preferences.culture} community signals`);
   }
 
-  if (preferences.housing && suburb.housing.includes(preferences.housing)) {
-    reasons.push("its housing options match your preferred living style");
+  const selectedHousing = window.getPreferenceArray(preferences.housing);
+  const matchedHousing = selectedHousing.filter((item) => suburb.housing.includes(item));
+
+  if (matchedHousing.length === 1) {
+    reasons.push("its housing options match one of your preferred living styles");
+  } else if (matchedHousing.length > 1) {
+    reasons.push(`it matches ${matchedHousing.length} of your housing preferences`);
   }
 
-  if (preferences.commute === "public-transport" && suburb.transport === "high") {
+  const selectedCommute = window.getPreferenceArray(preferences.commute);
+
+  if (selectedCommute.includes("public-transport") && suburb.transport === "high") {
     reasons.push("it offers strong public transport access");
   }
 
-  if (preferences.commute === "low-commute" && suburb.university === "high") {
+  if (selectedCommute.includes("low-commute") && suburb.university === "high") {
     reasons.push("it supports a shorter study commute");
   }
 
-  const selectedLifestyle = window.getPreferenceArray(preferences.lifestyle);
-  const matchedLifestyle = selectedLifestyle.filter((item) => suburb.lifestyle.includes(item));
+  if (selectedCommute.includes("bike-walk") && (suburb.transport === "high" || suburb.lifestyle.includes("cafe"))) {
+    reasons.push("it supports walkable and bike-friendly daily living");
+  }
+
+  const selectedLifestyle2 = window.getPreferenceArray(preferences.lifestyle);
+  const matchedLifestyle = selectedLifestyle2.filter((item) => suburb.lifestyle.includes(item));
 
   if (matchedLifestyle.length === 1) {
     reasons.push(`it matches your ${window.formatChoice(matchedLifestyle[0]).toLowerCase()} lifestyle priority`);
@@ -104179,21 +104204,9 @@ window.buildReasonList = function (suburb, preferences) {
     reasons.push(`it matches ${matchedLifestyle.length} of your lifestyle priorities`);
   }
 
-  const parsedRange = window.parseRentRange(suburb.rentRange);
-  const numericBudget = Number(preferences.budget);
-
-  if (parsedRange && !Number.isNaN(numericBudget)) {
-    if (numericBudget >= parsedRange.min && numericBudget <= parsedRange.max) {
-      reasons.push("its rent range fits your expected weekly budget");
-    } else {
-      const distance = numericBudget < parsedRange.min
-        ? parsedRange.min - numericBudget
-        : numericBudget - parsedRange.max;
-
-      if (distance <= 50) {
-        reasons.push("its rent range is close to your weekly budget");
-      }
-    }
+  const budgetBand = window.getBudgetBand(preferences.budget);
+  if (suburb.rentBand === budgetBand) {
+    reasons.push("it fits your expected weekly budget");
   }
 
   if (!reasons.length) {

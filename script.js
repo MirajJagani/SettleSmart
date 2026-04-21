@@ -21,12 +21,9 @@
   -- SELECT culture_name FROM cultures ORDER BY culture_name;
 */
 
-const SITE_PASSWORD = "COUNT ON US";
-const ACCESS_SESSION_KEY = "settlesmart_access_granted";
-
 const cities = [
   {
-    name: "Melbourne",	
+    name: "Melbourne",
     slug: "melbourne",
     subtitle: "Student life, trams, multicultural neighbourhoods",
     image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1200&q=80"
@@ -96,14 +93,18 @@ const lifestyleOptions = [
   { key: "beach", title: "Coastal lifestyle", desc: "Closer to beaches and open-air living" }
 ];
 
+
+const SITE_PASSWORD = "COUNT ON US";
+const ACCESS_SESSION_KEY = "settlesmart_access_granted";
+
 const appState = {
   step: 1,
   city: "",
   language: "",
   culture: "",
   budget: 300,
-  housing: "",
-  commute: "",
+  housing: [],
+  commute: [],
   lifestyle: []
 };
 
@@ -112,8 +113,8 @@ const stepMeta = {
   1: { label: "Step 1 of 6", title: "Choose From Our Popular Destinations" },
   2: { label: "Step 2 of 6", title: "Language and cultural background" },
   3: { label: "Step 3 of 6", title: "Set your weekly rent budget" },
-  4: { label: "Step 4 of 6", title: "Choose your housing style" },
-  5: { label: "Step 5 of 6", title: "Tell us your commute preference" },
+  4: { label: "Step 4 of 6", title: "Choose one or more housing styles" },
+  5: { label: "Step 5 of 6", title: "Choose one or more commute priorities" },
   6: { label: "Step 6 of 6", title: "Lifestyle priorities and final review" }
 };
 
@@ -146,6 +147,7 @@ nextBtn.addEventListener("click", handleNext);
 window.addEventListener("resize", renderHeroCards);
 
 function init() {
+  setupAccessGate();
   renderHeroCards();
   renderProgress();
   renderStep();
@@ -187,7 +189,7 @@ function validateAccessPassword() {
   if (enteredPassword === SITE_PASSWORD) {
     sessionStorage.setItem(ACCESS_SESSION_KEY, "true");
     accessGateError?.classList.add("hidden");
-    accessPasswordInput.value = "";
+    if (accessPasswordInput) accessPasswordInput.value = "";
     unlockSite();
     accessGateModal?.hide();
     return;
@@ -270,7 +272,7 @@ function renderStep() {
 function renderCityStep() {
   stepContent.innerHTML = `
     <div class="row g-4 selection-grid" id="cityGrid">
-      ${cities.map((city) => `
+      ${cities.map(city => `
         <div class="col-12 col-md-6 col-xl-4">
           <div class="city-choice ${appState.city === city.name ? "selected" : ""}" data-city="${city.name}" style="background-image:url('${city.image}')">
             <div class="city-info">
@@ -282,8 +284,7 @@ function renderCityStep() {
       `).join("")}
     </div>
   `;
-
-  document.querySelectorAll(".city-choice").forEach((card) => {
+  document.querySelectorAll(".city-choice").forEach(card => {
     card.addEventListener("click", () => {
       appState.city = card.dataset.city;
       renderStep();
@@ -303,9 +304,7 @@ function renderLanguageStep() {
             <input type="text" class="search-input" id="languageSearch" placeholder="Search language e.g. Hindi, Vietnamese" />
           </div>
           <div class="chips" id="languageChips">
-            ${filteredLanguages.map((lang) => `
-              <button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>
-            `).join("")}
+            ${filteredLanguages.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("")}
           </div>
         </div>
       </div>
@@ -314,23 +313,21 @@ function renderLanguageStep() {
         <div class="panel-card">
           <h3 class="section-mini-title">Select your cultural background</h3>
           <div class="chips" id="cultureChips">
-            ${cultures.map((culture) => `
-              <button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}" type="button">${culture}</button>
-            `).join("")}
+            ${cultures.map(culture => `<button class="chip ${appState.culture === culture ? "selected" : ""}" data-culture="${culture}" type="button">${culture}</button>`).join("")}
           </div>
         </div>
       </div>
     </div>
   `;
 
-  document.querySelectorAll("[data-language]").forEach((chip) => {
+  document.querySelectorAll("[data-language]").forEach(chip => {
     chip.addEventListener("click", () => {
       appState.language = chip.dataset.language;
       renderStep();
     });
   });
 
-  document.querySelectorAll("[data-culture]").forEach((chip) => {
+  document.querySelectorAll("[data-culture]").forEach(chip => {
     chip.addEventListener("click", () => {
       appState.culture = chip.dataset.culture;
       renderStep();
@@ -341,12 +338,8 @@ function renderLanguageStep() {
   search.addEventListener("input", (e) => {
     const list = getFilteredLanguages(e.target.value);
     const container = document.getElementById("languageChips");
-
-    container.innerHTML = list.map((lang) => `
-      <button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>
-    `).join("");
-
-    container.querySelectorAll("[data-language]").forEach((chip) => {
+    container.innerHTML = list.map(lang => `<button class="chip ${appState.language === lang ? "selected" : ""}" data-language="${lang}" type="button">${lang}</button>`).join("");
+    container.querySelectorAll("[data-language]").forEach(chip => {
       chip.addEventListener("click", () => {
         appState.language = chip.dataset.language;
         renderStep();
@@ -365,10 +358,8 @@ function renderBudgetStep() {
         </div>
         <strong id="budgetValue">$${appState.budget}/week</strong>
       </div>
-
       <input type="range" id="budgetSlider" min="200" max="800" step="10" value="${appState.budget}" />
       <div class="range-meta"><span>$200</span><span>$800</span></div>
-
       <div class="panel-card mt-4">
         <h3 class="section-mini-title">Budget note</h3>
         <p id="budgetNote" class="muted-line">${getBudgetNote(appState.budget)}</p>
@@ -386,11 +377,18 @@ function renderBudgetStep() {
 }
 
 function renderHousingStep() {
+  const selectedHousing = getPreferenceArray(appState.housing);
+
   stepContent.innerHTML = `
-    <div class="row g-4 preference-grid">
-      ${housingOptions.map((option) => `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Select one or more housing styles</h3>
+      <p class="muted-line">Choose every housing type you would realistically consider.</p>
+    </div>
+
+    <div class="row g-4 preference-grid mt-1">
+      ${housingOptions.map(option => `
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="pref-card ${appState.housing === option.key ? "selected" : ""}" data-housing="${option.key}">
+          <div class="pref-card ${selectedHousing.includes(option.key) ? "selected" : ""}" data-housing="${option.key}">
             <h4>${option.title}</h4>
             <p>${option.desc}</p>
           </div>
@@ -399,20 +397,27 @@ function renderHousingStep() {
     </div>
   `;
 
-  document.querySelectorAll("[data-housing]").forEach((card) => {
+  document.querySelectorAll("[data-housing]").forEach(card => {
     card.addEventListener("click", () => {
-      appState.housing = card.dataset.housing;
+      appState.housing = togglePreferenceSelection(appState.housing, card.dataset.housing);
       renderStep();
     });
   });
 }
 
 function renderCommuteStep() {
+  const selectedCommute = getPreferenceArray(appState.commute);
+
   stepContent.innerHTML = `
-    <div class="row g-4 preference-grid">
-      ${commuteOptions.map((option) => `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Select one or more commute preferences</h3>
+      <p class="muted-line">Choose all commute conditions that matter for your daily routine.</p>
+    </div>
+
+    <div class="row g-4 preference-grid mt-1">
+      ${commuteOptions.map(option => `
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="pref-card ${appState.commute === option.key ? "selected" : ""}" data-commute="${option.key}">
+          <div class="pref-card ${selectedCommute.includes(option.key) ? "selected" : ""}" data-commute="${option.key}">
             <h4>${option.title}</h4>
             <p>${option.desc}</p>
           </div>
@@ -421,23 +426,24 @@ function renderCommuteStep() {
     </div>
   `;
 
-  document.querySelectorAll("[data-commute]").forEach((card) => {
+  document.querySelectorAll("[data-commute]").forEach(card => {
     card.addEventListener("click", () => {
-      appState.commute = card.dataset.commute;
+      appState.commute = togglePreferenceSelection(appState.commute, card.dataset.commute);
       renderStep();
     });
   });
 }
 
 function renderLifestyleReviewStep() {
-  const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
+  const selectedLifestyle = getPreferenceArray(appState.lifestyle);
 
   stepContent.innerHTML = `
     <div class="panel-card mb-4">
       <h3 class="section-mini-title">Select up to 3 of your main lifestyle priorities</h3>
+      <p class="muted-line">Choose the lifestyle qualities that matter most to your day-to-day student life.</p>
 
       <div class="row g-4 preference-grid mt-1">
-        ${lifestyleOptions.map((option) => `
+        ${lifestyleOptions.map(option => `
           <div class="col-12 col-md-6 col-lg-4">
             <div class="pref-card ${selectedLifestyle.includes(option.key) ? "selected" : ""}" data-lifestyle="${option.key}">
               <h4>${option.title}</h4>
@@ -452,15 +458,15 @@ function renderLifestyleReviewStep() {
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Housing preference</span><strong>${formatChoice(appState.housing)}</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Commute preference</span><strong>${formatChoice(appState.commute)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Housing preferences</span><strong>${formatChoice(appState.housing)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Commute preferences</span><strong>${formatChoice(appState.commute)}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priorities</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
     </div>
   `;
 
-  document.querySelectorAll("[data-lifestyle]").forEach((card) => {
+  document.querySelectorAll("[data-lifestyle]").forEach(card => {
     card.addEventListener("click", () => {
-      toggleLifestyleSelection(card.dataset.lifestyle);
+      appState.lifestyle = togglePreferenceSelection(appState.lifestyle, card.dataset.lifestyle, 3);
       renderStep();
     });
   });
@@ -483,7 +489,7 @@ function handleNext() {
   }
 
   localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
-  loadingOverlay.classList.remove("hidden");
+  if (loadingOverlay) loadingOverlay.classList.remove("hidden");
 
   setTimeout(() => {
     window.location.href = "results.html";
@@ -495,10 +501,10 @@ function isStepValid(step) {
     case 1: return !!appState.city;
     case 2: return !!appState.language && !!appState.culture;
     case 3: return !!appState.budget;
-    case 4: return !!appState.housing;
-    case 5: return !!appState.commute;
+    case 4: return getPreferenceArray(appState.housing).length >= 1;
+    case 5: return getPreferenceArray(appState.commute).length >= 1;
     case 6: {
-      const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
+      const selectedLifestyle = getPreferenceArray(appState.lifestyle);
       return selectedLifestyle.length >= 1 && selectedLifestyle.length <= 3;
     }
     default: return false;
@@ -513,6 +519,7 @@ function updateNextButtonState() {
 
   if (!valid) {
     stepHint.textContent = "Complete this step to continue";
+    nextBtn.textContent = appState.step === totalSteps ? "Show My Shortlist" : "Next";
   } else if (appState.step === totalSteps) {
     stepHint.textContent = "Ready to build your shortlist";
     nextBtn.textContent = "Show My Shortlist";
@@ -522,8 +529,28 @@ function updateNextButtonState() {
   }
 }
 
+function getPreferenceArray(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string" && value.trim()) return [value];
+  return [];
+}
+
+function togglePreferenceSelection(currentValue, nextValue, maxSelections = null) {
+  const selected = getPreferenceArray(currentValue);
+
+  if (selected.includes(nextValue)) {
+    return selected.filter((item) => item !== nextValue);
+  }
+
+  if (maxSelections && selected.length >= maxSelections) {
+    return selected;
+  }
+
+  return [...selected, nextValue];
+}
+
 function getFilteredLanguages(searchTerm) {
-  return languages.filter((lang) => lang.toLowerCase().includes(searchTerm.toLowerCase()));
+  return languages.filter(lang => lang.toLowerCase().includes(searchTerm.toLowerCase()));
 }
 
 function getBudgetNote(budget) {
@@ -532,47 +559,24 @@ function getBudgetNote(budget) {
   return "This budget sits within a common student-friendly range.";
 }
 
-function getSelectedLifestyleValues(value) {
-  if (Array.isArray(value)) return value;
-  if (typeof value === "string" && value.trim()) return [value];
-  return [];
-}
-
-function toggleLifestyleSelection(nextLifestyle) {
-  const selectedLifestyle = getSelectedLifestyleValues(appState.lifestyle);
-
-  if (selectedLifestyle.includes(nextLifestyle)) {
-    appState.lifestyle = selectedLifestyle.filter((item) => item !== nextLifestyle);
-    return;
-  }
-
-  if (selectedLifestyle.length >= 3) {
-    return;
-  }
-
-  appState.lifestyle = [...selectedLifestyle, nextLifestyle];
-}
-
 function formatChoice(value) {
   if (Array.isArray(value)) {
     return value.length ? value.map((item) => formatChoice(item)).join(", ") : "-";
   }
-
   if (!value) return "-";
-  return value
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+  return value.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 
 function getStoredPreferences() {
   const storedPreferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
-  storedPreferences.lifestyle = getSelectedLifestyleValues(storedPreferences.lifestyle);
+  storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
+  storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
+  storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
   return storedPreferences;
 }
 
 window.getStoredPreferences = getStoredPreferences;
 window.formatChoice = formatChoice;
+window.getPreferenceArray = getPreferenceArray;
 
 init();
-setupAccessGate();
