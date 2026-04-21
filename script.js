@@ -26,7 +26,7 @@ const ACCESS_SESSION_KEY = "settlesmart_access_granted";
 
 const cities = [
   {
-    name: "Melbourne",
+    name: "Melbourne",	
     slug: "melbourne",
     subtitle: "Student life, trams, multicultural neighbourhoods",
     image: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1200&q=80"
