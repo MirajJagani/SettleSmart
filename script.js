@@ -269,6 +269,25 @@ function renderStep() {
   renderProgress();
 }
 
+function shouldAutoAdvance() {
+  return window.innerWidth <= 767.98;
+}
+
+function autoAdvanceIfReady(stepNumber) {
+  if (!shouldAutoAdvance()) return;
+  if (!isStepValid(stepNumber)) return;
+  if (appState.step !== stepNumber) return;
+  if (stepNumber >= totalSteps) return;
+
+  setTimeout(() => {
+    if (appState.step === stepNumber && isStepValid(stepNumber)) {
+      appState.step += 1;
+      renderStep();
+      shortlistSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 220);
+}
+
 function renderCityStep() {
   stepContent.innerHTML = `
     <div class="row g-4 selection-grid" id="cityGrid">
@@ -284,14 +303,13 @@ function renderCityStep() {
       `).join("")}
     </div>
   `;
-  document.querySelectorAll(".city-choice").forEach(card => {
-    card.addEventListener("click", () => {
-      appState.city = card.dataset.city;
-      renderStep();
-    });
+document.querySelectorAll(".city-choice").forEach((card) => {
+  card.addEventListener("click", () => {
+    appState.city = card.dataset.city;
+    renderStep();
+    autoAdvanceIfReady(1);
   });
-}
-
+});
 function renderLanguageStep() {
   const filteredLanguages = getFilteredLanguages("");
 
@@ -320,20 +338,21 @@ function renderLanguageStep() {
     </div>
   `;
 
-  document.querySelectorAll("[data-language]").forEach(chip => {
-    chip.addEventListener("click", () => {
-      appState.language = chip.dataset.language;
-      renderStep();
-    });
+document.querySelectorAll("[data-language]").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    appState.language = chip.dataset.language;
+    renderStep();
+    autoAdvanceIfReady(2);
   });
+});
 
-  document.querySelectorAll("[data-culture]").forEach(chip => {
-    chip.addEventListener("click", () => {
-      appState.culture = chip.dataset.culture;
-      renderStep();
-    });
+document.querySelectorAll("[data-culture]").forEach((chip) => {
+  chip.addEventListener("click", () => {
+    appState.culture = chip.dataset.culture;
+    renderStep();
+    autoAdvanceIfReady(2);
   });
-
+});
   const search = document.getElementById("languageSearch");
   search.addEventListener("input", (e) => {
     const list = getFilteredLanguages(e.target.value);
@@ -343,6 +362,7 @@ function renderLanguageStep() {
       chip.addEventListener("click", () => {
         appState.language = chip.dataset.language;
         renderStep();
+		autoAdvanceIfReady(2);
       });
     });
   });
@@ -373,6 +393,7 @@ function renderBudgetStep() {
     document.getElementById("budgetValue").textContent = `$${appState.budget}/week`;
     document.getElementById("budgetNote").textContent = getBudgetNote(appState.budget);
     updateNextButtonState();
+	autoAdvanceIfReady(3);
   });
 }
 
@@ -401,6 +422,7 @@ function renderHousingStep() {
     card.addEventListener("click", () => {
       appState.housing = togglePreferenceSelection(appState.housing, card.dataset.housing);
       renderStep();
+	  autoAdvanceIfReady(4);
     });
   });
 }
@@ -429,7 +451,8 @@ function renderCommuteStep() {
   document.querySelectorAll("[data-commute]").forEach(card => {
     card.addEventListener("click", () => {
       appState.commute = togglePreferenceSelection(appState.commute, card.dataset.commute);
-      renderStep();
+	  renderStep();
+	  autoAdvanceIfReady(5);
     });
   });
 }
