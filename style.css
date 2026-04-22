@@ -2349,13 +2349,8 @@ body.landing-page.site-locked .page-glow {
   .results-toolbar {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     gap: 12px;
-  }
-
-  .results-toolbar-left {
-    order: 1;
-    flex: 0 0 auto;
+    align-items: flex-start;
   }
 
   .results-toolbar-center,
@@ -2363,29 +2358,34 @@ body.landing-page.site-locked .page-glow {
     display: contents;
   }
 
-  .results-pagination {
-    order: 2;
-    flex: 1 1 auto;
-    min-width: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 4px;
-    scrollbar-width: none;
+  .results-toolbar-left {
+    order: 1;
+    width: 100%;
   }
 
   .results-toolbar-right {
-    order: 3;
+    order: 2;
     width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
   }
 
   .results-suburb-search {
-    order: 4;
+    order: 3;
     width: 100%;
     min-width: 0;
+  }
+
+  .results-pagination {
+    order: 4;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    scrollbar-width: none;
   }
 
   .ss-sort-select {
