@@ -2,23 +2,6 @@
   SettleSmart - Landing page onboarding flow
   -----------------------------------------
   This file handles Epic 1 (Guided Preference Input).
-
-  DATABASE ADMIN NOTES:
-  Replace the sample arrays below with Supabase queries when the suburb dataset is ready.
-
-  Suggested source tables / fields for later integration:
-  - cities: city_name, city_slug, hero_image_url, city_subtitle
-  - languages: language_name
-  - cultures: culture_name
-
-  Suggested query comments for implementation:
-  -- SELECT city_name, city_slug, hero_image_url, city_subtitle
-  -- FROM cities
-  -- WHERE is_active = true
-  -- ORDER BY city_name;
-
-  -- SELECT language_name FROM languages ORDER BY language_name;
-  -- SELECT culture_name FROM cultures ORDER BY culture_name;
 */
 
 const SITE_PASSWORD = "COUNT ON US";
@@ -102,14 +85,14 @@ const appState = {
   language: "",
   culture: "",
   budget: 300,
-  housing: "",
-  commute: "",
+  housing: [],
+  commute: [],
   lifestyle: []
 };
 
 const totalSteps = 6;
 const stepMeta = {
-  1: { label: "Step 1 of 6", title: "Choose From Our Popular Destinations" },
+  1: { label: "Step 1 of 6", title: "Choose Your Destination City" },
   2: { label: "Step 2 of 6", title: "Language and cultural background" },
   3: { label: "Step 3 of 6", title: "Set your weekly rent budget" },
   4: { label: "Step 4 of 6", title: "Choose your housing style" },
@@ -256,19 +239,45 @@ function renderProgress() {
 
 function renderStep() {
   switch (appState.step) {
-    case 1: renderCityStep(); break;
-    case 2: renderLanguageStep(); break;
-    case 3: renderBudgetStep(); break;
-    case 4: renderHousingStep(); break;
-    case 5: renderCommuteStep(); break;
-    case 6: renderLifestyleReviewStep(); break;
-    default: renderCityStep();
+    case 1:
+      renderCityStep();
+      break;
+    case 2:
+      renderLanguageStep();
+      break;
+    case 3:
+      renderBudgetStep();
+      break;
+    case 4:
+      renderHousingStep();
+      break;
+    case 5:
+      renderCommuteStep();
+      break;
+    case 6:
+      renderLifestyleReviewStep();
+      break;
+    default:
+      renderCityStep();
   }
+
   renderProgress();
 }
 
 function shouldAutoAdvance() {
   return window.innerWidth <= 767.98;
+}
+
+function scrollActionRowIntoView() {
+  const actionRow = document.querySelector(".onpage-builder-actions");
+  if (!actionRow) return;
+
+  setTimeout(() => {
+    actionRow.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  }, 180);
 }
 
 function autoAdvanceIfReady(stepNumber) {
@@ -284,6 +293,26 @@ function autoAdvanceIfReady(stepNumber) {
       shortlistSection?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, 220);
+}
+
+function getPreferenceArray(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string" && value.trim()) return [value];
+  return [];
+}
+
+function togglePreferenceSelection(currentValue, nextValue, maxSelections = null) {
+  const selected = getPreferenceArray(currentValue);
+
+  if (selected.includes(nextValue)) {
+    return selected.filter((item) => item !== nextValue);
+  }
+
+  if (maxSelections && selected.length >= maxSelections) {
+    return selected;
+  }
+
+  return [...selected, nextValue];
 }
 
 function renderCityStep() {
@@ -388,8 +417,10 @@ function renderBudgetStep() {
         </div>
         <strong id="budgetValue">$${appState.budget}/week</strong>
       </div>
+
       <input type="range" id="budgetSlider" min="200" max="800" step="10" value="${appState.budget}" />
       <div class="range-meta"><span>$200</span><span>$800</span></div>
+
       <div class="panel-card mt-4">
         <h3 class="section-mini-title">Budget note</h3>
         <p id="budgetNote" class="muted-line">${getBudgetNote(appState.budget)}</p>
@@ -407,59 +438,17 @@ function renderBudgetStep() {
 }
 
 function renderHousingStep() {
-  stepContent.innerHTML = `
-    <div class="row g-4 preference-grid">
-      ${housingOptions.map((option) => `
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="pref-card ${appState.housing === option.key ? "selected" : ""}" data-housing="${option.key}">
-            <h4>${option.title}</h4>
-            <p>${option.desc}</p>
-          </div>
-        </div>
-      `).join("")}
-    </div>
-  `;
+  const selectedHousing = getPreferenceArray(appState.housing);
 
-  document.querySelectorAll("[data-housing]").forEach((card) => {
-    card.addEventListener("click", () => {
-      appState.housing = card.dataset.housing;
-      renderStep();
-      autoAdvanceIfReady(4);
-    });
-  });
-}
-
-function renderCommuteStep() {
-  stepContent.innerHTML = `
-    <div class="row g-4 preference-grid">
-      ${commuteOptions.map((option) => `
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="pref-card ${appState.commute === option.key ? "selected" : ""}" data-commute="${option.key}">
-            <h4>${option.title}</h4>
-            <p>${option.desc}</p>
-          </div>
-        </div>
-      `).join("")}
-    </div>
-  `;
-
-  document.querySelectorAll("[data-commute]").forEach((card) => {
-    card.addEventListener("click", () => {
-      appState.commute = card.dataset.commute;
-      renderStep();
-      autoAdvanceIfReady(5);
-    });
-  });
-}
-
-function renderLifestyleReviewStep() {
   stepContent.innerHTML = `
     <div class="panel-card mb-4">
-      <h3 class="section-mini-title">Choose your main lifestyle priority</h3>
-      <div class="row g-4 preference-grid">
-        ${lifestyleOptions.map((option) => `
+      <h3 class="section-mini-title">Select one or more housing styles</h3>
+      <p class="muted-line">Choose every housing type you would realistically consider.</p>
+
+      <div class="row g-4 preference-grid mt-1">
+        ${housingOptions.map((option) => `
           <div class="col-12 col-md-6 col-lg-4">
-            <div class="pref-card ${appState.lifestyle === option.key ? "selected" : ""}" data-lifestyle="${option.key}">
+            <div class="pref-card ${selectedHousing.includes(option.key) ? "selected" : ""}" data-housing="${option.key}">
               <h4>${option.title}</h4>
               <p>${option.desc}</p>
             </div>
@@ -467,20 +456,91 @@ function renderLifestyleReviewStep() {
         `).join("")}
       </div>
     </div>
+  `;
+
+  document.querySelectorAll("[data-housing]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.housing = togglePreferenceSelection(appState.housing, card.dataset.housing);
+      renderStep();
+
+      if (shouldAutoAdvance()) {
+        scrollActionRowIntoView();
+      }
+    });
+  });
+}
+
+function renderCommuteStep() {
+  const selectedCommute = getPreferenceArray(appState.commute);
+
+  stepContent.innerHTML = `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Select one or more commute preferences</h3>
+      <p class="muted-line">Choose all commute conditions that matter for your daily routine.</p>
+
+      <div class="row g-4 preference-grid mt-1">
+        ${commuteOptions.map((option) => `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="pref-card ${selectedCommute.includes(option.key) ? "selected" : ""}" data-commute="${option.key}">
+              <h4>${option.title}</h4>
+              <p>${option.desc}</p>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+
+  document.querySelectorAll("[data-commute]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.commute = togglePreferenceSelection(appState.commute, card.dataset.commute);
+      renderStep();
+
+      if (shouldAutoAdvance()) {
+        scrollActionRowIntoView();
+      }
+    });
+  });
+}
+
+function renderLifestyleReviewStep() {
+  const selectedLifestyle = getPreferenceArray(appState.lifestyle);
+
+  stepContent.innerHTML = `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Select up to 3 of your main lifestyle priorities</h3>
+      <p class="muted-line">Choose the lifestyle qualities that matter most to your day-to-day student life.</p>
+
+      <div class="row g-4 preference-grid mt-1">
+        ${lifestyleOptions.map((option) => `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="pref-card ${selectedLifestyle.includes(option.key) ? "selected" : ""}" data-lifestyle="${option.key}">
+              <h4>${option.title}</h4>
+              <p>${option.desc}</p>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
     <div class="row g-4">
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Housing preference</span><strong>${formatChoice(appState.housing)}</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Commute preference</span><strong>${formatChoice(appState.commute)}</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priority</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Housing preferences</span><strong>${formatChoice(appState.housing)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Commute preferences</span><strong>${formatChoice(appState.commute)}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Lifestyle priorities</span><strong>${formatChoice(appState.lifestyle)}</strong></div></div>
     </div>
   `;
 
   document.querySelectorAll("[data-lifestyle]").forEach((card) => {
     card.addEventListener("click", () => {
-      appState.lifestyle = card.dataset.lifestyle;
+      appState.lifestyle = togglePreferenceSelection(appState.lifestyle, card.dataset.lifestyle, 3);
       renderStep();
+
+      if (shouldAutoAdvance()) {
+        scrollActionRowIntoView();
+      }
     });
   });
 }
@@ -498,6 +558,7 @@ function handleNext() {
   if (appState.step < totalSteps) {
     appState.step += 1;
     renderStep();
+    shortlistSection?.scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
 
@@ -511,13 +572,22 @@ function handleNext() {
 
 function isStepValid(step) {
   switch (step) {
-    case 1: return !!appState.city;
-    case 2: return !!appState.language && !!appState.culture;
-    case 3: return !!appState.budget;
-    case 4: return !!appState.housing;
-    case 5: return !!appState.commute;
-    case 6: return !!appState.lifestyle;
-    default: return false;
+    case 1:
+      return !!appState.city;
+    case 2:
+      return !!appState.language && !!appState.culture;
+    case 3:
+      return !!appState.budget;
+    case 4:
+      return getPreferenceArray(appState.housing).length >= 1;
+    case 5:
+      return getPreferenceArray(appState.commute).length >= 1;
+    case 6: {
+      const selectedLifestyle = getPreferenceArray(appState.lifestyle);
+      return selectedLifestyle.length >= 1 && selectedLifestyle.length <= 3;
+    }
+    default:
+      return false;
   }
 }
 
@@ -528,7 +598,15 @@ function updateNextButtonState() {
   nextBtn.style.cursor = valid ? "pointer" : "not-allowed";
 
   if (!valid) {
-    stepHint.textContent = "Complete this step to continue";
+    if (appState.step === 4) {
+      stepHint.textContent = "Select at least one housing style to continue";
+    } else if (appState.step === 5) {
+      stepHint.textContent = "Select at least one commute preference to continue";
+    } else if (appState.step === 6) {
+      stepHint.textContent = "Select 1 to 3 lifestyle priorities to continue";
+    } else {
+      stepHint.textContent = "Complete this step to continue";
+    }
   } else if (appState.step === totalSteps) {
     stepHint.textContent = "Ready to build your shortlist";
     nextBtn.textContent = "Show My Shortlist";
@@ -549,9 +627,31 @@ function getBudgetNote(budget) {
 }
 
 function formatChoice(value) {
+  if (Array.isArray(value)) {
+    return value.length
+      ? value.map((item) => formatChoice(item)).join(", ")
+      : "-";
+  }
+
   if (!value) return "-";
-  return value.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+
+  return value
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
+
+function getStoredPreferences() {
+  const storedPreferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+  storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
+  storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
+  storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
+  return storedPreferences;
+}
+
+window.getStoredPreferences = getStoredPreferences;
+window.formatChoice = formatChoice;
+window.getPreferenceArray = getPreferenceArray;
 
 init();
 setupAccessGate();
