@@ -58,6 +58,51 @@ const cultures = [
   "African", "European", "Southeast Asian"
 ];
 
+const universitiesByCity = {
+  Melbourne: [
+    "Monash University",
+    "The University of Melbourne",
+    "RMIT University",
+    "Deakin University",
+    "La Trobe University"
+  ],
+  Sydney: [
+    "The University of Sydney",
+    "UNSW Sydney",
+    "UTS",
+    "Macquarie University",
+    "Western Sydney University"
+  ],
+  Brisbane: [
+    "The University of Queensland",
+    "Queensland University of Technology",
+    "Griffith University",
+    "Bond University",
+    "University of Southern Queensland"
+  ],
+  Adelaide: [
+    "The University of Adelaide",
+    "University of South Australia",
+    "Flinders University",
+    "Torrens University Australia",
+    "CQUniversity Adelaide"
+  ],
+  Perth: [
+    "The University of Western Australia",
+    "Curtin University",
+    "Murdoch University",
+    "Edith Cowan University",
+    "University of Notre Dame Australia"
+  ],
+  Canberra: [
+    "Australian National University",
+    "University of Canberra",
+    "UNSW Canberra",
+    "Charles Sturt University Canberra",
+    "Australian Catholic University Canberra"
+  ]
+};
+
 const housingOptions = [
   { key: "shared", title: "Shared housing", desc: "Budget-friendly, social, common for students" },
   { key: "studio", title: "Private studio", desc: "More privacy and independence" },
@@ -84,20 +129,22 @@ const appState = {
   city: "",
   language: "",
   culture: "",
+  university: "",
   budget: 300,
   housing: [],
   commute: [],
   lifestyle: []
 };
 
-const totalSteps = 6;
+const totalSteps = 7;
 const stepMeta = {
-  1: { label: "Step 1 of 6", title: "Choose Your Destination City" },
-  2: { label: "Step 2 of 6", title: "Language and cultural background" },
-  3: { label: "Step 3 of 6", title: "Set your weekly rent budget" },
-  4: { label: "Step 4 of 6", title: "Choose your housing style" },
-  5: { label: "Step 5 of 6", title: "Tell us your commute preference" },
-  6: { label: "Step 6 of 6", title: "Lifestyle priorities and final review" }
+  1: { label: "Step 1 of 7", title: "Choose Your Destination City" },
+  2: { label: "Step 2 of 7", title: "Language and cultural background" },
+  3: { label: "Step 3 of 7", title: "Which university are you studying at?" },
+  4: { label: "Step 4 of 7", title: "Set your weekly rent budget" },
+  5: { label: "Step 5 of 7", title: "Choose your housing style" },
+  6: { label: "Step 6 of 7", title: "Tell us your commute preference" },
+  7: { label: "Step 7 of 7", title: "Lifestyle priorities and final review" }
 };
 
 const stepContent = document.getElementById("stepContent");
@@ -246,15 +293,18 @@ function renderStep() {
       renderLanguageStep();
       break;
     case 3:
-      renderBudgetStep();
+      renderUniversityStep();
       break;
     case 4:
-      renderHousingStep();
+      renderBudgetStep();
       break;
     case 5:
-      renderCommuteStep();
+      renderHousingStep();
       break;
     case 6:
+      renderCommuteStep();
+      break;
+    case 7:
       renderLifestyleReviewStep();
       break;
     default:
@@ -315,6 +365,17 @@ function togglePreferenceSelection(currentValue, nextValue, maxSelections = null
   return [...selected, nextValue];
 }
 
+function getUniversitiesForCity(city) {
+  return universitiesByCity[city] || [];
+}
+
+function getFilteredUniversities(city, searchTerm) {
+  const universities = getUniversitiesForCity(city);
+  return universities.filter((uni) =>
+    uni.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+}
+
 function renderCityStep() {
   stepContent.innerHTML = `
     <div class="row g-4 selection-grid" id="cityGrid">
@@ -333,7 +394,13 @@ function renderCityStep() {
 
   document.querySelectorAll(".city-choice").forEach((card) => {
     card.addEventListener("click", () => {
-      appState.city = card.dataset.city;
+      const nextCity = card.dataset.city;
+
+      if (appState.city !== nextCity) {
+        appState.university = "";
+      }
+
+      appState.city = nextCity;
       renderStep();
       autoAdvanceIfReady(1);
     });
@@ -404,6 +471,78 @@ function renderLanguageStep() {
         autoAdvanceIfReady(2);
       });
     });
+  });
+}
+
+function renderUniversityStep() {
+  const universities = getFilteredUniversities(appState.city, "");
+
+  stepContent.innerHTML = `
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="panel-card">
+          <h3 class="section-mini-title">Choose your university</h3>
+          <p class="muted-line">
+            Showing top universities based on your selected city: <strong>${appState.city || "Not selected"}</strong>
+          </p>
+
+          <div class="search-wrap mt-3">
+            <input
+              type="text"
+              class="search-input"
+              id="universitySearch"
+              placeholder="Type your university name"
+              value="${appState.university || ""}"
+            />
+          </div>
+
+          <div class="chips mt-3" id="universityChips">
+            ${universities.map((uni) => `
+              <button class="chip ${appState.university === uni ? "selected" : ""}" data-university="${uni}" type="button">
+                ${uni}
+              </button>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.querySelectorAll("[data-university]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.university = chip.dataset.university;
+      renderStep();
+
+      if (shouldAutoAdvance()) {
+        autoAdvanceIfReady(3);
+      }
+    });
+  });
+
+  const search = document.getElementById("universitySearch");
+  search.addEventListener("input", (e) => {
+    appState.university = e.target.value;
+    const list = getFilteredUniversities(appState.city, e.target.value);
+    const container = document.getElementById("universityChips");
+
+    container.innerHTML = list.map((uni) => `
+      <button class="chip ${appState.university === uni ? "selected" : ""}" data-university="${uni}" type="button">
+        ${uni}
+      </button>
+    `).join("");
+
+    container.querySelectorAll("[data-university]").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        appState.university = chip.dataset.university;
+        renderStep();
+
+        if (shouldAutoAdvance()) {
+          autoAdvanceIfReady(3);
+        }
+      });
+    });
+
+    updateNextButtonState();
   });
 }
 
@@ -526,6 +665,7 @@ function renderLifestyleReviewStep() {
     <div class="row g-4">
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>University</span><strong>${appState.university || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Housing preferences</span><strong>${formatChoice(appState.housing)}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Commute preferences</span><strong>${formatChoice(appState.commute)}</strong></div></div>
@@ -577,12 +717,14 @@ function isStepValid(step) {
     case 2:
       return !!appState.language && !!appState.culture;
     case 3:
-      return !!appState.budget;
+      return !!appState.university && appState.university.trim().length > 0;
     case 4:
-      return getPreferenceArray(appState.housing).length >= 1;
+      return !!appState.budget;
     case 5:
+      return getPreferenceArray(appState.housing).length >= 1;
+    case 6:
       return getPreferenceArray(appState.commute).length >= 1;
-    case 6: {
+    case 7: {
       const selectedLifestyle = getPreferenceArray(appState.lifestyle);
       return selectedLifestyle.length >= 1 && selectedLifestyle.length <= 3;
     }
@@ -598,11 +740,13 @@ function updateNextButtonState() {
   nextBtn.style.cursor = valid ? "pointer" : "not-allowed";
 
   if (!valid) {
-    if (appState.step === 4) {
-      stepHint.textContent = "Select at least one housing style to continue";
+    if (appState.step === 3) {
+      stepHint.textContent = "Select or type your university to continue";
     } else if (appState.step === 5) {
-      stepHint.textContent = "Select at least one commute preference to continue";
+      stepHint.textContent = "Select at least one housing style to continue";
     } else if (appState.step === 6) {
+      stepHint.textContent = "Select at least one commute preference to continue";
+    } else if (appState.step === 7) {
       stepHint.textContent = "Select 1 to 3 lifestyle priorities to continue";
     } else {
       stepHint.textContent = "Complete this step to continue";
@@ -646,6 +790,7 @@ function getStoredPreferences() {
   storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
   storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
   storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
+  storedPreferences.university = storedPreferences.university || "";
   return storedPreferences;
 }
 
