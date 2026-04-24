@@ -4,13 +4,17 @@ const preferences = window.getStoredPreferences
 
 const suburbProfile = document.getElementById("suburbProfile");
 
+function normalizeCityKey(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
 const cityHeroImages = {
-  Melbourne: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1600&q=80",
-  Sydney: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80",
-  Brisbane: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1600&q=80",
-  Adelaide: "https://images.unsplash.com/photo-1564419439572-1f478fe9ad4f?auto=format&fit=crop&w=1600&q=80",
-  Perth: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1600&q=80",
-  Canberra: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80"
+  melbourne: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1600&q=80",
+  sydney: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80",
+  brisbane: "https://images.unsplash.com/photo-1589976567749-2f011d95ffec?q=80&w=1600&auto=format&fit=crop",
+  adelaide: "https://plus.unsplash.com/premium_photo-1697730252622-0e1cec87d8c4?q=80&w=1600&auto=format&fit=crop",
+  perth: "https://images.unsplash.com/photo-1574471101497-d958f6e3ebd4?q=80&w=1600&auto=format&fit=crop",
+  canberra: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1600&auto=format&fit=crop"
 };
 
 initSuburbPage();
@@ -41,7 +45,7 @@ function initSuburbPage() {
     ? window.getEpic4ProfileCultureScore(suburb, preferences)
     : 7;
 
-  const heroImage = cityHeroImages[suburb.city] || cityHeroImages.Melbourne;
+  const heroImage = cityHeroImages[normalizeCityKey(suburb.city)] || cityHeroImages.melbourne;
 
   suburbProfile.innerHTML = `
     <div class="suburb-detail-shell">
@@ -295,8 +299,6 @@ function initMiniMap(suburbName, cityName) {
     }
   });
 
-  // Use event delegation on the filters container so it works
-  // regardless of when the buttons are queried
   document.getElementById("minimapFilters").addEventListener("click", (e) => {
     const btn = e.target.closest(".minimap-filter-btn");
     if (!btn) return;
@@ -328,13 +330,9 @@ function loadLeaflet() {
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    // Clean suburb name: "Clayton - Central" -> "Clayton Central", fallback "Clayton"
     const cleanName = suburbName.replace(/\s*-\s*/g, " ").trim();
     const baseName  = cleanName.split(/\s+/)[0];
 
-    // Request polygon_geojson directly from Nominatim — much more reliable than
-    // a two-step Nominatim → Overpass approach.
-    // Also filter to place/boundary classes so we get the suburb admin area, not a building.
     let nominatimData = null;
     for (const q of [cleanName, baseName]) {
       const params = new URLSearchParams({
@@ -347,7 +345,6 @@ async function buildMap(suburbName, cityName) {
       const res  = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
       const results = await res.json();
 
-      // Prefer results that are suburb/neighbourhood/boundary, not buildings/roads
       const preferred = results.find(r =>
         ["suburb", "neighbourhood", "quarter", "village", "town", "administrative"]
           .includes(r.type) ||
@@ -379,7 +376,6 @@ async function buildMap(suburbName, cityName) {
       maxZoom: 19,
     }).addTo(minimapMap);
 
-    // Draw boundary from Nominatim polygon_geojson (instant, no second request)
     const geojson = nominatimData.geojson;
     if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
       const boundaryLayer = L.geoJSON(geojson, {
@@ -393,7 +389,6 @@ async function buildMap(suburbName, cityName) {
         }
       }).addTo(minimapMap);
 
-      // Fit map to the actual boundary, not just the centre point
       minimapMap.fitBounds(boundaryLayer.getBounds(), { padding: [32, 32] });
     }
 
@@ -405,12 +400,10 @@ async function buildMap(suburbName, cityName) {
 }
 
 async function fetchAndRenderPOI(amenity, center) {
-  // Clear existing POI markers
   minimapMarkers.forEach(m => m.remove());
   minimapMarkers = [];
   if (!amenity) return;
 
-  // Show loading indicator on active filter button
   const activeBtn = document.querySelector(".minimap-filter-btn.active");
   const originalText = activeBtn ? activeBtn.innerHTML : "";
   if (activeBtn) activeBtn.innerHTML += " ⏳";
@@ -419,7 +412,6 @@ async function fetchAndRenderPOI(amenity, center) {
   const tag = amenity === "park" ? `["leisure"="park"]` : `["amenity"="${amenity}"]`;
   const overpassQuery = `[out:json][timeout:15];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 25;`;
 
-  // Try multiple Overpass endpoints in case one is down
   const overpassEndpoints = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
@@ -461,14 +453,13 @@ async function fetchAndRenderPOI(amenity, center) {
       });
 
       succeeded = true;
-      break; // stop trying other endpoints on success
+      break;
 
     } catch (err) {
       console.warn(`Overpass endpoint failed (${endpoint}):`, err);
     }
   }
 
-  // Restore button text
   if (activeBtn) activeBtn.innerHTML = originalText;
 
   if (!succeeded) {
@@ -480,7 +471,6 @@ async function fetchAndRenderPOI(amenity, center) {
 async function drawSuburbBoundary(osmId, osmType, suburbName) {
   if (!osmId || !osmType) return;
 
-  // Overpass: fetch the boundary relation/way as GeoJSON
   const typePrefix = osmType === "relation" ? "rel" : osmType === "way" ? "way" : null;
   if (!typePrefix) return;
 
@@ -503,7 +493,6 @@ out geom;`;
       let geojson = null;
 
       if (el.type === "relation") {
-        // Build GeoJSON polygon from relation members
         const outerRings = [];
         const innerRings = [];
 
@@ -516,7 +505,6 @@ out geom;`;
 
         if (!outerRings.length) continue;
 
-        // Close rings if needed
         const closeRing = ring => {
           if (ring[0][0] !== ring[ring.length-1][0] || ring[0][1] !== ring[ring.length-1][1]) {
             ring.push(ring[0]);
@@ -546,10 +534,9 @@ out geom;`;
 
       if (!geojson) continue;
 
-      // Draw on map: subtle fill + clean border
       L.geoJSON(geojson, {
         style: {
-          color: "#735cff",        // --primary
+          color: "#735cff",
           weight: 2.5,
           opacity: 0.85,
           dashArray: "6 4",
@@ -558,7 +545,7 @@ out geom;`;
         }
       }).addTo(minimapMap);
 
-      return; // success, stop trying endpoints
+      return;
 
     } catch (err) {
       console.warn("Boundary fetch failed:", err);
