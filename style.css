@@ -2667,18 +2667,19 @@ body.landing-page.site-locked .page-glow {
 }
 
 .minimap-filter-btn {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: var(--ss-text, #e2e8f0);
+  background: #f1f1f5;
+  border: 1px solid #d1d1e0;
+  color: #1a1a2e;
   border-radius: 999px;
   padding: 0.35rem 0.95rem;
   font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background 0.18s, border-color 0.18s;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
 }
 .minimap-filter-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: #e2e2f0;
+  border-color: #b0b0cc;
 }
 .minimap-filter-btn.active {
   background: var(--ss-accent, #7c3aed);

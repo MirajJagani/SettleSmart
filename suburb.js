@@ -295,13 +295,17 @@ function initMiniMap(suburbName, cityName) {
     }
   });
 
-  document.querySelectorAll(".minimap-filter-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      activeAmenity = btn.dataset.amenity || "";
-      if (minimapMap && minimapCenter) fetchAndRenderPOI(activeAmenity, minimapCenter);
-    });
+  // Use event delegation on the filters container so it works
+  // regardless of when the buttons are queried
+  document.getElementById("minimapFilters").addEventListener("click", (e) => {
+    const btn = e.target.closest(".minimap-filter-btn");
+    if (!btn) return;
+    document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeAmenity = btn.dataset.amenity || "";
+    if (minimapMap && minimapCenter) {
+      fetchAndRenderPOI(activeAmenity, minimapCenter);
+    }
   });
 
 }
@@ -363,31 +367,73 @@ async function buildMap(suburbName, cityName) {
 }
 
 async function fetchAndRenderPOI(amenity, center) {
+  // Clear existing POI markers
   minimapMarkers.forEach(m => m.remove());
   minimapMarkers = [];
   if (!amenity) return;
 
+  // Show loading indicator on active filter button
+  const activeBtn = document.querySelector(".minimap-filter-btn.active");
+  const originalText = activeBtn ? activeBtn.innerHTML : "";
+  if (activeBtn) activeBtn.innerHTML += " ⏳";
+
   const [lat, lon] = center;
   const tag = amenity === "park" ? `["leisure"="park"]` : `["amenity"="${amenity}"]`;
-  const query = `[out:json][timeout:10];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 20;`;
+  const overpassQuery = `[out:json][timeout:15];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 25;`;
 
-  try {
-    const res  = await fetch("https://overpass-api.de/api/interpreter", { method: "POST", body: query });
-    const data = await res.json();
-    const emojiMap = { supermarket:"🛒", hospital:"🏥", doctors:"👨‍⚕️", park:"🌳", restaurant:"🍜", bus_station:"🚌" };
-    const emoji = emojiMap[amenity] || "📍";
+  // Try multiple Overpass endpoints in case one is down
+  const overpassEndpoints = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+  ];
 
-    data.elements.forEach(el => {
-      const elLat = el.lat ?? el.center?.lat;
-      const elLon = el.lon ?? el.center?.lon;
-      if (!elLat || !elLon) return;
-      const icon = L.divIcon({ html: `<div class="minimap-poi-icon">${emoji}</div>`, className: "", iconSize:[28,28], iconAnchor:[14,14] });
-      const marker = L.marker([elLat, elLon], { icon }).addTo(minimapMap)
-        .bindPopup(`<strong>${el.tags?.name || amenity}</strong>`);
-      minimapMarkers.push(marker);
-    });
-  } catch (err) {
-    console.warn("POI fetch failed:", err);
+  const emojiMap = { supermarket:"🛒", hospital:"🏥", doctors:"👨‍⚕️", park:"🌳", restaurant:"🍜", bus_station:"🚌" };
+  const emoji = emojiMap[amenity] || "📍";
+
+  let succeeded = false;
+
+  for (const endpoint of overpassEndpoints) {
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        body: overpassQuery,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+      });
+
+      if (!res.ok) continue;
+      const data = await res.json();
+
+      if (!data.elements) continue;
+
+      data.elements.forEach(el => {
+        const elLat = el.lat ?? el.center?.lat;
+        const elLon = el.lon ?? el.center?.lon;
+        if (!elLat || !elLon) return;
+        const icon = L.divIcon({
+          html: `<div class="minimap-poi-icon">${emoji}</div>`,
+          className: "",
+          iconSize: [28, 28],
+          iconAnchor: [14, 14]
+        });
+        const marker = L.marker([elLat, elLon], { icon })
+          .addTo(minimapMap)
+          .bindPopup(`<strong>${el.tags?.name || amenity}</strong>`);
+        minimapMarkers.push(marker);
+      });
+
+      succeeded = true;
+      break; // stop trying other endpoints on success
+
+    } catch (err) {
+      console.warn(`Overpass endpoint failed (${endpoint}):`, err);
+    }
   }
 
+  // Restore button text
+  if (activeBtn) activeBtn.innerHTML = originalText;
+
+  if (!succeeded) {
+    console.error("All Overpass endpoints failed. POI data unavailable.");
+  }
 }
