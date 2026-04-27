@@ -162,6 +162,40 @@ function initSuburbPage() {
         </div>
       </section>
 
+      <section class="info-card suburb-detail-card" id="miniMapSection">
+        <div class="suburb-section-head">
+          <h3>Explore nearby facilities</h3>
+          <p>Click the dropdown to open the map and filter facilities around ${suburb.suburb}.</p>
+        </div>
+
+        <div class="minimap-toggle-row">
+          <button class="minimap-dropdown-btn" id="minimapToggleBtn" aria-expanded="false">
+            <span class="minimap-btn-icon">🗺️</span>
+            <span id="minimapBtnLabel">Show map &amp; filter facilities</span>
+            <span class="minimap-chevron" id="minimapChevron">▼</span>
+          </button>
+        </div>
+
+        <div class="minimap-body hidden" id="minimapBody">
+          <div class="minimap-filters" id="minimapFilters">
+            <button class="minimap-filter-btn active" data-amenity="">All</button>
+            <button class="minimap-filter-btn" data-amenity="supermarket">🛒 Grocery</button>
+            <button class="minimap-filter-btn" data-amenity="hospital">🏥 Hospital</button>
+            <button class="minimap-filter-btn" data-amenity="doctors">👨‍⚕️ GP</button>
+            <button class="minimap-filter-btn" data-amenity="park" data-overpass-tag="leisure=park">🌳 Park</button>
+            <button class="minimap-filter-btn" data-amenity="restaurant">🍜 Restaurant</button>
+            <button class="minimap-filter-btn" data-amenity="bus_station">🚌 Transport</button>
+          </div>
+
+          <div class="minimap-frame" id="minimapFrame">
+            <div class="minimap-loading" id="minimapLoading">
+              <div class="minimap-spinner"></div>
+              <span>Locating ${suburb.suburb}…</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="info-card suburb-detail-card">
         <div class="suburb-section-head">
           <h3>Multicultural support signals</h3>
@@ -202,6 +236,7 @@ function initSuburbPage() {
       </section>
     </div>
   `;
+  initMiniMap(suburb.suburb, suburb.city);
 }
 
 function getFallbackCommunity(suburb) {
@@ -221,4 +256,138 @@ function getFallbackCommunity(suburb) {
       "Student community meetup"
     ]
   };
+
+}
+/* ─── Mini Map (US5.4) ───────────────────────────────────────────── */
+
+let minimapMap = null;
+let minimapMarkers = [];
+let minimapCenter = null;
+let activeAmenity = "";
+
+function initMiniMap(suburbName, cityName) {
+  const toggleBtn = document.getElementById("minimapToggleBtn");
+  const body      = document.getElementById("minimapBody");
+  const chevron   = document.getElementById("minimapChevron");
+  const label     = document.getElementById("minimapBtnLabel");
+
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener("click", async () => {
+    const isOpen = !body.classList.contains("hidden");
+    if (isOpen) {
+      body.classList.add("hidden");
+      chevron.textContent = "▼";
+      label.textContent = "Show map & filter facilities";
+      toggleBtn.setAttribute("aria-expanded", "false");
+    } else {
+      body.classList.remove("hidden");
+      chevron.textContent = "▲";
+      label.textContent = "Hide map";
+      toggleBtn.setAttribute("aria-expanded", "true");
+
+      if (!minimapMap) {
+        await loadLeaflet();
+        await buildMap(suburbName, cityName);
+      } else {
+        setTimeout(() => minimapMap.invalidateSize(), 50);
+      }
+    }
+  });
+
+  document.querySelectorAll(".minimap-filter-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeAmenity = btn.dataset.amenity || "";
+      if (minimapMap && minimapCenter) fetchAndRenderPOI(activeAmenity, minimapCenter);
+    });
+  });
+
+}
+
+function loadLeaflet() {
+  return new Promise((resolve) => {
+    if (window.L) { resolve(); return; }
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+    document.head.appendChild(css);
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    script.onload = resolve;
+    document.head.appendChild(script);
+  });
+
+}
+
+async function buildMap(suburbName, cityName) {
+  const frame = document.getElementById("minimapFrame");
+  try {
+    const query = encodeURIComponent(`${suburbName}, ${cityName}, Australia`);
+    const res   = await fetch(
+      `https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`,
+      { headers: { "Accept-Language": "en" } }
+    );
+    const data = await res.json();
+    if (!data.length) {
+      frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
+      return;
+    }
+    const lat = parseFloat(data[0].lat);
+    const lon = parseFloat(data[0].lon);
+    minimapCenter = [lat, lon];
+
+    const mapEl = document.createElement("div");
+    mapEl.id = "leafletMap";
+    mapEl.style.cssText = "width:100%;height:100%;";
+    frame.innerHTML = "";
+    frame.appendChild(mapEl);
+
+    minimapMap = L.map("leafletMap").setView(minimapCenter, 14);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19,
+    }).addTo(minimapMap);
+
+    L.marker(minimapCenter).addTo(minimapMap)
+      .bindPopup(`<strong>${suburbName}</strong>`).openPopup();
+
+    await fetchAndRenderPOI("", minimapCenter);
+  } catch (err) {
+    frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
+    console.error("MiniMap error:", err);
+  }
+
+}
+
+async function fetchAndRenderPOI(amenity, center) {
+  minimapMarkers.forEach(m => m.remove());
+  minimapMarkers = [];
+  if (!amenity) return;
+
+  const [lat, lon] = center;
+  const tag = amenity === "park" ? `["leisure"="park"]` : `["amenity"="${amenity}"]`;
+  const query = `[out:json][timeout:10];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 20;`;
+
+  try {
+    const res  = await fetch("https://overpass-api.de/api/interpreter", { method: "POST", body: query });
+    const data = await res.json();
+    const emojiMap = { supermarket:"🛒", hospital:"🏥", doctors:"👨‍⚕️", park:"🌳", restaurant:"🍜", bus_station:"🚌" };
+    const emoji = emojiMap[amenity] || "📍";
+
+    data.elements.forEach(el => {
+      const elLat = el.lat ?? el.center?.lat;
+      const elLon = el.lon ?? el.center?.lon;
+      if (!elLat || !elLon) return;
+      const icon = L.divIcon({ html: `<div class="minimap-poi-icon">${emoji}</div>`, className: "", iconSize:[28,28], iconAnchor:[14,14] });
+      const marker = L.marker([elLat, elLon], { icon }).addTo(minimapMap)
+        .bindPopup(`<strong>${el.tags?.name || amenity}</strong>`);
+      minimapMarkers.push(marker);
+    });
+  } catch (err) {
+    console.warn("POI fetch failed:", err);
+  }
+
 }
