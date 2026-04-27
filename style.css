@@ -2630,28 +2630,30 @@ body.landing-page.site-locked .page-glow {
   margin-bottom: 0;
 }
 
+/* "Hide map / Show map" toggle — matches ss-btn-secondary */
 .minimap-dropdown-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--ss-surface, #1e1e2e);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--ss-text, #e2e8f0);
-  border-radius: 10px;
-  padding: 0.65rem 1.2rem;
-  font-size: 0.92rem;
-  font-weight: 500;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.22s ease, box-shadow 0.22s ease;
+  font-family: inherit;
 }
 .minimap-dropdown-btn:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.22);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
 }
 .minimap-chevron {
-  font-size: 0.7rem;
-  opacity: 0.6;
-  margin-left: 0.25rem;
+  font-size: 0.65rem;
+  color: var(--text-soft);
+  margin-left: 0.15rem;
 }
 
 .minimap-body {
@@ -2663,38 +2665,43 @@ body.landing-page.site-locked .page-glow {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
+/* Filter pills — match ss-pill-light style */
 .minimap-filter-btn {
-  background: #f1f1f5;
-  border: 1px solid #d1d1e0;
-  color: #1a1a2e;
+  background: var(--primary-soft);
+  border: 1px solid var(--line);
+  color: var(--text);
   border-radius: 999px;
-  padding: 0.35rem 0.95rem;
+  padding: 0.38rem 1rem;
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.18s, border-color 0.18s, color 0.18s;
+  font-family: inherit;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 .minimap-filter-btn:hover {
-  background: #e2e2f0;
-  border-color: #b0b0cc;
+  background: rgba(115, 92, 255, 0.18);
+  border-color: rgba(115, 92, 255, 0.3);
+  color: var(--primary-dark);
 }
 .minimap-filter-btn.active {
-  background: var(--ss-accent, #7c3aed);
-  border-color: var(--ss-accent, #7c3aed);
+  background: linear-gradient(135deg, var(--primary), #8b72ff);
+  border-color: transparent;
   color: #fff;
+  box-shadow: 0 4px 14px rgba(115, 92, 255, 0.30);
 }
 
 .minimap-frame {
   width: 100%;
   height: 380px;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--line);
   position: relative;
-  background: #1a1a2e;
+  background: var(--bg);
+  box-shadow: var(--shadow-soft);
 }
 
 .minimap-loading {
@@ -2705,13 +2712,13 @@ body.landing-page.site-locked .page-glow {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-soft);
   font-size: 0.88rem;
 }
 .minimap-spinner {
   width: 28px; height: 28px;
-  border: 3px solid rgba(255,255,255,0.1);
-  border-top-color: var(--ss-accent, #7c3aed);
+  border: 3px solid var(--line);
+  border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -2720,16 +2727,17 @@ body.landing-page.site-locked .page-glow {
 .minimap-error {
   padding: 2rem;
   text-align: center;
-  color: rgba(255,255,255,0.45);
+  color: var(--text-soft);
   font-size: 0.88rem;
 }
 
-/* POI icon on the map */
+/* POI emoji markers on the map */
 .minimap-poi-icon {
-  width: 28px; height: 28px;
+  width: 30px; height: 30px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.15rem;
-  background: white;
+  font-size: 1.1rem;
+  background: #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  border: 2px solid var(--line);
+  box-shadow: 0 2px 8px rgba(31, 27, 50, 0.18);
 }

@@ -328,18 +328,42 @@ function loadLeaflet() {
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    const query = encodeURIComponent(`${suburbName}, ${cityName}, Australia`);
-    const res   = await fetch(
-      `https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`,
-      { headers: { "Accept-Language": "en" } }
-    );
-    const data = await res.json();
-    if (!data.length) {
+    // Clean suburb name: "Clayton - Central" -> "Clayton Central", fallback "Clayton"
+    const cleanName = suburbName.replace(/\s*-\s*/g, " ").trim();
+    const baseName  = cleanName.split(/\s+/)[0];
+
+    // Request polygon_geojson directly from Nominatim — much more reliable than
+    // a two-step Nominatim → Overpass approach.
+    // Also filter to place/boundary classes so we get the suburb admin area, not a building.
+    let nominatimData = null;
+    for (const q of [cleanName, baseName]) {
+      const params = new URLSearchParams({
+        q: `${q}, ${cityName}, Australia`,
+        format: "json",
+        limit: "5",
+        polygon_geojson: "1",
+        "accept-language": "en"
+      });
+      const res  = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+      const results = await res.json();
+
+      // Prefer results that are suburb/neighbourhood/boundary, not buildings/roads
+      const preferred = results.find(r =>
+        ["suburb", "neighbourhood", "quarter", "village", "town", "administrative"]
+          .includes(r.type) ||
+        r.class === "boundary" || r.class === "place"
+      );
+      nominatimData = preferred || results[0] || null;
+      if (nominatimData) break;
+    }
+
+    if (!nominatimData) {
       frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
       return;
     }
-    const lat = parseFloat(data[0].lat);
-    const lon = parseFloat(data[0].lon);
+
+    const lat = parseFloat(nominatimData.lat);
+    const lon = parseFloat(nominatimData.lon);
     minimapCenter = [lat, lon];
 
     const mapEl = document.createElement("div");
@@ -348,22 +372,36 @@ async function buildMap(suburbName, cityName) {
     frame.innerHTML = "";
     frame.appendChild(mapEl);
 
-    minimapMap = L.map("leafletMap").setView(minimapCenter, 14);
+    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 }).setView(minimapCenter, 14);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
+      subdomains: "abcd",
       maxZoom: 19,
     }).addTo(minimapMap);
 
-    L.marker(minimapCenter).addTo(minimapMap)
-      .bindPopup(`<strong>${suburbName}</strong>`).openPopup();
+    // Draw boundary from Nominatim polygon_geojson (instant, no second request)
+    const geojson = nominatimData.geojson;
+    if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
+      const boundaryLayer = L.geoJSON(geojson, {
+        style: {
+          color: "#735cff",
+          weight: 2.5,
+          opacity: 0.9,
+          dashArray: "6 4",
+          fillColor: "#735cff",
+          fillOpacity: 0.08,
+        }
+      }).addTo(minimapMap);
+
+      // Fit map to the actual boundary, not just the centre point
+      minimapMap.fitBounds(boundaryLayer.getBounds(), { padding: [32, 32] });
+    }
 
     await fetchAndRenderPOI("", minimapCenter);
   } catch (err) {
     frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
     console.error("MiniMap error:", err);
   }
-
 }
 
 async function fetchAndRenderPOI(amenity, center) {
@@ -435,5 +473,95 @@ async function fetchAndRenderPOI(amenity, center) {
 
   if (!succeeded) {
     console.error("All Overpass endpoints failed. POI data unavailable.");
+  }
+}
+
+/* ─── Suburb boundary polygon (US5.4 extension) ─────────────────── */
+async function drawSuburbBoundary(osmId, osmType, suburbName) {
+  if (!osmId || !osmType) return;
+
+  // Overpass: fetch the boundary relation/way as GeoJSON
+  const typePrefix = osmType === "relation" ? "rel" : osmType === "way" ? "way" : null;
+  if (!typePrefix) return;
+
+  const query = `[out:json][timeout:15];
+${typePrefix}(${osmId});
+out geom;`;
+
+  const endpoints = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter"
+  ];
+
+  for (const endpoint of endpoints) {
+    try {
+      const res  = await fetch(endpoint, { method: "POST", body: query });
+      const data = await res.json();
+      if (!data.elements || !data.elements.length) continue;
+
+      const el = data.elements[0];
+      let geojson = null;
+
+      if (el.type === "relation") {
+        // Build GeoJSON polygon from relation members
+        const outerRings = [];
+        const innerRings = [];
+
+        for (const member of (el.members || [])) {
+          if (member.type !== "way" || !member.geometry) continue;
+          const coords = member.geometry.map(p => [p.lon, p.lat]);
+          if (member.role === "outer") outerRings.push(coords);
+          else if (member.role === "inner") innerRings.push(coords);
+        }
+
+        if (!outerRings.length) continue;
+
+        // Close rings if needed
+        const closeRing = ring => {
+          if (ring[0][0] !== ring[ring.length-1][0] || ring[0][1] !== ring[ring.length-1][1]) {
+            ring.push(ring[0]);
+          }
+          return ring;
+        };
+
+        geojson = {
+          type: "Feature",
+          geometry: {
+            type: "Polygon",
+            coordinates: [
+              closeRing(outerRings[0]),
+              ...innerRings.map(closeRing)
+            ]
+          }
+        };
+
+      } else if (el.type === "way" && el.geometry) {
+        const coords = el.geometry.map(p => [p.lon, p.lat]);
+        if (coords[0][0] !== coords[coords.length-1][0]) coords.push(coords[0]);
+        geojson = {
+          type: "Feature",
+          geometry: { type: "Polygon", coordinates: [coords] }
+        };
+      }
+
+      if (!geojson) continue;
+
+      // Draw on map: subtle fill + clean border
+      L.geoJSON(geojson, {
+        style: {
+          color: "#735cff",        // --primary
+          weight: 2.5,
+          opacity: 0.85,
+          dashArray: "6 4",
+          fillColor: "#735cff",
+          fillOpacity: 0.07,
+        }
+      }).addTo(minimapMap);
+
+      return; // success, stop trying endpoints
+
+    } catch (err) {
+      console.warn("Boundary fetch failed:", err);
+    }
   }
 }
