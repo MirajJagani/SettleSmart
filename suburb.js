@@ -291,6 +291,14 @@ function initMiniMap(suburbName, cityName) {
       label.textContent = "Hide map";
       toggleBtn.setAttribute("aria-expanded", "true");
 
+      // Force the frame to have a visible height before Leaflet initialises
+      const frame = document.getElementById("minimapFrame");
+      if (frame) {
+        frame.style.height = "380px";
+        frame.style.minHeight = "380px";
+        frame.style.display = "block";
+      }
+
       if (!minimapMap) {
         await loadLeaflet();
         await buildMap(suburbName, cityName);
@@ -320,24 +328,30 @@ function initMiniMap(suburbName, cityName) {
 function loadLeaflet() {
   return new Promise((resolve) => {
     if (window.L) { resolve(); return; }
+
+    // Load CSS first
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
     document.head.appendChild(css);
+
+    // Load JS — once loaded, give the CSS a tick to apply before resolving
     const script = document.createElement("script");
     script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    script.onload = resolve;
+    script.onload = () => {
+      // Wait two animation frames so the browser has painted the CSS
+      requestAnimationFrame(() => requestAnimationFrame(resolve));
+    };
     document.head.appendChild(script);
   });
-
 }
 
 /* ─── ABS SA2 name → real OSM search term ───────────────────────── */
 // Suburbs where Nominatim returns wrong/oversized boundaries → use fixed coords + zoom
 const ABS_FIXED_COORDS = {
-  "Melbourne CBD - East":  { lat: -37.8143, lon: 144.9731, zoom: 16 },
-  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 16 },
-  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 16 },
+  "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
+  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
+  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 15 },
   "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
 };
 
@@ -379,7 +393,9 @@ async function buildMap(suburbName, cityName) {
       minimapBounds = null;
       const mapEl = document.createElement("div");
       mapEl.id = "leafletMap";
-      mapEl.style.cssText = "width:100%;height:100%;";
+      mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+      frame.style.height = "380px";
+      frame.style.minHeight = "380px";
       frame.innerHTML = "";
       frame.appendChild(mapEl);
       minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
@@ -387,50 +403,84 @@ async function buildMap(suburbName, cityName) {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: "abcd", maxZoom: 19,
       }).addTo(minimapMap);
-      // No real boundary available — fall back to 3km circle
+      // No real boundary available — fall back to 1km circle
       L.circle(minimapCenter, {
         radius: 1000, color: "#735cff", weight: 1.5,
         dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
         interactive: false,
       }).addTo(minimapMap);
+      setTimeout(() => minimapMap.invalidateSize(), 300);
       await fetchAndRenderAll(minimapCenter);
       return;
     }
 
     // ── Nominatim lookup ────────────────────────────────────────────────────
+    // Use structured search first (suburb= param) so Nominatim matches the
+    // administrative boundary rather than a street or building with the same name.
     const mapped = ABS_NAME_MAP[suburbName];
     const parts  = suburbName.split(/\s*-\s*/).map(s => s.trim()).filter(Boolean);
-    const queryList = [...new Set([
-      mapped,
-      parts[0],
-      parts.length > 1 ? parts[1] : null,
-      parts[0].split(/\s+/)[0],
-    ].filter(Boolean))];
+    const candidates = [...new Set([mapped, parts[0], parts.length > 1 ? parts[1] : null].filter(Boolean))];
+
+    // Score a result: higher = better match for an SA2 suburb boundary
+    function scoreResult(r) {
+      let s = 0;
+      if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") s += 100;
+      if (r.class === "boundary") s += 60;
+      if (r.class === "place")    s += 40;
+      const goodTypes = ["suburb","neighbourhood","quarter","village","town","municipality","city_district","administrative"];
+      if (goodTypes.includes(r.type)) s += 50;
+      // place_rank 20-22 is suburb level in Nominatim; penalise anything too fine or too coarse
+      const rank = parseInt(r.place_rank || 30);
+      if (rank >= 18 && rank <= 24) s += 30;
+      else if (rank < 18 || rank > 28) s -= 20;
+      return s;
+    }
 
     let nominatimData = null;
-    for (const q of queryList) {
-      const params = new URLSearchParams({
-        q: `${q}, ${cityName}, Australia`,
-        format: "json", limit: "8",
+
+    for (const name of candidates) {
+      // 1️⃣ Structured query: suburb + city (most precise)
+      const structuredParams = new URLSearchParams({
+        suburb: name,
+        city: cityName,
+        country: "Australia",
+        format: "json", limit: "6",
         polygon_geojson: "1",
+        addressdetails: "1",
         "accept-language": "en",
       });
-      try {
-        const res     = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
-        if (!res.ok) continue;
-        const results = await res.json();
-        const withPoly = results.filter(r =>
-          r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon"
-        );
-        const preferred = withPoly.find(r =>
-          ["suburb","neighbourhood","quarter","village","town",
-           "city_district","administrative","city"].includes(r.type)
-          || r.class === "boundary" || r.class === "place"
-        );
-        if (preferred)       { nominatimData = preferred; break; }
-        if (withPoly.length) { nominatimData = withPoly[0]; break; }
-        if (results.length && !nominatimData) nominatimData = results[0];
-      } catch (e) { /* try next query */ }
+      // 2️⃣ Free-text fallback
+      const freeParams = new URLSearchParams({
+        q: `${name}, ${cityName}, Australia`,
+        format: "json", limit: "8",
+        polygon_geojson: "1",
+        addressdetails: "1",
+        "accept-language": "en",
+      });
+
+      for (const params of [structuredParams, freeParams]) {
+        try {
+          const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+          if (!res.ok) continue;
+          const results = await res.json();
+          if (!results.length) continue;
+
+          // Pick the highest-scoring result
+          const scored = results
+            .map(r => ({ r, score: scoreResult(r) }))
+            .sort((a, b) => b.score - a.score);
+
+          const best = scored[0];
+          // Accept if it has a decent boundary polygon, otherwise keep trying
+          if (best.score >= 100) { nominatimData = best.r; break; }
+          // Keep as fallback if nothing better found
+          if (!nominatimData || best.score > scoreResult(nominatimData)) {
+            nominatimData = best.r;
+          }
+        } catch (e) { /* try next */ }
+      }
+
+      if (nominatimData && scoreResult(nominatimData) >= 100) break;
     }
 
     if (!nominatimData) {
@@ -444,7 +494,9 @@ async function buildMap(suburbName, cityName) {
 
     const mapEl = document.createElement("div");
     mapEl.id = "leafletMap";
-    mapEl.style.cssText = "width:100%;height:100%;";
+    mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+    frame.style.height = "380px";
+    frame.style.minHeight = "380px";
     frame.innerHTML = "";
     frame.appendChild(mapEl);
 
@@ -466,8 +518,9 @@ async function buildMap(suburbName, cityName) {
 
       minimapBounds = boundaryLayer.getBounds();
       minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
+      setTimeout(() => minimapMap.invalidateSize(), 300);
     } else {
-      // No polygon — fall back to 3km circle centred view
+      // No polygon — fall back to 1km circle centred view
       minimapBounds = null;
       L.circle(minimapCenter, {
         radius: 1000, color: "#735cff", weight: 1.5,
@@ -475,6 +528,7 @@ async function buildMap(suburbName, cityName) {
         interactive: false,
       }).addTo(minimapMap);
       minimapMap.setView(minimapCenter, 14);
+      setTimeout(() => minimapMap.invalidateSize(), 300);
     }
 
     await fetchAndRenderAll(minimapCenter);
@@ -500,7 +554,7 @@ function buildOverpassQuery(amenity, lat, lon, maxResults) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise 3km radius
+  // Use suburb boundary bbox if available, otherwise 1km radius
   let areaFilter;
   if (minimapBounds) {
     const sw = minimapBounds.getSouthWest();
@@ -564,14 +618,14 @@ async function tryNominatimNearby(amenity, lat, lon, maxResults) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise ~3km box
+  // Use suburb boundary bbox if available, otherwise ~1km box
   let viewbox;
   if (minimapBounds) {
     const sw = minimapBounds.getSouthWest();
     const ne = minimapBounds.getNorthEast();
     viewbox = `${sw.lng},${ne.lat},${ne.lng},${sw.lat}`;
   } else {
-    const delta = 0.027;
+    const delta = 0.009;
     viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
   }
   // Try each tag separately and merge results
