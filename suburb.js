@@ -389,7 +389,7 @@ async function buildMap(suburbName, cityName) {
       }).addTo(minimapMap);
       // No real boundary available — fall back to 3km circle
       L.circle(minimapCenter, {
-        radius: 3000, color: "#735cff", weight: 1.5,
+        radius: 1000, color: "#735cff", weight: 1.5,
         dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
         interactive: false,
       }).addTo(minimapMap);
@@ -470,7 +470,7 @@ async function buildMap(suburbName, cityName) {
       // No polygon — fall back to 3km circle centred view
       minimapBounds = null;
       L.circle(minimapCenter, {
-        radius: 3000, color: "#735cff", weight: 1.5,
+        radius: 1000, color: "#735cff", weight: 1.5,
         dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
         interactive: false,
       }).addTo(minimapMap);
@@ -515,7 +515,7 @@ function buildOverpassQuery(amenity, lat, lon, maxResults) {
   } else {
     const parts = cat.tags.map(tag => {
       const [k, v] = tag.split("=");
-      return `node["${k}"="${v}"](around:3000,${lat},${lon});way["${k}"="${v}"](around:3000,${lat},${lon});`;
+      return `node["${k}"="${v}"](around:1000,${lat},${lon});way["${k}"="${v}"](around:1000,${lat},${lon});`;
     });
     return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
   }
