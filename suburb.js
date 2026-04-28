@@ -267,6 +267,7 @@ function getFallbackCommunity(suburb) {
 let minimapMap = null;
 let minimapMarkers = [];
 let minimapCenter = null;
+let minimapBounds = null;   // L.LatLngBounds of the suburb polygon, or null
 let activeAmenity = "";
 
 function initMiniMap(suburbName, cityName) {
@@ -306,7 +307,11 @@ function initMiniMap(suburbName, cityName) {
     btn.classList.add("active");
     activeAmenity = btn.dataset.amenity || "";
     if (minimapMap && minimapCenter) {
-      fetchAndRenderPOI(activeAmenity, minimapCenter);
+      if (activeAmenity === "") {
+        fetchAndRenderAll(minimapCenter);
+      } else {
+        fetchAndRenderPOI(activeAmenity, minimapCenter);
+      }
     }
   });
 
@@ -327,31 +332,105 @@ function loadLeaflet() {
 
 }
 
+/* ─── ABS SA2 name → real OSM search term ───────────────────────── */
+// Suburbs where Nominatim returns wrong/oversized boundaries → use fixed coords + zoom
+const ABS_FIXED_COORDS = {
+  "Melbourne CBD - East":  { lat: -37.8143, lon: 144.9731, zoom: 16 },
+  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 16 },
+  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 16 },
+  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
+};
+
+const ABS_NAME_MAP = {
+  "Melbourne CBD - East":            null,
+  "Melbourne CBD - North":           null,
+  "Melbourne CBD - West":            null,
+  "Carlton North - Princes Hill":    "Carlton North",
+  "Richmond (South) - Cremorne":     "Cremorne Melbourne",
+  "Richmond - North":                "Richmond Melbourne",
+  "South Yarra - North":             "South Yarra",
+  "South Yarra - South":             "South Yarra",
+  "South Yarra - West":              "South Yarra",
+  "St Kilda - Central":              "St Kilda",
+  "St Kilda - West":                 "St Kilda West",
+  "Brunswick - North":               "Brunswick Melbourne",
+  "Brunswick - South":               "Brunswick Melbourne",
+  "West Melbourne - Industrial":     "West Melbourne",
+  "West Melbourne - Residential":    "West Melbourne",
+  "Sydney (North) - Millers Point":  "Millers Point Sydney",
+  "Sydney (South) - Haymarket":      "Haymarket Sydney",
+  "Perth (North) - Highgate":        "Highgate Perth",
+  "Perth (West) - Northbridge":      "Northbridge Perth",
+  "Perth - Evandale":                "Evandale Perth",
+  "Brisbane Port - Lytton":          "Lytton Brisbane",
+  "Prahran - Windsor":               "Prahran",
+  "North Sydney - Lavender Bay":     "Lavender Bay",
+  "South Perth - Kensington":        "South Perth",
+  "South Yarra":                     "South Yarra",
+};
+
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    const cleanName = suburbName.replace(/\s*-\s*/g, " ").trim();
-    const baseName  = cleanName.split(/\s+/)[0];
+    // ── Fixed-coord suburbs (ABS names not in OSM) ──────────────────────────
+    const fixed = ABS_FIXED_COORDS[suburbName];
+    if (fixed) {
+      minimapCenter = [fixed.lat, fixed.lon];
+      minimapBounds = null;
+      const mapEl = document.createElement("div");
+      mapEl.id = "leafletMap";
+      mapEl.style.cssText = "width:100%;height:100%;";
+      frame.innerHTML = "";
+      frame.appendChild(mapEl);
+      minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: "abcd", maxZoom: 19,
+      }).addTo(minimapMap);
+      // No real boundary available — fall back to 3km circle
+      L.circle(minimapCenter, {
+        radius: 3000, color: "#735cff", weight: 1.5,
+        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
+        interactive: false,
+      }).addTo(minimapMap);
+      await fetchAndRenderAll(minimapCenter);
+      return;
+    }
+
+    // ── Nominatim lookup ────────────────────────────────────────────────────
+    const mapped = ABS_NAME_MAP[suburbName];
+    const parts  = suburbName.split(/\s*-\s*/).map(s => s.trim()).filter(Boolean);
+    const queryList = [...new Set([
+      mapped,
+      parts[0],
+      parts.length > 1 ? parts[1] : null,
+      parts[0].split(/\s+/)[0],
+    ].filter(Boolean))];
 
     let nominatimData = null;
-    for (const q of [cleanName, baseName]) {
+    for (const q of queryList) {
       const params = new URLSearchParams({
         q: `${q}, ${cityName}, Australia`,
-        format: "json",
-        limit: "5",
+        format: "json", limit: "8",
         polygon_geojson: "1",
-        "accept-language": "en"
+        "accept-language": "en",
       });
-      const res  = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
-      const results = await res.json();
-
-      const preferred = results.find(r =>
-        ["suburb", "neighbourhood", "quarter", "village", "town", "administrative"]
-          .includes(r.type) ||
-        r.class === "boundary" || r.class === "place"
-      );
-      nominatimData = preferred || results[0] || null;
-      if (nominatimData) break;
+      try {
+        const res     = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+        if (!res.ok) continue;
+        const results = await res.json();
+        const withPoly = results.filter(r =>
+          r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon"
+        );
+        const preferred = withPoly.find(r =>
+          ["suburb","neighbourhood","quarter","village","town",
+           "city_district","administrative","city"].includes(r.type)
+          || r.class === "boundary" || r.class === "place"
+        );
+        if (preferred)       { nominatimData = preferred; break; }
+        if (withPoly.length) { nominatimData = withPoly[0]; break; }
+        if (results.length && !nominatimData) nominatimData = results[0];
+      } catch (e) { /* try next query */ }
     }
 
     if (!nominatimData) {
@@ -369,186 +448,245 @@ async function buildMap(suburbName, cityName) {
     frame.innerHTML = "";
     frame.appendChild(mapEl);
 
-    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 }).setView(minimapCenter, 14);
+    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
     L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd",
-      maxZoom: 19,
+      subdomains: "abcd", maxZoom: 19,
     }).addTo(minimapMap);
 
-    const geojson = nominatimData.geojson;
-    if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
-      const boundaryLayer = L.geoJSON(geojson, {
+    // ── Draw suburb boundary from Nominatim geojson ─────────────────────────
+    if (nominatimData.geojson?.type === "Polygon" || nominatimData.geojson?.type === "MultiPolygon") {
+      const boundaryLayer = L.geoJSON(nominatimData.geojson, {
         style: {
-          color: "#735cff",
-          weight: 2.5,
-          opacity: 0.9,
-          dashArray: "6 4",
-          fillColor: "#735cff",
-          fillOpacity: 0.08,
-        }
+          color: "#735cff", weight: 2.5, opacity: 0.85,
+          dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.07,
+        },
+        interactive: false,
       }).addTo(minimapMap);
 
-      minimapMap.fitBounds(boundaryLayer.getBounds(), { padding: [32, 32] });
+      minimapBounds = boundaryLayer.getBounds();
+      minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
+    } else {
+      // No polygon — fall back to 3km circle centred view
+      minimapBounds = null;
+      L.circle(minimapCenter, {
+        radius: 3000, color: "#735cff", weight: 1.5,
+        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
+        interactive: false,
+      }).addTo(minimapMap);
+      minimapMap.setView(minimapCenter, 14);
     }
 
-    await fetchAndRenderPOI("", minimapCenter);
+    await fetchAndRenderAll(minimapCenter);
   } catch (err) {
     frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
     console.error("MiniMap error:", err);
   }
 }
 
-async function fetchAndRenderPOI(amenity, center) {
-  minimapMarkers.forEach(m => m.remove());
-  minimapMarkers = [];
-  if (!amenity) return;
+// ── POI category config ──────────────────────────────────────────────────────
+// 每个类别对应 Nominatim amenity/leisure/shop tag，以及显示 emoji 和标签名称
+const POI_CATEGORIES = {
+  restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café" },
+  supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery" },
+  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital" },
+  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic" },
+  park:        { tags: ["leisure=park", "leisure=garden"],                             emoji: "🌳", label: "Park" },
+  bus_station: { tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],   emoji: "🚌", label: "Transport" },
+};
 
-  const activeBtn = document.querySelector(".minimap-filter-btn.active");
-  const originalText = activeBtn ? activeBtn.innerHTML : "";
-  if (activeBtn) activeBtn.innerHTML += " ⏳";
+// ── Overpass QL builder ──────────────────────────────────────────────────────
+function buildOverpassQuery(amenity, lat, lon, maxResults) {
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return null;
 
-  const [lat, lon] = center;
-  const tag = amenity === "park" ? `["leisure"="park"]` : `["amenity"="${amenity}"]`;
-  const overpassQuery = `[out:json][timeout:15];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 25;`;
-
-  const overpassEndpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
-    "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
-  ];
-
-  const emojiMap = { supermarket:"🛒", hospital:"🏥", doctors:"👨‍⚕️", park:"🌳", restaurant:"🍜", bus_station:"🚌" };
-  const emoji = emojiMap[amenity] || "📍";
-
-  let succeeded = false;
-
-  for (const endpoint of overpassEndpoints) {
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        body: overpassQuery,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
-      });
-
-      if (!res.ok) continue;
-      const data = await res.json();
-
-      if (!data.elements) continue;
-
-      data.elements.forEach(el => {
-        const elLat = el.lat ?? el.center?.lat;
-        const elLon = el.lon ?? el.center?.lon;
-        if (!elLat || !elLon) return;
-        const icon = L.divIcon({
-          html: `<div class="minimap-poi-icon">${emoji}</div>`,
-          className: "",
-          iconSize: [28, 28],
-          iconAnchor: [14, 14]
-        });
-        const marker = L.marker([elLat, elLon], { icon })
-          .addTo(minimapMap)
-          .bindPopup(`<strong>${el.tags?.name || amenity}</strong>`);
-        minimapMarkers.push(marker);
-      });
-
-      succeeded = true;
-      break;
-
-    } catch (err) {
-      console.warn(`Overpass endpoint failed (${endpoint}):`, err);
-    }
-  }
-
-  if (activeBtn) activeBtn.innerHTML = originalText;
-
-  if (!succeeded) {
-    console.error("All Overpass endpoints failed. POI data unavailable.");
+  // Use suburb boundary bbox if available, otherwise 3km radius
+  let areaFilter;
+  if (minimapBounds) {
+    const sw = minimapBounds.getSouthWest();
+    const ne = minimapBounds.getNorthEast();
+    // Overpass bbox format: (south,west,north,east)
+    areaFilter = `(${sw.lat},${sw.lng},${ne.lat},${ne.lng})`;
+    const parts = cat.tags.map(tag => {
+      const [k, v] = tag.split("=");
+      return `node["${k}"="${v}"]${areaFilter};way["${k}"="${v}"]${areaFilter};`;
+    });
+    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
+  } else {
+    const parts = cat.tags.map(tag => {
+      const [k, v] = tag.split("=");
+      return `node["${k}"="${v}"](around:3000,${lat},${lon});way["${k}"="${v}"](around:3000,${lat},${lon});`;
+    });
+    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
   }
 }
 
-/* ─── Suburb boundary polygon (US5.4 extension) ─────────────────── */
-async function drawSuburbBoundary(osmId, osmType, suburbName) {
-  if (!osmId || !osmType) return;
-
-  const typePrefix = osmType === "relation" ? "rel" : osmType === "way" ? "way" : null;
-  if (!typePrefix) return;
-
-  const query = `[out:json][timeout:15];
-${typePrefix}(${osmId});
-out geom;`;
-
+// ── fetch helpers ─────────────────────────────────────────────────────────────
+async function tryOverpassDirect(query) {
   const endpoints = [
     "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter"
+    "https://overpass.kumi.systems/api/interpreter",
   ];
-
-  for (const endpoint of endpoints) {
+  for (const url of endpoints) {
     try {
-      const res  = await fetch(endpoint, { method: "POST", body: query });
+      const res = await fetch(url, {
+        method: "POST", body: query,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        signal: AbortSignal.timeout(12000),
+      });
+      if (!res.ok) continue;
       const data = await res.json();
-      if (!data.elements || !data.elements.length) continue;
+      if (data.elements?.length) return data.elements;
+    } catch { /* try next */ }
+  }
+  return null;
+}
 
-      const el = data.elements[0];
-      let geojson = null;
+async function tryOverpassViaProxy(query) {
+  const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
+  const proxies = [
+    { url: `https://corsproxy.io/?url=${encoded}`,                        wrap: false },
+    { url: `https://api.allorigins.win/get?url=${encoded}`,               wrap: true  },
+  ];
+  for (const proxy of proxies) {
+    try {
+      const res = await fetch(proxy.url, { signal: AbortSignal.timeout(12000) });
+      if (!res.ok) continue;
+      const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
+      if (raw.elements?.length) return raw.elements;
+    } catch { /* try next */ }
+  }
+  return null;
+}
 
-      if (el.type === "relation") {
-        const outerRings = [];
-        const innerRings = [];
+// Nominatim nearby search — last resort, no Overpass needed
+async function tryNominatimNearby(amenity, lat, lon, maxResults) {
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return null;
 
-        for (const member of (el.members || [])) {
-          if (member.type !== "way" || !member.geometry) continue;
-          const coords = member.geometry.map(p => [p.lon, p.lat]);
-          if (member.role === "outer") outerRings.push(coords);
-          else if (member.role === "inner") innerRings.push(coords);
+  // Use suburb boundary bbox if available, otherwise ~3km box
+  let viewbox;
+  if (minimapBounds) {
+    const sw = minimapBounds.getSouthWest();
+    const ne = minimapBounds.getNorthEast();
+    viewbox = `${sw.lng},${ne.lat},${ne.lng},${sw.lat}`;
+  } else {
+    const delta = 0.027;
+    viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
+  }
+  // Try each tag separately and merge results
+  const allResults = [];
+  for (const tag of cat.tags.slice(0, 2)) { // limit to avoid rate limit
+    const [k, v] = tag.split("=");
+    const params = new URLSearchParams({
+      format: "json", limit: String(maxResults),
+      viewbox, bounded: "1",
+      [`${k}`]: v,
+      "accept-language": "en",
+    });
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
+        headers: { "Accept-Language": "en" },
+        signal: AbortSignal.timeout(10000),
+      });
+      if (!res.ok) continue;
+      const items = await res.json();
+      items.forEach(item => {
+        if (item.lat && item.lon) {
+          allResults.push({
+            lat: parseFloat(item.lat),
+            lon: parseFloat(item.lon),
+            name: item.display_name?.split(",")[0] || v,
+          });
         }
+      });
+      // small delay between Nominatim requests to respect rate limit
+      await new Promise(r => setTimeout(r, 300));
+    } catch { /* try next tag */ }
+  }
+  return allResults.length ? allResults : null;
+}
 
-        if (!outerRings.length) continue;
-
-        const closeRing = ring => {
-          if (ring[0][0] !== ring[ring.length-1][0] || ring[0][1] !== ring[ring.length-1][1]) {
-            ring.push(ring[0]);
-          }
-          return ring;
-        };
-
-        geojson = {
-          type: "Feature",
-          geometry: {
-            type: "Polygon",
-            coordinates: [
-              closeRing(outerRings[0]),
-              ...innerRings.map(closeRing)
-            ]
-          }
-        };
-
-      } else if (el.type === "way" && el.geometry) {
-        const coords = el.geometry.map(p => [p.lon, p.lat]);
-        if (coords[0][0] !== coords[coords.length-1][0]) coords.push(coords[0]);
-        geojson = {
-          type: "Feature",
-          geometry: { type: "Polygon", coordinates: [coords] }
-        };
-      }
-
-      if (!geojson) continue;
-
-      L.geoJSON(geojson, {
-        style: {
-          color: "#735cff",
-          weight: 2.5,
-          opacity: 0.85,
-          dashArray: "6 4",
-          fillColor: "#735cff",
-          fillOpacity: 0.07,
-        }
-      }).addTo(minimapMap);
-
-      return;
-
-    } catch (err) {
-      console.warn("Boundary fetch failed:", err);
-    }
+// ── main render functions ────────────────────────────────────────────────────
+async function fetchAndRenderAll(center) {
+  minimapMarkers.forEach(m => m.remove());
+  minimapMarkers = [];
+  const allCategories = Object.keys(POI_CATEGORIES);
+  for (const cat of allCategories) {
+    await fetchAndRenderPOI(cat, center, 5, true);
   }
 }
+
+async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = false) {
+  if (!skipClear) {
+    minimapMarkers.forEach(m => m.remove());
+    minimapMarkers = [];
+  }
+  if (!amenity) return;
+
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return;
+
+  // 按钮 loading（单独类别点击时才更新）
+  const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
+  let originalHTML = "";
+  if (activeBtn) {
+    originalHTML = activeBtn.innerHTML;
+    activeBtn.disabled = true;
+    activeBtn.innerHTML = originalHTML + " ⏳";
+  }
+
+  const [lat, lon] = center;
+  const query = buildOverpassQuery(amenity, lat, lon, maxResults);
+  let elements = null;
+
+  // 1️⃣ 直连 Overpass
+  if (query) elements = await tryOverpassDirect(query);
+
+  // 2️⃣ CORS 代理 Overpass
+  if (!elements && query) elements = await tryOverpassViaProxy(query);
+
+  // 3️⃣ Nominatim 兜底
+  if (!elements) {
+    const nominatimResults = await tryNominatimNearby(amenity, lat, lon, maxResults);
+    if (nominatimResults) {
+      // convert to same shape as Overpass elements
+      elements = nominatimResults.map(r => ({ lat: r.lat, lon: r.lon, tags: { name: r.name } }));
+    }
+  }
+
+  // 渲染标记
+  if (elements && elements.length) {
+    elements.forEach(el => {
+      const elLat = el.lat ?? el.center?.lat;
+      const elLon = el.lon ?? el.center?.lon;
+      if (!elLat || !elLon) return;
+      const icon = L.divIcon({
+        html: `<div class="minimap-poi-icon">${cat.emoji}</div>`,
+        className: "", iconSize: [30, 30], iconAnchor: [15, 15],
+      });
+      const marker = L.marker([elLat, elLon], { icon })
+        .addTo(minimapMap)
+        .bindPopup(`<strong>${el.tags?.name || el.tags?.["name:en"] || cat.label}</strong>`);
+      minimapMarkers.push(marker);
+    });
+  } else if (!skipClear) {
+    // 全部 fallback 都失败时，在地图上短暂提示
+    const frame = document.getElementById("minimapFrame");
+    if (frame) {
+      const msg = document.createElement("div");
+      msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
+      msg.textContent = `暂时无法加载 ${cat.label} 数据，请稍后重试`;
+      frame.style.position = "relative";
+      frame.appendChild(msg);
+      setTimeout(() => msg.remove(), 4000);
+    }
+  }
+
+  if (activeBtn) {
+    activeBtn.disabled = false;
+    activeBtn.innerHTML = originalHTML;
+  }
+}
+
+
