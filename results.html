@@ -110,7 +110,7 @@
         <div class="section-header mb-4">
           <span class="ss-pill ss-pill-light">Your shortlist</span>
           <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
-          <h6>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</h6>
+          <h6>Use Recommend by to view suburbs based on overall fit, community fit, or university access.</h6>
         </div>
 
         <div class="results-toolbar mb-4">
@@ -131,13 +131,24 @@
           </div>
 
           <div class="results-toolbar-right">
-            <label for="sortSelect" class="results-sort-label">Sort by</label>
-            <select id="sortSelect" class="form-select ss-sort-select">
-              <option value="match-desc">Match High → Low</option>
-              <option value="match-asc">Match Low → High</option>
-              <option value="name-asc">A-Z</option>
-              <option value="name-desc">Z-A</option>
-            </select>
+            <div class="results-control-group">
+              <label for="recommendationSelect" class="results-sort-label">Recommend by</label>
+              <select id="recommendationSelect" class="form-select ss-sort-select">
+                <option value="overall">Overall fit</option>
+                <option value="community">Community</option>
+                <option value="university">University</option>
+              </select>
+            </div>
+
+            <div class="results-control-group">
+              <label for="sortSelect" class="results-sort-label">Sort by</label>
+              <select id="sortSelect" class="form-select ss-sort-select">
+                <option value="match-desc">Best first</option>
+                <option value="match-asc">Lowest first</option>
+                <option value="name-asc">A-Z</option>
+                <option value="name-desc">Z-A</option>
+              </select>
+            </div>
           </div>
         </div>
 
