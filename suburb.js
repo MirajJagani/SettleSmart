@@ -539,7 +539,7 @@ async function buildMap(suburbName, cityName) {
 }
 
 // ── POI category config ──────────────────────────────────────────────────────
-// 每个类别对应 Nominatim amenity/leisure/shop tag，以及显示 emoji 和标签名称
+// POI category config: maps each category to its Nominatim tags, emoji, and display label
 const POI_CATEGORIES = {
   restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café" },
   supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery" },
@@ -694,13 +694,13 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   const query = buildOverpassQuery(amenity, lat, lon, maxResults);
   let elements = null;
 
-  // 1️⃣ 直连 Overpass
+  // 1️⃣ Direct Overpass request
   if (query) elements = await tryOverpassDirect(query);
 
-  // 2️⃣ CORS 代理 Overpass
+  // 2️⃣ Overpass via CORS proxy
   if (!elements && query) elements = await tryOverpassViaProxy(query);
 
-  // 3️⃣ Nominatim 兜底
+  // 3️⃣ Nominatim fallback
   if (!elements) {
     const nominatimResults = await tryNominatimNearby(amenity, lat, lon, maxResults);
     if (nominatimResults) {
@@ -725,12 +725,12 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
       minimapMarkers.push(marker);
     });
   } else if (!skipClear) {
-    // 全部 fallback 都失败时，在地图上短暂提示
+    // All fallbacks failed — show a brief toast on the map
     const frame = document.getElementById("minimapFrame");
     if (frame) {
       const msg = document.createElement("div");
       msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
-      msg.textContent = `暂时无法加载 ${cat.label} 数据，请稍后重试`;
+      msg.textContent = `Could not load ${cat.label} data — please try again later`;
       frame.style.position = "relative";
       frame.appendChild(msg);
       setTimeout(() => msg.remove(), 4000);
