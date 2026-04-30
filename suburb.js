@@ -28,16 +28,16 @@ const SAFETY_SERIES_OPTIONS = [
     backgroundColor: "rgba(115, 92, 255, 0.12)"
   },
   {
-    key: "violentCrimesByYear",
-    label: "Violent crimes",
-    borderColor: "#ef4444",
-    backgroundColor: "rgba(239, 68, 68, 0.10)"
-  },
-  {
     key: "propertyCrimesByYear",
     label: "Property crimes",
     borderColor: "#f59e0b",
     backgroundColor: "rgba(245, 158, 11, 0.10)"
+  },
+  {
+    key: "violentCrimesByYear",
+    label: "Violent crimes",
+    borderColor: "#ef4444",
+    backgroundColor: "rgba(239, 68, 68, 0.10)"
   }
 ];
 
