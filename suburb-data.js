@@ -53936,8 +53936,19 @@ window.suburbs =
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2895,
+    "crimeCountByYear": {
+      "2016": 242,
+      "2017": 192,
+      "2018": 247,
+      "2019": 208,
+      "2020": 221,
+      "2021": 162,
+      "2022": 236,
+      "2023": 229,
+      "2024": 231,
+      "2025": 286
+    }
   },
   {
     "id": "clayton-central",
@@ -53985,8 +53996,19 @@ window.suburbs =
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18988,
+    "crimeCountByYear": {
+      "2016": 1498,
+      "2017": 1954,
+      "2018": 1561,
+      "2019": 1805,
+      "2020": 1851,
+      "2021": 1760,
+      "2022": 1849,
+      "2023": 2089,
+      "2024": 2341,
+      "2025": 2331
+    }
   },
   {
     "id": "ardeer-albion",

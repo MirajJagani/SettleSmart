@@ -208,7 +208,7 @@ function initSuburbPage() {
           <p>
             ${
               safety.hasData
-                ? `Crime rate per 1,000 residents trend for ${suburb.suburb}, based on yearly crime data up to ${safety.latestYearLabel}.`
+                ? `Yearly crime count trend for ${suburb.suburb}, based on yearly crime data up to ${safety.latestYearLabel}.`
                 : `No safety data is currently available for ${suburb.suburb}.`
             }
           </p>
@@ -229,7 +229,7 @@ function initSuburbPage() {
                 </article>
 
                 <article class="suburb-profile-card">
-                  <span class="suburb-profile-kicker">Latest crime rate</span>
+                  <span class="suburb-profile-kicker">Latest crime rate / 1000 residents</span>
                   <p>${safety.latestCrimeRateLabel}</p>
                 </article>
 
@@ -887,23 +887,23 @@ function getLinearTrend(values) {
 }
 
 function getSafetyChartData(suburb) {
-  const population = suburb.population;
   const crimeCountByYear = suburb.crimeCountByYear || {};
 
-  const years = Object.keys(crimeCountByYear).sort((a, b) => Number(a) - Number(b));
+  const years = Object.keys(crimeCountByYear)
+    .filter((year) => crimeCountByYear[year] !== null && crimeCountByYear[year] !== undefined)
+    .sort((a, b) => Number(a) - Number(b));
 
-  if (!years.length || !population) {
+  if (!years.length) {
     return null;
   }
 
-  const rates = years.map((year) => {
-    const count = Number(crimeCountByYear[year]);
-    return Number(((count / population) * 1000).toFixed(2));
+  const counts = years.map((year) => {
+    return Number(crimeCountByYear[year]);
   });
 
   return {
     labels: years,
-    values: rates
+    values: counts
   };
 }
 
@@ -945,7 +945,7 @@ function renderSafetyTrendChart(suburb) {
       labels: chartData.labels,
       datasets: [
         {
-          label: "Crime rate per 1,000 residents",
+          label: "Crime count",
           data: chartData.values,
           borderColor: "#735cff",
           backgroundColor: gradient,
@@ -987,7 +987,7 @@ function renderSafetyTrendChart(suburb) {
               return `Year ${items[0].label}`;
             },
             label: function(context) {
-              return `${context.parsed.y} per 1,000 residents`;
+              return `${context.parsed.y.toLocaleString("en-AU")} incidents`;
             }
           }
         }
@@ -1040,7 +1040,7 @@ function renderSafetyTrendChart(suburb) {
           },
           title: {
             display: true,
-            text: "Crime rate per 1,000 residents",
+            text: "Crime count",
             color: "#5f5b75",
             font: {
               size: 12,
