@@ -17,6 +17,7 @@ const cityHeroImages = {
   canberra: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1600&auto=format&fit=crop"
 };
 
+let safetyTrendChartInstance = null;
 initSuburbPage();
 
 function initSuburbPage() {
@@ -45,6 +46,7 @@ function initSuburbPage() {
     ? window.getEpic4ProfileCultureScore(suburb, preferences)
     : 7;
 
+  const safety = getSafetyIndicator(suburb);
   const heroImage = cityHeroImages[normalizeCityKey(suburb.city)] || cityHeroImages.melbourne;
 
   suburbProfile.innerHTML = `
@@ -200,6 +202,43 @@ function initSuburbPage() {
         </div>
       </section>
 
+      <section class="info-card suburb-detail-card" id="safetySnapshotSection">
+        <div class="suburb-section-head">
+          <h3>Safety indicator</h3>
+          <p>Crime rate (per 1000 residents) trend for ${suburb.suburb}.</p>
+        </div>
+
+        <div class="suburb-profile-grid">
+          <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Population</span>
+            <p>${safety.populationLabel}</p>
+          </article>
+
+          <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Latest crime count</span>
+            <p>${safety.latestCrimeLabel}</p>
+          </article>
+
+          <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Latest year</span>
+            <p>${safety.latestYearLabel}</p>
+          </article>
+
+          <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Trend</span>
+            <p>${safety.trendLabel}</p>
+          </article>
+        </div>
+
+        <div class="safety-chart-wrap">
+          ${
+            safety.hasData
+              ? `<canvas id="safetyTrendChart" height="120"></canvas>`
+              : `<p class="text-muted mb-0">No safety data available for this suburb.</p>`
+          }
+        </div>
+      </section>
+
       <section class="info-card suburb-detail-card">
         <div class="suburb-section-head">
           <h3>Multicultural support signals</h3>
@@ -241,6 +280,9 @@ function initSuburbPage() {
     </div>
   `;
   initMiniMap(suburb.suburb, suburb.city);
+  requestAnimationFrame(() => {
+    renderSafetyTrendChart(suburb);
+  });
 }
 
 function getFallbackCommunity(suburb) {
@@ -743,4 +785,171 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   }
 }
 
+/* -------- Safety Indicator (Epic 6) ------------------ */
+function formatNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return "Not available";
+  }
 
+  return Number(value).toLocaleString("en-AU");
+}
+
+function getSafetyIndicator(suburb) {
+  const population = suburb.population ?? null;
+  const crimeCountByYear = suburb.crimeCountByYear || {};
+
+  const years = Object.keys(crimeCountByYear).sort((a, b) => Number(a) - Number(b));
+
+  if (!years.length) {
+    return {
+      hasData: false,
+      populationLabel: formatNumber(population),
+      latestCrimeLabel: "Not available",
+      latestYearLabel: "Not available",
+      trendLabel: "Not available"
+    };
+  }
+
+  const latestYear = years[years.length - 1];
+  const latestCrime = Number(crimeCountByYear[latestYear]);
+
+  const recentYears = years.slice(-3);
+  const numericPopulation = Number(population);
+
+  // Calculate trend using a linear fit over the latest three years of crime data.
+  const trendValues = recentYears.map((year) => {
+    const crimeCount = Number(crimeCountByYear[year]);
+
+    if (numericPopulation && numericPopulation > 0) {
+      return (crimeCount / numericPopulation) * 1000;
+    }
+
+    return crimeCount;
+  });
+
+  const trendLabel = getLinearTrend(trendValues);
+
+  return {
+    hasData: true,
+    populationLabel: formatNumber(population),
+    latestCrimeLabel: formatNumber(latestCrime),
+    latestYearLabel: latestYear,
+    trendLabel
+  };
+}
+
+// Calculate trend using linear fit over the latest three years
+function getLinearTrend(values) {
+  if (!values || values.length < 2) {
+    return "Not enough data";
+  }
+
+  const n = values.length;
+  const xValues = values.map((_, index) => index);
+
+  const xMean = xValues.reduce((sum, x) => sum + x, 0) / n;
+  const yMean = values.reduce((sum, y) => sum + y, 0) / n;
+
+  let numerator = 0;
+  let denominator = 0;
+
+  for (let i = 0; i < n; i++) {
+    numerator += (xValues[i] - xMean) * (values[i] - yMean);
+    denominator += (xValues[i] - xMean) ** 2;
+  }
+
+  const slope = denominator === 0 ? 0 : numerator / denominator;
+
+  const average = yMean || 1;
+  const relativeSlope = Math.abs(slope) / average;
+
+  if (relativeSlope < 0.05) {
+    return "Stable";
+  }
+
+  return slope > 0 ? "Increasing" : "Decreasing";
+}
+
+function getSafetyChartData(suburb) {
+  const population = suburb.population;
+  const crimeCountByYear = suburb.crimeCountByYear || {};
+
+  const years = Object.keys(crimeCountByYear).sort((a, b) => Number(a) - Number(b));
+
+  if (!years.length || !population) {
+    return null;
+  }
+
+  const rates = years.map((year) => {
+    const count = Number(crimeCountByYear[year]);
+    return Number(((count / population) * 1000).toFixed(2));
+  });
+
+  return {
+    labels: years,
+    values: rates
+  };
+}
+
+function renderSafetyTrendChart(suburb) {
+  const canvas = document.getElementById("safetyTrendChart");
+  if (!canvas || !window.Chart) return;
+
+  const chartData = getSafetyChartData(suburb);
+  if (!chartData) return;
+
+  if (safetyTrendChartInstance) {
+    safetyTrendChartInstance.destroy();
+  }
+
+  safetyTrendChartInstance = new Chart(canvas, {
+    type: "line",
+    data: {
+      labels: chartData.labels,
+      datasets: [
+        {
+          label: "Crime rate per 1,000 residents",
+          data: chartData.values,
+          borderColor: "#735cff",
+          backgroundColor: "rgba(115, 92, 255, 0.12)",
+          borderWidth: 2,
+          tension: 0.3,
+          fill: true,
+          pointRadius: 4,
+          pointHoverRadius: 5
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return `${context.parsed.y} per 1,000 residents`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Crime rate per 1,000 residents"
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: "Year"
+          }
+        }
+      }
+    }
+  });
+}

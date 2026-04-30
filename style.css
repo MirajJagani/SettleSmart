@@ -2752,3 +2752,12 @@ body.landing-page.site-locked .page-glow {
   border: 2px solid var(--line);
   box-shadow: 0 2px 8px rgba(31, 27, 50, 0.18);
 }
+
+/* Safety Indicator */
+.safety-chart-wrap {
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.68);
+}
