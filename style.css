@@ -2755,9 +2755,18 @@ body.landing-page.site-locked .page-glow {
 
 /* Safety Indicator */
 .safety-chart-wrap {
+  position: relative;
   margin-top: 18px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.68);
+  height: 340px;
+  padding: 16px 18px 12px;
+  border: 1px solid rgba(115, 92, 255, 0.12);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 246, 255, 0.92));
+  box-shadow: 0 10px 24px rgba(28, 20, 74, 0.06);
+}
+
+.safety-chart-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
