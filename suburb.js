@@ -18,6 +18,31 @@ const cityHeroImages = {
 };
 
 let safetyTrendChartInstance = null;
+
+// Safety chart line configuration
+const SAFETY_SERIES_OPTIONS = [
+  {
+    key: "crimeCountByYear",
+    label: "Total crime",
+    borderColor: "#735cff",
+    backgroundColor: "rgba(115, 92, 255, 0.12)"
+  },
+  {
+    key: "violentCrimesByYear",
+    label: "Violent crimes",
+    borderColor: "#ef4444",
+    backgroundColor: "rgba(239, 68, 68, 0.10)"
+  },
+  {
+    key: "propertyCrimesByYear",
+    label: "Property crimes",
+    borderColor: "#f59e0b",
+    backgroundColor: "rgba(245, 158, 11, 0.10)"
+  }
+];
+
+let activeSafetySeries = ["crimeCountByYear"];
+
 initSuburbPage();
 
 function initSuburbPage() {
@@ -239,6 +264,34 @@ function initSuburbPage() {
                 </article>
               </div>
 
+              <div class="safety-chart-controls" id="safetyChartControls" aria-label="Safety chart filters">
+                <button
+                  type="button"
+                  class="safety-chart-toggle active"
+                  data-safety-series="crimeCountByYear"
+                >
+                  Total crime
+                </button>
+
+                <button
+                  type="button"
+                  class="safety-chart-toggle"
+                  data-safety-series="violentCrimesByYear"
+                  ${hasSafetySeries(suburb, "violentCrimesByYear") ? "" : "disabled"}
+                >
+                  Violent crimes
+                </button>
+
+                <button
+                  type="button"
+                  class="safety-chart-toggle"
+                  data-safety-series="propertyCrimesByYear"
+                  ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
+                >
+                  Property crimes
+                </button>
+              </div>
+              
               <div class="safety-chart-wrap">
                 <canvas id="safetyTrendChart"></canvas>
               </div>
@@ -292,6 +345,7 @@ function initSuburbPage() {
   `;
   initMiniMap(suburb.suburb, suburb.city);
   requestAnimationFrame(() => {
+    setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
   });
 }
@@ -797,6 +851,55 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
 }
 
 /* -------- Safety Indicator (Epic 6) ------------------ */
+
+function hasSafetySeries(suburb, seriesKey) {
+  const series = suburb[seriesKey] || {};
+
+  // True if this category has at least one value
+  return Object.values(series).some((value) => {
+    return value !== null && value !== undefined && !Number.isNaN(Number(value));
+  });
+}
+
+function setupSafetyChartControls(suburb) {
+  const controls = document.getElementById("safetyChartControls");
+
+  // If has no safety data, stop
+  if (!controls) {
+    return;
+  }
+
+  controls.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-safety-series]");
+
+    if (!button || button.disabled) {
+      return;
+    }
+
+    const selectedKey = button.dataset.safetySeries;
+
+    if (activeSafetySeries.includes(selectedKey)) {
+      // Keep at least one line active
+      if (activeSafetySeries.length === 1) {
+        return;
+      }
+
+      activeSafetySeries = activeSafetySeries.filter((key) => key !== selectedKey);
+    } else {
+      activeSafetySeries.push(selectedKey);
+    }
+
+    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        activeSafetySeries.includes(btn.dataset.safetySeries)
+      );
+    });
+
+    renderSafetyTrendChart(suburb);
+  });
+}
+
 function formatNumber(value) {
   if (value === null || value === undefined || value === "") {
     return "Not available";
@@ -887,24 +990,89 @@ function getLinearTrend(values) {
 }
 
 function getSafetyChartData(suburb) {
-  const crimeCountByYear = suburb.crimeCountByYear || {};
+  const selectedOptions = SAFETY_SERIES_OPTIONS.filter((option) => {
+    return activeSafetySeries.includes(option.key) && hasSafetySeries(suburb, option.key);
+  });
 
-  const years = Object.keys(crimeCountByYear)
-    .filter((year) => crimeCountByYear[year] !== null && crimeCountByYear[year] !== undefined)
-    .sort((a, b) => Number(a) - Number(b));
+  if (!selectedOptions.length) {
+    return null;
+  }
+
+  const years = [
+    ...new Set(
+      selectedOptions.flatMap((option) => {
+        const series = suburb[option.key] || {};
+
+        return Object.keys(series).filter((year) => {
+          const value = series[year];
+          return value !== null && value !== undefined && !Number.isNaN(Number(value));
+        });
+      })
+    )
+  ].sort((a, b) => Number(a) - Number(b));
 
   if (!years.length) {
     return null;
   }
 
-  const counts = years.map((year) => {
-    return Number(crimeCountByYear[year]);
+  // Track the largest visible value, used to adjust y scale
+  let maxValue = 0;
+
+  const datasets = selectedOptions.map((option) => {
+    const series = suburb[option.key] || {};
+
+    const values = years.map((year) => {
+      const value = series[year];
+
+      if (value === null || value === undefined || Number.isNaN(Number(value))) {
+        return null;
+      }
+
+      const numericValue = Number(value);
+      maxValue = Math.max(maxValue, numericValue);
+      return numericValue;
+    });
+
+    return {
+      key: option.key,
+      label: option.label,
+      values,
+      borderColor: option.borderColor,
+      backgroundColor: option.backgroundColor
+    };
   });
 
   return {
     labels: years,
-    values: counts
+    datasets,
+    maxValue
   };
+}
+
+function getNiceSafetyAxisMax(maxValue) {
+  if (!maxValue || maxValue <= 0) {
+    return 10;
+  }
+
+  const paddedMax = maxValue * 1.05;
+  const roughStep = paddedMax / 4;
+
+  const magnitude = Math.pow(10, Math.floor(Math.log10(roughStep)));
+  const normalizedStep = roughStep / magnitude;
+
+  let niceStep;
+
+  if (normalizedStep <= 1) {
+    niceStep = 1 * magnitude;
+  } else if (normalizedStep <= 2) {
+    niceStep = 2 * magnitude;
+  } else if (normalizedStep <= 5) {
+    niceStep = 5 * magnitude;
+  } else {
+    niceStep = 10 * magnitude;
+  }
+
+  return Math.ceil(paddedMax / niceStep) * niceStep;
 }
 
 function renderSafetyTrendChart(suburb) {
@@ -920,48 +1088,74 @@ function renderSafetyTrendChart(suburb) {
     return;
   }
 
+  // Get chart data from active crime categories
   const chartData = getSafetyChartData(suburb);
 
   if (!chartData) {
     console.warn("No safety chart data available.", {
       population: suburb.population,
-      crimeCountByYear: suburb.crimeCountByYear
+      crimeCountByYear: suburb.crimeCountByYear,
+      violentCrimesByYear: suburb.violentCrimesByYear,
+      propertyCrimesByYear: suburb.propertyCrimesByYear
     });
     return;
   }
 
+  // Remove the previous chart before a new one
   if (safetyTrendChartInstance) {
     safetyTrendChartInstance.destroy();
   }
 
   const ctx = canvas.getContext("2d");
-  const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-  gradient.addColorStop(0, "rgba(115, 92, 255, 0.22)");
-  gradient.addColorStop(1, "rgba(115, 92, 255, 0.02)");
+
+  function createSafetyGradient(seriesKey) {
+    const gradient = ctx.createLinearGradient(0, 0, 0, 320);
+
+    if (seriesKey === "violentCrimesByYear") {
+      gradient.addColorStop(0, "rgba(239, 68, 68, 0.22)");
+      gradient.addColorStop(1, "rgba(239, 68, 68, 0.02)");
+      return gradient;
+    }
+
+    if (seriesKey === "propertyCrimesByYear") {
+      gradient.addColorStop(0, "rgba(245, 158, 11, 0.22)");
+      gradient.addColorStop(1, "rgba(245, 158, 11, 0.02)");
+      return gradient;
+    }
+
+    gradient.addColorStop(0, "rgba(115, 92, 255, 0.22)");
+    gradient.addColorStop(1, "rgba(115, 92, 255, 0.02)");
+    return gradient;
+  }
+
+  const yAxisMax = getNiceSafetyAxisMax(chartData.maxValue);
 
   safetyTrendChartInstance = new Chart(ctx, {
     type: "line",
     data: {
       labels: chartData.labels,
-      datasets: [
-        {
-          label: "Crime count",
-          data: chartData.values,
-          borderColor: "#735cff",
-          backgroundColor: gradient,
-          borderWidth: 3,
+      datasets: chartData.datasets.map((dataset) => {
+        const isTotalCrime = dataset.key === "crimeCountByYear";
+
+        return {
+          label: dataset.label,
+          data: dataset.values,
+          borderColor: dataset.borderColor,
+          backgroundColor: createSafetyGradient(dataset.key),
+          borderWidth: isTotalCrime ? 3 : 2.5,
           tension: 0.35,
-          fill: true,
+          fill: "origin",
+          spanGaps: true,
           pointRadius: 3,
           pointHoverRadius: 6,
-          pointBackgroundColor: "#735cff",
+          pointBackgroundColor: dataset.borderColor,
           pointBorderColor: "#ffffff",
           pointBorderWidth: 2,
-          pointHoverBackgroundColor: "#735cff",
+          pointHoverBackgroundColor: dataset.borderColor,
           pointHoverBorderColor: "#ffffff",
           pointHoverBorderWidth: 2
-        }
-      ]
+        };
+      })
     },
     options: {
       responsive: true,
@@ -979,7 +1173,7 @@ function renderSafetyTrendChart(suburb) {
           titleColor: "#ffffff",
           bodyColor: "#f3f1ff",
           padding: 12,
-          displayColors: false,
+          displayColors: true,
           cornerRadius: 12,
           caretSize: 6,
           callbacks: {
@@ -987,7 +1181,13 @@ function renderSafetyTrendChart(suburb) {
               return `Year ${items[0].label}`;
             },
             label: function(context) {
-              return `${context.parsed.y.toLocaleString("en-AU")} incidents`;
+              const value = context.parsed.y;
+
+              if (value === null || value === undefined) {
+                return `${context.dataset.label}: Not available`;
+              }
+
+              return `${context.dataset.label}: ${value.toLocaleString("en-AU")} incidents`;
             }
           }
         }
@@ -1027,6 +1227,7 @@ function renderSafetyTrendChart(suburb) {
         },
         y: {
           beginAtZero: true,
+          max: yAxisMax,
           grid: {
             color: "rgba(115, 92, 255, 0.10)",
             drawBorder: false
@@ -1036,7 +1237,9 @@ function renderSafetyTrendChart(suburb) {
             font: {
               size: 12
             },
-            padding: 8
+            padding: 8,
+            precision: 0,
+            count: 11
           },
           title: {
             display: true,
