@@ -34,8 +34,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1720,
+    "crimeCountByYear": {
+      "2016": 92,
+      "2017": 93,
+      "2018": 73,
+      "2019": 104,
+      "2020": 117,
+      "2021": 170,
+      "2022": 133,
+      "2023": 140,
+      "2024": 153,
+      "2025": 95
+    }
   },
   {
     "id": "karabar",
@@ -71,8 +82,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8517,
+    "crimeCountByYear": {
+      "2016": 531,
+      "2017": 476,
+      "2018": 538,
+      "2019": 585,
+      "2020": 573,
+      "2021": 583,
+      "2022": 483,
+      "2023": 550,
+      "2024": 511,
+      "2025": 602
+    }
   },
   {
     "id": "queanbeyan",
@@ -108,8 +130,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6409,
+    "crimeCountByYear": {
+      "2016": 1557,
+      "2017": 1243,
+      "2018": 1253,
+      "2019": 1235,
+      "2020": 1345,
+      "2021": 1300,
+      "2022": 1275,
+      "2023": 1372,
+      "2024": 1258,
+      "2025": 1406
+    }
   },
   {
     "id": "queanbeyan-east",
@@ -145,8 +178,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4240,
+    "crimeCountByYear": {
+      "2016": 376,
+      "2017": 291,
+      "2018": 335,
+      "2019": 336,
+      "2020": 278,
+      "2021": 303,
+      "2022": 314,
+      "2023": 328,
+      "2024": 311,
+      "2025": 280
+    }
   },
   {
     "id": "queanbeyan-west-jerrabomberra",
@@ -182,8 +226,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12747,
+    "crimeCountByYear": {
+      "2016": 583,
+      "2017": 485,
+      "2018": 403,
+      "2019": 595,
+      "2020": 506,
+      "2021": 486,
+      "2022": 556,
+      "2023": 470,
+      "2024": 427,
+      "2025": 406
+    }
   },
   {
     "id": "googong",
@@ -220,8 +275,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7444,
+    "crimeCountByYear": {
+      "2016": 70,
+      "2017": 73,
+      "2018": 105,
+      "2019": 124,
+      "2020": 94,
+      "2021": 126,
+      "2022": 143,
+      "2023": 167,
+      "2024": 134,
+      "2025": 139
+    }
   },
   {
     "id": "queanbeyan-surrounds",
@@ -295,8 +361,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1372,
+    "crimeCountByYear": {
+      "2016": 58,
+      "2017": 85,
+      "2018": 57,
+      "2019": 79,
+      "2020": 62,
+      "2021": 115,
+      "2022": 100,
+      "2023": 66,
+      "2024": 63,
+      "2025": 67
+    }
   },
   {
     "id": "cooma",
@@ -332,18 +409,18 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 94,
+    "population": 6715,
     "crimeCountByYear": {
-      "2016": 9,
-      "2017": 2,
-      "2018": 5,
-      "2019": 7,
-      "2020": 12,
-      "2021": 10,
-      "2022": 5,
-      "2023": 1,
-      "2024": 4,
-      "2025": 2
+      "2016": 453,
+      "2017": 491,
+      "2018": 466,
+      "2019": 555,
+      "2020": 554,
+      "2021": 490,
+      "2022": 349,
+      "2023": 470,
+      "2024": 459,
+      "2025": 412
     }
   },
   {
@@ -418,8 +495,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4286,
+    "crimeCountByYear": {
+      "2016": 357,
+      "2017": 340,
+      "2018": 391,
+      "2019": 341,
+      "2020": 255,
+      "2021": 364,
+      "2022": 293,
+      "2023": 329,
+      "2024": 316,
+      "2025": 280
+    }
   },
   {
     "id": "batemans-bay",
@@ -455,8 +543,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1573,
+    "crimeCountByYear": {
+      "2016": 832,
+      "2017": 678,
+      "2018": 763,
+      "2019": 756,
+      "2020": 673,
+      "2021": 794,
+      "2022": 721,
+      "2023": 1087,
+      "2024": 1160,
+      "2025": 685
+    }
   },
   {
     "id": "batemans-bay-south",
@@ -492,8 +591,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1573,
+    "crimeCountByYear": {
+      "2016": 832,
+      "2017": 678,
+      "2018": 763,
+      "2019": 756,
+      "2020": 673,
+      "2021": 794,
+      "2022": 721,
+      "2023": 1087,
+      "2024": 1160,
+      "2025": 685
+    }
   },
   {
     "id": "bega-tathra",
@@ -529,8 +639,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6540,
+    "crimeCountByYear": {
+      "2016": 670,
+      "2017": 534,
+      "2018": 609,
+      "2019": 615,
+      "2020": 524,
+      "2021": 559,
+      "2022": 517,
+      "2023": 539,
+      "2024": 624,
+      "2025": 538
+    }
   },
   {
     "id": "bega-eden-hinterland",
@@ -604,8 +725,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3180,
+    "crimeCountByYear": {
+      "2016": 113,
+      "2017": 107,
+      "2018": 167,
+      "2019": 129,
+      "2020": 147,
+      "2021": 133,
+      "2022": 112,
+      "2023": 156,
+      "2024": 113,
+      "2025": 151
+    }
   },
   {
     "id": "deua-wadbilliga",
@@ -641,8 +773,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 0,
+    "crimeCountByYear": {
+      "2016": 2,
+      "2017": 1,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 1,
+      "2022": 0,
+      "2023": 0,
+      "2024": 0,
+      "2025": 0
+    }
   },
   {
     "id": "eden",
@@ -678,8 +821,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3350,
+    "crimeCountByYear": {
+      "2016": 399,
+      "2017": 383,
+      "2018": 332,
+      "2019": 383,
+      "2020": 388,
+      "2021": 462,
+      "2022": 383,
+      "2023": 419,
+      "2024": 446,
+      "2025": 308
+    }
   },
   {
     "id": "eurobodalla-hinterland",
@@ -753,8 +907,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7226,
+    "crimeCountByYear": {
+      "2016": 432,
+      "2017": 381,
+      "2018": 307,
+      "2019": 315,
+      "2020": 387,
+      "2021": 319,
+      "2022": 324,
+      "2023": 299,
+      "2024": 367,
+      "2025": 307
+    }
   },
   {
     "id": "moruya-tuross-head",
@@ -790,8 +955,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6648,
+    "crimeCountByYear": {
+      "2016": 610,
+      "2017": 712,
+      "2018": 636,
+      "2019": 641,
+      "2020": 631,
+      "2021": 673,
+      "2022": 923,
+      "2023": 883,
+      "2024": 854,
+      "2025": 566
+    }
   },
   {
     "id": "narooma-bermagui",
@@ -827,8 +1003,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4596,
+    "crimeCountByYear": {
+      "2016": 478,
+      "2017": 408,
+      "2018": 413,
+      "2019": 424,
+      "2020": 382,
+      "2021": 486,
+      "2022": 408,
+      "2023": 475,
+      "2024": 401,
+      "2025": 409
+    }
   },
   {
     "id": "goulburn",
@@ -864,8 +1051,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23963,
+    "crimeCountByYear": {
+      "2016": 2058,
+      "2017": 2068,
+      "2018": 2179,
+      "2019": 2071,
+      "2020": 2381,
+      "2021": 2453,
+      "2022": 2250,
+      "2023": 2415,
+      "2024": 2492,
+      "2025": 2554
+    }
   },
   {
     "id": "goulburn-surrounds",
@@ -939,8 +1137,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6763,
+    "crimeCountByYear": {
+      "2016": 404,
+      "2017": 333,
+      "2018": 431,
+      "2019": 354,
+      "2020": 351,
+      "2021": 379,
+      "2022": 378,
+      "2023": 413,
+      "2024": 391,
+      "2025": 417
+    }
   },
   {
     "id": "yass-surrounds",
@@ -1014,8 +1223,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10610,
+    "crimeCountByYear": {
+      "2016": 1047,
+      "2017": 1059,
+      "2018": 1221,
+      "2019": 1095,
+      "2020": 1202,
+      "2021": 977,
+      "2022": 1164,
+      "2023": 1133,
+      "2024": 1191,
+      "2025": 1202
+    }
   },
   {
     "id": "young-surrounds",
@@ -1090,8 +1310,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7517,
+    "crimeCountByYear": {
+      "2016": 225,
+      "2017": 204,
+      "2018": 203,
+      "2019": 222,
+      "2020": 211,
+      "2021": 215,
+      "2022": 170,
+      "2023": 176,
+      "2024": 228,
+      "2025": 239
+    }
   },
   {
     "id": "box-head-macmasters-beach",
@@ -1127,8 +1358,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1399,
+    "crimeCountByYear": {
+      "2016": 43,
+      "2017": 49,
+      "2018": 43,
+      "2019": 31,
+      "2020": 27,
+      "2021": 45,
+      "2022": 26,
+      "2023": 41,
+      "2024": 21,
+      "2025": 36
+    }
   },
   {
     "id": "calga-kulnura",
@@ -1164,8 +1406,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 723,
+    "crimeCountByYear": {
+      "2016": 39,
+      "2017": 54,
+      "2018": 53,
+      "2019": 35,
+      "2020": 22,
+      "2021": 59,
+      "2022": 90,
+      "2023": 68,
+      "2024": 44,
+      "2025": 66
+    }
   },
   {
     "id": "erina-green-point",
@@ -1275,8 +1528,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6485,
+    "crimeCountByYear": {
+      "2016": 405,
+      "2017": 426,
+      "2018": 334,
+      "2019": 413,
+      "2020": 354,
+      "2021": 315,
+      "2022": 286,
+      "2023": 388,
+      "2024": 397,
+      "2025": 416
+    }
   },
   {
     "id": "kincumber-picketts-valley",
@@ -1312,8 +1576,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7619,
+    "crimeCountByYear": {
+      "2016": 340,
+      "2017": 414,
+      "2018": 446,
+      "2019": 393,
+      "2020": 308,
+      "2021": 321,
+      "2022": 312,
+      "2023": 422,
+      "2024": 333,
+      "2025": 303
+    }
   },
   {
     "id": "narara",
@@ -1349,8 +1624,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8471,
+    "crimeCountByYear": {
+      "2016": 476,
+      "2017": 530,
+      "2018": 431,
+      "2019": 476,
+      "2020": 400,
+      "2021": 450,
+      "2022": 416,
+      "2023": 410,
+      "2024": 366,
+      "2025": 374
+    }
   },
   {
     "id": "niagara-park-lisarow",
@@ -1388,8 +1674,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8078,
+    "crimeCountByYear": {
+      "2016": 471,
+      "2017": 614,
+      "2018": 428,
+      "2019": 369,
+      "2020": 386,
+      "2021": 432,
+      "2022": 386,
+      "2023": 381,
+      "2024": 429,
+      "2025": 449
+    }
   },
   {
     "id": "point-clare-koolewong",
@@ -1425,8 +1722,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4894,
+    "crimeCountByYear": {
+      "2016": 345,
+      "2017": 349,
+      "2018": 293,
+      "2019": 334,
+      "2020": 260,
+      "2021": 348,
+      "2022": 222,
+      "2023": 274,
+      "2024": 186,
+      "2025": 213
+    }
   },
   {
     "id": "saratoga-davistown",
@@ -1462,8 +1770,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6584,
+    "crimeCountByYear": {
+      "2016": 98,
+      "2017": 152,
+      "2018": 125,
+      "2019": 141,
+      "2020": 136,
+      "2021": 146,
+      "2022": 125,
+      "2023": 167,
+      "2024": 152,
+      "2025": 108
+    }
   },
   {
     "id": "terrigal-north-avoca",
@@ -1500,8 +1819,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15048,
+    "crimeCountByYear": {
+      "2016": 748,
+      "2017": 620,
+      "2018": 717,
+      "2019": 807,
+      "2020": 692,
+      "2021": 642,
+      "2022": 722,
+      "2023": 582,
+      "2024": 598,
+      "2025": 583
+    }
   },
   {
     "id": "umina-booker-bay-patonga",
@@ -1575,8 +1905,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10345,
+    "crimeCountByYear": {
+      "2016": 376,
+      "2017": 284,
+      "2018": 310,
+      "2019": 322,
+      "2020": 375,
+      "2021": 273,
+      "2022": 304,
+      "2023": 306,
+      "2024": 302,
+      "2025": 333
+    }
   },
   {
     "id": "woy-woy-blackwall",
@@ -1612,8 +1953,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13013,
+    "crimeCountByYear": {
+      "2016": 2650,
+      "2017": 2516,
+      "2018": 2388,
+      "2019": 2699,
+      "2020": 1949,
+      "2021": 2235,
+      "2022": 1814,
+      "2023": 2172,
+      "2024": 1888,
+      "2025": 1836
+    }
   },
   {
     "id": "wyoming",
@@ -1649,8 +2001,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10111,
+    "crimeCountByYear": {
+      "2016": 737,
+      "2017": 662,
+      "2018": 629,
+      "2019": 771,
+      "2020": 634,
+      "2021": 542,
+      "2022": 598,
+      "2023": 648,
+      "2024": 609,
+      "2025": 544
+    }
   },
   {
     "id": "bateau-bay-killarney-vale",
@@ -1686,8 +2049,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20007,
+    "crimeCountByYear": {
+      "2016": 1422,
+      "2017": 1303,
+      "2018": 1377,
+      "2019": 1406,
+      "2020": 1226,
+      "2021": 1310,
+      "2022": 1401,
+      "2023": 1597,
+      "2024": 1505,
+      "2025": 1250
+    }
   },
   {
     "id": "blue-haven-san-remo",
@@ -1723,8 +2097,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10997,
+    "crimeCountByYear": {
+      "2016": 737,
+      "2017": 787,
+      "2018": 692,
+      "2019": 797,
+      "2020": 879,
+      "2021": 879,
+      "2022": 745,
+      "2023": 855,
+      "2024": 714,
+      "2025": 821
+    }
   },
   {
     "id": "budgewoi-buff-point-halekulani",
@@ -1760,8 +2145,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9733,
+    "crimeCountByYear": {
+      "2016": 675,
+      "2017": 670,
+      "2018": 589,
+      "2019": 558,
+      "2020": 624,
+      "2021": 479,
+      "2022": 519,
+      "2023": 500,
+      "2024": 513,
+      "2025": 649
+    }
   },
   {
     "id": "chittaway-bay-tumbi-umbi",
@@ -1797,8 +2193,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7356,
+    "crimeCountByYear": {
+      "2016": 490,
+      "2017": 359,
+      "2018": 494,
+      "2019": 339,
+      "2020": 346,
+      "2021": 343,
+      "2022": 345,
+      "2023": 311,
+      "2024": 301,
+      "2025": 313
+    }
   },
   {
     "id": "gorokan-kanwal-charmhaven",
@@ -1834,8 +2241,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15319,
+    "crimeCountByYear": {
+      "2016": 1235,
+      "2017": 1155,
+      "2018": 1236,
+      "2019": 1288,
+      "2020": 1507,
+      "2021": 1325,
+      "2022": 1053,
+      "2023": 1218,
+      "2024": 1146,
+      "2025": 1220
+    }
   },
   {
     "id": "jilliby-yarramalong",
@@ -1872,8 +2290,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2023,
+    "crimeCountByYear": {
+      "2016": 153,
+      "2017": 99,
+      "2018": 88,
+      "2019": 92,
+      "2020": 106,
+      "2021": 141,
+      "2022": 124,
+      "2023": 117,
+      "2024": 94,
+      "2025": 123
+    }
   },
   {
     "id": "lake-munmorah-mannering-park",
@@ -1911,8 +2340,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7638,
+    "crimeCountByYear": {
+      "2016": 534,
+      "2017": 410,
+      "2018": 389,
+      "2019": 363,
+      "2020": 395,
+      "2021": 380,
+      "2022": 322,
+      "2023": 400,
+      "2024": 334,
+      "2025": 411
+    }
   },
   {
     "id": "ourimbah-fountaindale",
@@ -1948,8 +2388,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4745,
+    "crimeCountByYear": {
+      "2016": 486,
+      "2017": 501,
+      "2018": 404,
+      "2019": 374,
+      "2020": 382,
+      "2021": 389,
+      "2022": 405,
+      "2023": 444,
+      "2024": 385,
+      "2025": 461
+    }
   },
   {
     "id": "summerland-point-gwandalan",
@@ -1985,8 +2436,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6493,
+    "crimeCountByYear": {
+      "2016": 246,
+      "2017": 224,
+      "2018": 251,
+      "2019": 271,
+      "2020": 250,
+      "2021": 248,
+      "2022": 268,
+      "2023": 330,
+      "2024": 281,
+      "2025": 272
+    }
   },
   {
     "id": "the-entrance",
@@ -2022,8 +2484,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4244,
+    "crimeCountByYear": {
+      "2016": 851,
+      "2017": 916,
+      "2018": 972,
+      "2019": 1060,
+      "2020": 857,
+      "2021": 755,
+      "2022": 808,
+      "2023": 1125,
+      "2024": 1206,
+      "2025": 1026
+    }
   },
   {
     "id": "toukley-norah-head",
@@ -2059,8 +2532,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5706,
+    "crimeCountByYear": {
+      "2016": 950,
+      "2017": 747,
+      "2018": 776,
+      "2019": 737,
+      "2020": 769,
+      "2021": 817,
+      "2022": 764,
+      "2023": 919,
+      "2024": 1102,
+      "2025": 1003
+    }
   },
   {
     "id": "tuggerah-kangy-angy",
@@ -2096,8 +2580,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1256,
+    "crimeCountByYear": {
+      "2016": 1087,
+      "2017": 1076,
+      "2018": 759,
+      "2019": 741,
+      "2020": 658,
+      "2021": 784,
+      "2022": 744,
+      "2023": 1026,
+      "2024": 949,
+      "2025": 1027
+    }
   },
   {
     "id": "warnervale-wadalba",
@@ -2133,8 +2628,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4905,
+    "crimeCountByYear": {
+      "2016": 481,
+      "2017": 387,
+      "2018": 397,
+      "2019": 377,
+      "2020": 297,
+      "2021": 336,
+      "2022": 338,
+      "2023": 341,
+      "2024": 350,
+      "2025": 346
+    }
   },
   {
     "id": "wyong",
@@ -2170,8 +2676,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4530,
+    "crimeCountByYear": {
+      "2016": 2295,
+      "2017": 1979,
+      "2018": 1865,
+      "2019": 1642,
+      "2020": 1861,
+      "2021": 2022,
+      "2022": 1912,
+      "2023": 1781,
+      "2024": 2237,
+      "2025": 2617
+    }
   },
   {
     "id": "bathurst-east",
@@ -2207,8 +2724,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7001,
+    "crimeCountByYear": {
+      "2016": 1736,
+      "2017": 1882,
+      "2018": 1689,
+      "2019": 1749,
+      "2020": 1865,
+      "2021": 1832,
+      "2022": 1731,
+      "2023": 1863,
+      "2024": 1828,
+      "2025": 1910
+    }
   },
   {
     "id": "bathurst-surrounds",
@@ -2282,8 +2810,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3319,
+    "crimeCountByYear": {
+      "2016": 200,
+      "2017": 209,
+      "2018": 268,
+      "2019": 223,
+      "2020": 292,
+      "2021": 206,
+      "2022": 178,
+      "2023": 171,
+      "2024": 178,
+      "2025": 161
+    }
   },
   {
     "id": "bathurst-south",
@@ -2319,8 +2858,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7001,
+    "crimeCountByYear": {
+      "2016": 1736,
+      "2017": 1882,
+      "2018": 1689,
+      "2019": 1749,
+      "2020": 1865,
+      "2021": 1832,
+      "2022": 1731,
+      "2023": 1863,
+      "2024": 1828,
+      "2025": 1910
+    }
   },
   {
     "id": "bathurst-west",
@@ -2356,8 +2906,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7001,
+    "crimeCountByYear": {
+      "2016": 1736,
+      "2017": 1882,
+      "2018": 1689,
+      "2019": 1749,
+      "2020": 1865,
+      "2021": 1832,
+      "2022": 1731,
+      "2023": 1863,
+      "2024": 1828,
+      "2025": 1910
+    }
   },
   {
     "id": "condobolin",
@@ -2393,8 +2954,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3185,
+    "crimeCountByYear": {
+      "2016": 569,
+      "2017": 468,
+      "2018": 447,
+      "2019": 542,
+      "2020": 536,
+      "2021": 392,
+      "2022": 540,
+      "2023": 535,
+      "2024": 469,
+      "2025": 638
+    }
   },
   {
     "id": "cowra",
@@ -2430,8 +3002,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10145,
+    "crimeCountByYear": {
+      "2016": 1360,
+      "2017": 1082,
+      "2018": 1005,
+      "2019": 1074,
+      "2020": 1162,
+      "2021": 1418,
+      "2022": 1157,
+      "2023": 1272,
+      "2024": 1094,
+      "2025": 1131
+    }
   },
   {
     "id": "cowra-surrounds",
@@ -2505,18 +3088,18 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 158,
+    "population": 8157,
     "crimeCountByYear": {
-      "2016": 2,
-      "2017": 7,
-      "2018": 2,
-      "2019": 13,
-      "2020": 9,
-      "2021": 10,
-      "2022": 6,
-      "2023": 1,
-      "2024": 2,
-      "2025": 5
+      "2016": 1110,
+      "2017": 1112,
+      "2018": 1044,
+      "2019": 1335,
+      "2020": 1279,
+      "2021": 1392,
+      "2022": 1084,
+      "2023": 1212,
+      "2024": 913,
+      "2025": 1226
     }
   },
   {
@@ -2553,8 +3136,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2600,
+    "crimeCountByYear": {
+      "2016": 129,
+      "2017": 128,
+      "2018": 128,
+      "2019": 97,
+      "2020": 155,
+      "2021": 173,
+      "2022": 102,
+      "2023": 141,
+      "2024": 186,
+      "2025": 155
+    }
   },
   {
     "id": "parkes-nsw",
@@ -2592,8 +3186,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11324,
+    "crimeCountByYear": {
+      "2016": 1687,
+      "2017": 1402,
+      "2018": 1332,
+      "2019": 1174,
+      "2020": 1346,
+      "2021": 1606,
+      "2022": 1405,
+      "2023": 1540,
+      "2024": 1550,
+      "2025": 1685
+    }
   },
   {
     "id": "parkes-surrounds",
@@ -2667,8 +3272,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3037,
+    "crimeCountByYear": {
+      "2016": 242,
+      "2017": 153,
+      "2018": 199,
+      "2019": 233,
+      "2020": 283,
+      "2021": 279,
+      "2022": 257,
+      "2023": 348,
+      "2024": 266,
+      "2025": 217
+    }
   },
   {
     "id": "lithgow",
@@ -2704,8 +3320,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4956,
+    "crimeCountByYear": {
+      "2016": 930,
+      "2017": 938,
+      "2018": 807,
+      "2019": 928,
+      "2020": 791,
+      "2021": 903,
+      "2022": 894,
+      "2023": 978,
+      "2024": 898,
+      "2025": 867
+    }
   },
   {
     "id": "lithgow-surrounds",
@@ -2779,8 +3406,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11457,
+    "crimeCountByYear": {
+      "2016": 1290,
+      "2017": 1343,
+      "2018": 1387,
+      "2019": 1691,
+      "2020": 1241,
+      "2021": 1204,
+      "2022": 986,
+      "2023": 913,
+      "2024": 964,
+      "2025": 999
+    }
   },
   {
     "id": "mudgee-surrounds-east",
@@ -2892,8 +3530,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 0,
+    "crimeCountByYear": {
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 0,
+      "2022": 0,
+      "2023": 0,
+      "2024": 2,
+      "2025": 0
+    }
   },
   {
     "id": "blayney",
@@ -2929,8 +3578,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3448,
+    "crimeCountByYear": {
+      "2016": 294,
+      "2017": 277,
+      "2018": 289,
+      "2019": 357,
+      "2020": 296,
+      "2021": 307,
+      "2022": 236,
+      "2023": 295,
+      "2024": 236,
+      "2025": 252
+    }
   },
   {
     "id": "orange",
@@ -2968,8 +3628,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 41232,
+    "crimeCountByYear": {
+      "2016": 5145,
+      "2017": 4654,
+      "2018": 4942,
+      "2019": 5507,
+      "2020": 4727,
+      "2021": 4764,
+      "2022": 5323,
+      "2023": 4882,
+      "2024": 4783,
+      "2025": 4785
+    }
   },
   {
     "id": "orange-north",
@@ -3007,8 +3678,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 41232,
+    "crimeCountByYear": {
+      "2016": 5145,
+      "2017": 4654,
+      "2018": 4942,
+      "2019": 5507,
+      "2020": 4727,
+      "2021": 4764,
+      "2022": 5323,
+      "2023": 4882,
+      "2024": 4783,
+      "2025": 4785
+    }
   },
   {
     "id": "orange-surrounds",
@@ -3082,8 +3764,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10563,
+    "crimeCountByYear": {
+      "2016": 1364,
+      "2017": 1208,
+      "2018": 1453,
+      "2019": 1360,
+      "2020": 1167,
+      "2021": 1076,
+      "2022": 1578,
+      "2023": 1746,
+      "2024": 1838,
+      "2025": 1995
+    }
   },
   {
     "id": "grafton-surrounds",
@@ -3157,8 +3850,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10947,
+    "crimeCountByYear": {
+      "2016": 1153,
+      "2017": 1056,
+      "2018": 928,
+      "2019": 747,
+      "2020": 685,
+      "2021": 791,
+      "2022": 812,
+      "2023": 887,
+      "2024": 908,
+      "2025": 937
+    }
   },
   {
     "id": "bellingen",
@@ -3194,8 +3898,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3923,
+    "crimeCountByYear": {
+      "2016": 271,
+      "2017": 300,
+      "2018": 250,
+      "2019": 251,
+      "2020": 280,
+      "2021": 310,
+      "2022": 234,
+      "2023": 290,
+      "2024": 318,
+      "2025": 260
+    }
   },
   {
     "id": "coffs-harbour-north",
@@ -3231,8 +3946,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27089,
+    "crimeCountByYear": {
+      "2016": 4597,
+      "2017": 4632,
+      "2018": 4876,
+      "2019": 4629,
+      "2020": 4208,
+      "2021": 4808,
+      "2022": 5036,
+      "2023": 5737,
+      "2024": 5974,
+      "2025": 5243
+    }
   },
   {
     "id": "coffs-harbour-south",
@@ -3268,8 +3994,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27089,
+    "crimeCountByYear": {
+      "2016": 4597,
+      "2017": 4632,
+      "2018": 4876,
+      "2019": 4629,
+      "2020": 4208,
+      "2021": 4808,
+      "2022": 5036,
+      "2023": 5737,
+      "2024": 5974,
+      "2025": 5243
+    }
   },
   {
     "id": "coramba-nana-glen-bucca",
@@ -3305,8 +4042,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2563,
+    "crimeCountByYear": {
+      "2016": 91,
+      "2017": 88,
+      "2018": 112,
+      "2019": 125,
+      "2020": 95,
+      "2021": 102,
+      "2022": 91,
+      "2023": 126,
+      "2024": 149,
+      "2025": 113
+    }
   },
   {
     "id": "dorrigo",
@@ -3342,8 +4090,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1214,
+    "crimeCountByYear": {
+      "2016": 64,
+      "2017": 79,
+      "2018": 63,
+      "2019": 65,
+      "2020": 72,
+      "2021": 63,
+      "2022": 103,
+      "2023": 91,
+      "2024": 77,
+      "2025": 72
+    }
   },
   {
     "id": "korora-emerald-beach",
@@ -3379,8 +4138,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5417,
+    "crimeCountByYear": {
+      "2016": 162,
+      "2017": 196,
+      "2018": 227,
+      "2019": 172,
+      "2020": 288,
+      "2021": 254,
+      "2022": 193,
+      "2023": 202,
+      "2024": 272,
+      "2025": 195
+    }
   },
   {
     "id": "sawtell-boambee",
@@ -3416,8 +4186,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5558,
+    "crimeCountByYear": {
+      "2016": 357,
+      "2017": 438,
+      "2018": 447,
+      "2019": 370,
+      "2020": 389,
+      "2021": 335,
+      "2022": 353,
+      "2023": 297,
+      "2024": 313,
+      "2025": 323
+    }
   },
   {
     "id": "urunga",
@@ -3453,8 +4234,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3185,
+    "crimeCountByYear": {
+      "2016": 232,
+      "2017": 188,
+      "2018": 194,
+      "2019": 182,
+      "2020": 195,
+      "2021": 232,
+      "2022": 288,
+      "2023": 312,
+      "2024": 285,
+      "2025": 293
+    }
   },
   {
     "id": "woolgoolga-arrawarra",
@@ -3490,8 +4282,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6742,
+    "crimeCountByYear": {
+      "2016": 542,
+      "2017": 435,
+      "2018": 463,
+      "2019": 483,
+      "2020": 498,
+      "2021": 477,
+      "2022": 591,
+      "2023": 585,
+      "2024": 592,
+      "2025": 650
+    }
   },
   {
     "id": "bourke-brewarrina",
@@ -3527,8 +4330,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2630,
+    "crimeCountByYear": {
+      "2016": 1897,
+      "2017": 1603,
+      "2018": 1579,
+      "2019": 1830,
+      "2020": 2124,
+      "2021": 2124,
+      "2022": 2114,
+      "2023": 2092,
+      "2024": 1917,
+      "2025": 1472
+    }
   },
   {
     "id": "cobar",
@@ -3564,8 +4378,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3603,
+    "crimeCountByYear": {
+      "2016": 639,
+      "2017": 546,
+      "2018": 544,
+      "2019": 513,
+      "2020": 394,
+      "2021": 481,
+      "2022": 455,
+      "2023": 442,
+      "2024": 440,
+      "2025": 507
+    }
   },
   {
     "id": "coonamble",
@@ -3601,8 +4426,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2666,
+    "crimeCountByYear": {
+      "2016": 777,
+      "2017": 737,
+      "2018": 915,
+      "2019": 1232,
+      "2020": 1187,
+      "2021": 938,
+      "2022": 823,
+      "2023": 771,
+      "2024": 811,
+      "2025": 655
+    }
   },
   {
     "id": "nyngan-warren",
@@ -3638,8 +4474,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3225,
+    "crimeCountByYear": {
+      "2016": 600,
+      "2017": 516,
+      "2018": 591,
+      "2019": 607,
+      "2020": 584,
+      "2021": 611,
+      "2022": 693,
+      "2023": 701,
+      "2024": 661,
+      "2025": 651
+    }
   },
   {
     "id": "walgett-lightning-ridge",
@@ -3675,8 +4522,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3770,
+    "crimeCountByYear": {
+      "2016": 1205,
+      "2017": 1498,
+      "2018": 1438,
+      "2019": 1208,
+      "2020": 1330,
+      "2021": 1548,
+      "2022": 1382,
+      "2023": 1519,
+      "2024": 1499,
+      "2025": 1449
+    }
   },
   {
     "id": "broken-hill",
@@ -3712,8 +4570,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17706,
+    "crimeCountByYear": {
+      "2016": 2314,
+      "2017": 2558,
+      "2018": 2827,
+      "2019": 2752,
+      "2020": 3037,
+      "2021": 3053,
+      "2022": 3039,
+      "2023": 3616,
+      "2024": 3141,
+      "2025": 3126
+    }
   },
   {
     "id": "far-west",
@@ -3786,8 +4655,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3477,
+    "crimeCountByYear": {
+      "2016": 549,
+      "2017": 399,
+      "2018": 494,
+      "2019": 501,
+      "2020": 358,
+      "2021": 522,
+      "2022": 447,
+      "2023": 467,
+      "2024": 629,
+      "2025": 473
+    }
   },
   {
     "id": "dubbo-east",
@@ -3823,8 +4703,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 43516,
+    "crimeCountByYear": {
+      "2016": 6645,
+      "2017": 5884,
+      "2018": 7665,
+      "2019": 7976,
+      "2020": 7064,
+      "2021": 7864,
+      "2022": 7985,
+      "2023": 8644,
+      "2024": 8069,
+      "2025": 7342
+    }
   },
   {
     "id": "dubbo-south",
@@ -3860,8 +4751,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 43516,
+    "crimeCountByYear": {
+      "2016": 6645,
+      "2017": 5884,
+      "2018": 7665,
+      "2019": 7976,
+      "2020": 7064,
+      "2021": 7864,
+      "2022": 7985,
+      "2023": 8644,
+      "2024": 8069,
+      "2025": 7342
+    }
   },
   {
     "id": "dubbo-west",
@@ -3897,8 +4799,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 43516,
+    "crimeCountByYear": {
+      "2016": 6645,
+      "2017": 5884,
+      "2018": 7665,
+      "2019": 7976,
+      "2020": 7064,
+      "2021": 7864,
+      "2022": 7985,
+      "2023": 8644,
+      "2024": 8069,
+      "2025": 7342
+    }
   },
   {
     "id": "dubbo-surrounds",
@@ -3972,8 +4885,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2983,
+    "crimeCountByYear": {
+      "2016": 458,
+      "2017": 450,
+      "2018": 528,
+      "2019": 594,
+      "2020": 487,
+      "2021": 594,
+      "2022": 550,
+      "2023": 480,
+      "2024": 458,
+      "2025": 534
+    }
   },
   {
     "id": "narromine",
@@ -4009,8 +4933,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4608,
+    "crimeCountByYear": {
+      "2016": 846,
+      "2017": 719,
+      "2018": 894,
+      "2019": 1029,
+      "2020": 596,
+      "2021": 815,
+      "2022": 618,
+      "2023": 901,
+      "2024": 724,
+      "2025": 624
+    }
   },
   {
     "id": "wellington",
@@ -4046,8 +4981,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4096,
+    "crimeCountByYear": {
+      "2016": 1719,
+      "2017": 1196,
+      "2018": 1502,
+      "2019": 1523,
+      "2020": 1469,
+      "2021": 1306,
+      "2022": 872,
+      "2023": 927,
+      "2024": 1003,
+      "2025": 786
+    }
   },
   {
     "id": "branxton-greta-pokolbin",
@@ -4083,8 +5029,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6653,
+    "crimeCountByYear": {
+      "2016": 468,
+      "2017": 503,
+      "2018": 496,
+      "2019": 567,
+      "2020": 460,
+      "2021": 456,
+      "2022": 485,
+      "2023": 409,
+      "2024": 454,
+      "2025": 417
+    }
   },
   {
     "id": "cessnock",
@@ -4120,8 +5077,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16300,
+    "crimeCountByYear": {
+      "2016": 2551,
+      "2017": 2585,
+      "2018": 2506,
+      "2019": 2122,
+      "2020": 2104,
+      "2021": 2203,
+      "2022": 2060,
+      "2023": 2273,
+      "2024": 2288,
+      "2025": 2269
+    }
   },
   {
     "id": "cessnock-surrounds",
@@ -4195,8 +5163,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1983,
+    "crimeCountByYear": {
+      "2016": 148,
+      "2017": 115,
+      "2018": 119,
+      "2019": 103,
+      "2020": 138,
+      "2021": 120,
+      "2022": 96,
+      "2023": 99,
+      "2024": 91,
+      "2025": 105
+    }
   },
   {
     "id": "kurri-kurri-abermain",
@@ -4232,8 +5211,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8718,
+    "crimeCountByYear": {
+      "2016": 1011,
+      "2017": 851,
+      "2018": 777,
+      "2019": 832,
+      "2020": 709,
+      "2021": 736,
+      "2022": 767,
+      "2023": 797,
+      "2024": 817,
+      "2025": 894
+    }
   },
   {
     "id": "singleton",
@@ -4269,8 +5259,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5185,
+    "crimeCountByYear": {
+      "2016": 882,
+      "2017": 937,
+      "2018": 1053,
+      "2019": 1157,
+      "2020": 987,
+      "2021": 982,
+      "2022": 693,
+      "2023": 819,
+      "2024": 791,
+      "2025": 782
+    }
   },
   {
     "id": "singleton-surrounds",
@@ -4344,8 +5345,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1972,
+    "crimeCountByYear": {
+      "2016": 1754,
+      "2017": 2281,
+      "2018": 1833,
+      "2019": 3424,
+      "2020": 2384,
+      "2021": 2584,
+      "2022": 1954,
+      "2023": 1509,
+      "2024": 1444,
+      "2025": 1528
+    }
   },
   {
     "id": "maitland-north",
@@ -4381,8 +5393,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1972,
+    "crimeCountByYear": {
+      "2016": 1754,
+      "2017": 2281,
+      "2018": 1833,
+      "2019": 3424,
+      "2020": 2384,
+      "2021": 2584,
+      "2022": 1954,
+      "2023": 1509,
+      "2024": 1444,
+      "2025": 1528
+    }
   },
   {
     "id": "east-maitland-metford",
@@ -4418,8 +5441,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16567,
+    "crimeCountByYear": {
+      "2016": 2132,
+      "2017": 2506,
+      "2018": 2548,
+      "2019": 3142,
+      "2020": 2717,
+      "2021": 2038,
+      "2022": 2249,
+      "2023": 2298,
+      "2024": 2005,
+      "2025": 2298
+    }
   },
   {
     "id": "rutherford-north-aberglasslyn",
@@ -4455,8 +5489,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19643,
+    "crimeCountByYear": {
+      "2016": 1803,
+      "2017": 1829,
+      "2018": 1833,
+      "2019": 1635,
+      "2020": 1628,
+      "2021": 1429,
+      "2022": 1612,
+      "2023": 1664,
+      "2024": 1817,
+      "2025": 1603
+    }
   },
   {
     "id": "rutherford-south-telarah",
@@ -4492,8 +5537,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15409,
+    "crimeCountByYear": {
+      "2016": 1825,
+      "2017": 1943,
+      "2018": 1869,
+      "2019": 1727,
+      "2020": 1685,
+      "2021": 1454,
+      "2022": 1609,
+      "2023": 1579,
+      "2024": 1860,
+      "2025": 1643
+    }
   },
   {
     "id": "tenambit-east-maitland",
@@ -4529,8 +5585,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14948,
+    "crimeCountByYear": {
+      "2016": 1748,
+      "2017": 1852,
+      "2018": 2147,
+      "2019": 2513,
+      "2020": 2342,
+      "2021": 1788,
+      "2022": 1986,
+      "2023": 2043,
+      "2024": 1743,
+      "2025": 1957
+    }
   },
   {
     "id": "thornton-millers-forest",
@@ -4568,8 +5635,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11047,
+    "crimeCountByYear": {
+      "2016": 657,
+      "2017": 859,
+      "2018": 780,
+      "2019": 994,
+      "2020": 743,
+      "2021": 868,
+      "2022": 845,
+      "2023": 835,
+      "2024": 701,
+      "2025": 828
+    }
   },
   {
     "id": "anna-bay",
@@ -4605,8 +5683,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4221,
+    "crimeCountByYear": {
+      "2016": 248,
+      "2017": 241,
+      "2018": 260,
+      "2019": 272,
+      "2020": 225,
+      "2021": 179,
+      "2022": 224,
+      "2023": 209,
+      "2024": 207,
+      "2025": 174
+    }
   },
   {
     "id": "lemon-tree-passage-tanilba-bay",
@@ -4642,8 +5731,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5923,
+    "crimeCountByYear": {
+      "2016": 286,
+      "2017": 290,
+      "2018": 312,
+      "2019": 274,
+      "2020": 309,
+      "2021": 377,
+      "2022": 390,
+      "2023": 403,
+      "2024": 368,
+      "2025": 456
+    }
   },
   {
     "id": "nelson-bay-peninsula",
@@ -4716,8 +5816,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13453,
+    "crimeCountByYear": {
+      "2016": 2284,
+      "2017": 1936,
+      "2018": 1852,
+      "2019": 2008,
+      "2020": 1889,
+      "2021": 1983,
+      "2022": 1757,
+      "2023": 1838,
+      "2024": 2236,
+      "2025": 1937
+    }
   },
   {
     "id": "seaham-woodville",
@@ -4753,8 +5864,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1451,
+    "crimeCountByYear": {
+      "2016": 50,
+      "2017": 62,
+      "2018": 37,
+      "2019": 48,
+      "2020": 52,
+      "2021": 33,
+      "2022": 41,
+      "2023": 30,
+      "2024": 65,
+      "2025": 67
+    }
   },
   {
     "id": "tea-gardens-hawks-nest",
@@ -4790,8 +5912,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4701,
+    "crimeCountByYear": {
+      "2016": 271,
+      "2017": 339,
+      "2018": 337,
+      "2019": 370,
+      "2020": 272,
+      "2021": 319,
+      "2022": 285,
+      "2023": 227,
+      "2024": 229,
+      "2025": 210
+    }
   },
   {
     "id": "williamtown-medowie-karuah",
@@ -4827,8 +5960,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13259,
+    "crimeCountByYear": {
+      "2016": 648,
+      "2017": 512,
+      "2018": 503,
+      "2019": 605,
+      "2020": 538,
+      "2021": 472,
+      "2022": 536,
+      "2023": 665,
+      "2024": 599,
+      "2025": 513
+    }
   },
   {
     "id": "muswellbrook",
@@ -4864,8 +6008,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12272,
+    "crimeCountByYear": {
+      "2016": 1835,
+      "2017": 1757,
+      "2018": 1865,
+      "2019": 1893,
+      "2020": 1756,
+      "2021": 1992,
+      "2022": 1859,
+      "2023": 2012,
+      "2024": 1738,
+      "2025": 1938
+    }
   },
   {
     "id": "muswellbrook-surrounds",
@@ -4939,8 +6094,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5824,
+    "crimeCountByYear": {
+      "2016": 442,
+      "2017": 341,
+      "2018": 465,
+      "2019": 446,
+      "2020": 420,
+      "2021": 440,
+      "2022": 409,
+      "2023": 300,
+      "2024": 394,
+      "2025": 478
+    }
   },
   {
     "id": "scone-surrounds",
@@ -5014,8 +6180,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12649,
+    "crimeCountByYear": {
+      "2016": 1286,
+      "2017": 1481,
+      "2018": 1275,
+      "2019": 1090,
+      "2020": 1042,
+      "2021": 998,
+      "2022": 869,
+      "2023": 1009,
+      "2024": 1004,
+      "2025": 1034
+    }
   },
   {
     "id": "horsley-kembla-grange",
@@ -5054,8 +6231,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10889,
+    "crimeCountByYear": {
+      "2016": 244,
+      "2017": 262,
+      "2018": 212,
+      "2019": 255,
+      "2020": 234,
+      "2021": 304,
+      "2022": 237,
+      "2023": 319,
+      "2024": 269,
+      "2025": 339
+    }
   },
   {
     "id": "port-kembla-industrial",
@@ -5128,8 +6316,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6559,
+    "crimeCountByYear": {
+      "2016": 1057,
+      "2017": 953,
+      "2018": 944,
+      "2019": 787,
+      "2020": 635,
+      "2021": 748,
+      "2022": 642,
+      "2023": 798,
+      "2024": 859,
+      "2025": 767
+    }
   },
   {
     "id": "berkeley-lake-heights-cringila",
@@ -5165,8 +6364,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14059,
+    "crimeCountByYear": {
+      "2016": 1168,
+      "2017": 1204,
+      "2018": 1229,
+      "2019": 1081,
+      "2020": 1278,
+      "2021": 1190,
+      "2022": 944,
+      "2023": 961,
+      "2024": 1091,
+      "2025": 1133
+    }
   },
   {
     "id": "port-kembla-warrawong",
@@ -5202,8 +6412,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9747,
+    "crimeCountByYear": {
+      "2016": 2400,
+      "2017": 2209,
+      "2018": 2086,
+      "2019": 2368,
+      "2020": 2043,
+      "2021": 1830,
+      "2022": 1684,
+      "2023": 1914,
+      "2024": 2013,
+      "2025": 2047
+    }
   },
   {
     "id": "windang-primbee",
@@ -5239,8 +6460,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4233,
+    "crimeCountByYear": {
+      "2016": 301,
+      "2017": 386,
+      "2018": 279,
+      "2019": 273,
+      "2020": 302,
+      "2021": 318,
+      "2022": 253,
+      "2023": 280,
+      "2024": 237,
+      "2025": 285
+    }
   },
   {
     "id": "illawarra-catchment-reserve",
@@ -5315,8 +6547,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13826,
+    "crimeCountByYear": {
+      "2016": 519,
+      "2017": 414,
+      "2018": 365,
+      "2019": 504,
+      "2020": 352,
+      "2021": 354,
+      "2022": 424,
+      "2023": 450,
+      "2024": 504,
+      "2025": 451
+    }
   },
   {
     "id": "albion-park-rail",
@@ -5354,8 +6597,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6920,
+    "crimeCountByYear": {
+      "2016": 664,
+      "2017": 654,
+      "2018": 578,
+      "2019": 543,
+      "2020": 488,
+      "2021": 527,
+      "2022": 508,
+      "2023": 490,
+      "2024": 547,
+      "2025": 481
+    }
   },
   {
     "id": "kiama",
@@ -5391,8 +6645,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7904,
+    "crimeCountByYear": {
+      "2016": 640,
+      "2017": 644,
+      "2018": 477,
+      "2019": 430,
+      "2020": 402,
+      "2021": 523,
+      "2022": 402,
+      "2023": 406,
+      "2024": 506,
+      "2025": 430
+    }
   },
   {
     "id": "kiama-downs-minnamurra",
@@ -5429,8 +6694,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5891,
+    "crimeCountByYear": {
+      "2016": 141,
+      "2017": 176,
+      "2018": 121,
+      "2019": 129,
+      "2020": 169,
+      "2021": 100,
+      "2022": 114,
+      "2023": 109,
+      "2024": 111,
+      "2025": 104
+    }
   },
   {
     "id": "kiama-hinterland-gerringong",
@@ -5505,8 +6781,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10638,
+    "crimeCountByYear": {
+      "2016": 610,
+      "2017": 455,
+      "2018": 439,
+      "2019": 427,
+      "2020": 455,
+      "2021": 534,
+      "2022": 407,
+      "2023": 424,
+      "2024": 547,
+      "2025": 478
+    }
   },
   {
     "id": "shellharbour-oak-flats",
@@ -5542,8 +6829,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10360,
+    "crimeCountByYear": {
+      "2016": 1084,
+      "2017": 883,
+      "2018": 733,
+      "2019": 689,
+      "2020": 747,
+      "2021": 700,
+      "2022": 639,
+      "2023": 655,
+      "2024": 723,
+      "2025": 700
+    }
   },
   {
     "id": "warilla",
@@ -5579,8 +6877,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6226,
+    "crimeCountByYear": {
+      "2016": 737,
+      "2017": 777,
+      "2018": 593,
+      "2019": 783,
+      "2020": 656,
+      "2021": 603,
+      "2022": 580,
+      "2023": 576,
+      "2024": 559,
+      "2025": 646
+    }
   },
   {
     "id": "balgownie-fairy-meadow",
@@ -5616,8 +6925,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13234,
+    "crimeCountByYear": {
+      "2016": 1032,
+      "2017": 1034,
+      "2018": 1025,
+      "2019": 975,
+      "2020": 871,
+      "2021": 956,
+      "2022": 766,
+      "2023": 977,
+      "2024": 847,
+      "2025": 885
+    }
   },
   {
     "id": "corrimal-tarrawanna-bellambi",
@@ -5653,8 +6973,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13195,
+    "crimeCountByYear": {
+      "2016": 1583,
+      "2017": 1686,
+      "2018": 1603,
+      "2019": 1636,
+      "2020": 1263,
+      "2021": 1389,
+      "2022": 1234,
+      "2023": 1332,
+      "2024": 1128,
+      "2025": 1233
+    }
   },
   {
     "id": "figtree-keiraville",
@@ -5690,8 +7021,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16336,
+    "crimeCountByYear": {
+      "2016": 672,
+      "2017": 595,
+      "2018": 655,
+      "2019": 640,
+      "2020": 600,
+      "2021": 540,
+      "2022": 610,
+      "2023": 630,
+      "2024": 556,
+      "2025": 555
+    }
   },
   {
     "id": "helensburgh",
@@ -5728,8 +7070,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6576,
+    "crimeCountByYear": {
+      "2016": 196,
+      "2017": 217,
+      "2018": 188,
+      "2019": 176,
+      "2020": 183,
+      "2021": 243,
+      "2022": 161,
+      "2023": 222,
+      "2024": 210,
+      "2025": 209
+    }
   },
   {
     "id": "thirroul-austinmer-coalcliff",
@@ -5766,8 +7119,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9285,
+    "crimeCountByYear": {
+      "2016": 619,
+      "2017": 696,
+      "2018": 725,
+      "2019": 707,
+      "2020": 580,
+      "2021": 573,
+      "2022": 468,
+      "2023": 479,
+      "2024": 386,
+      "2025": 515
+    }
   },
   {
     "id": "woonona-bulli-russell-vale",
@@ -5803,8 +7167,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20765,
+    "crimeCountByYear": {
+      "2016": 1323,
+      "2017": 1651,
+      "2018": 1669,
+      "2019": 1491,
+      "2020": 1280,
+      "2021": 1287,
+      "2022": 1134,
+      "2023": 1293,
+      "2024": 1030,
+      "2025": 1112
+    }
   },
   {
     "id": "wollongong-east",
@@ -5847,8 +7222,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20446,
+    "crimeCountByYear": {
+      "2016": 6563,
+      "2017": 7610,
+      "2018": 6434,
+      "2019": 6987,
+      "2020": 5858,
+      "2021": 6074,
+      "2022": 6075,
+      "2023": 6026,
+      "2024": 5905,
+      "2025": 5460
+    }
   },
   {
     "id": "wollongong-west",
@@ -5891,8 +7277,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20446,
+    "crimeCountByYear": {
+      "2016": 6563,
+      "2017": 7610,
+      "2018": 6434,
+      "2019": 6987,
+      "2020": 5858,
+      "2021": 6074,
+      "2022": 6075,
+      "2023": 6026,
+      "2024": 5905,
+      "2025": 5460
+    }
   },
   {
     "id": "bulahdelah-stroud",
@@ -5928,8 +7325,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2526,
+    "crimeCountByYear": {
+      "2016": 193,
+      "2017": 218,
+      "2018": 165,
+      "2019": 197,
+      "2020": 226,
+      "2021": 186,
+      "2022": 197,
+      "2023": 206,
+      "2024": 202,
+      "2025": 223
+    }
   },
   {
     "id": "forster",
@@ -5965,8 +7373,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14187,
+    "crimeCountByYear": {
+      "2016": 1565,
+      "2017": 1561,
+      "2018": 1578,
+      "2019": 1364,
+      "2020": 1445,
+      "2021": 1638,
+      "2022": 1717,
+      "2023": 1790,
+      "2024": 1526,
+      "2025": 1515
+    }
   },
   {
     "id": "forster-tuncurry-surrounds",
@@ -6040,8 +7459,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6376,
+    "crimeCountByYear": {
+      "2016": 464,
+      "2017": 573,
+      "2018": 614,
+      "2019": 544,
+      "2020": 599,
+      "2021": 638,
+      "2022": 568,
+      "2023": 539,
+      "2024": 615,
+      "2025": 463
+    }
   },
   {
     "id": "kempsey",
@@ -6077,8 +7507,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 483,
+    "crimeCountByYear": {
+      "2016": 498,
+      "2017": 538,
+      "2018": 622,
+      "2019": 656,
+      "2020": 438,
+      "2021": 429,
+      "2022": 534,
+      "2023": 576,
+      "2024": 550,
+      "2025": 602
+    }
   },
   {
     "id": "kempsey-surrounds",
@@ -6152,8 +7593,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3768,
+    "crimeCountByYear": {
+      "2016": 513,
+      "2017": 598,
+      "2018": 689,
+      "2019": 574,
+      "2020": 452,
+      "2021": 489,
+      "2022": 504,
+      "2023": 460,
+      "2024": 395,
+      "2025": 463
+    }
   },
   {
     "id": "nambucca-heads",
@@ -6189,8 +7641,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6675,
+    "crimeCountByYear": {
+      "2016": 866,
+      "2017": 841,
+      "2018": 859,
+      "2019": 779,
+      "2020": 847,
+      "2021": 857,
+      "2022": 787,
+      "2023": 655,
+      "2024": 811,
+      "2025": 736
+    }
   },
   {
     "id": "nambucca-heads-surrounds",
@@ -6264,8 +7727,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5058,
+    "crimeCountByYear": {
+      "2016": 386,
+      "2017": 314,
+      "2018": 323,
+      "2019": 328,
+      "2020": 304,
+      "2021": 339,
+      "2022": 300,
+      "2023": 433,
+      "2024": 428,
+      "2025": 399
+    }
   },
   {
     "id": "lord-howe-island",
@@ -6301,8 +7775,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 445,
+    "crimeCountByYear": {
+      "2016": 20,
+      "2017": 19,
+      "2018": 23,
+      "2019": 45,
+      "2020": 13,
+      "2021": 41,
+      "2022": 20,
+      "2023": 33,
+      "2024": 9,
+      "2025": 5
+    }
   },
   {
     "id": "laurieton-bonny-hills",
@@ -6338,8 +7823,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5057,
+    "crimeCountByYear": {
+      "2016": 176,
+      "2017": 205,
+      "2018": 272,
+      "2019": 225,
+      "2020": 206,
+      "2021": 229,
+      "2022": 151,
+      "2023": 183,
+      "2024": 187,
+      "2025": 187
+    }
   },
   {
     "id": "port-macquarie-west",
@@ -6375,8 +7871,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 47693,
+    "crimeCountByYear": {
+      "2016": 3597,
+      "2017": 3490,
+      "2018": 3520,
+      "2019": 3648,
+      "2020": 3331,
+      "2021": 3834,
+      "2022": 3858,
+      "2023": 4142,
+      "2024": 4372,
+      "2025": 4481
+    }
   },
   {
     "id": "port-macquarie-surrounds",
@@ -6450,8 +7957,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6589,
+    "crimeCountByYear": {
+      "2016": 583,
+      "2017": 680,
+      "2018": 731,
+      "2019": 773,
+      "2020": 693,
+      "2021": 651,
+      "2022": 575,
+      "2023": 664,
+      "2024": 688,
+      "2025": 593
+    }
   },
   {
     "id": "port-macquarie-east",
@@ -6487,8 +8005,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 47693,
+    "crimeCountByYear": {
+      "2016": 3597,
+      "2017": 3490,
+      "2018": 3520,
+      "2019": 3648,
+      "2020": 3331,
+      "2021": 3834,
+      "2022": 3858,
+      "2023": 4142,
+      "2024": 4372,
+      "2025": 4481
+    }
   },
   {
     "id": "port-macquarie-south",
@@ -6524,8 +8053,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 47693,
+    "crimeCountByYear": {
+      "2016": 3597,
+      "2017": 3490,
+      "2018": 3520,
+      "2019": 3648,
+      "2020": 3331,
+      "2021": 3834,
+      "2022": 3858,
+      "2023": 4142,
+      "2024": 4372,
+      "2025": 4481
+    }
   },
   {
     "id": "gloucester",
@@ -6561,8 +8101,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3133,
+    "crimeCountByYear": {
+      "2016": 242,
+      "2017": 163,
+      "2018": 191,
+      "2019": 211,
+      "2020": 185,
+      "2021": 176,
+      "2022": 188,
+      "2023": 160,
+      "2024": 143,
+      "2025": 135
+    }
   },
   {
     "id": "old-bar-manning-point-red-head",
@@ -6598,8 +8149,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6153,
+    "crimeCountByYear": {
+      "2016": 215,
+      "2017": 202,
+      "2018": 273,
+      "2019": 212,
+      "2020": 236,
+      "2021": 187,
+      "2022": 222,
+      "2023": 259,
+      "2024": 254,
+      "2025": 250
+    }
   },
   {
     "id": "taree",
@@ -6635,8 +8197,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16715,
+    "crimeCountByYear": {
+      "2016": 2893,
+      "2017": 2747,
+      "2018": 2963,
+      "2019": 2556,
+      "2020": 2826,
+      "2021": 3371,
+      "2022": 3054,
+      "2023": 3260,
+      "2024": 3504,
+      "2025": 3048
+    }
   },
   {
     "id": "taree-surrounds",
@@ -6710,8 +8283,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5395,
+    "crimeCountByYear": {
+      "2016": 302,
+      "2017": 314,
+      "2018": 448,
+      "2019": 367,
+      "2020": 378,
+      "2021": 338,
+      "2022": 418,
+      "2023": 415,
+      "2024": 367,
+      "2025": 299
+    }
   },
   {
     "id": "albury-east",
@@ -6747,8 +8331,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4955,
+    "crimeCountByYear": {
+      "2016": 2156,
+      "2017": 1942,
+      "2018": 2270,
+      "2019": 2103,
+      "2020": 2347,
+      "2021": 1851,
+      "2022": 2192,
+      "2023": 2050,
+      "2024": 2521,
+      "2025": 2756
+    }
   },
   {
     "id": "albury-north",
@@ -6784,8 +8379,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4955,
+    "crimeCountByYear": {
+      "2016": 2156,
+      "2017": 1942,
+      "2018": 2270,
+      "2019": 2103,
+      "2020": 2347,
+      "2021": 1851,
+      "2022": 2192,
+      "2023": 2050,
+      "2024": 2521,
+      "2025": 2756
+    }
   },
   {
     "id": "albury-south",
@@ -6821,8 +8427,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4955,
+    "crimeCountByYear": {
+      "2016": 2156,
+      "2017": 1942,
+      "2018": 2270,
+      "2019": 2103,
+      "2020": 2347,
+      "2021": 1851,
+      "2022": 2192,
+      "2023": 2050,
+      "2024": 2521,
+      "2025": 2756
+    }
   },
   {
     "id": "albury-surrounds",
@@ -6896,8 +8513,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13073,
+    "crimeCountByYear": {
+      "2016": 1539,
+      "2017": 1691,
+      "2018": 1493,
+      "2019": 1605,
+      "2020": 1585,
+      "2021": 1460,
+      "2022": 1602,
+      "2023": 1377,
+      "2024": 1523,
+      "2025": 1379
+    }
   },
   {
     "id": "hay",
@@ -6933,8 +8561,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2300,
+    "crimeCountByYear": {
+      "2016": 415,
+      "2017": 399,
+      "2018": 403,
+      "2019": 317,
+      "2020": 322,
+      "2021": 270,
+      "2022": 288,
+      "2023": 211,
+      "2024": 283,
+      "2025": 212
+    }
   },
   {
     "id": "wentworth-buronga",
@@ -6970,8 +8609,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2829,
+    "crimeCountByYear": {
+      "2016": 331,
+      "2017": 431,
+      "2018": 274,
+      "2019": 370,
+      "2020": 611,
+      "2021": 269,
+      "2022": 275,
+      "2023": 274,
+      "2024": 325,
+      "2025": 342
+    }
   },
   {
     "id": "wentworth-balranald-region",
@@ -7043,8 +8693,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5595,
+    "crimeCountByYear": {
+      "2016": 567,
+      "2017": 377,
+      "2018": 388,
+      "2019": 435,
+      "2020": 467,
+      "2021": 395,
+      "2022": 340,
+      "2023": 291,
+      "2024": 382,
+      "2025": 354
+    }
   },
   {
     "id": "corowa-surrounds",
@@ -7118,8 +8779,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7432,
+    "crimeCountByYear": {
+      "2016": 852,
+      "2017": 933,
+      "2018": 1000,
+      "2019": 880,
+      "2020": 894,
+      "2021": 990,
+      "2022": 938,
+      "2023": 1058,
+      "2024": 1229,
+      "2025": 1223
+    }
   },
   {
     "id": "deniliquin-surrounds",
@@ -7193,8 +8865,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7213,
+    "crimeCountByYear": {
+      "2016": 526,
+      "2017": 366,
+      "2018": 451,
+      "2019": 440,
+      "2020": 667,
+      "2021": 403,
+      "2022": 339,
+      "2023": 507,
+      "2024": 575,
+      "2025": 448
+    }
   },
   {
     "id": "tocumwal-finley-jerilderie",
@@ -7230,8 +8913,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6239,
+    "crimeCountByYear": {
+      "2016": 390,
+      "2017": 398,
+      "2018": 449,
+      "2019": 388,
+      "2020": 519,
+      "2021": 344,
+      "2022": 618,
+      "2023": 557,
+      "2024": 567,
+      "2025": 426
+    }
   },
   {
     "id": "armidale",
@@ -7267,8 +8961,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23967,
+    "crimeCountByYear": {
+      "2016": 3616,
+      "2017": 2858,
+      "2018": 3042,
+      "2019": 2996,
+      "2020": 2801,
+      "2021": 2839,
+      "2022": 2670,
+      "2023": 3407,
+      "2024": 3421,
+      "2025": 3271
+    }
   },
   {
     "id": "armidale-surrounds-north",
@@ -7380,8 +9085,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2475,
+    "crimeCountByYear": {
+      "2016": 134,
+      "2017": 149,
+      "2018": 129,
+      "2019": 99,
+      "2020": 161,
+      "2021": 184,
+      "2022": 161,
+      "2023": 164,
+      "2024": 182,
+      "2025": 111
+    }
   },
   {
     "id": "glen-innes",
@@ -7417,8 +9133,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6219,
+    "crimeCountByYear": {
+      "2016": 1104,
+      "2017": 1000,
+      "2018": 695,
+      "2019": 770,
+      "2020": 739,
+      "2021": 1104,
+      "2022": 1061,
+      "2023": 906,
+      "2024": 970,
+      "2025": 732
+    }
   },
   {
     "id": "inverell",
@@ -7454,8 +9181,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12057,
+    "crimeCountByYear": {
+      "2016": 1497,
+      "2017": 1402,
+      "2018": 1782,
+      "2019": 1776,
+      "2020": 1503,
+      "2021": 1999,
+      "2022": 1967,
+      "2023": 1789,
+      "2024": 1994,
+      "2025": 1698
+    }
   },
   {
     "id": "inverell-surrounds-east",
@@ -7567,8 +9305,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4067,
+    "crimeCountByYear": {
+      "2016": 487,
+      "2017": 485,
+      "2018": 430,
+      "2019": 446,
+      "2020": 405,
+      "2021": 441,
+      "2022": 371,
+      "2023": 426,
+      "2024": 609,
+      "2025": 396
+    }
   },
   {
     "id": "moree",
@@ -7604,8 +9353,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8962,
+    "crimeCountByYear": {
+      "2016": 3007,
+      "2017": 3753,
+      "2018": 2866,
+      "2019": 2885,
+      "2020": 2478,
+      "2021": 3224,
+      "2022": 3150,
+      "2023": 3186,
+      "2024": 3430,
+      "2025": 3551
+    }
   },
   {
     "id": "moree-surrounds",
@@ -7679,8 +9439,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7327,
+    "crimeCountByYear": {
+      "2016": 989,
+      "2017": 733,
+      "2018": 793,
+      "2019": 816,
+      "2020": 722,
+      "2021": 705,
+      "2022": 822,
+      "2023": 949,
+      "2024": 861,
+      "2025": 1009
+    }
   },
   {
     "id": "narrabri-surrounds",
@@ -7754,8 +9525,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10359,
+    "crimeCountByYear": {
+      "2016": 1051,
+      "2017": 972,
+      "2018": 1111,
+      "2019": 1184,
+      "2020": 1125,
+      "2021": 1433,
+      "2022": 1407,
+      "2023": 1500,
+      "2024": 1629,
+      "2025": 1571
+    }
   },
   {
     "id": "gunnedah-surrounds",
@@ -7829,8 +9611,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3355,
+    "crimeCountByYear": {
+      "2016": 452,
+      "2017": 386,
+      "2018": 340,
+      "2019": 384,
+      "2020": 386,
+      "2021": 309,
+      "2022": 324,
+      "2023": 246,
+      "2024": 229,
+      "2025": 266
+    }
   },
   {
     "id": "tamworth-east",
@@ -7866,8 +9659,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 189,
+    "crimeCountByYear": {
+      "2016": 1220,
+      "2017": 1370,
+      "2018": 1318,
+      "2019": 1360,
+      "2020": 1200,
+      "2021": 1200,
+      "2022": 1391,
+      "2023": 1392,
+      "2024": 2096,
+      "2025": 1870
+    }
   },
   {
     "id": "tamworth-north",
@@ -7903,8 +9707,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 189,
+    "crimeCountByYear": {
+      "2016": 1220,
+      "2017": 1370,
+      "2018": 1318,
+      "2019": 1360,
+      "2020": 1200,
+      "2021": 1200,
+      "2022": 1391,
+      "2023": 1392,
+      "2024": 2096,
+      "2025": 1870
+    }
   },
   {
     "id": "tamworth-west",
@@ -7940,8 +9755,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 189,
+    "crimeCountByYear": {
+      "2016": 1220,
+      "2017": 1370,
+      "2018": 1318,
+      "2019": 1360,
+      "2020": 1200,
+      "2021": 1200,
+      "2022": 1391,
+      "2023": 1392,
+      "2024": 2096,
+      "2025": 1870
+    }
   },
   {
     "id": "tamworth-surrounds",
@@ -8022,8 +9848,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7289,
+    "crimeCountByYear": {
+      "2016": 1021,
+      "2017": 1018,
+      "2018": 1078,
+      "2019": 1042,
+      "2020": 922,
+      "2021": 959,
+      "2022": 861,
+      "2023": 955,
+      "2024": 1252,
+      "2025": 1443
+    }
   },
   {
     "id": "belmont-south-blacksmiths",
@@ -8066,8 +9903,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2934,
+    "crimeCountByYear": {
+      "2016": 236,
+      "2017": 220,
+      "2018": 188,
+      "2019": 227,
+      "2020": 191,
+      "2021": 257,
+      "2022": 189,
+      "2023": 219,
+      "2024": 243,
+      "2025": 279
+    }
   },
   {
     "id": "charlestown-dudley",
@@ -8110,8 +9958,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16106,
+    "crimeCountByYear": {
+      "2016": 1537,
+      "2017": 1695,
+      "2018": 1772,
+      "2019": 1309,
+      "2020": 1328,
+      "2021": 1323,
+      "2022": 1212,
+      "2023": 1287,
+      "2024": 1237,
+      "2025": 1233
+    }
   },
   {
     "id": "glendale-cardiff-hillsborough",
@@ -8200,8 +10059,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7133,
+    "crimeCountByYear": {
+      "2016": 1099,
+      "2017": 1030,
+      "2018": 1050,
+      "2019": 954,
+      "2020": 918,
+      "2021": 998,
+      "2022": 979,
+      "2023": 935,
+      "2024": 1036,
+      "2025": 1063
+    }
   },
   {
     "id": "redhead",
@@ -8244,8 +10114,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3785,
+    "crimeCountByYear": {
+      "2016": 154,
+      "2017": 169,
+      "2018": 183,
+      "2019": 133,
+      "2020": 112,
+      "2021": 194,
+      "2022": 140,
+      "2023": 163,
+      "2024": 148,
+      "2025": 158
+    }
   },
   {
     "id": "swansea-caves-beach",
@@ -8290,8 +10171,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9060,
+    "crimeCountByYear": {
+      "2016": 576,
+      "2017": 542,
+      "2018": 457,
+      "2019": 605,
+      "2020": 532,
+      "2021": 653,
+      "2022": 641,
+      "2023": 662,
+      "2024": 628,
+      "2025": 671
+    }
   },
   {
     "id": "valentine-eleebana",
@@ -8335,8 +10227,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12233,
+    "crimeCountByYear": {
+      "2016": 251,
+      "2017": 195,
+      "2018": 262,
+      "2019": 256,
+      "2020": 181,
+      "2021": 218,
+      "2022": 183,
+      "2023": 216,
+      "2024": 218,
+      "2025": 271
+    }
   },
   {
     "id": "warners-bay-boolaroo",
@@ -8381,8 +10284,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9873,
+    "crimeCountByYear": {
+      "2016": 1049,
+      "2017": 817,
+      "2018": 687,
+      "2019": 707,
+      "2020": 624,
+      "2021": 728,
+      "2022": 612,
+      "2023": 693,
+      "2024": 709,
+      "2025": 717
+    }
   },
   {
     "id": "bolton-point-teralba",
@@ -8425,8 +10339,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4778,
+    "crimeCountByYear": {
+      "2016": 580,
+      "2017": 578,
+      "2018": 584,
+      "2019": 507,
+      "2020": 469,
+      "2021": 462,
+      "2022": 440,
+      "2023": 470,
+      "2024": 519,
+      "2025": 515
+    }
   },
   {
     "id": "bonnells-bay-silverwater",
@@ -8519,8 +10444,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16378,
+    "crimeCountByYear": {
+      "2016": 831,
+      "2017": 864,
+      "2018": 904,
+      "2019": 818,
+      "2020": 871,
+      "2021": 933,
+      "2022": 822,
+      "2023": 840,
+      "2024": 915,
+      "2025": 789
+    }
   },
   {
     "id": "morisset-cooranbong",
@@ -8563,8 +10499,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11155,
+    "crimeCountByYear": {
+      "2016": 1476,
+      "2017": 1325,
+      "2018": 1315,
+      "2019": 1084,
+      "2020": 961,
+      "2021": 1194,
+      "2022": 890,
+      "2023": 944,
+      "2024": 1201,
+      "2025": 1069
+    }
   },
   {
     "id": "toronto-awaba",
@@ -8607,8 +10554,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6403,
+    "crimeCountByYear": {
+      "2016": 813,
+      "2017": 982,
+      "2018": 1059,
+      "2019": 1024,
+      "2020": 994,
+      "2021": 1122,
+      "2022": 976,
+      "2023": 925,
+      "2024": 1004,
+      "2025": 1075
+    }
   },
   {
     "id": "wangi-wangi-rathmines",
@@ -8651,8 +10609,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4996,
+    "crimeCountByYear": {
+      "2016": 256,
+      "2017": 222,
+      "2018": 232,
+      "2019": 297,
+      "2020": 221,
+      "2021": 187,
+      "2022": 156,
+      "2023": 192,
+      "2024": 258,
+      "2025": 164
+    }
   },
   {
     "id": "west-wallsend-barnsley-killingworth",
@@ -8695,8 +10664,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5406,
+    "crimeCountByYear": {
+      "2016": 295,
+      "2017": 324,
+      "2018": 330,
+      "2019": 293,
+      "2020": 223,
+      "2021": 237,
+      "2022": 225,
+      "2023": 242,
+      "2024": 253,
+      "2025": 249
+    }
   },
   {
     "id": "adamstown-kotara",
@@ -8739,8 +10719,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10315,
+    "crimeCountByYear": {
+      "2016": 1172,
+      "2017": 1154,
+      "2018": 1039,
+      "2019": 1391,
+      "2020": 1224,
+      "2021": 1225,
+      "2022": 1498,
+      "2023": 1553,
+      "2024": 1701,
+      "2025": 1481
+    }
   },
   {
     "id": "beresfield-hexham",
@@ -8783,8 +10774,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3424,
+    "crimeCountByYear": {
+      "2016": 1157,
+      "2017": 1529,
+      "2018": 1309,
+      "2019": 1340,
+      "2020": 907,
+      "2021": 863,
+      "2022": 756,
+      "2023": 677,
+      "2024": 672,
+      "2025": 689
+    }
   },
   {
     "id": "hamilton-broadmeadow",
@@ -8827,8 +10829,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6302,
+    "crimeCountByYear": {
+      "2016": 4293,
+      "2017": 3341,
+      "2018": 2944,
+      "2019": 2616,
+      "2020": 1871,
+      "2021": 2613,
+      "2022": 1589,
+      "2023": 2000,
+      "2024": 1921,
+      "2025": 1838
+    }
   },
   {
     "id": "lambton-new-lambton",
@@ -8871,8 +10884,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15865,
+    "crimeCountByYear": {
+      "2016": 1097,
+      "2017": 1058,
+      "2018": 1048,
+      "2019": 1017,
+      "2020": 858,
+      "2021": 895,
+      "2022": 915,
+      "2023": 1001,
+      "2024": 1044,
+      "2025": 1004
+    }
   },
   {
     "id": "maryland-fletcher-minmi",
@@ -9003,8 +11027,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12782,
+    "crimeCountByYear": {
+      "2016": 829,
+      "2017": 911,
+      "2018": 970,
+      "2019": 1357,
+      "2020": 1051,
+      "2021": 1151,
+      "2022": 1170,
+      "2023": 1296,
+      "2024": 1157,
+      "2025": 1166
+    }
   },
   {
     "id": "newcastle-cooks-hill",
@@ -9047,8 +11082,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7626,
+    "crimeCountByYear": {
+      "2016": 1963,
+      "2017": 1809,
+      "2018": 1587,
+      "2019": 1859,
+      "2020": 1840,
+      "2021": 1775,
+      "2022": 1856,
+      "2023": 2105,
+      "2024": 2550,
+      "2025": 2424
+    }
   },
   {
     "id": "newcastle-port-kooragang",
@@ -9135,8 +11181,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7747,
+    "crimeCountByYear": {
+      "2016": 777,
+      "2017": 887,
+      "2018": 894,
+      "2019": 852,
+      "2020": 917,
+      "2021": 927,
+      "2022": 907,
+      "2023": 978,
+      "2024": 949,
+      "2025": 1149
+    }
   },
   {
     "id": "stockton-fullerton-cove",
@@ -9181,8 +11238,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4781,
+    "crimeCountByYear": {
+      "2016": 397,
+      "2017": 327,
+      "2018": 377,
+      "2019": 429,
+      "2020": 299,
+      "2021": 347,
+      "2022": 295,
+      "2023": 317,
+      "2024": 312,
+      "2025": 396
+    }
   },
   {
     "id": "wallsend-elermore-vale",
@@ -9225,8 +11293,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19301,
+    "crimeCountByYear": {
+      "2016": 1685,
+      "2017": 1968,
+      "2018": 1799,
+      "2019": 1641,
+      "2020": 1424,
+      "2021": 1401,
+      "2022": 1602,
+      "2023": 1711,
+      "2024": 1599,
+      "2025": 1639
+    }
   },
   {
     "id": "waratah-north-lambton",
@@ -9269,8 +11348,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8381,
+    "crimeCountByYear": {
+      "2016": 1779,
+      "2017": 2228,
+      "2018": 1557,
+      "2019": 1521,
+      "2020": 1365,
+      "2021": 1392,
+      "2022": 1339,
+      "2023": 1548,
+      "2024": 1471,
+      "2025": 1563
+    }
   },
   {
     "id": "wickham-carrington-tighes-hill",
@@ -9357,8 +11447,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9735,
+    "crimeCountByYear": {
+      "2016": 1397,
+      "2017": 1321,
+      "2018": 1396,
+      "2019": 1301,
+      "2020": 1408,
+      "2021": 1501,
+      "2022": 1257,
+      "2023": 1492,
+      "2024": 1660,
+      "2025": 1930
+    }
   },
   {
     "id": "ballina-surrounds",
@@ -9447,8 +11548,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2752,
+    "crimeCountByYear": {
+      "2016": 94,
+      "2017": 86,
+      "2018": 62,
+      "2019": 78,
+      "2020": 114,
+      "2021": 134,
+      "2022": 69,
+      "2023": 64,
+      "2024": 104,
+      "2025": 76
+    }
   },
   {
     "id": "brunswick-heads-ocean-shores",
@@ -9492,8 +11604,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7682,
+    "crimeCountByYear": {
+      "2016": 406,
+      "2017": 454,
+      "2018": 483,
+      "2019": 505,
+      "2020": 565,
+      "2021": 486,
+      "2022": 383,
+      "2023": 403,
+      "2024": 531,
+      "2025": 462
+    }
   },
   {
     "id": "byron-bay",
@@ -9537,8 +11660,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6330,
+    "crimeCountByYear": {
+      "2016": 2417,
+      "2017": 1944,
+      "2018": 1863,
+      "2019": 1864,
+      "2020": 1933,
+      "2021": 1590,
+      "2022": 1471,
+      "2023": 1424,
+      "2024": 1429,
+      "2025": 1397
+    }
   },
   {
     "id": "evans-head",
@@ -9581,8 +11715,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2907,
+    "crimeCountByYear": {
+      "2016": 214,
+      "2017": 187,
+      "2018": 157,
+      "2019": 194,
+      "2020": 193,
+      "2021": 239,
+      "2022": 206,
+      "2023": 252,
+      "2024": 226,
+      "2025": 205
+    }
   },
   {
     "id": "lennox-head-skennars-head",
@@ -9626,8 +11771,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8990,
+    "crimeCountByYear": {
+      "2016": 206,
+      "2017": 224,
+      "2018": 231,
+      "2019": 287,
+      "2020": 243,
+      "2021": 238,
+      "2022": 226,
+      "2023": 210,
+      "2024": 322,
+      "2025": 249
+    }
   },
   {
     "id": "mullumbimby",
@@ -9670,8 +11826,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4180,
+    "crimeCountByYear": {
+      "2016": 287,
+      "2017": 328,
+      "2018": 430,
+      "2019": 431,
+      "2020": 363,
+      "2021": 444,
+      "2022": 391,
+      "2023": 306,
+      "2024": 346,
+      "2025": 394
+    }
   },
   {
     "id": "casino",
@@ -9714,8 +11881,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10930,
+    "crimeCountByYear": {
+      "2016": 1836,
+      "2017": 1594,
+      "2018": 1672,
+      "2019": 1683,
+      "2020": 1352,
+      "2021": 1798,
+      "2022": 1925,
+      "2023": 1659,
+      "2024": 1847,
+      "2025": 1704
+    }
   },
   {
     "id": "casino-surrounds",
@@ -9803,8 +11981,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13351,
+    "crimeCountByYear": {
+      "2016": 1026,
+      "2017": 882,
+      "2018": 937,
+      "2019": 789,
+      "2020": 843,
+      "2021": 1186,
+      "2022": 1080,
+      "2023": 1247,
+      "2024": 1335,
+      "2025": 1165
+    }
   },
   {
     "id": "kyogle",
@@ -9847,8 +12036,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2248,
+    "crimeCountByYear": {
+      "2016": 254,
+      "2017": 181,
+      "2018": 264,
+      "2019": 210,
+      "2020": 151,
+      "2021": 106,
+      "2022": 142,
+      "2023": 138,
+      "2024": 115,
+      "2025": 130
+    }
   },
   {
     "id": "lismore",
@@ -9891,18 +12091,18 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 472,
+    "population": 3656,
     "crimeCountByYear": {
-      "2016": 23,
-      "2017": 26,
-      "2018": 8,
-      "2019": 31,
-      "2020": 31,
-      "2021": 30,
-      "2022": 36,
-      "2023": 48,
-      "2024": 65,
-      "2025": 44
+      "2016": 1786,
+      "2017": 1652,
+      "2018": 1694,
+      "2019": 1617,
+      "2020": 1450,
+      "2021": 1826,
+      "2022": 1392,
+      "2023": 1828,
+      "2024": 1908,
+      "2025": 1807
     }
   },
   {
@@ -9992,8 +12192,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8970,
+    "crimeCountByYear": {
+      "2016": 467,
+      "2017": 435,
+      "2018": 626,
+      "2019": 461,
+      "2020": 458,
+      "2021": 421,
+      "2022": 454,
+      "2023": 498,
+      "2024": 527,
+      "2025": 437
+    }
   },
   {
     "id": "murwillumbah",
@@ -10036,8 +12247,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7616,
+    "crimeCountByYear": {
+      "2016": 432,
+      "2017": 544,
+      "2018": 538,
+      "2019": 569,
+      "2020": 563,
+      "2021": 485,
+      "2022": 433,
+      "2023": 555,
+      "2024": 620,
+      "2025": 638
+    }
   },
   {
     "id": "murwillumbah-surrounds",
@@ -10125,8 +12347,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7238,
+    "crimeCountByYear": {
+      "2016": 237,
+      "2017": 216,
+      "2018": 224,
+      "2019": 184,
+      "2020": 212,
+      "2021": 233,
+      "2022": 182,
+      "2023": 237,
+      "2024": 205,
+      "2025": 187
+    }
   },
   {
     "id": "tweed-heads",
@@ -10169,8 +12402,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9176,
+    "crimeCountByYear": {
+      "2016": 1312,
+      "2017": 1179,
+      "2018": 1359,
+      "2019": 1388,
+      "2020": 1534,
+      "2021": 1724,
+      "2022": 1790,
+      "2023": 1774,
+      "2024": 1895,
+      "2025": 2068
+    }
   },
   {
     "id": "banora-point",
@@ -10213,8 +12457,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16460,
+    "crimeCountByYear": {
+      "2016": 522,
+      "2017": 580,
+      "2018": 801,
+      "2019": 603,
+      "2020": 613,
+      "2021": 557,
+      "2022": 634,
+      "2023": 493,
+      "2024": 499,
+      "2025": 508
+    }
   },
   {
     "id": "terranora-north-tumbulgum",
@@ -10258,8 +12513,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3603,
+    "crimeCountByYear": {
+      "2016": 74,
+      "2017": 65,
+      "2018": 87,
+      "2019": 135,
+      "2020": 82,
+      "2021": 103,
+      "2022": 84,
+      "2023": 103,
+      "2024": 57,
+      "2025": 114
+    }
   },
   {
     "id": "tweed-heads-south",
@@ -10302,8 +12568,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7941,
+    "crimeCountByYear": {
+      "2016": 782,
+      "2017": 782,
+      "2018": 886,
+      "2019": 903,
+      "2020": 1036,
+      "2021": 1031,
+      "2022": 1127,
+      "2023": 1200,
+      "2024": 1373,
+      "2025": 1539
+    }
   },
   {
     "id": "griffith-nsw",
@@ -10346,8 +12623,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19505,
+    "crimeCountByYear": {
+      "2016": 2862,
+      "2017": 2769,
+      "2018": 2400,
+      "2019": 2697,
+      "2020": 2591,
+      "2021": 2429,
+      "2022": 2438,
+      "2023": 2645,
+      "2024": 2651,
+      "2025": 2618
+    }
   },
   {
     "id": "griffith-surrounds",
@@ -10435,8 +12723,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9170,
+    "crimeCountByYear": {
+      "2016": 988,
+      "2017": 1027,
+      "2018": 970,
+      "2019": 1068,
+      "2020": 1051,
+      "2021": 1061,
+      "2022": 1090,
+      "2023": 1137,
+      "2024": 959,
+      "2025": 1009
+    }
   },
   {
     "id": "narrandera",
@@ -10479,8 +12778,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4369,
+    "crimeCountByYear": {
+      "2016": 680,
+      "2017": 768,
+      "2018": 544,
+      "2019": 872,
+      "2020": 853,
+      "2021": 758,
+      "2022": 607,
+      "2023": 703,
+      "2024": 765,
+      "2025": 629
+    }
   },
   {
     "id": "tumbarumba",
@@ -10523,8 +12833,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1915,
+    "crimeCountByYear": {
+      "2016": 138,
+      "2017": 112,
+      "2018": 142,
+      "2019": 162,
+      "2020": 110,
+      "2021": 105,
+      "2022": 109,
+      "2023": 122,
+      "2024": 74,
+      "2025": 117
+    }
   },
   {
     "id": "tumut",
@@ -10567,8 +12888,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6613,
+    "crimeCountByYear": {
+      "2016": 933,
+      "2017": 872,
+      "2018": 784,
+      "2019": 985,
+      "2020": 753,
+      "2021": 759,
+      "2022": 613,
+      "2023": 584,
+      "2024": 773,
+      "2025": 719
+    }
   },
   {
     "id": "tumut-surrounds",
@@ -10656,8 +12988,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6885,
+    "crimeCountByYear": {
+      "2016": 522,
+      "2017": 573,
+      "2018": 681,
+      "2019": 589,
+      "2020": 505,
+      "2021": 538,
+      "2022": 517,
+      "2023": 551,
+      "2024": 551,
+      "2025": 474
+    }
   },
   {
     "id": "gundagai",
@@ -10700,8 +13043,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 1699,
+    "crimeCountByYear": {
+      "2016": 162,
+      "2017": 138,
+      "2018": 205,
+      "2019": 187,
+      "2020": 99,
+      "2021": 151,
+      "2022": 118,
+      "2023": 133,
+      "2024": 155,
+      "2025": 160
+    }
   },
   {
     "id": "junee",
@@ -10744,8 +13098,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5066,
+    "crimeCountByYear": {
+      "2016": 515,
+      "2017": 334,
+      "2018": 344,
+      "2019": 347,
+      "2020": 422,
+      "2021": 429,
+      "2022": 269,
+      "2023": 272,
+      "2024": 322,
+      "2025": 293
+    }
   },
   {
     "id": "temora",
@@ -10788,8 +13153,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4706,
+    "crimeCountByYear": {
+      "2016": 454,
+      "2017": 367,
+      "2018": 341,
+      "2019": 419,
+      "2020": 377,
+      "2021": 357,
+      "2022": 315,
+      "2023": 290,
+      "2024": 329,
+      "2025": 283
+    }
   },
   {
     "id": "wagga-wagga-east",
@@ -10832,8 +13208,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7198,
+    "crimeCountByYear": {
+      "2016": 2410,
+      "2017": 2279,
+      "2018": 2508,
+      "2019": 2984,
+      "2020": 2308,
+      "2021": 2252,
+      "2022": 2427,
+      "2023": 2514,
+      "2024": 2654,
+      "2025": 2894
+    }
   },
   {
     "id": "wagga-wagga-north",
@@ -10876,8 +13263,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7198,
+    "crimeCountByYear": {
+      "2016": 2410,
+      "2017": 2279,
+      "2018": 2508,
+      "2019": 2984,
+      "2020": 2308,
+      "2021": 2252,
+      "2022": 2427,
+      "2023": 2514,
+      "2024": 2654,
+      "2025": 2894
+    }
   },
   {
     "id": "wagga-wagga-south",
@@ -10920,8 +13318,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7198,
+    "crimeCountByYear": {
+      "2016": 2410,
+      "2017": 2279,
+      "2018": 2508,
+      "2019": 2984,
+      "2020": 2308,
+      "2021": 2252,
+      "2022": 2427,
+      "2023": 2514,
+      "2024": 2654,
+      "2025": 2894
+    }
   },
   {
     "id": "wagga-wagga-west",
@@ -10964,8 +13373,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7198,
+    "crimeCountByYear": {
+      "2016": 2410,
+      "2017": 2279,
+      "2018": 2508,
+      "2019": 2984,
+      "2020": 2308,
+      "2021": 2252,
+      "2022": 2427,
+      "2023": 2514,
+      "2024": 2654,
+      "2025": 2894
+    }
   },
   {
     "id": "wagga-wagga-surrounds",
@@ -11046,8 +13466,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3954,
+    "crimeCountByYear": {
+      "2016": 169,
+      "2017": 136,
+      "2018": 154,
+      "2019": 158,
+      "2020": 99,
+      "2021": 95,
+      "2022": 93,
+      "2023": 154,
+      "2024": 134,
+      "2025": 136
+    }
   },
   {
     "id": "callala-bay-currarong",
@@ -11083,8 +13514,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2713,
+    "crimeCountByYear": {
+      "2016": 92,
+      "2017": 174,
+      "2018": 153,
+      "2019": 114,
+      "2020": 95,
+      "2021": 87,
+      "2022": 60,
+      "2023": 97,
+      "2024": 72,
+      "2025": 87
+    }
   },
   {
     "id": "culburra-beach",
@@ -11120,8 +13562,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2946,
+    "crimeCountByYear": {
+      "2016": 137,
+      "2017": 200,
+      "2018": 214,
+      "2019": 180,
+      "2020": 133,
+      "2021": 143,
+      "2022": 98,
+      "2023": 141,
+      "2024": 127,
+      "2025": 120
+    }
   },
   {
     "id": "ettrema-sassafras-budawang",
@@ -11157,8 +13610,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 47,
+    "crimeCountByYear": {
+      "2016": 2,
+      "2017": 3,
+      "2018": 1,
+      "2019": 0,
+      "2020": 2,
+      "2021": 1,
+      "2022": 4,
+      "2023": 1,
+      "2024": 3,
+      "2025": 5
+    }
   },
   {
     "id": "huskisson-vincentia",
@@ -11194,8 +13658,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4710,
+    "crimeCountByYear": {
+      "2016": 316,
+      "2017": 242,
+      "2018": 338,
+      "2019": 317,
+      "2020": 221,
+      "2021": 273,
+      "2022": 258,
+      "2023": 237,
+      "2024": 246,
+      "2025": 236
+    }
   },
   {
     "id": "north-nowra-bomaderry",
@@ -11231,8 +13706,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12594,
+    "crimeCountByYear": {
+      "2016": 850,
+      "2017": 901,
+      "2018": 899,
+      "2019": 879,
+      "2020": 874,
+      "2021": 920,
+      "2022": 817,
+      "2023": 1059,
+      "2024": 1063,
+      "2025": 1044
+    }
   },
   {
     "id": "nowra",
@@ -11268,8 +13754,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9956,
+    "crimeCountByYear": {
+      "2016": 2703,
+      "2017": 2547,
+      "2018": 2673,
+      "2019": 2805,
+      "2020": 2484,
+      "2021": 2617,
+      "2022": 2659,
+      "2023": 3099,
+      "2024": 3068,
+      "2025": 3111
+    }
   },
   {
     "id": "st-georges-basin-erowal-bay",
@@ -11305,8 +13802,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3867,
+    "crimeCountByYear": {
+      "2016": 146,
+      "2017": 121,
+      "2018": 115,
+      "2019": 141,
+      "2020": 150,
+      "2021": 164,
+      "2022": 131,
+      "2023": 124,
+      "2024": 115,
+      "2025": 110
+    }
   },
   {
     "id": "sussex-inlet-berrara",
@@ -11342,8 +13850,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4221,
+    "crimeCountByYear": {
+      "2016": 253,
+      "2017": 218,
+      "2018": 215,
+      "2019": 218,
+      "2020": 258,
+      "2021": 238,
+      "2022": 188,
+      "2023": 252,
+      "2024": 208,
+      "2025": 250
+    }
   },
   {
     "id": "tomerong-wandandian-woollamia",
@@ -11379,8 +13898,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2206,
+    "crimeCountByYear": {
+      "2016": 81,
+      "2017": 73,
+      "2018": 111,
+      "2019": 96,
+      "2020": 120,
+      "2021": 96,
+      "2022": 94,
+      "2023": 105,
+      "2024": 104,
+      "2025": 66
+    }
   },
   {
     "id": "ulladulla",
@@ -11416,8 +13946,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7262,
+    "crimeCountByYear": {
+      "2016": 586,
+      "2017": 498,
+      "2018": 713,
+      "2019": 480,
+      "2020": 542,
+      "2021": 526,
+      "2022": 505,
+      "2023": 582,
+      "2024": 485,
+      "2025": 525
+    }
   },
   {
     "id": "ulladulla-surrounds",
@@ -11492,8 +14033,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10764,
+    "crimeCountByYear": {
+      "2016": 703,
+      "2017": 702,
+      "2018": 669,
+      "2019": 528,
+      "2020": 424,
+      "2021": 443,
+      "2022": 402,
+      "2023": 502,
+      "2024": 404,
+      "2025": 353
+    }
   },
   {
     "id": "hill-top-colo-vale",
@@ -11566,8 +14118,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6090,
+    "crimeCountByYear": {
+      "2016": 500,
+      "2017": 514,
+      "2018": 472,
+      "2019": 552,
+      "2020": 422,
+      "2021": 397,
+      "2022": 366,
+      "2023": 412,
+      "2024": 421,
+      "2025": 384
+    }
   },
   {
     "id": "moss-vale-berrima",
@@ -11603,8 +14166,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10123,
+    "crimeCountByYear": {
+      "2016": 727,
+      "2017": 531,
+      "2018": 571,
+      "2019": 724,
+      "2020": 649,
+      "2021": 798,
+      "2022": 608,
+      "2023": 595,
+      "2024": 496,
+      "2025": 482
+    }
   },
   {
     "id": "robertson-fitzroy-falls",
@@ -11640,8 +14214,19 @@ window.suburbs =
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2237,
+    "crimeCountByYear": {
+      "2016": 70,
+      "2017": 62,
+      "2018": 62,
+      "2019": 59,
+      "2020": 99,
+      "2021": 92,
+      "2022": 77,
+      "2023": 83,
+      "2024": 62,
+      "2025": 77
+    }
   },
   {
     "id": "southern-highlands",
@@ -11726,8 +14311,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 37415,
+    "crimeCountByYear": {
+      "2016": 993,
+      "2017": 933,
+      "2018": 927,
+      "2019": 948,
+      "2020": 834,
+      "2021": 951,
+      "2022": 753,
+      "2023": 769,
+      "2024": 685,
+      "2025": 698
+    }
   },
   {
     "id": "baulkham-hills-west-bella-vista",
@@ -11775,8 +14371,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 45799,
+    "crimeCountByYear": {
+      "2016": 1253,
+      "2017": 1181,
+      "2018": 1160,
+      "2019": 1257,
+      "2020": 1141,
+      "2021": 1284,
+      "2022": 1083,
+      "2023": 1087,
+      "2024": 932,
+      "2025": 954
+    }
   },
   {
     "id": "glenhaven",
@@ -11824,8 +14431,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6619,
+    "crimeCountByYear": {
+      "2016": 86,
+      "2017": 66,
+      "2018": 86,
+      "2019": 135,
+      "2020": 132,
+      "2021": 105,
+      "2022": 92,
+      "2023": 83,
+      "2024": 81,
+      "2025": 61
+    }
   },
   {
     "id": "west-pennant-hills",
@@ -11873,8 +14491,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16620,
+    "crimeCountByYear": {
+      "2016": 224,
+      "2017": 295,
+      "2018": 278,
+      "2019": 411,
+      "2020": 262,
+      "2021": 227,
+      "2022": 227,
+      "2023": 205,
+      "2024": 197,
+      "2025": 190
+    }
   },
   {
     "id": "castle-hill-central",
@@ -11923,8 +14552,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 40874,
+    "crimeCountByYear": {
+      "2016": 1629,
+      "2017": 1710,
+      "2018": 1575,
+      "2019": 1866,
+      "2020": 1867,
+      "2021": 1630,
+      "2022": 1654,
+      "2023": 1616,
+      "2024": 1784,
+      "2025": 1399
+    }
   },
   {
     "id": "castle-hill-east",
@@ -11972,8 +14612,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 40874,
+    "crimeCountByYear": {
+      "2016": 1629,
+      "2017": 1710,
+      "2018": 1575,
+      "2019": 1866,
+      "2020": 1867,
+      "2021": 1630,
+      "2022": 1654,
+      "2023": 1616,
+      "2024": 1784,
+      "2025": 1399
+    }
   },
   {
     "id": "castle-hill-north",
@@ -12021,8 +14672,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 40874,
+    "crimeCountByYear": {
+      "2016": 1629,
+      "2017": 1710,
+      "2018": 1575,
+      "2019": 1866,
+      "2020": 1867,
+      "2021": 1630,
+      "2022": 1654,
+      "2023": 1616,
+      "2024": 1784,
+      "2025": 1399
+    }
   },
   {
     "id": "castle-hill-south",
@@ -12070,8 +14732,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 40874,
+    "crimeCountByYear": {
+      "2016": 1629,
+      "2017": 1710,
+      "2018": 1575,
+      "2019": 1866,
+      "2020": 1867,
+      "2021": 1630,
+      "2022": 1654,
+      "2023": 1616,
+      "2024": 1784,
+      "2025": 1399
+    }
   },
   {
     "id": "castle-hill-west",
@@ -12119,8 +14792,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 40874,
+    "crimeCountByYear": {
+      "2016": 1629,
+      "2017": 1710,
+      "2018": 1575,
+      "2019": 1866,
+      "2020": 1867,
+      "2021": 1630,
+      "2022": 1654,
+      "2023": 1616,
+      "2024": 1784,
+      "2025": 1399
+    }
   },
   {
     "id": "cherrybrook",
@@ -12168,8 +14852,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19082,
+    "crimeCountByYear": {
+      "2016": 245,
+      "2017": 259,
+      "2018": 275,
+      "2019": 548,
+      "2020": 358,
+      "2021": 241,
+      "2022": 225,
+      "2023": 221,
+      "2024": 219,
+      "2025": 230
+    }
   },
   {
     "id": "kellyville-east",
@@ -12217,8 +14912,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27011,
+    "crimeCountByYear": {
+      "2016": 485,
+      "2017": 568,
+      "2018": 479,
+      "2019": 614,
+      "2020": 586,
+      "2021": 574,
+      "2022": 470,
+      "2023": 542,
+      "2024": 432,
+      "2025": 504
+    }
   },
   {
     "id": "kellyville-west",
@@ -12266,8 +14972,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27011,
+    "crimeCountByYear": {
+      "2016": 485,
+      "2017": 568,
+      "2018": 479,
+      "2019": 614,
+      "2020": 586,
+      "2021": 574,
+      "2022": 470,
+      "2023": 542,
+      "2024": 432,
+      "2025": 504
+    }
   },
   {
     "id": "dural-kenthurst-wisemans-ferry",
@@ -12363,8 +15080,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3297,
+    "crimeCountByYear": {
+      "2016": 123,
+      "2017": 136,
+      "2018": 121,
+      "2019": 136,
+      "2020": 101,
+      "2021": 91,
+      "2022": 73,
+      "2023": 70,
+      "2024": 104,
+      "2025": 77
+    }
   },
   {
     "id": "bilpin-colo-st-albans",
@@ -12459,8 +15187,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2336,
+    "crimeCountByYear": {
+      "2016": 49,
+      "2017": 59,
+      "2018": 41,
+      "2019": 58,
+      "2020": 78,
+      "2021": 73,
+      "2022": 53,
+      "2023": 47,
+      "2024": 71,
+      "2025": 59
+    }
   },
   {
     "id": "pitt-town-mcgraths-hill",
@@ -12508,8 +15247,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6408,
+    "crimeCountByYear": {
+      "2016": 180,
+      "2017": 157,
+      "2018": 169,
+      "2019": 197,
+      "2020": 159,
+      "2021": 219,
+      "2022": 194,
+      "2023": 179,
+      "2024": 178,
+      "2025": 158
+    }
   },
   {
     "id": "box-hill-nelson",
@@ -12606,8 +15356,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17401,
+    "crimeCountByYear": {
+      "2016": 189,
+      "2017": 177,
+      "2018": 284,
+      "2019": 299,
+      "2020": 364,
+      "2021": 338,
+      "2022": 260,
+      "2023": 311,
+      "2024": 284,
+      "2025": 277
+    }
   },
   {
     "id": "rouse-hill-beaumont-hills",
@@ -12655,8 +15416,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20390,
+    "crimeCountByYear": {
+      "2016": 848,
+      "2017": 794,
+      "2018": 988,
+      "2019": 1047,
+      "2020": 1109,
+      "2021": 933,
+      "2022": 1022,
+      "2023": 1252,
+      "2024": 1316,
+      "2025": 1124
+    }
   },
   {
     "id": "blacktown-east-kings-park",
@@ -12704,8 +15476,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 54437,
+    "crimeCountByYear": {
+      "2016": 16781,
+      "2017": 17783,
+      "2018": 13175,
+      "2019": 13387,
+      "2020": 11977,
+      "2021": 15444,
+      "2022": 13865,
+      "2023": 10351,
+      "2024": 10472,
+      "2025": 8270
+    }
   },
   {
     "id": "blacktown-north-marayong",
@@ -12752,8 +15535,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 58795,
+    "crimeCountByYear": {
+      "2016": 16941,
+      "2017": 18125,
+      "2018": 13547,
+      "2019": 13802,
+      "2020": 12224,
+      "2021": 15876,
+      "2022": 14033,
+      "2023": 10603,
+      "2024": 10673,
+      "2025": 8470
+    }
   },
   {
     "id": "doonside-woodcroft",
@@ -12800,8 +15594,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20211,
+    "crimeCountByYear": {
+      "2016": 2090,
+      "2017": 2037,
+      "2018": 1996,
+      "2019": 1921,
+      "2020": 1836,
+      "2021": 2196,
+      "2022": 1488,
+      "2023": 1528,
+      "2024": 1395,
+      "2025": 1299
+    }
   },
   {
     "id": "lalor-park-kings-langley",
@@ -12849,8 +15654,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17188,
+    "crimeCountByYear": {
+      "2016": 985,
+      "2017": 925,
+      "2018": 1016,
+      "2019": 977,
+      "2020": 866,
+      "2021": 990,
+      "2022": 895,
+      "2023": 790,
+      "2024": 850,
+      "2025": 865
+    }
   },
   {
     "id": "blacktown-south",
@@ -12897,8 +15713,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 50961,
+    "crimeCountByYear": {
+      "2016": 16445,
+      "2017": 17455,
+      "2018": 12819,
+      "2019": 13121,
+      "2020": 11710,
+      "2021": 15150,
+      "2022": 13537,
+      "2023": 10103,
+      "2024": 10270,
+      "2025": 8039
+    }
   },
   {
     "id": "blacktown-west",
@@ -12945,8 +15772,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 50961,
+    "crimeCountByYear": {
+      "2016": 16445,
+      "2017": 17455,
+      "2018": 12819,
+      "2019": 13121,
+      "2020": 11710,
+      "2021": 15150,
+      "2022": 13537,
+      "2023": 10103,
+      "2024": 10270,
+      "2025": 8039
+    }
   },
   {
     "id": "seven-hills-prospect",
@@ -12993,8 +15831,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25282,
+    "crimeCountByYear": {
+      "2016": 2830,
+      "2017": 3068,
+      "2018": 2709,
+      "2019": 2611,
+      "2020": 2248,
+      "2021": 2852,
+      "2022": 2350,
+      "2023": 2168,
+      "2024": 1953,
+      "2025": 1757
+    }
   },
   {
     "id": "toongabbie-west",
@@ -13041,8 +15890,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16177,
+    "crimeCountByYear": {
+      "2016": 961,
+      "2017": 1128,
+      "2018": 1058,
+      "2019": 1223,
+      "2020": 1025,
+      "2021": 1085,
+      "2022": 990,
+      "2023": 932,
+      "2024": 840,
+      "2025": 793
+    }
   },
   {
     "id": "glenwood",
@@ -13090,8 +15950,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15829,
+    "crimeCountByYear": {
+      "2016": 366,
+      "2017": 390,
+      "2018": 357,
+      "2019": 435,
+      "2020": 371,
+      "2021": 401,
+      "2022": 352,
+      "2023": 352,
+      "2024": 298,
+      "2025": 333
+    }
   },
   {
     "id": "acacia-gardens",
@@ -13139,8 +16010,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3668,
+    "crimeCountByYear": {
+      "2016": 60,
+      "2017": 82,
+      "2018": 73,
+      "2019": 73,
+      "2020": 76,
+      "2021": 109,
+      "2022": 66,
+      "2023": 59,
+      "2024": 54,
+      "2025": 62
+    }
   },
   {
     "id": "quakers-hill",
@@ -13187,8 +16069,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27893,
+    "crimeCountByYear": {
+      "2016": 1158,
+      "2017": 1268,
+      "2018": 1325,
+      "2019": 1324,
+      "2020": 1134,
+      "2021": 1238,
+      "2022": 1021,
+      "2023": 863,
+      "2024": 915,
+      "2025": 839
+    }
   },
   {
     "id": "kellyville-ridge-the-ponds",
@@ -13236,8 +16129,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27205,
+    "crimeCountByYear": {
+      "2016": 510,
+      "2017": 579,
+      "2018": 606,
+      "2019": 712,
+      "2020": 694,
+      "2021": 586,
+      "2022": 554,
+      "2023": 536,
+      "2024": 406,
+      "2025": 418
+    }
   },
   {
     "id": "marsden-park-shanes-park",
@@ -13286,8 +16190,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14994,
+    "crimeCountByYear": {
+      "2016": 218,
+      "2017": 291,
+      "2018": 427,
+      "2019": 605,
+      "2020": 712,
+      "2021": 655,
+      "2022": 566,
+      "2023": 715,
+      "2024": 790,
+      "2025": 728
+    }
   },
   {
     "id": "riverstone",
@@ -13334,8 +16249,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8627,
+    "crimeCountByYear": {
+      "2016": 750,
+      "2017": 1108,
+      "2018": 1128,
+      "2019": 1113,
+      "2020": 1029,
+      "2021": 981,
+      "2022": 1421,
+      "2023": 1106,
+      "2024": 1162,
+      "2025": 955
+    }
   },
   {
     "id": "schofields-west-colebee",
@@ -13383,8 +16309,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20127,
+    "crimeCountByYear": {
+      "2016": 514,
+      "2017": 679,
+      "2018": 720,
+      "2019": 647,
+      "2020": 728,
+      "2021": 755,
+      "2022": 786,
+      "2023": 826,
+      "2024": 772,
+      "2025": 762
+    }
   },
   {
     "id": "schofields-east",
@@ -13432,8 +16369,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15213,
+    "crimeCountByYear": {
+      "2016": 405,
+      "2017": 504,
+      "2018": 566,
+      "2019": 471,
+      "2020": 537,
+      "2021": 532,
+      "2022": 573,
+      "2023": 637,
+      "2024": 592,
+      "2025": 565
+    }
   },
   {
     "id": "stanhope-gardens-parklea",
@@ -13482,8 +16430,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13033,
+    "crimeCountByYear": {
+      "2016": 375,
+      "2017": 448,
+      "2018": 388,
+      "2019": 514,
+      "2020": 337,
+      "2021": 332,
+      "2022": 267,
+      "2023": 260,
+      "2024": 278,
+      "2025": 298
+    }
   },
   {
     "id": "bidwill-hebersham-emerton",
@@ -13530,8 +16489,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12140,
+    "crimeCountByYear": {
+      "2016": 1872,
+      "2017": 1737,
+      "2018": 1826,
+      "2019": 1893,
+      "2020": 1608,
+      "2021": 1871,
+      "2022": 1842,
+      "2023": 1772,
+      "2024": 1797,
+      "2025": 1887
+    }
   },
   {
     "id": "glendenning-dean-park",
@@ -13579,8 +16549,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8376,
+    "crimeCountByYear": {
+      "2016": 392,
+      "2017": 446,
+      "2018": 480,
+      "2019": 476,
+      "2020": 404,
+      "2021": 465,
+      "2022": 388,
+      "2023": 429,
+      "2024": 366,
+      "2025": 346
+    }
   },
   {
     "id": "hassall-grove-plumpton",
@@ -13627,8 +16608,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14471,
+    "crimeCountByYear": {
+      "2016": 776,
+      "2017": 760,
+      "2018": 820,
+      "2019": 871,
+      "2020": 644,
+      "2021": 766,
+      "2022": 595,
+      "2023": 694,
+      "2024": 734,
+      "2025": 715
+    }
   },
   {
     "id": "lethbridge-park-tregear",
@@ -13676,8 +16668,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8430,
+    "crimeCountByYear": {
+      "2016": 1333,
+      "2017": 1571,
+      "2018": 1525,
+      "2019": 1707,
+      "2020": 1437,
+      "2021": 1744,
+      "2022": 1532,
+      "2023": 1427,
+      "2024": 1473,
+      "2025": 1666
+    }
   },
   {
     "id": "mount-druitt-whalan",
@@ -13724,8 +16727,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22915,
+    "crimeCountByYear": {
+      "2016": 8878,
+      "2017": 9256,
+      "2018": 9891,
+      "2019": 11459,
+      "2020": 9744,
+      "2021": 10507,
+      "2022": 9295,
+      "2023": 11659,
+      "2024": 12032,
+      "2025": 7285
+    }
   },
   {
     "id": "prospect-reservoir",
@@ -13820,8 +16834,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 21954,
+    "crimeCountByYear": {
+      "2016": 1568,
+      "2017": 1630,
+      "2018": 1829,
+      "2019": 1550,
+      "2020": 1386,
+      "2021": 1444,
+      "2022": 1221,
+      "2023": 1274,
+      "2024": 1218,
+      "2025": 1274
+    }
   },
   {
     "id": "banksmeadow",
@@ -13869,8 +16894,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 508,
+    "crimeCountByYear": {
+      "2016": 52,
+      "2017": 66,
+      "2018": 78,
+      "2019": 93,
+      "2020": 78,
+      "2021": 77,
+      "2022": 68,
+      "2023": 69,
+      "2024": 60,
+      "2025": 56
+    }
   },
   {
     "id": "botany",
@@ -13918,8 +16954,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12960,
+    "crimeCountByYear": {
+      "2016": 407,
+      "2017": 495,
+      "2018": 604,
+      "2019": 517,
+      "2020": 488,
+      "2021": 419,
+      "2022": 431,
+      "2023": 475,
+      "2024": 400,
+      "2025": 352
+    }
   },
   {
     "id": "pagewood-hillsdale-daceyville",
@@ -13967,8 +17014,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10678,
+    "crimeCountByYear": {
+      "2016": 443,
+      "2017": 479,
+      "2018": 525,
+      "2019": 547,
+      "2020": 637,
+      "2021": 661,
+      "2022": 577,
+      "2023": 632,
+      "2024": 521,
+      "2025": 536
+    }
   },
   {
     "id": "port-botany-industrial",
@@ -14111,8 +17169,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6347,
+    "crimeCountByYear": {
+      "2016": 474,
+      "2017": 362,
+      "2018": 368,
+      "2019": 436,
+      "2020": 433,
+      "2021": 501,
+      "2022": 435,
+      "2023": 384,
+      "2024": 347,
+      "2025": 440
+    }
   },
   {
     "id": "mascot",
@@ -14160,8 +17229,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 21591,
+    "crimeCountByYear": {
+      "2016": 1444,
+      "2017": 1511,
+      "2018": 1526,
+      "2019": 1618,
+      "2020": 1308,
+      "2021": 1547,
+      "2022": 1276,
+      "2023": 1449,
+      "2024": 1292,
+      "2025": 1306
+    }
   },
   {
     "id": "petersham-stanmore",
@@ -14209,8 +17289,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15819,
+    "crimeCountByYear": {
+      "2016": 1162,
+      "2017": 1032,
+      "2018": 1011,
+      "2019": 948,
+      "2020": 933,
+      "2021": 886,
+      "2022": 948,
+      "2023": 892,
+      "2024": 932,
+      "2025": 857
+    }
   },
   {
     "id": "sydenham-tempe-st-peters",
@@ -14258,8 +17349,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8279,
+    "crimeCountByYear": {
+      "2016": 2022,
+      "2017": 1658,
+      "2018": 1989,
+      "2019": 2169,
+      "2020": 1075,
+      "2021": 1798,
+      "2022": 1012,
+      "2023": 1094,
+      "2024": 980,
+      "2025": 762
+    }
   },
   {
     "id": "marrickville-north",
@@ -14307,8 +17409,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26570,
+    "crimeCountByYear": {
+      "2016": 2439,
+      "2017": 2667,
+      "2018": 2619,
+      "2019": 2805,
+      "2020": 2549,
+      "2021": 2622,
+      "2022": 2530,
+      "2023": 2661,
+      "2024": 2368,
+      "2025": 2406
+    }
   },
   {
     "id": "marrickville-south",
@@ -14355,8 +17468,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26570,
+    "crimeCountByYear": {
+      "2016": 2439,
+      "2017": 2667,
+      "2018": 2619,
+      "2019": 2805,
+      "2020": 2549,
+      "2021": 2622,
+      "2022": 2530,
+      "2023": 2661,
+      "2024": 2368,
+      "2025": 2406
+    }
   },
   {
     "id": "darlinghurst",
@@ -14404,8 +17528,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10615,
+    "crimeCountByYear": {
+      "2016": 2682,
+      "2017": 2711,
+      "2018": 2411,
+      "2019": 2490,
+      "2020": 2012,
+      "2021": 2107,
+      "2022": 1674,
+      "2023": 1716,
+      "2024": 1785,
+      "2025": 1838
+    }
   },
   {
     "id": "erskineville-alexandria",
@@ -14453,8 +17588,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19306,
+    "crimeCountByYear": {
+      "2016": 1718,
+      "2017": 1756,
+      "2018": 1945,
+      "2019": 2134,
+      "2020": 1274,
+      "2021": 1466,
+      "2022": 1123,
+      "2023": 1191,
+      "2024": 1437,
+      "2025": 1409
+    }
   },
   {
     "id": "glebe-forest-lodge",
@@ -14503,8 +17649,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16645,
+    "crimeCountByYear": {
+      "2016": 2566,
+      "2017": 2500,
+      "2018": 2787,
+      "2019": 2652,
+      "2020": 2264,
+      "2021": 2614,
+      "2022": 2441,
+      "2023": 2544,
+      "2024": 2692,
+      "2025": 2843
+    }
   },
   {
     "id": "potts-point-woolloomooloo",
@@ -14552,8 +17709,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10975,
+    "crimeCountByYear": {
+      "2016": 6327,
+      "2017": 6704,
+      "2018": 5914,
+      "2019": 5983,
+      "2020": 4066,
+      "2021": 4222,
+      "2022": 3878,
+      "2023": 3975,
+      "2024": 3783,
+      "2025": 2910
+    }
   },
   {
     "id": "surry-hills",
@@ -14601,8 +17769,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15828,
+    "crimeCountByYear": {
+      "2016": 5083,
+      "2017": 4445,
+      "2018": 4955,
+      "2019": 5385,
+      "2020": 4555,
+      "2021": 4442,
+      "2022": 3869,
+      "2023": 4177,
+      "2024": 3691,
+      "2025": 4004
+    }
   },
   {
     "id": "camperdown-darlington",
@@ -14699,8 +17878,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7803,
+    "crimeCountByYear": {
+      "2016": 809,
+      "2017": 729,
+      "2018": 863,
+      "2019": 915,
+      "2020": 793,
+      "2021": 924,
+      "2022": 731,
+      "2023": 668,
+      "2024": 692,
+      "2025": 722
+    }
   },
   {
     "id": "newtown-nsw",
@@ -14748,18 +17938,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 10445,
+    "population": 14690,
     "crimeCountByYear": {
-      "2016": 756,
-      "2017": 748,
-      "2018": 442,
-      "2019": 489,
-      "2020": 619,
-      "2021": 469,
-      "2022": 467,
-      "2023": 545,
-      "2024": 557,
-      "2025": 553
+      "2016": 2900,
+      "2017": 2896,
+      "2018": 2864,
+      "2019": 3612,
+      "2020": 2869,
+      "2021": 3497,
+      "2022": 2841,
+      "2023": 2687,
+      "2024": 2167,
+      "2025": 2164
     }
   },
   {
@@ -14808,8 +17998,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12658,
+    "crimeCountByYear": {
+      "2016": 2249,
+      "2017": 2068,
+      "2018": 2127,
+      "2019": 2308,
+      "2020": 1558,
+      "2021": 1828,
+      "2022": 1919,
+      "2023": 1404,
+      "2024": 1330,
+      "2025": 1263
+    }
   },
   {
     "id": "redfern",
@@ -14856,8 +18057,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13072,
+    "crimeCountByYear": {
+      "2016": 5614,
+      "2017": 4393,
+      "2018": 4095,
+      "2019": 4041,
+      "2020": 3046,
+      "2021": 4206,
+      "2022": 3587,
+      "2023": 4415,
+      "2024": 3943,
+      "2025": 3366
+    }
   },
   {
     "id": "rosebery-beaconsfield",
@@ -14905,8 +18117,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14705,
+    "crimeCountByYear": {
+      "2016": 691,
+      "2017": 789,
+      "2018": 740,
+      "2019": 743,
+      "2020": 846,
+      "2021": 904,
+      "2022": 731,
+      "2023": 805,
+      "2024": 809,
+      "2025": 763
+    }
   },
   {
     "id": "sydney-north-millers-point",
@@ -14954,8 +18177,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18402,
+    "crimeCountByYear": {
+      "2016": 12561,
+      "2017": 11887,
+      "2018": 11601,
+      "2019": 11734,
+      "2020": 9800,
+      "2021": 11300,
+      "2022": 9494,
+      "2023": 9173,
+      "2024": 8813,
+      "2025": 8777
+    }
   },
   {
     "id": "sydney-south-haymarket",
@@ -15004,8 +18238,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 24972,
+    "crimeCountByYear": {
+      "2016": 26335,
+      "2017": 22601,
+      "2018": 19369,
+      "2019": 20499,
+      "2020": 16960,
+      "2021": 20838,
+      "2022": 15581,
+      "2023": 16179,
+      "2024": 14869,
+      "2025": 14577
+    }
   },
   {
     "id": "ultimo",
@@ -15053,8 +18298,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7410,
+    "crimeCountByYear": {
+      "2016": 1126,
+      "2017": 896,
+      "2018": 975,
+      "2019": 904,
+      "2020": 922,
+      "2021": 1026,
+      "2022": 731,
+      "2023": 844,
+      "2024": 841,
+      "2025": 831
+    }
   },
   {
     "id": "waterloo",
@@ -15101,18 +18357,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 122,
+    "population": 16379,
     "crimeCountByYear": {
-      "2016": 16,
-      "2017": 5,
-      "2018": 20,
-      "2019": 9,
-      "2020": 3,
-      "2021": 7,
-      "2022": 6,
-      "2023": 4,
-      "2024": 11,
-      "2025": 4
+      "2016": 1754,
+      "2017": 1831,
+      "2018": 1990,
+      "2019": 2250,
+      "2020": 2104,
+      "2021": 2186,
+      "2022": 1956,
+      "2023": 2240,
+      "2024": 2052,
+      "2025": 2317
     }
   },
   {
@@ -15161,8 +18417,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12622,
+    "crimeCountByYear": {
+      "2016": 493,
+      "2017": 524,
+      "2018": 574,
+      "2019": 629,
+      "2020": 567,
+      "2021": 753,
+      "2022": 556,
+      "2023": 663,
+      "2024": 615,
+      "2025": 732
+    }
   },
   {
     "id": "bondi-tamarama-bronte",
@@ -15210,8 +18477,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19055,
+    "crimeCountByYear": {
+      "2016": 974,
+      "2017": 914,
+      "2018": 850,
+      "2019": 1289,
+      "2020": 1014,
+      "2021": 1089,
+      "2022": 767,
+      "2023": 832,
+      "2024": 766,
+      "2025": 795
+    }
   },
   {
     "id": "bondi-beach-north-bondi",
@@ -15260,8 +18538,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20803,
+    "crimeCountByYear": {
+      "2016": 1986,
+      "2017": 1820,
+      "2018": 1738,
+      "2019": 1759,
+      "2020": 1786,
+      "2021": 2197,
+      "2022": 1486,
+      "2023": 1573,
+      "2024": 1471,
+      "2025": 1378
+    }
   },
   {
     "id": "bondi-junction-waverly",
@@ -15309,8 +18598,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10438,
+    "crimeCountByYear": {
+      "2016": 2646,
+      "2017": 2362,
+      "2018": 2313,
+      "2019": 2477,
+      "2020": 2041,
+      "2021": 1766,
+      "2022": 2034,
+      "2023": 2128,
+      "2024": 2029,
+      "2025": 2150
+    }
   },
   {
     "id": "centennial-park",
@@ -15358,8 +18658,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2225,
+    "crimeCountByYear": {
+      "2016": 438,
+      "2017": 456,
+      "2018": 580,
+      "2019": 373,
+      "2020": 199,
+      "2021": 154,
+      "2022": 295,
+      "2023": 380,
+      "2024": 294,
+      "2025": 242
+    }
   },
   {
     "id": "dover-heights",
@@ -15407,8 +18718,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4044,
+    "crimeCountByYear": {
+      "2016": 69,
+      "2017": 97,
+      "2018": 63,
+      "2019": 72,
+      "2020": 77,
+      "2021": 124,
+      "2022": 85,
+      "2023": 130,
+      "2024": 126,
+      "2025": 65
+    }
   },
   {
     "id": "paddington-moore-park",
@@ -15457,8 +18779,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12719,
+    "crimeCountByYear": {
+      "2016": 1577,
+      "2017": 1610,
+      "2018": 1634,
+      "2019": 1365,
+      "2020": 947,
+      "2021": 892,
+      "2022": 1013,
+      "2023": 1071,
+      "2024": 962,
+      "2025": 978
+    }
   },
   {
     "id": "rose-bay-vaucluse-watsons-bay",
@@ -15507,8 +18840,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20304,
+    "crimeCountByYear": {
+      "2016": 864,
+      "2017": 963,
+      "2018": 810,
+      "2019": 764,
+      "2020": 878,
+      "2021": 911,
+      "2022": 629,
+      "2023": 727,
+      "2024": 661,
+      "2025": 650
+    }
   },
   {
     "id": "woollahra",
@@ -15556,8 +18900,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7189,
+    "crimeCountByYear": {
+      "2016": 282,
+      "2017": 268,
+      "2018": 350,
+      "2019": 305,
+      "2020": 235,
+      "2021": 247,
+      "2022": 227,
+      "2023": 234,
+      "2024": 230,
+      "2025": 262
+    }
   },
   {
     "id": "bellevue-hill",
@@ -15605,8 +18960,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10590,
+    "crimeCountByYear": {
+      "2016": 284,
+      "2017": 319,
+      "2018": 263,
+      "2019": 346,
+      "2020": 269,
+      "2021": 272,
+      "2022": 251,
+      "2023": 262,
+      "2024": 254,
+      "2025": 214
+    }
   },
   {
     "id": "double-bay-darling-point",
@@ -15655,8 +19021,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8686,
+    "crimeCountByYear": {
+      "2016": 673,
+      "2017": 769,
+      "2018": 914,
+      "2019": 761,
+      "2020": 428,
+      "2021": 617,
+      "2022": 602,
+      "2023": 488,
+      "2024": 462,
+      "2025": 513
+    }
   },
   {
     "id": "kensington-nsw",
@@ -15705,18 +19082,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 10745,
+    "population": 11927,
     "crimeCountByYear": {
-      "2016": 1123,
-      "2017": 1027,
-      "2018": 1129,
-      "2019": 894,
-      "2020": 832,
-      "2021": 673,
-      "2022": 775,
-      "2023": 782,
-      "2024": 1118,
-      "2025": 1405
+      "2016": 819,
+      "2017": 732,
+      "2018": 730,
+      "2019": 743,
+      "2020": 570,
+      "2021": 532,
+      "2022": 548,
+      "2023": 652,
+      "2024": 608,
+      "2025": 678
     }
   },
   {
@@ -15765,8 +19142,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13492,
+    "crimeCountByYear": {
+      "2016": 848,
+      "2017": 852,
+      "2018": 698,
+      "2019": 762,
+      "2020": 849,
+      "2021": 761,
+      "2022": 692,
+      "2023": 850,
+      "2024": 647,
+      "2025": 713
+    }
   },
   {
     "id": "maroubra-north",
@@ -15814,8 +19202,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 30722,
+    "crimeCountByYear": {
+      "2016": 2389,
+      "2017": 2562,
+      "2018": 2526,
+      "2019": 2847,
+      "2020": 2584,
+      "2021": 2786,
+      "2022": 2635,
+      "2023": 2730,
+      "2024": 2742,
+      "2025": 2532
+    }
   },
   {
     "id": "maroubra-south",
@@ -15862,8 +19261,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 30722,
+    "crimeCountByYear": {
+      "2016": 2389,
+      "2017": 2562,
+      "2018": 2526,
+      "2019": 2847,
+      "2020": 2584,
+      "2021": 2786,
+      "2022": 2635,
+      "2023": 2730,
+      "2024": 2742,
+      "2025": 2532
+    }
   },
   {
     "id": "maroubra-west",
@@ -15911,8 +19321,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 30722,
+    "crimeCountByYear": {
+      "2016": 2389,
+      "2017": 2562,
+      "2018": 2526,
+      "2019": 2847,
+      "2020": 2584,
+      "2021": 2786,
+      "2022": 2635,
+      "2023": 2730,
+      "2024": 2742,
+      "2025": 2532
+    }
   },
   {
     "id": "randwick-north",
@@ -15960,8 +19381,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28943,
+    "crimeCountByYear": {
+      "2016": 1510,
+      "2017": 1840,
+      "2018": 1556,
+      "2019": 1751,
+      "2020": 1335,
+      "2021": 1340,
+      "2022": 1399,
+      "2023": 1479,
+      "2024": 1194,
+      "2025": 1393
+    }
   },
   {
     "id": "randwick-south",
@@ -16009,8 +19441,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28943,
+    "crimeCountByYear": {
+      "2016": 1510,
+      "2017": 1840,
+      "2018": 1556,
+      "2019": 1751,
+      "2020": 1335,
+      "2021": 1340,
+      "2022": 1399,
+      "2023": 1479,
+      "2024": 1194,
+      "2025": 1393
+    }
   },
   {
     "id": "coogee-clovelly",
@@ -16058,8 +19501,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19521,
+    "crimeCountByYear": {
+      "2016": 1190,
+      "2017": 1147,
+      "2018": 1171,
+      "2019": 1277,
+      "2020": 967,
+      "2021": 1196,
+      "2022": 1019,
+      "2023": 867,
+      "2024": 748,
+      "2025": 731
+    }
   },
   {
     "id": "malabar-la-perouse",
@@ -16107,8 +19561,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5080,
+    "crimeCountByYear": {
+      "2016": 345,
+      "2017": 384,
+      "2018": 330,
+      "2019": 437,
+      "2020": 418,
+      "2021": 638,
+      "2022": 371,
+      "2023": 443,
+      "2024": 392,
+      "2025": 392
+    }
   },
   {
     "id": "matraville-chifley",
@@ -16155,8 +19620,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13415,
+    "crimeCountByYear": {
+      "2016": 656,
+      "2017": 660,
+      "2018": 839,
+      "2019": 768,
+      "2020": 689,
+      "2021": 836,
+      "2022": 623,
+      "2023": 788,
+      "2024": 682,
+      "2025": 726
+    }
   },
   {
     "id": "south-coogee",
@@ -16203,8 +19679,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5611,
+    "crimeCountByYear": {
+      "2016": 296,
+      "2017": 242,
+      "2018": 385,
+      "2019": 432,
+      "2020": 371,
+      "2021": 362,
+      "2022": 433,
+      "2023": 415,
+      "2024": 347,
+      "2025": 315
+    }
   },
   {
     "id": "bass-hill-georges-hall",
@@ -16251,8 +19738,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19969,
+    "crimeCountByYear": {
+      "2016": 1272,
+      "2017": 1258,
+      "2018": 1145,
+      "2019": 1217,
+      "2020": 1248,
+      "2021": 1371,
+      "2022": 994,
+      "2023": 1162,
+      "2024": 1326,
+      "2025": 1395
+    }
   },
   {
     "id": "chullora",
@@ -16300,8 +19798,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14,
+    "crimeCountByYear": {
+      "2016": 96,
+      "2017": 107,
+      "2018": 52,
+      "2019": 73,
+      "2020": 88,
+      "2021": 100,
+      "2022": 79,
+      "2023": 74,
+      "2024": 103,
+      "2025": 117
+    }
   },
   {
     "id": "condell-park",
@@ -16350,8 +19859,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13066,
+    "crimeCountByYear": {
+      "2016": 508,
+      "2017": 440,
+      "2018": 447,
+      "2019": 494,
+      "2020": 494,
+      "2021": 479,
+      "2022": 399,
+      "2023": 457,
+      "2024": 578,
+      "2025": 455
+    }
   },
   {
     "id": "padstow",
@@ -16398,8 +19918,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14017,
+    "crimeCountByYear": {
+      "2016": 819,
+      "2017": 766,
+      "2018": 639,
+      "2019": 752,
+      "2020": 642,
+      "2021": 674,
+      "2022": 639,
+      "2023": 744,
+      "2024": 745,
+      "2025": 625
+    }
   },
   {
     "id": "revesby",
@@ -16446,8 +19977,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15268,
+    "crimeCountByYear": {
+      "2016": 1501,
+      "2017": 1554,
+      "2018": 1473,
+      "2019": 1422,
+      "2020": 1017,
+      "2021": 1508,
+      "2022": 1083,
+      "2023": 1266,
+      "2024": 1322,
+      "2025": 1141
+    }
   },
   {
     "id": "yagoona-birrong",
@@ -16494,8 +20036,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22982,
+    "crimeCountByYear": {
+      "2016": 1751,
+      "2017": 1718,
+      "2018": 1491,
+      "2019": 1372,
+      "2020": 1097,
+      "2021": 1147,
+      "2022": 1028,
+      "2023": 1086,
+      "2024": 1204,
+      "2025": 1049
+    }
   },
   {
     "id": "bankstown-north",
@@ -16542,8 +20095,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 34933,
+    "crimeCountByYear": {
+      "2016": 6648,
+      "2017": 6624,
+      "2018": 7043,
+      "2019": 7013,
+      "2020": 6069,
+      "2021": 6455,
+      "2022": 4994,
+      "2023": 6340,
+      "2024": 5624,
+      "2025": 4826
+    }
   },
   {
     "id": "bankstown-south",
@@ -16590,8 +20154,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 34933,
+    "crimeCountByYear": {
+      "2016": 6648,
+      "2017": 6624,
+      "2018": 7043,
+      "2019": 7013,
+      "2020": 6069,
+      "2021": 6455,
+      "2022": 4994,
+      "2023": 6340,
+      "2024": 5624,
+      "2025": 4826
+    }
   },
   {
     "id": "greenacre-north",
@@ -16638,8 +20213,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26314,
+    "crimeCountByYear": {
+      "2016": 1398,
+      "2017": 1372,
+      "2018": 1160,
+      "2019": 1218,
+      "2020": 1163,
+      "2021": 1517,
+      "2022": 1164,
+      "2023": 1524,
+      "2024": 1586,
+      "2025": 1415
+    }
   },
   {
     "id": "greenacre-south",
@@ -16686,8 +20272,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26314,
+    "crimeCountByYear": {
+      "2016": 1398,
+      "2017": 1372,
+      "2018": 1160,
+      "2019": 1218,
+      "2020": 1163,
+      "2021": 1517,
+      "2022": 1164,
+      "2023": 1524,
+      "2024": 1586,
+      "2025": 1415
+    }
   },
   {
     "id": "panania-north-milperra",
@@ -16734,8 +20331,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17581,
+    "crimeCountByYear": {
+      "2016": 902,
+      "2017": 813,
+      "2018": 701,
+      "2019": 710,
+      "2020": 725,
+      "2021": 727,
+      "2022": 521,
+      "2023": 533,
+      "2024": 698,
+      "2025": 628
+    }
   },
   {
     "id": "panania-south-picnic-point",
@@ -16782,8 +20390,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19920,
+    "crimeCountByYear": {
+      "2016": 791,
+      "2017": 765,
+      "2018": 641,
+      "2019": 664,
+      "2020": 707,
+      "2021": 675,
+      "2022": 504,
+      "2023": 537,
+      "2024": 667,
+      "2025": 596
+    }
   },
   {
     "id": "belmore-belfield",
@@ -16830,8 +20449,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20336,
+    "crimeCountByYear": {
+      "2016": 1195,
+      "2017": 1125,
+      "2018": 1188,
+      "2019": 1002,
+      "2020": 855,
+      "2021": 855,
+      "2022": 752,
+      "2023": 940,
+      "2024": 874,
+      "2025": 775
+    }
   },
   {
     "id": "punchbowl",
@@ -16926,8 +20556,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12356,
+    "crimeCountByYear": {
+      "2016": 554,
+      "2017": 570,
+      "2018": 528,
+      "2019": 526,
+      "2020": 519,
+      "2021": 663,
+      "2022": 637,
+      "2023": 643,
+      "2024": 485,
+      "2025": 524
+    }
   },
   {
     "id": "lakemba",
@@ -16974,8 +20615,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17092,
+    "crimeCountByYear": {
+      "2016": 1067,
+      "2017": 962,
+      "2018": 918,
+      "2019": 815,
+      "2020": 847,
+      "2021": 854,
+      "2022": 871,
+      "2023": 826,
+      "2024": 764,
+      "2025": 764
+    }
   },
   {
     "id": "wiley-park",
@@ -17023,8 +20675,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10016,
+    "crimeCountByYear": {
+      "2016": 532,
+      "2017": 453,
+      "2018": 406,
+      "2019": 444,
+      "2020": 438,
+      "2021": 500,
+      "2022": 445,
+      "2023": 463,
+      "2024": 484,
+      "2025": 477
+    }
   },
   {
     "id": "campsie-north",
@@ -17071,8 +20734,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26132,
+    "crimeCountByYear": {
+      "2016": 2995,
+      "2017": 2819,
+      "2018": 3185,
+      "2019": 3394,
+      "2020": 3326,
+      "2021": 3133,
+      "2022": 2518,
+      "2023": 1997,
+      "2024": 1580,
+      "2025": 1639
+    }
   },
   {
     "id": "campsie-south",
@@ -17119,8 +20793,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 26132,
+    "crimeCountByYear": {
+      "2016": 2995,
+      "2017": 2819,
+      "2018": 3185,
+      "2019": 3394,
+      "2020": 3326,
+      "2021": 3133,
+      "2022": 2518,
+      "2023": 1997,
+      "2024": 1580,
+      "2025": 1639
+    }
   },
   {
     "id": "canterbury-south",
@@ -17167,8 +20852,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9430,
+    "crimeCountByYear": {
+      "2016": 569,
+      "2017": 578,
+      "2018": 583,
+      "2019": 511,
+      "2020": 444,
+      "2021": 466,
+      "2022": 398,
+      "2023": 423,
+      "2024": 365,
+      "2025": 367
+    }
   },
   {
     "id": "earlwood",
@@ -17216,8 +20912,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18053,
+    "crimeCountByYear": {
+      "2016": 545,
+      "2017": 599,
+      "2018": 489,
+      "2019": 432,
+      "2020": 377,
+      "2021": 506,
+      "2022": 421,
+      "2023": 452,
+      "2024": 427,
+      "2025": 428
+    }
   },
   {
     "id": "kingsgrove-north",
@@ -17264,8 +20971,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12881,
+    "crimeCountByYear": {
+      "2016": 917,
+      "2017": 948,
+      "2018": 749,
+      "2019": 892,
+      "2020": 613,
+      "2021": 575,
+      "2022": 639,
+      "2023": 755,
+      "2024": 667,
+      "2025": 597
+    }
   },
   {
     "id": "narwee-beverly-hills",
@@ -17312,8 +21030,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15894,
+    "crimeCountByYear": {
+      "2016": 954,
+      "2017": 771,
+      "2018": 723,
+      "2019": 814,
+      "2020": 683,
+      "2021": 870,
+      "2022": 913,
+      "2023": 1106,
+      "2024": 834,
+      "2025": 735
+    }
   },
   {
     "id": "oatley-hurstville-grove",
@@ -17361,8 +21090,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13270,
+    "crimeCountByYear": {
+      "2016": 518,
+      "2017": 425,
+      "2018": 445,
+      "2019": 434,
+      "2020": 313,
+      "2021": 394,
+      "2022": 335,
+      "2023": 270,
+      "2024": 312,
+      "2025": 300
+    }
   },
   {
     "id": "peakhurst-lugarno",
@@ -17409,8 +21149,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17948,
+    "crimeCountByYear": {
+      "2016": 560,
+      "2017": 550,
+      "2018": 518,
+      "2019": 599,
+      "2020": 543,
+      "2021": 599,
+      "2022": 548,
+      "2023": 575,
+      "2024": 532,
+      "2025": 593
+    }
   },
   {
     "id": "riverwood",
@@ -17457,8 +21208,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12793,
+    "crimeCountByYear": {
+      "2016": 1634,
+      "2017": 1550,
+      "2018": 1427,
+      "2019": 1682,
+      "2020": 1451,
+      "2021": 1876,
+      "2022": 1745,
+      "2023": 1786,
+      "2024": 1669,
+      "2025": 1927
+    }
   },
   {
     "id": "south-hurstville-blakehurst",
@@ -17506,8 +21268,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11873,
+    "crimeCountByYear": {
+      "2016": 425,
+      "2017": 409,
+      "2018": 438,
+      "2019": 405,
+      "2020": 411,
+      "2021": 499,
+      "2022": 435,
+      "2023": 313,
+      "2024": 441,
+      "2025": 363
+    }
   },
   {
     "id": "hurstville-central",
@@ -17555,8 +21328,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31162,
+    "crimeCountByYear": {
+      "2016": 3811,
+      "2017": 4127,
+      "2018": 3890,
+      "2019": 4103,
+      "2020": 2547,
+      "2021": 3523,
+      "2022": 3024,
+      "2023": 3164,
+      "2024": 3645,
+      "2025": 4221
+    }
   },
   {
     "id": "hurstville-north",
@@ -17603,8 +21387,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31162,
+    "crimeCountByYear": {
+      "2016": 3811,
+      "2017": 4127,
+      "2018": 3890,
+      "2019": 4103,
+      "2020": 2547,
+      "2021": 3523,
+      "2022": 3024,
+      "2023": 3164,
+      "2024": 3645,
+      "2025": 4221
+    }
   },
   {
     "id": "mortdale-oatley",
@@ -17651,8 +21446,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 21409,
+    "crimeCountByYear": {
+      "2016": 1012,
+      "2017": 916,
+      "2018": 864,
+      "2019": 868,
+      "2020": 690,
+      "2021": 740,
+      "2022": 649,
+      "2023": 569,
+      "2024": 573,
+      "2025": 671
+    }
   },
   {
     "id": "penshurst",
@@ -17699,18 +21505,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 677,
+    "population": 12592,
     "crimeCountByYear": {
-      "2016": 36,
-      "2017": 14,
-      "2018": 29,
-      "2019": 18,
-      "2020": 24,
-      "2021": 30,
-      "2022": 14,
-      "2023": 35,
-      "2024": 43,
-      "2025": 11
+      "2016": 643,
+      "2017": 444,
+      "2018": 409,
+      "2019": 528,
+      "2020": 449,
+      "2021": 585,
+      "2022": 417,
+      "2023": 399,
+      "2024": 359,
+      "2025": 382
     }
   },
   {
@@ -17759,8 +21565,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15201,
+    "crimeCountByYear": {
+      "2016": 1076,
+      "2017": 1072,
+      "2018": 847,
+      "2019": 1014,
+      "2020": 691,
+      "2021": 633,
+      "2022": 715,
+      "2023": 879,
+      "2024": 778,
+      "2025": 660
+    }
   },
   {
     "id": "kogarah",
@@ -17807,8 +21624,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16416,
+    "crimeCountByYear": {
+      "2016": 1716,
+      "2017": 1585,
+      "2018": 1799,
+      "2019": 2280,
+      "2020": 1622,
+      "2021": 2191,
+      "2022": 1553,
+      "2023": 1653,
+      "2024": 1496,
+      "2025": 1498
+    }
   },
   {
     "id": "kogarah-bay-carlton-allawah",
@@ -17856,8 +21684,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18084,
+    "crimeCountByYear": {
+      "2016": 679,
+      "2017": 595,
+      "2018": 594,
+      "2019": 625,
+      "2020": 483,
+      "2021": 558,
+      "2022": 494,
+      "2023": 437,
+      "2024": 450,
+      "2025": 460
+    }
   },
   {
     "id": "monterey-brighton-le-sands-kyeemagh",
@@ -17953,8 +21792,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18752,
+    "crimeCountByYear": {
+      "2016": 1922,
+      "2017": 1923,
+      "2018": 1490,
+      "2019": 1516,
+      "2020": 1212,
+      "2021": 1560,
+      "2022": 1323,
+      "2023": 1398,
+      "2024": 1083,
+      "2025": 1216
+    }
   },
   {
     "id": "sans-souci-ramsgate",
@@ -18002,8 +21852,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12015,
+    "crimeCountByYear": {
+      "2016": 450,
+      "2017": 589,
+      "2018": 521,
+      "2019": 616,
+      "2020": 576,
+      "2021": 512,
+      "2022": 500,
+      "2023": 473,
+      "2024": 478,
+      "2025": 421
+    }
   },
   {
     "id": "arncliffe-bardwell-valley",
@@ -18051,8 +21912,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14367,
+    "crimeCountByYear": {
+      "2016": 696,
+      "2017": 608,
+      "2018": 648,
+      "2019": 595,
+      "2020": 611,
+      "2021": 807,
+      "2022": 608,
+      "2023": 550,
+      "2024": 555,
+      "2025": 533
+    }
   },
   {
     "id": "bexley-north",
@@ -18100,8 +21972,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4281,
+    "crimeCountByYear": {
+      "2016": 174,
+      "2017": 128,
+      "2018": 148,
+      "2019": 146,
+      "2020": 142,
+      "2021": 147,
+      "2022": 83,
+      "2023": 119,
+      "2024": 122,
+      "2025": 108
+    }
   },
   {
     "id": "bexley-south",
@@ -18148,8 +22031,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19646,
+    "crimeCountByYear": {
+      "2016": 572,
+      "2017": 625,
+      "2018": 650,
+      "2019": 626,
+      "2020": 574,
+      "2021": 624,
+      "2022": 599,
+      "2023": 573,
+      "2024": 543,
+      "2025": 554
+    }
   },
   {
     "id": "wolli-creek",
@@ -18197,8 +22091,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10654,
+    "crimeCountByYear": {
+      "2016": 3595,
+      "2017": 2410,
+      "2018": 2213,
+      "2019": 1743,
+      "2020": 960,
+      "2021": 1929,
+      "2022": 1599,
+      "2023": 1293,
+      "2024": 1239,
+      "2025": 973
+    }
   },
   {
     "id": "concord-mortlake-cabarita",
@@ -18246,8 +22151,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18438,
+    "crimeCountByYear": {
+      "2016": 594,
+      "2017": 539,
+      "2018": 527,
+      "2019": 574,
+      "2020": 577,
+      "2021": 662,
+      "2022": 541,
+      "2023": 495,
+      "2024": 597,
+      "2025": 661
+    }
   },
   {
     "id": "drummoyne-rodd-point",
@@ -18295,8 +22211,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13391,
+    "crimeCountByYear": {
+      "2016": 564,
+      "2017": 564,
+      "2018": 605,
+      "2019": 623,
+      "2020": 507,
+      "2021": 530,
+      "2022": 508,
+      "2023": 470,
+      "2024": 527,
+      "2025": 497
+    }
   },
   {
     "id": "five-dock-abbotsford",
@@ -18344,8 +22271,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15254,
+    "crimeCountByYear": {
+      "2016": 713,
+      "2017": 779,
+      "2018": 651,
+      "2019": 656,
+      "2020": 621,
+      "2021": 668,
+      "2022": 637,
+      "2023": 627,
+      "2024": 602,
+      "2025": 682
+    }
   },
   {
     "id": "concord-west-north-strathfield",
@@ -18393,8 +22331,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10796,
+    "crimeCountByYear": {
+      "2016": 465,
+      "2017": 413,
+      "2018": 382,
+      "2019": 424,
+      "2020": 345,
+      "2021": 387,
+      "2022": 355,
+      "2023": 369,
+      "2024": 353,
+      "2025": 333
+    }
   },
   {
     "id": "rhodes",
@@ -18442,8 +22391,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11453,
+    "crimeCountByYear": {
+      "2016": 618,
+      "2017": 479,
+      "2018": 435,
+      "2019": 423,
+      "2020": 457,
+      "2021": 538,
+      "2022": 532,
+      "2023": 519,
+      "2024": 490,
+      "2025": 648
+    }
   },
   {
     "id": "balmain",
@@ -18491,8 +22451,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10454,
+    "crimeCountByYear": {
+      "2016": 654,
+      "2017": 590,
+      "2018": 524,
+      "2019": 618,
+      "2020": 512,
+      "2021": 616,
+      "2022": 703,
+      "2023": 731,
+      "2024": 851,
+      "2025": 796
+    }
   },
   {
     "id": "lilyfield-rozelle",
@@ -18540,8 +22511,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16194,
+    "crimeCountByYear": {
+      "2016": 978,
+      "2017": 927,
+      "2018": 1001,
+      "2019": 1008,
+      "2020": 893,
+      "2021": 974,
+      "2022": 827,
+      "2023": 955,
+      "2024": 962,
+      "2025": 923
+    }
   },
   {
     "id": "annandale-nsw",
@@ -18589,8 +22571,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9487,
+    "crimeCountByYear": {
+      "2016": 488,
+      "2017": 437,
+      "2018": 405,
+      "2019": 424,
+      "2020": 362,
+      "2021": 474,
+      "2022": 400,
+      "2023": 469,
+      "2024": 421,
+      "2025": 493
+    }
   },
   {
     "id": "leichhardt",
@@ -18638,8 +22631,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15158,
+    "crimeCountByYear": {
+      "2016": 954,
+      "2017": 836,
+      "2018": 847,
+      "2019": 876,
+      "2020": 729,
+      "2021": 758,
+      "2022": 638,
+      "2023": 639,
+      "2024": 727,
+      "2025": 782
+    }
   },
   {
     "id": "canterbury-north-ashbury",
@@ -18687,8 +22691,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12783,
+    "crimeCountByYear": {
+      "2016": 651,
+      "2017": 697,
+      "2018": 638,
+      "2019": 577,
+      "2020": 494,
+      "2021": 513,
+      "2022": 464,
+      "2023": 480,
+      "2024": 424,
+      "2025": 444
+    }
   },
   {
     "id": "croydon-park-enfield",
@@ -18736,8 +22751,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13921,
+    "crimeCountByYear": {
+      "2016": 468,
+      "2017": 411,
+      "2018": 380,
+      "2019": 333,
+      "2020": 343,
+      "2021": 384,
+      "2022": 348,
+      "2023": 406,
+      "2024": 414,
+      "2025": 425
+    }
   },
   {
     "id": "dulwich-hill-lewisham",
@@ -18785,8 +22811,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18106,
+    "crimeCountByYear": {
+      "2016": 1084,
+      "2017": 1079,
+      "2018": 1104,
+      "2019": 1064,
+      "2020": 927,
+      "2021": 948,
+      "2022": 824,
+      "2023": 892,
+      "2024": 821,
+      "2025": 771
+    }
   },
   {
     "id": "haberfield-summer-hill",
@@ -18882,8 +22919,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11660,
+    "crimeCountByYear": {
+      "2016": 568,
+      "2017": 554,
+      "2018": 580,
+      "2019": 707,
+      "2020": 523,
+      "2021": 635,
+      "2022": 676,
+      "2023": 614,
+      "2024": 733,
+      "2025": 577
+    }
   },
   {
     "id": "strathfield-south",
@@ -18930,8 +22978,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3636,
+    "crimeCountByYear": {
+      "2016": 274,
+      "2017": 271,
+      "2018": 249,
+      "2019": 188,
+      "2020": 212,
+      "2021": 201,
+      "2022": 216,
+      "2023": 252,
+      "2024": 350,
+      "2025": 271
+    }
   },
   {
     "id": "ashfield-north",
@@ -18978,8 +23037,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23012,
+    "crimeCountByYear": {
+      "2016": 1992,
+      "2017": 1655,
+      "2018": 1440,
+      "2019": 1518,
+      "2020": 1392,
+      "2021": 1496,
+      "2022": 1279,
+      "2023": 1400,
+      "2024": 1446,
+      "2025": 1289
+    }
   },
   {
     "id": "ashfield-south",
@@ -19026,8 +23096,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23012,
+    "crimeCountByYear": {
+      "2016": 1992,
+      "2017": 1655,
+      "2018": 1440,
+      "2019": 1518,
+      "2020": 1392,
+      "2021": 1496,
+      "2022": 1279,
+      "2023": 1400,
+      "2024": 1446,
+      "2025": 1289
+    }
   },
   {
     "id": "burwood-nsw",
@@ -19075,18 +23156,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 15147,
+    "population": 18224,
     "crimeCountByYear": {
-      "2016": 827,
-      "2017": 914,
-      "2018": 852,
-      "2019": 1004,
-      "2020": 995,
-      "2021": 748,
-      "2022": 775,
-      "2023": 862,
-      "2024": 1085,
-      "2025": 1041
+      "2016": 2450,
+      "2017": 2389,
+      "2018": 2226,
+      "2019": 2166,
+      "2020": 1937,
+      "2021": 1902,
+      "2022": 1986,
+      "2023": 1830,
+      "2024": 1918,
+      "2025": 2201
     }
   },
   {
@@ -19135,18 +23216,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 28608,
+    "population": 10755,
     "crimeCountByYear": {
-      "2016": 2170,
-      "2017": 2134,
-      "2018": 1790,
-      "2019": 2000,
-      "2020": 2015,
-      "2021": 1952,
-      "2022": 1869,
-      "2023": 1478,
-      "2024": 1856,
-      "2025": 2190
+      "2016": 328,
+      "2017": 313,
+      "2018": 249,
+      "2019": 257,
+      "2020": 327,
+      "2021": 274,
+      "2022": 226,
+      "2023": 359,
+      "2024": 306,
+      "2025": 312
     }
   },
   {
@@ -19195,8 +23276,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25915,
+    "crimeCountByYear": {
+      "2016": 3420,
+      "2017": 2859,
+      "2018": 2149,
+      "2019": 1989,
+      "2020": 1590,
+      "2021": 3261,
+      "2022": 2069,
+      "2023": 1784,
+      "2024": 1758,
+      "2025": 1650
+    }
   },
   {
     "id": "strathfield-west",
@@ -19244,8 +23336,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25915,
+    "crimeCountByYear": {
+      "2016": 3420,
+      "2017": 2859,
+      "2018": 2149,
+      "2019": 1989,
+      "2020": 1590,
+      "2021": 3261,
+      "2022": 2069,
+      "2023": 1784,
+      "2024": 1758,
+      "2025": 1650
+    }
   },
   {
     "id": "chatswood-west-lane-cove-north",
@@ -19294,8 +23397,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 37326,
+    "crimeCountByYear": {
+      "2016": 3349,
+      "2017": 3381,
+      "2018": 3425,
+      "2019": 3060,
+      "2020": 2649,
+      "2021": 2741,
+      "2022": 2723,
+      "2023": 3165,
+      "2024": 3155,
+      "2025": 3520
+    }
   },
   {
     "id": "st-leonards-naremburn",
@@ -19343,8 +23457,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13136,
+    "crimeCountByYear": {
+      "2016": 750,
+      "2017": 764,
+      "2018": 809,
+      "2019": 676,
+      "2020": 485,
+      "2021": 633,
+      "2022": 643,
+      "2023": 796,
+      "2024": 727,
+      "2025": 684
+    }
   },
   {
     "id": "artarmon",
@@ -19392,8 +23517,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9417,
+    "crimeCountByYear": {
+      "2016": 447,
+      "2017": 453,
+      "2018": 499,
+      "2019": 488,
+      "2020": 439,
+      "2021": 416,
+      "2022": 399,
+      "2023": 457,
+      "2024": 512,
+      "2025": 494
+    }
   },
   {
     "id": "castle-cove-northbridge",
@@ -19442,8 +23578,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9136,
+    "crimeCountByYear": {
+      "2016": 145,
+      "2017": 156,
+      "2018": 174,
+      "2019": 161,
+      "2020": 184,
+      "2021": 178,
+      "2022": 174,
+      "2023": 132,
+      "2024": 143,
+      "2025": 148
+    }
   },
   {
     "id": "chatswood-east",
@@ -19491,8 +23638,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25553,
+    "crimeCountByYear": {
+      "2016": 3113,
+      "2017": 3114,
+      "2018": 3146,
+      "2019": 2745,
+      "2020": 2391,
+      "2021": 2521,
+      "2022": 2403,
+      "2023": 2910,
+      "2024": 2873,
+      "2025": 3274
+    }
   },
   {
     "id": "greenwich-riverview",
@@ -19540,8 +23698,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8617,
+    "crimeCountByYear": {
+      "2016": 181,
+      "2017": 203,
+      "2018": 217,
+      "2019": 204,
+      "2020": 175,
+      "2021": 234,
+      "2022": 155,
+      "2023": 161,
+      "2024": 183,
+      "2025": 141
+    }
   },
   {
     "id": "lane-cove",
@@ -19590,8 +23759,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12363,
+    "crimeCountByYear": {
+      "2016": 294,
+      "2017": 328,
+      "2018": 391,
+      "2019": 439,
+      "2020": 335,
+      "2021": 324,
+      "2022": 367,
+      "2023": 302,
+      "2024": 360,
+      "2025": 353
+    }
   },
   {
     "id": "willoughby",
@@ -19639,8 +23819,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7124,
+    "crimeCountByYear": {
+      "2016": 186,
+      "2017": 182,
+      "2018": 205,
+      "2019": 180,
+      "2020": 164,
+      "2021": 200,
+      "2022": 151,
+      "2023": 170,
+      "2024": 167,
+      "2025": 92
+    }
   },
   {
     "id": "asquith-mount-colah",
@@ -19688,8 +23879,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13976,
+    "crimeCountByYear": {
+      "2016": 328,
+      "2017": 384,
+      "2018": 345,
+      "2019": 405,
+      "2020": 362,
+      "2021": 397,
+      "2022": 320,
+      "2023": 275,
+      "2024": 337,
+      "2025": 267
+    }
   },
   {
     "id": "berowra-brooklyn-cowan",
@@ -19737,8 +23939,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6130,
+    "crimeCountByYear": {
+      "2016": 671,
+      "2017": 511,
+      "2018": 417,
+      "2019": 480,
+      "2020": 404,
+      "2021": 517,
+      "2022": 257,
+      "2023": 247,
+      "2024": 254,
+      "2025": 263
+    }
   },
   {
     "id": "normanhurst-thornleigh-westleigh",
@@ -19786,8 +23999,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18786,
+    "crimeCountByYear": {
+      "2016": 546,
+      "2017": 602,
+      "2018": 477,
+      "2019": 580,
+      "2020": 592,
+      "2021": 553,
+      "2022": 453,
+      "2023": 593,
+      "2024": 564,
+      "2025": 509
+    }
   },
   {
     "id": "hornsby-east",
@@ -19834,8 +24058,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22462,
+    "crimeCountByYear": {
+      "2016": 4282,
+      "2017": 3903,
+      "2018": 3565,
+      "2019": 3801,
+      "2020": 2276,
+      "2021": 3036,
+      "2022": 2508,
+      "2023": 1908,
+      "2024": 2458,
+      "2025": 2604
+    }
   },
   {
     "id": "hornsby-west",
@@ -19882,8 +24117,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22462,
+    "crimeCountByYear": {
+      "2016": 4282,
+      "2017": 3903,
+      "2018": 3565,
+      "2019": 3801,
+      "2020": 2276,
+      "2021": 3036,
+      "2022": 2508,
+      "2023": 1908,
+      "2024": 2458,
+      "2025": 2604
+    }
   },
   {
     "id": "wahroonga-west-waitara",
@@ -19931,8 +24177,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25690,
+    "crimeCountByYear": {
+      "2016": 644,
+      "2017": 762,
+      "2018": 637,
+      "2019": 699,
+      "2020": 604,
+      "2021": 550,
+      "2022": 483,
+      "2023": 567,
+      "2024": 529,
+      "2025": 543
+    }
   },
   {
     "id": "gordon-killara",
@@ -19980,8 +24237,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19415,
+    "crimeCountByYear": {
+      "2016": 526,
+      "2017": 698,
+      "2018": 543,
+      "2019": 543,
+      "2020": 578,
+      "2021": 612,
+      "2022": 493,
+      "2023": 403,
+      "2024": 458,
+      "2025": 460
+    }
   },
   {
     "id": "lindfield-roseville",
@@ -20029,8 +24297,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 21283,
+    "crimeCountByYear": {
+      "2016": 556,
+      "2017": 646,
+      "2018": 486,
+      "2019": 582,
+      "2020": 532,
+      "2021": 513,
+      "2022": 467,
+      "2023": 404,
+      "2024": 413,
+      "2025": 430
+    }
   },
   {
     "id": "pymble",
@@ -20078,8 +24357,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11775,
+    "crimeCountByYear": {
+      "2016": 298,
+      "2017": 271,
+      "2018": 286,
+      "2019": 296,
+      "2020": 272,
+      "2021": 254,
+      "2022": 224,
+      "2023": 213,
+      "2024": 233,
+      "2025": 217
+    }
   },
   {
     "id": "st-ives",
@@ -20127,8 +24417,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18384,
+    "crimeCountByYear": {
+      "2016": 283,
+      "2017": 370,
+      "2018": 448,
+      "2019": 358,
+      "2020": 424,
+      "2021": 351,
+      "2022": 321,
+      "2023": 346,
+      "2024": 416,
+      "2025": 290
+    }
   },
   {
     "id": "turramurra",
@@ -20176,8 +24477,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12850,
+    "crimeCountByYear": {
+      "2016": 358,
+      "2017": 344,
+      "2018": 338,
+      "2019": 356,
+      "2020": 341,
+      "2021": 434,
+      "2022": 339,
+      "2023": 344,
+      "2024": 339,
+      "2025": 333
+    }
   },
   {
     "id": "wahroonga-east-warrawee",
@@ -20225,8 +24537,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 21023,
+    "crimeCountByYear": {
+      "2016": 531,
+      "2017": 573,
+      "2018": 449,
+      "2019": 487,
+      "2020": 472,
+      "2021": 472,
+      "2022": 322,
+      "2023": 408,
+      "2024": 398,
+      "2025": 401
+    }
   },
   {
     "id": "cremorne-cammeray",
@@ -20274,8 +24597,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18351,
+    "crimeCountByYear": {
+      "2016": 505,
+      "2017": 581,
+      "2018": 531,
+      "2019": 511,
+      "2020": 499,
+      "2021": 492,
+      "2022": 386,
+      "2023": 407,
+      "2024": 360,
+      "2025": 362
+    }
   },
   {
     "id": "crows-nest-waverton",
@@ -20323,8 +24657,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7955,
+    "crimeCountByYear": {
+      "2016": 578,
+      "2017": 695,
+      "2018": 526,
+      "2019": 530,
+      "2020": 452,
+      "2021": 456,
+      "2022": 467,
+      "2023": 435,
+      "2024": 362,
+      "2025": 483
+    }
   },
   {
     "id": "neutral-bay-kirribilli",
@@ -20373,8 +24718,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13719,
+    "crimeCountByYear": {
+      "2016": 722,
+      "2017": 721,
+      "2018": 629,
+      "2019": 665,
+      "2020": 540,
+      "2021": 627,
+      "2022": 564,
+      "2023": 560,
+      "2024": 529,
+      "2025": 477
+    }
   },
   {
     "id": "north-sydney-lavender-bay",
@@ -20423,8 +24779,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9834,
+    "crimeCountByYear": {
+      "2016": 1571,
+      "2017": 1674,
+      "2018": 1603,
+      "2019": 1337,
+      "2020": 745,
+      "2021": 757,
+      "2022": 803,
+      "2023": 714,
+      "2024": 642,
+      "2025": 583
+    }
   },
   {
     "id": "mosman-north",
@@ -20472,8 +24839,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28329,
+    "crimeCountByYear": {
+      "2016": 926,
+      "2017": 1026,
+      "2018": 993,
+      "2019": 1000,
+      "2020": 834,
+      "2021": 1017,
+      "2022": 845,
+      "2023": 805,
+      "2024": 696,
+      "2025": 782
+    }
   },
   {
     "id": "mosman-south",
@@ -20521,8 +24899,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28329,
+    "crimeCountByYear": {
+      "2016": 926,
+      "2017": 1026,
+      "2018": 993,
+      "2019": 1000,
+      "2020": 834,
+      "2021": 1017,
+      "2022": 845,
+      "2023": 805,
+      "2024": 696,
+      "2025": 782
+    }
   },
   {
     "id": "balgowlah-clontarf-seaforth",
@@ -20571,8 +24960,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17198,
+    "crimeCountByYear": {
+      "2016": 481,
+      "2017": 511,
+      "2018": 624,
+      "2019": 551,
+      "2020": 506,
+      "2021": 434,
+      "2022": 412,
+      "2023": 413,
+      "2024": 476,
+      "2025": 472
+    }
   },
   {
     "id": "manly-fairlight",
@@ -20620,8 +25020,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22437,
+    "crimeCountByYear": {
+      "2016": 2332,
+      "2017": 2387,
+      "2018": 2370,
+      "2019": 2259,
+      "2020": 1925,
+      "2021": 1991,
+      "2022": 1580,
+      "2023": 1815,
+      "2024": 1630,
+      "2025": 1437
+    }
   },
   {
     "id": "avalon-palm-beach",
@@ -20720,8 +25131,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8388,
+    "crimeCountByYear": {
+      "2016": 156,
+      "2017": 135,
+      "2018": 165,
+      "2019": 166,
+      "2020": 193,
+      "2021": 184,
+      "2022": 124,
+      "2023": 122,
+      "2024": 106,
+      "2025": 121
+    }
   },
   {
     "id": "newport-bilgola",
@@ -20818,8 +25240,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19256,
+    "crimeCountByYear": {
+      "2016": 748,
+      "2017": 743,
+      "2018": 727,
+      "2019": 902,
+      "2020": 675,
+      "2021": 842,
+      "2022": 579,
+      "2023": 606,
+      "2024": 592,
+      "2025": 538
+    }
   },
   {
     "id": "north-narrabeen-warriewood-south",
@@ -20867,8 +25300,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14395,
+    "crimeCountByYear": {
+      "2016": 544,
+      "2017": 543,
+      "2018": 531,
+      "2019": 648,
+      "2020": 553,
+      "2021": 568,
+      "2022": 444,
+      "2023": 493,
+      "2024": 511,
+      "2025": 466
+    }
   },
   {
     "id": "beacon-hill-narraweena",
@@ -20916,8 +25360,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14785,
+    "crimeCountByYear": {
+      "2016": 377,
+      "2017": 390,
+      "2018": 397,
+      "2019": 413,
+      "2020": 448,
+      "2021": 390,
+      "2022": 282,
+      "2023": 320,
+      "2024": 331,
+      "2025": 289
+    }
   },
   {
     "id": "cromer",
@@ -20965,8 +25420,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8030,
+    "crimeCountByYear": {
+      "2016": 174,
+      "2017": 218,
+      "2018": 195,
+      "2019": 214,
+      "2020": 227,
+      "2021": 216,
+      "2022": 187,
+      "2023": 184,
+      "2024": 180,
+      "2025": 190
+    }
   },
   {
     "id": "forestville-killarney-heights",
@@ -21015,8 +25481,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13161,
+    "crimeCountByYear": {
+      "2016": 246,
+      "2017": 287,
+      "2018": 211,
+      "2019": 360,
+      "2020": 276,
+      "2021": 247,
+      "2022": 248,
+      "2023": 264,
+      "2024": 253,
+      "2025": 211
+    }
   },
   {
     "id": "freshwater-brookvale",
@@ -21064,8 +25541,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12575,
+    "crimeCountByYear": {
+      "2016": 1207,
+      "2017": 1101,
+      "2018": 1223,
+      "2019": 1092,
+      "2020": 947,
+      "2021": 989,
+      "2022": 850,
+      "2023": 1125,
+      "2024": 1104,
+      "2025": 867
+    }
   },
   {
     "id": "manly-vale-allambie-heights",
@@ -21113,8 +25601,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13706,
+    "crimeCountByYear": {
+      "2016": 337,
+      "2017": 341,
+      "2018": 373,
+      "2019": 443,
+      "2020": 400,
+      "2021": 418,
+      "2022": 309,
+      "2023": 327,
+      "2024": 290,
+      "2025": 296
+    }
   },
   {
     "id": "terrey-hills-duffys-forest",
@@ -21163,8 +25662,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3651,
+    "crimeCountByYear": {
+      "2016": 99,
+      "2017": 123,
+      "2018": 110,
+      "2019": 94,
+      "2020": 115,
+      "2021": 92,
+      "2022": 74,
+      "2023": 78,
+      "2024": 116,
+      "2025": 85
+    }
   },
   {
     "id": "belrose",
@@ -21212,8 +25722,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8726,
+    "crimeCountByYear": {
+      "2016": 212,
+      "2017": 230,
+      "2018": 270,
+      "2019": 209,
+      "2020": 275,
+      "2021": 232,
+      "2022": 146,
+      "2023": 183,
+      "2024": 192,
+      "2025": 210
+    }
   },
   {
     "id": "collaroy-collaroy-plateau",
@@ -21261,8 +25782,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12749,
+    "crimeCountByYear": {
+      "2016": 348,
+      "2017": 307,
+      "2018": 401,
+      "2019": 459,
+      "2020": 367,
+      "2021": 343,
+      "2022": 231,
+      "2023": 249,
+      "2024": 272,
+      "2025": 232
+    }
   },
   {
     "id": "dee-why-south-north-curl-curl",
@@ -21310,8 +25842,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 27642,
+    "crimeCountByYear": {
+      "2016": 1911,
+      "2017": 1818,
+      "2018": 1950,
+      "2019": 2287,
+      "2020": 2032,
+      "2021": 1460,
+      "2022": 1350,
+      "2023": 1291,
+      "2024": 1127,
+      "2025": 867
+    }
   },
   {
     "id": "dee-why-north",
@@ -21359,8 +25902,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23354,
+    "crimeCountByYear": {
+      "2016": 1827,
+      "2017": 1726,
+      "2018": 1859,
+      "2019": 2178,
+      "2020": 1903,
+      "2021": 1328,
+      "2022": 1268,
+      "2023": 1215,
+      "2024": 1043,
+      "2025": 807
+    }
   },
   {
     "id": "frenchs-forest-oxford-falls",
@@ -21409,8 +25963,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14532,
+    "crimeCountByYear": {
+      "2016": 295,
+      "2017": 368,
+      "2018": 369,
+      "2019": 397,
+      "2020": 326,
+      "2021": 305,
+      "2022": 277,
+      "2023": 287,
+      "2024": 287,
+      "2025": 298
+    }
   },
   {
     "id": "narrabeen-wheeler-heights",
@@ -21458,8 +26023,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11487,
+    "crimeCountByYear": {
+      "2016": 417,
+      "2017": 377,
+      "2018": 459,
+      "2019": 432,
+      "2020": 321,
+      "2021": 344,
+      "2022": 276,
+      "2023": 265,
+      "2024": 254,
+      "2025": 275
+    }
   },
   {
     "id": "camden-ellis-lane",
@@ -21506,8 +26082,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4230,
+    "crimeCountByYear": {
+      "2016": 420,
+      "2017": 529,
+      "2018": 450,
+      "2019": 408,
+      "2020": 290,
+      "2021": 382,
+      "2022": 264,
+      "2023": 225,
+      "2024": 208,
+      "2025": 265
+    }
   },
   {
     "id": "currans-hill",
@@ -21554,8 +26141,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5541,
+    "crimeCountByYear": {
+      "2016": 160,
+      "2017": 203,
+      "2018": 142,
+      "2019": 138,
+      "2020": 181,
+      "2021": 171,
+      "2022": 163,
+      "2023": 120,
+      "2024": 150,
+      "2025": 203
+    }
   },
   {
     "id": "elderslie-narellan",
@@ -21652,8 +26250,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13332,
+    "crimeCountByYear": {
+      "2016": 297,
+      "2017": 335,
+      "2018": 275,
+      "2019": 322,
+      "2020": 286,
+      "2021": 252,
+      "2022": 283,
+      "2023": 238,
+      "2024": 276,
+      "2025": 259
+    }
   },
   {
     "id": "mount-annan",
@@ -21700,8 +26309,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11784,
+    "crimeCountByYear": {
+      "2016": 540,
+      "2017": 471,
+      "2018": 489,
+      "2019": 563,
+      "2020": 413,
+      "2021": 345,
+      "2022": 306,
+      "2023": 345,
+      "2024": 317,
+      "2025": 376
+    }
   },
   {
     "id": "spring-farm",
@@ -21749,8 +26369,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9868,
+    "crimeCountByYear": {
+      "2016": 157,
+      "2017": 192,
+      "2018": 208,
+      "2019": 279,
+      "2020": 216,
+      "2021": 258,
+      "2022": 206,
+      "2023": 236,
+      "2024": 207,
+      "2025": 222
+    }
   },
   {
     "id": "bradbury-wedderburn",
@@ -21797,8 +26428,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10098,
+    "crimeCountByYear": {
+      "2016": 664,
+      "2017": 510,
+      "2018": 502,
+      "2019": 528,
+      "2020": 511,
+      "2021": 568,
+      "2022": 557,
+      "2023": 482,
+      "2024": 481,
+      "2025": 488
+    }
   },
   {
     "id": "campbelltown-woodbine",
@@ -21845,8 +26487,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19357,
+    "crimeCountByYear": {
+      "2016": 8649,
+      "2017": 8602,
+      "2018": 8147,
+      "2019": 8217,
+      "2020": 7778,
+      "2021": 8208,
+      "2022": 8166,
+      "2023": 8059,
+      "2024": 6577,
+      "2025": 6734
+    }
   },
   {
     "id": "claymore-eagle-vale-raby",
@@ -21893,8 +26546,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14311,
+    "crimeCountByYear": {
+      "2016": 1029,
+      "2017": 820,
+      "2018": 827,
+      "2019": 938,
+      "2020": 932,
+      "2021": 941,
+      "2022": 683,
+      "2023": 617,
+      "2024": 659,
+      "2025": 578
+    }
   },
   {
     "id": "holsworthy-military-area",
@@ -21989,8 +26653,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10376,
+    "crimeCountByYear": {
+      "2016": 1233,
+      "2017": 1119,
+      "2018": 1189,
+      "2019": 959,
+      "2020": 1062,
+      "2021": 1052,
+      "2022": 866,
+      "2023": 886,
+      "2024": 875,
+      "2025": 873
+    }
   },
   {
     "id": "minto-st-andrews",
@@ -22037,8 +26712,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19725,
+    "crimeCountByYear": {
+      "2016": 2175,
+      "2017": 1971,
+      "2018": 2336,
+      "2019": 2064,
+      "2020": 1462,
+      "2021": 1748,
+      "2022": 1511,
+      "2023": 1672,
+      "2024": 1485,
+      "2025": 1352
+    }
   },
   {
     "id": "rosemeadow-glen-alpine",
@@ -22085,8 +26771,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12436,
+    "crimeCountByYear": {
+      "2016": 798,
+      "2017": 708,
+      "2018": 617,
+      "2019": 573,
+      "2020": 562,
+      "2021": 565,
+      "2022": 521,
+      "2023": 579,
+      "2024": 548,
+      "2025": 574
+    }
   },
   {
     "id": "denham-court-bardia",
@@ -22134,8 +26831,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14876,
+    "crimeCountByYear": {
+      "2016": 130,
+      "2017": 167,
+      "2018": 235,
+      "2019": 318,
+      "2020": 405,
+      "2021": 439,
+      "2022": 403,
+      "2023": 400,
+      "2024": 434,
+      "2025": 395
+    }
   },
   {
     "id": "glenfield",
@@ -22182,8 +26890,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10536,
+    "crimeCountByYear": {
+      "2016": 3008,
+      "2017": 3052,
+      "2018": 3095,
+      "2019": 2411,
+      "2020": 1545,
+      "2021": 2080,
+      "2022": 1995,
+      "2023": 2466,
+      "2024": 2423,
+      "2025": 2527
+    }
   },
   {
     "id": "ingleburn",
@@ -22230,8 +26949,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15264,
+    "crimeCountByYear": {
+      "2016": 2306,
+      "2017": 2110,
+      "2018": 2475,
+      "2019": 2132,
+      "2020": 1695,
+      "2021": 1748,
+      "2022": 1620,
+      "2023": 2118,
+      "2024": 1608,
+      "2025": 1644
+    }
   },
   {
     "id": "macquarie-fields",
@@ -22278,8 +27008,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14023,
+    "crimeCountByYear": {
+      "2016": 2481,
+      "2017": 2085,
+      "2018": 1628,
+      "2019": 2005,
+      "2020": 1671,
+      "2021": 2335,
+      "2022": 2370,
+      "2023": 2639,
+      "2024": 1621,
+      "2025": 1429
+    }
   },
   {
     "id": "bargo",
@@ -22326,8 +27067,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4516,
+    "crimeCountByYear": {
+      "2016": 214,
+      "2017": 260,
+      "2018": 243,
+      "2019": 200,
+      "2020": 184,
+      "2021": 220,
+      "2022": 174,
+      "2023": 195,
+      "2024": 183,
+      "2025": 218
+    }
   },
   {
     "id": "douglas-park-appin",
@@ -22376,8 +27128,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4599,
+    "crimeCountByYear": {
+      "2016": 223,
+      "2017": 250,
+      "2018": 171,
+      "2019": 166,
+      "2020": 126,
+      "2021": 151,
+      "2022": 175,
+      "2023": 222,
+      "2024": 179,
+      "2025": 225
+    }
   },
   {
     "id": "picton-tahmoor-buxton",
@@ -22424,8 +27187,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13130,
+    "crimeCountByYear": {
+      "2016": 768,
+      "2017": 836,
+      "2018": 807,
+      "2019": 725,
+      "2020": 580,
+      "2021": 663,
+      "2022": 567,
+      "2023": 584,
+      "2024": 601,
+      "2025": 672
+    }
   },
   {
     "id": "the-oaks-oakdale",
@@ -22472,8 +27246,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5010,
+    "crimeCountByYear": {
+      "2016": 157,
+      "2017": 155,
+      "2018": 177,
+      "2019": 154,
+      "2020": 138,
+      "2021": 112,
+      "2022": 75,
+      "2023": 123,
+      "2024": 152,
+      "2025": 117
+    }
   },
   {
     "id": "blackheath-megalong-valley",
@@ -22520,8 +27305,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4820,
+    "crimeCountByYear": {
+      "2016": 189,
+      "2017": 165,
+      "2018": 182,
+      "2019": 200,
+      "2020": 249,
+      "2021": 209,
+      "2022": 168,
+      "2023": 146,
+      "2024": 171,
+      "2025": 161
+    }
   },
   {
     "id": "blaxland-warrimoo-lapstone",
@@ -22568,8 +27364,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10834,
+    "crimeCountByYear": {
+      "2016": 674,
+      "2017": 872,
+      "2018": 605,
+      "2019": 519,
+      "2020": 397,
+      "2021": 519,
+      "2022": 463,
+      "2023": 454,
+      "2024": 380,
+      "2025": 288
+    }
   },
   {
     "id": "blue-mountains-north",
@@ -22665,8 +27472,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12771,
+    "crimeCountByYear": {
+      "2016": 1451,
+      "2017": 1408,
+      "2018": 1613,
+      "2019": 1226,
+      "2020": 1430,
+      "2021": 1301,
+      "2022": 1342,
+      "2023": 1174,
+      "2024": 1048,
+      "2025": 1088
+    }
   },
   {
     "id": "lawson-hazelbrook-linden",
@@ -22713,8 +27531,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8199,
+    "crimeCountByYear": {
+      "2016": 399,
+      "2017": 431,
+      "2018": 511,
+      "2019": 372,
+      "2020": 480,
+      "2021": 340,
+      "2022": 356,
+      "2023": 255,
+      "2024": 281,
+      "2025": 249
+    }
   },
   {
     "id": "springwood-winmalee",
@@ -22761,8 +27590,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14811,
+    "crimeCountByYear": {
+      "2016": 835,
+      "2017": 691,
+      "2018": 648,
+      "2019": 590,
+      "2020": 557,
+      "2021": 523,
+      "2022": 589,
+      "2023": 503,
+      "2024": 494,
+      "2025": 460
+    }
   },
   {
     "id": "wentworth-falls",
@@ -22809,8 +27649,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6428,
+    "crimeCountByYear": {
+      "2016": 249,
+      "2017": 244,
+      "2018": 266,
+      "2019": 247,
+      "2020": 278,
+      "2021": 240,
+      "2022": 270,
+      "2023": 218,
+      "2024": 189,
+      "2025": 171
+    }
   },
   {
     "id": "blue-mountains-south",
@@ -22907,8 +27758,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 7054,
+    "crimeCountByYear": {
+      "2016": 364,
+      "2017": 465,
+      "2018": 389,
+      "2019": 453,
+      "2020": 444,
+      "2021": 423,
+      "2022": 378,
+      "2023": 397,
+      "2024": 407,
+      "2025": 403
+    }
   },
   {
     "id": "emu-plains-leonay",
@@ -22955,8 +27817,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10708,
+    "crimeCountByYear": {
+      "2016": 585,
+      "2017": 699,
+      "2018": 573,
+      "2019": 606,
+      "2020": 504,
+      "2021": 524,
+      "2022": 547,
+      "2023": 526,
+      "2024": 534,
+      "2025": 548
+    }
   },
   {
     "id": "glenmore-park-regentville",
@@ -23004,8 +27877,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 25850,
+    "crimeCountByYear": {
+      "2016": 697,
+      "2017": 777,
+      "2018": 731,
+      "2019": 846,
+      "2020": 757,
+      "2021": 692,
+      "2022": 604,
+      "2023": 625,
+      "2024": 704,
+      "2025": 661
+    }
   },
   {
     "id": "jamisontown-south-penrith",
@@ -23052,8 +27936,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17326,
+    "crimeCountByYear": {
+      "2016": 1155,
+      "2017": 999,
+      "2018": 1052,
+      "2019": 1075,
+      "2020": 971,
+      "2021": 1031,
+      "2022": 947,
+      "2023": 1092,
+      "2024": 1054,
+      "2025": 1168
+    }
   },
   {
     "id": "kingswood-werrington",
@@ -23149,8 +28044,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5769,
+    "crimeCountByYear": {
+      "2016": 280,
+      "2017": 220,
+      "2018": 256,
+      "2019": 285,
+      "2020": 323,
+      "2021": 304,
+      "2022": 272,
+      "2023": 340,
+      "2024": 263,
+      "2025": 300
+    }
   },
   {
     "id": "penrith",
@@ -23197,8 +28103,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17966,
+    "crimeCountByYear": {
+      "2016": 6476,
+      "2017": 6653,
+      "2018": 8402,
+      "2019": 8475,
+      "2020": 6719,
+      "2021": 6963,
+      "2022": 7685,
+      "2023": 8055,
+      "2024": 8670,
+      "2025": 6706
+    }
   },
   {
     "id": "warragamba-silverdale",
@@ -23245,8 +28162,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5745,
+    "crimeCountByYear": {
+      "2016": 112,
+      "2017": 128,
+      "2018": 133,
+      "2019": 134,
+      "2020": 174,
+      "2021": 116,
+      "2022": 140,
+      "2023": 188,
+      "2024": 183,
+      "2025": 168
+    }
   },
   {
     "id": "cranebrook-castlereagh",
@@ -23293,8 +28221,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17027,
+    "crimeCountByYear": {
+      "2016": 996,
+      "2017": 1128,
+      "2018": 958,
+      "2019": 1012,
+      "2020": 1023,
+      "2021": 1197,
+      "2022": 1060,
+      "2023": 1150,
+      "2024": 1031,
+      "2025": 794
+    }
   },
   {
     "id": "jordan-springs-llandilo",
@@ -23342,8 +28281,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13390,
+    "crimeCountByYear": {
+      "2016": 436,
+      "2017": 474,
+      "2018": 508,
+      "2019": 579,
+      "2020": 551,
+      "2021": 488,
+      "2022": 539,
+      "2023": 629,
+      "2024": 468,
+      "2025": 477
+    }
   },
   {
     "id": "richmond-clarendon",
@@ -23390,8 +28340,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5565,
+    "crimeCountByYear": {
+      "2016": 1354,
+      "2017": 1354,
+      "2018": 1233,
+      "2019": 977,
+      "2020": 714,
+      "2021": 623,
+      "2022": 614,
+      "2023": 667,
+      "2024": 703,
+      "2025": 582
+    }
   },
   {
     "id": "windsor-bligh-park",
@@ -23439,8 +28400,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8135,
+    "crimeCountByYear": {
+      "2016": 1326,
+      "2017": 1403,
+      "2018": 1735,
+      "2019": 1564,
+      "2020": 1050,
+      "2021": 1117,
+      "2022": 925,
+      "2023": 987,
+      "2024": 1017,
+      "2025": 968
+    }
   },
   {
     "id": "yarramundi-londonderry",
@@ -23488,8 +28460,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4853,
+    "crimeCountByYear": {
+      "2016": 189,
+      "2017": 194,
+      "2018": 234,
+      "2019": 227,
+      "2020": 191,
+      "2021": 207,
+      "2022": 202,
+      "2023": 249,
+      "2024": 215,
+      "2025": 213
+    }
   },
   {
     "id": "erskine-park",
@@ -23537,8 +28520,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6486,
+    "crimeCountByYear": {
+      "2016": 268,
+      "2017": 251,
+      "2018": 244,
+      "2019": 233,
+      "2020": 245,
+      "2021": 218,
+      "2022": 203,
+      "2023": 223,
+      "2024": 223,
+      "2025": 208
+    }
   },
   {
     "id": "st-clair",
@@ -23634,8 +28628,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12967,
+    "crimeCountByYear": {
+      "2016": 822,
+      "2017": 711,
+      "2018": 836,
+      "2019": 830,
+      "2020": 952,
+      "2021": 923,
+      "2022": 694,
+      "2023": 750,
+      "2024": 736,
+      "2025": 687
+    }
   },
   {
     "id": "st-marys-north-st-marys",
@@ -23682,8 +28687,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17379,
+    "crimeCountByYear": {
+      "2016": 6983,
+      "2017": 7898,
+      "2018": 6899,
+      "2019": 7990,
+      "2020": 6235,
+      "2021": 6179,
+      "2022": 6114,
+      "2023": 7248,
+      "2024": 5738,
+      "2025": 3995
+    }
   },
   {
     "id": "rookwood-cemetery",
@@ -23779,8 +28795,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 39333,
+    "crimeCountByYear": {
+      "2016": 2866,
+      "2017": 3725,
+      "2018": 3888,
+      "2019": 2896,
+      "2020": 2491,
+      "2021": 3483,
+      "2022": 2579,
+      "2023": 2505,
+      "2024": 2538,
+      "2025": 2651
+    }
   },
   {
     "id": "auburn-north",
@@ -23827,8 +28854,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 39333,
+    "crimeCountByYear": {
+      "2016": 2866,
+      "2017": 3725,
+      "2018": 3888,
+      "2019": 2896,
+      "2020": 2491,
+      "2021": 3483,
+      "2022": 2579,
+      "2023": 2505,
+      "2024": 2538,
+      "2025": 2651
+    }
   },
   {
     "id": "auburn-south",
@@ -23875,8 +28913,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 39333,
+    "crimeCountByYear": {
+      "2016": 2866,
+      "2017": 3725,
+      "2018": 3888,
+      "2019": 2896,
+      "2020": 2491,
+      "2021": 3483,
+      "2022": 2579,
+      "2023": 2505,
+      "2024": 2538,
+      "2025": 2651
+    }
   },
   {
     "id": "berala",
@@ -23923,8 +28972,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8757,
+    "crimeCountByYear": {
+      "2016": 370,
+      "2017": 397,
+      "2018": 333,
+      "2019": 321,
+      "2020": 262,
+      "2021": 237,
+      "2022": 258,
+      "2023": 329,
+      "2024": 288,
+      "2025": 281
+    }
   },
   {
     "id": "lidcombe",
@@ -23971,8 +29031,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23663,
+    "crimeCountByYear": {
+      "2016": 1876,
+      "2017": 2089,
+      "2018": 2270,
+      "2019": 2225,
+      "2020": 1376,
+      "2021": 2218,
+      "2022": 1490,
+      "2023": 1317,
+      "2024": 1235,
+      "2025": 1541
+    }
   },
   {
     "id": "regents-park",
@@ -24020,8 +29091,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4990,
+    "crimeCountByYear": {
+      "2016": 348,
+      "2017": 303,
+      "2018": 321,
+      "2019": 258,
+      "2020": 254,
+      "2021": 273,
+      "2022": 245,
+      "2023": 273,
+      "2024": 255,
+      "2025": 285
+    }
   },
   {
     "id": "silverwater-newington",
@@ -24119,8 +29201,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17551,
+    "crimeCountByYear": {
+      "2016": 1064,
+      "2017": 1267,
+      "2018": 1307,
+      "2019": 1453,
+      "2020": 1046,
+      "2021": 1099,
+      "2022": 1531,
+      "2023": 1822,
+      "2024": 1795,
+      "2025": 1551
+    }
   },
   {
     "id": "ermington-rydalmere",
@@ -24167,8 +29260,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19960,
+    "crimeCountByYear": {
+      "2016": 943,
+      "2017": 1004,
+      "2018": 937,
+      "2019": 983,
+      "2020": 977,
+      "2021": 1018,
+      "2022": 826,
+      "2023": 946,
+      "2024": 907,
+      "2025": 950
+    }
   },
   {
     "id": "oatlands-dundas-valley",
@@ -24215,8 +29319,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11708,
+    "crimeCountByYear": {
+      "2016": 393,
+      "2017": 333,
+      "2018": 379,
+      "2019": 493,
+      "2020": 393,
+      "2021": 406,
+      "2022": 348,
+      "2023": 335,
+      "2024": 408,
+      "2025": 386
+    }
   },
   {
     "id": "carlingford-east",
@@ -24264,8 +29379,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28044,
+    "crimeCountByYear": {
+      "2016": 713,
+      "2017": 775,
+      "2018": 915,
+      "2019": 871,
+      "2020": 814,
+      "2021": 903,
+      "2022": 682,
+      "2023": 694,
+      "2024": 771,
+      "2025": 810
+    }
   },
   {
     "id": "carlingford-west",
@@ -24313,8 +29439,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 28044,
+    "crimeCountByYear": {
+      "2016": 713,
+      "2017": 775,
+      "2018": 915,
+      "2019": 871,
+      "2020": 814,
+      "2021": 903,
+      "2022": 682,
+      "2023": 694,
+      "2024": 771,
+      "2025": 810
+    }
   },
   {
     "id": "chester-hill-sefton",
@@ -24361,8 +29498,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20307,
+    "crimeCountByYear": {
+      "2016": 1697,
+      "2017": 1658,
+      "2018": 1438,
+      "2019": 1277,
+      "2020": 1163,
+      "2021": 1292,
+      "2022": 1042,
+      "2023": 1123,
+      "2024": 1264,
+      "2025": 1169
+    }
   },
   {
     "id": "fairfield-east",
@@ -24409,8 +29557,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 5198,
+    "crimeCountByYear": {
+      "2016": 321,
+      "2017": 382,
+      "2018": 351,
+      "2019": 350,
+      "2020": 322,
+      "2021": 342,
+      "2022": 338,
+      "2023": 302,
+      "2024": 366,
+      "2025": 269
+    }
   },
   {
     "id": "granville-clyde",
@@ -24457,8 +29616,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16725,
+    "crimeCountByYear": {
+      "2016": 4353,
+      "2017": 4997,
+      "2018": 3416,
+      "2019": 2843,
+      "2020": 2400,
+      "2021": 3401,
+      "2022": 2839,
+      "2023": 2583,
+      "2024": 2502,
+      "2025": 2440
+    }
   },
   {
     "id": "guildford-south-granville",
@@ -24505,8 +29675,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 29920,
+    "crimeCountByYear": {
+      "2016": 2266,
+      "2017": 2093,
+      "2018": 2079,
+      "2019": 2140,
+      "2020": 2373,
+      "2021": 2932,
+      "2022": 2244,
+      "2023": 2155,
+      "2024": 2205,
+      "2025": 2046
+    }
   },
   {
     "id": "guildford-west-merrylands-west",
@@ -24553,8 +29734,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12816,
+    "crimeCountByYear": {
+      "2016": 604,
+      "2017": 610,
+      "2018": 638,
+      "2019": 738,
+      "2020": 639,
+      "2021": 738,
+      "2022": 664,
+      "2023": 637,
+      "2024": 656,
+      "2025": 704
+    }
   },
   {
     "id": "smithfield-industrial",
@@ -24698,8 +29890,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23511,
+    "crimeCountByYear": {
+      "2016": 740,
+      "2017": 714,
+      "2018": 724,
+      "2019": 749,
+      "2020": 764,
+      "2021": 685,
+      "2022": 568,
+      "2023": 601,
+      "2024": 667,
+      "2025": 621
+    }
   },
   {
     "id": "merrylands-holroyd",
@@ -24746,8 +29949,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 33720,
+    "crimeCountByYear": {
+      "2016": 3103,
+      "2017": 2975,
+      "2018": 2805,
+      "2019": 3187,
+      "2020": 3394,
+      "2021": 3848,
+      "2022": 3209,
+      "2023": 3264,
+      "2024": 3245,
+      "2025": 3250
+    }
   },
   {
     "id": "pemulwuy-greystanes-north",
@@ -24795,8 +30009,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 29043,
+    "crimeCountByYear": {
+      "2016": 1002,
+      "2017": 1026,
+      "2018": 999,
+      "2019": 1025,
+      "2020": 1010,
+      "2021": 963,
+      "2022": 773,
+      "2023": 891,
+      "2024": 879,
+      "2025": 861
+    }
   },
   {
     "id": "south-wentworthville",
@@ -24843,8 +30068,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6913,
+    "crimeCountByYear": {
+      "2016": 300,
+      "2017": 294,
+      "2018": 349,
+      "2019": 339,
+      "2020": 305,
+      "2021": 380,
+      "2022": 308,
+      "2023": 374,
+      "2024": 375,
+      "2025": 297
+    }
   },
   {
     "id": "north-parramatta",
@@ -24891,8 +30127,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12064,
+    "crimeCountByYear": {
+      "2016": 748,
+      "2017": 687,
+      "2018": 797,
+      "2019": 816,
+      "2020": 651,
+      "2021": 907,
+      "2022": 632,
+      "2023": 762,
+      "2024": 885,
+      "2025": 666
+    }
   },
   {
     "id": "north-rocks",
@@ -24940,8 +30187,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9136,
+    "crimeCountByYear": {
+      "2016": 272,
+      "2017": 334,
+      "2018": 310,
+      "2019": 320,
+      "2020": 260,
+      "2021": 274,
+      "2022": 255,
+      "2023": 218,
+      "2024": 273,
+      "2025": 259
+    }
   },
   {
     "id": "northmead",
@@ -24988,8 +30246,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11261,
+    "crimeCountByYear": {
+      "2016": 595,
+      "2017": 641,
+      "2018": 529,
+      "2019": 660,
+      "2020": 591,
+      "2021": 656,
+      "2022": 627,
+      "2023": 636,
+      "2024": 536,
+      "2025": 417
+    }
   },
   {
     "id": "toongabbie-constitution-hill",
@@ -25036,8 +30305,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20207,
+    "crimeCountByYear": {
+      "2016": 1202,
+      "2017": 1334,
+      "2018": 1233,
+      "2019": 1470,
+      "2020": 1310,
+      "2021": 1337,
+      "2022": 1219,
+      "2023": 1189,
+      "2024": 1086,
+      "2025": 1065
+    }
   },
   {
     "id": "winston-hills",
@@ -25085,8 +30365,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12123,
+    "crimeCountByYear": {
+      "2016": 266,
+      "2017": 325,
+      "2018": 279,
+      "2019": 319,
+      "2020": 227,
+      "2021": 314,
+      "2022": 267,
+      "2023": 216,
+      "2024": 272,
+      "2025": 268
+    }
   },
   {
     "id": "pendle-hill-girraween",
@@ -25133,8 +30424,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13999,
+    "crimeCountByYear": {
+      "2016": 827,
+      "2017": 946,
+      "2018": 1009,
+      "2019": 873,
+      "2020": 765,
+      "2021": 854,
+      "2022": 802,
+      "2023": 870,
+      "2024": 756,
+      "2025": 761
+    }
   },
   {
     "id": "wentworthville-westmead",
@@ -25181,8 +30483,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31653,
+    "crimeCountByYear": {
+      "2016": 1999,
+      "2017": 2099,
+      "2018": 1961,
+      "2019": 2076,
+      "2020": 1800,
+      "2021": 2277,
+      "2022": 2302,
+      "2023": 2678,
+      "2024": 2220,
+      "2025": 2002
+    }
   },
   {
     "id": "parramatta-north",
@@ -25229,8 +30542,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 30211,
+    "crimeCountByYear": {
+      "2016": 8950,
+      "2017": 9428,
+      "2018": 10141,
+      "2019": 10462,
+      "2020": 8870,
+      "2021": 11944,
+      "2022": 9996,
+      "2023": 9697,
+      "2024": 9618,
+      "2025": 9753
+    }
   },
   {
     "id": "parramatta-south",
@@ -25277,8 +30601,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 30211,
+    "crimeCountByYear": {
+      "2016": 8950,
+      "2017": 9428,
+      "2018": 10141,
+      "2019": 10462,
+      "2020": 8870,
+      "2021": 11944,
+      "2022": 9996,
+      "2023": 9697,
+      "2024": 9618,
+      "2025": 9753
+    }
   },
   {
     "id": "rosehill-harris-park",
@@ -25326,8 +30661,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9090,
+    "crimeCountByYear": {
+      "2016": 1013,
+      "2017": 960,
+      "2018": 930,
+      "2019": 837,
+      "2020": 863,
+      "2021": 1015,
+      "2022": 838,
+      "2023": 838,
+      "2024": 689,
+      "2025": 664
+    }
   },
   {
     "id": "pennant-hills-cheltenham",
@@ -25375,8 +30721,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9754,
+    "crimeCountByYear": {
+      "2016": 454,
+      "2017": 457,
+      "2018": 398,
+      "2019": 377,
+      "2020": 293,
+      "2021": 289,
+      "2022": 224,
+      "2023": 277,
+      "2024": 250,
+      "2025": 222
+    }
   },
   {
     "id": "epping-east-north-epping",
@@ -25424,8 +30781,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 34208,
+    "crimeCountByYear": {
+      "2016": 1237,
+      "2017": 1177,
+      "2018": 1121,
+      "2019": 1053,
+      "2020": 817,
+      "2021": 1138,
+      "2022": 1008,
+      "2023": 861,
+      "2024": 901,
+      "2025": 1219
+    }
   },
   {
     "id": "epping-nsw-west",
@@ -25473,8 +30841,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 29551,
+    "crimeCountByYear": {
+      "2016": 1202,
+      "2017": 1142,
+      "2018": 1069,
+      "2019": 1008,
+      "2020": 748,
+      "2021": 1079,
+      "2022": 940,
+      "2023": 801,
+      "2024": 856,
+      "2025": 1163
+    }
   },
   {
     "id": "gladesville-huntleys-point",
@@ -25522,8 +30901,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13009,
+    "crimeCountByYear": {
+      "2016": 448,
+      "2017": 519,
+      "2018": 519,
+      "2019": 540,
+      "2020": 522,
+      "2021": 600,
+      "2022": 416,
+      "2023": 408,
+      "2024": 396,
+      "2025": 414
+    }
   },
   {
     "id": "hunters-hill-woolwich",
@@ -25571,8 +30961,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 9847,
+    "crimeCountByYear": {
+      "2016": 322,
+      "2017": 376,
+      "2018": 476,
+      "2019": 451,
+      "2020": 392,
+      "2021": 340,
+      "2022": 363,
+      "2023": 242,
+      "2024": 251,
+      "2025": 293
+    }
   },
   {
     "id": "macquarie-park-marsfield",
@@ -25620,8 +31021,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23563,
+    "crimeCountByYear": {
+      "2016": 1405,
+      "2017": 1428,
+      "2018": 1048,
+      "2019": 1240,
+      "2020": 1189,
+      "2021": 1180,
+      "2022": 1023,
+      "2023": 1091,
+      "2024": 1194,
+      "2025": 1366
+    }
   },
   {
     "id": "north-ryde-east-ryde",
@@ -25669,8 +31081,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16565,
+    "crimeCountByYear": {
+      "2016": 347,
+      "2017": 412,
+      "2018": 361,
+      "2019": 406,
+      "2020": 452,
+      "2021": 379,
+      "2022": 305,
+      "2023": 318,
+      "2024": 274,
+      "2025": 347
+    }
   },
   {
     "id": "west-ryde-meadowbank",
@@ -25717,8 +31140,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18260,
+    "crimeCountByYear": {
+      "2016": 646,
+      "2017": 784,
+      "2018": 768,
+      "2019": 751,
+      "2020": 790,
+      "2021": 918,
+      "2022": 763,
+      "2023": 749,
+      "2024": 687,
+      "2025": 671
+    }
   },
   {
     "id": "putney",
@@ -25766,8 +31200,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 4097,
+    "crimeCountByYear": {
+      "2016": 85,
+      "2017": 129,
+      "2018": 162,
+      "2019": 140,
+      "2020": 150,
+      "2021": 157,
+      "2022": 168,
+      "2023": 126,
+      "2024": 142,
+      "2025": 138
+    }
   },
   {
     "id": "denistone",
@@ -25815,8 +31260,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3726,
+    "crimeCountByYear": {
+      "2016": 62,
+      "2017": 83,
+      "2018": 86,
+      "2019": 101,
+      "2020": 60,
+      "2021": 92,
+      "2022": 67,
+      "2023": 74,
+      "2024": 68,
+      "2025": 70
+    }
   },
   {
     "id": "eastwood",
@@ -25863,18 +31319,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 2855,
+    "population": 18695,
     "crimeCountByYear": {
-      "2016": 108,
-      "2017": 70,
-      "2018": 102,
-      "2019": 115,
-      "2020": 101,
-      "2021": 123,
-      "2022": 115,
-      "2023": 152,
-      "2024": 115,
-      "2025": 94
+      "2016": 789,
+      "2017": 720,
+      "2018": 826,
+      "2019": 715,
+      "2020": 682,
+      "2021": 735,
+      "2022": 690,
+      "2023": 655,
+      "2024": 700,
+      "2025": 770
     }
   },
   {
@@ -25922,8 +31378,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31907,
+    "crimeCountByYear": {
+      "2016": 1088,
+      "2017": 1282,
+      "2018": 1237,
+      "2019": 1416,
+      "2020": 1264,
+      "2021": 1318,
+      "2022": 1203,
+      "2023": 1212,
+      "2024": 1263,
+      "2025": 1335
+    }
   },
   {
     "id": "ryde-south",
@@ -25971,8 +31438,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31907,
+    "crimeCountByYear": {
+      "2016": 1088,
+      "2017": 1282,
+      "2018": 1237,
+      "2019": 1416,
+      "2020": 1264,
+      "2021": 1318,
+      "2022": 1203,
+      "2023": 1212,
+      "2024": 1263,
+      "2025": 1335
+    }
   },
   {
     "id": "ashcroft-busby-miller",
@@ -26019,8 +31497,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11454,
+    "crimeCountByYear": {
+      "2016": 1488,
+      "2017": 1434,
+      "2018": 1291,
+      "2019": 1658,
+      "2020": 1746,
+      "2021": 1509,
+      "2022": 1555,
+      "2023": 1548,
+      "2024": 1414,
+      "2025": 1481
+    }
   },
   {
     "id": "austral-greendale",
@@ -26116,8 +31605,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 168,
+    "crimeCountByYear": {
+      "2016": 48,
+      "2017": 22,
+      "2018": 24,
+      "2019": 33,
+      "2020": 31,
+      "2021": 24,
+      "2022": 15,
+      "2023": 18,
+      "2024": 22,
+      "2025": 24
+    }
   },
   {
     "id": "cecil-hills",
@@ -26165,8 +31665,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6906,
+    "crimeCountByYear": {
+      "2016": 180,
+      "2017": 170,
+      "2018": 149,
+      "2019": 153,
+      "2020": 199,
+      "2021": 183,
+      "2022": 134,
+      "2023": 144,
+      "2024": 197,
+      "2025": 152
+    }
   },
   {
     "id": "green-valley",
@@ -26213,8 +31724,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12919,
+    "crimeCountByYear": {
+      "2016": 984,
+      "2017": 898,
+      "2018": 755,
+      "2019": 869,
+      "2020": 811,
+      "2021": 744,
+      "2022": 809,
+      "2023": 638,
+      "2024": 608,
+      "2025": 682
+    }
   },
   {
     "id": "hinchinbrook",
@@ -26261,8 +31783,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11521,
+    "crimeCountByYear": {
+      "2016": 324,
+      "2017": 301,
+      "2018": 289,
+      "2019": 292,
+      "2020": 368,
+      "2021": 358,
+      "2022": 294,
+      "2023": 269,
+      "2024": 296,
+      "2025": 295
+    }
   },
   {
     "id": "hoxton-park-carnes-hill-horningsea-park",
@@ -26311,8 +31844,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11577,
+    "crimeCountByYear": {
+      "2016": 437,
+      "2017": 465,
+      "2018": 342,
+      "2019": 473,
+      "2020": 355,
+      "2021": 456,
+      "2022": 426,
+      "2023": 453,
+      "2024": 465,
+      "2025": 406
+    }
   },
   {
     "id": "west-hoxton-middleton-grange",
@@ -26361,8 +31905,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17195,
+    "crimeCountByYear": {
+      "2016": 402,
+      "2017": 343,
+      "2018": 370,
+      "2019": 410,
+      "2020": 377,
+      "2021": 426,
+      "2022": 335,
+      "2023": 357,
+      "2024": 398,
+      "2025": 363
+    }
   },
   {
     "id": "cobbitty-bringelly",
@@ -26410,8 +31965,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6639,
+    "crimeCountByYear": {
+      "2016": 143,
+      "2017": 194,
+      "2018": 238,
+      "2019": 221,
+      "2020": 194,
+      "2021": 199,
+      "2022": 188,
+      "2023": 235,
+      "2024": 264,
+      "2025": 240
+    }
   },
   {
     "id": "gledswood-hills-gregory-hills",
@@ -26459,8 +32025,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15254,
+    "crimeCountByYear": {
+      "2016": 239,
+      "2017": 243,
+      "2018": 356,
+      "2019": 454,
+      "2020": 435,
+      "2021": 478,
+      "2022": 491,
+      "2023": 620,
+      "2024": 664,
+      "2025": 668
+    }
   },
   {
     "id": "leppington-catherine-field",
@@ -26508,8 +32085,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12032,
+    "crimeCountByYear": {
+      "2016": 298,
+      "2017": 558,
+      "2018": 733,
+      "2019": 599,
+      "2020": 388,
+      "2021": 413,
+      "2022": 459,
+      "2023": 668,
+      "2024": 663,
+      "2025": 730
+    }
   },
   {
     "id": "oran-park",
@@ -26558,8 +32146,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17624,
+    "crimeCountByYear": {
+      "2016": 178,
+      "2017": 227,
+      "2018": 345,
+      "2019": 417,
+      "2020": 472,
+      "2021": 515,
+      "2022": 514,
+      "2023": 485,
+      "2024": 603,
+      "2025": 565
+    }
   },
   {
     "id": "bonnyrigg-heights-bonnyrigg",
@@ -26606,8 +32205,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17154,
+    "crimeCountByYear": {
+      "2016": 749,
+      "2017": 759,
+      "2018": 791,
+      "2019": 689,
+      "2020": 711,
+      "2021": 859,
+      "2022": 663,
+      "2023": 780,
+      "2024": 653,
+      "2025": 610
+    }
   },
   {
     "id": "bossley-park-abbotsbury",
@@ -26655,8 +32265,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19692,
+    "crimeCountByYear": {
+      "2016": 600,
+      "2017": 508,
+      "2018": 471,
+      "2019": 600,
+      "2020": 516,
+      "2021": 536,
+      "2022": 499,
+      "2023": 477,
+      "2024": 416,
+      "2025": 420
+    }
   },
   {
     "id": "cabramatta-lansvale",
@@ -26703,8 +32324,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 23737,
+    "crimeCountByYear": {
+      "2016": 4796,
+      "2017": 3991,
+      "2018": 4010,
+      "2019": 4718,
+      "2020": 4641,
+      "2021": 4854,
+      "2022": 3866,
+      "2023": 3827,
+      "2024": 3314,
+      "2025": 3435
+    }
   },
   {
     "id": "cabramatta-west-mount-pritchard",
@@ -26751,8 +32383,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 18248,
+    "crimeCountByYear": {
+      "2016": 968,
+      "2017": 960,
+      "2018": 838,
+      "2019": 987,
+      "2020": 955,
+      "2021": 1012,
+      "2022": 913,
+      "2023": 843,
+      "2024": 877,
+      "2025": 747
+    }
   },
   {
     "id": "canley-vale-canley-heights",
@@ -26799,8 +32442,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22620,
+    "crimeCountByYear": {
+      "2016": 1277,
+      "2017": 1257,
+      "2018": 1334,
+      "2019": 1495,
+      "2020": 1663,
+      "2021": 1716,
+      "2022": 1113,
+      "2023": 1161,
+      "2024": 1007,
+      "2025": 920
+    }
   },
   {
     "id": "edensor-park",
@@ -26848,8 +32502,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10279,
+    "crimeCountByYear": {
+      "2016": 293,
+      "2017": 264,
+      "2018": 238,
+      "2019": 263,
+      "2020": 264,
+      "2021": 296,
+      "2022": 222,
+      "2023": 207,
+      "2024": 176,
+      "2025": 220
+    }
   },
   {
     "id": "fairfield",
@@ -26896,18 +32561,18 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": 6535,
+    "population": 18596,
     "crimeCountByYear": {
-      "2016": 575,
-      "2017": 492,
-      "2018": 508,
-      "2019": 512,
-      "2020": 527,
-      "2021": 476,
-      "2022": 677,
-      "2023": 502,
-      "2024": 653,
-      "2025": 612
+      "2016": 2977,
+      "2017": 3006,
+      "2018": 3131,
+      "2019": 3105,
+      "2020": 2855,
+      "2021": 2802,
+      "2022": 2520,
+      "2023": 2387,
+      "2024": 2193,
+      "2025": 2267
     }
   },
   {
@@ -26955,8 +32620,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12981,
+    "crimeCountByYear": {
+      "2016": 434,
+      "2017": 452,
+      "2018": 432,
+      "2019": 408,
+      "2020": 426,
+      "2021": 411,
+      "2022": 379,
+      "2023": 344,
+      "2024": 333,
+      "2025": 348
+    }
   },
   {
     "id": "greenfield-park-prairiewood",
@@ -27004,8 +32680,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8851,
+    "crimeCountByYear": {
+      "2016": 615,
+      "2017": 474,
+      "2018": 507,
+      "2019": 546,
+      "2020": 469,
+      "2021": 377,
+      "2022": 343,
+      "2023": 373,
+      "2024": 288,
+      "2025": 375
+    }
   },
   {
     "id": "horsley-park-kemps-creek",
@@ -27054,8 +32741,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 3911,
+    "crimeCountByYear": {
+      "2016": 292,
+      "2017": 244,
+      "2018": 290,
+      "2019": 291,
+      "2020": 231,
+      "2021": 246,
+      "2022": 212,
+      "2023": 304,
+      "2024": 311,
+      "2025": 384
+    }
   },
   {
     "id": "smithfield-wetherill-park",
@@ -27103,8 +32801,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 19572,
+    "crimeCountByYear": {
+      "2016": 1447,
+      "2017": 1394,
+      "2018": 1420,
+      "2019": 1471,
+      "2020": 1430,
+      "2021": 1575,
+      "2022": 1302,
+      "2023": 1391,
+      "2024": 1422,
+      "2025": 1319
+    }
   },
   {
     "id": "st-johns-park-wakeley",
@@ -27152,8 +32861,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11195,
+    "crimeCountByYear": {
+      "2016": 306,
+      "2017": 267,
+      "2018": 297,
+      "2019": 272,
+      "2020": 309,
+      "2021": 257,
+      "2022": 241,
+      "2023": 196,
+      "2024": 374,
+      "2025": 228
+    }
   },
   {
     "id": "wetherill-park-industrial",
@@ -27249,8 +32969,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16584,
+    "crimeCountByYear": {
+      "2016": 1253,
+      "2017": 1206,
+      "2018": 1051,
+      "2019": 1186,
+      "2020": 1135,
+      "2021": 1374,
+      "2022": 1187,
+      "2023": 1171,
+      "2024": 1184,
+      "2025": 951
+    }
   },
   {
     "id": "chipping-norton-moorebank",
@@ -27298,8 +33029,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20820,
+    "crimeCountByYear": {
+      "2016": 1159,
+      "2017": 879,
+      "2018": 997,
+      "2019": 1016,
+      "2020": 863,
+      "2021": 914,
+      "2022": 810,
+      "2023": 945,
+      "2024": 960,
+      "2025": 923
+    }
   },
   {
     "id": "holsworthy-wattle-grove",
@@ -27346,8 +33088,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 14543,
+    "crimeCountByYear": {
+      "2016": 823,
+      "2017": 729,
+      "2018": 672,
+      "2019": 434,
+      "2020": 396,
+      "2021": 402,
+      "2022": 336,
+      "2023": 298,
+      "2024": 353,
+      "2025": 300
+    }
   },
   {
     "id": "lurnea-cartwright",
@@ -27394,8 +33147,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12673,
+    "crimeCountByYear": {
+      "2016": 811,
+      "2017": 761,
+      "2018": 702,
+      "2019": 820,
+      "2020": 975,
+      "2021": 1125,
+      "2022": 982,
+      "2023": 1150,
+      "2024": 1106,
+      "2025": 898
+    }
   },
   {
     "id": "warwick-farm",
@@ -27442,8 +33206,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6135,
+    "crimeCountByYear": {
+      "2016": 2077,
+      "2017": 2522,
+      "2018": 2847,
+      "2019": 2950,
+      "2020": 2073,
+      "2021": 1740,
+      "2022": 1360,
+      "2023": 1266,
+      "2024": 1344,
+      "2025": 1358
+    }
   },
   {
     "id": "edmondson-park",
@@ -27492,8 +33267,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12080,
+    "crimeCountByYear": {
+      "2016": 255,
+      "2017": 289,
+      "2018": 478,
+      "2019": 1023,
+      "2020": 484,
+      "2021": 496,
+      "2022": 431,
+      "2023": 573,
+      "2024": 610,
+      "2025": 604
+    }
   },
   {
     "id": "liverpool-east",
@@ -27540,8 +33326,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31078,
+    "crimeCountByYear": {
+      "2016": 10611,
+      "2017": 12282,
+      "2018": 12336,
+      "2019": 15295,
+      "2020": 11850,
+      "2021": 11336,
+      "2022": 11360,
+      "2023": 11805,
+      "2024": 12294,
+      "2025": 14387
+    }
   },
   {
     "id": "liverpool-west",
@@ -27588,8 +33385,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 31078,
+    "crimeCountByYear": {
+      "2016": 10611,
+      "2017": 12282,
+      "2018": 12336,
+      "2019": 15295,
+      "2020": 11850,
+      "2021": 11336,
+      "2022": 11360,
+      "2023": 11805,
+      "2024": 12294,
+      "2025": 14387
+    }
   },
   {
     "id": "prestons",
@@ -27637,8 +33445,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 15694,
+    "crimeCountByYear": {
+      "2016": 764,
+      "2017": 722,
+      "2018": 682,
+      "2019": 752,
+      "2020": 685,
+      "2021": 792,
+      "2022": 673,
+      "2023": 653,
+      "2024": 661,
+      "2025": 584
+    }
   },
   {
     "id": "gymea-grays-point",
@@ -27686,8 +33505,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 11253,
+    "crimeCountByYear": {
+      "2016": 720,
+      "2017": 744,
+      "2018": 678,
+      "2019": 760,
+      "2020": 592,
+      "2021": 605,
+      "2022": 643,
+      "2023": 567,
+      "2024": 454,
+      "2025": 419
+    }
   },
   {
     "id": "miranda-yowie-bay",
@@ -27736,8 +33566,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 20995,
+    "crimeCountByYear": {
+      "2016": 2468,
+      "2017": 3087,
+      "2018": 3163,
+      "2019": 3230,
+      "2020": 3142,
+      "2021": 3513,
+      "2022": 3286,
+      "2023": 2838,
+      "2024": 2087,
+      "2025": 2300
+    }
   },
   {
     "id": "sylvania-taren-point",
@@ -27785,8 +33626,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12628,
+    "crimeCountByYear": {
+      "2016": 568,
+      "2017": 522,
+      "2018": 535,
+      "2019": 636,
+      "2020": 640,
+      "2021": 606,
+      "2022": 614,
+      "2023": 442,
+      "2024": 447,
+      "2025": 495
+    }
   },
   {
     "id": "caringbah",
@@ -27833,8 +33685,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12575,
+    "crimeCountByYear": {
+      "2016": 1436,
+      "2017": 1538,
+      "2018": 1629,
+      "2019": 1796,
+      "2020": 1766,
+      "2021": 1967,
+      "2022": 1313,
+      "2023": 1390,
+      "2024": 1233,
+      "2025": 1179
+    }
   },
   {
     "id": "caringbah-south",
@@ -27882,8 +33745,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 13168,
+    "crimeCountByYear": {
+      "2016": 252,
+      "2017": 291,
+      "2018": 270,
+      "2019": 348,
+      "2020": 321,
+      "2021": 220,
+      "2022": 239,
+      "2023": 220,
+      "2024": 211,
+      "2025": 194
+    }
   },
   {
     "id": "cronulla-kurnell-bundeena",
@@ -27931,8 +33805,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22530,
+    "crimeCountByYear": {
+      "2016": 2562,
+      "2017": 2873,
+      "2018": 2536,
+      "2019": 2639,
+      "2020": 2329,
+      "2021": 2738,
+      "2022": 1697,
+      "2023": 1556,
+      "2024": 1290,
+      "2025": 1427
+    }
   },
   {
     "id": "lilli-pilli-port-hacking-dolans-bay",
@@ -28030,8 +33915,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 8779,
+    "crimeCountByYear": {
+      "2016": 478,
+      "2017": 424,
+      "2018": 435,
+      "2019": 454,
+      "2020": 338,
+      "2021": 410,
+      "2022": 310,
+      "2023": 336,
+      "2024": 292,
+      "2025": 303
+    }
   },
   {
     "id": "heathcote-waterfall",
@@ -28079,8 +33975,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6670,
+    "crimeCountByYear": {
+      "2016": 336,
+      "2017": 241,
+      "2018": 246,
+      "2019": 350,
+      "2020": 293,
+      "2021": 292,
+      "2022": 190,
+      "2023": 251,
+      "2024": 261,
+      "2025": 239
+    }
   },
   {
     "id": "illawong-alfords-point",
@@ -28128,8 +34035,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 10558,
+    "crimeCountByYear": {
+      "2016": 224,
+      "2017": 234,
+      "2018": 204,
+      "2019": 240,
+      "2020": 301,
+      "2021": 285,
+      "2022": 216,
+      "2023": 182,
+      "2024": 184,
+      "2025": 185
+    }
   },
   {
     "id": "menai-lucas-heights-woronora",
@@ -28177,8 +34095,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 12466,
+    "crimeCountByYear": {
+      "2016": 477,
+      "2017": 473,
+      "2018": 399,
+      "2019": 555,
+      "2020": 456,
+      "2021": 499,
+      "2022": 384,
+      "2023": 365,
+      "2024": 392,
+      "2025": 351
+    }
   },
   {
     "id": "oyster-bay-como-jannali",
@@ -28227,8 +34156,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 16374,
+    "crimeCountByYear": {
+      "2016": 718,
+      "2017": 698,
+      "2018": 564,
+      "2019": 699,
+      "2020": 465,
+      "2021": 610,
+      "2022": 487,
+      "2023": 575,
+      "2024": 454,
+      "2025": 459
+    }
   },
   {
     "id": "royal-national-park",
@@ -28276,8 +34216,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 42,
+    "crimeCountByYear": {
+      "2016": 126,
+      "2017": 110,
+      "2018": 132,
+      "2019": 149,
+      "2020": 128,
+      "2021": 211,
+      "2022": 89,
+      "2023": 74,
+      "2024": 78,
+      "2025": 62
+    }
   },
   {
     "id": "sutherland-kirrawee",
@@ -28324,8 +34275,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 22577,
+    "crimeCountByYear": {
+      "2016": 3743,
+      "2017": 4010,
+      "2018": 3995,
+      "2019": 3854,
+      "2020": 3099,
+      "2021": 3602,
+      "2022": 3056,
+      "2023": 3034,
+      "2024": 2525,
+      "2025": 2344
+    }
   },
   {
     "id": "engadine",
@@ -28373,8 +34335,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 17736,
+    "crimeCountByYear": {
+      "2016": 414,
+      "2017": 429,
+      "2018": 479,
+      "2019": 601,
+      "2020": 462,
+      "2021": 505,
+      "2022": 451,
+      "2023": 430,
+      "2024": 388,
+      "2025": 375
+    }
   },
   {
     "id": "loftus-yarrawarrah",
@@ -28422,8 +34395,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 6965,
+    "crimeCountByYear": {
+      "2016": 166,
+      "2017": 150,
+      "2018": 139,
+      "2019": 158,
+      "2020": 172,
+      "2021": 149,
+      "2022": 138,
+      "2023": 140,
+      "2024": 109,
+      "2025": 120
+    }
   },
   {
     "id": "woronora-heights",
@@ -28471,8 +34455,19 @@ window.suburbs =
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
     },
-    "population": null,
-    "crimeCountByYear": {}
+    "population": 2781,
+    "crimeCountByYear": {
+      "2016": 28,
+      "2017": 58,
+      "2018": 56,
+      "2019": 48,
+      "2020": 39,
+      "2021": 40,
+      "2022": 27,
+      "2023": 31,
+      "2024": 22,
+      "2025": 41
+    }
   },
   {
     "id": "migratory-offshore-shipping-nsw",
