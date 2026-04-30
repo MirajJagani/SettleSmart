@@ -33,7 +33,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karabar",
@@ -68,7 +70,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "queanbeyan",
@@ -103,7 +107,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "queanbeyan-east",
@@ -138,7 +144,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "queanbeyan-west-jerrabomberra",
@@ -173,7 +181,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "googong",
@@ -209,7 +219,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "queanbeyan-surrounds",
@@ -245,7 +257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bombala",
@@ -280,7 +294,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cooma",
@@ -315,6 +331,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 94,
+    "crimeCountByYear": {
+      "2016": 9,
+      "2017": 2,
+      "2018": 5,
+      "2019": 7,
+      "2020": 12,
+      "2021": 10,
+      "2022": 5,
+      "2023": 1,
+      "2024": 4,
+      "2025": 2
     }
   },
   {
@@ -351,7 +380,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jindabyne-berridale",
@@ -386,7 +417,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "batemans-bay",
@@ -421,7 +454,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "batemans-bay-south",
@@ -456,7 +491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bega-tathra",
@@ -491,7 +528,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bega-eden-hinterland",
@@ -527,7 +566,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broulee-tomakin",
@@ -562,7 +603,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deua-wadbilliga",
@@ -597,7 +640,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eden",
@@ -632,7 +677,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eurobodalla-hinterland",
@@ -668,7 +715,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "merimbula-tura-beach",
@@ -703,7 +752,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moruya-tuross-head",
@@ -738,7 +789,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narooma-bermagui",
@@ -773,7 +826,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goulburn",
@@ -808,7 +863,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goulburn-surrounds",
@@ -844,7 +901,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yass",
@@ -879,7 +938,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yass-surrounds",
@@ -915,7 +976,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "young",
@@ -950,7 +1013,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "young-surrounds",
@@ -986,7 +1051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "avoca-beach-copacabana",
@@ -1022,7 +1089,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "box-head-macmasters-beach",
@@ -1057,7 +1126,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "calga-kulnura",
@@ -1092,7 +1163,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "erina-green-point",
@@ -1127,7 +1200,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gosford-springfield",
@@ -1162,7 +1237,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kariong",
@@ -1197,7 +1274,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kincumber-picketts-valley",
@@ -1232,7 +1311,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narara",
@@ -1267,7 +1348,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "niagara-park-lisarow",
@@ -1304,7 +1387,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "point-clare-koolewong",
@@ -1339,7 +1424,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "saratoga-davistown",
@@ -1374,7 +1461,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "terrigal-north-avoca",
@@ -1410,7 +1499,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "umina-booker-bay-patonga",
@@ -1445,7 +1536,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wamberal-forresters-beach",
@@ -1481,7 +1574,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woy-woy-blackwall",
@@ -1516,7 +1611,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wyoming",
@@ -1551,7 +1648,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bateau-bay-killarney-vale",
@@ -1586,7 +1685,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blue-haven-san-remo",
@@ -1621,7 +1722,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "budgewoi-buff-point-halekulani",
@@ -1656,7 +1759,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chittaway-bay-tumbi-umbi",
@@ -1691,7 +1796,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gorokan-kanwal-charmhaven",
@@ -1726,7 +1833,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jilliby-yarramalong",
@@ -1762,7 +1871,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lake-munmorah-mannering-park",
@@ -1799,7 +1910,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ourimbah-fountaindale",
@@ -1834,7 +1947,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "summerland-point-gwandalan",
@@ -1869,7 +1984,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-entrance",
@@ -1904,7 +2021,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toukley-norah-head",
@@ -1939,7 +2058,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tuggerah-kangy-angy",
@@ -1974,7 +2095,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warnervale-wadalba",
@@ -2009,7 +2132,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wyong",
@@ -2044,7 +2169,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bathurst-east",
@@ -2079,7 +2206,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bathurst-surrounds",
@@ -2115,7 +2244,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oberon",
@@ -2150,7 +2281,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bathurst-south",
@@ -2185,7 +2318,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bathurst-west",
@@ -2220,7 +2355,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "condobolin",
@@ -2255,7 +2392,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cowra",
@@ -2290,7 +2429,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cowra-surrounds",
@@ -2326,7 +2467,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forbes",
@@ -2361,6 +2504,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 158,
+    "crimeCountByYear": {
+      "2016": 2,
+      "2017": 7,
+      "2018": 2,
+      "2019": 13,
+      "2020": 9,
+      "2021": 10,
+      "2022": 6,
+      "2023": 1,
+      "2024": 2,
+      "2025": 5
     }
   },
   {
@@ -2396,7 +2552,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkes-nsw",
@@ -2433,7 +2591,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkes-surrounds",
@@ -2469,7 +2629,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-wyalong",
@@ -2504,7 +2666,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lithgow",
@@ -2539,7 +2703,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lithgow-surrounds",
@@ -2575,7 +2741,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mudgee",
@@ -2610,7 +2778,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mudgee-surrounds-east",
@@ -2646,7 +2816,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mudgee-surrounds-west",
@@ -2682,7 +2854,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wollangambe-wollemi",
@@ -2717,7 +2891,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blayney",
@@ -2752,7 +2928,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "orange",
@@ -2789,7 +2967,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "orange-north",
@@ -2826,7 +3006,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "orange-surrounds",
@@ -2862,7 +3044,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grafton",
@@ -2897,7 +3081,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grafton-surrounds",
@@ -2933,7 +3119,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maclean-yamba-iluka",
@@ -2968,7 +3156,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellingen",
@@ -3003,7 +3193,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coffs-harbour-north",
@@ -3038,7 +3230,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coffs-harbour-south",
@@ -3073,7 +3267,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coramba-nana-glen-bucca",
@@ -3108,7 +3304,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dorrigo",
@@ -3143,7 +3341,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "korora-emerald-beach",
@@ -3178,7 +3378,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sawtell-boambee",
@@ -3213,7 +3415,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "urunga",
@@ -3248,7 +3452,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woolgoolga-arrawarra",
@@ -3283,7 +3489,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bourke-brewarrina",
@@ -3318,7 +3526,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cobar",
@@ -3353,7 +3563,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coonamble",
@@ -3388,7 +3600,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nyngan-warren",
@@ -3423,7 +3637,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walgett-lightning-ridge",
@@ -3458,7 +3674,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broken-hill",
@@ -3493,7 +3711,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "far-west",
@@ -3528,7 +3748,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coonabarabran",
@@ -3563,7 +3785,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dubbo-east",
@@ -3598,7 +3822,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dubbo-south",
@@ -3633,7 +3859,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dubbo-west",
@@ -3668,7 +3896,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dubbo-surrounds",
@@ -3704,7 +3934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gilgandra",
@@ -3739,7 +3971,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narromine",
@@ -3774,7 +4008,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wellington",
@@ -3809,7 +4045,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "branxton-greta-pokolbin",
@@ -3844,7 +4082,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cessnock",
@@ -3879,7 +4119,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cessnock-surrounds",
@@ -3915,7 +4157,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dungog",
@@ -3950,7 +4194,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kurri-kurri-abermain",
@@ -3985,7 +4231,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "singleton",
@@ -4020,7 +4268,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "singleton-surrounds",
@@ -4056,7 +4306,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maitland",
@@ -4091,7 +4343,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maitland-north",
@@ -4126,7 +4380,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-maitland-metford",
@@ -4161,7 +4417,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rutherford-north-aberglasslyn",
@@ -4196,7 +4454,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rutherford-south-telarah",
@@ -4231,7 +4491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tenambit-east-maitland",
@@ -4266,7 +4528,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thornton-millers-forest",
@@ -4303,7 +4567,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "anna-bay",
@@ -4338,7 +4604,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lemon-tree-passage-tanilba-bay",
@@ -4373,7 +4641,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nelson-bay-peninsula",
@@ -4408,7 +4678,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "raymond-terrace",
@@ -4443,7 +4715,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seaham-woodville",
@@ -4478,7 +4752,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tea-gardens-hawks-nest",
@@ -4513,7 +4789,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "williamtown-medowie-karuah",
@@ -4548,7 +4826,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "muswellbrook",
@@ -4583,7 +4863,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "muswellbrook-surrounds",
@@ -4619,7 +4901,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scone",
@@ -4654,7 +4938,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scone-surrounds",
@@ -4690,7 +4976,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dapto-avondale",
@@ -4725,7 +5013,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "horsley-kembla-grange",
@@ -4763,7 +5053,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-kembla-industrial",
@@ -4798,7 +5090,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "unanderra-mount-kembla",
@@ -4833,7 +5127,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berkeley-lake-heights-cringila",
@@ -4868,7 +5164,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-kembla-warrawong",
@@ -4903,7 +5201,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "windang-primbee",
@@ -4938,7 +5238,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "illawarra-catchment-reserve",
@@ -4973,7 +5275,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albion-park-macquarie-pass",
@@ -5010,7 +5314,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albion-park-rail",
@@ -5047,7 +5353,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kiama",
@@ -5082,7 +5390,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kiama-downs-minnamurra",
@@ -5118,7 +5428,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kiama-hinterland-gerringong",
@@ -5154,7 +5466,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shellharbour-flinders",
@@ -5190,7 +5504,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shellharbour-oak-flats",
@@ -5225,7 +5541,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warilla",
@@ -5260,7 +5578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balgownie-fairy-meadow",
@@ -5295,7 +5615,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corrimal-tarrawanna-bellambi",
@@ -5330,7 +5652,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "figtree-keiraville",
@@ -5365,7 +5689,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "helensburgh",
@@ -5401,7 +5727,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thirroul-austinmer-coalcliff",
@@ -5437,7 +5765,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woonona-bulli-russell-vale",
@@ -5472,7 +5802,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wollongong-east",
@@ -5514,7 +5846,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wollongong-west",
@@ -5556,7 +5890,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bulahdelah-stroud",
@@ -5591,7 +5927,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forster",
@@ -5626,7 +5964,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forster-tuncurry-surrounds",
@@ -5662,7 +6002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tuncurry",
@@ -5697,7 +6039,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kempsey",
@@ -5732,7 +6076,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kempsey-surrounds",
@@ -5768,7 +6114,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macksville-scotts-head",
@@ -5803,7 +6151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nambucca-heads",
@@ -5838,7 +6188,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nambucca-heads-surrounds",
@@ -5874,7 +6226,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-west-rocks",
@@ -5909,7 +6263,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lord-howe-island",
@@ -5944,7 +6300,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "laurieton-bonny-hills",
@@ -5979,7 +6337,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-macquarie-west",
@@ -6014,7 +6374,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-macquarie-surrounds",
@@ -6050,7 +6412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wauchope",
@@ -6085,7 +6449,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-macquarie-east",
@@ -6120,7 +6486,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-macquarie-south",
@@ -6155,7 +6523,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gloucester",
@@ -6190,7 +6560,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "old-bar-manning-point-red-head",
@@ -6225,7 +6597,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taree",
@@ -6260,7 +6634,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taree-surrounds",
@@ -6296,7 +6672,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wingham",
@@ -6331,7 +6709,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albury-east",
@@ -6366,7 +6746,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albury-north",
@@ -6401,7 +6783,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albury-south",
@@ -6436,7 +6820,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albury-surrounds",
@@ -6472,7 +6858,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lavington",
@@ -6507,7 +6895,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hay",
@@ -6542,7 +6932,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wentworth-buronga",
@@ -6577,7 +6969,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wentworth-balranald-region",
@@ -6611,7 +7005,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corowa",
@@ -6646,7 +7042,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corowa-surrounds",
@@ -6682,7 +7080,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deniliquin",
@@ -6717,7 +7117,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deniliquin-surrounds",
@@ -6753,7 +7155,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moama",
@@ -6788,7 +7192,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tocumwal-finley-jerilderie",
@@ -6823,7 +7229,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "armidale",
@@ -6858,7 +7266,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "armidale-surrounds-north",
@@ -6894,7 +7304,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "armidale-surrounds-south",
@@ -6930,7 +7342,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walcha",
@@ -6965,7 +7379,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glen-innes",
@@ -7000,7 +7416,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "inverell",
@@ -7035,7 +7453,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "inverell-surrounds-east",
@@ -7071,7 +7491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "inverell-surrounds-west",
@@ -7107,7 +7529,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tenterfield",
@@ -7142,7 +7566,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moree",
@@ -7177,7 +7603,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moree-surrounds",
@@ -7213,7 +7641,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrabri",
@@ -7248,7 +7678,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrabri-surrounds",
@@ -7284,7 +7716,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gunnedah",
@@ -7319,7 +7753,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gunnedah-surrounds",
@@ -7355,7 +7791,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "quirindi",
@@ -7390,7 +7828,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tamworth-east",
@@ -7425,7 +7865,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tamworth-north",
@@ -7460,7 +7902,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tamworth-west",
@@ -7495,7 +7939,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tamworth-surrounds",
@@ -7531,7 +7977,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belmont-bennetts-green",
@@ -7573,7 +8021,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belmont-south-blacksmiths",
@@ -7615,7 +8065,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charlestown-dudley",
@@ -7657,7 +8109,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glendale-cardiff-hillsborough",
@@ -7699,7 +8153,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-hutton-windale",
@@ -7743,7 +8199,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redhead",
@@ -7785,7 +8243,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "swansea-caves-beach",
@@ -7829,7 +8289,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "valentine-eleebana",
@@ -7872,7 +8334,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warners-bay-boolaroo",
@@ -7916,7 +8380,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bolton-point-teralba",
@@ -7958,7 +8424,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bonnells-bay-silverwater",
@@ -8002,7 +8470,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edgeworth-cameron-park",
@@ -8048,7 +8518,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morisset-cooranbong",
@@ -8090,7 +8562,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toronto-awaba",
@@ -8132,7 +8606,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wangi-wangi-rathmines",
@@ -8174,7 +8650,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-wallsend-barnsley-killingworth",
@@ -8216,7 +8694,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "adamstown-kotara",
@@ -8258,7 +8738,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beresfield-hexham",
@@ -8300,7 +8782,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hamilton-broadmeadow",
@@ -8342,7 +8826,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lambton-new-lambton",
@@ -8384,7 +8870,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maryland-fletcher-minmi",
@@ -8426,7 +8914,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mayfield-warabrook",
@@ -8468,7 +8958,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "merewether-the-junction",
@@ -8510,7 +9002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newcastle-cooks-hill",
@@ -8552,7 +9046,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newcastle-port-kooragang",
@@ -8594,7 +9090,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shortland-jesmond",
@@ -8636,7 +9134,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stockton-fullerton-cove",
@@ -8680,7 +9180,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wallsend-elermore-vale",
@@ -8722,7 +9224,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waratah-north-lambton",
@@ -8764,7 +9268,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wickham-carrington-tighes-hill",
@@ -8806,7 +9312,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ballina",
@@ -8848,7 +9356,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ballina-surrounds",
@@ -8891,7 +9401,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bangalow",
@@ -8934,7 +9446,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brunswick-heads-ocean-shores",
@@ -8977,7 +9491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "byron-bay",
@@ -9020,7 +9536,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "evans-head",
@@ -9062,7 +9580,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lennox-head-skennars-head",
@@ -9105,7 +9625,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mullumbimby",
@@ -9147,7 +9669,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "casino",
@@ -9189,7 +9713,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "casino-surrounds",
@@ -9232,7 +9758,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goonellabah",
@@ -9274,7 +9802,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kyogle",
@@ -9316,7 +9846,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lismore",
@@ -9358,6 +9890,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 472,
+    "crimeCountByYear": {
+      "2016": 23,
+      "2017": 26,
+      "2018": 8,
+      "2019": 31,
+      "2020": 31,
+      "2021": 30,
+      "2022": 36,
+      "2023": 48,
+      "2024": 65,
+      "2025": 44
     }
   },
   {
@@ -9401,7 +9946,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingscliff-fingal-head",
@@ -9444,7 +9991,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murwillumbah",
@@ -9486,7 +10035,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murwillumbah-surrounds",
@@ -9529,7 +10080,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pottsville",
@@ -9571,7 +10124,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tweed-heads",
@@ -9613,7 +10168,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "banora-point",
@@ -9655,7 +10212,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "terranora-north-tumbulgum",
@@ -9698,7 +10257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tweed-heads-south",
@@ -9740,7 +10301,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "griffith-nsw",
@@ -9782,7 +10345,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "griffith-surrounds",
@@ -9825,7 +10390,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leeton",
@@ -9867,7 +10434,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrandera",
@@ -9909,7 +10478,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tumbarumba",
@@ -9951,7 +10522,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tumut",
@@ -9993,7 +10566,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tumut-surrounds",
@@ -10036,7 +10611,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cootamundra",
@@ -10078,7 +10655,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gundagai",
@@ -10120,7 +10699,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "junee",
@@ -10162,7 +10743,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "temora",
@@ -10204,7 +10787,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagga-wagga-east",
@@ -10246,7 +10831,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagga-wagga-north",
@@ -10288,7 +10875,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagga-wagga-south",
@@ -10330,7 +10919,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagga-wagga-west",
@@ -10372,7 +10963,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagga-wagga-surrounds",
@@ -10415,7 +11008,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berry-kangaroo-valley",
@@ -10450,7 +11045,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "callala-bay-currarong",
@@ -10485,7 +11082,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "culburra-beach",
@@ -10520,7 +11119,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ettrema-sassafras-budawang",
@@ -10555,7 +11156,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "huskisson-vincentia",
@@ -10590,7 +11193,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-nowra-bomaderry",
@@ -10625,7 +11230,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nowra",
@@ -10660,7 +11267,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-georges-basin-erowal-bay",
@@ -10695,7 +11304,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sussex-inlet-berrara",
@@ -10730,7 +11341,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tomerong-wandandian-woollamia",
@@ -10765,7 +11378,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ulladulla",
@@ -10800,7 +11415,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ulladulla-surrounds",
@@ -10836,7 +11453,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bowral",
@@ -10872,7 +11491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hill-top-colo-vale",
@@ -10907,7 +11528,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mittagong",
@@ -10942,7 +11565,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moss-vale-berrima",
@@ -10977,7 +11602,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "robertson-fitzroy-falls",
@@ -11012,7 +11639,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southern-highlands",
@@ -11047,7 +11676,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "baulkham-hills-east",
@@ -11094,7 +11725,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "baulkham-hills-west-bella-vista",
@@ -11141,7 +11774,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenhaven",
@@ -11188,7 +11823,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-pennant-hills",
@@ -11235,7 +11872,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-hill-central",
@@ -11283,7 +11922,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-hill-east",
@@ -11330,7 +11971,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-hill-north",
@@ -11377,7 +12020,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-hill-south",
@@ -11424,7 +12069,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-hill-west",
@@ -11471,7 +12118,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$875/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cherrybrook",
@@ -11518,7 +12167,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kellyville-east",
@@ -11565,7 +12216,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kellyville-west",
@@ -11612,7 +12265,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dural-kenthurst-wisemans-ferry",
@@ -11659,7 +12314,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "galston-laughtondale",
@@ -11705,7 +12362,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bilpin-colo-st-albans",
@@ -11751,7 +12410,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kurrajong-heights-ebenezer",
@@ -11797,7 +12458,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pitt-town-mcgraths-hill",
@@ -11844,7 +12507,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "box-hill-nelson",
@@ -11891,7 +12556,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-kellyville",
@@ -11938,7 +12605,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rouse-hill-beaumont-hills",
@@ -11985,7 +12654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blacktown-east-kings-park",
@@ -12032,7 +12703,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blacktown-north-marayong",
@@ -12078,7 +12751,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "doonside-woodcroft",
@@ -12124,7 +12799,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lalor-park-kings-langley",
@@ -12171,7 +12848,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blacktown-south",
@@ -12217,7 +12896,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blacktown-west",
@@ -12263,7 +12944,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seven-hills-prospect",
@@ -12309,7 +12992,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toongabbie-west",
@@ -12355,7 +13040,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenwood",
@@ -12402,7 +13089,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "acacia-gardens",
@@ -12449,7 +13138,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "quakers-hill",
@@ -12495,7 +13186,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kellyville-ridge-the-ponds",
@@ -12542,7 +13235,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marsden-park-shanes-park",
@@ -12590,7 +13285,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "riverstone",
@@ -12636,7 +13333,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "schofields-west-colebee",
@@ -12683,7 +13382,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "schofields-east",
@@ -12730,7 +13431,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stanhope-gardens-parklea",
@@ -12778,7 +13481,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bidwill-hebersham-emerton",
@@ -12824,7 +13529,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glendenning-dean-park",
@@ -12871,7 +13578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hassall-grove-plumpton",
@@ -12917,7 +13626,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lethbridge-park-tregear",
@@ -12964,7 +13675,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-druitt-whalan",
@@ -13010,7 +13723,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "prospect-reservoir",
@@ -13056,7 +13771,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rooty-hill-minchinbury",
@@ -13102,7 +13819,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "banksmeadow",
@@ -13149,7 +13868,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "botany",
@@ -13196,7 +13917,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pagewood-hillsdale-daceyville",
@@ -13243,7 +13966,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-botany-industrial",
@@ -13289,7 +14014,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sydney-airport",
@@ -13335,7 +14062,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eastlakes",
@@ -13381,7 +14110,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mascot",
@@ -13428,7 +14159,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "petersham-stanmore",
@@ -13475,7 +14208,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sydenham-tempe-st-peters",
@@ -13522,7 +14257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marrickville-north",
@@ -13569,7 +14306,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marrickville-south",
@@ -13615,7 +14354,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "darlinghurst",
@@ -13662,7 +14403,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "erskineville-alexandria",
@@ -13709,7 +14452,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glebe-forest-lodge",
@@ -13757,7 +14502,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "potts-point-woolloomooloo",
@@ -13804,7 +14551,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "surry-hills",
@@ -13851,7 +14600,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camperdown-darlington",
@@ -13898,7 +14649,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chippendale",
@@ -13945,7 +14698,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newtown-nsw",
@@ -13992,6 +14747,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10445,
+    "crimeCountByYear": {
+      "2016": 756,
+      "2017": 748,
+      "2018": 442,
+      "2019": 489,
+      "2020": 619,
+      "2021": 469,
+      "2022": 467,
+      "2023": 545,
+      "2024": 557,
+      "2025": 553
     }
   },
   {
@@ -14039,7 +14807,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redfern",
@@ -14085,7 +14855,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosebery-beaconsfield",
@@ -14132,7 +14904,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sydney-north-millers-point",
@@ -14179,7 +14953,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sydney-south-haymarket",
@@ -14227,7 +15003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ultimo",
@@ -14274,7 +15052,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waterloo",
@@ -14320,6 +15100,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 122,
+    "crimeCountByYear": {
+      "2016": 16,
+      "2017": 5,
+      "2018": 20,
+      "2019": 9,
+      "2020": 3,
+      "2021": 7,
+      "2022": 6,
+      "2023": 4,
+      "2024": 11,
+      "2025": 4
     }
   },
   {
@@ -14367,7 +15160,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bondi-tamarama-bronte",
@@ -14414,7 +15209,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bondi-beach-north-bondi",
@@ -14462,7 +15259,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bondi-junction-waverly",
@@ -14509,7 +15308,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "centennial-park",
@@ -14556,7 +15357,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dover-heights",
@@ -14603,7 +15406,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "paddington-moore-park",
@@ -14651,7 +15456,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rose-bay-vaucluse-watsons-bay",
@@ -14699,7 +15506,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $450–$900/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woollahra",
@@ -14746,7 +15555,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellevue-hill",
@@ -14793,7 +15604,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "double-bay-darling-point",
@@ -14841,7 +15654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$875/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kensington-nsw",
@@ -14889,6 +15704,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10745,
+    "crimeCountByYear": {
+      "2016": 1123,
+      "2017": 1027,
+      "2018": 1129,
+      "2019": 894,
+      "2020": 832,
+      "2021": 673,
+      "2022": 775,
+      "2023": 782,
+      "2024": 1118,
+      "2025": 1405
     }
   },
   {
@@ -14936,7 +15764,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maroubra-north",
@@ -14983,7 +15813,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maroubra-south",
@@ -15029,7 +15861,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maroubra-west",
@@ -15076,7 +15910,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "randwick-north",
@@ -15123,7 +15959,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "randwick-south",
@@ -15170,7 +16008,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coogee-clovelly",
@@ -15217,7 +16057,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malabar-la-perouse",
@@ -15264,7 +16106,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "matraville-chifley",
@@ -15310,7 +16154,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-coogee",
@@ -15356,7 +16202,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bass-hill-georges-hall",
@@ -15402,7 +16250,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chullora",
@@ -15449,7 +16299,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "condell-park",
@@ -15497,7 +16349,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "padstow",
@@ -15543,7 +16397,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "revesby",
@@ -15589,7 +16445,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yagoona-birrong",
@@ -15635,7 +16493,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bankstown-north",
@@ -15681,7 +16541,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bankstown-south",
@@ -15727,7 +16589,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenacre-north",
@@ -15773,7 +16637,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenacre-south",
@@ -15819,7 +16685,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "panania-north-milperra",
@@ -15865,7 +16733,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "panania-south-picnic-point",
@@ -15911,7 +16781,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belmore-belfield",
@@ -15957,7 +16829,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "punchbowl",
@@ -16003,7 +16877,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roselands",
@@ -16049,7 +16925,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lakemba",
@@ -16095,7 +16973,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wiley-park",
@@ -16142,7 +17022,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "campsie-north",
@@ -16188,7 +17070,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "campsie-south",
@@ -16234,7 +17118,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canterbury-south",
@@ -16280,7 +17166,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "earlwood",
@@ -16327,7 +17215,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingsgrove-north",
@@ -16373,7 +17263,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narwee-beverly-hills",
@@ -16419,7 +17311,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oatley-hurstville-grove",
@@ -16466,7 +17360,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "peakhurst-lugarno",
@@ -16512,7 +17408,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "riverwood",
@@ -16558,7 +17456,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-hurstville-blakehurst",
@@ -16605,7 +17505,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hurstville-central",
@@ -16652,7 +17554,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hurstville-north",
@@ -16698,7 +17602,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mortdale-oatley",
@@ -16744,7 +17650,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "penshurst",
@@ -16790,6 +17698,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 677,
+    "crimeCountByYear": {
+      "2016": 36,
+      "2017": 14,
+      "2018": 29,
+      "2019": 18,
+      "2020": 24,
+      "2021": 30,
+      "2022": 14,
+      "2023": 35,
+      "2024": 43,
+      "2025": 11
     }
   },
   {
@@ -16837,7 +17758,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kogarah",
@@ -16883,7 +17806,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kogarah-bay-carlton-allawah",
@@ -16930,7 +17855,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "monterey-brighton-le-sands-kyeemagh",
@@ -16977,7 +17904,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockdale-banksia",
@@ -17023,7 +17952,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sans-souci-ramsgate",
@@ -17070,7 +18001,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "arncliffe-bardwell-valley",
@@ -17117,7 +18050,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bexley-north",
@@ -17164,7 +18099,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bexley-south",
@@ -17210,7 +18147,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wolli-creek",
@@ -17257,7 +18196,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "concord-mortlake-cabarita",
@@ -17304,7 +18245,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "drummoyne-rodd-point",
@@ -17351,7 +18294,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "five-dock-abbotsford",
@@ -17398,7 +18343,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "concord-west-north-strathfield",
@@ -17445,7 +18392,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rhodes",
@@ -17492,7 +18441,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balmain",
@@ -17539,7 +18490,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lilyfield-rozelle",
@@ -17586,7 +18539,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "annandale-nsw",
@@ -17633,7 +18588,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leichhardt",
@@ -17680,7 +18637,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canterbury-north-ashbury",
@@ -17727,7 +18686,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "croydon-park-enfield",
@@ -17774,7 +18735,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dulwich-hill-lewisham",
@@ -17821,7 +18784,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "haberfield-summer-hill",
@@ -17868,7 +18833,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "homebush",
@@ -17914,7 +18881,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathfield-south",
@@ -17960,7 +18929,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashfield-north",
@@ -18006,7 +18977,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashfield-south",
@@ -18052,7 +19025,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burwood-nsw",
@@ -18099,6 +19074,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15147,
+    "crimeCountByYear": {
+      "2016": 827,
+      "2017": 914,
+      "2018": 852,
+      "2019": 1004,
+      "2020": 995,
+      "2021": 748,
+      "2022": 775,
+      "2023": 862,
+      "2024": 1085,
+      "2025": 1041
     }
   },
   {
@@ -18146,6 +19134,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 28608,
+    "crimeCountByYear": {
+      "2016": 2170,
+      "2017": 2134,
+      "2018": 1790,
+      "2019": 2000,
+      "2020": 2015,
+      "2021": 1952,
+      "2022": 1869,
+      "2023": 1478,
+      "2024": 1856,
+      "2025": 2190
     }
   },
   {
@@ -18193,7 +19194,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathfield-west",
@@ -18240,7 +19243,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chatswood-west-lane-cove-north",
@@ -18288,7 +19293,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-leonards-naremburn",
@@ -18335,7 +19342,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "artarmon",
@@ -18382,7 +19391,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castle-cove-northbridge",
@@ -18430,7 +19441,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $475–$925/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chatswood-east",
@@ -18477,7 +19490,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenwich-riverview",
@@ -18524,7 +19539,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lane-cove",
@@ -18572,7 +19589,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "willoughby",
@@ -18619,7 +19638,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "asquith-mount-colah",
@@ -18666,7 +19687,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berowra-brooklyn-cowan",
@@ -18713,7 +19736,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "normanhurst-thornleigh-westleigh",
@@ -18760,7 +19785,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hornsby-east",
@@ -18806,7 +19833,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hornsby-west",
@@ -18852,7 +19881,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wahroonga-west-waitara",
@@ -18899,7 +19930,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gordon-killara",
@@ -18946,7 +19979,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lindfield-roseville",
@@ -18993,7 +20028,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pymble",
@@ -19040,7 +20077,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-ives",
@@ -19087,7 +20126,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $450–$900/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "turramurra",
@@ -19134,7 +20175,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wahroonga-east-warrawee",
@@ -19181,7 +20224,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cremorne-cammeray",
@@ -19228,7 +20273,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "crows-nest-waverton",
@@ -19275,7 +20322,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "neutral-bay-kirribilli",
@@ -19323,7 +20372,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-sydney-lavender-bay",
@@ -19371,7 +20422,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mosman-north",
@@ -19418,7 +20471,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mosman-south",
@@ -19465,7 +20520,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balgowlah-clontarf-seaforth",
@@ -19513,7 +20570,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$875/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manly-fairlight",
@@ -19560,7 +20619,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$875/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "avalon-palm-beach",
@@ -19608,7 +20669,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $450–$900/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bayview-elanora-heights",
@@ -19656,7 +20719,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newport-bilgola",
@@ -19703,7 +20768,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mona-vale-warriewood-north",
@@ -19750,7 +20817,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-narrabeen-warriewood-south",
@@ -19797,7 +20866,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beacon-hill-narraweena",
@@ -19844,7 +20915,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cromer",
@@ -19891,7 +20964,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forestville-killarney-heights",
@@ -19939,7 +21014,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "freshwater-brookvale",
@@ -19986,7 +21063,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manly-vale-allambie-heights",
@@ -20033,7 +21112,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "terrey-hills-duffys-forest",
@@ -20081,7 +21162,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belrose",
@@ -20128,7 +21211,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $475–$950/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "collaroy-collaroy-plateau",
@@ -20175,7 +21260,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dee-why-south-north-curl-curl",
@@ -20222,7 +21309,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dee-why-north",
@@ -20269,7 +21358,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "frenchs-forest-oxford-falls",
@@ -20317,7 +21408,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $475–$925/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrabeen-wheeler-heights",
@@ -20364,7 +21457,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camden-ellis-lane",
@@ -20410,7 +21505,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "currans-hill",
@@ -20456,7 +21553,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elderslie-narellan",
@@ -20502,7 +21601,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "harrington-park",
@@ -20550,7 +21651,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-annan",
@@ -20596,7 +21699,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "spring-farm",
@@ -20643,7 +21748,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bradbury-wedderburn",
@@ -20689,7 +21796,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "campbelltown-woodbine",
@@ -20735,7 +21844,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "claymore-eagle-vale-raby",
@@ -20781,7 +21892,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holsworthy-military-area",
@@ -20827,7 +21940,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leumeah-minto-heights",
@@ -20873,7 +21988,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "minto-st-andrews",
@@ -20919,7 +22036,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosemeadow-glen-alpine",
@@ -20965,7 +22084,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "denham-court-bardia",
@@ -21012,7 +22133,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenfield",
@@ -21058,7 +22181,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ingleburn",
@@ -21104,7 +22229,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macquarie-fields",
@@ -21150,7 +22277,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bargo",
@@ -21196,7 +22325,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "douglas-park-appin",
@@ -21244,7 +22375,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "picton-tahmoor-buxton",
@@ -21290,7 +22423,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-oaks-oakdale",
@@ -21336,7 +22471,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blackheath-megalong-valley",
@@ -21382,7 +22519,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blaxland-warrimoo-lapstone",
@@ -21428,7 +22567,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blue-mountains-north",
@@ -21475,7 +22616,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "katoomba-leura",
@@ -21521,7 +22664,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lawson-hazelbrook-linden",
@@ -21567,7 +22712,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "springwood-winmalee",
@@ -21613,7 +22760,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wentworth-falls",
@@ -21659,7 +22808,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blue-mountains-south",
@@ -21706,7 +22857,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cambridge-park",
@@ -21753,7 +22906,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "emu-plains-leonay",
@@ -21799,7 +22954,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenmore-park-regentville",
@@ -21846,7 +23003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jamisontown-south-penrith",
@@ -21892,7 +23051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingswood-werrington",
@@ -21938,7 +23099,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mulgoa-luddenham-orchard-hills",
@@ -21985,7 +23148,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "penrith",
@@ -22031,7 +23196,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warragamba-silverdale",
@@ -22077,7 +23244,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranebrook-castlereagh",
@@ -22123,7 +23292,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jordan-springs-llandilo",
@@ -22170,7 +23341,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "richmond-clarendon",
@@ -22216,7 +23389,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "windsor-bligh-park",
@@ -22263,7 +23438,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarramundi-londonderry",
@@ -22310,7 +23487,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "erskine-park",
@@ -22357,7 +23536,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-clair",
@@ -22403,7 +23584,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "colyton-oxley-park",
@@ -22450,7 +23633,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-marys-north-st-marys",
@@ -22496,7 +23681,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rookwood-cemetery",
@@ -22542,7 +23729,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "auburn-central",
@@ -22589,7 +23778,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "auburn-north",
@@ -22635,7 +23826,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "auburn-south",
@@ -22681,7 +23874,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berala",
@@ -22727,7 +23922,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lidcombe",
@@ -22773,7 +23970,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "regents-park",
@@ -22820,7 +24019,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "silverwater-newington",
@@ -22867,7 +24068,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wentworth-point-sydney-olympic-park",
@@ -22915,7 +24118,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ermington-rydalmere",
@@ -22961,7 +24166,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oatlands-dundas-valley",
@@ -23007,7 +24214,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carlingford-east",
@@ -23054,7 +24263,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carlingford-west",
@@ -23101,7 +24312,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chester-hill-sefton",
@@ -23147,7 +24360,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fairfield-east",
@@ -23193,7 +24408,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "granville-clyde",
@@ -23239,7 +24456,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "guildford-south-granville",
@@ -23285,7 +24504,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "guildford-west-merrylands-west",
@@ -23331,7 +24552,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "smithfield-industrial",
@@ -23377,7 +24600,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yennora-industrial",
@@ -23424,7 +24649,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greystanes-south",
@@ -23470,7 +24697,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "merrylands-holroyd",
@@ -23516,7 +24745,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pemulwuy-greystanes-north",
@@ -23563,7 +24794,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-wentworthville",
@@ -23609,7 +24842,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-parramatta",
@@ -23655,7 +24890,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-rocks",
@@ -23702,7 +24939,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northmead",
@@ -23748,7 +24987,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toongabbie-constitution-hill",
@@ -23794,7 +25035,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "winston-hills",
@@ -23841,7 +25084,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pendle-hill-girraween",
@@ -23887,7 +25132,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wentworthville-westmead",
@@ -23933,7 +25180,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parramatta-north",
@@ -23979,7 +25228,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parramatta-south",
@@ -24025,7 +25276,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosehill-harris-park",
@@ -24072,7 +25325,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pennant-hills-cheltenham",
@@ -24119,7 +25374,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "epping-east-north-epping",
@@ -24166,7 +25423,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "epping-nsw-west",
@@ -24213,7 +25472,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gladesville-huntleys-point",
@@ -24260,7 +25521,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hunters-hill-woolwich",
@@ -24307,7 +25570,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macquarie-park-marsfield",
@@ -24354,7 +25619,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-ryde-east-ryde",
@@ -24401,7 +25668,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-ryde-meadowbank",
@@ -24447,7 +25716,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "putney",
@@ -24494,7 +25765,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "denistone",
@@ -24541,7 +25814,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eastwood",
@@ -24587,6 +25862,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2855,
+    "crimeCountByYear": {
+      "2016": 108,
+      "2017": 70,
+      "2018": 102,
+      "2019": 115,
+      "2020": 101,
+      "2021": 123,
+      "2022": 115,
+      "2023": 152,
+      "2024": 115,
+      "2025": 94
     }
   },
   {
@@ -24633,7 +25921,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ryde-south",
@@ -24680,7 +25970,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashcroft-busby-miller",
@@ -24726,7 +26018,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "austral-greendale",
@@ -24773,7 +26067,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "badgerys-creek",
@@ -24819,7 +26115,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cecil-hills",
@@ -24866,7 +26164,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "green-valley",
@@ -24912,7 +26212,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hinchinbrook",
@@ -24958,7 +26260,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hoxton-park-carnes-hill-horningsea-park",
@@ -25006,7 +26310,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-hoxton-middleton-grange",
@@ -25054,7 +26360,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cobbitty-bringelly",
@@ -25101,7 +26409,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gledswood-hills-gregory-hills",
@@ -25148,7 +26458,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leppington-catherine-field",
@@ -25195,7 +26507,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oran-park",
@@ -25243,7 +26557,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bonnyrigg-heights-bonnyrigg",
@@ -25289,7 +26605,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bossley-park-abbotsbury",
@@ -25336,7 +26654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cabramatta-lansvale",
@@ -25382,7 +26702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cabramatta-west-mount-pritchard",
@@ -25428,7 +26750,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canley-vale-canley-heights",
@@ -25474,7 +26798,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edensor-park",
@@ -25521,7 +26847,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fairfield",
@@ -25567,6 +26895,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6535,
+    "crimeCountByYear": {
+      "2016": 575,
+      "2017": 492,
+      "2018": 508,
+      "2019": 512,
+      "2020": 527,
+      "2021": 476,
+      "2022": 677,
+      "2023": 502,
+      "2024": 653,
+      "2025": 612
     }
   },
   {
@@ -25613,7 +26954,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenfield-park-prairiewood",
@@ -25660,7 +27003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "horsley-park-kemps-creek",
@@ -25708,7 +27053,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "smithfield-wetherill-park",
@@ -25755,7 +27102,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-johns-park-wakeley",
@@ -25802,7 +27151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wetherill-park-industrial",
@@ -25849,7 +27200,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "casula",
@@ -25895,7 +27248,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chipping-norton-moorebank",
@@ -25942,7 +27297,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holsworthy-wattle-grove",
@@ -25988,7 +27345,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lurnea-cartwright",
@@ -26034,7 +27393,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warwick-farm",
@@ -26080,7 +27441,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edmondson-park",
@@ -26128,7 +27491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "liverpool-east",
@@ -26174,7 +27539,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "liverpool-west",
@@ -26220,7 +27587,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "prestons",
@@ -26267,7 +27636,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gymea-grays-point",
@@ -26314,7 +27685,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "miranda-yowie-bay",
@@ -26362,7 +27735,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sylvania-taren-point",
@@ -26409,7 +27784,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caringbah",
@@ -26455,7 +27832,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caringbah-south",
@@ -26502,7 +27881,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $425–$850/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cronulla-kurnell-bundeena",
@@ -26549,7 +27930,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lilli-pilli-port-hacking-dolans-bay",
@@ -26597,7 +27980,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $475–$950/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woolooware-burraneer",
@@ -26644,7 +28029,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "heathcote-waterfall",
@@ -26691,7 +28078,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "illawong-alfords-point",
@@ -26738,7 +28127,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "menai-lucas-heights-woronora",
@@ -26785,7 +28176,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oyster-bay-como-jannali",
@@ -26833,7 +28226,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "royal-national-park",
@@ -26880,7 +28275,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sutherland-kirrawee",
@@ -26926,7 +28323,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "engadine",
@@ -26973,7 +28372,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loftus-yarrawarrah",
@@ -27020,7 +28421,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woronora-heights",
@@ -27067,7 +28470,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$800/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-nsw",
@@ -27113,7 +28518,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-nsw",
@@ -27159,7 +28566,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alfredton",
@@ -27200,6 +28609,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11822,
+    "crimeCountByYear": {
+      "2016": 601,
+      "2017": 496,
+      "2018": 550,
+      "2019": 413,
+      "2020": 477,
+      "2021": 630,
+      "2022": 612,
+      "2023": 700,
+      "2024": 662,
+      "2025": 790
     }
   },
   {
@@ -27240,7 +28662,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buninyong",
@@ -27275,6 +28699,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3797,
+    "crimeCountByYear": {
+      "2016": 183,
+      "2017": 146,
+      "2018": 165,
+      "2019": 180,
+      "2020": 119,
+      "2021": 162,
+      "2022": 129,
+      "2023": 93,
+      "2024": 144,
+      "2025": 155
     }
   },
   {
@@ -27315,6 +28752,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5408,
+    "crimeCountByYear": {
+      "2016": 585,
+      "2017": 483,
+      "2018": 541,
+      "2019": 556,
+      "2020": 572,
+      "2021": 527,
+      "2022": 506,
+      "2023": 520,
+      "2024": 650,
+      "2025": 603
     }
   },
   {
@@ -27350,6 +28800,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1762,
+    "crimeCountByYear": {
+      "2016": 25,
+      "2017": 30,
+      "2018": 62,
+      "2019": 70,
+      "2020": 62,
+      "2021": 93,
+      "2022": 146,
+      "2023": 152,
+      "2024": 285,
+      "2025": 316
     }
   },
   {
@@ -27390,7 +28853,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ballarat-east-warrenheip",
@@ -27428,7 +28893,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ballarat-north-invermay",
@@ -27467,7 +28934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canadian-mount-clear",
@@ -27508,7 +28977,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sebastopol-redan",
@@ -27546,7 +29017,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bacchus-marsh-surrounds",
@@ -27582,7 +29055,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "creswick-clunes",
@@ -27617,7 +29092,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "daylesford",
@@ -27653,6 +29130,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2781,
+    "crimeCountByYear": {
+      "2016": 195,
+      "2017": 220,
+      "2018": 211,
+      "2019": 239,
+      "2020": 182,
+      "2021": 135,
+      "2022": 137,
+      "2023": 180,
+      "2024": 217,
+      "2025": 212
     }
   },
   {
@@ -27688,6 +29178,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1393,
+    "crimeCountByYear": {
+      "2016": 49,
+      "2017": 37,
+      "2018": 29,
+      "2019": 46,
+      "2020": 48,
+      "2021": 49,
+      "2022": 51,
+      "2023": 64,
+      "2024": 52,
+      "2025": 50
     }
   },
   {
@@ -27723,6 +29226,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1356,
+    "crimeCountByYear": {
+      "2016": 71,
+      "2017": 91,
+      "2018": 136,
+      "2019": 85,
+      "2020": 65,
+      "2021": 84,
+      "2022": 53,
+      "2023": 26,
+      "2024": 56,
+      "2025": 114
     }
   },
   {
@@ -27758,6 +29274,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1712,
+    "crimeCountByYear": {
+      "2016": 153,
+      "2017": 144,
+      "2018": 93,
+      "2019": 171,
+      "2020": 165,
+      "2021": 155,
+      "2022": 118,
+      "2023": 139,
+      "2024": 155,
+      "2025": 169
     }
   },
   {
@@ -27793,7 +29322,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maryborough-vic",
@@ -27828,6 +29359,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8160,
+    "crimeCountByYear": {
+      "2016": 1144,
+      "2017": 946,
+      "2018": 1004,
+      "2019": 1085,
+      "2020": 805,
+      "2021": 811,
+      "2022": 830,
+      "2023": 926,
+      "2024": 1391,
+      "2025": 1008
     }
   },
   {
@@ -27864,7 +29408,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bendigo",
@@ -27904,6 +29450,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5652,
+    "crimeCountByYear": {
+      "2016": 3473,
+      "2017": 2861,
+      "2018": 3207,
+      "2019": 3215,
+      "2020": 2761,
+      "2021": 2299,
+      "2022": 2730,
+      "2023": 2881,
+      "2024": 3556,
+      "2025": 3620
     }
   },
   {
@@ -27942,7 +29501,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-bendigo-kennington",
@@ -27983,7 +29544,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flora-hill-spring-gully",
@@ -28021,7 +29584,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kangaroo-flat-golden-square",
@@ -28061,7 +29626,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maiden-gully",
@@ -28096,6 +29663,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5407,
+    "crimeCountByYear": {
+      "2016": 136,
+      "2017": 115,
+      "2018": 218,
+      "2019": 152,
+      "2020": 148,
+      "2021": 176,
+      "2022": 172,
+      "2023": 174,
+      "2024": 176,
+      "2025": 128
     }
   },
   {
@@ -28134,6 +29714,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6850,
+    "crimeCountByYear": {
+      "2016": 92,
+      "2017": 118,
+      "2018": 134,
+      "2019": 147,
+      "2020": 196,
+      "2021": 204,
+      "2022": 180,
+      "2023": 221,
+      "2024": 216,
+      "2025": 148
     }
   },
   {
@@ -28174,7 +29767,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bendigo-surrounds-south",
@@ -28210,7 +29805,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "castlemaine",
@@ -28247,6 +29844,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7506,
+    "crimeCountByYear": {
+      "2016": 690,
+      "2017": 555,
+      "2018": 553,
+      "2019": 730,
+      "2020": 607,
+      "2021": 582,
+      "2022": 482,
+      "2023": 672,
+      "2024": 724,
+      "2025": 794
     }
   },
   {
@@ -28283,7 +29893,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "heathcote",
@@ -28318,6 +29930,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2962,
+    "crimeCountByYear": {
+      "2016": 172,
+      "2017": 153,
+      "2018": 180,
+      "2019": 227,
+      "2020": 242,
+      "2021": 272,
+      "2022": 243,
+      "2023": 238,
+      "2024": 270,
+      "2025": 253
     }
   },
   {
@@ -28355,6 +29980,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7513,
+    "crimeCountByYear": {
+      "2016": 549,
+      "2017": 467,
+      "2018": 511,
+      "2019": 498,
+      "2020": 512,
+      "2021": 399,
+      "2022": 483,
+      "2023": 486,
+      "2024": 638,
+      "2025": 723
     }
   },
   {
@@ -28390,6 +30028,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6732,
+    "crimeCountByYear": {
+      "2016": 199,
+      "2017": 256,
+      "2018": 281,
+      "2019": 267,
+      "2020": 352,
+      "2021": 205,
+      "2022": 258,
+      "2023": 329,
+      "2024": 301,
+      "2025": 291
     }
   },
   {
@@ -28426,7 +30077,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loddon",
@@ -28461,7 +30114,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bannockburn",
@@ -28500,6 +30155,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6470,
+    "crimeCountByYear": {
+      "2016": 179,
+      "2017": 105,
+      "2018": 176,
+      "2019": 135,
+      "2020": 124,
+      "2021": 158,
+      "2022": 109,
+      "2023": 118,
+      "2024": 133,
+      "2025": 188
     }
   },
   {
@@ -28539,7 +30207,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "winchelsea",
@@ -28580,6 +30250,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2456,
+    "crimeCountByYear": {
+      "2016": 105,
+      "2017": 109,
+      "2018": 135,
+      "2019": 155,
+      "2020": 204,
+      "2021": 126,
+      "2022": 111,
+      "2023": 109,
+      "2024": 113,
+      "2025": 102
     }
   },
   {
@@ -28621,6 +30304,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15066,
+    "crimeCountByYear": {
+      "2016": 1258,
+      "2017": 1130,
+      "2018": 1075,
+      "2019": 1079,
+      "2020": 1212,
+      "2021": 1090,
+      "2022": 926,
+      "2023": 1280,
+      "2024": 1199,
+      "2025": 1322
     }
   },
   {
@@ -28662,6 +30358,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5811,
+    "crimeCountByYear": {
+      "2016": 3225,
+      "2017": 3608,
+      "2018": 3174,
+      "2019": 3409,
+      "2020": 2982,
+      "2021": 2684,
+      "2022": 3142,
+      "2023": 3423,
+      "2024": 3785,
+      "2025": 3993
     }
   },
   {
@@ -28703,7 +30412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "highton",
@@ -28745,6 +30456,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 20736,
+    "crimeCountByYear": {
+      "2016": 666,
+      "2017": 538,
+      "2018": 523,
+      "2019": 470,
+      "2020": 620,
+      "2021": 539,
+      "2022": 545,
+      "2023": 756,
+      "2024": 718,
+      "2025": 482
     }
   },
   {
@@ -28786,6 +30510,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19014,
+    "crimeCountByYear": {
+      "2016": 898,
+      "2017": 1132,
+      "2018": 1013,
+      "2019": 959,
+      "2020": 1002,
+      "2021": 736,
+      "2022": 954,
+      "2023": 1160,
+      "2024": 1300,
+      "2025": 1389
     }
   },
   {
@@ -28826,6 +30563,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13272,
+    "crimeCountByYear": {
+      "2016": 449,
+      "2017": 563,
+      "2018": 390,
+      "2019": 425,
+      "2020": 469,
+      "2021": 374,
+      "2022": 377,
+      "2023": 400,
+      "2024": 437,
+      "2025": 610
     }
   },
   {
@@ -28866,7 +30616,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newtown-vic",
@@ -28907,6 +30659,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10445,
+    "crimeCountByYear": {
+      "2016": 756,
+      "2017": 748,
+      "2018": 442,
+      "2019": 489,
+      "2020": 619,
+      "2021": 469,
+      "2022": 467,
+      "2023": 545,
+      "2024": 557,
+      "2025": 553
     }
   },
   {
@@ -28951,7 +30716,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charlemont",
@@ -28991,6 +30758,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2612,
+    "crimeCountByYear": {
+      "2016": 12,
+      "2017": 19,
+      "2018": 41,
+      "2019": 56,
+      "2020": 108,
+      "2021": 92,
+      "2022": 129,
+      "2023": 107,
+      "2024": 212,
+      "2025": 281
     }
   },
   {
@@ -29033,7 +30813,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grovedale-mount-duneed",
@@ -29075,7 +30857,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "norlane",
@@ -29116,6 +30900,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8682,
+    "crimeCountByYear": {
+      "2016": 2270,
+      "2017": 2016,
+      "2018": 1665,
+      "2019": 2014,
+      "2020": 2354,
+      "2021": 2307,
+      "2022": 1954,
+      "2023": 2296,
+      "2024": 2867,
+      "2025": 2765
     }
   },
   {
@@ -29155,6 +30952,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7646,
+    "crimeCountByYear": {
+      "2016": 200,
+      "2017": 134,
+      "2018": 184,
+      "2019": 199,
+      "2020": 147,
+      "2021": 145,
+      "2022": 227,
+      "2023": 235,
+      "2024": 189,
+      "2025": 203
     }
   },
   {
@@ -29194,7 +31004,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "portarlington",
@@ -29233,6 +31045,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4436,
+    "crimeCountByYear": {
+      "2016": 169,
+      "2017": 161,
+      "2018": 210,
+      "2019": 214,
+      "2020": 168,
+      "2021": 196,
+      "2022": 132,
+      "2023": 177,
+      "2024": 201,
+      "2025": 214
     }
   },
   {
@@ -29272,7 +31097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torquay",
@@ -29315,6 +31142,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18534,
+    "crimeCountByYear": {
+      "2016": 629,
+      "2017": 529,
+      "2018": 503,
+      "2019": 579,
+      "2020": 618,
+      "2021": 623,
+      "2022": 477,
+      "2023": 602,
+      "2024": 690,
+      "2025": 671
     }
   },
   {
@@ -29355,7 +31195,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ocean-grove",
@@ -29397,6 +31239,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17714,
+    "crimeCountByYear": {
+      "2016": 458,
+      "2017": 490,
+      "2018": 430,
+      "2019": 487,
+      "2020": 552,
+      "2021": 440,
+      "2022": 435,
+      "2023": 499,
+      "2024": 470,
+      "2025": 444
     }
   },
   {
@@ -29436,6 +31291,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2801,
+    "crimeCountByYear": {
+      "2016": 144,
+      "2017": 131,
+      "2018": 154,
+      "2019": 113,
+      "2020": 195,
+      "2021": 138,
+      "2022": 118,
+      "2023": 100,
+      "2024": 119,
+      "2025": 146
     }
   },
   {
@@ -29475,6 +31343,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3508,
+    "crimeCountByYear": {
+      "2016": 147,
+      "2017": 168,
+      "2018": 192,
+      "2019": 201,
+      "2020": 115,
+      "2021": 150,
+      "2022": 174,
+      "2023": 129,
+      "2024": 221,
+      "2025": 164
     }
   },
   {
@@ -29515,7 +31396,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mansfield-vic",
@@ -29555,6 +31438,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5541,
+    "crimeCountByYear": {
+      "2016": 383,
+      "2017": 427,
+      "2018": 259,
+      "2019": 308,
+      "2020": 300,
+      "2021": 234,
+      "2022": 168,
+      "2023": 360,
+      "2024": 263,
+      "2025": 218
     }
   },
   {
@@ -29594,6 +31490,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2254,
+    "crimeCountByYear": {
+      "2016": 200,
+      "2017": 143,
+      "2018": 143,
+      "2019": 117,
+      "2020": 207,
+      "2021": 246,
+      "2022": 137,
+      "2023": 160,
+      "2024": 139,
+      "2025": 197
     }
   },
   {
@@ -29632,6 +31541,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6569,
+    "crimeCountByYear": {
+      "2016": 1526,
+      "2017": 1588,
+      "2018": 1334,
+      "2019": 1521,
+      "2020": 1529,
+      "2021": 967,
+      "2022": 1080,
+      "2023": 1353,
+      "2024": 1515,
+      "2025": 1578
     }
   },
   {
@@ -29672,7 +31594,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-yarra-valley",
@@ -29714,7 +31638,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yea",
@@ -29753,6 +31679,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1789,
+    "crimeCountByYear": {
+      "2016": 131,
+      "2017": 62,
+      "2018": 98,
+      "2019": 97,
+      "2020": 122,
+      "2021": 56,
+      "2022": 95,
+      "2023": 150,
+      "2024": 106,
+      "2025": 169
     }
   },
   {
@@ -29792,6 +31731,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10822,
+    "crimeCountByYear": {
+      "2016": 1384,
+      "2017": 1128,
+      "2018": 1087,
+      "2019": 1176,
+      "2020": 1266,
+      "2021": 1315,
+      "2022": 1215,
+      "2023": 1351,
+      "2024": 1699,
+      "2025": 1373
     }
   },
   {
@@ -29832,7 +31784,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rutherglen",
@@ -29871,6 +31825,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2579,
+    "crimeCountByYear": {
+      "2016": 71,
+      "2017": 112,
+      "2018": 79,
+      "2019": 126,
+      "2020": 103,
+      "2021": 103,
+      "2022": 142,
+      "2023": 155,
+      "2024": 119,
+      "2025": 136
     }
   },
   {
@@ -29911,6 +31878,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19214,
+    "crimeCountByYear": {
+      "2016": 2198,
+      "2017": 2031,
+      "2018": 2005,
+      "2019": 2104,
+      "2020": 2720,
+      "2021": 1954,
+      "2022": 2037,
+      "2023": 2280,
+      "2024": 2310,
+      "2025": 2466
     }
   },
   {
@@ -29952,7 +31932,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beechworth",
@@ -29991,6 +31973,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4274,
+    "crimeCountByYear": {
+      "2016": 90,
+      "2017": 134,
+      "2018": 114,
+      "2019": 171,
+      "2020": 212,
+      "2021": 130,
+      "2022": 243,
+      "2023": 175,
+      "2024": 159,
+      "2025": 178
     }
   },
   {
@@ -30030,7 +32025,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chiltern-indigo-valley",
@@ -30069,7 +32066,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "myrtleford",
@@ -30109,6 +32108,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3285,
+    "crimeCountByYear": {
+      "2016": 184,
+      "2017": 234,
+      "2018": 286,
+      "2019": 286,
+      "2020": 283,
+      "2021": 222,
+      "2022": 177,
+      "2023": 238,
+      "2024": 190,
+      "2025": 200
     }
   },
   {
@@ -30148,6 +32160,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 143,
+    "crimeCountByYear": {
+      "2016": 1,
+      "2017": 5,
+      "2019": 2,
+      "2020": 3,
+      "2021": 3,
+      "2022": 3,
+      "2023": 3,
+      "2024": 1,
+      "2025": 4
     }
   },
   {
@@ -30186,6 +32210,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14794,
+    "crimeCountByYear": {
+      "2016": 804,
+      "2017": 865,
+      "2018": 932,
+      "2019": 1011,
+      "2020": 1001,
+      "2021": 842,
+      "2022": 988,
+      "2023": 1247,
+      "2024": 1358,
+      "2025": 1060
     }
   },
   {
@@ -30225,6 +32262,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2008,
+    "crimeCountByYear": {
+      "2016": 20,
+      "2017": 22,
+      "2018": 25,
+      "2019": 24,
+      "2020": 20,
+      "2021": 28,
+      "2022": 32,
+      "2023": 34,
+      "2024": 35,
+      "2025": 28
     }
   },
   {
@@ -30265,7 +32315,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wodonga",
@@ -30305,6 +32357,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 20259,
+    "crimeCountByYear": {
+      "2016": 2350,
+      "2017": 2178,
+      "2018": 2099,
+      "2019": 2562,
+      "2020": 2398,
+      "2021": 2400,
+      "2022": 2445,
+      "2023": 2873,
+      "2024": 3126,
+      "2025": 2921
     }
   },
   {
@@ -30345,6 +32410,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15287,
+    "crimeCountByYear": {
+      "2016": 1074,
+      "2017": 1015,
+      "2018": 1088,
+      "2019": 1272,
+      "2020": 1381,
+      "2021": 1117,
+      "2022": 1027,
+      "2023": 1140,
+      "2024": 1358,
+      "2025": 1176
     }
   },
   {
@@ -30379,7 +32457,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "trafalgar-vic",
@@ -30415,6 +32495,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4349,
+    "crimeCountByYear": {
+      "2016": 377,
+      "2017": 244,
+      "2018": 339,
+      "2019": 309,
+      "2020": 400,
+      "2021": 251,
+      "2022": 290,
+      "2023": 288,
+      "2024": 849,
+      "2025": 351
     }
   },
   {
@@ -30455,6 +32548,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19856,
+    "crimeCountByYear": {
+      "2016": 1679,
+      "2017": 1472,
+      "2018": 1728,
+      "2019": 2003,
+      "2020": 1914,
+      "2021": 1705,
+      "2022": 1877,
+      "2023": 2113,
+      "2024": 2492,
+      "2025": 2594
     }
   },
   {
@@ -30490,7 +32596,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bairnsdale",
@@ -30530,6 +32638,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7905,
+    "crimeCountByYear": {
+      "2016": 1628,
+      "2017": 1476,
+      "2018": 1512,
+      "2019": 2039,
+      "2020": 1771,
+      "2021": 1788,
+      "2022": 1912,
+      "2023": 1912,
+      "2024": 2222,
+      "2025": 2411
     }
   },
   {
@@ -30565,7 +32686,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lake-king",
@@ -30600,7 +32723,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lakes-entrance",
@@ -30637,6 +32762,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5145,
+    "crimeCountByYear": {
+      "2016": 794,
+      "2017": 660,
+      "2018": 814,
+      "2019": 858,
+      "2020": 1097,
+      "2021": 862,
+      "2022": 896,
+      "2023": 809,
+      "2024": 1006,
+      "2025": 1488
     }
   },
   {
@@ -30672,6 +32810,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2264,
+    "crimeCountByYear": {
+      "2016": 293,
+      "2017": 268,
+      "2018": 239,
+      "2019": 264,
+      "2020": 263,
+      "2021": 351,
+      "2022": 224,
+      "2023": 323,
+      "2024": 446,
+      "2025": 411
     }
   },
   {
@@ -30707,6 +32858,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3636,
+    "crimeCountByYear": {
+      "2016": 179,
+      "2017": 172,
+      "2018": 139,
+      "2019": 192,
+      "2020": 255,
+      "2021": 259,
+      "2022": 194,
+      "2023": 265,
+      "2024": 159,
+      "2025": 191
     }
   },
   {
@@ -30742,6 +32906,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2044,
+    "crimeCountByYear": {
+      "2016": 60,
+      "2017": 64,
+      "2018": 112,
+      "2019": 65,
+      "2020": 89,
+      "2021": 72,
+      "2022": 81,
+      "2023": 116,
+      "2024": 144,
+      "2025": 307
     }
   },
   {
@@ -30777,7 +32954,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "korumburra",
@@ -30813,6 +32992,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4749,
+    "crimeCountByYear": {
+      "2016": 343,
+      "2017": 344,
+      "2018": 336,
+      "2019": 386,
+      "2020": 403,
+      "2021": 419,
+      "2022": 417,
+      "2023": 589,
+      "2024": 565,
+      "2025": 665
     }
   },
   {
@@ -30852,6 +33044,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5869,
+    "crimeCountByYear": {
+      "2016": 523,
+      "2017": 379,
+      "2018": 365,
+      "2019": 519,
+      "2020": 446,
+      "2021": 435,
+      "2022": 518,
+      "2023": 663,
+      "2024": 680,
+      "2025": 750
     }
   },
   {
@@ -30892,7 +33097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wilsons-promontory",
@@ -30927,7 +33134,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wonthaggi-inverloch",
@@ -30967,7 +33176,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "churchill",
@@ -31003,6 +33214,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4924,
+    "crimeCountByYear": {
+      "2016": 581,
+      "2017": 547,
+      "2018": 652,
+      "2019": 763,
+      "2020": 642,
+      "2021": 509,
+      "2022": 551,
+      "2023": 531,
+      "2024": 713,
+      "2025": 719
     }
   },
   {
@@ -31041,7 +33265,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morwell",
@@ -31081,6 +33307,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14389,
+    "crimeCountByYear": {
+      "2016": 4504,
+      "2017": 4394,
+      "2018": 4582,
+      "2019": 5012,
+      "2020": 4561,
+      "2021": 3791,
+      "2022": 4050,
+      "2023": 4568,
+      "2024": 5180,
+      "2025": 5010
     }
   },
   {
@@ -31116,7 +33355,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "traralgon-east",
@@ -31157,6 +33398,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1780,
+    "crimeCountByYear": {
+      "2016": 112,
+      "2017": 131,
+      "2018": 383,
+      "2019": 153,
+      "2020": 211,
+      "2021": 143,
+      "2022": 123,
+      "2023": 191,
+      "2024": 243,
+      "2025": 212
     }
   },
   {
@@ -31197,7 +33451,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alps-west",
@@ -31232,7 +33488,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "longford-loch-sport",
@@ -31267,7 +33525,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maffra",
@@ -31302,6 +33562,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5384,
+    "crimeCountByYear": {
+      "2016": 501,
+      "2017": 293,
+      "2018": 326,
+      "2019": 407,
+      "2020": 486,
+      "2021": 294,
+      "2022": 435,
+      "2023": 433,
+      "2024": 491,
+      "2025": 531
     }
   },
   {
@@ -31339,6 +33612,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1729,
+    "crimeCountByYear": {
+      "2016": 244,
+      "2017": 131,
+      "2018": 124,
+      "2019": 171,
+      "2020": 232,
+      "2021": 201,
+      "2022": 292,
+      "2023": 296,
+      "2024": 266,
+      "2025": 207
     }
   },
   {
@@ -31378,6 +33664,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14296,
+    "crimeCountByYear": {
+      "2016": 2403,
+      "2017": 1877,
+      "2018": 2178,
+      "2019": 2373,
+      "2020": 2391,
+      "2021": 2204,
+      "2022": 2281,
+      "2023": 2289,
+      "2024": 2871,
+      "2025": 3096
     }
   },
   {
@@ -31413,6 +33712,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2136,
+    "crimeCountByYear": {
+      "2016": 209,
+      "2017": 151,
+      "2018": 188,
+      "2019": 235,
+      "2020": 237,
+      "2021": 199,
+      "2022": 314,
+      "2023": 358,
+      "2024": 399,
+      "2025": 250
     }
   },
   {
@@ -31455,6 +33767,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13279,
+    "crimeCountByYear": {
+      "2016": 962,
+      "2017": 929,
+      "2018": 1017,
+      "2019": 913,
+      "2020": 878,
+      "2021": 831,
+      "2022": 860,
+      "2023": 920,
+      "2024": 1149,
+      "2025": 956
     }
   },
   {
@@ -31497,6 +33822,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14746,
+    "crimeCountByYear": {
+      "2016": 970,
+      "2017": 884,
+      "2018": 890,
+      "2019": 836,
+      "2020": 1042,
+      "2021": 1054,
+      "2022": 1044,
+      "2023": 1081,
+      "2024": 1166,
+      "2025": 1255
     }
   },
   {
@@ -31539,6 +33877,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10534,
+    "crimeCountByYear": {
+      "2016": 627,
+      "2017": 438,
+      "2018": 528,
+      "2019": 449,
+      "2020": 449,
+      "2021": 440,
+      "2022": 424,
+      "2023": 366,
+      "2024": 522,
+      "2025": 556
     }
   },
   {
@@ -31581,6 +33932,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 24896,
+    "crimeCountByYear": {
+      "2016": 3046,
+      "2017": 2561,
+      "2018": 2956,
+      "2019": 2802,
+      "2020": 2725,
+      "2021": 2585,
+      "2022": 2583,
+      "2023": 2772,
+      "2024": 3090,
+      "2025": 2863
     }
   },
   {
@@ -31623,6 +33987,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 24896,
+    "crimeCountByYear": {
+      "2016": 3046,
+      "2017": 2561,
+      "2018": 2956,
+      "2019": 2802,
+      "2020": 2725,
+      "2021": 2585,
+      "2022": 2583,
+      "2023": 2772,
+      "2024": 3090,
+      "2025": 2863
     }
   },
   {
@@ -31665,7 +34042,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coburg-west",
@@ -31707,7 +34086,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alphington-fairfield",
@@ -31749,7 +34130,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thornbury",
@@ -31791,6 +34174,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19005,
+    "crimeCountByYear": {
+      "2016": 1584,
+      "2017": 1562,
+      "2018": 1718,
+      "2019": 1445,
+      "2020": 1443,
+      "2021": 1188,
+      "2022": 1243,
+      "2023": 1236,
+      "2024": 1609,
+      "2025": 1647
     }
   },
   {
@@ -31833,6 +34229,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 25276,
+    "crimeCountByYear": {
+      "2016": 2319,
+      "2017": 1977,
+      "2018": 2091,
+      "2019": 1773,
+      "2020": 1627,
+      "2021": 1477,
+      "2022": 1258,
+      "2023": 1431,
+      "2024": 1826,
+      "2025": 1817
     }
   },
   {
@@ -31876,7 +34285,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ascot-vale",
@@ -31918,6 +34329,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15197,
+    "crimeCountByYear": {
+      "2016": 1445,
+      "2017": 1372,
+      "2018": 1250,
+      "2019": 1459,
+      "2020": 1469,
+      "2021": 1269,
+      "2022": 1001,
+      "2023": 1302,
+      "2024": 1977,
+      "2025": 1954
     }
   },
   {
@@ -31960,6 +34384,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7025,
+    "crimeCountByYear": {
+      "2016": 1415,
+      "2017": 1216,
+      "2018": 1191,
+      "2019": 1113,
+      "2020": 1048,
+      "2021": 934,
+      "2022": 1033,
+      "2023": 1003,
+      "2024": 1586,
+      "2025": 1667
     }
   },
   {
@@ -32002,6 +34439,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16224,
+    "crimeCountByYear": {
+      "2016": 1490,
+      "2017": 1361,
+      "2018": 1308,
+      "2019": 1352,
+      "2020": 1351,
+      "2021": 1262,
+      "2022": 1340,
+      "2023": 1462,
+      "2024": 1730,
+      "2025": 1694
     }
   },
   {
@@ -32044,7 +34494,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "essendon-east",
@@ -32086,7 +34538,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carlton",
@@ -32133,6 +34587,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16055,
+    "crimeCountByYear": {
+      "2016": 2739,
+      "2017": 1857,
+      "2018": 2036,
+      "2019": 1913,
+      "2020": 1883,
+      "2021": 2185,
+      "2022": 2348,
+      "2023": 2727,
+      "2024": 3173,
+      "2025": 3200
     }
   },
   {
@@ -32179,6 +34646,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15495,
+    "crimeCountByYear": {
+      "2016": 2625,
+      "2017": 2593,
+      "2018": 3199,
+      "2019": 2768,
+      "2020": 3297,
+      "2021": 3127,
+      "2022": 2803,
+      "2023": 2593,
+      "2024": 4072,
+      "2025": 4182
     }
   },
   {
@@ -32220,6 +34700,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4896,
+    "crimeCountByYear": {
+      "2016": 1000,
+      "2017": 820,
+      "2018": 942,
+      "2019": 940,
+      "2020": 1350,
+      "2021": 1073,
+      "2022": 852,
+      "2023": 877,
+      "2024": 1165,
+      "2025": 1164
     }
   },
   {
@@ -32264,7 +34757,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kensington-vic",
@@ -32307,6 +34802,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10745,
+    "crimeCountByYear": {
+      "2016": 1123,
+      "2017": 1027,
+      "2018": 1129,
+      "2019": 894,
+      "2020": 832,
+      "2021": 673,
+      "2022": 775,
+      "2023": 782,
+      "2024": 1118,
+      "2025": 1405
     }
   },
   {
@@ -32353,6 +34861,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7074,
+    "crimeCountByYear": {
+      "2016": 941,
+      "2017": 805,
+      "2018": 730,
+      "2019": 703,
+      "2020": 841,
+      "2021": 758,
+      "2022": 570,
+      "2023": 753,
+      "2024": 1116,
+      "2025": 1228
     }
   },
   {
@@ -32395,6 +34916,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 25028,
+    "crimeCountByYear": {
+      "2016": 2936,
+      "2017": 2392,
+      "2018": 2736,
+      "2019": 3166,
+      "2020": 3174,
+      "2021": 2980,
+      "2022": 3102,
+      "2023": 2936,
+      "2024": 3741,
+      "2025": 3591
     }
   },
   {
@@ -32441,6 +34975,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8025,
+    "crimeCountByYear": {
+      "2016": 918,
+      "2017": 942,
+      "2018": 1098,
+      "2019": 1091,
+      "2020": 1341,
+      "2021": 1357,
+      "2022": 1248,
+      "2023": 1200,
+      "2024": 1498,
+      "2025": 1688
     }
   },
   {
@@ -32488,7 +35035,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melbourne-cbd-north",
@@ -32535,7 +35084,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melbourne-cbd-west",
@@ -32582,7 +35133,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is strong.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-melbourne",
@@ -32626,6 +35179,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14953,
+    "crimeCountByYear": {
+      "2016": 1727,
+      "2017": 2020,
+      "2018": 1452,
+      "2019": 1440,
+      "2020": 1714,
+      "2021": 1807,
+      "2022": 1686,
+      "2023": 1877,
+      "2024": 2160,
+      "2025": 2455
     }
   },
   {
@@ -32672,7 +35238,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southbank-west-south-wharf",
@@ -32719,7 +35287,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southbank-east",
@@ -32765,7 +35335,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-melbourne-residential",
@@ -32811,6 +35383,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8025,
+    "crimeCountByYear": {
+      "2016": 918,
+      "2017": 942,
+      "2018": 1098,
+      "2019": 1091,
+      "2020": 1341,
+      "2021": 1357,
+      "2022": 1248,
+      "2023": 1200,
+      "2024": 1498,
+      "2025": 1688
     }
   },
   {
@@ -32859,6 +35444,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6044,
+    "crimeCountByYear": {
+      "2016": 868,
+      "2017": 590,
+      "2018": 628,
+      "2019": 609,
+      "2020": 589,
+      "2021": 480,
+      "2022": 466,
+      "2023": 519,
+      "2024": 646,
+      "2025": 792
     }
   },
   {
@@ -32901,6 +35499,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15153,
+    "crimeCountByYear": {
+      "2016": 1073,
+      "2017": 901,
+      "2018": 879,
+      "2019": 897,
+      "2020": 869,
+      "2021": 821,
+      "2022": 869,
+      "2023": 802,
+      "2024": 1001,
+      "2025": 1052
     }
   },
   {
@@ -32944,6 +35555,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17633,
+    "crimeCountByYear": {
+      "2016": 2270,
+      "2017": 1996,
+      "2018": 2331,
+      "2019": 1960,
+      "2020": 2127,
+      "2021": 2155,
+      "2022": 2082,
+      "2023": 2366,
+      "2024": 2957,
+      "2025": 3071
     }
   },
   {
@@ -32986,6 +35610,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12571,
+    "crimeCountByYear": {
+      "2016": 717,
+      "2017": 741,
+      "2018": 1340,
+      "2019": 623,
+      "2020": 771,
+      "2021": 721,
+      "2022": 841,
+      "2023": 639,
+      "2024": 870,
+      "2025": 797
     }
   },
   {
@@ -33027,7 +35664,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-melbourne",
@@ -33069,6 +35708,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11548,
+    "crimeCountByYear": {
+      "2016": 2172,
+      "2017": 2301,
+      "2018": 2219,
+      "2019": 2406,
+      "2020": 2789,
+      "2021": 2289,
+      "2022": 2259,
+      "2023": 2638,
+      "2024": 2922,
+      "2025": 3575
     }
   },
   {
@@ -33115,6 +35767,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19490,
+    "crimeCountByYear": {
+      "2016": 4802,
+      "2017": 4453,
+      "2018": 4194,
+      "2019": 4256,
+      "2020": 4776,
+      "2021": 4179,
+      "2022": 4361,
+      "2023": 4108,
+      "2024": 4269,
+      "2025": 4350
     }
   },
   {
@@ -33159,6 +35824,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2951,
+    "crimeCountByYear": {
+      "2016": 363,
+      "2017": 265,
+      "2018": 294,
+      "2019": 249,
+      "2020": 297,
+      "2021": 262,
+      "2022": 283,
+      "2023": 182,
+      "2024": 306,
+      "2025": 309
     }
   },
   {
@@ -33201,6 +35879,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9368,
+    "crimeCountByYear": {
+      "2016": 691,
+      "2017": 480,
+      "2018": 688,
+      "2019": 660,
+      "2020": 548,
+      "2021": 485,
+      "2022": 577,
+      "2023": 601,
+      "2024": 691,
+      "2025": 806
     }
   },
   {
@@ -33243,7 +35934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toorak",
@@ -33286,6 +35979,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12817,
+    "crimeCountByYear": {
+      "2016": 874,
+      "2017": 698,
+      "2018": 787,
+      "2019": 1000,
+      "2020": 845,
+      "2021": 824,
+      "2022": 817,
+      "2023": 787,
+      "2024": 820,
+      "2025": 933
     }
   },
   {
@@ -33330,6 +36036,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 25028,
+    "crimeCountByYear": {
+      "2016": 2936,
+      "2017": 2392,
+      "2018": 2736,
+      "2019": 3166,
+      "2020": 3174,
+      "2021": 2980,
+      "2022": 3102,
+      "2023": 2936,
+      "2024": 3741,
+      "2025": 3591
     }
   },
   {
@@ -33372,6 +36091,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 25028,
+    "crimeCountByYear": {
+      "2016": 2936,
+      "2017": 2392,
+      "2018": 2736,
+      "2019": 3166,
+      "2020": 3174,
+      "2021": 2980,
+      "2022": 3102,
+      "2023": 2936,
+      "2024": 3741,
+      "2025": 3591
     }
   },
   {
@@ -33413,6 +36145,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9088,
+    "crimeCountByYear": {
+      "2016": 1360,
+      "2017": 1415,
+      "2018": 1552,
+      "2019": 1590,
+      "2020": 1578,
+      "2021": 1517,
+      "2022": 1322,
+      "2023": 1279,
+      "2024": 1479,
+      "2025": 1609
     }
   },
   {
@@ -33458,7 +36203,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "collingwood",
@@ -33499,6 +36246,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9179,
+    "crimeCountByYear": {
+      "2016": 2129,
+      "2017": 1989,
+      "2018": 2313,
+      "2019": 2404,
+      "2020": 2446,
+      "2021": 1820,
+      "2022": 1855,
+      "2023": 2092,
+      "2024": 2525,
+      "2025": 2622
     }
   },
   {
@@ -33541,6 +36301,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10431,
+    "crimeCountByYear": {
+      "2016": 2762,
+      "2017": 2702,
+      "2018": 2542,
+      "2019": 2498,
+      "2020": 2417,
+      "2021": 2169,
+      "2022": 1851,
+      "2023": 2988,
+      "2024": 3147,
+      "2025": 3079
     }
   },
   {
@@ -33583,6 +36356,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12781,
+    "crimeCountByYear": {
+      "2016": 1302,
+      "2017": 1022,
+      "2018": 1063,
+      "2019": 1088,
+      "2020": 1102,
+      "2021": 949,
+      "2022": 958,
+      "2023": 1008,
+      "2024": 1282,
+      "2025": 1210
     }
   },
   {
@@ -33626,7 +36412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "richmond-south-cremorne",
@@ -33669,7 +36457,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "richmond-north",
@@ -33711,6 +36501,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 28587,
+    "crimeCountByYear": {
+      "2016": 4310,
+      "2017": 4070,
+      "2018": 4137,
+      "2019": 4195,
+      "2020": 4852,
+      "2021": 4105,
+      "2022": 3656,
+      "2023": 3633,
+      "2024": 4436,
+      "2025": 4886
     }
   },
   {
@@ -33752,6 +36555,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7952,
+    "crimeCountByYear": {
+      "2016": 538,
+      "2017": 369,
+      "2018": 443,
+      "2019": 597,
+      "2020": 616,
+      "2021": 561,
+      "2022": 675,
+      "2023": 687,
+      "2024": 679,
+      "2025": 563
     }
   },
   {
@@ -33797,6 +36613,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13495,
+    "crimeCountByYear": {
+      "2016": 557,
+      "2017": 508,
+      "2018": 491,
+      "2019": 548,
+      "2020": 749,
+      "2021": 395,
+      "2022": 410,
+      "2023": 554,
+      "2024": 690,
+      "2025": 766
     }
   },
   {
@@ -33842,6 +36671,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 21302,
+    "crimeCountByYear": {
+      "2016": 636,
+      "2017": 656,
+      "2018": 590,
+      "2019": 608,
+      "2020": 542,
+      "2021": 545,
+      "2022": 601,
+      "2023": 654,
+      "2024": 766,
+      "2025": 688
     }
   },
   {
@@ -33885,6 +36727,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 21965,
+    "crimeCountByYear": {
+      "2016": 1206,
+      "2017": 1292,
+      "2018": 987,
+      "2019": 1360,
+      "2020": 1091,
+      "2021": 1026,
+      "2022": 1039,
+      "2023": 1202,
+      "2024": 1239,
+      "2025": 1562
     }
   },
   {
@@ -33928,7 +36783,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hawthorn-east",
@@ -33970,6 +36827,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14834,
+    "crimeCountByYear": {
+      "2016": 865,
+      "2017": 590,
+      "2018": 615,
+      "2019": 679,
+      "2020": 872,
+      "2021": 736,
+      "2022": 650,
+      "2023": 754,
+      "2024": 1012,
+      "2025": 1024
     }
   },
   {
@@ -34013,6 +36883,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6620,
+    "crimeCountByYear": {
+      "2016": 202,
+      "2017": 263,
+      "2018": 250,
+      "2019": 271,
+      "2020": 216,
+      "2021": 256,
+      "2022": 258,
+      "2023": 262,
+      "2024": 292,
+      "2025": 331
     }
   },
   {
@@ -34056,7 +36939,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hawthorn-north",
@@ -34098,7 +36983,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hawthorn-south",
@@ -34140,7 +37027,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kew-south",
@@ -34183,7 +37072,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kew-west",
@@ -34226,7 +37117,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bulleen",
@@ -34270,6 +37163,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11219,
+    "crimeCountByYear": {
+      "2016": 464,
+      "2017": 391,
+      "2018": 456,
+      "2019": 505,
+      "2020": 517,
+      "2021": 481,
+      "2022": 375,
+      "2023": 441,
+      "2024": 519,
+      "2025": 483
     }
   },
   {
@@ -34316,6 +37222,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 25020,
+    "crimeCountByYear": {
+      "2016": 1490,
+      "2017": 1495,
+      "2018": 1348,
+      "2019": 1723,
+      "2020": 1591,
+      "2021": 1304,
+      "2022": 1410,
+      "2023": 1697,
+      "2024": 2098,
+      "2025": 2028
     }
   },
   {
@@ -34361,6 +37280,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16966,
+    "crimeCountByYear": {
+      "2016": 567,
+      "2017": 549,
+      "2018": 483,
+      "2019": 477,
+      "2020": 718,
+      "2021": 415,
+      "2022": 359,
+      "2023": 560,
+      "2024": 559,
+      "2025": 520
     }
   },
   {
@@ -34406,6 +37338,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14098,
+    "crimeCountByYear": {
+      "2016": 469,
+      "2017": 509,
+      "2018": 477,
+      "2019": 512,
+      "2020": 482,
+      "2021": 434,
+      "2022": 427,
+      "2023": 412,
+      "2024": 439,
+      "2025": 450
     }
   },
   {
@@ -34453,7 +37398,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "doncaster-east-south",
@@ -34499,7 +37446,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blackburn",
@@ -34543,6 +37492,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14478,
+    "crimeCountByYear": {
+      "2016": 688,
+      "2017": 667,
+      "2018": 671,
+      "2019": 710,
+      "2020": 678,
+      "2021": 539,
+      "2022": 707,
+      "2023": 922,
+      "2024": 1001,
+      "2025": 954
     }
   },
   {
@@ -34587,6 +37549,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10939,
+    "crimeCountByYear": {
+      "2016": 432,
+      "2017": 369,
+      "2018": 403,
+      "2019": 351,
+      "2020": 577,
+      "2021": 331,
+      "2022": 323,
+      "2023": 489,
+      "2024": 483,
+      "2025": 634
     }
   },
   {
@@ -34633,6 +37608,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14353,
+    "crimeCountByYear": {
+      "2016": 1321,
+      "2017": 1335,
+      "2018": 1452,
+      "2019": 1756,
+      "2020": 1952,
+      "2021": 1468,
+      "2022": 1563,
+      "2023": 1926,
+      "2024": 2230,
+      "2025": 2492
     }
   },
   {
@@ -34677,6 +37665,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12337,
+    "crimeCountByYear": {
+      "2016": 374,
+      "2017": 404,
+      "2018": 483,
+      "2019": 438,
+      "2020": 446,
+      "2021": 302,
+      "2022": 326,
+      "2023": 421,
+      "2024": 579,
+      "2025": 465
     }
   },
   {
@@ -34723,6 +37724,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15147,
+    "crimeCountByYear": {
+      "2016": 827,
+      "2017": 914,
+      "2018": 852,
+      "2019": 1004,
+      "2020": 995,
+      "2021": 748,
+      "2022": 775,
+      "2023": 862,
+      "2024": 1085,
+      "2025": 1041
     }
   },
   {
@@ -34769,6 +37783,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10675,
+    "crimeCountByYear": {
+      "2016": 611,
+      "2017": 585,
+      "2018": 547,
+      "2019": 707,
+      "2020": 695,
+      "2021": 564,
+      "2022": 610,
+      "2023": 825,
+      "2024": 819,
+      "2025": 976
     }
   },
   {
@@ -34811,7 +37838,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beaumaris",
@@ -34853,6 +37882,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13947,
+    "crimeCountByYear": {
+      "2016": 418,
+      "2017": 337,
+      "2018": 369,
+      "2019": 356,
+      "2020": 468,
+      "2021": 294,
+      "2022": 378,
+      "2023": 513,
+      "2024": 458,
+      "2025": 485
     }
   },
   {
@@ -34896,6 +37938,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23252,
+    "crimeCountByYear": {
+      "2016": 1500,
+      "2017": 1222,
+      "2018": 1115,
+      "2019": 1186,
+      "2020": 1154,
+      "2021": 997,
+      "2022": 1293,
+      "2023": 1296,
+      "2024": 1433,
+      "2025": 1493
     }
   },
   {
@@ -34939,6 +37994,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16757,
+    "crimeCountByYear": {
+      "2016": 682,
+      "2017": 534,
+      "2018": 540,
+      "2019": 666,
+      "2020": 707,
+      "2021": 617,
+      "2022": 686,
+      "2023": 813,
+      "2024": 732,
+      "2025": 753
     }
   },
   {
@@ -34981,7 +38049,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hampton",
@@ -35024,6 +38094,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13518,
+    "crimeCountByYear": {
+      "2016": 771,
+      "2017": 695,
+      "2018": 578,
+      "2019": 757,
+      "2020": 732,
+      "2021": 620,
+      "2022": 683,
+      "2023": 741,
+      "2024": 793,
+      "2025": 817
     }
   },
   {
@@ -35067,7 +38150,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bentleigh-mckinnon",
@@ -35112,7 +38197,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carnegie",
@@ -35156,6 +38243,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17909,
+    "crimeCountByYear": {
+      "2016": 1120,
+      "2017": 825,
+      "2018": 781,
+      "2019": 918,
+      "2020": 1059,
+      "2021": 784,
+      "2022": 805,
+      "2023": 1124,
+      "2024": 1129,
+      "2025": 1003
     }
   },
   {
@@ -35198,6 +38298,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16903,
+    "crimeCountByYear": {
+      "2016": 728,
+      "2017": 589,
+      "2018": 683,
+      "2019": 761,
+      "2020": 736,
+      "2021": 798,
+      "2022": 705,
+      "2023": 804,
+      "2024": 912,
+      "2025": 880
     }
   },
   {
@@ -35241,6 +38354,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12328,
+    "crimeCountByYear": {
+      "2016": 552,
+      "2017": 453,
+      "2018": 394,
+      "2019": 492,
+      "2020": 599,
+      "2021": 454,
+      "2022": 433,
+      "2023": 507,
+      "2024": 512,
+      "2025": 494
     }
   },
   {
@@ -35283,6 +38409,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10887,
+    "crimeCountByYear": {
+      "2016": 704,
+      "2017": 684,
+      "2018": 649,
+      "2019": 639,
+      "2020": 707,
+      "2021": 689,
+      "2022": 645,
+      "2023": 747,
+      "2024": 869,
+      "2025": 762
     }
   },
   {
@@ -35327,6 +38466,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7563,
+    "crimeCountByYear": {
+      "2016": 395,
+      "2017": 324,
+      "2018": 318,
+      "2019": 367,
+      "2020": 397,
+      "2021": 409,
+      "2022": 733,
+      "2023": 437,
+      "2024": 462,
+      "2025": 451
     }
   },
   {
@@ -35369,6 +38521,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9996,
+    "crimeCountByYear": {
+      "2016": 513,
+      "2017": 434,
+      "2018": 371,
+      "2019": 410,
+      "2020": 450,
+      "2021": 404,
+      "2022": 435,
+      "2023": 490,
+      "2024": 525,
+      "2025": 468
     }
   },
   {
@@ -35413,7 +38578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bentleigh-east-north",
@@ -35458,7 +38625,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bentleigh-east-south",
@@ -35501,7 +38670,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aspendale-gardens-waterways",
@@ -35546,7 +38717,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "braeside",
@@ -35590,7 +38763,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carrum-patterson-lakes",
@@ -35632,7 +38807,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chelsea-bonbeach",
@@ -35676,7 +38853,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chelsea-heights",
@@ -35718,6 +38897,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5393,
+    "crimeCountByYear": {
+      "2016": 382,
+      "2017": 302,
+      "2018": 237,
+      "2019": 379,
+      "2020": 487,
+      "2021": 309,
+      "2022": 324,
+      "2023": 276,
+      "2024": 389,
+      "2025": 382
     }
   },
   {
@@ -35760,7 +38952,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edithvale-aspendale",
@@ -35801,7 +38995,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mentone",
@@ -35843,6 +39039,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13197,
+    "crimeCountByYear": {
+      "2016": 900,
+      "2017": 789,
+      "2018": 788,
+      "2019": 777,
+      "2020": 824,
+      "2021": 657,
+      "2022": 946,
+      "2023": 1045,
+      "2024": 869,
+      "2025": 909
     }
   },
   {
@@ -35885,7 +39094,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moorabbin-airport",
@@ -35928,7 +39139,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mordialloc-parkdale",
@@ -35974,7 +39187,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malvern-glen-iris",
@@ -36016,7 +39231,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malvern-east",
@@ -36058,6 +39275,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 22296,
+    "crimeCountByYear": {
+      "2016": 2268,
+      "2017": 1928,
+      "2018": 2073,
+      "2019": 2388,
+      "2020": 2185,
+      "2021": 1937,
+      "2022": 2267,
+      "2023": 2408,
+      "2024": 2436,
+      "2025": 2849
     }
   },
   {
@@ -36102,7 +39332,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greensborough",
@@ -36144,6 +39376,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 21070,
+    "crimeCountByYear": {
+      "2016": 1777,
+      "2017": 1482,
+      "2018": 1220,
+      "2019": 1355,
+      "2020": 1386,
+      "2021": 1044,
+      "2022": 1186,
+      "2023": 1499,
+      "2024": 1601,
+      "2025": 1477
     }
   },
   {
@@ -36186,7 +39431,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "heidelberg-west",
@@ -36228,6 +39475,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5252,
+    "crimeCountByYear": {
+      "2016": 1291,
+      "2017": 1208,
+      "2018": 1121,
+      "2019": 1135,
+      "2020": 1325,
+      "2021": 970,
+      "2022": 924,
+      "2023": 858,
+      "2024": 1378,
+      "2025": 1385
     }
   },
   {
@@ -36270,6 +39530,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13374,
+    "crimeCountByYear": {
+      "2016": 832,
+      "2017": 955,
+      "2018": 1020,
+      "2019": 906,
+      "2020": 791,
+      "2021": 704,
+      "2022": 842,
+      "2023": 885,
+      "2024": 1198,
+      "2025": 1449
     }
   },
   {
@@ -36313,7 +39586,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "montmorency-briar-hill",
@@ -36355,7 +39630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "viewbank-yallambie",
@@ -36397,7 +39674,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "watsonia",
@@ -36439,6 +39718,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5352,
+    "crimeCountByYear": {
+      "2016": 631,
+      "2017": 474,
+      "2018": 535,
+      "2019": 578,
+      "2020": 545,
+      "2021": 347,
+      "2022": 268,
+      "2023": 298,
+      "2024": 382,
+      "2025": 552
     }
   },
   {
@@ -36483,6 +39775,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3460,
+    "crimeCountByYear": {
+      "2016": 341,
+      "2017": 339,
+      "2018": 357,
+      "2019": 381,
+      "2020": 433,
+      "2021": 376,
+      "2022": 394,
+      "2023": 369,
+      "2024": 309,
+      "2025": 429
     }
   },
   {
@@ -36525,7 +39830,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "preston-west",
@@ -36567,7 +39874,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reservoir-north-east",
@@ -36611,7 +39920,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reservoir-north-west",
@@ -36653,7 +39964,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reservoir-south-east",
@@ -36695,7 +40008,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reservoir-south-west",
@@ -36737,7 +40052,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eltham",
@@ -36779,6 +40096,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18847,
+    "crimeCountByYear": {
+      "2016": 1139,
+      "2017": 825,
+      "2018": 745,
+      "2019": 888,
+      "2020": 830,
+      "2021": 941,
+      "2022": 747,
+      "2023": 749,
+      "2024": 954,
+      "2025": 1011
     }
   },
   {
@@ -36818,6 +40148,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3554,
+    "crimeCountByYear": {
+      "2016": 182,
+      "2017": 147,
+      "2018": 164,
+      "2019": 142,
+      "2020": 121,
+      "2021": 122,
+      "2022": 110,
+      "2023": 74,
+      "2024": 142,
+      "2025": 99
     }
   },
   {
@@ -36857,6 +40200,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1662,
+    "crimeCountByYear": {
+      "2016": 58,
+      "2017": 53,
+      "2018": 73,
+      "2019": 83,
+      "2020": 73,
+      "2021": 67,
+      "2022": 104,
+      "2023": 60,
+      "2024": 36,
+      "2025": 67
     }
   },
   {
@@ -36897,7 +40253,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "plenty-yarrambat",
@@ -36940,7 +40298,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "research-north-warrandyte",
@@ -36983,7 +40343,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wattle-glen-diamond-creek",
@@ -37025,7 +40387,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundoora-north",
@@ -37071,7 +40435,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundoora-west",
@@ -37117,7 +40483,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mill-park-north",
@@ -37163,7 +40531,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mill-park-south",
@@ -37209,7 +40579,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thomastown",
@@ -37253,6 +40625,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 20234,
+    "crimeCountByYear": {
+      "2016": 2519,
+      "2017": 2117,
+      "2018": 2534,
+      "2019": 2866,
+      "2020": 2602,
+      "2021": 2033,
+      "2022": 1814,
+      "2023": 1968,
+      "2024": 2647,
+      "2025": 2788
     }
   },
   {
@@ -37293,6 +40678,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15004,
+    "crimeCountByYear": {
+      "2016": 1350,
+      "2017": 1039,
+      "2018": 1054,
+      "2019": 1298,
+      "2020": 1595,
+      "2021": 925,
+      "2022": 1115,
+      "2023": 1151,
+      "2024": 1700,
+      "2025": 1548
     }
   },
   {
@@ -37335,6 +40733,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6117,
+    "crimeCountByYear": {
+      "2016": 419,
+      "2017": 422,
+      "2018": 378,
+      "2019": 549,
+      "2020": 386,
+      "2021": 247,
+      "2022": 259,
+      "2023": 324,
+      "2024": 365,
+      "2025": 311
     }
   },
   {
@@ -37377,7 +40788,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "epping-south",
@@ -37421,7 +40834,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "epping-vic-west",
@@ -37465,7 +40880,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-morang-north",
@@ -37507,7 +40924,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-morang-south",
@@ -37549,7 +40968,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wollert",
@@ -37595,6 +41016,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 24407,
+    "crimeCountByYear": {
+      "2016": 592,
+      "2017": 593,
+      "2018": 684,
+      "2019": 793,
+      "2020": 1026,
+      "2021": 793,
+      "2022": 758,
+      "2023": 898,
+      "2024": 1146,
+      "2025": 1461
     }
   },
   {
@@ -37637,7 +41071,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "doreen-south",
@@ -37678,7 +41114,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lalor-east",
@@ -37722,7 +41160,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lalor-west",
@@ -37766,7 +41206,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mernda-north",
@@ -37810,7 +41252,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mernda-south",
@@ -37854,7 +41298,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "airport-west",
@@ -37896,6 +41342,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8173,
+    "crimeCountByYear": {
+      "2016": 978,
+      "2017": 962,
+      "2018": 1192,
+      "2019": 999,
+      "2020": 757,
+      "2021": 793,
+      "2022": 845,
+      "2023": 826,
+      "2024": 915,
+      "2025": 1105
     }
   },
   {
@@ -37938,7 +41397,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "keilor",
@@ -37979,6 +41440,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5906,
+    "crimeCountByYear": {
+      "2016": 448,
+      "2017": 288,
+      "2018": 306,
+      "2019": 350,
+      "2020": 329,
+      "2021": 225,
+      "2022": 184,
+      "2023": 295,
+      "2024": 335,
+      "2025": 275
     }
   },
   {
@@ -38020,7 +41494,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathmore",
@@ -38062,6 +41538,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8980,
+    "crimeCountByYear": {
+      "2016": 562,
+      "2017": 407,
+      "2018": 355,
+      "2019": 297,
+      "2020": 368,
+      "2021": 325,
+      "2022": 328,
+      "2023": 361,
+      "2024": 345,
+      "2025": 360
     }
   },
   {
@@ -38104,6 +41593,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12388,
+    "crimeCountByYear": {
+      "2016": 540,
+      "2017": 494,
+      "2018": 416,
+      "2019": 361,
+      "2020": 371,
+      "2021": 418,
+      "2022": 492,
+      "2023": 451,
+      "2024": 446,
+      "2025": 501
     }
   },
   {
@@ -38146,6 +41648,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15078,
+    "crimeCountByYear": {
+      "2016": 678,
+      "2017": 776,
+      "2018": 790,
+      "2019": 602,
+      "2020": 792,
+      "2021": 595,
+      "2022": 597,
+      "2023": 645,
+      "2024": 599,
+      "2025": 741
     }
   },
   {
@@ -38185,6 +41700,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10142,
+    "crimeCountByYear": {
+      "2016": 732,
+      "2017": 400,
+      "2018": 476,
+      "2019": 433,
+      "2020": 591,
+      "2021": 417,
+      "2022": 378,
+      "2023": 400,
+      "2024": 521,
+      "2025": 548
     }
   },
   {
@@ -38224,6 +41752,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2073,
+    "crimeCountByYear": {
+      "2016": 104,
+      "2017": 136,
+      "2018": 98,
+      "2019": 185,
+      "2020": 109,
+      "2021": 135,
+      "2022": 148,
+      "2023": 110,
+      "2024": 122,
+      "2025": 137
     }
   },
   {
@@ -38263,6 +41804,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4390,
+    "crimeCountByYear": {
+      "2016": 160,
+      "2017": 102,
+      "2018": 125,
+      "2019": 120,
+      "2020": 147,
+      "2021": 128,
+      "2022": 167,
+      "2023": 216,
+      "2024": 140,
+      "2025": 204
     }
   },
   {
@@ -38303,6 +41857,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5797,
+    "crimeCountByYear": {
+      "2016": 197,
+      "2017": 175,
+      "2018": 227,
+      "2019": 267,
+      "2020": 285,
+      "2021": 134,
+      "2022": 140,
+      "2023": 135,
+      "2024": 168,
+      "2025": 179
     }
   },
   {
@@ -38345,6 +41912,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8327,
+    "crimeCountByYear": {
+      "2016": 1226,
+      "2017": 1030,
+      "2018": 1202,
+      "2019": 1054,
+      "2020": 913,
+      "2021": 719,
+      "2022": 775,
+      "2023": 799,
+      "2024": 1273,
+      "2025": 1254
     }
   },
   {
@@ -38387,6 +41967,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14274,
+    "crimeCountByYear": {
+      "2016": 1099,
+      "2017": 808,
+      "2018": 1099,
+      "2019": 1260,
+      "2020": 1180,
+      "2021": 812,
+      "2022": 861,
+      "2023": 1013,
+      "2024": 1097,
+      "2025": 1130
     }
   },
   {
@@ -38427,6 +42020,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2971,
+    "crimeCountByYear": {
+      "2016": 94,
+      "2017": 75,
+      "2018": 81,
+      "2019": 107,
+      "2020": 107,
+      "2021": 72,
+      "2022": 81,
+      "2023": 58,
+      "2024": 77,
+      "2025": 62
     }
   },
   {
@@ -38468,6 +42074,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6269,
+    "crimeCountByYear": {
+      "2016": 572,
+      "2017": 533,
+      "2018": 636,
+      "2019": 638,
+      "2020": 446,
+      "2021": 417,
+      "2022": 514,
+      "2023": 571,
+      "2024": 639,
+      "2025": 599
     }
   },
   {
@@ -38510,7 +42129,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenroy-west",
@@ -38554,7 +42175,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oak-park",
@@ -38599,6 +42222,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6714,
+    "crimeCountByYear": {
+      "2016": 361,
+      "2017": 356,
+      "2018": 225,
+      "2019": 243,
+      "2020": 285,
+      "2021": 189,
+      "2022": 265,
+      "2023": 209,
+      "2024": 327,
+      "2025": 296
     }
   },
   {
@@ -38641,6 +42277,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18171,
+    "crimeCountByYear": {
+      "2016": 1134,
+      "2017": 960,
+      "2018": 1060,
+      "2019": 965,
+      "2020": 1036,
+      "2021": 928,
+      "2022": 771,
+      "2023": 913,
+      "2024": 948,
+      "2025": 1115
     }
   },
   {
@@ -38681,6 +42330,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 38851,
+    "crimeCountByYear": {
+      "2016": 3065,
+      "2017": 3038,
+      "2018": 2788,
+      "2019": 3055,
+      "2020": 2932,
+      "2021": 2460,
+      "2022": 2226,
+      "2023": 2393,
+      "2024": 2610,
+      "2025": 2860
     }
   },
   {
@@ -38721,6 +42383,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5669,
+    "crimeCountByYear": {
+      "2016": 322,
+      "2017": 277,
+      "2018": 308,
+      "2019": 315,
+      "2020": 334,
+      "2021": 357,
+      "2022": 385,
+      "2023": 433,
+      "2024": 398,
+      "2025": 444
     }
   },
   {
@@ -38762,7 +42437,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sunbury-west",
@@ -38802,7 +42479,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broadmeadows",
@@ -38844,6 +42523,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12524,
+    "crimeCountByYear": {
+      "2016": 4062,
+      "2017": 3654,
+      "2018": 3848,
+      "2019": 3792,
+      "2020": 3649,
+      "2021": 2718,
+      "2022": 3262,
+      "2023": 3251,
+      "2024": 3386,
+      "2025": 3875
     }
   },
   {
@@ -38886,7 +42578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gladstone-park-westmeadows",
@@ -38932,7 +42626,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenvale-bulla",
@@ -38974,7 +42670,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "meadow-heights",
@@ -39016,6 +42714,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14890,
+    "crimeCountByYear": {
+      "2016": 1753,
+      "2017": 1106,
+      "2018": 1271,
+      "2019": 1151,
+      "2020": 1498,
+      "2021": 1089,
+      "2022": 1046,
+      "2023": 807,
+      "2024": 901,
+      "2025": 987
     }
   },
   {
@@ -39055,6 +42766,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 64,
+    "crimeCountByYear": {
+      "2016": 625,
+      "2017": 785,
+      "2018": 876,
+      "2019": 703,
+      "2020": 372,
+      "2021": 280,
+      "2022": 574,
+      "2023": 723,
+      "2024": 964,
+      "2025": 1247
     }
   },
   {
@@ -39096,6 +42820,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6733,
+    "crimeCountByYear": {
+      "2016": 1278,
+      "2017": 1100,
+      "2018": 1128,
+      "2019": 1309,
+      "2020": 1399,
+      "2021": 965,
+      "2022": 1108,
+      "2023": 1293,
+      "2024": 1216,
+      "2025": 1232
     }
   },
   {
@@ -39138,7 +42875,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigieburn-north",
@@ -39180,7 +42919,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigieburn-south",
@@ -39224,7 +42965,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mickleham-yuroke",
@@ -39268,7 +43011,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigieburn-north-west",
@@ -39312,7 +43057,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigieburn-west",
@@ -39356,7 +43103,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roxburgh-park-south-somerton",
@@ -39402,7 +43151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roxburgh-park-north",
@@ -39446,7 +43197,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bayswater",
@@ -39492,6 +43245,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12262,
+    "crimeCountByYear": {
+      "2016": 1428,
+      "2017": 1364,
+      "2018": 1160,
+      "2019": 1356,
+      "2020": 1466,
+      "2021": 1118,
+      "2022": 1075,
+      "2023": 1114,
+      "2024": 1200,
+      "2025": 1105
     }
   },
   {
@@ -39536,7 +43302,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lysterfield",
@@ -39577,6 +43345,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6681,
+    "crimeCountByYear": {
+      "2016": 266,
+      "2017": 483,
+      "2018": 203,
+      "2019": 256,
+      "2020": 293,
+      "2021": 225,
+      "2022": 158,
+      "2023": 170,
+      "2024": 209,
+      "2025": 178
     }
   },
   {
@@ -39623,7 +43404,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rowville-north",
@@ -39665,7 +43448,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rowville-south",
@@ -39707,7 +43492,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wantirna",
@@ -39751,6 +43538,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14237,
+    "crimeCountByYear": {
+      "2016": 823,
+      "2017": 698,
+      "2018": 618,
+      "2019": 683,
+      "2020": 845,
+      "2021": 716,
+      "2022": 794,
+      "2023": 628,
+      "2024": 888,
+      "2025": 861
     }
   },
   {
@@ -39795,6 +43595,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 20754,
+    "crimeCountByYear": {
+      "2016": 2011,
+      "2017": 1905,
+      "2018": 1656,
+      "2019": 1657,
+      "2020": 1598,
+      "2021": 1576,
+      "2022": 1270,
+      "2023": 1602,
+      "2024": 2010,
+      "2025": 1881
     }
   },
   {
@@ -39837,6 +43650,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23607,
+    "crimeCountByYear": {
+      "2016": 2259,
+      "2017": 2474,
+      "2018": 2236,
+      "2019": 2702,
+      "2020": 2415,
+      "2021": 1948,
+      "2022": 1676,
+      "2023": 1891,
+      "2024": 1910,
+      "2025": 1970
     }
   },
   {
@@ -39879,7 +43705,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ferntree-gully-south-upper-ferntree-gully",
@@ -39921,7 +43749,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-basin",
@@ -39961,6 +43791,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4497,
+    "crimeCountByYear": {
+      "2016": 281,
+      "2017": 227,
+      "2018": 199,
+      "2019": 269,
+      "2020": 378,
+      "2021": 273,
+      "2022": 215,
+      "2023": 165,
+      "2024": 222,
+      "2025": 212
     }
   },
   {
@@ -40008,7 +43851,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warrandyte-wonga-park",
@@ -40053,7 +43898,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bayswater-north",
@@ -40096,6 +43943,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9014,
+    "crimeCountByYear": {
+      "2016": 951,
+      "2017": 799,
+      "2018": 848,
+      "2019": 841,
+      "2020": 802,
+      "2021": 711,
+      "2022": 782,
+      "2023": 806,
+      "2024": 995,
+      "2025": 975
     }
   },
   {
@@ -40138,7 +43998,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ringwood",
@@ -40182,6 +44044,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19144,
+    "crimeCountByYear": {
+      "2016": 3623,
+      "2017": 3158,
+      "2018": 3543,
+      "2019": 3258,
+      "2020": 2984,
+      "2021": 2789,
+      "2022": 3025,
+      "2023": 3606,
+      "2024": 3646,
+      "2025": 3764
     }
   },
   {
@@ -40224,6 +44099,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10764,
+    "crimeCountByYear": {
+      "2016": 749,
+      "2017": 697,
+      "2018": 597,
+      "2019": 631,
+      "2020": 576,
+      "2021": 613,
+      "2022": 522,
+      "2023": 555,
+      "2024": 701,
+      "2025": 638
     }
   },
   {
@@ -40265,6 +44153,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9964,
+    "crimeCountByYear": {
+      "2016": 195,
+      "2017": 240,
+      "2018": 217,
+      "2019": 242,
+      "2020": 266,
+      "2021": 243,
+      "2022": 225,
+      "2023": 243,
+      "2024": 211,
+      "2025": 282
     }
   },
   {
@@ -40307,7 +44208,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "croydon-west",
@@ -40349,7 +44252,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "croydon-south",
@@ -40389,6 +44294,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4759,
+    "crimeCountByYear": {
+      "2016": 293,
+      "2017": 232,
+      "2018": 175,
+      "2019": 242,
+      "2020": 297,
+      "2021": 266,
+      "2022": 176,
+      "2023": 204,
+      "2024": 272,
+      "2025": 223
     }
   },
   {
@@ -40436,6 +44354,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10780,
+    "crimeCountByYear": {
+      "2016": 613,
+      "2017": 578,
+      "2018": 527,
+      "2019": 701,
+      "2020": 589,
+      "2021": 497,
+      "2022": 527,
+      "2023": 729,
+      "2024": 808,
+      "2025": 930
     }
   },
   {
@@ -40480,6 +44411,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16795,
+    "crimeCountByYear": {
+      "2016": 869,
+      "2017": 955,
+      "2018": 886,
+      "2019": 845,
+      "2020": 775,
+      "2021": 651,
+      "2022": 628,
+      "2023": 760,
+      "2024": 1006,
+      "2025": 939
     }
   },
   {
@@ -40524,6 +44468,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12413,
+    "crimeCountByYear": {
+      "2016": 552,
+      "2017": 673,
+      "2018": 765,
+      "2019": 718,
+      "2020": 754,
+      "2021": 612,
+      "2022": 745,
+      "2023": 777,
+      "2024": 817,
+      "2025": 839
     }
   },
   {
@@ -40568,6 +44525,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10993,
+    "crimeCountByYear": {
+      "2016": 319,
+      "2017": 343,
+      "2018": 309,
+      "2019": 345,
+      "2020": 293,
+      "2021": 284,
+      "2022": 308,
+      "2023": 406,
+      "2024": 431,
+      "2025": 451
     }
   },
   {
@@ -40613,6 +44583,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11954,
+    "crimeCountByYear": {
+      "2016": 432,
+      "2017": 545,
+      "2018": 469,
+      "2019": 545,
+      "2020": 498,
+      "2021": 556,
+      "2022": 397,
+      "2023": 523,
+      "2024": 514,
+      "2025": 661
     }
   },
   {
@@ -40655,7 +44638,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chirnside-park",
@@ -40701,6 +44686,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11779,
+    "crimeCountByYear": {
+      "2016": 796,
+      "2017": 569,
+      "2018": 573,
+      "2019": 750,
+      "2020": 741,
+      "2021": 580,
+      "2022": 553,
+      "2023": 680,
+      "2024": 889,
+      "2025": 830
     }
   },
   {
@@ -40741,7 +44739,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kilsyth",
@@ -40781,6 +44781,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11699,
+    "crimeCountByYear": {
+      "2016": 677,
+      "2017": 636,
+      "2018": 596,
+      "2019": 635,
+      "2020": 640,
+      "2021": 703,
+      "2022": 574,
+      "2023": 851,
+      "2024": 705,
+      "2025": 724
     }
   },
   {
@@ -40822,7 +44835,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "monbulk-silvan",
@@ -40862,7 +44877,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "montrose",
@@ -40901,6 +44918,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6900,
+    "crimeCountByYear": {
+      "2016": 344,
+      "2017": 363,
+      "2018": 268,
+      "2019": 517,
+      "2020": 417,
+      "2021": 256,
+      "2022": 201,
+      "2023": 167,
+      "2024": 273,
+      "2025": 233
     }
   },
   {
@@ -40943,6 +44973,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23059,
+    "crimeCountByYear": {
+      "2016": 1413,
+      "2017": 1136,
+      "2018": 1013,
+      "2019": 1262,
+      "2020": 1171,
+      "2021": 1109,
+      "2022": 1012,
+      "2023": 891,
+      "2024": 1031,
+      "2025": 1104
     }
   },
   {
@@ -40983,7 +45026,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-evelyn",
@@ -41023,6 +45068,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9799,
+    "crimeCountByYear": {
+      "2016": 501,
+      "2017": 396,
+      "2018": 460,
+      "2019": 425,
+      "2020": 306,
+      "2021": 370,
+      "2022": 349,
+      "2023": 288,
+      "2024": 336,
+      "2025": 298
     }
   },
   {
@@ -41064,7 +45122,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wandin-seville",
@@ -41104,7 +45164,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarra-valley",
@@ -41144,7 +45206,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "emerald-cockatoo",
@@ -41185,7 +45249,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beaconsfield-officer",
@@ -41227,7 +45293,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bunyip-garfield",
@@ -41267,7 +45335,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "koo-wee-rup",
@@ -41307,6 +45377,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4047,
+    "crimeCountByYear": {
+      "2016": 203,
+      "2017": 174,
+      "2018": 174,
+      "2019": 182,
+      "2020": 201,
+      "2021": 180,
+      "2022": 260,
+      "2023": 261,
+      "2024": 280,
+      "2025": 281
     }
   },
   {
@@ -41348,7 +45431,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pakenham-north-west",
@@ -41389,7 +45474,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pakenham-south-east",
@@ -41429,7 +45516,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pakenham-south-west",
@@ -41471,7 +45560,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berwick-north",
@@ -41513,7 +45604,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "doveton",
@@ -41559,6 +45652,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9603,
+    "crimeCountByYear": {
+      "2016": 1374,
+      "2017": 1161,
+      "2018": 1256,
+      "2019": 1282,
+      "2020": 1018,
+      "2021": 915,
+      "2022": 1032,
+      "2023": 1155,
+      "2024": 1441,
+      "2025": 1670
     }
   },
   {
@@ -41605,6 +45711,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11355,
+    "crimeCountByYear": {
+      "2016": 1258,
+      "2017": 1172,
+      "2018": 973,
+      "2019": 982,
+      "2020": 1076,
+      "2021": 796,
+      "2022": 922,
+      "2023": 1057,
+      "2024": 1210,
+      "2025": 1807
     }
   },
   {
@@ -41648,6 +45767,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8033,
+    "crimeCountByYear": {
+      "2016": 470,
+      "2017": 285,
+      "2018": 312,
+      "2019": 335,
+      "2020": 344,
+      "2021": 322,
+      "2022": 282,
+      "2023": 329,
+      "2024": 354,
+      "2025": 353
     }
   },
   {
@@ -41692,7 +45824,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "endeavour-hills-south",
@@ -41736,7 +45870,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narre-warren-north-east",
@@ -41780,7 +45916,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narre-warren-south-west",
@@ -41824,7 +45962,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berwick-south-east",
@@ -41868,7 +46008,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berwick-south-west",
@@ -41912,7 +46054,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbourne",
@@ -41956,6 +46100,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 21281,
+    "crimeCountByYear": {
+      "2016": 3347,
+      "2017": 3292,
+      "2018": 2864,
+      "2019": 3306,
+      "2020": 3452,
+      "2021": 2728,
+      "2022": 2759,
+      "2023": 3222,
+      "2024": 3621,
+      "2025": 4563
     }
   },
   {
@@ -41998,6 +46155,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3241,
+    "crimeCountByYear": {
+      "2016": 72,
+      "2017": 70,
+      "2018": 84,
+      "2019": 109,
+      "2020": 117,
+      "2021": 143,
+      "2022": 188,
+      "2023": 188,
+      "2024": 248,
+      "2025": 224
     }
   },
   {
@@ -42042,6 +46212,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19969,
+    "crimeCountByYear": {
+      "2016": 1097,
+      "2017": 802,
+      "2018": 988,
+      "2019": 924,
+      "2020": 1203,
+      "2021": 1096,
+      "2022": 950,
+      "2023": 1016,
+      "2024": 1245,
+      "2025": 1503
     }
   },
   {
@@ -42088,7 +46271,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pearcedale-tooradin",
@@ -42128,7 +46313,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narre-warren-south-east",
@@ -42172,7 +46359,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narre-warren-south-west",
@@ -42216,7 +46405,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clyde-north-north",
@@ -42262,7 +46453,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clyde-north-south",
@@ -42307,7 +46500,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbourne-east-north",
@@ -42351,7 +46546,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbourne-east-south",
@@ -42395,7 +46592,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbourne-north-east",
@@ -42441,7 +46640,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbourne-north-west",
@@ -42485,7 +46686,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hampton-park-east",
@@ -42532,7 +46735,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hampton-park-west",
@@ -42579,7 +46784,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clarinda-oakleigh-south",
@@ -42623,7 +46830,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clayton-south",
@@ -42670,6 +46879,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13381,
+    "crimeCountByYear": {
+      "2016": 841,
+      "2017": 646,
+      "2018": 885,
+      "2019": 828,
+      "2020": 936,
+      "2021": 954,
+      "2022": 951,
+      "2023": 1142,
+      "2024": 1194,
+      "2025": 1363
     }
   },
   {
@@ -42714,6 +46936,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 22550,
+    "crimeCountByYear": {
+      "2016": 1617,
+      "2017": 1618,
+      "2018": 1571,
+      "2019": 1520,
+      "2020": 1803,
+      "2021": 1308,
+      "2022": 1296,
+      "2023": 1461,
+      "2024": 1523,
+      "2025": 1707
     }
   },
   {
@@ -42756,6 +46991,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10495,
+    "crimeCountByYear": {
+      "2016": 585,
+      "2017": 437,
+      "2018": 412,
+      "2019": 495,
+      "2020": 464,
+      "2021": 330,
+      "2022": 434,
+      "2023": 479,
+      "2024": 603,
+      "2025": 441
     }
   },
   {
@@ -42803,6 +47051,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7436,
+    "crimeCountByYear": {
+      "2016": 609,
+      "2017": 501,
+      "2018": 501,
+      "2019": 473,
+      "2020": 695,
+      "2021": 374,
+      "2022": 521,
+      "2023": 543,
+      "2024": 563,
+      "2025": 713
     }
   },
   {
@@ -42849,6 +47110,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 22174,
+    "crimeCountByYear": {
+      "2016": 2114,
+      "2017": 1961,
+      "2018": 2488,
+      "2019": 2634,
+      "2020": 2817,
+      "2021": 2296,
+      "2022": 2584,
+      "2023": 3207,
+      "2024": 3186,
+      "2025": 3238
     }
   },
   {
@@ -42895,6 +47169,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12766,
+    "crimeCountByYear": {
+      "2016": 733,
+      "2017": 718,
+      "2018": 694,
+      "2019": 646,
+      "2020": 662,
+      "2021": 571,
+      "2022": 643,
+      "2023": 582,
+      "2024": 736,
+      "2025": 709
     }
   },
   {
@@ -42942,7 +47229,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "noble-park-west",
@@ -42989,7 +47278,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dandenong-north",
@@ -43035,6 +47326,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 22550,
+    "crimeCountByYear": {
+      "2016": 1617,
+      "2017": 1618,
+      "2018": 1571,
+      "2019": 1520,
+      "2020": 1803,
+      "2021": 1308,
+      "2022": 1296,
+      "2023": 1461,
+      "2024": 1523,
+      "2025": 1707
     }
   },
   {
@@ -43081,6 +47385,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 125,
+    "crimeCountByYear": {
+      "2016": 1880,
+      "2017": 906,
+      "2018": 965,
+      "2019": 1054,
+      "2020": 925,
+      "2021": 1637,
+      "2022": 845,
+      "2023": 887,
+      "2024": 1351,
+      "2025": 1544
     }
   },
   {
@@ -43125,7 +47442,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "keysborough-south",
@@ -43172,7 +47491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashwood-chadstone",
@@ -43216,7 +47537,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glen-waverley-east",
@@ -43263,7 +47586,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glen-waverley-west",
@@ -43310,7 +47635,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-waverley-north",
@@ -43357,7 +47684,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-waverley-south",
@@ -43401,7 +47730,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mulgrave",
@@ -43445,6 +47776,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19889,
+    "crimeCountByYear": {
+      "2016": 1411,
+      "2017": 1115,
+      "2018": 1246,
+      "2019": 1271,
+      "2020": 1512,
+      "2021": 1415,
+      "2022": 1292,
+      "2023": 1722,
+      "2024": 2043,
+      "2025": 1675
     }
   },
   {
@@ -43489,7 +47833,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wheelers-hill",
@@ -43534,6 +47880,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 20652,
+    "crimeCountByYear": {
+      "2016": 734,
+      "2017": 754,
+      "2018": 661,
+      "2019": 827,
+      "2020": 652,
+      "2021": 637,
+      "2022": 551,
+      "2023": 805,
+      "2024": 688,
+      "2025": 792
     }
   },
   {
@@ -43581,7 +47940,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clayton-central",
@@ -43628,7 +47989,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ardeer-albion",
@@ -43672,7 +48035,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cairnlea",
@@ -43714,6 +48079,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10038,
+    "crimeCountByYear": {
+      "2016": 523,
+      "2017": 412,
+      "2018": 591,
+      "2019": 471,
+      "2020": 511,
+      "2021": 531,
+      "2022": 525,
+      "2023": 607,
+      "2024": 411,
+      "2025": 481
     }
   },
   {
@@ -43755,6 +48133,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8077,
+    "crimeCountByYear": {
+      "2016": 477,
+      "2017": 405,
+      "2018": 348,
+      "2019": 335,
+      "2020": 389,
+      "2021": 318,
+      "2022": 249,
+      "2023": 304,
+      "2024": 368,
+      "2025": 348
     }
   },
   {
@@ -43797,6 +48188,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9857,
+    "crimeCountByYear": {
+      "2016": 593,
+      "2017": 630,
+      "2018": 732,
+      "2019": 674,
+      "2020": 677,
+      "2021": 498,
+      "2022": 575,
+      "2023": 650,
+      "2024": 541,
+      "2025": 607
     }
   },
   {
@@ -43843,6 +48247,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8203,
+    "crimeCountByYear": {
+      "2016": 635,
+      "2017": 468,
+      "2018": 539,
+      "2019": 422,
+      "2020": 696,
+      "2021": 466,
+      "2022": 326,
+      "2023": 332,
+      "2024": 422,
+      "2025": 429
     }
   },
   {
@@ -43887,7 +48304,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-albans-south",
@@ -43931,7 +48350,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sunshine",
@@ -43975,6 +48396,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9445,
+    "crimeCountByYear": {
+      "2016": 2805,
+      "2017": 2694,
+      "2018": 2961,
+      "2019": 3596,
+      "2020": 2937,
+      "2021": 2290,
+      "2022": 2802,
+      "2023": 3054,
+      "2024": 3546,
+      "2025": 3284
     }
   },
   {
@@ -44016,6 +48450,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12047,
+    "crimeCountByYear": {
+      "2016": 1230,
+      "2017": 1009,
+      "2018": 1135,
+      "2019": 1182,
+      "2020": 1191,
+      "2021": 1448,
+      "2022": 1103,
+      "2023": 1478,
+      "2024": 1541,
+      "2025": 1357
     }
   },
   {
@@ -44060,6 +48507,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18552,
+    "crimeCountByYear": {
+      "2016": 1329,
+      "2017": 1223,
+      "2018": 1342,
+      "2019": 1613,
+      "2020": 1597,
+      "2021": 1167,
+      "2022": 1256,
+      "2023": 1241,
+      "2024": 1516,
+      "2025": 1330
     }
   },
   {
@@ -44104,6 +48564,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10578,
+    "crimeCountByYear": {
+      "2016": 624,
+      "2017": 456,
+      "2018": 489,
+      "2019": 560,
+      "2020": 596,
+      "2021": 479,
+      "2022": 482,
+      "2023": 487,
+      "2024": 598,
+      "2025": 609
     }
   },
   {
@@ -44146,6 +48619,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15174,
+    "crimeCountByYear": {
+      "2016": 1411,
+      "2017": 1508,
+      "2018": 1670,
+      "2019": 1633,
+      "2020": 1419,
+      "2021": 1032,
+      "2022": 966,
+      "2023": 1213,
+      "2024": 1055,
+      "2025": 1353
     }
   },
   {
@@ -44193,6 +48679,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18145,
+    "crimeCountByYear": {
+      "2016": 1764,
+      "2017": 1633,
+      "2018": 1545,
+      "2019": 1651,
+      "2020": 1910,
+      "2021": 1576,
+      "2022": 1391,
+      "2023": 1393,
+      "2024": 1465,
+      "2025": 1540
     }
   },
   {
@@ -44237,6 +48736,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8651,
+    "crimeCountByYear": {
+      "2016": 556,
+      "2017": 611,
+      "2018": 630,
+      "2019": 702,
+      "2020": 811,
+      "2021": 711,
+      "2022": 554,
+      "2023": 553,
+      "2024": 683,
+      "2025": 809
     }
   },
   {
@@ -44279,6 +48791,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11490,
+    "crimeCountByYear": {
+      "2016": 756,
+      "2017": 769,
+      "2018": 778,
+      "2019": 782,
+      "2020": 694,
+      "2021": 791,
+      "2022": 676,
+      "2023": 738,
+      "2024": 788,
+      "2025": 792
     }
   },
   {
@@ -44321,6 +48846,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18479,
+    "crimeCountByYear": {
+      "2016": 1039,
+      "2017": 915,
+      "2018": 995,
+      "2019": 1125,
+      "2020": 986,
+      "2021": 1028,
+      "2022": 894,
+      "2023": 604,
+      "2024": 948,
+      "2025": 1162
     }
   },
   {
@@ -44363,6 +48901,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12962,
+    "crimeCountByYear": {
+      "2016": 1225,
+      "2017": 1174,
+      "2018": 1143,
+      "2019": 1201,
+      "2020": 1086,
+      "2021": 895,
+      "2022": 1023,
+      "2023": 1054,
+      "2024": 1289,
+      "2025": 1653
     }
   },
   {
@@ -44405,6 +48956,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 13658,
+    "crimeCountByYear": {
+      "2016": 774,
+      "2017": 740,
+      "2018": 702,
+      "2019": 645,
+      "2020": 568,
+      "2021": 570,
+      "2022": 655,
+      "2023": 615,
+      "2024": 851,
+      "2025": 866
     }
   },
   {
@@ -44450,6 +49014,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4952,
+    "crimeCountByYear": {
+      "2016": 231,
+      "2017": 240,
+      "2018": 157,
+      "2019": 150,
+      "2020": 223,
+      "2021": 177,
+      "2022": 169,
+      "2023": 203,
+      "2024": 179,
+      "2025": 157
     }
   },
   {
@@ -44492,6 +49069,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 14407,
+    "crimeCountByYear": {
+      "2016": 1118,
+      "2017": 874,
+      "2018": 1040,
+      "2019": 1001,
+      "2020": 943,
+      "2021": 1067,
+      "2022": 1068,
+      "2023": 1180,
+      "2024": 1500,
+      "2025": 1192
     }
   },
   {
@@ -44536,6 +49126,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9682,
+    "crimeCountByYear": {
+      "2016": 1176,
+      "2017": 1223,
+      "2018": 1265,
+      "2019": 1646,
+      "2020": 1617,
+      "2021": 1570,
+      "2022": 1326,
+      "2023": 1534,
+      "2024": 1547,
+      "2025": 1733
     }
   },
   {
@@ -44580,6 +49183,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17131,
+    "crimeCountByYear": {
+      "2016": 3298,
+      "2017": 2689,
+      "2018": 2695,
+      "2019": 2585,
+      "2020": 2783,
+      "2021": 2687,
+      "2022": 2830,
+      "2023": 3333,
+      "2024": 4219,
+      "2025": 4547
     }
   },
   {
@@ -44624,6 +49240,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 12573,
+    "crimeCountByYear": {
+      "2016": 1597,
+      "2017": 1384,
+      "2018": 1531,
+      "2019": 1745,
+      "2020": 1524,
+      "2021": 1344,
+      "2022": 1443,
+      "2023": 1678,
+      "2024": 1933,
+      "2025": 2228
     }
   },
   {
@@ -44666,7 +49295,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-footscray-tottenham",
@@ -44708,7 +49339,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarraville",
@@ -44750,6 +49383,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15636,
+    "crimeCountByYear": {
+      "2016": 906,
+      "2017": 845,
+      "2018": 878,
+      "2019": 860,
+      "2020": 909,
+      "2021": 758,
+      "2022": 1009,
+      "2023": 933,
+      "2024": 1267,
+      "2025": 1212
     }
   },
   {
@@ -44790,6 +49436,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7808,
+    "crimeCountByYear": {
+      "2016": 915,
+      "2017": 732,
+      "2018": 908,
+      "2019": 691,
+      "2020": 1173,
+      "2021": 739,
+      "2022": 688,
+      "2023": 860,
+      "2024": 900,
+      "2025": 1386
     }
   },
   {
@@ -44832,6 +49491,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8784,
+    "crimeCountByYear": {
+      "2016": 1064,
+      "2017": 1220,
+      "2018": 1239,
+      "2019": 1234,
+      "2020": 1143,
+      "2021": 977,
+      "2022": 900,
+      "2023": 966,
+      "2024": 1232,
+      "2025": 1172
     }
   },
   {
@@ -44876,7 +49548,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taylors-hill",
@@ -44918,6 +49592,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15419,
+    "crimeCountByYear": {
+      "2016": 494,
+      "2017": 409,
+      "2018": 396,
+      "2019": 361,
+      "2020": 506,
+      "2021": 365,
+      "2022": 304,
+      "2023": 335,
+      "2024": 370,
+      "2025": 467
     }
   },
   {
@@ -44958,6 +49645,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5800,
+    "crimeCountByYear": {
+      "2016": 301,
+      "2017": 216,
+      "2018": 166,
+      "2019": 228,
+      "2020": 250,
+      "2021": 205,
+      "2022": 212,
+      "2023": 229,
+      "2024": 272,
+      "2025": 277
     }
   },
   {
@@ -45001,6 +49701,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6377,
+    "crimeCountByYear": {
+      "2016": 225,
+      "2017": 149,
+      "2018": 168,
+      "2019": 173,
+      "2020": 245,
+      "2021": 156,
+      "2022": 128,
+      "2023": 216,
+      "2024": 159,
+      "2025": 171
     }
   },
   {
@@ -45045,6 +49758,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 24488,
+    "crimeCountByYear": {
+      "2016": 1323,
+      "2017": 1136,
+      "2018": 1049,
+      "2019": 1366,
+      "2020": 1574,
+      "2021": 1103,
+      "2022": 1257,
+      "2023": 1369,
+      "2024": 1388,
+      "2025": 1295
     }
   },
   {
@@ -45085,6 +49811,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10782,
+    "crimeCountByYear": {
+      "2016": 506,
+      "2017": 549,
+      "2018": 445,
+      "2019": 484,
+      "2020": 599,
+      "2021": 553,
+      "2022": 419,
+      "2023": 360,
+      "2024": 411,
+      "2025": 537
     }
   },
   {
@@ -45129,7 +49868,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eynesbury-exford",
@@ -45168,7 +49909,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fraser-rise-plumpton",
@@ -45210,7 +49953,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hillside",
@@ -45252,6 +49997,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17331,
+    "crimeCountByYear": {
+      "2016": 676,
+      "2017": 559,
+      "2018": 575,
+      "2019": 706,
+      "2020": 719,
+      "2021": 669,
+      "2022": 609,
+      "2023": 533,
+      "2024": 698,
+      "2025": 554
     }
   },
   {
@@ -45292,7 +50050,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melton",
@@ -45332,6 +50092,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7953,
+    "crimeCountByYear": {
+      "2016": 2390,
+      "2017": 1925,
+      "2018": 1923,
+      "2019": 2245,
+      "2020": 2421,
+      "2021": 1902,
+      "2022": 1889,
+      "2023": 1943,
+      "2024": 2306,
+      "2025": 2244
     }
   },
   {
@@ -45373,7 +50146,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hoppers-crossing-north",
@@ -45415,7 +50190,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hoppers-crossing-south",
@@ -45459,7 +50236,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "laverton",
@@ -45505,6 +50284,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4760,
+    "crimeCountByYear": {
+      "2016": 673,
+      "2017": 555,
+      "2018": 683,
+      "2019": 524,
+      "2020": 563,
+      "2021": 511,
+      "2022": 699,
+      "2023": 600,
+      "2024": 761,
+      "2025": 830
     }
   },
   {
@@ -45549,6 +50341,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2392,
+    "crimeCountByYear": {
+      "2016": 221,
+      "2017": 189,
+      "2018": 241,
+      "2019": 214,
+      "2020": 234,
+      "2021": 172,
+      "2022": 205,
+      "2023": 167,
+      "2024": 194,
+      "2025": 218
     }
   },
   {
@@ -45595,7 +50400,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "point-cook-south",
@@ -45641,7 +50448,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "werribee-east",
@@ -45683,7 +50492,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "werribee-west",
@@ -45727,7 +50538,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manor-lakes-quandong",
@@ -45772,7 +50585,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "point-cook-north-east",
@@ -45816,7 +50631,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "point-cook-north-west",
@@ -45862,7 +50679,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tarneit-west-mount-cottrell",
@@ -45908,7 +50727,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tarneit-central",
@@ -45955,7 +50776,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tarneit-north",
@@ -46001,7 +50824,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tarneit-south",
@@ -46047,7 +50872,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "truganina-north",
@@ -46093,7 +50920,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "truganina-south-east",
@@ -46139,7 +50968,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "truganina-south-west",
@@ -46185,7 +51016,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wyndham-vale-north",
@@ -46229,7 +51062,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wyndham-vale-south",
@@ -46273,7 +51108,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carrum-downs",
@@ -46315,6 +51152,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 21976,
+    "crimeCountByYear": {
+      "2016": 2137,
+      "2017": 1797,
+      "2018": 1762,
+      "2019": 1915,
+      "2020": 1942,
+      "2021": 1753,
+      "2022": 1864,
+      "2023": 1984,
+      "2024": 2393,
+      "2025": 2409
     }
   },
   {
@@ -46357,6 +51207,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 37331,
+    "crimeCountByYear": {
+      "2016": 8069,
+      "2017": 7255,
+      "2018": 7790,
+      "2019": 7787,
+      "2020": 7605,
+      "2021": 5725,
+      "2022": 6421,
+      "2023": 7593,
+      "2024": 8965,
+      "2025": 7927
     }
   },
   {
@@ -46399,6 +51262,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5711,
+    "crimeCountByYear": {
+      "2016": 1374,
+      "2017": 905,
+      "2018": 925,
+      "2019": 939,
+      "2020": 947,
+      "2021": 817,
+      "2022": 809,
+      "2023": 832,
+      "2024": 914,
+      "2025": 740
     }
   },
   {
@@ -46441,6 +51317,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18801,
+    "crimeCountByYear": {
+      "2016": 771,
+      "2017": 590,
+      "2018": 568,
+      "2019": 603,
+      "2020": 579,
+      "2021": 527,
+      "2022": 422,
+      "2023": 615,
+      "2024": 648,
+      "2025": 770
     }
   },
   {
@@ -46481,6 +51370,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23588,
+    "crimeCountByYear": {
+      "2016": 1181,
+      "2017": 1129,
+      "2018": 1139,
+      "2019": 963,
+      "2020": 1026,
+      "2021": 818,
+      "2022": 971,
+      "2023": 983,
+      "2024": 1188,
+      "2025": 1053
     }
   },
   {
@@ -46525,6 +51427,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 17215,
+    "crimeCountByYear": {
+      "2016": 2456,
+      "2017": 2060,
+      "2018": 2144,
+      "2019": 2111,
+      "2020": 2144,
+      "2021": 1676,
+      "2022": 1835,
+      "2023": 2400,
+      "2024": 2711,
+      "2025": 2591
     }
   },
   {
@@ -46566,7 +51481,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dromana",
@@ -46606,6 +51523,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6626,
+    "crimeCountByYear": {
+      "2016": 671,
+      "2017": 541,
+      "2018": 635,
+      "2019": 610,
+      "2020": 628,
+      "2021": 526,
+      "2022": 515,
+      "2023": 544,
+      "2024": 768,
+      "2025": 797
     }
   },
   {
@@ -46645,6 +51575,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1130,
+    "crimeCountByYear": {
+      "2016": 64,
+      "2017": 47,
+      "2018": 55,
+      "2019": 32,
+      "2020": 34,
+      "2021": 29,
+      "2022": 28,
+      "2023": 34,
+      "2024": 69,
+      "2025": 57
     }
   },
   {
@@ -46685,7 +51628,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-eliza",
@@ -46727,6 +51672,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 18734,
+    "crimeCountByYear": {
+      "2016": 642,
+      "2017": 512,
+      "2018": 551,
+      "2019": 549,
+      "2020": 415,
+      "2021": 372,
+      "2022": 477,
+      "2023": 593,
+      "2024": 622,
+      "2025": 578
     }
   },
   {
@@ -46767,6 +51725,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 19846,
+    "crimeCountByYear": {
+      "2016": 461,
+      "2017": 430,
+      "2018": 480,
+      "2019": 590,
+      "2020": 484,
+      "2021": 376,
+      "2022": 372,
+      "2023": 489,
+      "2024": 791,
+      "2025": 428
     }
   },
   {
@@ -46806,7 +51777,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosebud-mccrae",
@@ -46847,7 +51820,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "somerville",
@@ -46889,6 +51864,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11767,
+    "crimeCountByYear": {
+      "2016": 782,
+      "2017": 470,
+      "2018": 594,
+      "2019": 533,
+      "2020": 626,
+      "2021": 447,
+      "2022": 521,
+      "2023": 596,
+      "2024": 802,
+      "2025": 662
     }
   },
   {
@@ -46930,7 +51918,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mornington-west",
@@ -46971,7 +51961,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ararat",
@@ -47011,6 +52003,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8500,
+    "crimeCountByYear": {
+      "2016": 1059,
+      "2017": 1089,
+      "2018": 1194,
+      "2019": 1082,
+      "2020": 1269,
+      "2021": 1435,
+      "2022": 1124,
+      "2023": 1218,
+      "2024": 1276,
+      "2025": 1324
     }
   },
   {
@@ -47047,7 +52052,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "horsham",
@@ -47087,6 +52094,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15134,
+    "crimeCountByYear": {
+      "2016": 2638,
+      "2017": 2184,
+      "2018": 2718,
+      "2019": 1796,
+      "2020": 2168,
+      "2021": 2197,
+      "2022": 2153,
+      "2023": 2556,
+      "2024": 2235,
+      "2025": 2472
     }
   },
   {
@@ -47123,7 +52143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nhill-region",
@@ -47157,7 +52179,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-arnaud",
@@ -47192,6 +52216,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2318,
+    "crimeCountByYear": {
+      "2016": 289,
+      "2017": 233,
+      "2018": 207,
+      "2019": 225,
+      "2020": 164,
+      "2021": 191,
+      "2022": 181,
+      "2023": 274,
+      "2024": 284,
+      "2025": 326
     }
   },
   {
@@ -47231,6 +52268,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6220,
+    "crimeCountByYear": {
+      "2016": 788,
+      "2017": 594,
+      "2018": 563,
+      "2019": 677,
+      "2020": 777,
+      "2021": 659,
+      "2022": 596,
+      "2023": 561,
+      "2024": 695,
+      "2025": 872
     }
   },
   {
@@ -47266,7 +52316,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarriambiack",
@@ -47301,7 +52353,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "irymple",
@@ -47339,6 +52393,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5977,
+    "crimeCountByYear": {
+      "2016": 292,
+      "2017": 397,
+      "2018": 330,
+      "2019": 379,
+      "2020": 426,
+      "2021": 342,
+      "2022": 288,
+      "2023": 355,
+      "2024": 368,
+      "2025": 295
     }
   },
   {
@@ -47375,6 +52442,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2770,
+    "crimeCountByYear": {
+      "2016": 294,
+      "2017": 285,
+      "2018": 257,
+      "2019": 278,
+      "2020": 268,
+      "2021": 237,
+      "2022": 332,
+      "2023": 232,
+      "2024": 219,
+      "2025": 269
     }
   },
   {
@@ -47412,7 +52492,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "red-cliffs",
@@ -47449,6 +52531,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5294,
+    "crimeCountByYear": {
+      "2016": 347,
+      "2017": 288,
+      "2018": 329,
+      "2019": 412,
+      "2020": 324,
+      "2021": 322,
+      "2022": 451,
+      "2023": 392,
+      "2024": 402,
+      "2025": 470
     }
   },
   {
@@ -47491,7 +52586,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mildura-south",
@@ -47533,7 +52630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buloke",
@@ -47568,7 +52667,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gannawarra",
@@ -47603,6 +52704,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 110,
+    "crimeCountByYear": {
+      "2016": 8,
+      "2017": 6,
+      "2018": 1,
+      "2019": 1,
+      "2020": 2,
+      "2021": 1,
+      "2023": 1,
+      "2024": 6,
+      "2025": 2
     }
   },
   {
@@ -47638,6 +52751,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3960,
+    "crimeCountByYear": {
+      "2016": 345,
+      "2017": 338,
+      "2018": 498,
+      "2019": 474,
+      "2020": 577,
+      "2021": 403,
+      "2022": 501,
+      "2023": 609,
+      "2024": 486,
+      "2025": 391
     }
   },
   {
@@ -47676,6 +52802,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3497,
+    "crimeCountByYear": {
+      "2016": 395,
+      "2017": 370,
+      "2018": 341,
+      "2019": 316,
+      "2020": 406,
+      "2021": 436,
+      "2022": 286,
+      "2023": 359,
+      "2024": 317,
+      "2025": 262
     }
   },
   {
@@ -47718,6 +52857,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 11186,
+    "crimeCountByYear": {
+      "2016": 1506,
+      "2017": 1722,
+      "2018": 1843,
+      "2019": 1944,
+      "2020": 1658,
+      "2021": 1601,
+      "2022": 1395,
+      "2023": 1406,
+      "2024": 1384,
+      "2025": 1742
     }
   },
   {
@@ -47756,7 +52908,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "echuca",
@@ -47794,6 +52948,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 15056,
+    "crimeCountByYear": {
+      "2016": 2132,
+      "2017": 1734,
+      "2018": 2003,
+      "2019": 2061,
+      "2020": 2138,
+      "2021": 1789,
+      "2022": 1916,
+      "2023": 2406,
+      "2024": 2729,
+      "2025": 2434
     }
   },
   {
@@ -47830,6 +52997,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7416,
+    "crimeCountByYear": {
+      "2016": 584,
+      "2017": 715,
+      "2018": 602,
+      "2019": 711,
+      "2020": 587,
+      "2021": 565,
+      "2022": 602,
+      "2023": 556,
+      "2024": 651,
+      "2025": 593
     }
   },
   {
@@ -47865,7 +53045,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rochester",
@@ -47900,6 +53082,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3154,
+    "crimeCountByYear": {
+      "2016": 239,
+      "2017": 225,
+      "2018": 232,
+      "2019": 194,
+      "2020": 241,
+      "2021": 209,
+      "2022": 193,
+      "2023": 194,
+      "2024": 187,
+      "2025": 198
     }
   },
   {
@@ -47935,6 +53130,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1411,
+    "crimeCountByYear": {
+      "2016": 97,
+      "2017": 85,
+      "2018": 133,
+      "2019": 102,
+      "2020": 100,
+      "2021": 137,
+      "2022": 127,
+      "2023": 89,
+      "2024": 49,
+      "2025": 91
     }
   },
   {
@@ -47975,6 +53183,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 6148,
+    "crimeCountByYear": {
+      "2016": 537,
+      "2017": 603,
+      "2018": 721,
+      "2019": 866,
+      "2020": 762,
+      "2021": 832,
+      "2022": 620,
+      "2023": 900,
+      "2024": 861,
+      "2025": 1020
     }
   },
   {
@@ -48010,7 +53231,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "numurkah",
@@ -48046,6 +53269,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4604,
+    "crimeCountByYear": {
+      "2016": 211,
+      "2017": 191,
+      "2018": 301,
+      "2019": 414,
+      "2020": 459,
+      "2021": 503,
+      "2022": 418,
+      "2023": 502,
+      "2024": 551,
+      "2025": 488
     }
   },
   {
@@ -48081,6 +53317,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8661,
+    "crimeCountByYear": {
+      "2016": 416,
+      "2017": 531,
+      "2018": 398,
+      "2019": 512,
+      "2020": 426,
+      "2021": 441,
+      "2022": 449,
+      "2023": 572,
+      "2024": 599,
+      "2025": 619
     }
   },
   {
@@ -48120,6 +53369,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8312,
+    "crimeCountByYear": {
+      "2016": 1178,
+      "2017": 1158,
+      "2018": 1136,
+      "2019": 1168,
+      "2020": 1319,
+      "2021": 1157,
+      "2022": 1078,
+      "2023": 920,
+      "2024": 1320,
+      "2025": 1789
     }
   },
   {
@@ -48162,6 +53424,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2048,
+    "crimeCountByYear": {
+      "2016": 47,
+      "2017": 33,
+      "2018": 76,
+      "2019": 84,
+      "2020": 174,
+      "2021": 64,
+      "2022": 110,
+      "2023": 78,
+      "2024": 88,
+      "2025": 97
     }
   },
   {
@@ -48202,7 +53477,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shepparton-surrounds-west",
@@ -48242,7 +53519,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kialla",
@@ -48283,6 +53562,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8667,
+    "crimeCountByYear": {
+      "2016": 384,
+      "2017": 395,
+      "2018": 372,
+      "2019": 380,
+      "2020": 471,
+      "2021": 436,
+      "2022": 499,
+      "2023": 382,
+      "2024": 479,
+      "2025": 473
     }
   },
   {
@@ -48325,7 +53617,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenelg-vic",
@@ -48360,7 +53654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hamilton-vic",
@@ -48398,6 +53694,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10346,
+    "crimeCountByYear": {
+      "2016": 1119,
+      "2017": 1086,
+      "2018": 1388,
+      "2019": 1013,
+      "2020": 945,
+      "2021": 828,
+      "2022": 1042,
+      "2023": 1030,
+      "2024": 1461,
+      "2025": 1085
     }
   },
   {
@@ -48433,6 +53742,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10016,
+    "crimeCountByYear": {
+      "2016": 1218,
+      "2017": 1153,
+      "2018": 959,
+      "2019": 1274,
+      "2020": 1297,
+      "2021": 1150,
+      "2022": 1122,
+      "2023": 1223,
+      "2024": 1461,
+      "2025": 1795
     }
   },
   {
@@ -48468,7 +53790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camperdown",
@@ -48503,6 +53827,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 3354,
+    "crimeCountByYear": {
+      "2016": 317,
+      "2017": 238,
+      "2018": 171,
+      "2019": 153,
+      "2020": 218,
+      "2021": 285,
+      "2022": 189,
+      "2023": 170,
+      "2024": 291,
+      "2025": 285
     }
   },
   {
@@ -48543,6 +53880,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 9243,
+    "crimeCountByYear": {
+      "2016": 1417,
+      "2017": 1218,
+      "2018": 1051,
+      "2019": 1135,
+      "2020": 1169,
+      "2021": 953,
+      "2022": 1066,
+      "2023": 964,
+      "2024": 1479,
+      "2025": 1314
     }
   },
   {
@@ -48579,7 +53929,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corangamite-north",
@@ -48614,7 +53966,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corangamite-south",
@@ -48649,7 +54003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "otway",
@@ -48684,7 +54040,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moyne-east",
@@ -48719,7 +54077,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moyne-west",
@@ -48754,7 +54114,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warrnambool-north",
@@ -48795,7 +54157,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warrnambool-south",
@@ -48834,7 +54198,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-vic",
@@ -48869,7 +54235,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-vic",
@@ -48909,7 +54277,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alexandra-hills",
@@ -48953,7 +54323,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belmont-gumdale",
@@ -48998,7 +54370,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "birkdale",
@@ -49042,7 +54416,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "capalaba",
@@ -49086,7 +54462,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thorneside",
@@ -49130,7 +54508,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wellington-point",
@@ -49174,7 +54554,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cleveland",
@@ -49218,7 +54600,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ormiston",
@@ -49262,7 +54646,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redland-bay",
@@ -49308,7 +54694,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sheldon-mount-cotton",
@@ -49352,7 +54740,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thornlands",
@@ -49396,7 +54786,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "victoria-point",
@@ -49440,7 +54832,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-stradbroke-island",
@@ -49484,7 +54878,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southern-moreton-bay-islands",
@@ -49531,7 +54927,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brisbane-port-lytton",
@@ -49575,7 +54973,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manly-lota",
@@ -49619,7 +55019,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manly-west",
@@ -49663,7 +55065,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murarrie",
@@ -49707,7 +55111,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tingalpa",
@@ -49751,7 +55157,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wakerley",
@@ -49796,7 +55204,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wynnum",
@@ -49840,7 +55250,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wynnum-west-hemmant",
@@ -49884,7 +55296,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bald-hills",
@@ -49928,6 +55342,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 114,
+    "crimeCountByYear": {
+      "2016": 10,
+      "2017": 3,
+      "2018": 2,
+      "2019": 7,
+      "2020": 1,
+      "2021": 6,
+      "2022": 2,
+      "2023": 6,
+      "2024": 6,
+      "2025": 9
     }
   },
   {
@@ -49973,7 +55400,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carseldine",
@@ -50017,7 +55446,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "everton-park",
@@ -50064,7 +55495,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mcdowall",
@@ -50108,7 +55541,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aspley",
@@ -50152,7 +55587,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chermside",
@@ -50196,7 +55633,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chermside-west",
@@ -50240,7 +55679,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geebung",
@@ -50284,7 +55725,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kedron-gordon-park",
@@ -50331,7 +55774,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stafford",
@@ -50375,7 +55820,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stafford-heights",
@@ -50419,7 +55866,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wavell-heights",
@@ -50463,7 +55912,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "boondall",
@@ -50507,7 +55958,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brisbane-airport",
@@ -50551,7 +56004,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eagle-farm-pinkenba",
@@ -50596,7 +56051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northgate-virginia",
@@ -50640,7 +56097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nudgee-banyo",
@@ -50684,7 +56143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nundah",
@@ -50728,7 +56189,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bracken-ridge",
@@ -50772,7 +56235,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brighton-qld",
@@ -50816,6 +56281,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23252,
+    "crimeCountByYear": {
+      "2016": 1500,
+      "2017": 1222,
+      "2018": 1115,
+      "2019": 1186,
+      "2020": 1154,
+      "2021": 997,
+      "2022": 1293,
+      "2023": 1296,
+      "2024": 1433,
+      "2025": 1493
     }
   },
   {
@@ -50860,7 +56338,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sandgate-shorncliffe",
@@ -50904,7 +56384,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taigum-fitzgibbon",
@@ -50948,7 +56430,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "zillmere",
@@ -50992,7 +56476,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camp-hill",
@@ -51037,7 +56523,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cannon-hill",
@@ -51081,7 +56569,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carina",
@@ -51125,7 +56615,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carina-heights",
@@ -51169,7 +56661,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carindale",
@@ -51214,7 +56708,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "annerley",
@@ -51258,7 +56754,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coorparoo",
@@ -51302,7 +56800,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fairfield-dutton-park",
@@ -51349,7 +56849,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenslopes",
@@ -51393,7 +56895,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holland-park",
@@ -51440,7 +56944,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holland-park-west",
@@ -51487,7 +56993,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woolloongabba",
@@ -51531,7 +57039,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yeronga",
@@ -51575,7 +57085,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eight-mile-plains",
@@ -51619,7 +57131,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macgregor-qld",
@@ -51663,7 +57177,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mansfield-qld",
@@ -51707,6 +57223,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5541,
+    "crimeCountByYear": {
+      "2016": 383,
+      "2017": 427,
+      "2018": 259,
+      "2019": 308,
+      "2020": 300,
+      "2021": 234,
+      "2022": 168,
+      "2023": 360,
+      "2024": 263,
+      "2025": 218
     }
   },
   {
@@ -51751,7 +57280,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rochedale-burbank",
@@ -51796,7 +57327,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-mount-gravatt",
@@ -51840,7 +57373,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wishart",
@@ -51884,7 +57419,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coopers-plains",
@@ -51928,7 +57465,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moorooka",
@@ -51972,7 +57511,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "robertson",
@@ -52016,7 +57557,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "salisbury-nathan",
@@ -52062,7 +57605,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tarragindi",
@@ -52106,7 +57651,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "algester",
@@ -52150,7 +57697,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "calamvale-stretton",
@@ -52194,7 +57743,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pallara-willawong",
@@ -52238,7 +57789,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkinson-drewvale",
@@ -52285,7 +57838,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rocklea-acacia-ridge",
@@ -52329,7 +57884,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kuraby",
@@ -52373,7 +57930,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "runcorn",
@@ -52417,7 +57976,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sunnybank",
@@ -52461,7 +58022,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sunnybank-hills",
@@ -52505,7 +58068,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jindalee-mount-ommaney",
@@ -52550,7 +58115,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "middle-park-jamboree-heights",
@@ -52597,7 +58164,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "riverhills",
@@ -52641,7 +58210,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seventeen-mile-rocks-sinnamon-park",
@@ -52688,7 +58259,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "westlake",
@@ -52733,7 +58306,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellbowrie-moggill",
@@ -52777,7 +58352,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brookfield-kenmore-hills",
@@ -52822,7 +58399,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chapel-hill",
@@ -52867,7 +58446,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fig-tree-pocket",
@@ -52912,7 +58493,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kenmore",
@@ -52957,7 +58540,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pinjarra-hills-pullenvale",
@@ -53002,7 +58587,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chelmer-graceville",
@@ -53047,7 +58634,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "corinda",
@@ -53091,7 +58680,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "indooroopilly",
@@ -53135,7 +58726,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sherwood",
@@ -53179,7 +58772,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-lucia",
@@ -53225,7 +58820,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taringa",
@@ -53269,7 +58866,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "enoggera",
@@ -53313,7 +58912,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "enoggera-reservoir",
@@ -53357,7 +58958,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "keperra",
@@ -53401,7 +59004,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mitchelton",
@@ -53445,7 +59050,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-coot-tha",
@@ -53489,7 +59096,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-gap",
@@ -53534,7 +59143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-kedron-ferny-grove",
@@ -53578,7 +59189,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brisbane-city",
@@ -53625,7 +59238,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fortitude-valley",
@@ -53669,7 +59284,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "highgate-hill",
@@ -53713,7 +59330,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kangaroo-point",
@@ -53757,7 +59376,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "new-farm",
@@ -53801,7 +59422,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-brisbane",
@@ -53846,7 +59469,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "spring-hill",
@@ -53890,6 +59515,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 200,
+    "crimeCountByYear": {
+      "2016": 1,
+      "2017": 4,
+      "2018": 6,
+      "2019": 5,
+      "2020": 7,
+      "2022": 1,
+      "2023": 2,
+      "2024": 13,
+      "2025": 10
     }
   },
   {
@@ -53934,7 +59571,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balmoral",
@@ -53978,6 +59617,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 281,
+    "crimeCountByYear": {
+      "2016": 17,
+      "2017": 5,
+      "2018": 9,
+      "2019": 16,
+      "2020": 11,
+      "2021": 3,
+      "2022": 8,
+      "2023": 9,
+      "2024": 10,
+      "2025": 4
     }
   },
   {
@@ -54023,7 +59675,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-brisbane",
@@ -54067,7 +59721,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hawthorne",
@@ -54112,7 +59768,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morningside-seven-hills",
@@ -54156,7 +59814,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "norman-park",
@@ -54203,7 +59863,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albion",
@@ -54247,6 +59909,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4334,
+    "crimeCountByYear": {
+      "2016": 507,
+      "2017": 500,
+      "2018": 555,
+      "2019": 498,
+      "2020": 472,
+      "2021": 526,
+      "2022": 453,
+      "2023": 429,
+      "2024": 577,
+      "2025": 537
     }
   },
   {
@@ -54291,7 +59966,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ascot",
@@ -54335,6 +60012,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 2571,
+    "crimeCountByYear": {
+      "2016": 93,
+      "2017": 68,
+      "2018": 90,
+      "2019": 78,
+      "2020": 106,
+      "2021": 121,
+      "2022": 103,
+      "2023": 70,
+      "2024": 114,
+      "2025": 80
     }
   },
   {
@@ -54379,7 +60069,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grange",
@@ -54427,7 +60119,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hamilton-qld",
@@ -54471,6 +60165,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10346,
+    "crimeCountByYear": {
+      "2016": 1119,
+      "2017": 1086,
+      "2018": 1388,
+      "2019": 1013,
+      "2020": 945,
+      "2021": 828,
+      "2022": 1042,
+      "2023": 1030,
+      "2024": 1461,
+      "2025": 1085
     }
   },
   {
@@ -54516,7 +60223,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kelvin-grove-herston",
@@ -54560,7 +60269,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newmarket",
@@ -54604,7 +60315,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newstead-bowen-hills",
@@ -54648,7 +60361,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wilston",
@@ -54692,7 +60407,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "windsor",
@@ -54736,6 +60453,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7273,
+    "crimeCountByYear": {
+      "2016": 886,
+      "2017": 912,
+      "2018": 928,
+      "2019": 1010,
+      "2020": 1161,
+      "2021": 1035,
+      "2022": 1232,
+      "2023": 1058,
+      "2024": 1162,
+      "2025": 1422
     }
   },
   {
@@ -54780,7 +60510,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashgrove",
@@ -54824,7 +60556,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "auchenflower",
@@ -54868,7 +60602,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bardon",
@@ -54913,7 +60649,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "paddington-milton",
@@ -54957,7 +60695,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "red-hill-qld",
@@ -55001,6 +60741,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1009,
+    "crimeCountByYear": {
+      "2016": 57,
+      "2017": 32,
+      "2018": 34,
+      "2019": 20,
+      "2020": 25,
+      "2021": 24,
+      "2022": 18,
+      "2023": 18,
+      "2024": 52,
+      "2025": 21
     }
   },
   {
@@ -55045,7 +60798,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brinsmead",
@@ -55089,7 +60844,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clifton-beach-kewarra-beach",
@@ -55135,7 +60892,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "freshwater-stratford",
@@ -55179,7 +60938,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redlynch",
@@ -55223,7 +60984,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "trinity-beach-smithfield",
@@ -55269,7 +61032,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yorkeys-knob-machans-beach",
@@ -55315,7 +61080,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bentley-park",
@@ -55362,7 +61129,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cairns-city",
@@ -55408,7 +61177,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "earlville-bayview-heights",
@@ -55454,7 +61225,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edmonton",
@@ -55498,7 +61271,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gordonvale-trinity",
@@ -55542,7 +61317,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kanimbla-mooroobool",
@@ -55586,7 +61363,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lamb-range",
@@ -55633,7 +61412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manoora",
@@ -55679,7 +61460,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manunda",
@@ -55725,7 +61508,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-sheridan",
@@ -55769,7 +61554,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "westcourt-bungalow",
@@ -55815,7 +61602,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "white-rock",
@@ -55859,7 +61648,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "whitfield-edge-hill",
@@ -55903,7 +61694,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woree",
@@ -55949,7 +61742,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "babinda",
@@ -55995,7 +61790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "innisfail",
@@ -56041,7 +61838,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "johnstone",
@@ -56087,7 +61886,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tully",
@@ -56133,7 +61934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wooroonooran",
@@ -56177,7 +61980,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarrabah",
@@ -56223,7 +62028,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "daintree",
@@ -56269,7 +62076,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-douglas",
@@ -56313,7 +62122,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "atherton",
@@ -56359,7 +62170,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "herberton",
@@ -56405,7 +62218,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kuranda",
@@ -56451,7 +62266,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malanda-yungaburra",
@@ -56497,7 +62314,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mareeba",
@@ -56543,7 +62362,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balonne",
@@ -56589,7 +62410,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chinchilla",
@@ -56635,7 +62458,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goondiwindi",
@@ -56681,7 +62506,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "inglewood-waggamba",
@@ -56727,7 +62554,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "miles-wandoan",
@@ -56773,7 +62602,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roma",
@@ -56819,7 +62650,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roma-surrounds",
@@ -56864,7 +62697,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tara",
@@ -56910,7 +62745,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "crows-nest-rosalie",
@@ -56956,7 +62793,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jondaryan",
@@ -57002,7 +62841,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "millmerran",
@@ -57048,7 +62889,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pittsworth",
@@ -57094,7 +62937,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wambo",
@@ -57140,7 +62985,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clifton-greenmount",
@@ -57186,7 +63033,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southern-downs-east",
@@ -57232,7 +63081,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southern-downs-west",
@@ -57278,7 +63129,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stanthorpe",
@@ -57324,7 +63177,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stanthorpe-surrounds",
@@ -57369,7 +63224,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warwick",
@@ -57415,7 +63272,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "central-highlands-east",
@@ -57462,7 +63321,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "central-highlands-west",
@@ -57509,7 +63370,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "emerald",
@@ -57555,6 +63418,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 5890,
+    "crimeCountByYear": {
+      "2016": 218,
+      "2017": 222,
+      "2018": 193,
+      "2019": 252,
+      "2020": 252,
+      "2021": 111,
+      "2022": 160,
+      "2023": 216,
+      "2024": 233,
+      "2025": 227
     }
   },
   {
@@ -57601,7 +63477,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bouldercombe",
@@ -57647,7 +63525,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "emu-park",
@@ -57694,7 +63574,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "frenchville-mount-archer",
@@ -57740,7 +63622,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenlee-rockyview",
@@ -57784,7 +63668,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gracemere",
@@ -57828,7 +63714,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lakes-creek",
@@ -57874,7 +63762,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-morgan",
@@ -57920,7 +63810,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "norman-gardens",
@@ -57964,7 +63856,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "park-avenue",
@@ -58011,7 +63905,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkhurst-kawana",
@@ -58058,7 +63954,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockhampton-west",
@@ -58104,7 +64002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockhampton-city",
@@ -58151,7 +64051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockhampton-surrounds-east",
@@ -58196,7 +64098,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockhampton-surrounds-north",
@@ -58241,7 +64145,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockhampton-surrounds-west",
@@ -58286,7 +64192,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shoalwater-bay",
@@ -58332,7 +64240,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-range-allenstown",
@@ -58379,7 +64289,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yeppoon",
@@ -58423,7 +64335,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "banana",
@@ -58469,7 +64383,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "biloela",
@@ -58515,7 +64431,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "agnes-water-miriam-vale",
@@ -58561,7 +64479,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "boyne-island-tannum-sands",
@@ -58607,7 +64527,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "callemondah",
@@ -58651,7 +64573,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clinton-new-auckland",
@@ -58697,7 +64621,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gladstone",
@@ -58743,7 +64669,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gladstone-hinterland",
@@ -58788,7 +64716,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kin-kora-sun-valley",
@@ -58834,7 +64764,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-trees",
@@ -58878,7 +64810,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "telina-toolooa",
@@ -58924,7 +64858,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-gladstone",
@@ -58970,7 +64906,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broadbeach-waters",
@@ -59017,7 +64955,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burleigh-heads",
@@ -59062,7 +65002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burleigh-waters",
@@ -59107,7 +65049,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mermaid-beach-broadbeach",
@@ -59153,7 +65097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mermaid-waters",
@@ -59198,7 +65144,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "miami",
@@ -59242,7 +65190,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coolangatta",
@@ -59286,7 +65236,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "currumbin-tugun",
@@ -59330,7 +65282,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "currumbin-waters",
@@ -59374,7 +65328,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elanora",
@@ -59419,7 +65375,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palm-beach",
@@ -59465,7 +65423,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "arundel",
@@ -59509,7 +65469,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "biggera-waters",
@@ -59553,7 +65515,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coombabah",
@@ -59597,7 +65561,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "labrador",
@@ -59641,7 +65607,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "paradise-point-hollywell",
@@ -59686,7 +65654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "runaway-bay",
@@ -59732,7 +65702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "guanaba-springbrook",
@@ -59776,7 +65748,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tamborine-canungra",
@@ -59820,7 +65794,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "currumbin-valley-tallebudgera",
@@ -59865,7 +65841,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mudgeeraba-bonogin",
@@ -59910,7 +65888,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reedy-creek-andrews",
@@ -59955,7 +65935,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carrara",
@@ -59999,7 +65981,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "highland-park",
@@ -60046,7 +66030,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nerang-mount-nathan",
@@ -60092,7 +66078,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pacific-pines-gaven",
@@ -60136,7 +66124,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "worongary-tallai",
@@ -60181,7 +66171,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coomera",
@@ -60225,7 +66217,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "helensvale",
@@ -60270,7 +66264,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hope-island",
@@ -60315,7 +66311,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jacobs-well-alberton",
@@ -60359,7 +66357,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oxenford-maudsland",
@@ -60403,7 +66403,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ormeau-east-stapylton",
@@ -60447,7 +66449,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ormeau-west-yatala",
@@ -60491,7 +66495,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pimpama-north",
@@ -60535,7 +66541,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pimpama-south",
@@ -60579,7 +66587,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-coomera-south-wongawallan",
@@ -60624,7 +66634,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-coomera-north",
@@ -60668,7 +66680,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "willow-vale-pimpama-west",
@@ -60712,7 +66726,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clear-island-waters",
@@ -60757,7 +66773,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "merrimac",
@@ -60801,7 +66819,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "varsity-lakes",
@@ -60846,7 +66866,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "robina-east",
@@ -60891,7 +66913,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "robina-west",
@@ -60936,7 +66960,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashmore",
@@ -60980,7 +67006,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "molendinar",
@@ -61024,7 +67052,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkwood",
@@ -61072,7 +67102,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southport-north",
@@ -61116,7 +67148,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southport-south",
@@ -61160,7 +67194,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "benowa",
@@ -61205,7 +67241,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundall",
@@ -61250,7 +67288,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "main-beach",
@@ -61297,7 +67337,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "surfers-paradise-north",
@@ -61341,7 +67383,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "surfers-paradise-south",
@@ -61385,7 +67429,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "darra-sumner",
@@ -61429,7 +67475,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "durack",
@@ -61473,7 +67521,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "inala-richlands",
@@ -61519,7 +67569,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oxley-qld",
@@ -61563,6 +67615,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 710,
+    "crimeCountByYear": {
+      "2016": 12,
+      "2017": 13,
+      "2018": 8,
+      "2019": 10,
+      "2020": 20,
+      "2021": 32,
+      "2022": 10,
+      "2023": 26,
+      "2024": 12,
+      "2025": 20
     }
   },
   {
@@ -61609,7 +67674,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "doolandella",
@@ -61653,7 +67720,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forest-lake-ellen-grove",
@@ -61700,7 +67769,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "boonah",
@@ -61746,7 +67817,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "esk",
@@ -61792,7 +67865,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lake-manchester-england-creek",
@@ -61836,7 +67911,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lockyer-valley-east",
@@ -61880,7 +67957,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lowood",
@@ -61924,7 +68003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosewood",
@@ -61968,7 +68049,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brassall",
@@ -62012,7 +68095,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundamba",
@@ -62058,7 +68143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "churchill-yamanto",
@@ -62104,7 +68191,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ipswich-central",
@@ -62151,7 +68240,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ipswich-east",
@@ -62197,7 +68288,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ipswich-north",
@@ -62241,7 +68334,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karalee-barellan-point",
@@ -62285,7 +68380,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karana-downs",
@@ -62329,7 +68426,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leichhardt-one-mile",
@@ -62375,7 +68474,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-ipswich-tivoli",
@@ -62421,7 +68522,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "raceview",
@@ -62465,7 +68568,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ripley",
@@ -62509,7 +68614,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "riverview",
@@ -62555,7 +68662,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camira-gailes",
@@ -62601,7 +68710,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carole-park",
@@ -62648,7 +68759,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "collingwood-park-redbank",
@@ -62695,7 +68808,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goodna",
@@ -62741,7 +68856,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "new-chum",
@@ -62785,7 +68902,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redbank-plains",
@@ -62829,7 +68948,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "springfield",
@@ -62873,6 +68994,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 193,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 4,
+      "2018": 9,
+      "2019": 17,
+      "2020": 6,
+      "2021": 6,
+      "2022": 22,
+      "2023": 6,
+      "2024": 7,
+      "2025": 5
     }
   },
   {
@@ -62917,7 +69051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "augustine-heights-brookwater",
@@ -62961,7 +69097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellbird-park",
@@ -63008,7 +69146,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beaudesert",
@@ -63052,7 +69192,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beenleigh",
@@ -63098,7 +69240,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eagleby",
@@ -63144,7 +69288,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edens-landing-holmview",
@@ -63188,7 +69334,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-warren-park",
@@ -63235,7 +69383,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wolffdene-bahrs-scrub",
@@ -63279,7 +69429,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "boronia-heights-park-ridge",
@@ -63326,7 +69478,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "browns-plains",
@@ -63370,6 +69524,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 99,
+    "crimeCountByYear": {
+      "2017": 1,
+      "2018": 10,
+      "2019": 2,
+      "2020": 5,
+      "2021": 6,
+      "2022": 6,
+      "2023": 7,
+      "2024": 5,
+      "2025": 8
     }
   },
   {
@@ -63414,7 +69580,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "crestmead",
@@ -63458,7 +69626,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenbank-military-camp",
@@ -63502,7 +69672,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hillcrest",
@@ -63546,6 +69718,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 99,
+    "crimeCountByYear": {
+      "2016": 6,
+      "2017": 6,
+      "2018": 5,
+      "2019": 3,
+      "2020": 8,
+      "2021": 1,
+      "2022": 4,
+      "2023": 4,
+      "2024": 5,
+      "2025": 13
     }
   },
   {
@@ -63590,7 +69775,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "munruben-park-ridge-south",
@@ -63637,7 +69824,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "regents-park-heritage-park",
@@ -63684,7 +69873,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "logan-village",
@@ -63728,7 +69919,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flagstone-east-riverbend",
@@ -63772,7 +69965,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flagstone-west-new-beith",
@@ -63816,7 +70011,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenbank-north-maclean",
@@ -63860,7 +70057,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jimboomba-glenlogan",
@@ -63904,7 +70103,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yarrabilba",
@@ -63948,7 +70149,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bethania-waterford",
@@ -63992,7 +70195,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cornubia-carbrook",
@@ -64036,7 +70241,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loganholme-tanah-merah",
@@ -64080,7 +70287,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loganlea",
@@ -64124,7 +70333,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shailer-park",
@@ -64171,7 +70382,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waterford-west",
@@ -64215,7 +70428,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "daisy-hill",
@@ -64259,6 +70474,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 398,
+    "crimeCountByYear": {
+      "2016": 5,
+      "2017": 10,
+      "2018": 12,
+      "2019": 20,
+      "2020": 11,
+      "2021": 9,
+      "2022": 6,
+      "2024": 7,
+      "2025": 11
     }
   },
   {
@@ -64305,6 +70532,17 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 190,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 3,
+      "2018": 2,
+      "2020": 12,
+      "2021": 3,
+      "2022": 3,
+      "2023": 3,
+      "2024": 1
     }
   },
   {
@@ -64352,7 +70590,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rochedale-south-priestdale",
@@ -64396,7 +70636,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "slacks-creek",
@@ -64442,7 +70684,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "springwood",
@@ -64486,7 +70730,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "underwood",
@@ -64530,7 +70776,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodridge",
@@ -64576,7 +70824,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bowen",
@@ -64622,7 +70872,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broadsound-nebo",
@@ -64668,7 +70920,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clermont",
@@ -64714,7 +70968,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "collinsville",
@@ -64760,7 +71016,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moranbah",
@@ -64806,7 +71064,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "andergrove-beaconsfield",
@@ -64850,7 +71110,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-mackay",
@@ -64894,7 +71156,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eimeo-rural-view",
@@ -64936,7 +71200,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eungella-hinterland",
@@ -64981,7 +71247,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mackay",
@@ -65027,7 +71295,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mackay-harbour",
@@ -65072,7 +71342,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-pleasant-glenella",
@@ -65116,7 +71388,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-mackay",
@@ -65162,7 +71436,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ooralea-bakers-creek",
@@ -65206,7 +71482,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pioneer-valley",
@@ -65250,7 +71528,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sarina",
@@ -65296,7 +71576,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seaforth-calen",
@@ -65343,7 +71625,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "shoal-point-bucasia",
@@ -65387,7 +71671,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "slade-point",
@@ -65433,7 +71719,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-mackay",
@@ -65479,7 +71767,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walkerston-eton",
@@ -65523,7 +71813,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-mackay",
@@ -65567,7 +71859,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "airlie-whitsundays",
@@ -65611,7 +71905,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cape-conway",
@@ -65655,7 +71951,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "proserpine",
@@ -65701,7 +71999,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beachmere-sandstone-point",
@@ -65743,7 +72043,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bribie-island",
@@ -65785,7 +72087,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burpengary-east",
@@ -65827,7 +72131,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caboolture-south",
@@ -65869,7 +72175,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elimbah",
@@ -65911,7 +72219,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morayfield-east",
@@ -65953,7 +72263,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wamuran",
@@ -65995,7 +72307,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caboolture-east",
@@ -66037,7 +72351,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caboolture-west",
@@ -66079,7 +72395,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kilcoy",
@@ -66121,7 +72439,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodford-daguilar",
@@ -66163,7 +72483,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burpengary",
@@ -66205,7 +72527,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deception-bay",
@@ -66247,7 +72571,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morayfield",
@@ -66289,7 +72615,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narangba",
@@ -66331,7 +72659,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "upper-caboolture",
@@ -66373,7 +72703,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clontarf",
@@ -66415,7 +72747,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "margate-woody-point",
@@ -66457,7 +72791,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redcliffe",
@@ -66499,7 +72835,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rothwell-kippa-ring",
@@ -66541,7 +72879,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moreton-island",
@@ -66583,7 +72923,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scarborough-newport",
@@ -66625,7 +72967,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albany-creek",
@@ -66667,7 +73011,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cashmere",
@@ -66709,7 +73055,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dayboro",
@@ -66751,7 +73099,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eatons-hill",
@@ -66793,7 +73143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-hills-district",
@@ -66835,7 +73187,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "samford-valley",
@@ -66878,7 +73232,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murrumba-downs-griffin",
@@ -66920,7 +73276,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dakabin",
@@ -66962,7 +73320,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kallangur",
@@ -67004,7 +73364,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mango-hill",
@@ -67046,7 +73408,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-lakes",
@@ -67088,7 +73452,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bray-park",
@@ -67132,7 +73498,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lawnton",
@@ -67174,7 +73542,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "petrie",
@@ -67216,7 +73586,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathpine-brendale",
@@ -67258,7 +73630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aurukun",
@@ -67296,7 +73670,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cape-york",
@@ -67334,7 +73710,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "croydon-etheridge",
@@ -67372,7 +73750,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kowanyama-pormpuraaw",
@@ -67410,7 +73790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northern-peninsula",
@@ -67448,7 +73830,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tablelands",
@@ -67486,7 +73870,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torres",
@@ -67524,7 +73910,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torres-strait-islands",
@@ -67562,7 +73950,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "weipa",
@@ -67600,7 +73990,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carpentaria",
@@ -67638,7 +74030,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-isa",
@@ -67676,7 +74070,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-isa-surrounds",
@@ -67715,7 +74111,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northern-highlands",
@@ -67753,7 +74151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "barcaldine-blackall",
@@ -67791,7 +74191,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charleville",
@@ -67829,7 +74231,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "far-central-west",
@@ -67871,7 +74275,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "far-south-west",
@@ -67909,7 +74315,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "longreach",
@@ -67947,7 +74355,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buderim-north",
@@ -67985,7 +74395,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buderim-south",
@@ -68023,7 +74435,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mountain-creek",
@@ -68064,7 +74478,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sippy-downs",
@@ -68102,7 +74518,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aroona-currimundi",
@@ -68140,7 +74558,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buddina-minyama",
@@ -68178,7 +74598,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caloundra-kings-beach",
@@ -68216,7 +74638,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "golden-beach-pelican-waters",
@@ -68254,7 +74678,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moffat-beach-battery-hill",
@@ -68292,7 +74718,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parrearra-warana",
@@ -68331,7 +74759,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wurtulla-birtinya",
@@ -68370,7 +74800,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caloundra-west-baringa",
@@ -68408,7 +74840,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "meridan-plains-little-mountain-north",
@@ -68448,7 +74882,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coolum-beach",
@@ -68486,7 +74922,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marcoola-mudjimba",
@@ -68524,7 +74962,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maroochydore-kuluin",
@@ -68562,7 +75002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mooloolaba-alexandra-headland",
@@ -68600,7 +75042,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "noosa-heads",
@@ -68639,7 +75083,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "noosaville",
@@ -68678,7 +75124,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sunshine-beach",
@@ -68717,7 +75165,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tewantin",
@@ -68755,7 +75205,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "peregian-beach-marcus-beach",
@@ -68794,7 +75246,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "peregian-springs",
@@ -68833,7 +75287,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beerwah",
@@ -68871,7 +75327,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "caloundra-hinterland",
@@ -68910,7 +75368,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glass-house-mountains",
@@ -68950,7 +75410,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "landsborough",
@@ -68988,6 +75450,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 200,
+    "crimeCountByYear": {
+      "2016": 22,
+      "2017": 7,
+      "2018": 12,
+      "2019": 8,
+      "2020": 8,
+      "2021": 6,
+      "2022": 36,
+      "2023": 12,
+      "2024": 59,
+      "2025": 19
     }
   },
   {
@@ -69027,7 +75502,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palmwoods",
@@ -69065,7 +75542,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bli-bli",
@@ -69103,7 +75582,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "diddillibah-rosemount",
@@ -69141,7 +75622,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eumundi-yandina",
@@ -69179,7 +75662,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nambour",
@@ -69217,7 +75702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "noosa-hinterland",
@@ -69256,7 +75743,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cambooya-wyreema",
@@ -69294,7 +75783,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "darling-heights",
@@ -69332,7 +75823,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "drayton-harristown",
@@ -69370,7 +75863,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gatton",
@@ -69408,7 +75903,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gowrie-qld",
@@ -69446,7 +75943,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "highfields",
@@ -69484,7 +75983,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lockyer-valley-west",
@@ -69522,7 +76023,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "middle-ridge",
@@ -69560,7 +76063,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newtown-qld",
@@ -69598,6 +76103,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 10445,
+    "crimeCountByYear": {
+      "2016": 756,
+      "2017": 748,
+      "2018": 442,
+      "2019": 489,
+      "2020": 619,
+      "2021": 469,
+      "2022": 467,
+      "2023": 545,
+      "2024": 557,
+      "2025": 553
     }
   },
   {
@@ -69636,7 +76154,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rangeville",
@@ -69676,7 +76196,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toowoomba-central",
@@ -69718,7 +76240,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toowoomba-east",
@@ -69756,7 +76280,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toowoomba-west",
@@ -69794,7 +76320,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wilsonton",
@@ -69832,7 +76360,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ayr",
@@ -69870,7 +76400,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burdekin",
@@ -69908,7 +76440,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charters-towers",
@@ -69946,7 +76480,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dalrymple",
@@ -69984,7 +76520,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ingham",
@@ -70022,7 +76560,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ingham-surrounds",
@@ -70061,7 +76601,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palm-island",
@@ -70099,7 +76641,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aitkenvale",
@@ -70137,7 +76681,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "annandale-qld",
@@ -70175,7 +76721,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belgian-gardens-pallarenda",
@@ -70213,7 +76761,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bohle-plains",
@@ -70251,7 +76801,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "condon-rasmussen",
@@ -70289,7 +76841,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cranbrook",
@@ -70327,7 +76881,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "douglas",
@@ -70365,6 +76921,14 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 74,
+    "crimeCountByYear": {
+      "2017": 11,
+      "2020": 2,
+      "2021": 2,
+      "2022": 2,
+      "2025": 1
     }
   },
   {
@@ -70403,7 +76967,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gulliver-currajong-vincent",
@@ -70441,7 +77007,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "heatley",
@@ -70479,7 +77047,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hermit-park-rosslea",
@@ -70519,7 +77089,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hyde-park-pimlico",
@@ -70559,7 +77131,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kelso",
@@ -70597,7 +77171,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kirwan-east",
@@ -70635,7 +77211,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kirwan-west",
@@ -70673,7 +77251,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "magnetic-island",
@@ -70711,7 +77291,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-louisa",
@@ -70749,7 +77331,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mundingburra",
@@ -70787,7 +77371,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northern-beaches",
@@ -70827,7 +77413,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oonoonba",
@@ -70865,7 +77453,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-townsville-railway-estate",
@@ -70903,7 +77493,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "townsville-south",
@@ -70941,7 +77533,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "townsville-city-north-ward",
@@ -70981,7 +77575,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wulguru-roseneath",
@@ -71019,7 +77615,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burdell-mount-low",
@@ -71057,7 +77655,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deeragun-jensen",
@@ -71095,7 +77695,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashfield-kepnock",
@@ -71133,7 +77735,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bargara-burnett-heads",
@@ -71171,7 +77775,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "branyan-kensington",
@@ -71209,7 +77815,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundaberg",
@@ -71247,7 +77855,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundaberg-east-kalkie",
@@ -71285,7 +77895,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundaberg-north-gooburrum",
@@ -71323,7 +77935,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundaberg-surrounds-north",
@@ -71362,7 +77976,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bundaberg-surrounds-south",
@@ -71401,7 +78017,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "millbank-avoca",
@@ -71439,7 +78057,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "svensson-heights-norville",
@@ -71477,7 +78097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walkervale-avenell-heights",
@@ -71515,7 +78137,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gayndah-mundubbera",
@@ -71553,7 +78177,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gin-gin",
@@ -71591,7 +78217,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingaroy",
@@ -71629,7 +78257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingaroy-surrounds-north",
@@ -71668,7 +78298,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingaroy-surrounds-south",
@@ -71707,7 +78339,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "monto-eidsvold",
@@ -71745,7 +78379,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nanango",
@@ -71783,7 +78419,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-burnett",
@@ -71821,7 +78459,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cooloola",
@@ -71859,7 +78499,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gympie-north",
@@ -71897,7 +78539,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gympie-south",
@@ -71935,7 +78579,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gympie-surrounds",
@@ -71974,7 +78620,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kilkivan",
@@ -72012,7 +78660,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "booral-river-heads",
@@ -72050,7 +78700,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craignish-dundowran-beach",
@@ -72088,7 +78740,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pialba-eli-waters",
@@ -72126,7 +78780,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "point-vernon",
@@ -72164,7 +78820,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torquay-scarness-kawungan",
@@ -72202,7 +78860,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "urangan-wondunna",
@@ -72240,7 +78900,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burrum-fraser",
@@ -72278,7 +78940,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "granville",
@@ -72316,7 +78980,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maryborough-qld",
@@ -72354,6 +79020,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8160,
+    "crimeCountByYear": {
+      "2016": 1144,
+      "2017": 946,
+      "2018": 1004,
+      "2019": 1085,
+      "2020": 805,
+      "2021": 811,
+      "2022": 830,
+      "2023": 926,
+      "2024": 1391,
+      "2025": 1008
     }
   },
   {
@@ -72393,7 +79072,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tinana",
@@ -72431,7 +79112,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-qld",
@@ -72466,7 +79149,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-qld",
@@ -72501,7 +79186,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "adelaide",
@@ -72545,7 +79232,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-adelaide",
@@ -72589,7 +79278,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "adelaide-hills",
@@ -72635,7 +79326,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aldgate-stirling",
@@ -72679,7 +79372,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hahndorf-echunga",
@@ -72723,7 +79418,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lobethal-woodside",
@@ -72767,7 +79464,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-barker",
@@ -72811,7 +79510,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-barker-surrounds",
@@ -72856,7 +79557,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nairne",
@@ -72900,7 +79603,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "uraidla-summertown",
@@ -72944,7 +79649,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burnside-wattle-park",
@@ -72991,7 +79698,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beaumont-glen-osmond",
@@ -73035,7 +79744,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toorak-gardens",
@@ -73079,7 +79790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "athelstone",
@@ -73123,7 +79836,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "paradise-newton",
@@ -73167,7 +79882,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rostrevor-magill",
@@ -73211,7 +79928,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "norwood-sa",
@@ -73255,7 +79974,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "payneham-felixstow",
@@ -73299,7 +80020,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-peters-marden",
@@ -73343,7 +80066,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nailsworth-broadview",
@@ -73387,7 +80112,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "prospect",
@@ -73431,7 +80158,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walkerville",
@@ -73475,6 +80204,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 130,
+    "crimeCountByYear": {
+      "2016": 1,
+      "2017": 3,
+      "2018": 6,
+      "2019": 33,
+      "2020": 12,
+      "2021": 25,
+      "2022": 8,
+      "2023": 18,
+      "2024": 2,
+      "2025": 8
     }
   },
   {
@@ -73519,7 +80261,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "unley-parkside",
@@ -73566,7 +80310,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gawler-north",
@@ -73610,7 +80356,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gawler-south",
@@ -73656,7 +80404,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lewiston-two-wells",
@@ -73702,7 +80452,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigmore-blakeview",
@@ -73746,7 +80498,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "davoren-park",
@@ -73793,7 +80547,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elizabeth",
@@ -73839,7 +80595,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elizabeth-east",
@@ -73885,7 +80643,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "munno-para-west-angle-vale",
@@ -73931,7 +80691,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "one-tree-hill",
@@ -73975,7 +80737,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "smithfield-elizabeth-north",
@@ -74021,7 +80785,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "virginia-waterloo-corner",
@@ -74067,7 +80833,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "enfield-blair-athol",
@@ -74113,7 +80881,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "windsor-gardens",
@@ -74157,7 +80927,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northgate-northfield",
@@ -74201,7 +80973,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "valley-view-gilles-plains",
@@ -74247,7 +81021,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dry-creek-north",
@@ -74291,7 +81067,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ingle-farm",
@@ -74337,7 +81115,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "para-hills",
@@ -74383,7 +81163,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parafield",
@@ -74427,7 +81209,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parafield-gardens",
@@ -74473,7 +81257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "paralowie",
@@ -74519,7 +81305,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "salisbury",
@@ -74565,7 +81353,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "salisbury-east",
@@ -74611,7 +81401,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "salisbury-north",
@@ -74657,7 +81449,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mawson-lakes-globe-derby-park",
@@ -74704,7 +81498,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pooraka-cavan",
@@ -74750,7 +81546,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "golden-grove",
@@ -74796,7 +81594,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenwith",
@@ -74842,7 +81642,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "highbury-dernancourt",
@@ -74886,7 +81688,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hope-valley-modbury",
@@ -74930,7 +81734,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "modbury-heights",
@@ -74974,7 +81780,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "redwood-park",
@@ -75021,7 +81829,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-agnes-ridgehaven",
@@ -75065,7 +81875,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brighton-sa",
@@ -75109,6 +81921,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 23252,
+    "crimeCountByYear": {
+      "2016": 1500,
+      "2017": 1222,
+      "2018": 1115,
+      "2019": 1186,
+      "2020": 1154,
+      "2021": 997,
+      "2022": 1293,
+      "2023": 1296,
+      "2024": 1433,
+      "2025": 1493
     }
   },
   {
@@ -75153,7 +81978,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "edwardstown",
@@ -75199,7 +82026,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hallett-cove",
@@ -75245,7 +82074,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marino-seaview-downs",
@@ -75291,7 +82122,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mitchell-park",
@@ -75338,6 +82171,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 887,
+    "crimeCountByYear": {
+      "2016": 82,
+      "2017": 106,
+      "2018": 143,
+      "2019": 106,
+      "2020": 99,
+      "2021": 105,
+      "2022": 111,
+      "2023": 185,
+      "2024": 162,
+      "2025": 200
     }
   },
   {
@@ -75382,7 +82228,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sheidow-park-trott-park",
@@ -75429,7 +82277,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warradale",
@@ -75473,7 +82323,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belair",
@@ -75517,7 +82369,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellevue-heights",
@@ -75561,7 +82415,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "blackwood",
@@ -75605,6 +82461,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 387,
+    "crimeCountByYear": {
+      "2016": 15,
+      "2017": 24,
+      "2018": 20,
+      "2019": 11,
+      "2020": 18,
+      "2021": 18,
+      "2022": 23,
+      "2023": 12,
+      "2024": 10,
+      "2025": 11
     }
   },
   {
@@ -75649,7 +82518,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mitcham-sa",
@@ -75693,6 +82564,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 16795,
+    "crimeCountByYear": {
+      "2016": 869,
+      "2017": 955,
+      "2018": 886,
+      "2019": 845,
+      "2020": 775,
+      "2021": 651,
+      "2022": 628,
+      "2023": 760,
+      "2024": 1006,
+      "2025": 939
     }
   },
   {
@@ -75737,7 +82621,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aberfoyle-park",
@@ -75784,7 +82670,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aldinga",
@@ -75828,7 +82716,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "christie-downs",
@@ -75874,7 +82764,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "christies-beach",
@@ -75920,7 +82812,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clarendon",
@@ -75966,6 +82860,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 163,
+    "crimeCountByYear": {
+      "2016": 13,
+      "2017": 1,
+      "2018": 11,
+      "2019": 1,
+      "2020": 2,
+      "2021": 1,
+      "2022": 4,
+      "2023": 5,
+      "2024": 4,
+      "2025": 9
     }
   },
   {
@@ -76010,7 +82917,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flagstaff-hill",
@@ -76054,7 +82963,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hackham-onkaparinga-hills",
@@ -76100,7 +83011,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hackham-west-huntfield-heights",
@@ -76146,7 +83059,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "happy-valley",
@@ -76190,6 +83105,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 75,
+    "crimeCountByYear": {
+      "2016": 9,
+      "2017": 4,
+      "2018": 3,
+      "2019": 8,
+      "2020": 6,
+      "2021": 3,
+      "2022": 2,
+      "2023": 1,
+      "2024": 3,
+      "2025": 2
     }
   },
   {
@@ -76234,7 +83162,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lonsdale",
@@ -76278,7 +83208,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mclaren-vale",
@@ -76322,7 +83254,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morphett-vale-east",
@@ -76368,7 +83302,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morphett-vale-west",
@@ -76414,7 +83350,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reynella",
@@ -76458,7 +83396,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "willunga",
@@ -76502,7 +83442,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodcroft",
@@ -76546,7 +83488,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seaford-seaford-meadows",
@@ -76592,7 +83536,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seaford-rise-moana",
@@ -76638,7 +83584,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beverley",
@@ -76682,7 +83630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flinders-park",
@@ -76729,7 +83679,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "henley-beach",
@@ -76775,7 +83727,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hindmarsh-brompton",
@@ -76819,7 +83773,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "royal-park-hendon-albert-park",
@@ -76866,7 +83822,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seaton-grange",
@@ -76913,7 +83871,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-lakes",
@@ -76957,7 +83917,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodville-cheltenham",
@@ -77003,7 +83965,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dry-creek-south",
@@ -77047,7 +84011,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "largs-bay-semaphore",
@@ -77093,7 +84059,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-haven",
@@ -77139,7 +84107,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-adelaide",
@@ -77185,7 +84155,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-parks",
@@ -77232,7 +84204,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torrens-island",
@@ -77276,7 +84250,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "adelaide-airport",
@@ -77320,7 +84296,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fulham",
@@ -77364,6 +84342,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 994,
+    "crimeCountByYear": {
+      "2016": 27,
+      "2017": 43,
+      "2018": 100,
+      "2019": 148,
+      "2020": 109,
+      "2021": 132,
+      "2022": 24,
+      "2023": 39,
+      "2024": 52,
+      "2025": 67
     }
   },
   {
@@ -77408,7 +84399,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "plympton",
@@ -77452,7 +84445,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "richmond-sa",
@@ -77496,6 +84491,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 28587,
+    "crimeCountByYear": {
+      "2016": 4310,
+      "2017": 4070,
+      "2018": 4137,
+      "2019": 4195,
+      "2020": 4852,
+      "2021": 4105,
+      "2022": 3656,
+      "2023": 3633,
+      "2024": 4436,
+      "2025": 4886
     }
   },
   {
@@ -77542,7 +84550,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "barossa-angaston",
@@ -77588,7 +84598,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "light",
@@ -77634,7 +84646,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lyndoch",
@@ -77680,7 +84694,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mallala",
@@ -77726,7 +84742,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nuriootpa",
@@ -77772,7 +84790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tanunda",
@@ -77818,7 +84838,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clare",
@@ -77864,7 +84886,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gilbert-valley",
@@ -77910,7 +84934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goyder",
@@ -77956,7 +84982,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wakefield-barunga-west",
@@ -78002,7 +85030,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jamestown",
@@ -78048,7 +85078,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "peterborough-mount-remarkable",
@@ -78094,7 +85126,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-pirie",
@@ -78140,7 +85174,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-pirie-surrounds",
@@ -78185,7 +85221,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kadina",
@@ -78231,7 +85269,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moonta",
@@ -78277,7 +85317,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wallaroo",
@@ -78323,7 +85365,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yorke-peninsula-north",
@@ -78369,7 +85413,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yorke-peninsula-south",
@@ -78415,7 +85461,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ceduna",
@@ -78450,7 +85498,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eyre-peninsula",
@@ -78485,7 +85535,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kimba-cleve-franklin-harbour",
@@ -78520,7 +85572,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "le-hunte-elliston",
@@ -78555,7 +85609,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-lincoln",
@@ -78590,7 +85646,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-coast-sa",
@@ -78625,7 +85683,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "western",
@@ -78660,7 +85720,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$25/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "whyalla",
@@ -78695,7 +85757,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "whyalla-north",
@@ -78730,7 +85794,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "apy-lands",
@@ -78765,7 +85831,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coober-pedy",
@@ -78800,7 +85868,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "quorn-lake-gilles",
@@ -78835,7 +85905,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "outback",
@@ -78870,7 +85942,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-augusta",
@@ -78905,7 +85979,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roxby-downs",
@@ -78940,7 +86016,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "goolwa-port-elliot",
@@ -78975,7 +86053,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kangaroo-island",
@@ -79010,7 +86090,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathalbyn",
@@ -79045,7 +86127,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathalbyn-surrounds",
@@ -79081,7 +86165,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "victor-harbor",
@@ -79116,7 +86202,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yankalilla",
@@ -79151,7 +86239,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grant",
@@ -79186,7 +86276,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingston-robe",
@@ -79221,7 +86313,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "millicent",
@@ -79256,7 +86350,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "naracoorte",
@@ -79291,7 +86387,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "naracoorte-surrounds",
@@ -79327,7 +86425,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "penola",
@@ -79362,7 +86462,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tatiara",
@@ -79397,7 +86499,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wattle-range",
@@ -79434,7 +86538,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-gambier-east",
@@ -79469,7 +86575,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-gambier-west",
@@ -79504,7 +86612,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "barmera",
@@ -79539,7 +86649,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berri",
@@ -79574,7 +86686,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karoonda-lameroo",
@@ -79609,7 +86723,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loxton",
@@ -79644,7 +86760,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "loxton-surrounds",
@@ -79680,7 +86798,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mannum",
@@ -79715,7 +86835,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murray-bridge",
@@ -79750,7 +86872,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murray-bridge-surrounds",
@@ -79786,7 +86910,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "renmark",
@@ -79821,7 +86947,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "renmark-surrounds",
@@ -79857,7 +86985,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-coorong",
@@ -79892,7 +87022,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waikerie",
@@ -79927,7 +87059,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-sa",
@@ -79962,7 +87096,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-sa",
@@ -79997,7 +87133,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "augusta",
@@ -80032,7 +87170,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "busselton-surrounds",
@@ -80068,7 +87208,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "margaret-river",
@@ -80103,7 +87245,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "busselton-east",
@@ -80138,7 +87282,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "busselton-west",
@@ -80173,7 +87319,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "australind-leschenault",
@@ -80208,7 +87356,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "capel",
@@ -80243,7 +87393,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "college-grove-carey-park",
@@ -80280,7 +87432,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "collie",
@@ -80315,7 +87469,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dardanup",
@@ -80350,7 +87506,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "davenport",
@@ -80385,7 +87543,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "eaton-pelican-point",
@@ -80420,7 +87580,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "harvey",
@@ -80455,7 +87617,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-bunbury-glen-iris",
@@ -80493,7 +87657,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waroona",
@@ -80528,7 +87694,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dalyellup",
@@ -80563,7 +87731,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gelorup-stratham",
@@ -80598,7 +87768,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-bunbury-bunbury",
@@ -80636,7 +87808,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "withers-usher",
@@ -80671,7 +87845,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bridgetown-boyup-brook",
@@ -80706,7 +87882,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "donnybrook-balingup",
@@ -80741,7 +87919,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manjimup",
@@ -80776,7 +87956,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pemberton",
@@ -80811,7 +87993,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dawesville-bouvard",
@@ -80846,7 +88030,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "falcon-wannanup",
@@ -80881,7 +88067,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenfields",
@@ -80916,7 +88104,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "halls-head-erskine",
@@ -80951,7 +88141,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mandurah",
@@ -80986,7 +88178,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mandurah-east",
@@ -81021,7 +88215,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mandurah-north",
@@ -81056,7 +88252,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mandurah-south",
@@ -81091,7 +88289,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pinjarra",
@@ -81126,7 +88326,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "city-beach",
@@ -81166,7 +88368,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $450–$900/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "claremont-wa",
@@ -81202,7 +88406,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cottesloe",
@@ -81238,7 +88444,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "floreat",
@@ -81274,7 +88482,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mosman-park-peppermint-grove",
@@ -81311,7 +88521,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nedlands-dalkeith-crawley",
@@ -81347,7 +88559,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "swanbourne-mount-claremont",
@@ -81383,7 +88597,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kings-park-wa",
@@ -81420,6 +88636,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 8203,
+    "crimeCountByYear": {
+      "2016": 635,
+      "2017": 468,
+      "2018": 539,
+      "2019": 422,
+      "2020": 696,
+      "2021": 466,
+      "2022": 326,
+      "2023": 332,
+      "2024": 422,
+      "2025": 429
     }
   },
   {
@@ -81455,7 +88684,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-lawley-inglewood",
@@ -81490,7 +88721,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-perth",
@@ -81525,7 +88758,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "subiaco-shenton-park",
@@ -81562,7 +88797,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wembley-west-leederville-glendalough",
@@ -81597,7 +88834,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-perth",
@@ -81632,7 +88871,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "perth-north-highgate",
@@ -81667,7 +88908,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "perth-west-northbridge",
@@ -81702,7 +88945,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bassendean-eden-hill-ashfield",
@@ -81746,7 +88991,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bayswater-embleton-bedford",
@@ -81792,7 +89039,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maylands",
@@ -81836,7 +89085,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morley",
@@ -81880,7 +89131,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "noranda",
@@ -81924,7 +89177,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chidlow",
@@ -81968,7 +89223,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glen-forrest-darlington",
@@ -82012,7 +89269,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "helena-valley-koongamia",
@@ -82056,7 +89315,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malmalling-reservoir",
@@ -82100,7 +89361,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mundaring",
@@ -82144,7 +89407,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "swan-view-greenmount-midvale",
@@ -82190,7 +89455,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "avon-valley-national-park",
@@ -82237,7 +89504,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ballajura",
@@ -82281,7 +89550,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beechboro",
@@ -82325,7 +89596,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bullsbrook",
@@ -82369,7 +89642,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gidgegannup",
@@ -82413,7 +89688,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hazelmere-guildford",
@@ -82457,7 +89734,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lockridge-kiara",
@@ -82501,7 +89780,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malaga",
@@ -82546,7 +89827,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $475–$950/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melaleuca-lexia",
@@ -82590,7 +89873,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "middle-swan-herne-hill",
@@ -82634,7 +89919,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "midland-guildford",
@@ -82680,7 +89967,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stratton-jane-brook",
@@ -82724,7 +90013,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "the-vines",
@@ -82768,7 +90059,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "walyunga-national-park",
@@ -82815,7 +90108,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aveley",
@@ -82859,7 +90154,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brabham-henley-brook",
@@ -82903,7 +90200,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ellenbrook",
@@ -82947,7 +90246,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "craigie-beldon",
@@ -82991,7 +90292,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "currambine-kinross",
@@ -83035,7 +90338,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "duncraig",
@@ -83079,7 +90384,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenwood-warwick",
@@ -83123,7 +90430,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "heathridge-connolly",
@@ -83167,7 +90476,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hillarys",
@@ -83212,7 +90523,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "iluka-burns-beach",
@@ -83259,7 +90572,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $400–$775/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "joondalup-edgewater",
@@ -83303,7 +90618,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingsley",
@@ -83347,7 +90664,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mullaloo-kallaroo",
@@ -83392,7 +90711,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ocean-reef",
@@ -83439,7 +90760,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "padbury",
@@ -83483,7 +90806,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sorrento-marmion",
@@ -83528,7 +90853,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodvale",
@@ -83572,6 +90899,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 556,
+    "crimeCountByYear": {
+      "2016": 43,
+      "2017": 32,
+      "2018": 30,
+      "2019": 42,
+      "2020": 37,
+      "2021": 29,
+      "2022": 28,
+      "2023": 41,
+      "2024": 56,
+      "2025": 15
     }
   },
   {
@@ -83616,7 +90956,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "balga-mirrabooka",
@@ -83662,7 +91004,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "herdsman",
@@ -83706,7 +91050,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "innaloo-doubleview",
@@ -83750,7 +91096,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karrinyup-gwelup-carine",
@@ -83795,7 +91143,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nollamara-westminster",
@@ -83839,7 +91189,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "osborne-park-industrial",
@@ -83886,7 +91238,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scarborough",
@@ -83930,7 +91284,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stirling-osborne-park",
@@ -83977,7 +91333,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "trigg-north-beach-watermans-bay",
@@ -84023,7 +91381,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tuart-hill-joondanna",
@@ -84067,7 +91427,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wembley-downs-churchlands-woodlands",
@@ -84112,7 +91474,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yokine-coolbinia-menora",
@@ -84156,7 +91520,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dianella-north",
@@ -84200,7 +91566,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dianella-south",
@@ -84244,7 +91612,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alexander-heights-koondoola",
@@ -84290,7 +91660,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "butler-merriwa-ridgewood",
@@ -84334,7 +91706,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carramar",
@@ -84378,7 +91752,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "clarkson",
@@ -84422,7 +91798,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "girrawheen",
@@ -84468,7 +91846,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "marangaroo",
@@ -84512,7 +91892,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mindarie-quinns-rocks-jindalee",
@@ -84556,7 +91938,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "neerabup-national-park",
@@ -84603,7 +91987,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tapping-ashby-sinagra",
@@ -84647,7 +92033,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alkimos-eglinton",
@@ -84691,7 +92079,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carabooda-pinjar",
@@ -84737,7 +92127,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "two-rocks",
@@ -84781,7 +92173,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yanchep",
@@ -84825,7 +92219,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hocking-pearsall",
@@ -84869,7 +92265,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "landsdale",
@@ -84913,7 +92311,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "madeley-darch",
@@ -84957,7 +92357,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wanneroo-sinagra",
@@ -85001,7 +92403,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "armadale-wungong-brookdale",
@@ -85047,7 +92451,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashendon-lesley",
@@ -85091,7 +92497,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "camillo-champion-lakes",
@@ -85137,7 +92545,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kelmscott",
@@ -85183,7 +92593,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-nasura-mount-richon-bedfordale",
@@ -85227,7 +92639,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roleystone",
@@ -85271,7 +92685,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "seville-grove",
@@ -85315,7 +92731,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "harrisdale",
@@ -85359,7 +92777,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "piara-waters-forrestdale",
@@ -85403,7 +92823,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belmont-ascot-redcliffe",
@@ -85447,7 +92869,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-victoria-park-carlisle",
@@ -85494,7 +92918,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kewdale-commercial",
@@ -85538,7 +92964,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "perth-airport",
@@ -85582,7 +93010,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "victoria-park-lathlain-burswood",
@@ -85629,7 +93059,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cloverdale",
@@ -85673,7 +93105,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kewdale",
@@ -85717,7 +93151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rivervale",
@@ -85761,7 +93197,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bentley-wilson-st-james",
@@ -85807,7 +93245,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canning-vale-west",
@@ -85851,7 +93291,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canning-vale-commercial",
@@ -85895,7 +93337,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cannington-queens-park",
@@ -85942,7 +93386,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkwood-ferndale-lynwood",
@@ -85989,7 +93435,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "riverton-shelley-rossmoyne",
@@ -86033,7 +93481,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "welshpool",
@@ -86077,6 +93527,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 361,
+    "crimeCountByYear": {
+      "2016": 14,
+      "2017": 10,
+      "2018": 15,
+      "2019": 14,
+      "2020": 16,
+      "2021": 9,
+      "2022": 18,
+      "2023": 34,
+      "2024": 29,
+      "2025": 26
     }
   },
   {
@@ -86121,7 +93584,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beckenham-kenwick-langford",
@@ -86165,7 +93630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canning-vale-east",
@@ -86209,7 +93676,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gosnells",
@@ -86255,7 +93724,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "huntingdale-southern-river",
@@ -86299,7 +93770,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "maddington-orange-grove-martin",
@@ -86346,7 +93819,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thornlie",
@@ -86390,7 +93865,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forrestfield-wattle-grove",
@@ -86434,7 +93911,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "high-wycombe",
@@ -86478,7 +93957,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kalamunda-maida-vale-gooseberry-hill",
@@ -86522,7 +94003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lesmurdie-bickley-carmel",
@@ -86566,7 +94049,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "byford",
@@ -86610,7 +94095,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mundijong",
@@ -86654,7 +94141,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "serpentine-jarrahdale",
@@ -86698,7 +94187,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "como",
@@ -86742,7 +94233,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "manning-waterford",
@@ -86786,7 +94279,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-perth-kensington",
@@ -86832,7 +94327,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "banjup",
@@ -86876,7 +94373,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bibra-industrial",
@@ -86920,7 +94419,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bibra-lake",
@@ -86964,7 +94465,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coogee",
@@ -87008,7 +94511,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coolbellup",
@@ -87054,7 +94559,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hamilton-hill",
@@ -87098,7 +94605,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "henderson",
@@ -87142,7 +94651,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-coogee",
@@ -87187,7 +94698,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-lake-cockburn-central",
@@ -87233,7 +94746,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "spearwood",
@@ -87277,7 +94792,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "success-hammond-park",
@@ -87324,7 +94841,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yangebup",
@@ -87368,7 +94887,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beeliar-wattleup",
@@ -87412,7 +94933,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jandakot",
@@ -87456,7 +94979,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-fremantle",
@@ -87500,7 +95025,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fremantle",
@@ -87544,7 +95071,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fremantle-south",
@@ -87588,7 +95117,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oconnor-wa",
@@ -87632,7 +95163,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wellard-west-bertram",
@@ -87676,7 +95209,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "calista",
@@ -87722,7 +95257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hope-valley-postans",
@@ -87766,7 +95303,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kwinana-industrial",
@@ -87812,7 +95351,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parmelia-orelia",
@@ -87858,7 +95399,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "casuarina-wandi",
@@ -87902,7 +95445,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "applecross-ardross",
@@ -87947,7 +95492,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bateman",
@@ -87991,7 +95538,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bicton-palmyra",
@@ -88035,7 +95584,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "booragoon",
@@ -88079,7 +95630,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bull-creek",
@@ -88123,7 +95676,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leeming",
@@ -88167,7 +95722,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melville",
@@ -88211,7 +95768,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murdoch-kardinya",
@@ -88255,7 +95814,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "willagee",
@@ -88301,7 +95862,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "winthrop",
@@ -88346,7 +95909,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cooloongup",
@@ -88392,7 +95957,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-kennedy",
@@ -88436,7 +96003,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockingham",
@@ -88482,7 +96051,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rockingham-lakes",
@@ -88526,7 +96097,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "safety-bay-shoalwater",
@@ -88573,7 +96146,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "singleton-golden-bay-secret-harbour",
@@ -88619,7 +96194,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waikiki",
@@ -88663,7 +96240,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "warnbro",
@@ -88707,7 +96286,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "baldivis-north",
@@ -88751,7 +96332,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "baldivis-south",
@@ -88795,7 +96378,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karnup",
@@ -88839,7 +96424,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albany",
@@ -88877,7 +96464,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "albany-surrounds",
@@ -88916,7 +96505,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bayonet-head-lower-king",
@@ -88954,7 +96545,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "denmark",
@@ -88992,7 +96585,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gnowangerup",
@@ -89030,7 +96625,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "katanning",
@@ -89068,7 +96665,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kojonup",
@@ -89106,7 +96705,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "little-grove-elleker",
@@ -89144,7 +96745,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mckail-willyung",
@@ -89182,7 +96785,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "plantagenet",
@@ -89220,7 +96825,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stirling-range-national-park",
@@ -89260,7 +96867,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chittering",
@@ -89298,7 +96907,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cunderdin",
@@ -89336,7 +96947,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dowerin",
@@ -89374,7 +96987,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gingin-dandaragan",
@@ -89412,7 +97027,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "merredin",
@@ -89450,7 +97067,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moora",
@@ -89488,7 +97107,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mukinbudin",
@@ -89526,7 +97147,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northam",
@@ -89564,7 +97187,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "toodyay",
@@ -89602,7 +97227,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "york-beverley",
@@ -89640,7 +97267,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brookton",
@@ -89678,7 +97307,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kulin",
@@ -89716,7 +97347,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "murray",
@@ -89754,7 +97387,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrogin",
@@ -89792,7 +97427,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagin",
@@ -89830,7 +97467,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "broome",
@@ -89865,7 +97504,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "derby-west-kimberley",
@@ -89900,7 +97541,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "halls-creek",
@@ -89935,7 +97578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kununurra",
@@ -89970,7 +97615,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roebuck",
@@ -90005,7 +97652,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-pilbara",
@@ -90040,7 +97689,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newman",
@@ -90075,7 +97726,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-hedland",
@@ -90110,7 +97763,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-hedland",
@@ -90145,7 +97800,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ashburton-wa",
@@ -90180,6 +97837,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 7952,
+    "crimeCountByYear": {
+      "2016": 538,
+      "2017": 369,
+      "2018": 443,
+      "2019": 597,
+      "2020": 616,
+      "2021": 561,
+      "2022": 675,
+      "2023": 687,
+      "2024": 679,
+      "2025": 563
     }
   },
   {
@@ -90215,7 +97885,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "roebourne",
@@ -90250,7 +97922,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "esperance",
@@ -90285,7 +97959,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "esperance-surrounds",
@@ -90321,7 +97997,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "carnarvon",
@@ -90356,7 +98034,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "exmouth",
@@ -90391,7 +98071,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "boulder",
@@ -90426,7 +98108,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kalgoorlie",
@@ -90461,7 +98145,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kalgoorlie-north",
@@ -90496,7 +98182,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kalgoorlie-airport",
@@ -90531,7 +98219,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kambalda-coolgardie-norseman",
@@ -90566,7 +98256,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leinster-leonora",
@@ -90601,7 +98293,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "trafalgar-wa",
@@ -90636,6 +98330,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 4349,
+    "crimeCountByYear": {
+      "2016": 377,
+      "2017": 244,
+      "2018": 339,
+      "2019": 309,
+      "2020": 400,
+      "2021": 251,
+      "2022": 290,
+      "2023": 288,
+      "2024": 849,
+      "2025": 351
     }
   },
   {
@@ -90671,7 +98378,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geraldton-east",
@@ -90706,7 +98415,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geraldton-north",
@@ -90741,7 +98452,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geraldton-south",
@@ -90776,7 +98489,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "irwin",
@@ -90811,7 +98526,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "meekatharra",
@@ -90846,7 +98563,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "morawa",
@@ -90881,7 +98600,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "northampton-mullewa-greenough",
@@ -90916,7 +98637,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-wa",
@@ -90951,7 +98674,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-wa",
@@ -90986,7 +98711,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bridgewater-gagebrook",
@@ -91028,7 +98755,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brighton-pontville",
@@ -91070,7 +98799,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "old-beach-otago",
@@ -91112,7 +98843,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bellerive-rosny",
@@ -91154,7 +98887,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cambridge",
@@ -91196,7 +98931,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geilston-bay-risdon",
@@ -91238,7 +98975,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "howrah-tranmere",
@@ -91280,7 +99019,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lindisfarne-rose-bay",
@@ -91322,7 +99063,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mornington-warrane",
@@ -91364,7 +99107,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "risdon-vale",
@@ -91406,7 +99151,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rokeby",
@@ -91448,6 +99195,18 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 213,
+    "crimeCountByYear": {
+      "2017": 2,
+      "2018": 1,
+      "2019": 9,
+      "2020": 6,
+      "2021": 3,
+      "2022": 4,
+      "2023": 15,
+      "2024": 5,
+      "2025": 8
     }
   },
   {
@@ -91490,7 +99249,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "austins-ferry-granton",
@@ -91532,7 +99293,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berriedale-chigwell",
@@ -91574,7 +99337,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "claremont-tas",
@@ -91616,7 +99381,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "derwent-park-lutana",
@@ -91660,7 +99427,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "glenorchy",
@@ -91702,6 +99471,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 131,
+    "crimeCountByYear": {
+      "2016": 10,
+      "2017": 7,
+      "2018": 8,
+      "2019": 15,
+      "2020": 29,
+      "2021": 18,
+      "2022": 2,
+      "2023": 3,
+      "2024": 12,
+      "2025": 8
     }
   },
   {
@@ -91744,7 +99526,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moonah",
@@ -91786,7 +99570,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "new-norfolk",
@@ -91828,7 +99614,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-moonah",
@@ -91870,7 +99658,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingston-huntingfield",
@@ -91912,7 +99702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingston-beach-blackmans-bay",
@@ -91954,7 +99746,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "margate-snug",
@@ -91996,7 +99790,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-wellington",
@@ -92038,7 +99834,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taroona-bonnet-hill",
@@ -92080,7 +99878,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hobart",
@@ -92122,7 +99922,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lenah-valley-mount-stuart",
@@ -92164,7 +99966,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-nelson-dynnyrne",
@@ -92206,7 +100010,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "new-town",
@@ -92248,7 +100054,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sandy-bay",
@@ -92290,7 +100098,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "south-hobart-fern-tree",
@@ -92332,7 +100142,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-hobart",
@@ -92374,7 +100186,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dodges-ferry-lewisham",
@@ -92416,7 +100230,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sorell-richmond",
@@ -92458,7 +100274,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "invermay",
@@ -92500,6 +100318,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 900,
+    "crimeCountByYear": {
+      "2016": 30,
+      "2017": 30,
+      "2018": 34,
+      "2019": 27,
+      "2020": 23,
+      "2021": 28,
+      "2022": 35,
+      "2023": 17,
+      "2024": 23,
+      "2025": 42
     }
   },
   {
@@ -92542,7 +100373,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "launceston",
@@ -92584,7 +100417,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "legana",
@@ -92626,7 +100461,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mowbray",
@@ -92668,7 +100505,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newnham-mayfield",
@@ -92710,7 +100549,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "newstead",
@@ -92752,6 +100593,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 820,
+    "crimeCountByYear": {
+      "2016": 16,
+      "2017": 31,
+      "2018": 37,
+      "2019": 51,
+      "2020": 22,
+      "2021": 27,
+      "2022": 18,
+      "2023": 25,
+      "2024": 39,
+      "2025": 35
     }
   },
   {
@@ -92794,7 +100648,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "prospect-vale-blackstone",
@@ -92836,7 +100692,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ravenswood",
@@ -92878,6 +100736,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 443,
+    "crimeCountByYear": {
+      "2016": 65,
+      "2017": 33,
+      "2018": 40,
+      "2019": 13,
+      "2020": 29,
+      "2021": 19,
+      "2022": 29,
+      "2023": 30,
+      "2024": 46,
+      "2025": 69
     }
   },
   {
@@ -92920,6 +100791,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 287,
+    "crimeCountByYear": {
+      "2016": 18,
+      "2017": 7,
+      "2018": 11,
+      "2019": 13,
+      "2020": 1,
+      "2021": 27,
+      "2022": 17,
+      "2023": 11,
+      "2024": 11,
+      "2025": 12
     }
   },
   {
@@ -92962,7 +100846,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "summerhill-prospect",
@@ -93004,7 +100890,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "trevallyn",
@@ -93046,7 +100934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waverley-st-leonards",
@@ -93088,7 +100978,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-launceston",
@@ -93130,7 +101022,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "youngtown-relbia",
@@ -93172,7 +101066,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "beauty-point-beaconsfield",
@@ -93214,7 +101110,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deloraine",
@@ -93256,7 +101154,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "grindelwald-lanena",
@@ -93298,7 +101198,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hadspen-carrick",
@@ -93340,7 +101242,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "westbury",
@@ -93382,6 +101286,17 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 163,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 1,
+      "2018": 8,
+      "2019": 1,
+      "2020": 2,
+      "2021": 6,
+      "2023": 1,
+      "2024": 1
     }
   },
   {
@@ -93424,7 +101339,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "george-town",
@@ -93466,7 +101383,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "longford",
@@ -93508,6 +101427,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1489,
+    "crimeCountByYear": {
+      "2016": 64,
+      "2017": 39,
+      "2018": 53,
+      "2019": 63,
+      "2020": 50,
+      "2021": 74,
+      "2022": 58,
+      "2023": 65,
+      "2024": 60,
+      "2025": 32
     }
   },
   {
@@ -93550,7 +101482,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "perth-evandale",
@@ -93592,7 +101526,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "st-helens-scamander",
@@ -93634,7 +101570,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flinders-and-cape-barren-islands",
@@ -93676,7 +101614,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scottsdale-bridport",
@@ -93718,7 +101658,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "central-highlands",
@@ -93760,7 +101702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "derwent-valley",
@@ -93798,7 +101742,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "southern-midlands",
@@ -93836,7 +101782,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wilderness-east",
@@ -93874,7 +101822,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bruny-island-kettering",
@@ -93912,7 +101862,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cygnet",
@@ -93950,7 +101902,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "geeveston-dover",
@@ -93988,7 +101942,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "huonville-franklin",
@@ -94026,7 +101982,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forestier-tasman",
@@ -94066,7 +102024,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "triabunna-bicheno",
@@ -94104,7 +102064,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "acton-upper-burnie",
@@ -94139,7 +102101,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burnie-ulverstone-surrounds",
@@ -94175,7 +102139,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "burnie-wivenhoe",
@@ -94210,7 +102176,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parklands-camdale",
@@ -94247,7 +102215,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "penguin-sulphur-creek",
@@ -94282,7 +102252,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "romaine-havenview",
@@ -94317,7 +102289,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "somerset",
@@ -94352,7 +102326,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ulverstone",
@@ -94387,7 +102363,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-ulverstone",
@@ -94422,7 +102400,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wynyard",
@@ -94457,7 +102437,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "devonport",
@@ -94492,7 +102474,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-devonport",
@@ -94527,7 +102511,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "latrobe",
@@ -94562,7 +102548,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "miandetta-don",
@@ -94597,7 +102585,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "port-sorell",
@@ -94632,7 +102622,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "quoiba-spreyton",
@@ -94667,7 +102659,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sheffield-railton",
@@ -94702,7 +102696,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "turners-beach-forth",
@@ -94739,7 +102735,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$300/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "king-island",
@@ -94774,7 +102772,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "north-west",
@@ -94809,7 +102809,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "smithton",
@@ -94844,7 +102846,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waratah",
@@ -94879,7 +102883,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-coast-tas",
@@ -94914,7 +102920,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$200/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wilderness-west",
@@ -94949,7 +102957,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-tas",
@@ -94984,7 +102994,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-tas",
@@ -95019,7 +103031,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "darwin-airport",
@@ -95061,7 +103075,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "darwin-city",
@@ -95107,7 +103123,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-point",
@@ -95149,7 +103167,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fannie-bay-the-gardens",
@@ -95193,7 +103213,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "larrakeyah",
@@ -95235,7 +103257,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ludmilla-the-narrows",
@@ -95279,7 +103303,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parap",
@@ -95321,7 +103347,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stuart-park",
@@ -95367,7 +103395,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woolner-bayview-winnellie",
@@ -95412,7 +103442,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alawa",
@@ -95454,7 +103486,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "anula",
@@ -95496,7 +103530,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "berrimah",
@@ -95538,7 +103574,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "brinkin-nakara",
@@ -95580,7 +103618,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "buffalo-creek",
@@ -95622,7 +103662,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charles-darwin",
@@ -95664,7 +103706,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coconut-grove",
@@ -95708,7 +103752,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-arm",
@@ -95750,7 +103796,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jingili",
@@ -95792,7 +103840,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "karama",
@@ -95834,7 +103884,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "leanyer",
@@ -95876,7 +103928,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lyons-nt",
@@ -95918,7 +103972,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "malak-marrara",
@@ -95960,7 +104016,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "millner",
@@ -96002,7 +104060,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moil",
@@ -96044,7 +104104,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nightcliff",
@@ -96086,7 +104148,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rapid-creek",
@@ -96128,7 +104192,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tiwi",
@@ -96170,7 +104236,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wagaman",
@@ -96212,7 +104280,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wanguri",
@@ -96254,7 +104324,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wulagi",
@@ -96296,7 +104368,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "howard-springs",
@@ -96338,7 +104412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "humpty-doo",
@@ -96380,7 +104456,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "koolpinyah",
@@ -96422,7 +104500,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "virginia",
@@ -96464,7 +104544,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "weddell",
@@ -96506,7 +104588,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bakewell",
@@ -96548,7 +104632,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "driver",
@@ -96590,7 +104676,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "durack-marlow-lagoon",
@@ -96633,7 +104721,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gray",
@@ -96677,7 +104767,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moulden",
@@ -96721,7 +104813,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$325/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palmerston-north",
@@ -96763,7 +104857,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palmerston-south",
@@ -96805,7 +104901,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rosebery-bellamack",
@@ -96847,7 +104945,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "woodroffe",
@@ -96889,7 +104989,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charles",
@@ -96931,7 +105033,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-side",
@@ -96973,7 +105077,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flynn-nt",
@@ -97015,6 +105121,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 188,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 9,
+      "2018": 9,
+      "2019": 13,
+      "2020": 21,
+      "2021": 13,
+      "2022": 13,
+      "2023": 13,
+      "2024": 3,
+      "2025": 6
     }
   },
   {
@@ -97057,7 +105176,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-johns",
@@ -97099,7 +105220,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "petermann-simpson",
@@ -97143,7 +105266,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ross",
@@ -97187,7 +105312,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "sandover-plenty",
@@ -97231,7 +105358,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tanami",
@@ -97275,7 +105404,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "yuendumu-anmatjere",
@@ -97319,7 +105450,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "barkly",
@@ -97363,7 +105496,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tennant-creek",
@@ -97407,7 +105542,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$275/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "alligator",
@@ -97451,7 +105588,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$175/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "daly",
@@ -97495,7 +105634,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "thamarrurr",
@@ -97539,7 +105680,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tiwi-islands",
@@ -97583,7 +105726,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-arnhem",
@@ -97627,7 +105772,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "anindilyakwa",
@@ -97671,7 +105818,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "east-arnhem",
@@ -97715,7 +105864,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$150/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nhulunbuy",
@@ -97759,7 +105910,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$250/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "elsey",
@@ -97803,7 +105956,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gulf",
@@ -97847,7 +106002,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$100/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "katherine",
@@ -97889,7 +106046,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "victoria-river",
@@ -97933,7 +106092,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $150–$125/week.",
       "transportNote": "Public transport access is limited.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-nt",
@@ -97968,7 +106129,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-nt",
@@ -98003,7 +106166,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "aranda",
@@ -98048,7 +106213,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "belconnen",
@@ -98092,7 +106259,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bruce",
@@ -98138,7 +106307,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "charnwood",
@@ -98182,7 +106353,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$400/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "cook",
@@ -98226,7 +106399,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dunlop",
@@ -98270,7 +106445,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "evatt",
@@ -98314,7 +106491,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "florey",
@@ -98358,7 +106537,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "flynn-act",
@@ -98402,6 +106583,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 188,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 9,
+      "2018": 9,
+      "2019": 13,
+      "2020": 21,
+      "2021": 13,
+      "2022": 13,
+      "2023": 13,
+      "2024": 3,
+      "2025": 6
     }
   },
   {
@@ -98446,7 +106640,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "giralang",
@@ -98490,7 +106686,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gooromon",
@@ -98534,7 +106732,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hawker",
@@ -98578,7 +106778,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "higgins",
@@ -98622,7 +106824,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holt",
@@ -98666,7 +106870,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kaleen",
@@ -98710,7 +106916,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "latham",
@@ -98754,7 +106962,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lawson",
@@ -98799,7 +107009,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macgregor-act",
@@ -98843,7 +107055,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macquarie",
@@ -98887,7 +107101,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mckellar",
@@ -98931,7 +107147,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "melba",
@@ -98975,7 +107193,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "page",
@@ -99019,7 +107239,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scullin",
@@ -99063,7 +107285,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "spence",
@@ -99107,7 +107331,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "weetangera",
@@ -99152,7 +107378,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "molonglo-corridor",
@@ -99196,7 +107424,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macnamara",
@@ -99240,7 +107470,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "strathnairn",
@@ -99284,7 +107516,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "west-belconnen",
@@ -99328,7 +107562,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hume",
@@ -99372,7 +107608,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kowen",
@@ -99416,7 +107654,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canberra-east",
@@ -99462,7 +107702,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "canberra-airport",
@@ -99506,7 +107748,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "majura",
@@ -99550,7 +107794,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "amaroo",
@@ -99594,7 +107840,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bonner",
@@ -99639,7 +107887,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "casey",
@@ -99684,7 +107934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "crace",
@@ -99728,7 +107980,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forde",
@@ -99773,7 +108027,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "franklin",
@@ -99817,7 +108073,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gungahlin",
@@ -99861,7 +108119,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hall",
@@ -99907,7 +108167,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "harrison",
@@ -99951,7 +108213,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mitchell",
@@ -99995,7 +108259,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ngunnawal",
@@ -100039,7 +108305,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "nicholls",
@@ -100084,7 +108352,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "palmerston",
@@ -100128,7 +108398,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gungahlin-east",
@@ -100172,7 +108444,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gungahlin-west",
@@ -100216,7 +108490,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "jacka",
@@ -100260,7 +108536,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kenny",
@@ -100304,7 +108582,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "moncrieff",
@@ -100348,7 +108628,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "taylor",
@@ -100392,7 +108674,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "throsby",
@@ -100436,7 +108720,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "acton",
@@ -100480,7 +108766,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "ainslie",
@@ -100524,7 +108812,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "braddon",
@@ -100569,7 +108859,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "civic",
@@ -100614,7 +108906,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "dickson",
@@ -100659,7 +108953,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "downer",
@@ -100703,7 +108999,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hackett",
@@ -100747,7 +109045,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lyneham",
@@ -100791,7 +109091,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "oconnor-act",
@@ -100835,7 +109137,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "turner",
@@ -100880,7 +109184,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "watson",
@@ -100924,7 +109230,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "black-mountain",
@@ -100971,7 +109279,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "campbell",
@@ -101016,7 +109326,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "duntroon",
@@ -101062,7 +109374,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkes-act-north",
@@ -101109,7 +109423,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "reid",
@@ -101153,7 +109469,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "russell",
@@ -101197,7 +109515,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "deakin",
@@ -101242,7 +109562,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "forrest",
@@ -101287,6 +109609,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 257,
+    "crimeCountByYear": {
+      "2016": 4,
+      "2017": 12,
+      "2018": 9,
+      "2019": 8,
+      "2020": 22,
+      "2021": 65,
+      "2022": 8,
+      "2023": 10,
+      "2024": 10,
+      "2025": 10
     }
   },
   {
@@ -101331,7 +109666,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lake-burley-griffin",
@@ -101375,7 +109712,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "narrabundah",
@@ -101419,7 +109758,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "parkes-act-south",
@@ -101466,7 +109807,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "red-hill-act",
@@ -101511,6 +109854,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$725/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1009,
+    "crimeCountByYear": {
+      "2016": 57,
+      "2017": 32,
+      "2018": 34,
+      "2019": 20,
+      "2020": 25,
+      "2021": 24,
+      "2022": 18,
+      "2023": 18,
+      "2024": 52,
+      "2025": 21
     }
   },
   {
@@ -101556,7 +109912,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "barton",
@@ -101601,7 +109959,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$700/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fyshwick",
@@ -101645,7 +110005,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kingston-act",
@@ -101690,6 +110052,17 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$650/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 190,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 3,
+      "2018": 2,
+      "2020": 12,
+      "2021": 3,
+      "2022": 3,
+      "2023": 3,
+      "2024": 1
     }
   },
   {
@@ -101734,7 +110107,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "bonython",
@@ -101778,7 +110153,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "calwell",
@@ -101822,7 +110199,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chisholm",
@@ -101866,7 +110245,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "conder",
@@ -101910,7 +110291,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fadden",
@@ -101955,7 +110338,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $375–$750/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gilmore",
@@ -101999,7 +110384,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "gordon-act",
@@ -102043,6 +110430,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 1393,
+    "crimeCountByYear": {
+      "2016": 49,
+      "2017": 37,
+      "2018": 29,
+      "2019": 46,
+      "2020": 48,
+      "2021": 49,
+      "2022": 51,
+      "2023": 64,
+      "2024": 52,
+      "2025": 50
     }
   },
   {
@@ -102087,7 +110487,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "greenway",
@@ -102131,7 +110533,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "isabella-plains",
@@ -102175,7 +110579,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "kambah",
@@ -102219,7 +110625,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "macarthur",
@@ -102263,6 +110671,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 469,
+    "crimeCountByYear": {
+      "2016": 15,
+      "2017": 10,
+      "2018": 15,
+      "2019": 7,
+      "2020": 20,
+      "2021": 19,
+      "2022": 34,
+      "2023": 11,
+      "2024": 10,
+      "2025": 4
     }
   },
   {
@@ -102307,7 +110728,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mount-taylor",
@@ -102351,6 +110774,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 330,
+    "crimeCountByYear": {
+      "2016": 7,
+      "2017": 14,
+      "2018": 9,
+      "2019": 8,
+      "2020": 4,
+      "2021": 7,
+      "2022": 18,
+      "2023": 14,
+      "2024": 12,
+      "2025": 2
     }
   },
   {
@@ -102395,6 +110831,19 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
+    },
+    "population": 710,
+    "crimeCountByYear": {
+      "2016": 12,
+      "2017": 13,
+      "2018": 8,
+      "2019": 10,
+      "2020": 20,
+      "2021": 32,
+      "2022": 10,
+      "2023": 26,
+      "2024": 12,
+      "2025": 20
     }
   },
   {
@@ -102439,7 +110888,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "theodore",
@@ -102483,7 +110934,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tuggeranong",
@@ -102527,7 +110980,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wanniassa",
@@ -102571,7 +111026,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "tuggeranong-west",
@@ -102615,7 +111072,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chapman",
@@ -102659,7 +111118,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "duffy",
@@ -102703,7 +111164,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "fisher",
@@ -102747,7 +111210,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "holder",
@@ -102791,7 +111256,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "rivett",
@@ -102835,7 +111302,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $200–$425/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "stirling",
@@ -102879,7 +111348,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "waramanga",
@@ -102923,7 +111394,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $225–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "weston",
@@ -102967,7 +111440,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "scrivener",
@@ -103011,7 +111486,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "chifley",
@@ -103055,7 +111532,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "curtin",
@@ -103099,7 +111578,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "farrer",
@@ -103143,7 +111624,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "garran",
@@ -103188,7 +111671,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "hughes",
@@ -103232,7 +111717,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "isaacs",
@@ -103277,7 +111764,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $325–$625/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "lyons-act",
@@ -103321,7 +111810,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "mawson",
@@ -103365,7 +111856,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$475/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "omalley",
@@ -103410,7 +111903,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $575–$1175/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "pearce",
@@ -103454,7 +111949,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $250–$500/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "phillip",
@@ -103498,7 +111995,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "torrens",
@@ -103542,7 +112041,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "arboretum",
@@ -103586,7 +112087,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "coombs",
@@ -103630,7 +112133,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "denman-prospect",
@@ -103675,7 +112180,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $300–$600/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "molonglo",
@@ -103719,7 +112226,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "wright",
@@ -103763,7 +112272,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$575/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "molonglo-east",
@@ -103807,7 +112318,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "whitlam",
@@ -103851,7 +112364,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "act-south-west",
@@ -103897,7 +112412,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $175–$350/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "namadgi",
@@ -103941,7 +112458,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $275–$550/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "migratory-offshore-shipping-act",
@@ -103985,7 +112504,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   },
   {
     "id": "no-usual-address-act",
@@ -104029,7 +112550,9 @@ window.suburbs =
       "rentNote": "Typical weekly rent ranges from $350–$450/week.",
       "transportNote": "Public transport access is moderate.",
       "housingNote": "Shared housing and apartments are common options."
-    }
+    },
+    "population": null,
+    "crimeCountByYear": {}
   }
 ]
 ;
