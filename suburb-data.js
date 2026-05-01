@@ -144185,3 +144185,322 @@ window.getEpic4ProfileCultureScore = function (suburb, preferences) {
 
   return Math.min(score, 10);
 };
+
+(function () {
+  const originalGetSuburbScore = window.getSuburbScore;
+  const originalBuildReasonList = window.buildReasonList;
+
+  const epic5UniversityRules = [
+    {
+      city: "Melbourne",
+      match: ["monash"],
+      high: ["clayton", "notting-hill", "caulfield"],
+      medium: ["oakleigh", "huntingdale", "carnegie", "murrumbeena", "malvern", "glen-waverley", "mount-waverley"]
+    },
+    {
+      city: "Melbourne",
+      match: ["melbourne"],
+      high: ["carlton", "parkville", "north-melbourne", "melbourne"],
+      medium: ["brunswick", "fitzroy", "collingwood", "richmond", "southbank", "docklands"]
+    },
+    {
+      city: "Melbourne",
+      match: ["rmit"],
+      high: ["melbourne", "carlton", "brunswick", "bundoora"],
+      medium: ["north-melbourne", "fitzroy", "collingwood", "richmond", "preston", "reservoir"]
+    },
+    {
+      city: "Melbourne",
+      match: ["deakin"],
+      high: ["burwood", "box-hill", "ashwood", "camberwell"],
+      medium: ["hawthorn", "glen-iris", "surrey-hills", "glen-waverley"]
+    },
+    {
+      city: "Melbourne",
+      match: ["la trobe", "latrobe"],
+      high: ["bundoora", "heidelberg", "macleod"],
+      medium: ["reservoir", "preston", "thornbury", "northcote"]
+    },
+
+    {
+      city: "Sydney",
+      match: ["sydney"],
+      high: ["camperdown", "darlington", "glebe", "newtown"],
+      medium: ["redfern", "ultimo", "chippendale", "marrickville"]
+    },
+    {
+      city: "Sydney",
+      match: ["unsw"],
+      high: ["kensington", "kingsford", "randwick"],
+      medium: ["maroubra", "coogee", "zetland", "waterloo"]
+    },
+    {
+      city: "Sydney",
+      match: ["uts"],
+      high: ["ultimo", "haymarket", "sydney", "pyrmont"],
+      medium: ["chippendale", "glebe", "redfern", "surry-hills"]
+    },
+    {
+      city: "Sydney",
+      match: ["macquarie"],
+      high: ["macquarie-park", "marsfield", "north-ryde"],
+      medium: ["epping", "ryde", "eastwood", "meadowbank"]
+    },
+    {
+      city: "Sydney",
+      match: ["western sydney"],
+      high: ["parramatta", "penrith", "bankstown", "campbelltown", "liverpool"],
+      medium: ["blacktown", "auburn", "fairfield"]
+    },
+
+    {
+      city: "Brisbane",
+      match: ["queensland", "uq"],
+      high: ["st-lucia", "toowong", "indooroopilly"],
+      medium: ["west-end", "taringa", "south-brisbane", "brisbane-city"]
+    },
+    {
+      city: "Brisbane",
+      match: ["qut"],
+      high: ["brisbane-city", "kelvin-grove", "spring-hill"],
+      medium: ["south-brisbane", "west-end", "new-farm", "fortitude-valley"]
+    },
+    {
+      city: "Brisbane",
+      match: ["griffith"],
+      high: ["nathan", "mount-gravatt", "south-bank"],
+      medium: ["sunnybank", "logan", "woolloongabba"]
+    },
+
+    {
+      city: "Adelaide",
+      match: ["adelaide"],
+      high: ["adelaide", "north-adelaide", "kent-town"],
+      medium: ["norwood", "unley", "prospect", "mile-end"]
+    },
+    {
+      city: "Adelaide",
+      match: ["south australia", "unisa"],
+      high: ["adelaide", "mawson-lakes", "magill"],
+      medium: ["prospect", "norwood", "modbury"]
+    },
+    {
+      city: "Adelaide",
+      match: ["flinders"],
+      high: ["bedford-park", "clovelly-park", "marion"],
+      medium: ["pasadena", "glenelg", "sturt"]
+    },
+
+    {
+      city: "Perth",
+      match: ["western australia", "uwa"],
+      high: ["crawley", "nedlands", "subiaco"],
+      medium: ["claremont", "west-perth", "perth", "mount-lawley"]
+    },
+    {
+      city: "Perth",
+      match: ["curtin"],
+      high: ["bentley", "como", "victoria-park", "east-victoria-park"],
+      medium: ["south-perth", "cannington", "wilson"]
+    },
+    {
+      city: "Perth",
+      match: ["murdoch"],
+      high: ["murdoch", "winthrop", "bull-creek"],
+      medium: ["fremantle", "melville", "applecross"]
+    },
+    {
+      city: "Perth",
+      match: ["edith cowan", "ecu"],
+      high: ["joondalup", "mount-lawley"],
+      medium: ["perth", "maylands", "leederville"]
+    },
+
+    {
+      city: "Canberra",
+      match: ["australian national", "anu"],
+      high: ["acton", "city", "braddon"],
+      medium: ["turner", "o'connor", "reid", "canberra"]
+    },
+    {
+      city: "Canberra",
+      match: ["canberra"],
+      high: ["bruce", "belconnen"],
+      medium: ["acton", "gungahlin", "city", "canberra"]
+    },
+    {
+      city: "Canberra",
+      match: ["unsw canberra"],
+      high: ["campbell", "duntroon", "reid"],
+      medium: ["acton", "braddon", "city"]
+    }
+  ];
+
+  function epic5Text(value) {
+    return String(value || "").toLowerCase().trim();
+  }
+
+  function epic5SlugText(suburb) {
+    return `${suburb.slug || ""} ${suburb.suburb || ""}`.toLowerCase();
+  }
+
+  function epic5MatchesAny(text, keywords) {
+    return keywords.some((keyword) => text.includes(keyword));
+  }
+
+  function epic5GetRule(preferences) {
+    const selectedUniversity = epic5Text(preferences.university);
+    const selectedCity = String(preferences.city || "").trim();
+
+    return epic5UniversityRules.find((rule) => {
+      const cityMatches = rule.city === selectedCity;
+      const universityMatches = rule.match.some((keyword) => selectedUniversity.includes(keyword));
+      return cityMatches && universityMatches;
+    });
+  }
+
+  window.getEpic5UniversityAccessLevel = function (suburb, preferences) {
+    const selectedUniversity = epic5Text(preferences.university);
+    const suburbText = epic5SlugText(suburb);
+    const rule = epic5GetRule(preferences);
+
+    if (!selectedUniversity) {
+      return suburb.university || "medium";
+    }
+
+    if (!rule) {
+      return suburb.university || "medium";
+    }
+
+    if (epic5MatchesAny(suburbText, rule.high)) {
+      return "high";
+    }
+
+    if (epic5MatchesAny(suburbText, rule.medium)) {
+      return "medium";
+    }
+
+    if (suburb.university === "high") {
+      return "medium";
+    }
+
+    if (suburb.university === "medium") {
+      return "medium";
+    }
+
+    return "low";
+  };
+
+  window.getEpic5UniversityAccessScore = function (suburb, preferences) {
+    const level = window.getEpic5UniversityAccessLevel(suburb, preferences);
+
+    if (level === "high") return 10;
+    if (level === "medium") return 6;
+    if (level === "low") return 2;
+
+    return 0;
+  };
+
+  window.getEpic5CultureFitScore = function (suburb, preferences) {
+    let score = 0;
+
+    if (preferences.language && suburb.commonLanguages?.includes(preferences.language)) {
+      score += 4;
+    }
+
+    if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
+      score += 4;
+    }
+
+    if (suburb.culture === "high") {
+      score += 2;
+    } else if (suburb.culture === "medium") {
+      score += 1;
+    }
+
+    return Math.min(score, 10);
+  };
+
+  window.getSuburbScore = function (suburb, preferences) {
+    let points = 0;
+    let total = 0;
+
+    total += 12;
+    if (suburb.city === preferences.city) points += 12;
+
+    total += 14;
+    points += Math.round((window.getRentScore(suburb.rentRange, preferences.budget) / 25) * 14);
+
+    total += 12;
+    points += window.getHousingScore(suburb, preferences);
+
+    total += 10;
+    points += Math.round((window.getCommuteScore(suburb, preferences) / 12) * 10);
+
+    total += 12;
+    const selectedLifestyle = window.getPreferenceArray(preferences.lifestyle);
+    const matchedLifestyle = selectedLifestyle.filter((item) => suburb.lifestyle?.includes(item));
+
+    if (selectedLifestyle.length) {
+      points += Math.round((matchedLifestyle.length / selectedLifestyle.length) * 12);
+    }
+
+    total += 10;
+    if (preferences.language && suburb.commonLanguages?.includes(preferences.language)) {
+      points += 10;
+    }
+
+    total += 12;
+    if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
+      points += 12;
+    } else if (suburb.culture === "high") {
+      points += 7;
+    } else if (suburb.culture === "medium") {
+      points += 4;
+    }
+
+    total += 18;
+    points += Math.round((window.getEpic5UniversityAccessScore(suburb, preferences) / 10) * 18);
+
+    return Math.round((points / total) * 100);
+  };
+
+  window.buildReasonList = function (suburb, preferences) {
+    const reasons = originalBuildReasonList
+      ? originalBuildReasonList(suburb, preferences)
+      : [];
+
+    const selectedUniversity = preferences.university;
+    const universityLevel = window.getEpic5UniversityAccessLevel(suburb, preferences);
+
+    if (selectedUniversity) {
+      const universityReason = `it has ${window.formatChoice(universityLevel).toLowerCase()} access to ${selectedUniversity}`;
+
+      if (!reasons.includes(universityReason)) {
+        reasons.unshift(universityReason);
+      }
+    }
+
+    if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
+      const cultureReason = `it supports your ${preferences.culture} cultural background`;
+
+      if (!reasons.includes(cultureReason)) {
+        reasons.unshift(cultureReason);
+      }
+    }
+
+    if (preferences.language && suburb.commonLanguages?.includes(preferences.language)) {
+      const languageReason = `${preferences.language} is commonly spoken here`;
+
+      if (!reasons.includes(languageReason)) {
+        reasons.unshift(languageReason);
+      }
+    }
+
+    if (!reasons.length && originalGetSuburbScore) {
+      reasons.push("it provides a balanced match across culture, university access, housing, and lifestyle");
+    }
+
+    return reasons.slice(0, 4);
+  };
+})();

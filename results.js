@@ -1036,3 +1036,277 @@ function setResultsView(view) {
   }
 
 }
+
+function getUniversityAccessScore(suburb) {
+  if (window.getEpic5UniversityAccessScore) {
+    return window.getEpic5UniversityAccessScore(suburb, preferences);
+  }
+
+  const value = String(suburb.university || "").toLowerCase();
+
+  if (value === "high") return 10;
+  if (value === "medium") return 6;
+  if (value === "low") return 2;
+
+  return 0;
+}
+
+function getEpic5UniversityLabel(suburb) {
+  const level = window.getEpic5UniversityAccessLevel
+    ? window.getEpic5UniversityAccessLevel(suburb, preferences)
+    : suburb.university;
+
+  return window.formatChoice(level);
+}
+
+function getEpic5CultureLabel(suburb) {
+  const score = window.getEpic5CultureFitScore
+    ? window.getEpic5CultureFitScore(suburb, preferences)
+    : getCultureFitScore(suburb);
+
+  return `${score}/10`;
+}
+
+function renderHero() {
+  const heroImage = cityHeroImages[preferences.city] || cityHeroImages.Melbourne;
+
+  if (resultsHeroBanner) {
+    resultsHeroBanner.style.backgroundImage = `url('${heroImage}')`;
+  }
+
+  resultsHeroTitle.textContent = `Your ${preferences.city} shortlist is ready.`;
+
+  resultsSummary.innerHTML = `
+    <div class="col-12 col-sm-6">
+      <div class="hero-summary-card">
+        <span class="hero-summary-label">Selected city</span>
+        <strong class="hero-summary-value">${preferences.city}</strong>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="hero-summary-card">
+        <span class="hero-summary-label">Selected university</span>
+        <strong class="hero-summary-value">${preferences.university || "Not set"}</strong>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="hero-summary-card">
+        <span class="hero-summary-label">Cultural background</span>
+        <strong class="hero-summary-value">${preferences.culture || "Not set"}</strong>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="hero-summary-card">
+        <span class="hero-summary-label">Language</span>
+        <strong class="hero-summary-value">${preferences.language || "Not set"}</strong>
+      </div>
+    </div>
+  `;
+}
+
+function renderTopMatch(match) {
+  if (!match) {
+    topMatchPanel.innerHTML = "";
+    return;
+  }
+
+  const selectedUniversity = preferences.university || "your selected university";
+  const universityAccess = getEpic5UniversityLabel(match);
+  const cultureFit = getEpic5CultureLabel(match);
+
+  topMatchPanel.innerHTML = `
+    <div class="top-match-inline-layout epic5-top-match-layout">
+      <div class="top-match-main">
+        <span class="section-kicker">Best match result</span>
+        <h3 class="top-match-title">${match.suburb}, ${match.city}</h3>
+
+        <p class="top-match-copy">
+          ${match.description} This suburb is recommended because it balances your cultural comfort with access to ${selectedUniversity}.
+        </p>
+
+        <div class="epic5-explanation-card">
+          <h4>Why this is your best match</h4>
+          <p>
+            ${match.suburb} gives a strong overall fit by combining cultural signals,
+            language comfort, housing preferences, and university convenience.
+          </p>
+
+          <ul class="result-reason-list mt-3">
+            ${match.reasons.map((reason) => `<li>${reason}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="top-match-tags mt-3">
+          ${(match.lifestyleTags || [])
+            .slice(0, 3)
+            .map((tag) => `<span class="result-tag-lite">${tag}</span>`)
+            .join("")}
+        </div>
+
+        <button
+          class="btn ss-btn ss-btn-secondary w-100 view-details-btn"
+          id="topMatchViewDetailsBtn"
+          data-slug="${match.slug}"
+        >
+          View Details
+        </button>
+      </div>
+
+      <div class="top-match-aside">
+        <div class="top-match-stats-grid">
+          <div class="top-match-stat-card epic5-stat-highlight">
+            <span>Overall match</span>
+            <strong>${match.score}%</strong>
+          </div>
+
+          <div class="top-match-stat-card">
+            <span>Culture fit</span>
+            <strong>${cultureFit}</strong>
+          </div>
+
+          <div class="top-match-stat-card">
+            <span>University access</span>
+            <strong>${universityAccess}</strong>
+          </div>
+
+          <div class="top-match-stat-card">
+            <span>Language comfort</span>
+            <strong>${match.commonLanguages?.slice(0, 2).join(", ") || "Not available"}</strong>
+          </div>
+        </div>
+
+        <div class="top-match-focus-card epic5-focus-card">
+          <span class="top-match-focus-label">Balanced decision</span>
+          <p>
+            This result does not rely on only one factor. It compares suburb fit using both
+            cultural comfort and convenience for your selected university.
+          </p>
+
+          <div class="top-match-focus-pills">
+            <span class="signal-pill">University: ${selectedUniversity}</span>
+            <span class="signal-pill">Culture: ${preferences.culture || "Not set"}</span>
+            <span class="signal-pill">Community: ${window.formatChoice(match.culture)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const topMatchViewDetailsBtn = document.getElementById("topMatchViewDetailsBtn");
+
+  if (topMatchViewDetailsBtn) {
+    topMatchViewDetailsBtn.addEventListener("click", () => {
+      localStorage.setItem("settlesmart_sort", appState.sortBy);
+      window.location.href = `suburb.html?slug=${topMatchViewDetailsBtn.dataset.slug}`;
+    });
+  }
+}
+
+function renderMatches(list, bestMatchSlug) {
+  if (!list.length) {
+    resultsGrid.innerHTML = `
+      <div class="col-12">
+        <div class="info-card p-4">
+          <h3 class="mb-2">No suburbs found</h3>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  resultsGrid.innerHTML = list
+    .map((match) => {
+      const languageBadges = getPriorityLanguageBadges(match)
+        .map((badge) => `<span class="language-badge">${badge}</span>`)
+        .join("");
+
+      return `
+        <div class="col-12 col-lg-6">
+          <article class="suburb-card epic5-suburb-card ${match.slug === bestMatchSlug ? "best-match" : ""}">
+            <div class="suburb-card-header">
+              <div>
+                <span class="result-city-label">${match.city}</span>
+                <h3>${match.suburb}</h3>
+              </div>
+
+              <div class="match-badge-box">
+                <span>MATCH</span>
+                <strong>${match.score}%</strong>
+              </div>
+            </div>
+
+            <p class="suburb-card-copy">${match.description}</p>
+
+            <div class="suburb-badge-row">
+              ${languageBadges}
+              <span class="connection-badge">${getCultureConnectionLabel(match)}</span>
+            </div>
+
+            <div class="epic5-balance-strip">
+              <div>
+                <span>Culture fit</span>
+                <strong>${getEpic5CultureLabel(match)}</strong>
+              </div>
+
+              <div>
+                <span>University access</span>
+                <strong>${getEpic5UniversityLabel(match)}</strong>
+              </div>
+            </div>
+
+            <div class="suburb-stat-grid">
+              <div class="suburb-stat-box">
+                <span>Rent range</span>
+                <strong>${match.rentRange || "Not available"}</strong>
+              </div>
+
+              <div class="suburb-stat-box">
+                <span>Transport</span>
+                <strong>${window.formatChoice(match.transport)}</strong>
+              </div>
+
+              <div class="suburb-stat-box">
+                <span>Selected university</span>
+                <strong>${preferences.university || "Not set"}</strong>
+              </div>
+
+              <div class="suburb-stat-box">
+                <span>Language comfort</span>
+                <strong>${match.commonLanguages?.slice(0, 2).join(", ") || "Not available"}</strong>
+              </div>
+            </div>
+
+            <div class="suburb-tag-row">
+              ${(match.lifestyleTags || [])
+                .slice(0, 3)
+                .map((tag) => `<span class="result-tag-lite">${tag}</span>`)
+                .join("")}
+            </div>
+
+            <ul class="result-reason-list compact-list">
+              ${match.reasons.slice(0, 3).map((reason) => `<li>${reason}</li>`).join("")}
+            </ul>
+
+            <button class="btn ss-btn ss-btn-secondary w-100 view-details-btn" data-slug="${match.slug}">
+              View Details
+            </button>
+          </article>
+        </div>
+      `;
+    })
+    .join("");
+
+  document.querySelectorAll(".view-details-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      localStorage.setItem("settlesmart_sort", appState.sortBy);
+      window.location.href = `suburb.html?slug=${button.dataset.slug}`;
+    });
+  });
+}
+
+if (viewMoreBtn) {
+  viewMoreBtn.innerHTML = `Review more details <span>→</span>`;
+}
