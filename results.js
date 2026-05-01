@@ -182,7 +182,6 @@ function renderPage() {
   renderTopMatch(bestMatch);
   renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
   renderPagination(totalPages);
-  renderCommunityExplorer();
   renderSpinWheel(topWheelItems);
 
   if (resultsCount) {

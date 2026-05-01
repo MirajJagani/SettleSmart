@@ -317,6 +317,17 @@ function initSuburbPage() {
 
         <div class="suburb-multicultural-grid">
           <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Community comfort details</span>
+            <ul class="suburb-detail-list minimal">
+              <li>Common language cues: ${suburb.commonLanguages.join(", ")}</li>
+              <li>Community strength: ${community.communityStrength}%</li>
+              <li>Overseas-born share: ${community.overseasBornShare}</li>
+              <li>Specialty shops nearby: ${community.specialtyShops}</li>
+              <li>Places of worship nearby: ${community.placesOfWorship}</li>
+            </ul>
+          </article>
+
+          <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Cultural amenities</span>
             <ul class="suburb-detail-list minimal">
               ${community.keyPlaces.map((place) => `<li>${place}</li>`).join("")}
@@ -325,12 +336,12 @@ function initSuburbPage() {
 
           <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Practical community support</span>
-            <div class="suburb-pill-wrap">
-              <span class="signal-pill">Specialty shops: ${community.specialtyShops}</span>
-              <span class="signal-pill">Places of worship: ${community.placesOfWorship}</span>
-              <span class="signal-pill">English support: ${window.formatChoice(suburb.englishSupport)}</span>
-              <span class="signal-pill">Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</span>
-            </div>
+            <ul class="suburb-detail-list minimal">
+              <li>English support: ${window.formatChoice(suburb.englishSupport)}</li>
+              <li>Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</li>
+              <li>Culture signal: ${window.formatChoice(suburb.culture)}</li>
+              <li>University access: ${window.formatChoice(suburb.university)}</li>
+            </ul>
           </article>
 
           <article class="suburb-profile-card">
@@ -343,6 +354,7 @@ function initSuburbPage() {
       </section>
     </div>
   `;
+
   initMiniMap(suburb.suburb, suburb.city);
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
@@ -359,7 +371,7 @@ function getFallbackCommunity(suburb) {
     keyPlaces: [
       "International grocery options",
       "Culturally familiar food venues",
-      "Community / worship support nearby"
+      "Community or worship support nearby"
     ],
     highlightDistance: "800m walk",
     events: [
@@ -367,8 +379,8 @@ function getFallbackCommunity(suburb) {
       "Student community meetup"
     ]
   };
-
 }
+
 /* ─── Mini Map (US5.4) ───────────────────────────────────────────── */
 
 let minimapMap = null;
@@ -379,9 +391,9 @@ let activeAmenity = "";
 
 function initMiniMap(suburbName, cityName) {
   const toggleBtn = document.getElementById("minimapToggleBtn");
-  const body      = document.getElementById("minimapBody");
-  const chevron   = document.getElementById("minimapChevron");
-  const label     = document.getElementById("minimapBtnLabel");
+  const body = document.getElementById("minimapBody");
+  const chevron = document.getElementById("minimapChevron");
+  const label = document.getElementById("minimapBtnLabel");
 
   if (!toggleBtn) return;
 
@@ -418,7 +430,7 @@ function initMiniMap(suburbName, cityName) {
   document.getElementById("minimapFilters").addEventListener("click", (e) => {
     const btn = e.target.closest(".minimap-filter-btn");
     if (!btn) return;
-    document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".minimap-filter-btn").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     activeAmenity = btn.dataset.amenity || "";
     if (minimapMap && minimapCenter) {
@@ -429,24 +441,23 @@ function initMiniMap(suburbName, cityName) {
       }
     }
   });
-
 }
 
 function loadLeaflet() {
   return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
+    if (window.L) {
+      resolve();
+      return;
+    }
 
-    // Load CSS first
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
     document.head.appendChild(css);
 
-    // Load JS — once loaded, give the CSS a tick to apply before resolving
     const script = document.createElement("script");
     script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
     script.onload = () => {
-      // Wait two animation frames so the browser has painted the CSS
       requestAnimationFrame(() => requestAnimationFrame(resolve));
     };
     document.head.appendChild(script);
@@ -454,46 +465,45 @@ function loadLeaflet() {
 }
 
 /* ─── ABS SA2 name → real OSM search term ───────────────────────── */
-// Suburbs where Nominatim returns wrong/oversized boundaries → use fixed coords + zoom
+
 const ABS_FIXED_COORDS = {
   "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
   "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
   "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 15 },
-  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
+  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 }
 };
 
 const ABS_NAME_MAP = {
-  "Melbourne CBD - East":            null,
-  "Melbourne CBD - North":           null,
-  "Melbourne CBD - West":            null,
-  "Carlton North - Princes Hill":    "Carlton North",
-  "Richmond (South) - Cremorne":     "Cremorne Melbourne",
-  "Richmond - North":                "Richmond Melbourne",
-  "South Yarra - North":             "South Yarra",
-  "South Yarra - South":             "South Yarra",
-  "South Yarra - West":              "South Yarra",
-  "St Kilda - Central":              "St Kilda",
-  "St Kilda - West":                 "St Kilda West",
-  "Brunswick - North":               "Brunswick Melbourne",
-  "Brunswick - South":               "Brunswick Melbourne",
-  "West Melbourne - Industrial":     "West Melbourne",
-  "West Melbourne - Residential":    "West Melbourne",
-  "Sydney (North) - Millers Point":  "Millers Point Sydney",
-  "Sydney (South) - Haymarket":      "Haymarket Sydney",
-  "Perth (North) - Highgate":        "Highgate Perth",
-  "Perth (West) - Northbridge":      "Northbridge Perth",
-  "Perth - Evandale":                "Evandale Perth",
-  "Brisbane Port - Lytton":          "Lytton Brisbane",
-  "Prahran - Windsor":               "Prahran",
-  "North Sydney - Lavender Bay":     "Lavender Bay",
-  "South Perth - Kensington":        "South Perth",
-  "South Yarra":                     "South Yarra",
+  "Melbourne CBD - East": null,
+  "Melbourne CBD - North": null,
+  "Melbourne CBD - West": null,
+  "Carlton North - Princes Hill": "Carlton North",
+  "Richmond (South) - Cremorne": "Cremorne Melbourne",
+  "Richmond - North": "Richmond Melbourne",
+  "South Yarra - North": "South Yarra",
+  "South Yarra - South": "South Yarra",
+  "South Yarra - West": "South Yarra",
+  "St Kilda - Central": "St Kilda",
+  "St Kilda - West": "St Kilda West",
+  "Brunswick - North": "Brunswick Melbourne",
+  "Brunswick - South": "Brunswick Melbourne",
+  "West Melbourne - Industrial": "West Melbourne",
+  "West Melbourne - Residential": "West Melbourne",
+  "Sydney (North) - Millers Point": "Millers Point Sydney",
+  "Sydney (South) - Haymarket": "Haymarket Sydney",
+  "Perth (North) - Highgate": "Highgate Perth",
+  "Perth (West) - Northbridge": "Northbridge Perth",
+  "Perth - Evandale": "Evandale Perth",
+  "Brisbane Port - Lytton": "Lytton Brisbane",
+  "Prahran - Windsor": "Prahran",
+  "North Sydney - Lavender Bay": "Lavender Bay",
+  "South Perth - Kensington": "South Perth",
+  "South Yarra": "South Yarra"
 };
 
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    // ── Fixed-coord suburbs (ABS names not in OSM) ──────────────────────────
     const fixed = ABS_FIXED_COORDS[suburbName];
     if (fixed) {
       minimapCenter = [fixed.lat, fixed.lon];
@@ -508,35 +518,36 @@ async function buildMap(suburbName, cityName) {
       minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: "abcd", maxZoom: 19,
+        subdomains: "abcd",
+        maxZoom: 19
       }).addTo(minimapMap);
-      // No real boundary available — fall back to 1km circle
+
       L.circle(minimapCenter, {
-        radius: 1000, color: "#735cff", weight: 1.5,
-        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
-        interactive: false,
+        radius: 1000,
+        color: "#735cff",
+        weight: 1.5,
+        dashArray: "6 4",
+        fillColor: "#735cff",
+        fillOpacity: 0.04,
+        interactive: false
       }).addTo(minimapMap);
+
       setTimeout(() => minimapMap.invalidateSize(), 300);
       await fetchAndRenderAll(minimapCenter);
       return;
     }
 
-    // ── Nominatim lookup ────────────────────────────────────────────────────
-    // Use structured search first (suburb= param) so Nominatim matches the
-    // administrative boundary rather than a street or building with the same name.
     const mapped = ABS_NAME_MAP[suburbName];
-    const parts  = suburbName.split(/\s*-\s*/).map(s => s.trim()).filter(Boolean);
+    const parts = suburbName.split(/\s*-\s*/).map((s) => s.trim()).filter(Boolean);
     const candidates = [...new Set([mapped, parts[0], parts.length > 1 ? parts[1] : null].filter(Boolean))];
 
-    // Score a result: higher = better match for an SA2 suburb boundary
     function scoreResult(r) {
       let s = 0;
       if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") s += 100;
       if (r.class === "boundary") s += 60;
-      if (r.class === "place")    s += 40;
-      const goodTypes = ["suburb","neighbourhood","quarter","village","town","municipality","city_district","administrative"];
+      if (r.class === "place") s += 40;
+      const goodTypes = ["suburb", "neighbourhood", "quarter", "village", "town", "municipality", "city_district", "administrative"];
       if (goodTypes.includes(r.type)) s += 50;
-      // place_rank 20-22 is suburb level in Nominatim; penalise anything too fine or too coarse
       const rank = parseInt(r.place_rank || 30);
       if (rank >= 18 && rank <= 24) s += 30;
       else if (rank < 18 || rank > 28) s -= 20;
@@ -546,23 +557,24 @@ async function buildMap(suburbName, cityName) {
     let nominatimData = null;
 
     for (const name of candidates) {
-      // 1️⃣ Structured query: suburb + city (most precise)
       const structuredParams = new URLSearchParams({
         suburb: name,
         city: cityName,
         country: "Australia",
-        format: "json", limit: "6",
+        format: "json",
+        limit: "6",
         polygon_geojson: "1",
         addressdetails: "1",
-        "accept-language": "en",
+        "accept-language": "en"
       });
-      // 2️⃣ Free-text fallback
+
       const freeParams = new URLSearchParams({
         q: `${name}, ${cityName}, Australia`,
-        format: "json", limit: "8",
+        format: "json",
+        limit: "8",
         polygon_geojson: "1",
         addressdetails: "1",
-        "accept-language": "en",
+        "accept-language": "en"
       });
 
       for (const params of [structuredParams, freeParams]) {
@@ -572,19 +584,23 @@ async function buildMap(suburbName, cityName) {
           const results = await res.json();
           if (!results.length) continue;
 
-          // Pick the highest-scoring result
           const scored = results
-            .map(r => ({ r, score: scoreResult(r) }))
+            .map((r) => ({ r, score: scoreResult(r) }))
             .sort((a, b) => b.score - a.score);
 
           const best = scored[0];
-          // Accept if it has a decent boundary polygon, otherwise keep trying
-          if (best.score >= 100) { nominatimData = best.r; break; }
-          // Keep as fallback if nothing better found
+
+          if (best.score >= 100) {
+            nominatimData = best.r;
+            break;
+          }
+
           if (!nominatimData || best.score > scoreResult(nominatimData)) {
             nominatimData = best.r;
           }
-        } catch (e) { /* try next */ }
+        } catch (e) {
+          // try next
+        }
       }
 
       if (nominatimData && scoreResult(nominatimData) >= 100) break;
@@ -610,30 +626,38 @@ async function buildMap(suburbName, cityName) {
     minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
     L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd", maxZoom: 19,
+      subdomains: "abcd",
+      maxZoom: 19
     }).addTo(minimapMap);
 
-    // ── Draw suburb boundary from Nominatim geojson ─────────────────────────
     if (nominatimData.geojson?.type === "Polygon" || nominatimData.geojson?.type === "MultiPolygon") {
       const boundaryLayer = L.geoJSON(nominatimData.geojson, {
         style: {
-          color: "#735cff", weight: 2.5, opacity: 0.85,
-          dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.07,
+          color: "#735cff",
+          weight: 2.5,
+          opacity: 0.85,
+          dashArray: "6 4",
+          fillColor: "#735cff",
+          fillOpacity: 0.07
         },
-        interactive: false,
+        interactive: false
       }).addTo(minimapMap);
 
       minimapBounds = boundaryLayer.getBounds();
       minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
       setTimeout(() => minimapMap.invalidateSize(), 300);
     } else {
-      // No polygon — fall back to 1km circle centred view
       minimapBounds = null;
       L.circle(minimapCenter, {
-        radius: 1000, color: "#735cff", weight: 1.5,
-        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
-        interactive: false,
+        radius: 1000,
+        color: "#735cff",
+        weight: 1.5,
+        dashArray: "6 4",
+        fillColor: "#735cff",
+        fillOpacity: 0.04,
+        interactive: false
       }).addTo(minimapMap);
+
       minimapMap.setView(minimapCenter, 14);
       setTimeout(() => minimapMap.invalidateSize(), 300);
     }
@@ -645,36 +669,55 @@ async function buildMap(suburbName, cityName) {
   }
 }
 
-// ── POI category config ──────────────────────────────────────────────────────
-// POI category config: maps each category to its Nominatim tags, emoji, and display label
 const POI_CATEGORIES = {
-  restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café" },
-  supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery" },
-  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital" },
-  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic" },
-  park:        { tags: ["leisure=park", "leisure=garden"],                             emoji: "🌳", label: "Park" },
-  bus_station: { tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],   emoji: "🚌", label: "Transport" },
+  restaurant: {
+    tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],
+    emoji: "🍜",
+    label: "Restaurant/Café"
+  },
+  supermarket: {
+    tags: ["shop=supermarket", "shop=convenience"],
+    emoji: "🛒",
+    label: "Grocery"
+  },
+  hospital: {
+    tags: ["amenity=hospital"],
+    emoji: "🏥",
+    label: "Hospital"
+  },
+  doctors: {
+    tags: ["amenity=doctors", "amenity=clinic"],
+    emoji: "👨‍⚕️",
+    label: "GP/Clinic"
+  },
+  park: {
+    tags: ["leisure=park", "leisure=garden"],
+    emoji: "🌳",
+    label: "Park"
+  },
+  bus_station: {
+    tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],
+    emoji: "🚌",
+    label: "Transport"
+  }
 };
 
-// ── Overpass QL builder ──────────────────────────────────────────────────────
 function buildOverpassQuery(amenity, lat, lon, maxResults) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise 1km radius
   let areaFilter;
   if (minimapBounds) {
     const sw = minimapBounds.getSouthWest();
     const ne = minimapBounds.getNorthEast();
-    // Overpass bbox format: (south,west,north,east)
     areaFilter = `(${sw.lat},${sw.lng},${ne.lat},${ne.lng})`;
-    const parts = cat.tags.map(tag => {
+    const parts = cat.tags.map((tag) => {
       const [k, v] = tag.split("=");
       return `node["${k}"="${v}"]${areaFilter};way["${k}"="${v}"]${areaFilter};`;
     });
     return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
   } else {
-    const parts = cat.tags.map(tag => {
+    const parts = cat.tags.map((tag) => {
       const [k, v] = tag.split("=");
       return `node["${k}"="${v}"](around:1000,${lat},${lon});way["${k}"="${v}"](around:1000,${lat},${lon});`;
     });
@@ -682,50 +725,57 @@ function buildOverpassQuery(amenity, lat, lon, maxResults) {
   }
 }
 
-// ── fetch helpers ─────────────────────────────────────────────────────────────
 async function tryOverpassDirect(query) {
   const endpoints = [
     "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter"
   ];
+
   for (const url of endpoints) {
     try {
       const res = await fetch(url, {
-        method: "POST", body: query,
+        method: "POST",
+        body: query,
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        signal: AbortSignal.timeout(12000),
+        signal: AbortSignal.timeout(12000)
       });
+
       if (!res.ok) continue;
       const data = await res.json();
       if (data.elements?.length) return data.elements;
-    } catch { /* try next */ }
+    } catch {
+      // try next
+    }
   }
+
   return null;
 }
 
 async function tryOverpassViaProxy(query) {
   const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
   const proxies = [
-    { url: `https://corsproxy.io/?url=${encoded}`,                        wrap: false },
-    { url: `https://api.allorigins.win/get?url=${encoded}`,               wrap: true  },
+    { url: `https://corsproxy.io/?url=${encoded}`, wrap: false },
+    { url: `https://api.allorigins.win/get?url=${encoded}`, wrap: true }
   ];
+
   for (const proxy of proxies) {
     try {
       const res = await fetch(proxy.url, { signal: AbortSignal.timeout(12000) });
       if (!res.ok) continue;
       const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
       if (raw.elements?.length) return raw.elements;
-    } catch { /* try next */ }
+    } catch {
+      // try next
+    }
   }
+
   return null;
 }
 
-// Nominatim nearby search — last resort, no Overpass needed
 async function tryNominatimNearby(amenity, lat, lon, maxResults) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise ~1km box
   let viewbox;
   if (minimapBounds) {
     const sw = minimapBounds.getSouthWest();
@@ -735,42 +785,48 @@ async function tryNominatimNearby(amenity, lat, lon, maxResults) {
     const delta = 0.009;
     viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
   }
-  // Try each tag separately and merge results
+
   const allResults = [];
-  for (const tag of cat.tags.slice(0, 2)) { // limit to avoid rate limit
+  for (const tag of cat.tags.slice(0, 2)) {
     const [k, v] = tag.split("=");
     const params = new URLSearchParams({
-      format: "json", limit: String(maxResults),
-      viewbox, bounded: "1",
+      format: "json",
+      limit: String(maxResults),
+      viewbox,
+      bounded: "1",
       [`${k}`]: v,
-      "accept-language": "en",
+      "accept-language": "en"
     });
+
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
         headers: { "Accept-Language": "en" },
-        signal: AbortSignal.timeout(10000),
+        signal: AbortSignal.timeout(10000)
       });
+
       if (!res.ok) continue;
       const items = await res.json();
-      items.forEach(item => {
+      items.forEach((item) => {
         if (item.lat && item.lon) {
           allResults.push({
             lat: parseFloat(item.lat),
             lon: parseFloat(item.lon),
-            name: item.display_name?.split(",")[0] || v,
+            name: item.display_name?.split(",")[0] || v
           });
         }
       });
-      // small delay between Nominatim requests to respect rate limit
-      await new Promise(r => setTimeout(r, 300));
-    } catch { /* try next tag */ }
+
+      await new Promise((r) => setTimeout(r, 300));
+    } catch {
+      // try next tag
+    }
   }
+
   return allResults.length ? allResults : null;
 }
 
-// ── main render functions ────────────────────────────────────────────────────
 async function fetchAndRenderAll(center) {
-  minimapMarkers.forEach(m => m.remove());
+  minimapMarkers.forEach((m) => m.remove());
   minimapMarkers = [];
   const allCategories = Object.keys(POI_CATEGORIES);
   for (const cat of allCategories) {
@@ -780,7 +836,7 @@ async function fetchAndRenderAll(center) {
 
 async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = false) {
   if (!skipClear) {
-    minimapMarkers.forEach(m => m.remove());
+    minimapMarkers.forEach((m) => m.remove());
     minimapMarkers = [];
   }
   if (!amenity) return;
@@ -788,7 +844,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return;
 
-  // 按钮 loading（单独类别点击时才更新）
+  // Button loading state (only update when an individual category is clicked)
   const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
   let originalHTML = "";
   if (activeBtn) {
@@ -801,38 +857,41 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   const query = buildOverpassQuery(amenity, lat, lon, maxResults);
   let elements = null;
 
-  // 1️⃣ Direct Overpass request
   if (query) elements = await tryOverpassDirect(query);
-
-  // 2️⃣ Overpass via CORS proxy
   if (!elements && query) elements = await tryOverpassViaProxy(query);
 
-  // 3️⃣ Nominatim fallback
   if (!elements) {
     const nominatimResults = await tryNominatimNearby(amenity, lat, lon, maxResults);
     if (nominatimResults) {
-      // convert to same shape as Overpass elements
-      elements = nominatimResults.map(r => ({ lat: r.lat, lon: r.lon, tags: { name: r.name } }));
+      elements = nominatimResults.map((r) => ({
+        lat: r.lat,
+        lon: r.lon,
+        tags: { name: r.name }
+      }));
     }
   }
 
-  // 渲染标记
+  // Render markers
   if (elements && elements.length) {
-    elements.forEach(el => {
+    elements.forEach((el) => {
       const elLat = el.lat ?? el.center?.lat;
       const elLon = el.lon ?? el.center?.lon;
       if (!elLat || !elLon) return;
+
       const icon = L.divIcon({
         html: `<div class="minimap-poi-icon">${cat.emoji}</div>`,
-        className: "", iconSize: [30, 30], iconAnchor: [15, 15],
+        className: "",
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
       });
+
       const marker = L.marker([elLat, elLon], { icon })
         .addTo(minimapMap)
         .bindPopup(`<strong>${el.tags?.name || el.tags?.["name:en"] || cat.label}</strong>`);
+
       minimapMarkers.push(marker);
     });
   } else if (!skipClear) {
-    // All fallbacks failed — show a brief toast on the map
     const frame = document.getElementById("minimapFrame");
     if (frame) {
       const msg = document.createElement("div");
@@ -855,7 +914,6 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
 function hasSafetySeries(suburb, seriesKey) {
   const series = suburb[seriesKey] || {};
 
-  // True if this category has at least one value
   return Object.values(series).some((value) => {
     return value !== null && value !== undefined && !Number.isNaN(Number(value));
   });
@@ -864,7 +922,6 @@ function hasSafetySeries(suburb, seriesKey) {
 function setupSafetyChartControls(suburb) {
   const controls = document.getElementById("safetyChartControls");
 
-  // If has no safety data, stop
   if (!controls) {
     return;
   }
@@ -879,7 +936,6 @@ function setupSafetyChartControls(suburb) {
     const selectedKey = button.dataset.safetySeries;
 
     if (activeSafetySeries.includes(selectedKey)) {
-      // Keep at least one line active
       if (activeSafetySeries.length === 1) {
         return;
       }
@@ -931,7 +987,6 @@ function getSafetyIndicator(suburb) {
   const recentYears = years.slice(-3);
   const numericPopulation = Number(population);
 
-  // Calculate trend using a linear fit over the latest three years of crime data.
   const trendValues = recentYears.map((year) => {
     const crimeCount = Number(crimeCountByYear[year]);
 
@@ -944,20 +999,19 @@ function getSafetyIndicator(suburb) {
 
   const trendLabel = getLinearTrend(trendValues);
   const latestCrimeRate = population
-  ? ((latestCrime / population) * 1000).toFixed(2)
-  : null;
+    ? ((latestCrime / population) * 1000).toFixed(2)
+    : null;
 
   return {
     hasData: true,
-  populationLabel: formatNumber(population),
-  latestCrimeLabel: formatNumber(latestCrime),
-  latestYearLabel: latestYear,
-  latestCrimeRateLabel: latestCrimeRate,
-  trendLabel
+    populationLabel: formatNumber(population),
+    latestCrimeLabel: formatNumber(latestCrime),
+    latestYearLabel: latestYear,
+    latestCrimeRateLabel: latestCrimeRate,
+    trendLabel
   };
 }
 
-// Calculate trend using linear fit over the latest three years
 function getLinearTrend(values) {
   if (!values || values.length < 2) {
     return "Not enough data";
@@ -1015,7 +1069,6 @@ function getSafetyChartData(suburb) {
     return null;
   }
 
-  // Track the largest visible value, used to adjust y scale
   let maxValue = 0;
 
   const datasets = selectedOptions.map((option) => {
@@ -1088,7 +1141,6 @@ function renderSafetyTrendChart(suburb) {
     return;
   }
 
-  // Get chart data from active crime categories
   const chartData = getSafetyChartData(suburb);
 
   if (!chartData) {
@@ -1101,7 +1153,6 @@ function renderSafetyTrendChart(suburb) {
     return;
   }
 
-  // Remove the previous chart before a new one
   if (safetyTrendChartInstance) {
     safetyTrendChartInstance.destroy();
   }
