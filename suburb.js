@@ -17,6 +17,32 @@ const cityHeroImages = {
   canberra: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1600&auto=format&fit=crop"
 };
 
+let safetyTrendChartInstance = null;
+
+// Safety chart line configuration
+const SAFETY_SERIES_OPTIONS = [
+  {
+    key: "crimeCountByYear",
+    label: "Total crime",
+    borderColor: "#735cff",
+    backgroundColor: "rgba(115, 92, 255, 0.12)"
+  },
+  {
+    key: "propertyCrimesByYear",
+    label: "Property crimes",
+    borderColor: "#f59e0b",
+    backgroundColor: "rgba(245, 158, 11, 0.10)"
+  },
+  {
+    key: "violentCrimesByYear",
+    label: "Violent crimes",
+    borderColor: "#ef4444",
+    backgroundColor: "rgba(239, 68, 68, 0.10)"
+  }
+];
+
+let activeSafetySeries = ["crimeCountByYear"];
+
 initSuburbPage();
 
 function initSuburbPage() {
@@ -45,6 +71,7 @@ function initSuburbPage() {
     ? window.getEpic4ProfileCultureScore(suburb, preferences)
     : 7;
 
+  const safety = getSafetyIndicator(suburb);
   const heroImage = cityHeroImages[normalizeCityKey(suburb.city)] || cityHeroImages.melbourne;
 
   suburbProfile.innerHTML = `
@@ -200,6 +227,82 @@ function initSuburbPage() {
         </div>
       </section>
 
+      <section class="info-card suburb-detail-card" id="safetyIndicatorSection">
+        <div class="suburb-section-head">
+          <h3>Safety indicator</h3>
+          <p>
+            ${
+              safety.hasData
+                ? `Yearly crime count trend for ${suburb.suburb}, based on yearly crime data up to ${safety.latestYearLabel}.`
+                : `No safety data is currently available for ${suburb.suburb}.`
+            }
+          </p>
+        </div>
+
+        ${
+          safety.hasData
+            ? `
+              <div class="suburb-profile-grid">
+                <article class="suburb-profile-card">
+                  <span class="suburb-profile-kicker">Population</span>
+                  <p>${safety.populationLabel}</p>
+                </article>
+
+                <article class="suburb-profile-card">
+                  <span class="suburb-profile-kicker">Latest crime count</span>
+                  <p>${safety.latestCrimeLabel}</p>
+                </article>
+
+                <article class="suburb-profile-card">
+                  <span class="suburb-profile-kicker">Latest crime rate / 1000 residents</span>
+                  <p>${safety.latestCrimeRateLabel}</p>
+                </article>
+
+                <article class="suburb-profile-card">
+                  <span class="suburb-profile-kicker">Trend</span>
+                  <p>${safety.trendLabel}</p>
+                </article>
+              </div>
+
+              <div class="safety-chart-controls" id="safetyChartControls" aria-label="Safety chart filters">
+                <button
+                  type="button"
+                  class="safety-chart-toggle active"
+                  data-safety-series="crimeCountByYear"
+                >
+                  Total crime
+                </button>
+
+                <button
+                  type="button"
+                  class="safety-chart-toggle"
+                  data-safety-series="violentCrimesByYear"
+                  ${hasSafetySeries(suburb, "violentCrimesByYear") ? "" : "disabled"}
+                >
+                  Violent crimes
+                </button>
+
+                <button
+                  type="button"
+                  class="safety-chart-toggle"
+                  data-safety-series="propertyCrimesByYear"
+                  ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
+                >
+                  Property crimes
+                </button>
+              </div>
+              
+              <div class="safety-chart-wrap">
+                <canvas id="safetyTrendChart"></canvas>
+              </div>
+            `
+            : `
+              <div class="safety-empty-state compact">
+              </div>
+            `
+        }
+      </section>
+
       <section class="info-card suburb-detail-card">
         <div class="suburb-section-head">
           <h3>Multicultural support signals</h3>
@@ -214,6 +317,17 @@ function initSuburbPage() {
 
         <div class="suburb-multicultural-grid">
           <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Community comfort details</span>
+            <ul class="suburb-detail-list minimal">
+              <li>Common language cues: ${suburb.commonLanguages.join(", ")}</li>
+              <li>Community strength: ${community.communityStrength}%</li>
+              <li>Overseas-born share: ${community.overseasBornShare}</li>
+              <li>Specialty shops nearby: ${community.specialtyShops}</li>
+              <li>Places of worship nearby: ${community.placesOfWorship}</li>
+            </ul>
+          </article>
+
+          <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Cultural amenities</span>
             <ul class="suburb-detail-list minimal">
               ${community.keyPlaces.map((place) => `<li>${place}</li>`).join("")}
@@ -222,12 +336,12 @@ function initSuburbPage() {
 
           <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Practical community support</span>
-            <div class="suburb-pill-wrap">
-              <span class="signal-pill">Specialty shops: ${community.specialtyShops}</span>
-              <span class="signal-pill">Places of worship: ${community.placesOfWorship}</span>
-              <span class="signal-pill">English support: ${window.formatChoice(suburb.englishSupport)}</span>
-              <span class="signal-pill">Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</span>
-            </div>
+            <ul class="suburb-detail-list minimal">
+              <li>English support: ${window.formatChoice(suburb.englishSupport)}</li>
+              <li>Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</li>
+              <li>Culture signal: ${window.formatChoice(suburb.culture)}</li>
+              <li>University access: ${window.formatChoice(suburb.university)}</li>
+            </ul>
           </article>
 
           <article class="suburb-profile-card">
@@ -240,7 +354,12 @@ function initSuburbPage() {
       </section>
     </div>
   `;
+
   initMiniMap(suburb.suburb, suburb.city);
+  requestAnimationFrame(() => {
+    setupSafetyChartControls(suburb);
+    renderSafetyTrendChart(suburb);
+  });
 }
 
 function getFallbackCommunity(suburb) {
@@ -252,7 +371,7 @@ function getFallbackCommunity(suburb) {
     keyPlaces: [
       "International grocery options",
       "Culturally familiar food venues",
-      "Community / worship support nearby"
+      "Community or worship support nearby"
     ],
     highlightDistance: "800m walk",
     events: [
@@ -260,20 +379,21 @@ function getFallbackCommunity(suburb) {
       "Student community meetup"
     ]
   };
-
 }
+
 /* ─── Mini Map (US5.4) ───────────────────────────────────────────── */
 
 let minimapMap = null;
 let minimapMarkers = [];
 let minimapCenter = null;
+let minimapBounds = null;   // L.LatLngBounds of the suburb polygon, or null
 let activeAmenity = "";
 
 function initMiniMap(suburbName, cityName) {
   const toggleBtn = document.getElementById("minimapToggleBtn");
-  const body      = document.getElementById("minimapBody");
-  const chevron   = document.getElementById("minimapChevron");
-  const label     = document.getElementById("minimapBtnLabel");
+  const body = document.getElementById("minimapBody");
+  const chevron = document.getElementById("minimapChevron");
+  const label = document.getElementById("minimapBtnLabel");
 
   if (!toggleBtn) return;
 
@@ -290,6 +410,14 @@ function initMiniMap(suburbName, cityName) {
       label.textContent = "Hide map";
       toggleBtn.setAttribute("aria-expanded", "true");
 
+      // Force the frame to have a visible height before Leaflet initialises
+      const frame = document.getElementById("minimapFrame");
+      if (frame) {
+        frame.style.height = "380px";
+        frame.style.minHeight = "380px";
+        frame.style.display = "block";
+      }
+
       if (!minimapMap) {
         await loadLeaflet();
         await buildMap(suburbName, cityName);
@@ -302,56 +430,180 @@ function initMiniMap(suburbName, cityName) {
   document.getElementById("minimapFilters").addEventListener("click", (e) => {
     const btn = e.target.closest(".minimap-filter-btn");
     if (!btn) return;
-    document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".minimap-filter-btn").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     activeAmenity = btn.dataset.amenity || "";
     if (minimapMap && minimapCenter) {
-      fetchAndRenderPOI(activeAmenity, minimapCenter);
+      if (activeAmenity === "") {
+        fetchAndRenderAll(minimapCenter);
+      } else {
+        fetchAndRenderPOI(activeAmenity, minimapCenter);
+      }
     }
   });
-
 }
 
 function loadLeaflet() {
   return new Promise((resolve) => {
-    if (window.L) { resolve(); return; }
+    if (window.L) {
+      resolve();
+      return;
+    }
+
     const css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
     document.head.appendChild(css);
+
     const script = document.createElement("script");
     script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    script.onload = resolve;
+    script.onload = () => {
+      requestAnimationFrame(() => requestAnimationFrame(resolve));
+    };
     document.head.appendChild(script);
   });
-
 }
+
+/* ─── ABS SA2 name → real OSM search term ───────────────────────── */
+
+const ABS_FIXED_COORDS = {
+  "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
+  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
+  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 15 },
+  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 }
+};
+
+const ABS_NAME_MAP = {
+  "Melbourne CBD - East": null,
+  "Melbourne CBD - North": null,
+  "Melbourne CBD - West": null,
+  "Carlton North - Princes Hill": "Carlton North",
+  "Richmond (South) - Cremorne": "Cremorne Melbourne",
+  "Richmond - North": "Richmond Melbourne",
+  "South Yarra - North": "South Yarra",
+  "South Yarra - South": "South Yarra",
+  "South Yarra - West": "South Yarra",
+  "St Kilda - Central": "St Kilda",
+  "St Kilda - West": "St Kilda West",
+  "Brunswick - North": "Brunswick Melbourne",
+  "Brunswick - South": "Brunswick Melbourne",
+  "West Melbourne - Industrial": "West Melbourne",
+  "West Melbourne - Residential": "West Melbourne",
+  "Sydney (North) - Millers Point": "Millers Point Sydney",
+  "Sydney (South) - Haymarket": "Haymarket Sydney",
+  "Perth (North) - Highgate": "Highgate Perth",
+  "Perth (West) - Northbridge": "Northbridge Perth",
+  "Perth - Evandale": "Evandale Perth",
+  "Brisbane Port - Lytton": "Lytton Brisbane",
+  "Prahran - Windsor": "Prahran",
+  "North Sydney - Lavender Bay": "Lavender Bay",
+  "South Perth - Kensington": "South Perth",
+  "South Yarra": "South Yarra"
+};
 
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    const cleanName = suburbName.replace(/\s*-\s*/g, " ").trim();
-    const baseName  = cleanName.split(/\s+/)[0];
+    const fixed = ABS_FIXED_COORDS[suburbName];
+    if (fixed) {
+      minimapCenter = [fixed.lat, fixed.lon];
+      minimapBounds = null;
+      const mapEl = document.createElement("div");
+      mapEl.id = "leafletMap";
+      mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+      frame.style.height = "380px";
+      frame.style.minHeight = "380px";
+      frame.innerHTML = "";
+      frame.appendChild(mapEl);
+      minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: "abcd",
+        maxZoom: 19
+      }).addTo(minimapMap);
+
+      L.circle(minimapCenter, {
+        radius: 1000,
+        color: "#735cff",
+        weight: 1.5,
+        dashArray: "6 4",
+        fillColor: "#735cff",
+        fillOpacity: 0.04,
+        interactive: false
+      }).addTo(minimapMap);
+
+      setTimeout(() => minimapMap.invalidateSize(), 300);
+      await fetchAndRenderAll(minimapCenter);
+      return;
+    }
+
+    const mapped = ABS_NAME_MAP[suburbName];
+    const parts = suburbName.split(/\s*-\s*/).map((s) => s.trim()).filter(Boolean);
+    const candidates = [...new Set([mapped, parts[0], parts.length > 1 ? parts[1] : null].filter(Boolean))];
+
+    function scoreResult(r) {
+      let s = 0;
+      if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") s += 100;
+      if (r.class === "boundary") s += 60;
+      if (r.class === "place") s += 40;
+      const goodTypes = ["suburb", "neighbourhood", "quarter", "village", "town", "municipality", "city_district", "administrative"];
+      if (goodTypes.includes(r.type)) s += 50;
+      const rank = parseInt(r.place_rank || 30);
+      if (rank >= 18 && rank <= 24) s += 30;
+      else if (rank < 18 || rank > 28) s -= 20;
+      return s;
+    }
 
     let nominatimData = null;
-    for (const q of [cleanName, baseName]) {
-      const params = new URLSearchParams({
-        q: `${q}, ${cityName}, Australia`,
+
+    for (const name of candidates) {
+      const structuredParams = new URLSearchParams({
+        suburb: name,
+        city: cityName,
+        country: "Australia",
         format: "json",
-        limit: "5",
+        limit: "6",
         polygon_geojson: "1",
+        addressdetails: "1",
         "accept-language": "en"
       });
-      const res  = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
-      const results = await res.json();
 
-      const preferred = results.find(r =>
-        ["suburb", "neighbourhood", "quarter", "village", "town", "administrative"]
-          .includes(r.type) ||
-        r.class === "boundary" || r.class === "place"
-      );
-      nominatimData = preferred || results[0] || null;
-      if (nominatimData) break;
+      const freeParams = new URLSearchParams({
+        q: `${name}, ${cityName}, Australia`,
+        format: "json",
+        limit: "8",
+        polygon_geojson: "1",
+        addressdetails: "1",
+        "accept-language": "en"
+      });
+
+      for (const params of [structuredParams, freeParams]) {
+        try {
+          const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+          if (!res.ok) continue;
+          const results = await res.json();
+          if (!results.length) continue;
+
+          const scored = results
+            .map((r) => ({ r, score: scoreResult(r) }))
+            .sort((a, b) => b.score - a.score);
+
+          const best = scored[0];
+
+          if (best.score >= 100) {
+            nominatimData = best.r;
+            break;
+          }
+
+          if (!nominatimData || best.score > scoreResult(nominatimData)) {
+            nominatimData = best.r;
+          }
+        } catch (e) {
+          // try next
+        }
+      }
+
+      if (nominatimData && scoreResult(nominatimData) >= 100) break;
     }
 
     if (!nominatimData) {
@@ -365,190 +617,695 @@ async function buildMap(suburbName, cityName) {
 
     const mapEl = document.createElement("div");
     mapEl.id = "leafletMap";
-    mapEl.style.cssText = "width:100%;height:100%;";
+    mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+    frame.style.height = "380px";
+    frame.style.minHeight = "380px";
     frame.innerHTML = "";
     frame.appendChild(mapEl);
 
-    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 }).setView(minimapCenter, 14);
+    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
     L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: "abcd",
-      maxZoom: 19,
+      maxZoom: 19
     }).addTo(minimapMap);
 
-    const geojson = nominatimData.geojson;
-    if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
-      const boundaryLayer = L.geoJSON(geojson, {
-        style: {
-          color: "#735cff",
-          weight: 2.5,
-          opacity: 0.9,
-          dashArray: "6 4",
-          fillColor: "#735cff",
-          fillOpacity: 0.08,
-        }
-      }).addTo(minimapMap);
-
-      minimapMap.fitBounds(boundaryLayer.getBounds(), { padding: [32, 32] });
-    }
-
-    await fetchAndRenderPOI("", minimapCenter);
-  } catch (err) {
-    frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
-    console.error("MiniMap error:", err);
-  }
-}
-
-async function fetchAndRenderPOI(amenity, center) {
-  minimapMarkers.forEach(m => m.remove());
-  minimapMarkers = [];
-  if (!amenity) return;
-
-  const activeBtn = document.querySelector(".minimap-filter-btn.active");
-  const originalText = activeBtn ? activeBtn.innerHTML : "";
-  if (activeBtn) activeBtn.innerHTML += " ⏳";
-
-  const [lat, lon] = center;
-  const tag = amenity === "park" ? `["leisure"="park"]` : `["amenity"="${amenity}"]`;
-  const overpassQuery = `[out:json][timeout:15];(node${tag}(around:1500,${lat},${lon});way${tag}(around:1500,${lat},${lon}););out center 25;`;
-
-  const overpassEndpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
-    "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
-  ];
-
-  const emojiMap = { supermarket:"🛒", hospital:"🏥", doctors:"👨‍⚕️", park:"🌳", restaurant:"🍜", bus_station:"🚌" };
-  const emoji = emojiMap[amenity] || "📍";
-
-  let succeeded = false;
-
-  for (const endpoint of overpassEndpoints) {
-    try {
-      const res = await fetch(endpoint, {
-        method: "POST",
-        body: overpassQuery,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
-      });
-
-      if (!res.ok) continue;
-      const data = await res.json();
-
-      if (!data.elements) continue;
-
-      data.elements.forEach(el => {
-        const elLat = el.lat ?? el.center?.lat;
-        const elLon = el.lon ?? el.center?.lon;
-        if (!elLat || !elLon) return;
-        const icon = L.divIcon({
-          html: `<div class="minimap-poi-icon">${emoji}</div>`,
-          className: "",
-          iconSize: [28, 28],
-          iconAnchor: [14, 14]
-        });
-        const marker = L.marker([elLat, elLon], { icon })
-          .addTo(minimapMap)
-          .bindPopup(`<strong>${el.tags?.name || amenity}</strong>`);
-        minimapMarkers.push(marker);
-      });
-
-      succeeded = true;
-      break;
-
-    } catch (err) {
-      console.warn(`Overpass endpoint failed (${endpoint}):`, err);
-    }
-  }
-
-  if (activeBtn) activeBtn.innerHTML = originalText;
-
-  if (!succeeded) {
-    console.error("All Overpass endpoints failed. POI data unavailable.");
-  }
-}
-
-/* ─── Suburb boundary polygon (US5.4 extension) ─────────────────── */
-async function drawSuburbBoundary(osmId, osmType, suburbName) {
-  if (!osmId || !osmType) return;
-
-  const typePrefix = osmType === "relation" ? "rel" : osmType === "way" ? "way" : null;
-  if (!typePrefix) return;
-
-  const query = `[out:json][timeout:15];
-${typePrefix}(${osmId});
-out geom;`;
-
-  const endpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter"
-  ];
-
-  for (const endpoint of endpoints) {
-    try {
-      const res  = await fetch(endpoint, { method: "POST", body: query });
-      const data = await res.json();
-      if (!data.elements || !data.elements.length) continue;
-
-      const el = data.elements[0];
-      let geojson = null;
-
-      if (el.type === "relation") {
-        const outerRings = [];
-        const innerRings = [];
-
-        for (const member of (el.members || [])) {
-          if (member.type !== "way" || !member.geometry) continue;
-          const coords = member.geometry.map(p => [p.lon, p.lat]);
-          if (member.role === "outer") outerRings.push(coords);
-          else if (member.role === "inner") innerRings.push(coords);
-        }
-
-        if (!outerRings.length) continue;
-
-        const closeRing = ring => {
-          if (ring[0][0] !== ring[ring.length-1][0] || ring[0][1] !== ring[ring.length-1][1]) {
-            ring.push(ring[0]);
-          }
-          return ring;
-        };
-
-        geojson = {
-          type: "Feature",
-          geometry: {
-            type: "Polygon",
-            coordinates: [
-              closeRing(outerRings[0]),
-              ...innerRings.map(closeRing)
-            ]
-          }
-        };
-
-      } else if (el.type === "way" && el.geometry) {
-        const coords = el.geometry.map(p => [p.lon, p.lat]);
-        if (coords[0][0] !== coords[coords.length-1][0]) coords.push(coords[0]);
-        geojson = {
-          type: "Feature",
-          geometry: { type: "Polygon", coordinates: [coords] }
-        };
-      }
-
-      if (!geojson) continue;
-
-      L.geoJSON(geojson, {
+    if (nominatimData.geojson?.type === "Polygon" || nominatimData.geojson?.type === "MultiPolygon") {
+      const boundaryLayer = L.geoJSON(nominatimData.geojson, {
         style: {
           color: "#735cff",
           weight: 2.5,
           opacity: 0.85,
           dashArray: "6 4",
           fillColor: "#735cff",
-          fillOpacity: 0.07,
-        }
+          fillOpacity: 0.07
+        },
+        interactive: false
       }).addTo(minimapMap);
 
-      return;
+      minimapBounds = boundaryLayer.getBounds();
+      minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
+      setTimeout(() => minimapMap.invalidateSize(), 300);
+    } else {
+      minimapBounds = null;
+      L.circle(minimapCenter, {
+        radius: 1000,
+        color: "#735cff",
+        weight: 1.5,
+        dashArray: "6 4",
+        fillColor: "#735cff",
+        fillOpacity: 0.04,
+        interactive: false
+      }).addTo(minimapMap);
 
-    } catch (err) {
-      console.warn("Boundary fetch failed:", err);
+      minimapMap.setView(minimapCenter, 14);
+      setTimeout(() => minimapMap.invalidateSize(), 300);
+    }
+
+    await fetchAndRenderAll(minimapCenter);
+  } catch (err) {
+    frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
+    console.error("MiniMap error:", err);
+  }
+}
+
+const POI_CATEGORIES = {
+  restaurant: {
+    tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],
+    emoji: "🍜",
+    label: "Restaurant/Café"
+  },
+  supermarket: {
+    tags: ["shop=supermarket", "shop=convenience"],
+    emoji: "🛒",
+    label: "Grocery"
+  },
+  hospital: {
+    tags: ["amenity=hospital"],
+    emoji: "🏥",
+    label: "Hospital"
+  },
+  doctors: {
+    tags: ["amenity=doctors", "amenity=clinic"],
+    emoji: "👨‍⚕️",
+    label: "GP/Clinic"
+  },
+  park: {
+    tags: ["leisure=park", "leisure=garden"],
+    emoji: "🌳",
+    label: "Park"
+  },
+  bus_station: {
+    tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],
+    emoji: "🚌",
+    label: "Transport"
+  }
+};
+
+function buildOverpassQuery(amenity, lat, lon, maxResults) {
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return null;
+
+  let areaFilter;
+  if (minimapBounds) {
+    const sw = minimapBounds.getSouthWest();
+    const ne = minimapBounds.getNorthEast();
+    areaFilter = `(${sw.lat},${sw.lng},${ne.lat},${ne.lng})`;
+    const parts = cat.tags.map((tag) => {
+      const [k, v] = tag.split("=");
+      return `node["${k}"="${v}"]${areaFilter};way["${k}"="${v}"]${areaFilter};`;
+    });
+    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
+  } else {
+    const parts = cat.tags.map((tag) => {
+      const [k, v] = tag.split("=");
+      return `node["${k}"="${v}"](around:1000,${lat},${lon});way["${k}"="${v}"](around:1000,${lat},${lon});`;
+    });
+    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
+  }
+}
+
+async function tryOverpassDirect(query) {
+  const endpoints = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter"
+  ];
+
+  for (const url of endpoints) {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        body: query,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        signal: AbortSignal.timeout(12000)
+      });
+
+      if (!res.ok) continue;
+      const data = await res.json();
+      if (data.elements?.length) return data.elements;
+    } catch {
+      // try next
     }
   }
+
+  return null;
+}
+
+async function tryOverpassViaProxy(query) {
+  const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
+  const proxies = [
+    { url: `https://corsproxy.io/?url=${encoded}`, wrap: false },
+    { url: `https://api.allorigins.win/get?url=${encoded}`, wrap: true }
+  ];
+
+  for (const proxy of proxies) {
+    try {
+      const res = await fetch(proxy.url, { signal: AbortSignal.timeout(12000) });
+      if (!res.ok) continue;
+      const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
+      if (raw.elements?.length) return raw.elements;
+    } catch {
+      // try next
+    }
+  }
+
+  return null;
+}
+
+async function tryNominatimNearby(amenity, lat, lon, maxResults) {
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return null;
+
+  let viewbox;
+  if (minimapBounds) {
+    const sw = minimapBounds.getSouthWest();
+    const ne = minimapBounds.getNorthEast();
+    viewbox = `${sw.lng},${ne.lat},${ne.lng},${sw.lat}`;
+  } else {
+    const delta = 0.009;
+    viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
+  }
+
+  const allResults = [];
+  for (const tag of cat.tags.slice(0, 2)) {
+    const [k, v] = tag.split("=");
+    const params = new URLSearchParams({
+      format: "json",
+      limit: String(maxResults),
+      viewbox,
+      bounded: "1",
+      [`${k}`]: v,
+      "accept-language": "en"
+    });
+
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
+        headers: { "Accept-Language": "en" },
+        signal: AbortSignal.timeout(10000)
+      });
+
+      if (!res.ok) continue;
+      const items = await res.json();
+      items.forEach((item) => {
+        if (item.lat && item.lon) {
+          allResults.push({
+            lat: parseFloat(item.lat),
+            lon: parseFloat(item.lon),
+            name: item.display_name?.split(",")[0] || v
+          });
+        }
+      });
+
+      await new Promise((r) => setTimeout(r, 300));
+    } catch {
+      // try next tag
+    }
+  }
+
+  return allResults.length ? allResults : null;
+}
+
+async function fetchAndRenderAll(center) {
+  minimapMarkers.forEach((m) => m.remove());
+  minimapMarkers = [];
+  const allCategories = Object.keys(POI_CATEGORIES);
+  for (const cat of allCategories) {
+    await fetchAndRenderPOI(cat, center, 5, true);
+  }
+}
+
+async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = false) {
+  if (!skipClear) {
+    minimapMarkers.forEach((m) => m.remove());
+    minimapMarkers = [];
+  }
+  if (!amenity) return;
+
+  const cat = POI_CATEGORIES[amenity];
+  if (!cat) return;
+
+  // Button loading state (only update when an individual category is clicked)
+  const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
+  let originalHTML = "";
+  if (activeBtn) {
+    originalHTML = activeBtn.innerHTML;
+    activeBtn.disabled = true;
+    activeBtn.innerHTML = originalHTML + " ⏳";
+  }
+
+  const [lat, lon] = center;
+  const query = buildOverpassQuery(amenity, lat, lon, maxResults);
+  let elements = null;
+
+  if (query) elements = await tryOverpassDirect(query);
+  if (!elements && query) elements = await tryOverpassViaProxy(query);
+
+  if (!elements) {
+    const nominatimResults = await tryNominatimNearby(amenity, lat, lon, maxResults);
+    if (nominatimResults) {
+      elements = nominatimResults.map((r) => ({
+        lat: r.lat,
+        lon: r.lon,
+        tags: { name: r.name }
+      }));
+    }
+  }
+
+  // Render markers
+  if (elements && elements.length) {
+    elements.forEach((el) => {
+      const elLat = el.lat ?? el.center?.lat;
+      const elLon = el.lon ?? el.center?.lon;
+      if (!elLat || !elLon) return;
+
+      const icon = L.divIcon({
+        html: `<div class="minimap-poi-icon">${cat.emoji}</div>`,
+        className: "",
+        iconSize: [30, 30],
+        iconAnchor: [15, 15]
+      });
+
+      const marker = L.marker([elLat, elLon], { icon })
+        .addTo(minimapMap)
+        .bindPopup(`<strong>${el.tags?.name || el.tags?.["name:en"] || cat.label}</strong>`);
+
+      minimapMarkers.push(marker);
+    });
+  } else if (!skipClear) {
+    const frame = document.getElementById("minimapFrame");
+    if (frame) {
+      const msg = document.createElement("div");
+      msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
+      msg.textContent = `Could not load ${cat.label} data — please try again later`;
+      frame.style.position = "relative";
+      frame.appendChild(msg);
+      setTimeout(() => msg.remove(), 4000);
+    }
+  }
+
+  if (activeBtn) {
+    activeBtn.disabled = false;
+    activeBtn.innerHTML = originalHTML;
+  }
+}
+
+/* -------- Safety Indicator (Epic 6) ------------------ */
+
+function hasSafetySeries(suburb, seriesKey) {
+  const series = suburb[seriesKey] || {};
+
+  return Object.values(series).some((value) => {
+    return value !== null && value !== undefined && !Number.isNaN(Number(value));
+  });
+}
+
+function setupSafetyChartControls(suburb) {
+  const controls = document.getElementById("safetyChartControls");
+
+  if (!controls) {
+    return;
+  }
+
+  controls.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-safety-series]");
+
+    if (!button || button.disabled) {
+      return;
+    }
+
+    const selectedKey = button.dataset.safetySeries;
+
+    if (activeSafetySeries.includes(selectedKey)) {
+      if (activeSafetySeries.length === 1) {
+        return;
+      }
+
+      activeSafetySeries = activeSafetySeries.filter((key) => key !== selectedKey);
+    } else {
+      activeSafetySeries.push(selectedKey);
+    }
+
+    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        activeSafetySeries.includes(btn.dataset.safetySeries)
+      );
+    });
+
+    renderSafetyTrendChart(suburb);
+  });
+}
+
+function formatNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return "Not available";
+  }
+
+  return Number(value).toLocaleString("en-AU");
+}
+
+function getSafetyIndicator(suburb) {
+  const population = suburb.population ?? null;
+  const crimeCountByYear = suburb.crimeCountByYear || {};
+
+  const years = Object.keys(crimeCountByYear).sort((a, b) => Number(a) - Number(b));
+
+  if (!years.length) {
+    return {
+      hasData: false,
+      populationLabel: formatNumber(population),
+      latestCrimeLabel: "Not available",
+      latestYearLabel: "Not available",
+      latestCrimeRateLabel: "Not available",
+      trendLabel: "Not available"
+    };
+  }
+
+  const latestYear = years[years.length - 1];
+  const latestCrime = Number(crimeCountByYear[latestYear]);
+
+  const recentYears = years.slice(-3);
+  const numericPopulation = Number(population);
+
+  const trendValues = recentYears.map((year) => {
+    const crimeCount = Number(crimeCountByYear[year]);
+
+    if (numericPopulation && numericPopulation > 0) {
+      return (crimeCount / numericPopulation) * 1000;
+    }
+
+    return crimeCount;
+  });
+
+  const trendLabel = getLinearTrend(trendValues);
+  const latestCrimeRate = population
+    ? ((latestCrime / population) * 1000).toFixed(2)
+    : null;
+
+  return {
+    hasData: true,
+    populationLabel: formatNumber(population),
+    latestCrimeLabel: formatNumber(latestCrime),
+    latestYearLabel: latestYear,
+    latestCrimeRateLabel: latestCrimeRate,
+    trendLabel
+  };
+}
+
+function getLinearTrend(values) {
+  if (!values || values.length < 2) {
+    return "Not enough data";
+  }
+
+  const n = values.length;
+  const xValues = values.map((_, index) => index);
+
+  const xMean = xValues.reduce((sum, x) => sum + x, 0) / n;
+  const yMean = values.reduce((sum, y) => sum + y, 0) / n;
+
+  let numerator = 0;
+  let denominator = 0;
+
+  for (let i = 0; i < n; i++) {
+    numerator += (xValues[i] - xMean) * (values[i] - yMean);
+    denominator += (xValues[i] - xMean) ** 2;
+  }
+
+  const slope = denominator === 0 ? 0 : numerator / denominator;
+
+  const average = yMean || 1;
+  const relativeSlope = Math.abs(slope) / average;
+
+  if (relativeSlope < 0.05) {
+    return "Stable";
+  }
+
+  return slope > 0 ? "Increasing" : "Decreasing";
+}
+
+function getSafetyChartData(suburb) {
+  const selectedOptions = SAFETY_SERIES_OPTIONS.filter((option) => {
+    return activeSafetySeries.includes(option.key) && hasSafetySeries(suburb, option.key);
+  });
+
+  if (!selectedOptions.length) {
+    return null;
+  }
+
+  const years = [
+    ...new Set(
+      selectedOptions.flatMap((option) => {
+        const series = suburb[option.key] || {};
+
+        return Object.keys(series).filter((year) => {
+          const value = series[year];
+          return value !== null && value !== undefined && !Number.isNaN(Number(value));
+        });
+      })
+    )
+  ].sort((a, b) => Number(a) - Number(b));
+
+  if (!years.length) {
+    return null;
+  }
+
+  let maxValue = 0;
+
+  const datasets = selectedOptions.map((option) => {
+    const series = suburb[option.key] || {};
+
+    const values = years.map((year) => {
+      const value = series[year];
+
+      if (value === null || value === undefined || Number.isNaN(Number(value))) {
+        return null;
+      }
+
+      const numericValue = Number(value);
+      maxValue = Math.max(maxValue, numericValue);
+      return numericValue;
+    });
+
+    return {
+      key: option.key,
+      label: option.label,
+      values,
+      borderColor: option.borderColor,
+      backgroundColor: option.backgroundColor
+    };
+  });
+
+  return {
+    labels: years,
+    datasets,
+    maxValue
+  };
+}
+
+function getNiceSafetyAxisMax(maxValue) {
+  if (!maxValue || maxValue <= 0) {
+    return 10;
+  }
+
+  const paddedMax = maxValue * 1.05;
+  const roughStep = paddedMax / 4;
+
+  const magnitude = Math.pow(10, Math.floor(Math.log10(roughStep)));
+  const normalizedStep = roughStep / magnitude;
+
+  let niceStep;
+
+  if (normalizedStep <= 1) {
+    niceStep = 1 * magnitude;
+  } else if (normalizedStep <= 2) {
+    niceStep = 2 * magnitude;
+  } else if (normalizedStep <= 5) {
+    niceStep = 5 * magnitude;
+  } else {
+    niceStep = 10 * magnitude;
+  }
+
+  return Math.ceil(paddedMax / niceStep) * niceStep;
+}
+
+function renderSafetyTrendChart(suburb) {
+  const canvas = document.getElementById("safetyTrendChart");
+
+  if (!canvas) {
+    console.warn("Safety chart canvas not found.");
+    return;
+  }
+
+  if (!window.Chart) {
+    console.warn("Chart.js is not loaded.");
+    return;
+  }
+
+  const chartData = getSafetyChartData(suburb);
+
+  if (!chartData) {
+    console.warn("No safety chart data available.", {
+      population: suburb.population,
+      crimeCountByYear: suburb.crimeCountByYear,
+      violentCrimesByYear: suburb.violentCrimesByYear,
+      propertyCrimesByYear: suburb.propertyCrimesByYear
+    });
+    return;
+  }
+
+  if (safetyTrendChartInstance) {
+    safetyTrendChartInstance.destroy();
+  }
+
+  const ctx = canvas.getContext("2d");
+
+  function createSafetyGradient(seriesKey) {
+    const gradient = ctx.createLinearGradient(0, 0, 0, 320);
+
+    if (seriesKey === "violentCrimesByYear") {
+      gradient.addColorStop(0, "rgba(239, 68, 68, 0.22)");
+      gradient.addColorStop(1, "rgba(239, 68, 68, 0.02)");
+      return gradient;
+    }
+
+    if (seriesKey === "propertyCrimesByYear") {
+      gradient.addColorStop(0, "rgba(245, 158, 11, 0.22)");
+      gradient.addColorStop(1, "rgba(245, 158, 11, 0.02)");
+      return gradient;
+    }
+
+    gradient.addColorStop(0, "rgba(115, 92, 255, 0.22)");
+    gradient.addColorStop(1, "rgba(115, 92, 255, 0.02)");
+    return gradient;
+  }
+
+  const yAxisMax = getNiceSafetyAxisMax(chartData.maxValue);
+
+  safetyTrendChartInstance = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: chartData.labels,
+      datasets: chartData.datasets.map((dataset) => {
+        const isTotalCrime = dataset.key === "crimeCountByYear";
+
+        return {
+          label: dataset.label,
+          data: dataset.values,
+          borderColor: dataset.borderColor,
+          backgroundColor: createSafetyGradient(dataset.key),
+          borderWidth: isTotalCrime ? 3 : 2.5,
+          tension: 0.35,
+          fill: "origin",
+          spanGaps: true,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+          pointBackgroundColor: dataset.borderColor,
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 2,
+          pointHoverBackgroundColor: dataset.borderColor,
+          pointHoverBorderColor: "#ffffff",
+          pointHoverBorderWidth: 2
+        };
+      })
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: {
+        mode: "index",
+        intersect: false
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          backgroundColor: "rgba(36, 31, 66, 0.95)",
+          titleColor: "#ffffff",
+          bodyColor: "#f3f1ff",
+          padding: 12,
+          displayColors: true,
+          cornerRadius: 12,
+          caretSize: 6,
+          callbacks: {
+            title: function(items) {
+              return `Year ${items[0].label}`;
+            },
+            label: function(context) {
+              const value = context.parsed.y;
+
+              if (value === null || value === undefined) {
+                return `${context.dataset.label}: Not available`;
+              }
+
+              return `${context.dataset.label}: ${value.toLocaleString("en-AU")} incidents`;
+            }
+          }
+        }
+      },
+      layout: {
+        padding: {
+          top: 8,
+          right: 8,
+          bottom: 0,
+          left: 4
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            drawBorder: false
+          },
+          ticks: {
+            color: "#7b7890",
+            font: {
+              size: 12
+            }
+          },
+          title: {
+            display: true,
+            text: "Year",
+            color: "#5f5b75",
+            font: {
+              size: 12,
+              weight: "600"
+            },
+            padding: {
+              top: 10
+            }
+          }
+        },
+        y: {
+          beginAtZero: true,
+          max: yAxisMax,
+          grid: {
+            color: "rgba(115, 92, 255, 0.10)",
+            drawBorder: false
+          },
+          ticks: {
+            color: "#7b7890",
+            font: {
+              size: 12
+            },
+            padding: 8,
+            precision: 0,
+            count: 11
+          },
+          title: {
+            display: true,
+            text: "Crime count",
+            color: "#5f5b75",
+            font: {
+              size: 12,
+              weight: "600"
+            },
+            padding: {
+              bottom: 8
+            }
+          }
+        }
+      }
+    }
+  });
 }

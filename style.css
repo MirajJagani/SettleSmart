@@ -993,6 +993,12 @@ code {
   gap: 12px;
 }
 
+.results-control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* top match */
 
 .top-match-panel {
@@ -2484,11 +2490,13 @@ body.landing-page.site-locked .page-glow {
 
 #shortlist-builder .onpage-progress-dots {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   margin-left: auto;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 #shortlist-builder .onpage-progress-dots .progress-dot {
@@ -2520,6 +2528,7 @@ body.landing-page.site-locked .page-glow {
 
 @media (max-width: 991.98px) {
   #shortlist-builder .onpage-progress-dots {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     max-width: 100%;
     margin-left: 0;
   }
@@ -2540,14 +2549,14 @@ body.landing-page.site-locked .page-glow {
   }
 
   #shortlist-builder .onpage-progress-dots {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 6px;
     max-width: 100%;
+    width: 100%;
   }
 
   #shortlist-builder .onpage-progress-dots .progress-dot {
     height: 8px;
-    box-shadow: none;
   }
 
   #shortlist-builder .onpage-builder-actions {
@@ -2598,6 +2607,11 @@ body.landing-page.site-locked .page-glow {
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
+  }
+
+  .results-control-group {
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .results-suburb-search {
@@ -2740,4 +2754,155 @@ body.landing-page.site-locked .page-glow {
   border-radius: 50%;
   border: 2px solid var(--line);
   box-shadow: 0 2px 8px rgba(31, 27, 50, 0.18);
+}
+
+/* Safety Indicator */
+.safety-chart-wrap {
+  position: relative;
+  margin-top: 18px;
+  height: 340px;
+  padding: 16px 18px 12px;
+  border: 1px solid rgba(115, 92, 255, 0.12);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 246, 255, 0.92));
+  box-shadow: 0 10px 24px rgba(28, 20, 74, 0.06);
+}
+
+.safety-chart-wrap canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.safety-chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.safety-chart-toggle {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.safety-chart-toggle:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(31, 27, 50, 0.08);
+}
+
+.safety-chart-toggle.active[data-safety-series="crimeCountByYear"] {
+  background: rgba(115, 92, 255, 0.12);
+  color: var(--primary-dark);
+  border-color: rgba(115, 92, 255, 0.42);
+}
+
+.safety-chart-toggle.active[data-safety-series="violentCrimesByYear"] {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  border-color: rgba(239, 68, 68, 0.42);
+}
+
+.safety-chart-toggle.active[data-safety-series="propertyCrimesByYear"] {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.46);
+}
+
+.safety-chart-toggle:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.epic5-top-match-layout {
+  gap: 28px;
+}
+
+.epic5-explanation-card {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--primary-soft);
+  border: 1px solid rgba(115, 92, 255, 0.14);
+}
+
+.epic5-explanation-card h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.epic5-explanation-card p {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.epic5-stat-highlight {
+  background: linear-gradient(135deg, rgba(115, 92, 255, 0.14), rgba(47, 201, 177, 0.12));
+}
+
+.epic5-focus-card {
+  border: 1px solid rgba(47, 201, 177, 0.2);
+}
+
+.epic5-suburb-card {
+  position: relative;
+}
+
+.epic5-balance-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.epic5-balance-strip div {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(115, 92, 255, 0.08);
+  border: 1px solid rgba(115, 92, 255, 0.12);
+}
+
+.epic5-balance-strip span {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.epic5-balance-strip strong {
+  display: block;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.view-more-link {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.view-more-link:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .epic5-balance-strip {
+    grid-template-columns: 1fr;
+  }
 }

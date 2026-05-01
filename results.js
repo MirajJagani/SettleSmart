@@ -2,17 +2,13 @@ const preferences = window.getStoredPreferences
   ? window.getStoredPreferences()
   : JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
 
-function normalizeCityKey(value) {
-  return String(value || "").trim().toLowerCase();
-}
-
 const cityHeroImages = {
-  melbourne: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1600&q=80",
-  sydney: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80",
-  brisbane: "https://images.unsplash.com/photo-1589976567749-2f011d95ffec?q=80&w=1600&auto=format&fit=crop",
-  adelaide: "https://plus.unsplash.com/premium_photo-1697730252622-0e1cec87d8c4?q=80&w=1600&auto=format&fit=crop",
-  perth: "https://images.unsplash.com/photo-1574471101497-d958f6e3ebd4?q=80&w=1600&auto=format&fit=crop",
-  canberra: "https://images.unsplash.com/photo-1672264597620-d792bb6de88d?q=80&w=1600&auto=format&fit=crop"
+  Melbourne: "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=1600&q=80",
+  Sydney: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1600&q=80",
+  Brisbane: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=1600&q=80",
+  Adelaide: "https://images.unsplash.com/photo-1564419439572-1f478fe9ad4f?auto=format&fit=crop&w=1600&q=80",
+  Perth: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1600&q=80",
+  Canberra: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80"
 };
 
 const appState = {
@@ -136,7 +132,7 @@ function rankSuburbs() {
       score: window.getSuburbScore(suburb, preferences),
       reasons: window.buildReasonList(suburb, preferences)
     }))
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score);
 }
 
 function getSortedShortlistForDisplay() {
@@ -186,16 +182,13 @@ function renderPage() {
   renderTopMatch(bestMatch);
   renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
   renderPagination(totalPages);
-  renderCommunityExplorer();
   renderSpinWheel(topWheelItems);
 
   if (resultsCount) {
-    if (resultsCount) {
-      if (appState.suburbQuery) {
-        resultsCount.textContent = `${sorted.length} suburbs found`;
-      } else {
-        resultsCount.textContent = `Top ${sorted.length} suburbs`;
-      }
+    if (appState.suburbQuery) {
+      resultsCount.textContent = `${sorted.length} suburbs found`;
+    } else {
+      resultsCount.textContent = `Top ${sorted.length} suburbs`;
     }
   }
 
@@ -210,13 +203,10 @@ function handleSortChange(event) {
 }
 
 function renderHero() {
-  const selectedCityKey = normalizeCityKey(preferences.city);
-  const heroImage = cityHeroImages[selectedCityKey] || cityHeroImages.melbourne;
+  const heroImage = cityHeroImages[preferences.city] || cityHeroImages.Melbourne;
 
   if (resultsHeroBanner) {
     resultsHeroBanner.style.backgroundImage = `url('${heroImage}')`;
-    resultsHeroBanner.style.backgroundSize = "cover";
-    resultsHeroBanner.style.backgroundPosition = "center";
   }
 
   resultsHeroTitle.textContent = `Your ${preferences.city} shortlist is ready.`;
@@ -240,7 +230,7 @@ function renderHero() {
         <strong class="hero-summary-value">${window.formatChoice(preferences.commute)}</strong>
       </div>
     </div>
-	    <div class="col-12 col-sm-6">
+    <div class="col-12 col-sm-6">
       <div class="hero-summary-card">
         <span class="hero-summary-label">Language</span>
         <strong class="hero-summary-value">${preferences.language || "Not set"}</strong>
@@ -317,7 +307,6 @@ function renderTopMatch(match) {
             <span class="signal-pill">Lifestyle: ${window.formatChoice(preferences.lifestyle)}</span>
             <span class="signal-pill">Community: ${window.formatChoice(match.culture)}</span>
           </div>
-
         </div>
       </div>
     </div>
@@ -338,15 +327,11 @@ function renderMatches(list, bestMatchSlug) {
 
   resultsGrid.innerHTML = list
     .map((match) => {
-      const languageBadges = getPriorityLanguageBadges(match)
-        .map((badge) => `<span class="language-badge">${badge}</span>`)
-        .join("");
-
       return `
         <div class="col-12 col-lg-6">
-          <article class="suburb-card ${match.slug === bestMatchSlug ? "best-match" : ""}">
+          <article class="suburb-card shortlist-clean-card ${match.slug === bestMatchSlug ? "best-match" : ""}">
             <div class="suburb-card-header">
-              <div>
+              <div class="suburb-card-title-wrap">
                 <span class="result-city-label">${match.city}</span>
                 <h3>${match.suburb}</h3>
               </div>
@@ -358,11 +343,6 @@ function renderMatches(list, bestMatchSlug) {
             </div>
 
             <p class="suburb-card-copy">${match.description}</p>
-
-            <div class="suburb-badge-row">
-              ${languageBadges}
-              <span class="connection-badge">${getCultureConnectionLabel(match)}</span>
-            </div>
 
             <div class="suburb-stat-grid">
               <div class="suburb-stat-box">
@@ -382,17 +362,6 @@ function renderMatches(list, bestMatchSlug) {
                 <strong>${match.commonLanguages?.slice(0, 2).join(", ") || "Not available"}</strong>
               </div>
             </div>
-
-            <div class="suburb-tag-row">
-              ${(match.lifestyleTags || [])
-                .slice(0, 3)
-                .map((tag) => `<span class="result-tag-lite">${tag}</span>`)
-                .join("")}
-            </div>
-
-            <ul class="result-reason-list compact-list">
-              ${match.reasons.slice(0, 3).map((reason) => `<li>${reason}</li>`).join("")}
-            </ul>
 
             <button class="btn ss-btn ss-btn-secondary w-100 view-details-btn" data-slug="${match.slug}">
               View Details
@@ -421,20 +390,22 @@ function renderPagination(totalPages) {
 
   const visibleItems = getVisiblePaginationItems(totalPages, appState.currentPage);
 
-  const html = visibleItems.map((item) => {
-    if (item === "ellipsis") {
-      return `<span class="pagination-ellipsis">...</span>`;
-    }
+  const html = visibleItems
+    .map((item) => {
+      if (item === "ellipsis") {
+        return `<span class="pagination-ellipsis">...</span>`;
+      }
 
-    return `
-      <button
-        class="pagination-btn ${item === appState.currentPage ? "active" : ""}"
-        data-page="${item}"
-      >
-        ${item}
-      </button>
-    `;
-  }).join("");
+      return `
+        <button
+          class="pagination-btn ${item === appState.currentPage ? "active" : ""}"
+          data-page="${item}"
+        >
+          ${item}
+        </button>
+      `;
+    })
+    .join("");
 
   resultsPagination.innerHTML = html;
 
@@ -478,8 +449,7 @@ function getVisiblePaginationItems(totalPages, currentPage) {
     }
 
     items.push(page);
-	
-	  }
+  }
 
   return items;
 }
@@ -719,7 +689,7 @@ function renderExploreView(list) {
             <div>
               <h4>${suburb.suburb}</h4>
               <span class="result-city-label">${suburb.city}</span>
-			              </div>
+            </div>
             <span class="community-score">Culture fit ${getCultureFitScore(suburb)}/10</span>
           </div>
 
@@ -972,5 +942,4 @@ function setResultsView(view) {
     detailView?.classList.add("hidden");
     summaryView?.classList.remove("hidden");
   }
-
 }

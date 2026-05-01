@@ -77,6 +77,52 @@
           </button>
         </div>
 
+        <div class="section-header mb-4">
+          <span class="ss-pill ss-pill-light">Your shortlist</span>
+          <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
+          <h6>Use Recommend by to view suburbs based on overall fit, community fit, or university access.</h6>
+        </div>
+
+        <div class="results-toolbar mb-4">
+          <div class="results-toolbar-left">
+            <span class="results-count" id="resultsCount">0 suburbs found</span>
+          </div>
+
+          <div class="results-toolbar-center">
+            <div class="results-toolbar-center-inner">
+              <div class="results-pagination" id="resultsPagination"></div>
+              <input
+                type="text"
+                id="suburbSearch"
+                class="results-suburb-search"
+                placeholder="Search suburb"
+              />
+            </div>
+          </div>
+
+          <div class="results-toolbar-right">
+            <div class="results-control-group">
+              <label for="recommendationSelect" class="results-sort-label">Recommend by</label>
+              <select id="recommendationSelect" class="form-select ss-sort-select">
+                <option value="overall">Overall fit</option>
+                <option value="community">Community</option>
+                <option value="university">University</option>
+              </select>
+            </div>
+
+            <div class="results-control-group">
+              <label for="sortSelect" class="results-sort-label">Sort by</label>
+              <select id="sortSelect" class="form-select ss-sort-select">
+                <option value="match-desc">Best first</option>
+                <option value="match-asc">Lowest first</option>
+                <option value="name-asc">A-Z</option>
+                <option value="name-desc">Z-A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5" id="resultsGrid"></div>
         <!-- spin wheel -->
         <div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
           <div class="row g-4 align-items-center">
@@ -107,71 +153,6 @@
           </div>
         </div>
 
-        <div class="section-header mb-4">
-          <span class="ss-pill ss-pill-light">Your shortlist</span>
-          <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
-          <h6>Suburbs are ranked using your selected city, budget, housing style, commute preference, and lifestyle priority.</h6>
-        </div>
-
-        <div class="results-toolbar mb-4">
-          <div class="results-toolbar-left">
-            <span class="results-count" id="resultsCount">0 suburbs found</span>
-          </div>
-
-          <div class="results-toolbar-center">
-            <div class="results-toolbar-center-inner">
-              <div class="results-pagination" id="resultsPagination"></div>
-              <input
-                type="text"
-                id="suburbSearch"
-                class="results-suburb-search"
-                placeholder="Search suburb"
-              />
-            </div>
-          </div>
-
-          <div class="results-toolbar-right">
-            <label for="sortSelect" class="results-sort-label">Sort by</label>
-            <select id="sortSelect" class="form-select ss-sort-select">
-              <option value="match-desc">Match High → Low</option>
-              <option value="match-asc">Match Low → High</option>
-              <option value="name-asc">A-Z</option>
-              <option value="name-desc">Z-A</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row g-4 mb-5" id="resultsGrid"></div>
-
-        <!-- community explorer -->
-        <div class="section-header text-center mb-4">
-          <h2 class="results-section-title">Community comfort explorer</h2>
-          <h6>Explore language familiarity, multicultural signals, and community comfort across your shortlisted suburbs.</h6>
-        </div>
-
-        <div class="community-explorer-shell info-card mb-5">
-          <div class="community-toolbar">
-            <div class="community-tab-group">
-              <button type="button" class="community-tab-btn active" data-community-tab="explore">Explore</button>
-              <button type="button" class="community-tab-btn" data-community-tab="culture">Culture Fit</button>
-              <button type="button" class="community-tab-btn" data-community-tab="compare">Compare</button>
-            </div>
-
-            <div class="community-toolbar-actions">
-              <input
-                type="text"
-                id="communitySearch"
-                class="community-search-input"
-                placeholder="Search language e.g. Mandarin"
-              />
-              <button type="button" class="community-map-btn" id="communityMapToggle">Toggle density map</button>
-            </div>
-          </div>
-
-          <div id="communityViewTitle" class="community-view-title"></div>
-          <div id="communityMap" class="community-map-wrap hidden"></div>
-          <div id="cultureList" class="community-content-grid"></div>
-        </div>
 
       </div>
     </section>
