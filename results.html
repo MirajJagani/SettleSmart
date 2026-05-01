@@ -77,36 +77,6 @@
           </button>
         </div>
 
-        <!-- spin wheel -->
-        <div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
-          <div class="row g-4 align-items-center">
-            <div class="col-12 col-lg-5">
-              <span class="section-kicker">Need help deciding?</span>
-              <h3 class="spin-wheel-title">Spin the shortlist wheel</h3>
-              <p class="spin-wheel-copy">
-                Let SettleSmart randomly choose one suburb from your current top 4 shortlist,
-                so you know which one to explore first.
-              </p>
-
-              <div class="spin-wheel-candidates" id="wheelCandidates"></div>
-
-              <div class="d-flex flex-wrap gap-2 mt-3">
-                <button class="btn ss-btn ss-btn-primary" id="spinWheelBtn">Spin the wheel</button>
-                <button class="btn ss-btn ss-btn-secondary" id="viewWinnerBtn" disabled>View winning suburb</button>
-              </div>
-
-              <div class="spin-wheel-result hidden mt-3" id="spinWheelResult"></div>
-            </div>
-
-            <div class="col-12 col-lg-7">
-              <div class="wheel-stage">
-                <div class="wheel-pointer"></div>
-                <canvas id="shortlistWheel" width="420" height="420"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="section-header mb-4">
           <span class="ss-pill ss-pill-light">Your shortlist</span>
           <h2 class="results-section-title">Suburb matches shaped around your preferences</h2>
@@ -183,6 +153,37 @@
           <div id="communityMap" class="community-map-wrap hidden"></div>
           <div id="cultureList" class="community-content-grid"></div>
         </div>
+
+        <!-- spin wheel -->
+        <div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-lg-5">
+              <span class="section-kicker">Need help deciding?</span>
+              <h3 class="spin-wheel-title">Spin the shortlist wheel</h3>
+              <p class="spin-wheel-copy">
+                Let SettleSmart randomly choose one suburb from your current top 4 shortlist,
+                so you know which one to explore first.
+              </p>
+
+              <div class="spin-wheel-candidates" id="wheelCandidates"></div>
+
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <button class="btn ss-btn ss-btn-primary" id="spinWheelBtn">Spin the wheel</button>
+                <button class="btn ss-btn ss-btn-secondary" id="viewWinnerBtn" disabled>View winning suburb</button>
+              </div>
+
+              <div class="spin-wheel-result hidden mt-3" id="spinWheelResult"></div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="wheel-stage">
+                <div class="wheel-pointer"></div>
+                <canvas id="shortlistWheel" width="420" height="420"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </section>
