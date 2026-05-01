@@ -800,3 +800,344 @@ window.getPreferenceArray = getPreferenceArray;
 
 init();
 setupAccessGate();
+
+function getExtendedTotalSteps() {
+  return 7;
+}
+
+function getExtendedStepMeta(step) {
+  const extendedStepMeta = {
+    1: { label: "Step 1 of 7", title: "Choose Your Destination City" },
+    2: { label: "Step 2 of 7", title: "Language and cultural background" },
+    3: { label: "Step 3 of 7", title: "Set your weekly rent budget" },
+    4: { label: "Step 4 of 7", title: "Choose your housing style" },
+    5: { label: "Step 5 of 7", title: "Tell us your commute preference" },
+    6: { label: "Step 6 of 7", title: "Choose your university" },
+    7: { label: "Step 7 of 7", title: "Lifestyle priorities and final review" }
+  };
+
+  return extendedStepMeta[step] || extendedStepMeta[1];
+}
+
+function getUniversityOptionsForSelectedCity() {
+  const cityKey = String(appState.city || "").toLowerCase();
+
+  const universityOptionsByCity = {
+    melbourne: [
+      { name: "Monash University", desc: "Useful for students studying around Clayton, Caulfield, Parkville, or city-connected campuses." },
+      { name: "University of Melbourne", desc: "Useful for students who need convenient access to Parkville and inner Melbourne." },
+      { name: "RMIT University", desc: "Useful for students studying near Melbourne CBD and major public transport links." },
+      { name: "Deakin University", desc: "Useful for students who want access to Burwood or wider eastern suburbs." },
+      { name: "Swinburne University", desc: "Useful for students who want access to Hawthorn and nearby inner-east suburbs." }
+    ],
+    sydney: [
+      { name: "University of Sydney", desc: "Useful for students who want convenient access to Camperdown and inner Sydney." },
+      { name: "UNSW Sydney", desc: "Useful for students who want access to Kensington, Randwick, and eastern suburbs." },
+      { name: "UTS", desc: "Useful for students who want strong access to Sydney CBD and transport hubs." },
+      { name: "Macquarie University", desc: "Useful for students who want access to Macquarie Park and northern suburbs." }
+    ],
+    brisbane: [
+      { name: "University of Queensland", desc: "Useful for students who want access to St Lucia and inner Brisbane." },
+      { name: "QUT", desc: "Useful for students who want access to Gardens Point, Kelvin Grove, and city areas." },
+      { name: "Griffith University", desc: "Useful for students who want access to Nathan, South Bank, or Gold Coast-connected areas." }
+    ],
+    adelaide: [
+      { name: "University of Adelaide", desc: "Useful for students who want access to the city campus and central Adelaide." },
+      { name: "UniSA", desc: "Useful for students who want access to city and metropolitan campus locations." },
+      { name: "Flinders University", desc: "Useful for students who want access to Bedford Park and southern suburbs." }
+    ],
+    perth: [
+      { name: "University of Western Australia", desc: "Useful for students who want access to Crawley and western suburbs." },
+      { name: "Curtin University", desc: "Useful for students who want access to Bentley and surrounding suburbs." },
+      { name: "Murdoch University", desc: "Useful for students who want access to Murdoch and southern suburbs." }
+    ],
+    canberra: [
+      { name: "Australian National University", desc: "Useful for students who want access to Acton and central Canberra." },
+      { name: "University of Canberra", desc: "Useful for students who want access to Bruce and northern Canberra." }
+    ]
+  };
+
+  return universityOptionsByCity[cityKey] || [
+    { name: `${appState.city || "Selected city"} university area`, desc: "Used to compare suburbs by general university access." }
+  ];
+}
+
+function renderProgress() {
+  const meta = getExtendedStepMeta(appState.step);
+  stepLabel.textContent = meta.label;
+  stepTitle.textContent = meta.title;
+
+  progressDots.innerHTML = "";
+
+  for (let i = 1; i <= getExtendedTotalSteps(); i++) {
+    const dot = document.createElement("div");
+    dot.className = "progress-dot";
+
+    if (i < appState.step) dot.classList.add("done");
+    if (i === appState.step) dot.classList.add("active");
+
+    progressDots.appendChild(dot);
+  }
+
+  backBtn.style.visibility = appState.step === 1 ? "hidden" : "visible";
+  updateNextButtonState();
+}
+
+function renderStep() {
+  if (typeof appState.university === "undefined") {
+    appState.university = "";
+  }
+
+  switch (appState.step) {
+    case 1:
+      renderCityStep();
+      break;
+    case 2:
+      renderLanguageStep();
+      break;
+    case 3:
+      renderBudgetStep();
+      break;
+    case 4:
+      renderHousingStep();
+      break;
+    case 5:
+      renderCommuteStep();
+      break;
+    case 6:
+      renderUniversityStep();
+      break;
+    case 7:
+      renderLifestyleReviewStep();
+      break;
+    default:
+      renderCityStep();
+  }
+
+  renderProgress();
+}
+
+function renderUniversityStep() {
+  const universityOptions = getUniversityOptionsForSelectedCity();
+
+  stepContent.innerHTML = `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Select your university</h3>
+      <p class="muted-line">
+        This helps SettleSmart balance cultural comfort with university access when building your suburb shortlist.
+      </p>
+
+      <div class="row g-4 preference-grid mt-1">
+        ${universityOptions.map((option) => `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="pref-card ${appState.university === option.name ? "selected" : ""}" data-university="${option.name}">
+              <h4>${option.name}</h4>
+              <p>${option.desc}</p>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="section-mini-title">Why this matters</h3>
+      <p class="muted-line mb-0">
+        Your final match will not rely only on cultural fit. It will also consider whether each suburb has stronger, medium, or lower access to university areas.
+      </p>
+    </div>
+  `;
+
+  document.querySelectorAll("[data-university]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.university = card.dataset.university;
+      renderStep();
+      autoAdvanceIfReady(6);
+    });
+  });
+}
+
+function renderLifestyleReviewStep() {
+  const selectedLifestyle = getPreferenceArray(appState.lifestyle);
+
+  stepContent.innerHTML = `
+    <div class="panel-card mb-4">
+      <h3 class="section-mini-title">Choose 1 to 3 lifestyle priorities</h3>
+      <p class="muted-line">Pick what would make a suburb feel more comfortable for your day-to-day life.</p>
+
+      <div class="row g-4 preference-grid mt-1">
+        ${lifestyleOptions.map((option) => `
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="pref-card ${selectedLifestyle.includes(option.key) ? "selected" : ""}" data-lifestyle="${option.key}">
+              <h4>${option.title}</h4>
+              <p>${option.desc}</p>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <div class="panel-card">
+      <h3 class="section-mini-title">Review your answers</h3>
+      <p class="muted-line">
+        Your shortlist will compare suburbs using cultural comfort, budget, housing, commute, lifestyle, and selected university access.
+      </p>
+
+      <div class="row g-3 review-grid">
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>City</span>
+            <strong>${appState.city || "-"}</strong>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>Language and culture</span>
+            <strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>Selected university</span>
+            <strong>${appState.university || "-"}</strong>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>Budget</span>
+            <strong>$${appState.budget}/week</strong>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>Housing preferences</span>
+            <strong>${formatChoice(appState.housing)}</strong>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="review-item">
+            <span>Commute preferences</span>
+            <strong>${formatChoice(appState.commute)}</strong>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="review-item">
+            <span>Lifestyle priorities</span>
+            <strong>${formatChoice(appState.lifestyle)}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.querySelectorAll("[data-lifestyle]").forEach((card) => {
+    card.addEventListener("click", () => {
+      appState.lifestyle = togglePreferenceSelection(appState.lifestyle, card.dataset.lifestyle, 3);
+      renderStep();
+
+      if (shouldAutoAdvance()) {
+        scrollActionRowIntoView();
+      }
+    });
+  });
+}
+
+function autoAdvanceIfReady(stepNumber) {
+  if (!shouldAutoAdvance()) return;
+  if (!isStepValid(stepNumber)) return;
+  if (appState.step !== stepNumber) return;
+  if (stepNumber >= getExtendedTotalSteps()) return;
+
+  setTimeout(() => {
+    if (appState.step === stepNumber && isStepValid(stepNumber)) {
+      appState.step += 1;
+      renderStep();
+      shortlistSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 220);
+}
+
+function handleNext() {
+  if (!isStepValid(appState.step)) return;
+
+  if (appState.step < getExtendedTotalSteps()) {
+    appState.step += 1;
+    renderStep();
+    shortlistSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
+  loadingOverlay.classList.remove("hidden");
+
+  setTimeout(() => {
+    window.location.href = "results.html";
+  }, 1400);
+}
+
+function isStepValid(step) {
+  switch (step) {
+    case 1:
+      return !!appState.city;
+    case 2:
+      return !!appState.language && !!appState.culture;
+    case 3:
+      return !!appState.budget;
+    case 4:
+      return getPreferenceArray(appState.housing).length >= 1;
+    case 5:
+      return getPreferenceArray(appState.commute).length >= 1;
+    case 6:
+      return !!appState.university;
+    case 7: {
+      const selectedLifestyle = getPreferenceArray(appState.lifestyle);
+      return selectedLifestyle.length >= 1 && selectedLifestyle.length <= 3;
+    }
+    default:
+      return false;
+  }
+}
+
+function updateNextButtonState() {
+  const valid = isStepValid(appState.step);
+
+  nextBtn.disabled = !valid;
+  nextBtn.style.opacity = valid ? "1" : "0.55";
+  nextBtn.style.cursor = valid ? "pointer" : "not-allowed";
+
+  if (!valid) {
+    if (appState.step === 4) {
+      stepHint.textContent = "Select at least one housing style to continue";
+    } else if (appState.step === 5) {
+      stepHint.textContent = "Select at least one commute preference to continue";
+    } else if (appState.step === 6) {
+      stepHint.textContent = "Select your university to continue";
+    } else if (appState.step === 7) {
+      stepHint.textContent = "Select 1 to 3 lifestyle priorities to continue";
+    } else {
+      stepHint.textContent = "Complete this step to continue";
+    }
+  } else if (appState.step === getExtendedTotalSteps()) {
+    stepHint.textContent = "Ready to build your balanced shortlist";
+    nextBtn.textContent = "Show My Shortlist";
+  } else {
+    stepHint.textContent = "Looks good — continue to the next step";
+    nextBtn.textContent = "Next";
+  }
+}
+
+function getStoredPreferences() {
+  const storedPreferences = JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
+
+  storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
+  storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
+  storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
+  storedPreferences.university = storedPreferences.university || "";
+
+  return storedPreferences;
+}
