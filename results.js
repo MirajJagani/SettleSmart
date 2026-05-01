@@ -13,6 +13,7 @@ const cityHeroImages = {
 
 const appState = {
   sortBy: localStorage.getItem("settlesmart_sort") || "match-desc",
+  recommendBy: "overall",
   rankedSuburbs: [],
   activeTab: "explore",
   search: "",
@@ -31,6 +32,7 @@ const resultsGrid = document.getElementById("resultsGrid");
 const resultsPagination = document.getElementById("resultsPagination");
 const suburbSearch = document.getElementById("suburbSearch");
 const sortSelect = document.getElementById("sortSelect");
+const recommendationSelect = document.getElementById("recommendationSelect");
 const resultsCount = document.getElementById("resultsCount");
 
 const summaryView = document.getElementById("summaryView");
@@ -78,6 +80,16 @@ function init() {
     sortSelect.addEventListener("change", handleSortChange);
   }
 
+  if (recommendationSelect) {
+    recommendationSelect.value = appState.recommendBy;
+    recommendationSelect.addEventListener("change", (e) => {
+      appState.recommendBy = e.target.value;
+      appState.currentPage = 1;
+      appState.rankedSuburbs = rankSuburbs();
+      renderPage();
+    });
+  }
+
   if (suburbSearch) {
     suburbSearch.value = appState.suburbQuery;
 
@@ -88,12 +100,14 @@ function init() {
     });
   }
 
-  communityTabs.forEach((button) => {
-    button.addEventListener("click", () => {
-      appState.activeTab = button.dataset.communityTab;
-      renderCommunityExplorer();
+  if (communityTabs.length) {
+    communityTabs.forEach((button) => {
+      button.addEventListener("click", () => {
+        appState.activeTab = button.dataset.communityTab;
+        renderCommunityExplorer();
+      });
     });
-  });
+  }
 
   if (communitySearch) {
     communitySearch.addEventListener("input", (event) => {
@@ -129,10 +143,35 @@ function rankSuburbs() {
     .filter((suburb) => suburb.city === preferences.city)
     .map((suburb) => ({
       ...suburb,
-      score: window.getSuburbScore(suburb, preferences),
+      score: getScoreByMode(suburb),
       reasons: window.buildReasonList(suburb, preferences)
     }))
     .sort((a, b) => b.score - a.score);
+}
+
+function getScoreByMode(suburb) {
+  switch (appState.recommendBy) {
+    case "community": {
+      // Score based purely on language + culture match + recentArrival
+      let s = 0;
+      if (preferences.language && suburb.commonLanguages?.includes(preferences.language)) s += 35;
+      if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) s += 35;
+      if (suburb.culture === "high") s += 20;
+      else if (suburb.culture === "medium") s += 10;
+      if (suburb.recentArrival === "strong") s += 10;
+      return Math.min(s, 100);
+    }
+    case "university": {
+      // Score based purely on university proximity
+      const uniScore = typeof window.getEpic5UniversityAccessScore === "function"
+        ? window.getEpic5UniversityAccessScore(suburb, preferences)
+        : 0;
+      return Math.round((uniScore / 10) * 100);
+    }
+    case "overall":
+    default:
+      return window.getSuburbScore(suburb, preferences);
+  }
 }
 
 function getSortedShortlistForDisplay() {
@@ -624,6 +663,9 @@ function getWheelWinner() {
 /* ===== Community explorer ===== */
 
 function renderCommunityExplorer() {
+  // Community explorer elements may not exist in the current HTML version
+  if (!cultureList) return;
+
   updateCommunityTabs();
 
   const filtered = getFilteredCommunityList();
@@ -655,6 +697,7 @@ function renderCommunityExplorer() {
 }
 
 function updateCommunityTabs() {
+  if (!communityTabs.length) return;
   communityTabs.forEach((button) => {
     button.classList.toggle("active", button.dataset.communityTab === appState.activeTab);
   });
@@ -673,6 +716,7 @@ function getFilteredCommunityList() {
 }
 
 function renderExploreView(list) {
+  if (!communityViewTitle || !cultureList) return;
   communityViewTitle.innerHTML = `
     <h3>Community and language signals from your shortlist</h3>
     <p class="muted-line">Explore language familiarity, multicultural signals, and community comfort across your shortlisted suburbs.</p>
@@ -714,6 +758,7 @@ function renderExploreView(list) {
 }
 
 function renderCultureFitView(list) {
+  if (!communityViewTitle || !cultureList) return;
   const ranked = [...list].sort((a, b) => getCultureFitScore(b) - getCultureFitScore(a));
 
   communityViewTitle.innerHTML = `
@@ -772,6 +817,7 @@ function renderCultureFitView(list) {
 }
 
 function renderCompareView(list) {
+  if (!communityViewTitle || !cultureList) return;
   const compareList = [...list]
     .sort((a, b) => getCultureFitScore(b) - getCultureFitScore(a))
     .slice(0, 3);
