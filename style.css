@@ -2490,11 +2490,13 @@ body.landing-page.site-locked .page-glow {
 
 #shortlist-builder .onpage-progress-dots {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   margin-left: auto;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 #shortlist-builder .onpage-progress-dots .progress-dot {
@@ -2526,6 +2528,7 @@ body.landing-page.site-locked .page-glow {
 
 @media (max-width: 991.98px) {
   #shortlist-builder .onpage-progress-dots {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     max-width: 100%;
     margin-left: 0;
   }
@@ -2546,14 +2549,14 @@ body.landing-page.site-locked .page-glow {
   }
 
   #shortlist-builder .onpage-progress-dots {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     gap: 6px;
     max-width: 100%;
+    width: 100%;
   }
 
   #shortlist-builder .onpage-progress-dots .progress-dot {
     height: 8px;
-    box-shadow: none;
   }
 
   #shortlist-builder .onpage-builder-actions {
