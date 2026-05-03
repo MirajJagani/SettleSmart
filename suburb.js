@@ -1846,6 +1846,7 @@ function getLinearTrend(values) {
   return slope > 0 ? "Increasing" : "Decreasing";
 }
 
+/*
 // Prediction with linear regression
 function fitLinearTrendFromRecentYears(years, values, recentCount = 5) {
   const validPoints = years
@@ -1902,10 +1903,74 @@ function fitLinearTrendFromRecentYears(years, values, recentCount = 5) {
     predictedNextValue: predict(nextYear)
   };
 }
+*/
+
+// Prediction with Ridge Regression
+function fitRidgeTrendFromRecentYears(years, values, recentCount = 5, lambda = 1) {
+  const validPoints = years
+    .map((year, index) => ({
+      year: Number(year),
+      value: values[index]
+    }))
+    .filter((point) => {
+      return (
+        Number.isFinite(point.year) &&
+        point.value !== null &&
+        point.value !== undefined &&
+        Number.isFinite(Number(point.value))
+      );
+    })
+    .slice(-recentCount);
+
+  if (validPoints.length < 2) {
+    return null;
+  }
+
+  const n = validPoints.length;
+
+  const xValues = validPoints.map((point) => point.year);
+  const yValues = validPoints.map((point) => Number(point.value));
+
+  const xMean = xValues.reduce((sum, x) => sum + x, 0) / n;
+  const yMean = yValues.reduce((sum, y) => sum + y, 0) / n;
+
+  // Center x and y values.
+  // This keeps the calculation stable because years like 2021, 2022, 2023 are large numbers.
+  const centeredX = xValues.map((x) => x - xMean);
+  const centeredY = yValues.map((y) => y - yMean);
+
+  const numerator = centeredX.reduce((sum, x, index) => {
+    return sum + x * centeredY[index];
+  }, 0);
+
+  const denominator = centeredX.reduce((sum, x) => {
+    return sum + x ** 2;
+  }, 0) + lambda;
+
+  const slope = denominator === 0 ? 0 : numerator / denominator;
+  const intercept = yMean - slope * xMean;
+
+  const lastYear = Math.max(...xValues);
+  const nextYear = lastYear + 1;
+
+  const predict = (year) => {
+    return Math.max(Math.round(slope * year + intercept), 0);
+  };
+
+  return {
+    slope,
+    intercept,
+    fittedYears: xValues.map(String),
+    fittedValues: xValues.map((year) => predict(year)),
+    nextYear: String(nextYear),
+    predictedNextValue: predict(nextYear),
+    modelName: "Ridge Regression"
+  };
+}
 
 function buildTrendDataset(dataset, labels) {
-  const trend = fitLinearTrendFromRecentYears(labels, dataset.values, 5);
-
+  // const trend = fitLinearTrendFromRecentYears(labels, dataset.values, 5);
+  const trend = fitRidgeTrendFromRecentYears(labels, dataset.values, 5, 1);
   if (!trend) {
     return null;
   }
@@ -2105,7 +2170,8 @@ function renderSafetyTrendChart(suburb) {
 
   if (showSafetyTrendPrediction) {
     chartData.datasets.forEach((dataset) => {
-      const trend = fitLinearTrendFromRecentYears(chartData.originalLabels, dataset.values, 5);
+      // const trend = fitLinearTrendFromRecentYears(chartData.originalLabels, dataset.values, 5);
+      const trend = fitRidgeTrendFromRecentYears(chartData.originalLabels, dataset.values, 5, 1);
 
       if (trend) {
         predictionMaxValue = Math.max(predictionMaxValue, trend.predictedNextValue);
