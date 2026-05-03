@@ -813,8 +813,9 @@ function loadLeaflet() {
   });
 }
 
-/* ─── ABS SA2 name → real OSM search term ───────────────────────── */
-// Suburbs where Nominatim returns wrong/oversized boundaries → use fixed coords + zoom
+/* ─── ABS SA2 name → OSM search config ──────────────────────────── */
+
+// Suburbs that do not resolve cleanly in OSM boundary searches
 const ABS_FIXED_COORDS = {
   "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
   "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
@@ -822,187 +823,372 @@ const ABS_FIXED_COORDS = {
   "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
 };
 
+// ABS compound names → preferred OSM suburb name
 const ABS_NAME_MAP = {
   "Melbourne CBD - East":            null,
   "Melbourne CBD - North":           null,
   "Melbourne CBD - West":            null,
   "Carlton North - Princes Hill":    "Carlton North",
-  "Richmond (South) - Cremorne":     "Cremorne Melbourne",
-  "Richmond - North":                "Richmond Melbourne",
+  "Richmond (South) - Cremorne":     "Cremorne",
+  "Richmond - North":                "Richmond",
   "South Yarra - North":             "South Yarra",
   "South Yarra - South":             "South Yarra",
   "South Yarra - West":              "South Yarra",
   "St Kilda - Central":              "St Kilda",
   "St Kilda - West":                 "St Kilda West",
-  "Brunswick - North":               "Brunswick Melbourne",
-  "Brunswick - South":               "Brunswick Melbourne",
+  "Brunswick - North":               "Brunswick",
+  "Brunswick - South":               "Brunswick",
   "West Melbourne - Industrial":     "West Melbourne",
   "West Melbourne - Residential":    "West Melbourne",
-  "Sydney (North) - Millers Point":  "Millers Point Sydney",
-  "Sydney (South) - Haymarket":      "Haymarket Sydney",
-  "Perth (North) - Highgate":        "Highgate Perth",
-  "Perth (West) - Northbridge":      "Northbridge Perth",
-  "Perth - Evandale":                "Evandale Perth",
-  "Brisbane Port - Lytton":          "Lytton Brisbane",
+  "Donvale - Park Orchards":         "Donvale",
+  "Sydney (North) - Millers Point":  "Millers Point",
+  "Sydney (South) - Haymarket":      "Haymarket",
+  "Perth (North) - Highgate":        "Highgate",
+  "Perth (West) - Northbridge":      "Northbridge",
+  "Perth - Evandale":                "Evandale",
+  "Brisbane Port - Lytton":          "Lytton",
   "Prahran - Windsor":               "Prahran",
   "North Sydney - Lavender Bay":     "Lavender Bay",
   "South Perth - Kensington":        "South Perth",
-  "South Yarra":                     "South Yarra",
 };
 
+// City bounding boxes (south, west, north, east) used to constrain searches
+const CITY_BBOX = {
+  melbourne: [-38.5, 144.3, -37.3, 146.0],
+  sydney:    [-34.3, 150.3, -33.2, 151.6],
+  brisbane:  [-28.0, 152.5, -26.8, 153.7],
+  adelaide:  [-35.4, 138.2, -34.4, 139.2],
+  perth:     [-32.7, 115.4, -31.3, 116.5],
+  canberra:  [-35.7, 148.8, -35.0, 149.5],
+};
+
+function getCityKey(cityName) {
+  return String(cityName || "").trim().toLowerCase().replace(/\s+/g, "");
+}
+
+function getOSMSearchCandidates(suburbName) {
+  const preferred = suburbName in ABS_NAME_MAP ? ABS_NAME_MAP[suburbName] : null;
+  const cleanedFull = String(suburbName || "").replace(/\s*\([^)]*\)/g, "").trim();
+  const parts = cleanedFull.split(/\s*-\s*/).map((part) => part.trim()).filter(Boolean);
+  const primary = parts[0] || cleanedFull;
+  const secondary = parts.length > 1 ? parts[1] : null;
+
+  return [...new Set([preferred, cleanedFull, primary, secondary].filter(Boolean))];
+}
+
+function scoreLookupResult(result) {
+  let score = 0;
+
+  if (result.geojson?.type === "Polygon" || result.geojson?.type === "MultiPolygon") score += 120;
+  if (result.class === "boundary") score += 70;
+  if (result.class === "place") score += 45;
+
+  const goodTypes = [
+    "suburb",
+    "neighbourhood",
+    "quarter",
+    "city_district",
+    "administrative",
+    "town",
+    "village",
+  ];
+  if (goodTypes.includes(result.type)) score += 55;
+
+  const rank = parseInt(result.place_rank || 30, 10);
+  if (rank >= 18 && rank <= 24) score += 35;
+  else if (rank < 16 || rank > 28) score -= 25;
+
+  return score;
+}
+
+/* ─── Phase 1: Overpass — suburb/admin boundaries inside the city bbox ── */
+async function overpassSuburbLookup(searchCandidates, cityName) {
+  const bbox = CITY_BBOX[getCityKey(cityName)];
+  if (!bbox) return null;
+
+  const [south, west, north, east] = bbox;
+  const overpassEndpoints = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+  ];
+
+  for (const candidate of searchCandidates) {
+    const safeName = candidate.replace(/"/g, '\"');
+    const query = `
+[out:json][timeout:20];
+(
+  relation["boundary"="administrative"]["name"="${safeName}"](${south},${west},${north},${east});
+  relation["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
+  relation["place"="neighbourhood"]["name"="${safeName}"](${south},${west},${north},${east});
+  relation["place"="quarter"]["name"="${safeName}"](${south},${west},${north},${east});
+  way["boundary"="administrative"]["name"="${safeName}"](${south},${west},${north},${east});
+  way["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
+  way["place"="neighbourhood"]["name"="${safeName}"](${south},${west},${north},${east});
+  node["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
+);
+out geom;
+`.trim();
+
+    for (const url of overpassEndpoints) {
+      try {
+        const res = await fetch(url, {
+          method: "POST",
+          body: query,
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          signal: AbortSignal.timeout(15000),
+        });
+        if (!res.ok) continue;
+
+        const data = await res.json();
+        if (!data.elements?.length) continue;
+
+        const scored = data.elements
+          .map((element) => ({
+            element,
+            score:
+              (element.type === "relation" ? 120 : element.type === "way" ? 80 : 20) +
+              (element.tags?.boundary === "administrative" ? 80 : 0) +
+              (element.tags?.place === "suburb" ? 60 : 0) +
+              (element.tags?.place === "neighbourhood" ? 40 : 0),
+          }))
+          .sort((a, b) => b.score - a.score);
+
+        const best = scored[0]?.element;
+        if (!best) continue;
+
+        const built = buildGeoJSONFromOverpass(best);
+        if (built) return built;
+      } catch {
+        // try next endpoint
+      }
+    }
+  }
+
+  return null;
+}
+
+function buildGeoJSONFromOverpass(element) {
+  if (element.type === "node") {
+    return {
+      lat: element.lat,
+      lon: element.lon,
+      geojson: null,
+      _source: "overpass-node",
+    };
+  }
+
+  if (element.type === "way" && element.geometry?.length) {
+    const coords = element.geometry.map((point) => [point.lon, point.lat]);
+    if (
+      coords[0][0] !== coords[coords.length - 1][0] ||
+      coords[0][1] !== coords[coords.length - 1][1]
+    ) {
+      coords.push(coords[0]);
+    }
+
+    const centroid = coords
+      .reduce((acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]], [0, 0])
+      .map((value) => value / coords.length);
+
+    return {
+      lat: centroid[1],
+      lon: centroid[0],
+      geojson: { type: "Polygon", coordinates: [coords] },
+      _source: "overpass-way",
+    };
+  }
+
+  if (element.type === "relation" && element.members) {
+    const outerRings = [];
+
+    for (const member of element.members) {
+      if (member.role === "outer" && member.geometry?.length) {
+        const coords = member.geometry.map((point) => [point.lon, point.lat]);
+        if (
+          coords[0][0] !== coords[coords.length - 1][0] ||
+          coords[0][1] !== coords[coords.length - 1][1]
+        ) {
+          coords.push(coords[0]);
+        }
+        outerRings.push(coords);
+      }
+    }
+
+    if (!outerRings.length) return null;
+
+    const allCoords = outerRings.flat();
+    const centroid = allCoords
+      .reduce((acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]], [0, 0])
+      .map((value) => value / allCoords.length);
+
+    const geojson =
+      outerRings.length === 1
+        ? { type: "Polygon", coordinates: [outerRings[0]] }
+        : { type: "MultiPolygon", coordinates: outerRings.map((ring) => [ring]) };
+
+    return {
+      lat: centroid[1],
+      lon: centroid[0],
+      geojson,
+      _source: "overpass-relation",
+    };
+  }
+
+  return null;
+}
+
+/* ─── Phase 2: Nominatim — bounded city lookup with candidate scoring ─ */
+async function nominatimSuburbLookup(searchCandidates, cityName) {
+  const bbox = CITY_BBOX[getCityKey(cityName)];
+  if (!bbox) return null;
+
+  const [south, west, north, east] = bbox;
+  let bestMatch = null;
+  let bestScore = -Infinity;
+
+  for (const candidate of searchCandidates) {
+    const params = new URLSearchParams({
+      q: `${candidate}, ${cityName}, Australia`,
+      format: "json",
+      limit: "10",
+      polygon_geojson: "1",
+      addressdetails: "1",
+      "accept-language": "en",
+      viewbox: `${west},${north},${east},${south}`,
+      bounded: "1",
+    });
+
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
+        signal: AbortSignal.timeout(12000),
+      });
+      if (!res.ok) continue;
+
+      const results = await res.json();
+      if (!results.length) continue;
+
+      const inCity = results.filter((result) => {
+        const lat = parseFloat(result.lat);
+        const lon = parseFloat(result.lon);
+        return lat >= south && lat <= north && lon >= west && lon <= east;
+      });
+
+      for (const result of inCity) {
+        const score = scoreLookupResult(result);
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = result;
+        }
+      }
+    } catch {
+      // try next candidate
+    }
+  }
+
+  if (!bestMatch) return null;
+
+  return {
+    lat: parseFloat(bestMatch.lat),
+    lon: parseFloat(bestMatch.lon),
+    geojson: bestMatch.geojson || null,
+    _source: "nominatim",
+  };
+}
+
+/* ─── Main map builder ──────────────────────────────────────────────── */
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
+
   try {
-    // ── Fixed-coord suburbs (ABS names not in OSM) ──────────────────────────
+    if (minimapMap) {
+      try {
+        minimapMap.remove();
+      } catch {}
+      minimapMap = null;
+      minimapMarkers = [];
+      minimapCenter = null;
+      minimapBounds = null;
+    }
+
     const fixed = ABS_FIXED_COORDS[suburbName];
     if (fixed) {
       minimapCenter = [fixed.lat, fixed.lon];
       minimapBounds = null;
-      const mapEl = document.createElement("div");
-      mapEl.id = "leafletMap";
-      mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
-      frame.style.height = "380px";
-      frame.style.minHeight = "380px";
-      frame.innerHTML = "";
-      frame.appendChild(mapEl);
-      minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: "abcd", maxZoom: 19,
-      }).addTo(minimapMap);
-      // No real boundary available — fall back to 1km circle
-      L.circle(minimapCenter, {
-        radius: 1000, color: "#735cff", weight: 1.5,
-        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
-        interactive: false,
-      }).addTo(minimapMap);
-      setTimeout(() => minimapMap.invalidateSize(), 300);
-      await fetchAndRenderAll(minimapCenter);
+      renderMap(frame, minimapCenter, null, fixed.zoom || 14);
       return;
     }
 
-    // ── Nominatim lookup ────────────────────────────────────────────────────
-    // Use structured search first (suburb= param) so Nominatim matches the
-    // administrative boundary rather than a street or building with the same name.
-    const mapped = ABS_NAME_MAP[suburbName];
-    const parts  = suburbName.split(/\s*-\s*/).map(s => s.trim()).filter(Boolean);
-    const candidates = [...new Set([mapped, parts[0], parts.length > 1 ? parts[1] : null].filter(Boolean))];
-
-    // Score a result: higher = better match for an SA2 suburb boundary
-    function scoreResult(r) {
-      let s = 0;
-      if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") s += 100;
-      if (r.class === "boundary") s += 60;
-      if (r.class === "place")    s += 40;
-      const goodTypes = ["suburb","neighbourhood","quarter","village","town","municipality","city_district","administrative"];
-      if (goodTypes.includes(r.type)) s += 50;
-      // place_rank 20-22 is suburb level in Nominatim; penalise anything too fine or too coarse
-      const rank = parseInt(r.place_rank || 30);
-      if (rank >= 18 && rank <= 24) s += 30;
-      else if (rank < 18 || rank > 28) s -= 20;
-      return s;
-    }
-
-    let nominatimData = null;
-
-    for (const name of candidates) {
-      // 1️⃣ Structured query: suburb + city (most precise)
-      const structuredParams = new URLSearchParams({
-        suburb: name,
-        city: cityName,
-        country: "Australia",
-        format: "json", limit: "6",
-        polygon_geojson: "1",
-        addressdetails: "1",
-        "accept-language": "en",
-      });
-      // 2️⃣ Free-text fallback
-      const freeParams = new URLSearchParams({
-        q: `${name}, ${cityName}, Australia`,
-        format: "json", limit: "8",
-        polygon_geojson: "1",
-        addressdetails: "1",
-        "accept-language": "en",
-      });
-
-      for (const params of [structuredParams, freeParams]) {
-        try {
-          const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
-          if (!res.ok) continue;
-          const results = await res.json();
-          if (!results.length) continue;
-
-          // Pick the highest-scoring result
-          const scored = results
-            .map(r => ({ r, score: scoreResult(r) }))
-            .sort((a, b) => b.score - a.score);
-
-          const best = scored[0];
-          // Accept if it has a decent boundary polygon, otherwise keep trying
-          if (best.score >= 100) { nominatimData = best.r; break; }
-          // Keep as fallback if nothing better found
-          if (!nominatimData || best.score > scoreResult(nominatimData)) {
-            nominatimData = best.r;
-          }
-        } catch (e) { /* try next */ }
-      }
-
-      if (nominatimData && scoreResult(nominatimData) >= 100) break;
-    }
-
-    if (!nominatimData) {
+    const candidates = getOSMSearchCandidates(suburbName);
+    if (!candidates.length) {
       frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
       return;
     }
 
-    const lat = parseFloat(nominatimData.lat);
-    const lon = parseFloat(nominatimData.lon);
-    minimapCenter = [lat, lon];
-
-    const mapEl = document.createElement("div");
-    mapEl.id = "leafletMap";
-    mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
-    frame.style.height = "380px";
-    frame.style.minHeight = "380px";
-    frame.innerHTML = "";
-    frame.appendChild(mapEl);
-
-    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: "abcd", maxZoom: 19,
-    }).addTo(minimapMap);
-
-    // ── Draw suburb boundary from Nominatim geojson ─────────────────────────
-    if (nominatimData.geojson?.type === "Polygon" || nominatimData.geojson?.type === "MultiPolygon") {
-      const boundaryLayer = L.geoJSON(nominatimData.geojson, {
-        style: {
-          color: "#735cff", weight: 2.5, opacity: 0.85,
-          dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.07,
-        },
-        interactive: false,
-      }).addTo(minimapMap);
-
-      minimapBounds = boundaryLayer.getBounds();
-      minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
-      setTimeout(() => minimapMap.invalidateSize(), 300);
-    } else {
-      // No polygon — fall back to 1km circle centred view
-      minimapBounds = null;
-      L.circle(minimapCenter, {
-        radius: 1000, color: "#735cff", weight: 1.5,
-        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
-        interactive: false,
-      }).addTo(minimapMap);
-      minimapMap.setView(minimapCenter, 14);
-      setTimeout(() => minimapMap.invalidateSize(), 300);
+    let locationData = await overpassSuburbLookup(candidates, cityName);
+    if (!locationData) {
+      locationData = await nominatimSuburbLookup(candidates, cityName);
     }
 
-    await fetchAndRenderAll(minimapCenter);
+    if (!locationData) {
+      frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
+      return;
+    }
+
+    minimapCenter = [locationData.lat, locationData.lon];
+    renderMap(frame, minimapCenter, locationData.geojson, 14);
   } catch (err) {
     frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
     console.error("MiniMap error:", err);
   }
+}
+
+function renderMap(frame, center, geojson, defaultZoom) {
+  const mapEl = document.createElement("div");
+  mapEl.id = "leafletMap";
+  mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+  frame.style.height = "380px";
+  frame.style.minHeight = "380px";
+  frame.innerHTML = "";
+  frame.appendChild(mapEl);
+
+  minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19,
+  }).addTo(minimapMap);
+
+  if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
+    const boundaryLayer = L.geoJSON(geojson, {
+      style: {
+        color: "#735cff",
+        weight: 2.5,
+        opacity: 0.85,
+        dashArray: "6 4",
+        fillColor: "#735cff",
+        fillOpacity: 0.07,
+      },
+      interactive: false,
+    }).addTo(minimapMap);
+
+    minimapBounds = boundaryLayer.getBounds();
+    minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
+  } else {
+    minimapBounds = null;
+    L.circle(center, {
+      radius: 1000,
+      color: "#735cff",
+      weight: 1.5,
+      dashArray: "6 4",
+      fillColor: "#735cff",
+      fillOpacity: 0.04,
+      interactive: false,
+    }).addTo(minimapMap);
+    minimapMap.setView(center, defaultZoom);
+  }
+
+  setTimeout(() => minimapMap.invalidateSize(), 300);
+  fetchAndRenderAll(center);
 }
 
 // ── POI category config ──────────────────────────────────────────────────────
