@@ -1669,38 +1669,59 @@ function setupRiskSummaryToggle(suburb, safety) {
 
 /* -------- Safety Indicator (US 6.1) ------------------ */
 
-function hasSafetySeries(suburb, seriesKey) {
-  const series = seriesKey === "otherCrimesByYear"
-    ? getOtherCrimesByYear(suburb)
-    : suburb[seriesKey] || {};
-
-  // True if this category has at least one valid numeric value.
-  return Object.values(series).some((value) => {
-    return value !== null && value !== undefined && !Number.isNaN(Number(value));
-  });
+function isValidCrimeValue(value) {
+  return value !== null &&
+    value !== undefined &&
+    value !== "" &&
+    Number.isFinite(Number(value));
 }
 
-// Calculate Other Crimes count
-function getOtherCrimesByYear(suburb) {
-  const totalSeries = suburb.crimeCountByYear || {};
+function getCrimeCountByYear(suburb) {
   const violentSeries = suburb.violentCrimesByYear || {};
   const propertySeries = suburb.propertyCrimesByYear || {};
+  const otherSeries = suburb.otherCrimesByYear || {};
 
-  const years = Object.keys(totalSeries);
+  const years = [
+    ...new Set([
+      ...Object.keys(violentSeries),
+      ...Object.keys(propertySeries),
+      ...Object.keys(otherSeries)
+    ])
+  ].sort((a, b) => Number(a) - Number(b));
 
-  const otherSeries = {};
+  const totalSeries = {};
 
   years.forEach((year) => {
-    const total = Number(totalSeries[year] || 0);
-    const violent = Number(violentSeries[year] || 0);
-    const property = Number(propertySeries[year] || 0);
+    const violent = isValidCrimeValue(violentSeries[year])
+      ? Number(violentSeries[year])
+      : 0;
 
-    // Other crimes = total crimes - violent crimes - property crimes.
-    // Math.max prevents negative values if a source has minor data inconsistencies.
-    otherSeries[year] = Math.max(total - violent - property, 0);
+    const property = isValidCrimeValue(propertySeries[year])
+      ? Number(propertySeries[year])
+      : 0;
+
+    const other = isValidCrimeValue(otherSeries[year])
+      ? Number(otherSeries[year])
+      : 0;
+
+    totalSeries[year] = violent + property + other;
   });
 
-  return otherSeries;
+  return totalSeries;
+}
+
+function getSafetySeries(suburb, seriesKey) {
+  if (seriesKey === "crimeCountByYear") {
+    return getCrimeCountByYear(suburb);
+  }
+
+  return suburb[seriesKey] || {};
+}
+
+function hasSafetySeries(suburb, seriesKey) {
+  const series = getSafetySeries(suburb, seriesKey);
+
+  return Object.values(series).some((value) => isValidCrimeValue(value));
 }
 
 function setupSafetyChartControls(suburb) {
@@ -1767,7 +1788,7 @@ function formatNumber(value) {
 
 function getSafetyIndicator(suburb) {
   const population = suburb.population ?? null;
-  const crimeCountByYear = suburb.crimeCountByYear || {};
+  const crimeCountByYear = getCrimeCountByYear(suburb);
 
   const years = Object.keys(crimeCountByYear).sort((a, b) => Number(a) - Number(b));
 
@@ -1785,21 +1806,11 @@ function getSafetyIndicator(suburb) {
   const latestYear = years[years.length - 1];
   const latestCrime = Number(crimeCountByYear[latestYear]);
 
-  const recentYears = years.slice(-3);
-  const numericPopulation = Number(population);
-
-  // Calculate trend using a linear fit over the latest three years of crime data.
-  const trendValues = recentYears.map((year) => {
-    const crimeCount = Number(crimeCountByYear[year]);
-
-    if (numericPopulation && numericPopulation > 0) {
-      return (crimeCount / numericPopulation) * 1000;
-    }
-
-    return crimeCount;
+  const trendValues = years.map((year) => {
+    return Number(crimeCountByYear[year]);
   });
 
-  const trendLabel = getLinearTrend(trendValues);
+  const trendLabel = getRidgeTrendLabelFromSeries(years, trendValues, 5, 1);
   const latestCrimeRate = population
   ? ((latestCrime / population) * 1000).toFixed(2)
   : null;
@@ -1812,38 +1823,6 @@ function getSafetyIndicator(suburb) {
   latestCrimeRateLabel: latestCrimeRate,
   trendLabel
   };
-}
-
-// Calculate trend using linear fit over the latest three years
-function getLinearTrend(values) {
-  if (!values || values.length < 2) {
-    return "Not enough data";
-  }
-
-  const n = values.length;
-  const xValues = values.map((_, index) => index);
-
-  const xMean = xValues.reduce((sum, x) => sum + x, 0) / n;
-  const yMean = values.reduce((sum, y) => sum + y, 0) / n;
-
-  let numerator = 0;
-  let denominator = 0;
-
-  for (let i = 0; i < n; i++) {
-    numerator += (xValues[i] - xMean) * (values[i] - yMean);
-    denominator += (xValues[i] - xMean) ** 2;
-  }
-
-  const slope = denominator === 0 ? 0 : numerator / denominator;
-
-  const average = yMean || 1;
-  const relativeSlope = Math.abs(slope) / average;
-
-  if (relativeSlope < 0.05) {
-    return "Stable";
-  }
-
-  return slope > 0 ? "Increasing" : "Decreasing";
 }
 
 /*
@@ -1968,6 +1947,36 @@ function fitRidgeTrendFromRecentYears(years, values, recentCount = 5, lambda = 1
   };
 }
 
+function getRidgeTrendLabelFromSeries(years, values, recentCount = 5, lambda = 1) {
+  const trend = fitRidgeTrendFromRecentYears(years, values, recentCount, lambda);
+
+  if (!trend) {
+    return "Not enough data";
+  }
+
+  const fittedValues = trend.fittedValues || [];
+
+  if (fittedValues.length < 2) {
+    return "Not enough data";
+  }
+
+  const firstFittedValue = Number(fittedValues[0]);
+  const lastFittedValue = Number(fittedValues[fittedValues.length - 1]);
+
+  const average = fittedValues.reduce((sum, value) => {
+    return sum + Number(value);
+  }, 0) / fittedValues.length;
+
+  const change = lastFittedValue - firstFittedValue;
+  const relativeChange = average ? Math.abs(change) / average : 0;
+
+  if (relativeChange < 0.07) {
+    return "Stable";
+  }
+
+  return change > 0 ? "Increasing" : "Decreasing";
+}
+
 function buildTrendDataset(dataset, labels) {
   // const trend = fitLinearTrendFromRecentYears(labels, dataset.values, 5);
   const trend = fitRidgeTrendFromRecentYears(labels, dataset.values, 5, 1);
@@ -2025,9 +2034,7 @@ function getSafetyChartData(suburb) {
   const years = [
     ...new Set(
       selectedOptions.flatMap((option) => {
-        const series = option.key === "otherCrimesByYear"
-          ? getOtherCrimesByYear(suburb)
-          : suburb[option.key] || {};
+        const series = getSafetySeries(suburb, option.key);
 
         return Object.keys(series).filter((year) => {
           const value = series[year];
@@ -2045,9 +2052,7 @@ function getSafetyChartData(suburb) {
   let maxValue = 0;
 
   const datasets = selectedOptions.map((option) => {
-    const series = option.key === "otherCrimesByYear"
-      ? getOtherCrimesByYear(suburb)
-      : suburb[option.key] || {};
+    const series = getSafetySeries(suburb, option.key);
 
     const values = years.map((year) => {
       const value = series[year];
@@ -2126,9 +2131,10 @@ function renderSafetyTrendChart(suburb) {
   if (!chartData) {
     console.warn("No safety chart data available.", {
       population: suburb.population,
-      crimeCountByYear: suburb.crimeCountByYear,
+      crimeCountByYear: getCrimeCountByYear(suburb),
       violentCrimesByYear: suburb.violentCrimesByYear,
-      propertyCrimesByYear: suburb.propertyCrimesByYear
+      propertyCrimesByYear: suburb.propertyCrimesByYear,
+      otherCrimesByYear: suburb.otherCrimesByYear
     });
     return;
   }
