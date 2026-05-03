@@ -1,5 +1,5 @@
 /*
-  SettleSmart - Landing page onboarding flow
+  Settle-Smart - Landing page onboarding flow
   -----------------------------------------
   This file handles Epic 1 (Guided Preference Input).
 */
