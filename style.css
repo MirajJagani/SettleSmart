@@ -2830,6 +2830,12 @@ body.landing-page.site-locked .page-glow {
   border-color: rgba(245, 158, 11, 0.46);
 }
 
+.safety-chart-toggle.active[data-safety-series="otherCrimesByYear"] {
+  background: rgba(100, 116, 139, 0.14);
+  color: #475569;
+  border-color: rgba(100, 116, 139, 0.46);
+}
+
 .safety-chart-toggle:disabled {
   opacity: 0.45;
   cursor: not-allowed;

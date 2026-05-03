@@ -38,6 +38,12 @@ const SAFETY_SERIES_OPTIONS = [
     label: "Violent crimes",
     borderColor: "#ef4444",
     backgroundColor: "rgba(239, 68, 68, 0.10)"
+  },
+  {
+    key: "otherCrimesByYear",
+    label: "Other crimes",
+    borderColor: "#64748b",
+    backgroundColor: "rgba(100, 116, 139, 0.10)"
   }
 ];
 
@@ -342,6 +348,15 @@ function initSuburbPage() {
                 <button
                   type="button"
                   class="safety-chart-toggle"
+                  data-safety-series="propertyCrimesByYear"
+                  ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
+                >
+                  Property crimes
+                </button>
+
+                <button
+                  type="button"
+                  class="safety-chart-toggle"
                   data-safety-series="violentCrimesByYear"
                   ${hasSafetySeries(suburb, "violentCrimesByYear") ? "" : "disabled"}
                 >
@@ -351,10 +366,10 @@ function initSuburbPage() {
                 <button
                   type="button"
                   class="safety-chart-toggle"
-                  data-safety-series="propertyCrimesByYear"
-                  ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
+                  data-safety-series="otherCrimesByYear"
+                  ${hasSafetySeries(suburb, "otherCrimesByYear") ? "" : "disabled"}
                 >
-                  Property crimes
+                  Other crimes
                 </button>
               </div>
               
@@ -1638,12 +1653,37 @@ function setupRiskSummaryToggle(suburb, safety) {
 /* -------- Safety Indicator (US 6.1) ------------------ */
 
 function hasSafetySeries(suburb, seriesKey) {
-  const series = suburb[seriesKey] || {};
+  const series = seriesKey === "otherCrimesByYear"
+    ? getOtherCrimesByYear(suburb)
+    : suburb[seriesKey] || {};
 
-  // True if this category has at least one value
+  // True if this category has at least one valid numeric value.
   return Object.values(series).some((value) => {
     return value !== null && value !== undefined && !Number.isNaN(Number(value));
   });
+}
+
+// Calculate Other Crimes count
+function getOtherCrimesByYear(suburb) {
+  const totalSeries = suburb.crimeCountByYear || {};
+  const violentSeries = suburb.violentCrimesByYear || {};
+  const propertySeries = suburb.propertyCrimesByYear || {};
+
+  const years = Object.keys(totalSeries);
+
+  const otherSeries = {};
+
+  years.forEach((year) => {
+    const total = Number(totalSeries[year] || 0);
+    const violent = Number(violentSeries[year] || 0);
+    const property = Number(propertySeries[year] || 0);
+
+    // Other crimes = total crimes - violent crimes - property crimes.
+    // Math.max prevents negative values if a source has minor data inconsistencies.
+    otherSeries[year] = Math.max(total - violent - property, 0);
+  });
+
+  return otherSeries;
 }
 
 function setupSafetyChartControls(suburb) {
@@ -1786,7 +1826,9 @@ function getSafetyChartData(suburb) {
   const years = [
     ...new Set(
       selectedOptions.flatMap((option) => {
-        const series = suburb[option.key] || {};
+        const series = option.key === "otherCrimesByYear"
+          ? getOtherCrimesByYear(suburb)
+          : suburb[option.key] || {};
 
         return Object.keys(series).filter((year) => {
           const value = series[year];
@@ -1804,7 +1846,9 @@ function getSafetyChartData(suburb) {
   let maxValue = 0;
 
   const datasets = selectedOptions.map((option) => {
-    const series = suburb[option.key] || {};
+    const series = option.key === "otherCrimesByYear"
+      ? getOtherCrimesByYear(suburb)
+      : suburb[option.key] || {};
 
     const values = years.map((year) => {
       const value = series[year];
@@ -1905,6 +1949,12 @@ function renderSafetyTrendChart(suburb) {
     if (seriesKey === "propertyCrimesByYear") {
       gradient.addColorStop(0, "rgba(245, 158, 11, 0.22)");
       gradient.addColorStop(1, "rgba(245, 158, 11, 0.02)");
+      return gradient;
+    }
+
+    if (seriesKey === "otherCrimesByYear") {
+      gradient.addColorStop(0, "rgba(100, 116, 139, 0.22)");
+      gradient.addColorStop(1, "rgba(100, 116, 139, 0.02)");
       return gradient;
     }
 
