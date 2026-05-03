@@ -337,7 +337,7 @@ function initSuburbPage() {
                 </article>
               </div>
 
-              <div class="safety-chart-controls" id="safetyChartControls" aria-label="Safety chart filters">
+              <div class="safety-chart-controls safety-indicator-controls" id="safetyChartControls" aria-label="Safety chart filters">
                 <div class="safety-chart-control-group">
                   <button
                     type="button"
@@ -389,6 +389,10 @@ function initSuburbPage() {
               <div class="safety-chart-wrap">
                 <canvas id="safetyTrendChart"></canvas>
               </div>
+
+              <p class="safety-data-source-note">
+                Source: official state crime data, summarised by suburb and year where available.
+              </p>
             `
             : `
               <div class="safety-empty-state compact">
