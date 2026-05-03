@@ -2906,3 +2906,124 @@ body.landing-page.site-locked .page-glow {
     grid-template-columns: 1fr;
   }
 }
+
+.detail-page .priority-match-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.detail-page .priority-match-row {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.detail-page .priority-match-status {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.detail-page .priority-match-status--match {
+  background: rgba(47, 201, 177, 0.14);
+  color: #16927f;
+}
+
+.detail-page .priority-match-status--partial {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b56f00;
+}
+
+.detail-page .priority-match-status--no-match {
+  background: rgba(239, 68, 68, 0.14);
+  color: #c43d3d;
+}
+
+.detail-page .priority-match-content {
+  min-width: 0;
+}
+
+.detail-page .priority-match-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.detail-page .priority-match-top h4 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.detail-page .priority-match-summary {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.detail-page .priority-match-detail {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.detail-page .priority-match-pill {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.detail-page .priority-match-pill--match {
+  background: rgba(47, 201, 177, 0.12);
+  color: #16927f;
+}
+
+.detail-page .priority-match-pill--partial {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b56f00;
+}
+
+.detail-page .priority-match-pill--no-match {
+  background: rgba(239, 68, 68, 0.12);
+  color: #c43d3d;
+}
+
+@media (max-width: 767.98px) {
+  .detail-page .priority-match-row {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .detail-page .priority-match-status {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  .detail-page .priority-match-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -62,7 +62,6 @@ function initSuburbPage() {
   }
 
   const score = window.getSuburbScore(suburb, preferences);
-  const reasons = window.buildReasonList(suburb, preferences);
   const community = typeof window.getEpic4CommunityData === "function"
     ? window.getEpic4CommunityData(suburb)
     : getFallbackCommunity(suburb);
@@ -73,6 +72,7 @@ function initSuburbPage() {
 
   const safety = getSafetyIndicator(suburb);
   const heroImage = cityHeroImages[normalizeCityKey(suburb.city)] || cityHeroImages.melbourne;
+  const priorityRows = buildPriorityMatchRows(suburb, preferences);
 
   suburbProfile.innerHTML = `
     <div class="suburb-detail-shell">
@@ -104,15 +104,15 @@ function initSuburbPage() {
                 </div>
                 <div class="suburb-mini-card">
                   <span>Housing</span>
-                  <strong>${window.formatChoice(preferences.housing)}</strong>
+                  <strong>${formatChoiceList(preferences.housing)}</strong>
                 </div>
                 <div class="suburb-mini-card">
                   <span>Commute</span>
-                  <strong>${window.formatChoice(preferences.commute)}</strong>
+                  <strong>${formatChoiceList(preferences.commute)}</strong>
                 </div>
                 <div class="suburb-mini-card">
                   <span>Lifestyle</span>
-                  <strong>${window.formatChoice(preferences.lifestyle)}</strong>
+                  <strong>${formatChoiceList(preferences.lifestyle)}</strong>
                 </div>
                 <div class="suburb-mini-card">
                   <span>Language</span>
@@ -121,6 +121,10 @@ function initSuburbPage() {
                 <div class="suburb-mini-card">
                   <span>Culture</span>
                   <strong>${preferences.culture || "Not set"}</strong>
+                </div>
+                <div class="suburb-mini-card">
+                  <span>University</span>
+                  <strong>${preferences.university || "Not set"}</strong>
                 </div>
               </div>
             </div>
@@ -131,10 +135,14 @@ function initSuburbPage() {
       <section class="row g-4">
         <div class="col-12 col-xl-7">
           <div class="info-card suburb-detail-card h-100">
-            <h3>Why this suburb fits you</h3>
-            <ul class="suburb-detail-list">
-              ${reasons.map((reason) => `<li>${reason}</li>`).join("")}
-            </ul>
+            <div class="suburb-section-head">
+              <h3>How it matches your priorities</h3>
+              <p>See where this suburb aligns with your selected preferences and where it may be a partial fit.</p>
+            </div>
+
+            <div class="priority-match-grid">
+              ${priorityRows.map((row) => renderPriorityMatchRow(row)).join("")}
+            </div>
           </div>
         </div>
 
@@ -317,6 +325,17 @@ function initSuburbPage() {
 
         <div class="suburb-multicultural-grid">
           <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">Community comfort details</span>
+            <ul class="suburb-detail-list minimal">
+              <li>Common language cues: ${suburb.commonLanguages.join(", ")}</li>
+              <li>Community strength: ${community.communityStrength}%</li>
+              <li>Overseas-born share: ${community.overseasBornShare}</li>
+              <li>Specialty shops nearby: ${community.specialtyShops}</li>
+              <li>Places of worship nearby: ${community.placesOfWorship}</li>
+            </ul>
+          </article>
+
+          <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Cultural amenities</span>
             <ul class="suburb-detail-list minimal">
               ${community.keyPlaces.map((place) => `<li>${place}</li>`).join("")}
@@ -325,12 +344,12 @@ function initSuburbPage() {
 
           <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">Practical community support</span>
-            <div class="suburb-pill-wrap">
-              <span class="signal-pill">Specialty shops: ${community.specialtyShops}</span>
-              <span class="signal-pill">Places of worship: ${community.placesOfWorship}</span>
-              <span class="signal-pill">English support: ${window.formatChoice(suburb.englishSupport)}</span>
-              <span class="signal-pill">Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</span>
-            </div>
+            <ul class="suburb-detail-list minimal">
+              <li>English support: ${window.formatChoice(suburb.englishSupport)}</li>
+              <li>Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</li>
+              <li>Culture signal: ${window.formatChoice(suburb.culture)}</li>
+              <li>University access: ${window.formatChoice(suburb.university)}</li>
+            </ul>
           </article>
 
           <article class="suburb-profile-card">
@@ -343,11 +362,389 @@ function initSuburbPage() {
       </section>
     </div>
   `;
+
   initMiniMap(suburb.suburb, suburb.city);
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
   });
+}
+
+function getPreferenceArray(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string" && value.trim()) return [value];
+  return [];
+}
+
+function formatChoiceList(value) {
+  const values = getPreferenceArray(value);
+  if (!values.length) return "Not set";
+  return values.map((item) => window.formatChoice(item)).join(", ");
+}
+
+function parseRentRange(rangeText) {
+  const match = String(rangeText || "").match(/\$?([\d,]+)\s*[–-]\s*\$?([\d,]+)/);
+  if (!match) return null;
+
+  return {
+    min: Number(match[1].replace(/,/g, "")),
+    max: Number(match[2].replace(/,/g, ""))
+  };
+}
+
+function getStatusMeta(status) {
+  if (status === "match") {
+    return { symbol: "✓", label: "Match", className: "match" };
+  }
+  if (status === "partial") {
+    return { symbol: "~", label: "Partial", className: "partial" };
+  }
+  return { symbol: "✕", label: "No match", className: "no-match" };
+}
+
+function renderPriorityMatchRow(row) {
+  const meta = getStatusMeta(row.status);
+
+  return `
+    <div class="priority-match-row priority-match-row--${meta.className}">
+      <div class="priority-match-status priority-match-status--${meta.className}">
+        ${meta.symbol}
+      </div>
+
+      <div class="priority-match-content">
+        <div class="priority-match-top">
+          <div>
+            <h4>${row.label}</h4>
+            <p class="priority-match-summary">${row.summary}</p>
+          </div>
+
+          <span class="priority-match-pill priority-match-pill--${meta.className}">
+            ${meta.label}
+          </span>
+        </div>
+
+        <p class="priority-match-detail">${row.detail}</p>
+      </div>
+    </div>
+  `;
+}
+
+function buildPriorityMatchRows(suburb, preferences) {
+  return [
+    getBudgetPriorityMatch(suburb, preferences),
+    getHousingPriorityMatch(suburb, preferences),
+    getCommutePriorityMatch(suburb, preferences),
+    getLifestylePriorityMatch(suburb, preferences),
+    getLanguagePriorityMatch(suburb, preferences),
+    getCulturePriorityMatch(suburb, preferences),
+    getUniversityPriorityMatch(suburb, preferences)
+  ];
+}
+
+function getBudgetPriorityMatch(suburb, preferences) {
+  const budget = Number(preferences.budget || 0);
+  const rentRange = parseRentRange(suburb.rentRange);
+
+  if (!budget || !rentRange) {
+    return {
+      label: "Budget",
+      status: "partial",
+      summary: "Budget fit is available only as a broad estimate.",
+      detail: `Your budget is $${preferences.budget || "-"} per week and this suburb is listed at ${suburb.rentRange || "Not available"}.`
+    };
+  }
+
+  if (budget >= rentRange.max) {
+    return {
+      label: "Budget",
+      status: "match",
+      summary: "This suburb fits within your weekly rent budget.",
+      detail: `Your budget is $${budget}/week and the typical range here is ${suburb.rentRange}.`
+    };
+  }
+
+  if (budget >= rentRange.min) {
+    return {
+      label: "Budget",
+      status: "partial",
+      summary: "This suburb may fit your budget depending on the property.",
+      detail: `Your budget is $${budget}/week and the suburb range is ${suburb.rentRange}, so some listings may still be suitable.`
+    };
+  }
+
+  return {
+    label: "Budget",
+    status: "no-match",
+    summary: "This suburb is likely above your preferred weekly budget.",
+    detail: `Your budget is $${budget}/week while the suburb typically ranges ${suburb.rentRange}.`
+  };
+}
+
+function getHousingPriorityMatch(suburb, preferences) {
+  const selected = getPreferenceArray(preferences.housing);
+  const available = getPreferenceArray(suburb.housing);
+  const matched = selected.filter((item) => available.includes(item));
+  const missing = selected.filter((item) => !available.includes(item));
+
+  if (!selected.length) {
+    return {
+      label: "Housing",
+      status: "partial",
+      summary: "No housing preference was saved.",
+      detail: "A clearer housing match can be shown once a housing preference is selected."
+    };
+  }
+
+  if (matched.length === selected.length) {
+    return {
+      label: "Housing",
+      status: "match",
+      summary: "This suburb supports your selected housing style.",
+      detail: `Available options here align with ${formatChoiceList(selected)}.`
+    };
+  }
+
+  if (matched.length > 0) {
+    return {
+      label: "Housing",
+      status: "partial",
+      summary: "This suburb supports some of your preferred housing styles.",
+      detail: `Available here: ${formatChoiceList(matched)}. Less aligned: ${formatChoiceList(missing)}.`
+    };
+  }
+
+  return {
+    label: "Housing",
+    status: "no-match",
+    summary: "This suburb does not strongly reflect your selected housing style.",
+    detail: `You selected ${formatChoiceList(selected)}, while this suburb is better known for ${formatChoiceList(available)}.`
+  };
+}
+
+function getCommutePreferenceScore(preferenceKey, suburb) {
+  const transportLevel = suburb.transport;
+  const universityLevel = suburb.university;
+
+  if (preferenceKey === "low-commute") {
+    if (universityLevel === "high") return 2;
+    if (universityLevel === "medium") return 1;
+    return 0;
+  }
+
+  if (preferenceKey === "public-transport" || preferenceKey === "bike-walk") {
+    if (transportLevel === "high") return 2;
+    if (transportLevel === "medium") return 1;
+    return 0;
+  }
+
+  return 0;
+}
+
+function getCommutePriorityMatch(suburb, preferences) {
+  const selected = getPreferenceArray(preferences.commute);
+
+  if (!selected.length) {
+    return {
+      label: "Commute",
+      status: "partial",
+      summary: "No commute preference was saved.",
+      detail: "A clearer commute match can be shown once a commute preference is selected."
+    };
+  }
+
+  const scores = selected.map((item) => getCommutePreferenceScore(item, suburb));
+  const average = scores.reduce((sum, value) => sum + value, 0) / scores.length;
+
+  if (average >= 1.5) {
+    return {
+      label: "Commute",
+      status: "match",
+      summary: "Transport and access signals support your commute priorities well.",
+      detail: `Transport is ${window.formatChoice(suburb.transport)} and university access is ${window.formatChoice(suburb.university)} for your selected commute needs.`
+    };
+  }
+
+  if (average >= 0.75) {
+    return {
+      label: "Commute",
+      status: "partial",
+      summary: "This suburb may support some of your commute needs, but not all of them.",
+      detail: `Transport is ${window.formatChoice(suburb.transport)} and university access is ${window.formatChoice(suburb.university)}.`
+    };
+  }
+
+  return {
+    label: "Commute",
+    status: "no-match",
+    summary: "This suburb is less aligned with your current commute priorities.",
+    detail: `Transport is ${window.formatChoice(suburb.transport)} and university access is ${window.formatChoice(suburb.university)} for the commute style you selected.`
+  };
+}
+
+function getLifestylePriorityMatch(suburb, preferences) {
+  const selected = getPreferenceArray(preferences.lifestyle);
+  const available = getPreferenceArray(suburb.lifestyle);
+  const matched = selected.filter((item) => available.includes(item));
+  const missing = selected.filter((item) => !available.includes(item));
+
+  if (!selected.length) {
+    return {
+      label: "Lifestyle",
+      status: "partial",
+      summary: "No lifestyle priorities were saved.",
+      detail: "A clearer lifestyle match can be shown once lifestyle priorities are selected."
+    };
+  }
+
+  if (matched.length === selected.length) {
+    return {
+      label: "Lifestyle",
+      status: "match",
+      summary: "This suburb strongly reflects your lifestyle priorities.",
+      detail: `It aligns with ${formatChoiceList(selected)}.`
+    };
+  }
+
+  if (matched.length > 0) {
+    return {
+      label: "Lifestyle",
+      status: "partial",
+      summary: "This suburb reflects some of your lifestyle priorities.",
+      detail: `Stronger fit for ${formatChoiceList(matched)}. Less aligned with ${formatChoiceList(missing)}.`
+    };
+  }
+
+  return {
+    label: "Lifestyle",
+    status: "no-match",
+    summary: "This suburb does not strongly reflect your selected lifestyle priorities.",
+    detail: `You selected ${formatChoiceList(selected)}, while this suburb is more associated with ${formatChoiceList(available)}.`
+  };
+}
+
+function getLanguagePriorityMatch(suburb, preferences) {
+  const selectedLanguage = String(preferences.language || "").trim();
+  const commonLanguages = suburb.commonLanguages || [];
+
+  if (!selectedLanguage) {
+    return {
+      label: "Language",
+      status: "partial",
+      summary: "No language preference was saved.",
+      detail: `Common languages here include ${commonLanguages.join(", ") || "Not available"}.`
+    };
+  }
+
+  if (commonLanguages.includes(selectedLanguage)) {
+    return {
+      label: "Language",
+      status: "match",
+      summary: "Your selected language is commonly spoken here.",
+      detail: `Common languages in this suburb include ${commonLanguages.join(", ")}.`
+    };
+  }
+
+  if (
+    suburb.englishSupport === "high" ||
+    suburb.englishSupport === "medium" ||
+    commonLanguages.includes("English")
+  ) {
+    return {
+      label: "Language",
+      status: "partial",
+      summary: "Your selected language is not a main signal here, but English support may still help.",
+      detail: `Common languages include ${commonLanguages.join(", ") || "Not available"}, and English support is ${window.formatChoice(suburb.englishSupport)}.`
+    };
+  }
+
+  return {
+    label: "Language",
+    status: "no-match",
+    summary: "This suburb does not strongly reflect your selected language preference.",
+    detail: `Common languages here are ${commonLanguages.join(", ") || "Not available"}.`
+  };
+}
+
+function getCulturePriorityMatch(suburb, preferences) {
+  const selectedCulture = String(preferences.culture || "").trim();
+  const culturalGroups = suburb.culturalGroups || [];
+
+  if (!selectedCulture) {
+    return {
+      label: "Culture",
+      status: "partial",
+      summary: "No cultural preference was saved.",
+      detail: `This suburb currently shows a ${window.formatChoice(suburb.culture)} culture signal.`
+    };
+  }
+
+  if (culturalGroups.includes(selectedCulture)) {
+    return {
+      label: "Culture",
+      status: "match",
+      summary: "This suburb shows a direct connection to your selected cultural background.",
+      detail: `Cultural groups here include ${culturalGroups.join(", ")}.`
+    };
+  }
+
+  if (
+    suburb.culture === "high" ||
+    suburb.culture === "medium" ||
+    suburb.recentArrival === "strong" ||
+    suburb.recentArrival === "medium"
+  ) {
+    return {
+      label: "Culture",
+      status: "partial",
+      summary: "This suburb has multicultural signals, even if your selected culture is not a direct match.",
+      detail: `Culture signal is ${window.formatChoice(suburb.culture)} and recent arrivals are ${window.formatChoice(suburb.recentArrival)}.`
+    };
+  }
+
+  return {
+    label: "Culture",
+    status: "no-match",
+    summary: "This suburb shows fewer cultural signals aligned with your selected background.",
+    detail: `Culture signal is ${window.formatChoice(suburb.culture)} and listed cultural groups are ${culturalGroups.join(", ") || "not available"}.`
+  };
+}
+
+function getUniversityPriorityMatch(suburb, preferences) {
+  const selectedUniversity = String(preferences.university || "").trim();
+
+  if (!selectedUniversity) {
+    return {
+      label: "University",
+      status: "partial",
+      summary: "No university was saved.",
+      detail: `This suburb currently shows ${window.formatChoice(suburb.university)} university access.`
+    };
+  }
+
+  if (suburb.university === "high") {
+    return {
+      label: "University",
+      status: "match",
+      summary: "This suburb shows strong university access for your selected study location.",
+      detail: `${selectedUniversity} is paired with a ${window.formatChoice(suburb.university)} university access signal here.`
+    };
+  }
+
+  if (suburb.university === "medium") {
+    return {
+      label: "University",
+      status: "partial",
+      summary: "This suburb may still work for university access, but it is not the strongest option.",
+      detail: `${selectedUniversity} is paired with a ${window.formatChoice(suburb.university)} university access signal here.`
+    };
+  }
+
+  return {
+    label: "University",
+    status: "no-match",
+    summary: "This suburb is less aligned with your selected university access needs.",
+    detail: `${selectedUniversity} is paired with a ${window.formatChoice(suburb.university)} university access signal here.`
+  };
 }
 
 function getFallbackCommunity(suburb) {
@@ -410,36 +807,25 @@ function initMiniMap(suburbName, cityName) {
         await loadLeaflet();
         await buildMap(suburbName, cityName);
       } else {
-        // Destroy the old map so a different suburb gets a fresh build
-        minimapMap.remove();
-        minimapMap = null;
-        minimapMarkers = [];
-        minimapCenter = null;
-        minimapBounds = null;
-        document.getElementById("minimapFrame").innerHTML = "";
-        await buildMap(suburbName, cityName);
+        setTimeout(() => minimapMap.invalidateSize(), 50);
       }
     }
   });
 
-  const filtersEl = document.getElementById("minimapFilters");
-  if (filtersEl && !filtersEl._listenerBound) {
-    filtersEl._listenerBound = true;
-    filtersEl.addEventListener("click", (e) => {
-      const btn = e.target.closest(".minimap-filter-btn");
-      if (!btn) return;
-      document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      activeAmenity = btn.dataset.amenity || "";
-      if (minimapMap && minimapCenter) {
-        if (activeAmenity === "") {
-          fetchAndRenderAll(minimapCenter);
-        } else {
-          fetchAndRenderPOI(activeAmenity, minimapCenter);
-        }
+  document.getElementById("minimapFilters").addEventListener("click", (e) => {
+    const btn = e.target.closest(".minimap-filter-btn");
+    if (!btn) return;
+    document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeAmenity = btn.dataset.amenity || "";
+    if (minimapMap && minimapCenter) {
+      if (activeAmenity === "") {
+        fetchAndRenderAll(minimapCenter);
+      } else {
+        fetchAndRenderPOI(activeAmenity, minimapCenter);
       }
-    });
-  }
+    }
+  });
 
 }
 
@@ -464,9 +850,8 @@ function loadLeaflet() {
   });
 }
 
-/* ─── ABS SA2 name → OSM search config ──────────────────────────── */
-
-// Suburbs that don't exist as OSM boundaries — use fixed coords directly
+/* ─── ABS SA2 name → real OSM search term ───────────────────────── */
+// Suburbs where Nominatim returns wrong/oversized boundaries → use fixed coords + zoom
 const ABS_FIXED_COORDS = {
   "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
   "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
@@ -474,308 +859,187 @@ const ABS_FIXED_COORDS = {
   "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
 };
 
-// ABS compound names → the actual OSM suburb name to search for
-// null = handled by ABS_FIXED_COORDS above
 const ABS_NAME_MAP = {
   "Melbourne CBD - East":            null,
   "Melbourne CBD - North":           null,
   "Melbourne CBD - West":            null,
   "Carlton North - Princes Hill":    "Carlton North",
-  "Richmond (South) - Cremorne":     "Cremorne",
-  "Richmond - North":                "Richmond",
+  "Richmond (South) - Cremorne":     "Cremorne Melbourne",
+  "Richmond - North":                "Richmond Melbourne",
   "South Yarra - North":             "South Yarra",
   "South Yarra - South":             "South Yarra",
   "South Yarra - West":              "South Yarra",
   "St Kilda - Central":              "St Kilda",
   "St Kilda - West":                 "St Kilda West",
-  "Brunswick - North":               "Brunswick",
-  "Brunswick - South":               "Brunswick",
+  "Brunswick - North":               "Brunswick Melbourne",
+  "Brunswick - South":               "Brunswick Melbourne",
   "West Melbourne - Industrial":     "West Melbourne",
   "West Melbourne - Residential":    "West Melbourne",
-  "Donvale - Park Orchards":         "Donvale",
-  "Sydney (North) - Millers Point":  "Millers Point",
-  "Sydney (South) - Haymarket":      "Haymarket",
-  "Perth (North) - Highgate":        "Highgate",
-  "Perth (West) - Northbridge":      "Northbridge",
-  "Perth - Evandale":                "Evandale",
-  "Brisbane Port - Lytton":          "Lytton",
+  "Sydney (North) - Millers Point":  "Millers Point Sydney",
+  "Sydney (South) - Haymarket":      "Haymarket Sydney",
+  "Perth (North) - Highgate":        "Highgate Perth",
+  "Perth (West) - Northbridge":      "Northbridge Perth",
+  "Perth - Evandale":                "Evandale Perth",
+  "Brisbane Port - Lytton":          "Lytton Brisbane",
   "Prahran - Windsor":               "Prahran",
   "North Sydney - Lavender Bay":     "Lavender Bay",
   "South Perth - Kensington":        "South Perth",
+  "South Yarra":                     "South Yarra",
 };
 
-// City bounding boxes (south,west,north,east) for Overpass area filter
-const CITY_BBOX = {
-  melbourne: [-38.5, 144.3, -37.3, 146.0],
-  sydney:    [-34.3, 150.3, -33.2, 151.6],
-  brisbane:  [-28.0, 152.5, -26.8, 153.7],
-  adelaide:  [-35.4, 138.2, -34.4, 139.2],
-  perth:     [-32.7, 115.4, -31.3, 116.5],
-  canberra:  [-35.7, 148.8, -35.0, 149.5],
-};
-
-// Return the OSM search name for a given ABS suburb name
-function getOSMName(suburbName) {
-  // Explicit mapping takes priority
-  if (suburbName in ABS_NAME_MAP) return ABS_NAME_MAP[suburbName];
-  // Strip direction suffixes like " - Park Orchards", keep first part only
-  const primary = suburbName.split(/\s*-\s*/)[0].trim();
-  // Strip parenthetical directions: "Sydney (North)" → "Sydney"
-  return primary.replace(/\s*\([^)]*\)/g, "").trim();
-}
-
-/* ─── Phase 1: Overpass — query OSM directly for place=suburb boundary ── */
-async function overpassSuburbLookup(osmName, cityName) {
-  const cityKey = cityName.toLowerCase().replace(/\s+/g, "");
-  const bbox = CITY_BBOX[cityKey];
-  if (!bbox) return null;
-
-  const [s, w, n, e] = bbox;
-  // Query for node/way/relation tagged place=suburb OR place=neighbourhood with exact name
-  const query = `
-[out:json][timeout:20];
-(
-  relation["place"="suburb"]["name"="${osmName}"](${s},${w},${n},${e});
-  relation["place"="neighbourhood"]["name"="${osmName}"](${s},${w},${n},${e});
-  way["place"="suburb"]["name"="${osmName}"](${s},${w},${n},${e});
-  node["place"="suburb"]["name"="${osmName}"](${s},${w},${n},${e});
-);
-out geom;
-`.trim();
-
-  const overpassEndpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
-  ];
-
-  for (const url of overpassEndpoints) {
-    try {
-      const res = await fetch(url, {
-        method: "POST",
-        body: query,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        signal: AbortSignal.timeout(15000),
-      });
-      if (!res.ok) continue;
-      const data = await res.json();
-      if (!data.elements?.length) continue;
-
-      // Prefer relations (full boundary polygon) over ways over nodes
-      const sorted = data.elements.sort((a, b) => {
-        const rank = { relation: 0, way: 1, node: 2 };
-        return (rank[a.type] ?? 3) - (rank[b.type] ?? 3);
-      });
-
-      const el = sorted[0];
-      return buildGeoJSONFromOverpass(el, osmName);
-    } catch { /* try next endpoint */ }
-  }
-  return null;
-}
-
-// Convert an Overpass element to the shape buildMap expects
-function buildGeoJSONFromOverpass(el, name) {
-  if (el.type === "node") {
-    return {
-      lat: el.lat, lon: el.lon,
-      geojson: null, // just a point, no polygon
-      _source: "overpass-node",
-    };
-  }
-
-  if (el.type === "way" && el.geometry?.length) {
-    const coords = el.geometry.map(p => [p.lon, p.lat]);
-    // Close the ring if needed
-    if (coords[0][0] !== coords[coords.length - 1][0] ||
-        coords[0][1] !== coords[coords.length - 1][1]) {
-      coords.push(coords[0]);
-    }
-    const centroid = coords.reduce(
-      (acc, c) => [acc[0] + c[0], acc[1] + c[1]], [0, 0]
-    ).map(v => v / coords.length);
-
-    return {
-      lat: centroid[1], lon: centroid[0],
-      geojson: { type: "Polygon", coordinates: [coords] },
-      _source: "overpass-way",
-    };
-  }
-
-  if (el.type === "relation" && el.members) {
-    // Collect outer rings
-    const outerRings = [];
-    for (const m of el.members) {
-      if (m.role === "outer" && m.geometry?.length) {
-        const coords = m.geometry.map(p => [p.lon, p.lat]);
-        if (coords[0][0] !== coords[coords.length - 1][0] ||
-            coords[0][1] !== coords[coords.length - 1][1]) {
-          coords.push(coords[0]);
-        }
-        outerRings.push(coords);
-      }
-    }
-    if (!outerRings.length) return null;
-
-    const allCoords = outerRings.flat();
-    const centroid = allCoords.reduce(
-      (acc, c) => [acc[0] + c[0], acc[1] + c[1]], [0, 0]
-    ).map(v => v / allCoords.length);
-
-    const geojson = outerRings.length === 1
-      ? { type: "Polygon", coordinates: [outerRings[0]] }
-      : { type: "MultiPolygon", coordinates: outerRings.map(r => [r]) };
-
-    return {
-      lat: centroid[1], lon: centroid[0],
-      geojson,
-      _source: "overpass-relation",
-    };
-  }
-
-  return null;
-}
-
-/* ─── Phase 2: Nominatim — verified fallback with strict coord check ─ */
-async function nominatimSuburbLookup(osmName, cityName) {
-  const cityKey = cityName.toLowerCase().replace(/\s+/g, "");
-  const bbox = CITY_BBOX[cityKey];
-  if (!bbox) return null;
-
-  const [s, w, n, e] = bbox;
-
-  const params = new URLSearchParams({
-    q: `${osmName}, ${cityName}, Australia`,
-    format: "json", limit: "10",
-    polygon_geojson: "1",
-    addressdetails: "1",
-    "accept-language": "en",
-    viewbox: `${w},${n},${e},${s}`,  // Nominatim viewbox: left,top,right,bottom
-    bounded: "1",
-  });
-
-  try {
-    const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
-    if (!res.ok) return null;
-    const results = await res.json();
-    if (!results.length) return null;
-
-    // Filter: must be within city bbox
-    const inCity = results.filter(r => {
-      const lat = parseFloat(r.lat), lon = parseFloat(r.lon);
-      return lat >= s && lat <= n && lon >= w && lon <= e;
-    });
-    if (!inCity.length) return null;
-
-    // Score: prefer polygon + suburb-type results
-    const scored = inCity.map(r => {
-      let sc = 0;
-      if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") sc += 100;
-      if (r.class === "boundary") sc += 60;
-      else if (r.class === "place") sc += 40;
-      const goodTypes = ["suburb","neighbourhood","quarter","village","town","administrative"];
-      if (goodTypes.includes(r.type)) sc += 50;
-      const rank = parseInt(r.place_rank || 30);
-      if (rank >= 18 && rank <= 24) sc += 30;
-      return { r, sc };
-    }).sort((a, b) => b.sc - a.sc);
-
-    const best = scored[0].r;
-    return {
-      lat: parseFloat(best.lat),
-      lon: parseFloat(best.lon),
-      geojson: best.geojson || null,
-      _source: "nominatim",
-    };
-  } catch { return null; }
-}
-
-/* ─── Main map builder ──────────────────────────────────────────────── */
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
   try {
-    // Always destroy existing map first
-    if (minimapMap) {
-      try { minimapMap.remove(); } catch {}
-      minimapMap = null;
-      minimapMarkers = [];
-      minimapCenter = null;
-      minimapBounds = null;
-    }
-
-    // ── Step 1: fixed coords for CBD splits that have no OSM boundary ────────
+    // ── Fixed-coord suburbs (ABS names not in OSM) ──────────────────────────
     const fixed = ABS_FIXED_COORDS[suburbName];
     if (fixed) {
       minimapCenter = [fixed.lat, fixed.lon];
       minimapBounds = null;
-      renderMap(frame, minimapCenter, null, fixed.zoom || 14);
+      const mapEl = document.createElement("div");
+      mapEl.id = "leafletMap";
+      mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+      frame.style.height = "380px";
+      frame.style.minHeight = "380px";
+      frame.innerHTML = "";
+      frame.appendChild(mapEl);
+      minimapMap = L.map("leafletMap").setView(minimapCenter, fixed.zoom || 14);
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: "abcd", maxZoom: 19,
+      }).addTo(minimapMap);
+      // No real boundary available — fall back to 1km circle
+      L.circle(minimapCenter, {
+        radius: 1000, color: "#735cff", weight: 1.5,
+        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
+        interactive: false,
+      }).addTo(minimapMap);
+      setTimeout(() => minimapMap.invalidateSize(), 300);
+      await fetchAndRenderAll(minimapCenter);
       return;
     }
 
-    // ── Step 2: resolve the OSM search name ─────────────────────────────────
-    const osmName = getOSMName(suburbName);
-    if (!osmName) {
+    // ── Nominatim lookup ────────────────────────────────────────────────────
+    // Use structured search first (suburb= param) so Nominatim matches the
+    // administrative boundary rather than a street or building with the same name.
+    const mapped = ABS_NAME_MAP[suburbName];
+    const parts  = suburbName.split(/\s*-\s*/).map(s => s.trim()).filter(Boolean);
+    const candidates = [...new Set([mapped, parts[0], parts.length > 1 ? parts[1] : null].filter(Boolean))];
+
+    // Score a result: higher = better match for an SA2 suburb boundary
+    function scoreResult(r) {
+      let s = 0;
+      if (r.geojson?.type === "Polygon" || r.geojson?.type === "MultiPolygon") s += 100;
+      if (r.class === "boundary") s += 60;
+      if (r.class === "place")    s += 40;
+      const goodTypes = ["suburb","neighbourhood","quarter","village","town","municipality","city_district","administrative"];
+      if (goodTypes.includes(r.type)) s += 50;
+      // place_rank 20-22 is suburb level in Nominatim; penalise anything too fine or too coarse
+      const rank = parseInt(r.place_rank || 30);
+      if (rank >= 18 && rank <= 24) s += 30;
+      else if (rank < 18 || rank > 28) s -= 20;
+      return s;
+    }
+
+    let nominatimData = null;
+
+    for (const name of candidates) {
+      // 1️⃣ Structured query: suburb + city (most precise)
+      const structuredParams = new URLSearchParams({
+        suburb: name,
+        city: cityName,
+        country: "Australia",
+        format: "json", limit: "6",
+        polygon_geojson: "1",
+        addressdetails: "1",
+        "accept-language": "en",
+      });
+      // 2️⃣ Free-text fallback
+      const freeParams = new URLSearchParams({
+        q: `${name}, ${cityName}, Australia`,
+        format: "json", limit: "8",
+        polygon_geojson: "1",
+        addressdetails: "1",
+        "accept-language": "en",
+      });
+
+      for (const params of [structuredParams, freeParams]) {
+        try {
+          const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+          if (!res.ok) continue;
+          const results = await res.json();
+          if (!results.length) continue;
+
+          // Pick the highest-scoring result
+          const scored = results
+            .map(r => ({ r, score: scoreResult(r) }))
+            .sort((a, b) => b.score - a.score);
+
+          const best = scored[0];
+          // Accept if it has a decent boundary polygon, otherwise keep trying
+          if (best.score >= 100) { nominatimData = best.r; break; }
+          // Keep as fallback if nothing better found
+          if (!nominatimData || best.score > scoreResult(nominatimData)) {
+            nominatimData = best.r;
+          }
+        } catch (e) { /* try next */ }
+      }
+
+      if (nominatimData && scoreResult(nominatimData) >= 100) break;
+    }
+
+    if (!nominatimData) {
       frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
       return;
     }
 
-    // ── Step 3: try Overpass first (most accurate), then Nominatim fallback ──
-    let locationData = await overpassSuburbLookup(osmName, cityName);
-    if (!locationData) {
-      locationData = await nominatimSuburbLookup(osmName, cityName);
+    const lat = parseFloat(nominatimData.lat);
+    const lon = parseFloat(nominatimData.lon);
+    minimapCenter = [lat, lon];
+
+    const mapEl = document.createElement("div");
+    mapEl.id = "leafletMap";
+    mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
+    frame.style.height = "380px";
+    frame.style.minHeight = "380px";
+    frame.innerHTML = "";
+    frame.appendChild(mapEl);
+
+    minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: "abcd", maxZoom: 19,
+    }).addTo(minimapMap);
+
+    // ── Draw suburb boundary from Nominatim geojson ─────────────────────────
+    if (nominatimData.geojson?.type === "Polygon" || nominatimData.geojson?.type === "MultiPolygon") {
+      const boundaryLayer = L.geoJSON(nominatimData.geojson, {
+        style: {
+          color: "#735cff", weight: 2.5, opacity: 0.85,
+          dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.07,
+        },
+        interactive: false,
+      }).addTo(minimapMap);
+
+      minimapBounds = boundaryLayer.getBounds();
+      minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
+      setTimeout(() => minimapMap.invalidateSize(), 300);
+    } else {
+      // No polygon — fall back to 1km circle centred view
+      minimapBounds = null;
+      L.circle(minimapCenter, {
+        radius: 1000, color: "#735cff", weight: 1.5,
+        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
+        interactive: false,
+      }).addTo(minimapMap);
+      minimapMap.setView(minimapCenter, 14);
+      setTimeout(() => minimapMap.invalidateSize(), 300);
     }
 
-    if (!locationData) {
-      frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
-      return;
-    }
-
-    minimapCenter = [locationData.lat, locationData.lon];
-    renderMap(frame, minimapCenter, locationData.geojson, 14);
-
+    await fetchAndRenderAll(minimapCenter);
   } catch (err) {
     frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
     console.error("MiniMap error:", err);
   }
-}
-
-/* ─── Shared map renderer ───────────────────────────────────────────── */
-function renderMap(frame, center, geojson, defaultZoom) {
-  const mapEl = document.createElement("div");
-  mapEl.id = "leafletMap";
-  mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
-  frame.style.height = "380px";
-  frame.style.minHeight = "380px";
-  frame.innerHTML = "";
-  frame.appendChild(mapEl);
-
-  minimapMap = L.map("leafletMap", { zoomSnap: 0.5 });
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: "abcd", maxZoom: 19,
-  }).addTo(minimapMap);
-
-  if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
-    const boundaryLayer = L.geoJSON(geojson, {
-      style: {
-        color: "#735cff", weight: 2.5, opacity: 0.85,
-        dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.07,
-      },
-      interactive: false,
-    }).addTo(minimapMap);
-    minimapBounds = boundaryLayer.getBounds();
-    minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
-  } else {
-    minimapBounds = null;
-    L.circle(center, {
-      radius: 1000, color: "#735cff", weight: 1.5,
-      dashArray: "6 4", fillColor: "#735cff", fillOpacity: 0.04,
-      interactive: false,
-    }).addTo(minimapMap);
-    minimapMap.setView(center, defaultZoom);
-  }
-
-  setTimeout(() => minimapMap.invalidateSize(), 300);
-  fetchAndRenderAll(center);
 }
 
 // ── POI category config ──────────────────────────────────────────────────────
