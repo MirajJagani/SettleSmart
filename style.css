@@ -3040,3 +3040,64 @@ body.landing-page.site-locked .page-glow {
     align-items: flex-start;
   }
 }
+
+/* Risk Summary */
+
+.risk-summary-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.risk-summary-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.risk-summary-body {
+  margin-top: 18px;
+}
+
+.risk-category-btn.active {
+  background: rgba(115, 92, 255, 0.12);
+  color: var(--primary-dark);
+  border-color: rgba(115, 92, 255, 0.42);
+}
+
+.risk-subcategory-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.risk-subcategory-card {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.risk-subcategory-card.active {
+  border-color: rgba(115, 92, 255, 0.26);
+}
+
+.risk-subcategory-card span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--text);
+  line-height: 1.3;
+}

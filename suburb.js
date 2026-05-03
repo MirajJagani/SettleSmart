@@ -71,6 +71,7 @@ function initSuburbPage() {
     : 7;
 
   const safety = getSafetyIndicator(suburb);
+  const riskSummary = getRiskSummary(suburb, safety);
   const heroImage = cityHeroImages[normalizeCityKey(suburb.city)] || cityHeroImages.melbourne;
   const priorityRows = buildPriorityMatchRows(suburb, preferences);
 
@@ -247,6 +248,51 @@ function initSuburbPage() {
         </div>
       </section>
 
+      <section class="info-card suburb-detail-card" id="riskSummarySection">
+        <button
+          type="button"
+          class="risk-summary-toggle"
+          id="riskSummaryToggle"
+          aria-expanded="false"
+          aria-controls="riskSummaryBody"
+        >
+          <div class="suburb-section-head mb-0">
+            <h3>Risk Summary</h3>
+            <p>Risk summary for ${suburb.suburb}.</p>
+          </div>
+
+          <span class="risk-summary-icon" id="riskSummaryIcon">+</span>
+        </button>
+
+        <div class="risk-summary-body hidden" id="riskSummaryBody">
+          <p class="suburb-detail-copy text-dark mb-3">${riskSummary}</p>
+
+          <p class="muted-line mb-2">
+            Click a crime type below to see simple explanations.
+          </p>
+
+          <div class="safety-chart-controls mb-3" aria-label="Risk categories">
+            <button
+              type="button"
+              class="safety-chart-toggle risk-category-btn"
+              data-risk-category="violent"
+            >
+              Violent crime
+            </button>
+
+            <button
+              type="button"
+              class="safety-chart-toggle risk-category-btn"
+              data-risk-category="property"
+            >
+              Property crime
+            </button>
+          </div>
+
+          <div class="risk-subcategory-grid hidden" id="riskSubcategoryGrid"></div>
+        </div>
+      </section>
+
       <section class="info-card suburb-detail-card" id="safetyIndicatorSection">
         <div class="suburb-section-head">
           <h3>Safety indicator</h3>
@@ -327,6 +373,7 @@ function initSuburbPage() {
   `;
 
   initMiniMap(suburb.suburb, suburb.city);
+  setupRiskSummaryToggle(suburb, safety);
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
@@ -1396,7 +1443,199 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   }
 }
 
-/* -------- Safety Indicator (Epic 6) ------------------ */
+/* -------- Risk Summary (US 6.2) ------------------ */
+
+function getRiskLevel(safety) {
+  if (!safety || !safety.hasData || safety.latestCrimeRateLabel === "Not available") {
+    return "unknown";
+  }
+
+  const crimeRate = Number(safety.latestCrimeRateLabel);
+
+  if (Number.isNaN(crimeRate)) {
+    return "unknown";
+  }
+
+  if (crimeRate < 80) {
+    return "low";
+  }
+
+  if (crimeRate < 160) {
+    return "moderate";
+  }
+
+  return "high";
+}
+
+function getRiskSummary(suburb, safety) {
+  const riskLevel = getRiskLevel(safety);
+
+  if (riskLevel === "unknown") {
+    return `${suburb.suburb} does not have enough safety data available yet. Students should compare nearby suburbs and check local conditions before deciding.`;
+  }
+
+  const trend = String(safety.trendLabel || "").toLowerCase();
+
+  let trendSentence = "The recent trend is relatively stable.";
+
+  if (trend === "increasing") {
+    trendSentence = "Crime has increased recently, so students should be more careful when comparing this suburb.";
+  }
+
+  if (trend === "decreasing") {
+    trendSentence = "Crime has decreased recently, which may suggest improving safety conditions.";
+  }
+
+  if (riskLevel === "low") {
+    return `${suburb.suburb} appears to have a relatively low safety risk based on the latest available crime rate. ${trendSentence}`;
+  }
+
+  if (riskLevel === "moderate") {
+    return `${suburb.suburb} has a moderate safety risk. It may still be suitable, but students should stay aware of their surroundings, especially at night. ${trendSentence}`;
+  }
+
+  return `${suburb.suburb} has a higher safety risk compared with lower-crime suburbs. Students should consider transport access, well-lit areas, and night-time safety before choosing housing. ${trendSentence}`;
+}
+
+function getRiskSubcategories(category) {
+  const categories = {
+    violent: [
+      {
+        title: "Assault",
+        explanation: "Assault means a person is physically harmed or threatened by another person."
+      },
+      {
+        title: "Robbery",
+        explanation: "Robbery means property is taken from a person using force or threat."
+      },
+      {
+        title: "Family violence",
+        explanation: "Family violence means harmful, controlling, or threatening behaviour within a family or close relationship."
+      },
+      {
+        title: "Harassment",
+        explanation: "Harassment means unwanted behaviour that makes a person feel unsafe, distressed, or uncomfortable."
+      }
+    ],
+
+    property: [
+      {
+        title: "Theft",
+        explanation: "Theft means someone takes belongings without permission and without using force."
+      },
+      {
+        title: "Burglary",
+        explanation: "Burglary means someone enters a home, shop, or building illegally to steal or cause damage."
+      },
+      {
+        title: "Motor vehicle theft",
+        explanation: "Motor vehicle theft means a car, motorcycle, bicycle, or other vehicle is stolen."
+      },
+      {
+        title: "Property damage",
+        explanation: "Property damage means homes, vehicles, shops, or public spaces are damaged."
+      }
+    ]
+  };
+
+  return categories[category] || [];
+}
+
+function renderRiskSubcategoryCards(category) {
+  const grid = document.getElementById("riskSubcategoryGrid");
+
+  if (!grid) {
+    return;
+  }
+
+  const subcategories = getRiskSubcategories(category);
+
+  if (!subcategories.length) {
+    grid.classList.add("hidden");
+    grid.innerHTML = "";
+    return;
+  }
+
+  grid.classList.remove("hidden");
+
+  grid.innerHTML = subcategories.map((item) => `
+    <button
+      type="button"
+      class="suburb-detail-line risk-subcategory-card"
+    >
+      <span>${item.title}</span>
+      <strong class="risk-subcategory-explanation hidden">${item.explanation}</strong>
+    </button>
+  `).join("");
+
+  grid.querySelectorAll(".risk-subcategory-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const explanation = card.querySelector(".risk-subcategory-explanation");
+      const isHidden = explanation.classList.contains("hidden");
+
+      grid.querySelectorAll(".risk-subcategory-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const explanation = card.querySelector(".risk-subcategory-explanation");
+
+          card.classList.toggle("active");
+          explanation.classList.toggle("hidden");
+        });
+      });
+
+      if (isHidden) {
+        card.classList.add("active");
+        explanation.classList.remove("hidden");
+      }
+    });
+  });
+}
+
+function setupRiskSummaryToggle(suburb, safety) {
+  const toggle = document.getElementById("riskSummaryToggle");
+  const body = document.getElementById("riskSummaryBody");
+  const icon = document.getElementById("riskSummaryIcon");
+  const categoryButtons = document.querySelectorAll(".risk-category-btn");
+  const subcategoryGrid = document.getElementById("riskSubcategoryGrid");
+
+  if (!toggle || !body) {
+    return;
+  }
+
+  toggle.addEventListener("click", () => {
+    const isHidden = body.classList.contains("hidden");
+
+    body.classList.toggle("hidden", !isHidden);
+    toggle.setAttribute("aria-expanded", String(isHidden));
+
+    if (icon) {
+      icon.textContent = isHidden ? "−" : "+";
+    }
+
+    if (!isHidden) {
+      categoryButtons.forEach((btn) => btn.classList.remove("active"));
+
+      if (subcategoryGrid) {
+        subcategoryGrid.classList.add("hidden");
+        subcategoryGrid.innerHTML = "";
+      }
+    }
+  });
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      categoryButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      renderRiskSubcategoryCards(button.dataset.riskCategory);
+    });
+  });
+
+  if (subcategoryGrid) {
+    subcategoryGrid.classList.add("hidden");
+  }
+}
+
+/* -------- Safety Indicator (US 6.1) ------------------ */
 
 function hasSafetySeries(suburb, seriesKey) {
   const series = suburb[seriesKey] || {};
