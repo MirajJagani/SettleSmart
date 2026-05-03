@@ -48,6 +48,7 @@ const SAFETY_SERIES_OPTIONS = [
 ];
 
 let activeSafetySeries = ["crimeCountByYear"];
+let showSafetyTrendPrediction = false;
 
 initSuburbPage();
 
@@ -337,40 +338,52 @@ function initSuburbPage() {
               </div>
 
               <div class="safety-chart-controls" id="safetyChartControls" aria-label="Safety chart filters">
-                <button
-                  type="button"
-                  class="safety-chart-toggle active"
-                  data-safety-series="crimeCountByYear"
-                >
-                  Total crime
-                </button>
+                <div class="safety-chart-control-group">
+                  <button
+                    type="button"
+                    class="safety-chart-toggle active"
+                    data-safety-series="crimeCountByYear"
+                  >
+                    Total crime
+                  </button>
 
-                <button
-                  type="button"
-                  class="safety-chart-toggle"
-                  data-safety-series="propertyCrimesByYear"
-                  ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
-                >
-                  Property crimes
-                </button>
+                  <button
+                    type="button"
+                    class="safety-chart-toggle"
+                    data-safety-series="propertyCrimesByYear"
+                    ${hasSafetySeries(suburb, "propertyCrimesByYear") ? "" : "disabled"}
+                  >
+                    Property crimes
+                  </button>
 
-                <button
-                  type="button"
-                  class="safety-chart-toggle"
-                  data-safety-series="violentCrimesByYear"
-                  ${hasSafetySeries(suburb, "violentCrimesByYear") ? "" : "disabled"}
-                >
-                  Violent crimes
-                </button>
+                  <button
+                    type="button"
+                    class="safety-chart-toggle"
+                    data-safety-series="violentCrimesByYear"
+                    ${hasSafetySeries(suburb, "violentCrimesByYear") ? "" : "disabled"}
+                  >
+                    Violent crimes
+                  </button>
 
-                <button
-                  type="button"
-                  class="safety-chart-toggle"
-                  data-safety-series="otherCrimesByYear"
-                  ${hasSafetySeries(suburb, "otherCrimesByYear") ? "" : "disabled"}
-                >
-                  Other crimes
-                </button>
+                  <button
+                    type="button"
+                    class="safety-chart-toggle"
+                    data-safety-series="otherCrimesByYear"
+                    ${hasSafetySeries(suburb, "otherCrimesByYear") ? "" : "disabled"}
+                  >
+                    Other crimes
+                  </button>
+                </div>
+
+                <div class="safety-chart-control-group safety-chart-control-group-right">
+                  <button
+                    type="button"
+                    class="safety-chart-toggle safety-trend-toggle"
+                    id="safetyTrendPredictionToggle"
+                  >
+                    Trend prediction
+                  </button>
+                </div>
               </div>
               
               <div class="safety-chart-wrap">
@@ -1688,13 +1701,24 @@ function getOtherCrimesByYear(suburb) {
 
 function setupSafetyChartControls(suburb) {
   const controls = document.getElementById("safetyChartControls");
+  const trendToggle = document.getElementById("safetyTrendPredictionToggle");
 
-  // If has no safety data, stop
+  // If has no safety data, stop.
   if (!controls) {
     return;
   }
 
   controls.addEventListener("click", (event) => {
+    const trendButton = event.target.closest("#safetyTrendPredictionToggle");
+
+    // Toggle trend line and next-year prediction.
+    if (trendButton) {
+      showSafetyTrendPrediction = !showSafetyTrendPrediction;
+      trendButton.classList.toggle("active", showSafetyTrendPrediction);
+      renderSafetyTrendChart(suburb);
+      return;
+    }
+
     const button = event.target.closest("[data-safety-series]");
 
     if (!button || button.disabled) {
@@ -1704,7 +1728,7 @@ function setupSafetyChartControls(suburb) {
     const selectedKey = button.dataset.safetySeries;
 
     if (activeSafetySeries.includes(selectedKey)) {
-      // Keep at least one line active
+      // Keep at least one line active.
       if (activeSafetySeries.length === 1) {
         return;
       }
@@ -1723,6 +1747,10 @@ function setupSafetyChartControls(suburb) {
 
     renderSafetyTrendChart(suburb);
   });
+
+  if (trendToggle) {
+    trendToggle.classList.toggle("active", showSafetyTrendPrediction);
+  }
 }
 
 function formatNumber(value) {
@@ -1814,6 +1842,108 @@ function getLinearTrend(values) {
   return slope > 0 ? "Increasing" : "Decreasing";
 }
 
+// Prediction with linear regression
+function fitLinearTrendFromRecentYears(years, values, recentCount = 5) {
+  const validPoints = years
+    .map((year, index) => ({
+      year: Number(year),
+      value: values[index]
+    }))
+    .filter((point) => {
+      return (
+        Number.isFinite(point.year) &&
+        point.value !== null &&
+        point.value !== undefined &&
+        Number.isFinite(Number(point.value))
+      );
+    })
+    .slice(-recentCount);
+
+  if (validPoints.length < 2) {
+    return null;
+  }
+
+  const n = validPoints.length;
+
+  const xValues = validPoints.map((point) => point.year);
+  const yValues = validPoints.map((point) => Number(point.value));
+
+  const xMean = xValues.reduce((sum, x) => sum + x, 0) / n;
+  const yMean = yValues.reduce((sum, y) => sum + y, 0) / n;
+
+  let numerator = 0;
+  let denominator = 0;
+
+  for (let i = 0; i < n; i++) {
+    numerator += (xValues[i] - xMean) * (yValues[i] - yMean);
+    denominator += (xValues[i] - xMean) ** 2;
+  }
+
+  const slope = denominator === 0 ? 0 : numerator / denominator;
+  const intercept = yMean - slope * xMean;
+
+  const lastYear = Math.max(...xValues);
+  const nextYear = lastYear + 1;
+
+  const predict = (year) => {
+    return Math.max(Math.round(slope * year + intercept), 0);
+  };
+
+  return {
+    slope,
+    intercept,
+    fittedYears: xValues.map(String),
+    fittedValues: xValues.map((year) => predict(year)),
+    nextYear: String(nextYear),
+    predictedNextValue: predict(nextYear)
+  };
+}
+
+function buildTrendDataset(dataset, labels) {
+  const trend = fitLinearTrendFromRecentYears(labels, dataset.values, 5);
+
+  if (!trend) {
+    return null;
+  }
+
+  const trendLabels = [...labels, trend.nextYear];
+
+  const trendValues = trendLabels.map((year) => {
+    if (trend.fittedYears.includes(year)) {
+      const index = trend.fittedYears.indexOf(year);
+      return trend.fittedValues[index];
+    }
+
+    if (year === trend.nextYear) {
+      return trend.predictedNextValue;
+    }
+
+    return null;
+  });
+
+  return {
+    label: `${dataset.label} trend`,
+    data: trendValues,
+    borderColor: dataset.borderColor,
+    backgroundColor: dataset.backgroundColor,
+    borderWidth: 2,
+    borderDash: [6, 6],
+    tension: 0,
+    fill: false,
+    spanGaps: true,
+    pointRadius: trendValues.map((value, index) => {
+      const year = trendLabels[index];
+      return year === trend.nextYear && value !== null ? 5 : 0;
+    }),
+    pointHoverRadius: 6,
+    pointBackgroundColor: dataset.borderColor,
+    pointBorderColor: "#ffffff",
+    pointBorderWidth: 2,
+    isTrendDataset: true,
+    predictedYear: trend.nextYear
+  };
+}
+
 function getSafetyChartData(suburb) {
   const selectedOptions = SAFETY_SERIES_OPTIONS.filter((option) => {
     return activeSafetySeries.includes(option.key) && hasSafetySeries(suburb, option.key);
@@ -1871,8 +2001,12 @@ function getSafetyChartData(suburb) {
     };
   });
 
+  const latestYear = Math.max(...years.map((year) => Number(year)));
+  const nextPredictionYear = String(latestYear + 1);
+
   return {
-    labels: years,
+    labels: showSafetyTrendPrediction ? [...years, nextPredictionYear] : years,
+    originalLabels: years,
     datasets,
     maxValue
   };
@@ -1963,23 +2097,37 @@ function renderSafetyTrendChart(suburb) {
     return gradient;
   }
 
-  const yAxisMax = getNiceSafetyAxisMax(chartData.maxValue);
+  let predictionMaxValue = chartData.maxValue;
+
+  if (showSafetyTrendPrediction) {
+    chartData.datasets.forEach((dataset) => {
+      const trend = fitLinearTrendFromRecentYears(chartData.originalLabels, dataset.values, 5);
+
+      if (trend) {
+        predictionMaxValue = Math.max(predictionMaxValue, trend.predictedNextValue);
+      }
+    });
+  }
+
+  const yAxisMax = getNiceSafetyAxisMax(predictionMaxValue);
 
   safetyTrendChartInstance = new Chart(ctx, {
     type: "line",
     data: {
       labels: chartData.labels,
-      datasets: chartData.datasets.map((dataset) => {
+      datasets: chartData.datasets.flatMap((dataset) => {
         const isTotalCrime = dataset.key === "crimeCountByYear";
 
-        return {
+        const actualDataset = {
           label: dataset.label,
-          data: dataset.values,
+          data: showSafetyTrendPrediction
+            ? [...dataset.values, null]
+            : dataset.values,
           borderColor: dataset.borderColor,
           backgroundColor: createSafetyGradient(dataset.key),
           borderWidth: isTotalCrime ? 3 : 2.5,
           tension: 0.35,
-          fill: "origin",
+          fill: true,
           spanGaps: true,
           pointRadius: 3,
           pointHoverRadius: 6,
@@ -1990,6 +2138,16 @@ function renderSafetyTrendChart(suburb) {
           pointHoverBorderColor: "#ffffff",
           pointHoverBorderWidth: 2
         };
+
+        if (!showSafetyTrendPrediction) {
+          return [actualDataset];
+        }
+
+        const trendDataset = buildTrendDataset(dataset, chartData.originalLabels);
+
+        return trendDataset
+          ? [actualDataset, trendDataset]
+          : [actualDataset];
       })
     },
     options: {
@@ -2011,6 +2169,18 @@ function renderSafetyTrendChart(suburb) {
           displayColors: true,
           cornerRadius: 12,
           caretSize: 6,
+
+          filter: function(context) {
+            const year = String(context.label);
+
+            // Only show trend tooltip for the predicted year
+            if (context.dataset.isTrendDataset) {
+              return year === context.dataset.predictedYear;
+            }
+
+            return true;
+          },
+
           callbacks: {
             title: function(items) {
               return `Year ${items[0].label}`;
@@ -2020,6 +2190,15 @@ function renderSafetyTrendChart(suburb) {
 
               if (value === null || value === undefined) {
                 return `${context.dataset.label}: Not available`;
+              }
+
+              const year = String(context.label);
+              const isPrediction =
+                context.dataset.isTrendDataset &&
+                year === context.dataset.predictedYear;
+
+              if (isPrediction) {
+                return `${context.dataset.label}: estimated ${value.toLocaleString("en-AU")} incidents`;
               }
 
               return `${context.dataset.label}: ${value.toLocaleString("en-AU")} incidents`;

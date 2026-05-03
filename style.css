@@ -2789,10 +2789,22 @@ body.landing-page.site-locked .page-glow {
 
 .safety-chart-controls {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
   margin-top: 18px;
   margin-bottom: 12px;
+}
+
+.safety-chart-control-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.safety-chart-control-group-right {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .safety-chart-toggle {
@@ -2839,6 +2851,12 @@ body.landing-page.site-locked .page-glow {
 .safety-chart-toggle:disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+.safety-chart-toggle.safety-trend-toggle.active {
+  background: rgba(31, 27, 50, 0.10);
+  color: var(--text);
+  border-color: rgba(31, 27, 50, 0.28);
 }
 
 .epic5-top-match-layout {
@@ -3044,6 +3062,17 @@ body.landing-page.site-locked .page-glow {
   .detail-page .priority-match-top {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .safety-chart-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .safety-chart-control-group-right {
+    margin-left: 0;
   }
 }
 
