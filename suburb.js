@@ -148,7 +148,7 @@ function initSuburbPage() {
 
         <div class="col-12 col-xl-5">
           <div class="info-card suburb-detail-card h-100">
-            <h3>Language and community snapshot</h3>
+            <h3>Community snapshot and support</h3>
 
             <div class="suburb-detail-stack">
               <div class="suburb-detail-line">
@@ -166,6 +166,18 @@ function initSuburbPage() {
               <div class="suburb-detail-line">
                 <span>Recent arrivals</span>
                 <strong>${window.formatChoice(suburb.recentArrival)}</strong>
+              </div>
+              <div class="suburb-detail-line">
+                <span>Culture fit</span>
+                <strong>${cultureScore}/10</strong>
+              </div>
+              <div class="suburb-detail-line">
+                <span>Community strength</span>
+                <strong>${community.communityStrength}%</strong>
+              </div>
+              <div class="suburb-detail-line">
+                <span>University access</span>
+                <strong>${window.formatChoice(suburb.university)}</strong>
               </div>
             </div>
           </div>
@@ -311,55 +323,6 @@ function initSuburbPage() {
         }
       </section>
 
-      <section class="info-card suburb-detail-card">
-        <div class="suburb-section-head">
-          <h3>Multicultural support signals</h3>
-          <p>Helpful community indicators that may support confidence, belonging, and day-to-day comfort.</p>
-        </div>
-
-        <div class="suburb-multicultural-topline">
-          <span class="suburb-metric-pill">Culture fit ${cultureScore}/10</span>
-          <span class="suburb-metric-pill">Community strength ${community.communityStrength}%</span>
-          <span class="suburb-metric-pill">Overseas-born share ${community.overseasBornShare}</span>
-        </div>
-
-        <div class="suburb-multicultural-grid">
-          <article class="suburb-profile-card">
-            <span class="suburb-profile-kicker">Community comfort details</span>
-            <ul class="suburb-detail-list minimal">
-              <li>Common language cues: ${suburb.commonLanguages.join(", ")}</li>
-              <li>Community strength: ${community.communityStrength}%</li>
-              <li>Overseas-born share: ${community.overseasBornShare}</li>
-              <li>Specialty shops nearby: ${community.specialtyShops}</li>
-              <li>Places of worship nearby: ${community.placesOfWorship}</li>
-            </ul>
-          </article>
-
-          <article class="suburb-profile-card">
-            <span class="suburb-profile-kicker">Cultural amenities</span>
-            <ul class="suburb-detail-list minimal">
-              ${community.keyPlaces.map((place) => `<li>${place}</li>`).join("")}
-            </ul>
-          </article>
-
-          <article class="suburb-profile-card">
-            <span class="suburb-profile-kicker">Practical community support</span>
-            <ul class="suburb-detail-list minimal">
-              <li>English support: ${window.formatChoice(suburb.englishSupport)}</li>
-              <li>Recent arrivals: ${window.formatChoice(suburb.recentArrival)}</li>
-              <li>Culture signal: ${window.formatChoice(suburb.culture)}</li>
-              <li>University access: ${window.formatChoice(suburb.university)}</li>
-            </ul>
-          </article>
-
-          <article class="suburb-profile-card">
-            <span class="suburb-profile-kicker">Nearby cultural activity</span>
-            <ul class="suburb-detail-list minimal">
-              ${community.events.map((event) => `<li>${event}</li>`).join("")}
-            </ul>
-          </article>
-        </div>
-      </section>
     </div>
   `;
 

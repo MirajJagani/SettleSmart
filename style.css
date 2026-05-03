@@ -1623,6 +1623,19 @@ code {
   gap: 12px;
 }
 
+
+.detail-page .suburb-hero-sidegrid .suburb-mini-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.detail-page .suburb-hero-sidecard {
+  height: 100%;
+}
+
+.detail-page .suburb-hero-sidegrid {
+  align-items: stretch;
+}
+
 .suburb-mini-card {
   padding: 14px;
   border-radius: 18px;
