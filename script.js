@@ -1,5 +1,5 @@
 /*
-  Settle-Smart - Landing page onboarding flow
+  SettleSmart - Landing page onboarding flow
   -----------------------------------------
   This file handles Epic 1 (Guided Preference Input).
 */
@@ -135,6 +135,8 @@ const appState = {
   commute: [],
   lifestyle: []
 };
+
+const UNIVERSITY_INPUT_MAX_LENGTH = 60;
 
 const totalSteps = 7;
 const stepMeta = {
@@ -376,6 +378,41 @@ function getFilteredUniversities(city, searchTerm) {
   );
 }
 
+function sanitizeUniversityValue(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, UNIVERSITY_INPUT_MAX_LENGTH);
+}
+
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function updateUniversityCounter() {
+  const counter = document.getElementById("universityCounter");
+  if (!counter) return;
+  counter.textContent = `${(appState.university || "").length}/${UNIVERSITY_INPUT_MAX_LENGTH}`;
+}
+
+function bindUniversityChipSelection(container) {
+  container.querySelectorAll("[data-university]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.university = sanitizeUniversityValue(chip.dataset.university);
+      renderStep();
+
+      if (shouldAutoAdvance()) {
+        autoAdvanceIfReady(3);
+      }
+    });
+  });
+}
+
 function renderCityStep() {
   stepContent.innerHTML = `
     <div class="row g-4 selection-grid" id="cityGrid">
@@ -475,6 +512,7 @@ function renderLanguageStep() {
 }
 
 function renderUniversityStep() {
+  appState.university = sanitizeUniversityValue(appState.university);
   const universities = getFilteredUniversities(appState.city, "");
 
   stepContent.innerHTML = `
@@ -492,8 +530,14 @@ function renderUniversityStep() {
               class="search-input"
               id="universitySearch"
               placeholder="Type your university name"
-              value="${appState.university || ""}"
+              value="${escapeHtml(appState.university || "")}"
+              maxlength="${UNIVERSITY_INPUT_MAX_LENGTH}"
+              autocomplete="off"
             />
+            <div class="search-meta-row">
+              <span class="muted-line small">Maximum ${UNIVERSITY_INPUT_MAX_LENGTH} characters</span>
+              <span class="search-counter" id="universityCounter">${(appState.university || "").length}/${UNIVERSITY_INPUT_MAX_LENGTH}</span>
+            </div>
           </div>
 
           <div class="chips mt-3" id="universityChips">
@@ -508,40 +552,25 @@ function renderUniversityStep() {
     </div>
   `;
 
-  document.querySelectorAll("[data-university]").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      appState.university = chip.dataset.university;
-      renderStep();
-
-      if (shouldAutoAdvance()) {
-        autoAdvanceIfReady(3);
-      }
-    });
-  });
+  const container = document.getElementById("universityChips");
+  bindUniversityChipSelection(container);
+  updateUniversityCounter();
 
   const search = document.getElementById("universitySearch");
   search.addEventListener("input", (e) => {
-    appState.university = e.target.value;
-    const list = getFilteredUniversities(appState.city, e.target.value);
-    const container = document.getElementById("universityChips");
+    const sanitizedValue = sanitizeUniversityValue(e.target.value);
+    appState.university = sanitizedValue;
+    e.target.value = sanitizedValue;
 
+    const list = getFilteredUniversities(appState.city, sanitizedValue);
     container.innerHTML = list.map((uni) => `
       <button class="chip ${appState.university === uni ? "selected" : ""}" data-university="${uni}" type="button">
         ${uni}
       </button>
     `).join("");
 
-    container.querySelectorAll("[data-university]").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        appState.university = chip.dataset.university;
-        renderStep();
-
-        if (shouldAutoAdvance()) {
-          autoAdvanceIfReady(3);
-        }
-      });
-    });
-
+    bindUniversityChipSelection(container);
+    updateUniversityCounter();
     updateNextButtonState();
   });
 }
@@ -665,7 +694,7 @@ function renderLifestyleReviewStep() {
     <div class="row g-4">
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
-      <div class="col-12 col-md-6"><div class="review-item"><span>University</span><strong>${appState.university || "-"}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>University</span><strong>${escapeHtml(appState.university || "-")}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Housing preferences</span><strong>${formatChoice(appState.housing)}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Commute preferences</span><strong>${formatChoice(appState.commute)}</strong></div></div>
@@ -702,6 +731,7 @@ function handleNext() {
     return;
   }
 
+  appState.university = sanitizeUniversityValue(appState.university);
   localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
   loadingOverlay.classList.remove("hidden");
 
@@ -717,7 +747,7 @@ function isStepValid(step) {
     case 2:
       return !!appState.language && !!appState.culture;
     case 3:
-      return !!appState.university && appState.university.trim().length > 0;
+      return sanitizeUniversityValue(appState.university).length > 0;
     case 4:
       return !!appState.budget;
     case 5:
@@ -790,7 +820,7 @@ function getStoredPreferences() {
   storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
   storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
   storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
-  storedPreferences.university = storedPreferences.university || "";
+  storedPreferences.university = sanitizeUniversityValue(storedPreferences.university || "");
   return storedPreferences;
 }
 
