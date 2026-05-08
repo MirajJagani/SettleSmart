@@ -401,6 +401,16 @@ function initSuburbPage() {
         }
       </section>
 
+      <section class="info-card suburb-detail-card" id="distanceSection">
+        <div class="suburb-section-head">
+          <h3>Distance to university</h3>
+          <p>Straight-line distance from ${suburb.suburb} to your selected university campus.</p>
+        </div>
+        <div id="distanceResult">
+          <p style="color:var(--text-soft); font-size:0.9rem;">Calculating distance…</p>
+        </div>
+      </section>
+
     </div>
   `;
 
@@ -409,6 +419,7 @@ function initSuburbPage() {
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
+    renderDistanceSection(suburb, preferences);
   });
 }
 
@@ -2347,4 +2358,94 @@ function renderSafetyTrendChart(suburb) {
       }
     }
   });
+}
+
+// ── Distance to University (Supabase + Nominatim + Haversine) ────────────────
+
+const SUPABASE_URL = "https://tvntdokwhckdhdzojmzb.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_OilvFk1wyG2AzJcm_q-KBg_dmFhloU9";
+
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) *
+    Math.cos(lat2 * Math.PI / 180) *
+    Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+async function getSuburbCoords(suburbName, city) {
+  const query = encodeURIComponent(`${suburbName}, ${city}, Australia`);
+  const res = await fetch(
+    `https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`,
+    { headers: { "Accept-Language": "en", "User-Agent": "SettleSmart/1.0" } }
+  );
+  const data = await res.json();
+  if (!data.length) return null;
+  return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+}
+
+async function getUniversityCampuses(universityName) {
+  const encoded = encodeURIComponent(universityName);
+  const res = await fetch(
+    `${SUPABASE_URL}/rest/v1/University?university_name=eq.${encoded}&select=campus_name,lat,lng`,
+    {
+      headers: {
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": `Bearer ${SUPABASE_ANON_KEY}`
+      }
+    }
+  );
+  return await res.json();
+}
+
+async function renderDistanceSection(suburb, preferences) {
+  const el = document.getElementById("distanceResult");
+  if (!el) return;
+
+  const uniName = preferences.university;
+  if (!uniName) {
+    el.innerHTML = `<p style="color:var(--text-soft);font-size:0.9rem;">No university selected.</p>`;
+    return;
+  }
+
+  try {
+    const [suburbCoords, campuses] = await Promise.all([
+      getSuburbCoords(suburb.suburb, suburb.city),
+      getUniversityCampuses(uniName)
+    ]);
+
+    if (!suburbCoords) {
+      el.innerHTML = `<p style="color:var(--text-soft);font-size:0.9rem;">Could not locate ${suburb.suburb}.</p>`;
+      return;
+    }
+
+    if (!campuses || !campuses.length) {
+      el.innerHTML = `<p style="color:var(--text-soft);font-size:0.9rem;">No campus data found for ${uniName}.</p>`;
+      return;
+    }
+
+    const rows = campuses.map(campus => {
+      const dist = haversineKm(suburbCoords.lat, suburbCoords.lng, campus.lat, campus.lng);
+      return { name: campus.campus_name, dist };
+    }).sort((a, b) => a.dist - b.dist);
+
+    el.innerHTML = `
+      <div class="suburb-profile-grid">
+        ${rows.map(r => `
+          <article class="suburb-profile-card">
+            <span class="suburb-profile-kicker">${r.name}</span>
+            <p style="font-size:1.1rem;font-weight:700;color:var(--primary)">${r.dist.toFixed(1)} km</p>
+            <p style="font-size:0.8rem;color:var(--text-soft)">straight-line distance</p>
+          </article>
+        `).join("")}
+      </div>
+    `;
+  } catch (e) {
+    console.error(e);
+    el.innerHTML = `<p style="color:var(--text-soft);font-size:0.9rem;">Distance calculation failed. Please try again.</p>`;
+  }
 }
