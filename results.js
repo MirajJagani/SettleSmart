@@ -149,6 +149,12 @@ function rankSuburbs() {
     .sort((a, b) => b.score - a.score);
 }
 
+function getMatchBadgeTone(score) {
+  if (score >= 80) return "high";
+  if (score >= 55) return "medium";
+  return "low";
+}
+
 function getScoreByMode(suburb) {
   switch (appState.recommendBy) {
     case "community": {
@@ -375,7 +381,7 @@ function renderMatches(list, bestMatchSlug) {
                 <h3>${match.suburb}</h3>
               </div>
 
-              <div class="match-badge-box">
+              <div class="match-badge-box match-badge-box--${getMatchBadgeTone(match.score)}">
                 <span>MATCH</span>
                 <strong>${match.score}%</strong>
               </div>
@@ -532,55 +538,6 @@ function renderSpinWheel(items) {
   }
 }
 
-function truncateWheelLabelToWidth(ctx, text, maxWidth) {
-  if (ctx.measureText(text).width <= maxWidth) return text;
-
-  let trimmed = text;
-  while (trimmed.length > 1 && ctx.measureText(`${trimmed}…`).width > maxWidth) {
-    trimmed = trimmed.slice(0, -1).trim();
-  }
-
-  return `${trimmed}…`;
-}
-
-function getWheelLabelLines(ctx, label, maxWidth, maxLines = 2) {
-  const normalized = String(label || "").replace(/\s+/g, " ").trim();
-  if (!normalized) return [""];
-
-  const words = normalized
-    .replace(/\s*-\s*/g, " - ")
-    .split(" ")
-    .filter(Boolean);
-
-  const lines = [];
-  let currentLine = "";
-
-  words.forEach((word) => {
-    const candidate = currentLine ? `${currentLine} ${word}` : word;
-    if (ctx.measureText(candidate).width <= maxWidth) {
-      currentLine = candidate;
-      return;
-    }
-
-    if (currentLine) {
-      lines.push(currentLine);
-      currentLine = word;
-    } else {
-      lines.push(truncateWheelLabelToWidth(ctx, word, maxWidth));
-      currentLine = "";
-    }
-  });
-
-  if (currentLine) lines.push(currentLine);
-
-  if (lines.length <= maxLines) return lines;
-
-  const visible = lines.slice(0, maxLines);
-  visible[maxLines - 1] = truncateWheelLabelToWidth(ctx, visible[maxLines - 1], maxWidth - 6);
-
-  return visible;
-}
-
 function drawWheel() {
   const canvas = shortlistWheel;
   const ctx = canvas.getContext("2d");
@@ -632,23 +589,10 @@ function drawWheel() {
 
     ctx.save();
     ctx.rotate(start + anglePerItem / 2);
-
-    const fontSize = items.length <= 4 ? 14 : 12;
-    const lineHeight = fontSize + 2;
-    const textRadius = radius * 0.72;
-    const maxTextWidth = radius * 0.42;
-
-    ctx.fillStyle = "#ffffff";
     ctx.textAlign = "right";
-    ctx.textBaseline = "middle";
-    ctx.font = `700 ${fontSize}px Inter`;
-
-    const lines = getWheelLabelLines(ctx, item.suburb, maxTextWidth, 2);
-    lines.forEach((line, lineIndex) => {
-      const y = (lineIndex - (lines.length - 1) / 2) * lineHeight;
-      ctx.fillText(line, textRadius, y);
-    });
-
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "700 16px Inter";
+    ctx.fillText(item.suburb, radius - 22, 6);
     ctx.restore();
   });
 
