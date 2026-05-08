@@ -512,8 +512,7 @@ function renderLanguageStep() {
 }
 
 function renderUniversityStep() {
-  appState.university = sanitizeUniversityValue(appState.university);
-  const universities = getFilteredUniversities(appState.city, "");
+  const universities = getUniversitiesForCity(appState.city);
 
   stepContent.innerHTML = `
     <div class="row g-4">
@@ -521,57 +520,36 @@ function renderUniversityStep() {
         <div class="panel-card">
           <h3 class="section-mini-title">Choose your university</h3>
           <p class="muted-line">
-            Showing top universities based on your selected city: <strong>${appState.city || "Not selected"}</strong>
+            Showing top universities based on your selected city: 
+            <strong>${appState.city || "Not selected"}</strong>
           </p>
-
-          <div class="search-wrap mt-3">
-            <input
-              type="text"
-              class="search-input"
-              id="universitySearch"
-              placeholder="Type your university name"
-              value="${escapeHtml(appState.university || "")}"
-              maxlength="${UNIVERSITY_INPUT_MAX_LENGTH}"
-              autocomplete="off"
-            />
-            <div class="search-meta-row">
-              <span class="muted-line small">Maximum ${UNIVERSITY_INPUT_MAX_LENGTH} characters</span>
-              <span class="search-counter" id="universityCounter">${(appState.university || "").length}/${UNIVERSITY_INPUT_MAX_LENGTH}</span>
-            </div>
-          </div>
 
           <div class="chips mt-3" id="universityChips">
             ${universities.map((uni) => `
-              <button class="chip ${appState.university === uni ? "selected" : ""}" data-university="${uni}" type="button">
+              <button 
+                class="chip ${appState.university === uni ? "selected" : ""}" 
+                data-university="${uni}" 
+                type="button"
+              >
                 ${uni}
               </button>
             `).join("")}
           </div>
+
+          <p class="muted-line small mt-3">
+            If your university is not listed, we're sorry and will add more university options in future updates.
+          </p>
         </div>
       </div>
     </div>
   `;
 
-  const container = document.getElementById("universityChips");
-  bindUniversityChipSelection(container);
-  updateUniversityCounter();
-
-  const search = document.getElementById("universitySearch");
-  search.addEventListener("input", (e) => {
-    const sanitizedValue = sanitizeUniversityValue(e.target.value);
-    appState.university = sanitizedValue;
-    e.target.value = sanitizedValue;
-
-    const list = getFilteredUniversities(appState.city, sanitizedValue);
-    container.innerHTML = list.map((uni) => `
-      <button class="chip ${appState.university === uni ? "selected" : ""}" data-university="${uni}" type="button">
-        ${uni}
-      </button>
-    `).join("");
-
-    bindUniversityChipSelection(container);
-    updateUniversityCounter();
-    updateNextButtonState();
+  document.querySelectorAll("[data-university]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.university = chip.dataset.university;
+      renderStep();
+      autoAdvanceIfReady(3);
+    });
   });
 }
 
@@ -771,7 +749,7 @@ function updateNextButtonState() {
 
   if (!valid) {
     if (appState.step === 3) {
-      stepHint.textContent = "Select or type your university to continue";
+      stepHint.textContent = "Select your university to continue";
     } else if (appState.step === 5) {
       stepHint.textContent = "Select at least one housing style to continue";
     } else if (appState.step === 6) {
