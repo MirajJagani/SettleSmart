@@ -538,6 +538,65 @@ function renderSpinWheel(items) {
   }
 }
 
+function trimWheelLine(ctx, text, maxWidth) {
+  const source = String(text || "").trim();
+  if (!source) return "";
+
+  if (ctx.measureText(source).width <= maxWidth) {
+    return source;
+  }
+
+  let trimmed = source;
+
+  while (trimmed.length > 0 && ctx.measureText(`${trimmed}…`).width > maxWidth) {
+    trimmed = trimmed.slice(0, -1).trim();
+  }
+
+  return trimmed ? `${trimmed}…` : "…";
+}
+
+function splitWheelLabel(ctx, label, maxWidth, maxLines = 2) {
+  const words = String(label || "").trim().split(/\s+/).filter(Boolean);
+  if (!words.length) return [""];
+
+  const lines = [];
+  let currentLine = "";
+
+  words.forEach((word) => {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+
+    if (ctx.measureText(testLine).width <= maxWidth) {
+      currentLine = testLine;
+      return;
+    }
+
+    if (currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      lines.push(trimWheelLine(ctx, word, maxWidth));
+      currentLine = "";
+    }
+  });
+
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+
+  if (lines.length <= maxLines) {
+    return lines;
+  }
+
+  const visibleLines = lines.slice(0, maxLines);
+  visibleLines[maxLines - 1] = trimWheelLine(
+    ctx,
+    lines.slice(maxLines - 1).join(" "),
+    maxWidth
+  );
+
+  return visibleLines;
+}
+
 function drawWheel() {
   const canvas = shortlistWheel;
   const ctx = canvas.getContext("2d");
@@ -590,9 +649,21 @@ function drawWheel() {
     ctx.save();
     ctx.rotate(start + anglePerItem / 2);
     ctx.textAlign = "right";
+    ctx.textBaseline = "middle";
     ctx.fillStyle = "#ffffff";
     ctx.font = "700 16px Inter";
-    ctx.fillText(item.suburb, radius - 22, 6);
+
+    const maxTextWidth = radius * 0.56;
+    const labelLines = splitWheelLabel(ctx, item.suburb, maxTextWidth, 2);
+    const lineHeight = 18;
+    const totalHeight = (labelLines.length - 1) * lineHeight;
+    const textX = radius - 44;
+
+    labelLines.forEach((line, lineIndex) => {
+      const y = (lineIndex * lineHeight) - totalHeight / 2;
+      ctx.fillText(line, textX, y);
+    });
+
     ctx.restore();
   });
 
