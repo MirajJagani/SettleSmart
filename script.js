@@ -747,7 +747,7 @@ function isStepValid(step) {
     case 2:
       return !!appState.language && !!appState.culture;
     case 3:
-      return sanitizeUniversityValue(appState.university).length > 0;
+      return getUniversitiesForCity(appState.city).includes(appState.university);
     case 4:
       return !!appState.budget;
     case 5:
