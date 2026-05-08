@@ -371,20 +371,6 @@ function getUniversitiesForCity(city) {
   return universitiesByCity[city] || [];
 }
 
-function getFilteredUniversities(city, searchTerm) {
-  const universities = getUniversitiesForCity(city);
-  return universities.filter((uni) =>
-    uni.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-}
-
-function sanitizeUniversityValue(value) {
-  return String(value || "")
-    .replace(/\s+/g, " ")
-    .trim()
-    .slice(0, UNIVERSITY_INPUT_MAX_LENGTH);
-}
-
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -392,25 +378,6 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
-}
-
-function updateUniversityCounter() {
-  const counter = document.getElementById("universityCounter");
-  if (!counter) return;
-  counter.textContent = `${(appState.university || "").length}/${UNIVERSITY_INPUT_MAX_LENGTH}`;
-}
-
-function bindUniversityChipSelection(container) {
-  container.querySelectorAll("[data-university]").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      appState.university = sanitizeUniversityValue(chip.dataset.university);
-      renderStep();
-
-      if (shouldAutoAdvance()) {
-        autoAdvanceIfReady(3);
-      }
-    });
-  });
 }
 
 function renderCityStep() {
