@@ -404,7 +404,7 @@ function initSuburbPage() {
       <section class="info-card suburb-detail-card" id="distanceSection">
         <div class="suburb-section-head">
           <h3>Distance to university</h3>
-          <p>Straight-line distance from ${suburb.suburb} to your selected university campus.</p>
+          <p>Showing distances from ${suburb.suburb} to each campus of ${preferences.university}.</p>
         </div>
         <div id="distanceResult">
           <p style="color:var(--text-soft); font-size:0.9rem;">Calculating distance…</p>
@@ -2439,7 +2439,6 @@ async function renderDistanceSection(suburb, preferences) {
           <article class="suburb-profile-card">
             <span class="suburb-profile-kicker">${r.name}</span>
             <p style="font-size:1.1rem;font-weight:700;color:var(--primary)">${r.dist.toFixed(1)} km</p>
-            <p style="font-size:0.8rem;color:var(--text-soft)">straight-line distance</p>
           </article>
         `).join("")}
       </div>
