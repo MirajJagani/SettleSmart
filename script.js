@@ -676,7 +676,6 @@ function handleNext() {
     return;
   }
 
-  appState.university = sanitizeUniversityValue(appState.university);
   localStorage.setItem("settlesmart_preferences", JSON.stringify(appState));
   loadingOverlay.classList.remove("hidden");
 
@@ -765,7 +764,7 @@ function getStoredPreferences() {
   storedPreferences.housing = getPreferenceArray(storedPreferences.housing);
   storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
   storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
-  storedPreferences.university = sanitizeUniversityValue(storedPreferences.university || "");
+  storedPreferences.university = String(storedPreferences.university || "").trim();
   return storedPreferences;
 }
 
