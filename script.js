@@ -60,46 +60,191 @@ const cultures = [
 
 const universitiesByCity = {
   Melbourne: [
-    "Monash University",
     "The University of Melbourne",
+    "Monash University",
     "RMIT University",
     "Deakin University",
-    "La Trobe University"
+    "La Trobe University",
+    "Swinburne University of Technology",
+    "Victoria University"
   ],
   Sydney: [
-    "The University of Sydney",
+    "University of Sydney",
     "UNSW Sydney",
-    "UTS",
     "Macquarie University",
-    "Western Sydney University"
+    "University of Technology Sydney",
+    "Western Sydney University",
+    "University of Newcastle",
+    "University of Wollongong"
   ],
   Brisbane: [
-    "The University of Queensland",
+    "University of Queensland",
     "Queensland University of Technology",
     "Griffith University",
-    "Bond University",
-    "University of Southern Queensland"
+    "James Cook University"
   ],
   Adelaide: [
-    "The University of Adelaide",
-    "University of South Australia",
+    "University of Adelaide",
     "Flinders University",
-    "Torrens University Australia",
-    "CQUniversity Adelaide"
+    "University of South Australia"
   ],
   Perth: [
-    "The University of Western Australia",
+    "University of Western Australia",
     "Curtin University",
     "Murdoch University",
-    "Edith Cowan University",
-    "University of Notre Dame Australia"
+    "Edith Cowan University"
   ],
   Canberra: [
     "Australian National University",
-    "University of Canberra",
-    "UNSW Canberra",
-    "Charles Sturt University Canberra",
-    "Australian Catholic University Canberra"
+    "UNSW Sydney"
+  ]
+};
+
+const campusesByUniversity = {
+  "The University of Melbourne": [
+    "Parkville Campus",
+    "Southbank Campus",
+    "Burnley Campus",
+    "Werribee Campus",
+    "Dookie Campus",
+    "Creswick Campus",
+    "Shepparton Campus"
+  ],
+  "Monash University": [
+    "Clayton Campus",
+    "Caulfield Campus",
+    "Peninsula Campus",
+    "Parkville Campus"
+  ],
+  "RMIT University": [
+    "City Campus",
+    "Brunswick Campus",
+    "Bundoora Campus"
+  ],
+  "Deakin University": [
+    "Burwood Campus",
+    "Waurn Ponds Campus",
+    "Waterfront Campus",
+    "Warrnambool Campus"
+  ],
+  "La Trobe University": [
+    "Bundoora Campus",
+    "Bendigo Campus",
+    "Albury-Wodonga Campus",
+    "Mildura Campus",
+    "Shepparton Campus"
+  ],
+  "Swinburne University of Technology": [
+    "Hawthorn Campus",
+    "Croydon Campus",
+    "Wantirna Campus"
+  ],
+  "Victoria University": [
+    "Footscray Park Campus",
+    "Footscray Nicholson Campus",
+    "St Albans Campus",
+    "Sunshine Campus",
+    "City Queen Campus"
+  ],
+
+  "University of Sydney": [
+    "Camperdown Campus",
+    "Cumberland Campus",
+    "Camden Campus",
+    "Sydney Conservatorium"
+  ],
+  "UNSW Sydney": [
+    "Kensington Campus",
+    "Paddington Campus",
+    "Canberra Campus"
+  ],
+  "Macquarie University": [
+    "North Ryde Campus"
+  ],
+  "University of Technology Sydney": [
+    "City Campus",
+    "Moore Park Campus"
+  ],
+  "Western Sydney University": [
+    "Parramatta South Campus",
+    "Parramatta City Campus",
+    "Penrith Campus",
+    "Campbelltown Campus",
+    "Bankstown Campus",
+    "Hawkesbury Campus"
+  ],
+  "University of Newcastle": [
+    "Callaghan Campus",
+    "Central Coast Campus",
+    "Sydney Campus"
+  ],
+  "University of Wollongong": [
+    "Wollongong Campus",
+    "Liverpool Campus",
+    "Shoalhaven Campus"
+  ],
+
+  "University of Queensland": [
+    "St Lucia Campus",
+    "Herston Campus",
+    "Gatton Campus"
+  ],
+  "Queensland University of Technology": [
+    "Gardens Point Campus",
+    "Kelvin Grove Campus"
+  ],
+  "Griffith University": [
+    "Nathan Campus",
+    "Gold Coast Campus",
+    "South Bank Campus",
+    "Logan Campus"
+  ],
+  "James Cook University": [
+    "Townsville Campus",
+    "Cairns Campus",
+    "Brisbane Campus"
+  ],
+
+  "University of Adelaide": [
+    "North Terrace Campus",
+    "Roseworthy Campus",
+    "Waite Campus"
+  ],
+  "Flinders University": [
+    "Bedford Park Campus",
+    "Tonsley Campus",
+    "City Campus"
+  ],
+  "University of South Australia": [
+    "City West Campus",
+    "City East Campus",
+    "Mawson Lakes Campus",
+    "Magill Campus"
+  ],
+
+  "University of Western Australia": [
+    "Crawley Campus",
+    "Claremont Campus",
+    "Albany Campus"
+  ],
+  "Curtin University": [
+    "Bentley Campus",
+    "Kalgoorlie Campus",
+    "Perth City Campus"
+  ],
+  "Murdoch University": [
+    "Murdoch Campus",
+    "Mandurah Campus",
+    "Rockingham Campus"
+  ],
+  "Edith Cowan University": [
+    "Joondalup Campus",
+    "Mount Lawley Campus",
+    "South West Campus"
+  ],
+
+  "Australian National University": [
+    "Acton Campus"
   ]
 };
 
@@ -130,6 +275,7 @@ const appState = {
   language: "",
   culture: "",
   university: "",
+  campus:"",
   budget: 300,
   housing: [],
   commute: [],
@@ -371,6 +517,10 @@ function getUniversitiesForCity(city) {
   return universitiesByCity[city] || [];
 }
 
+function getCampusesForUniversity(university) {
+  return campusesByUniversity[university] || [];
+}
+
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -402,6 +552,7 @@ function renderCityStep() {
 
       if (appState.city !== nextCity) {
         appState.university = "";
+        appState.campus = "";
       }
 
       appState.city = nextCity;
@@ -480,25 +631,26 @@ function renderLanguageStep() {
 
 function renderUniversityStep() {
   const universities = getUniversitiesForCity(appState.city);
+  const campuses = getCampusesForUniversity(appState.university);
 
   stepContent.innerHTML = `
     <div class="row g-4">
-      <div class="col-12">
+      <div class="col-12 col-lg-6">
         <div class="panel-card">
           <h3 class="section-mini-title">Choose your university</h3>
           <p class="muted-line">
-            Showing top universities based on your selected city: 
+            Showing universities based on your selected city:
             <strong>${appState.city || "Not selected"}</strong>
           </p>
 
           <div class="chips mt-3" id="universityChips">
             ${universities.map((uni) => `
-              <button 
-                class="chip ${appState.university === uni ? "selected" : ""}" 
-                data-university="${uni}" 
+              <button
+                class="chip ${appState.university === uni ? "selected" : ""}"
+                data-university="${escapeHtml(uni)}"
                 type="button"
               >
-                ${uni}
+                ${escapeHtml(uni)}
               </button>
             `).join("")}
           </div>
@@ -508,12 +660,58 @@ function renderUniversityStep() {
           </p>
         </div>
       </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="panel-card">
+          <h3 class="section-mini-title">Choose your campus</h3>
+
+          ${
+            appState.university
+              ? `
+                <p class="muted-line">
+                  Showing campuses for:
+                  <strong>${escapeHtml(appState.university)}</strong>
+                </p>
+
+                <div class="chips mt-3" id="campusChips">
+                  ${campuses.map((campus) => `
+                    <button
+                      class="chip ${appState.campus === campus ? "selected" : ""}"
+                      data-campus="${escapeHtml(campus)}"
+                      type="button"
+                    >
+                      ${escapeHtml(campus)}
+                    </button>
+                  `).join("")}
+                </div>
+              `
+              : `
+                <p class="muted-line">
+                  Select your university first, then campus options will appear here.
+                </p>
+              `
+          }
+        </div>
+      </div>
     </div>
   `;
 
   document.querySelectorAll("[data-university]").forEach((chip) => {
     chip.addEventListener("click", () => {
-      appState.university = chip.dataset.university;
+      const nextUniversity = chip.dataset.university;
+
+      if (appState.university !== nextUniversity) {
+        appState.campus = "";
+      }
+
+      appState.university = nextUniversity;
+      renderStep();
+    });
+  });
+
+  document.querySelectorAll("[data-campus]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      appState.campus = chip.dataset.campus;
       renderStep();
       autoAdvanceIfReady(3);
     });
@@ -640,6 +838,8 @@ function renderLifestyleReviewStep() {
       <div class="col-12 col-md-6"><div class="review-item"><span>Destination city</span><strong>${appState.city || "-"}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Language and culture</span><strong>${appState.language || "-"}${appState.culture ? ` · ${appState.culture}` : ""}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>University</span><strong>${escapeHtml(appState.university || "-")}</strong></div></div>
+      <div class="col-12 col-md-6"><div class="review-item"><span>Campus</span><strong>${escapeHtml(appState.campus || "-")}</strong></div></div>
+
       <div class="col-12 col-md-6"><div class="review-item"><span>Budget</span><strong>$${appState.budget}/week</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Housing preferences</span><strong>${formatChoice(appState.housing)}</strong></div></div>
       <div class="col-12 col-md-6"><div class="review-item"><span>Commute preferences</span><strong>${formatChoice(appState.commute)}</strong></div></div>
@@ -691,7 +891,10 @@ function isStepValid(step) {
     case 2:
       return !!appState.language && !!appState.culture;
     case 3:
-      return getUniversitiesForCity(appState.city).includes(appState.university);
+      return (
+        getUniversitiesForCity(appState.city).includes(appState.university) &&
+        getCampusesForUniversity(appState.university).includes(appState.campus)
+      );
     case 4:
       return !!appState.budget;
     case 5:
@@ -715,7 +918,7 @@ function updateNextButtonState() {
 
   if (!valid) {
     if (appState.step === 3) {
-      stepHint.textContent = "Select your university to continue";
+      stepHint.textContent = "Select your university and campus to continue";
     } else if (appState.step === 5) {
       stepHint.textContent = "Select at least one housing style to continue";
     } else if (appState.step === 6) {
@@ -765,6 +968,7 @@ function getStoredPreferences() {
   storedPreferences.commute = getPreferenceArray(storedPreferences.commute);
   storedPreferences.lifestyle = getPreferenceArray(storedPreferences.lifestyle);
   storedPreferences.university = String(storedPreferences.university || "").trim();
+  storedPreferences.campus = String(storedPreferences.campus || "").trim();
   return storedPreferences;
 }
 
