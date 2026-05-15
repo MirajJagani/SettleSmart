@@ -1,11 +1,14 @@
 /*
   SettleSmart - Landing page onboarding flow
-  -----------------------------------------
-  This file handles Epic 1 (Guided Preference Input).
+  ------------------------------------------
+  Handles the preview access gate, 7-step guided onboarding flow,
+  step validation, progress rendering, and preference persistence.
 */
 
 const SITE_PASSWORD = "COUNT ON US";
 const ACCESS_SESSION_KEY = "settlesmart_access_granted";
+
+/* ===== Static onboarding data ===== */
 
 const cities = [
   {
@@ -269,6 +272,8 @@ const lifestyleOptions = [
   { key: "beach", title: "Coastal lifestyle", desc: "Closer to beaches and open-air living" }
 ];
 
+/* ===== App state and step configuration ===== */
+
 const appState = {
   step: 1,
   city: "",
@@ -294,6 +299,8 @@ const stepMeta = {
   6: { label: "Step 6 of 7", title: "Tell us your commute preference" },
   7: { label: "Step 7 of 7", title: "Lifestyle priorities and final review" }
 };
+
+/* ===== DOM refs ===== */
 
 const stepContent = document.getElementById("stepContent");
 const stepLabel = document.getElementById("pageStepLabel");
@@ -328,6 +335,8 @@ function init() {
   renderProgress();
   renderStep();
 }
+
+/* ===== Access gate ===== */
 
 function setupAccessGate() {
   if (!accessGateModalEl || typeof bootstrap === "undefined") return;
@@ -431,6 +440,8 @@ function renderProgress() {
   backBtn.style.visibility = appState.step === 1 ? "hidden" : "visible";
   updateNextButtonState();
 }
+
+/* ===== Step rendering ===== */
 
 function renderStep() {
   switch (appState.step) {
@@ -859,6 +870,8 @@ function renderLifestyleReviewStep() {
   });
 }
 
+/* ===== Navigation and validation ===== */
+
 function handleBack() {
   if (appState.step > 1) {
     appState.step -= 1;
@@ -937,6 +950,8 @@ function updateNextButtonState() {
   }
 }
 
+/* ===== Utility helpers ===== */
+
 function getFilteredLanguages(searchTerm) {
   return languages.filter((lang) => lang.toLowerCase().includes(searchTerm.toLowerCase()));
 }
@@ -971,6 +986,8 @@ function getStoredPreferences() {
   storedPreferences.campus = String(storedPreferences.campus || "").trim();
   return storedPreferences;
 }
+
+/* ===== Exposed globals (used by results.js and suburb.js) ===== */
 
 window.getStoredPreferences = getStoredPreferences;
 window.formatChoice = formatChoice;

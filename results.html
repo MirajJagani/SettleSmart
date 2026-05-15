@@ -1,9 +1,12 @@
+<!-- results.html — Shortlist and suburb comparison page.
+     Loads suburb-data.js then results.js, which renders all dynamic content. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Settle-Smart · Your Shortlist</title>
+  <!-- Access guard: redirect to index.html if the session flag is not set -->
   <script>
     (function () {
       if (sessionStorage.getItem("settlesmart_access_granted") !== "true") {
@@ -21,6 +24,8 @@
   <div class="page-glow glow-left"></div>
   <div class="page-glow glow-right"></div>
 
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg ss-navbar sticky-top">
     <div class="container-xxl">
       <a class="navbar-brand ss-brand" href="index.html">
@@ -36,7 +41,7 @@
   </nav>
 
   <main>
-    <!-- page 1 -->
+    <!-- Page 1: hero banner and top match summary (summaryView) -->
     <section class="section-pad pt-4">
       <div class="container-xxl">
         <div class="results-hero-banner" id="resultsHeroBanner">
@@ -68,7 +73,7 @@
       </div>
     </section>
 
-    <!-- page 2 -->
+    <!-- Page 2: full shortlist, toolbar, comparison panel, and spin wheel (detailView) -->
     <section class="section-pad pt-4 hidden" id="detailView">
       <div class="container-xxl">
         <div class="results-view-actions results-view-actions-top">
@@ -222,6 +227,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="ss-footer mt-5">
     <div class="container-xxl">
       <div class="row g-4 align-items-start">

@@ -1,3 +1,10 @@
+/*
+  SettleSmart - Shortlist and comparison results page
+  ---------------------------------------------------
+  Handles suburb ranking, hero rendering, result cards, pagination,
+  spin wheel, community explorer, and Epic 7 side-by-side comparison.
+*/
+
 const preferences = window.getStoredPreferences
   ? window.getStoredPreferences()
   : JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
@@ -10,6 +17,8 @@ const cityHeroImages = {
   Perth: "https://images.unsplash.com/photo-1510546020571-ec8f91d1fceb?auto=format&fit=crop&w=1600&q=80",
   Canberra: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80"
 };
+
+/* ===== App state and DOM refs ===== */
 
 const appState = {
   sortBy: localStorage.getItem("settlesmart_sort") || "match-desc",
@@ -80,11 +89,15 @@ const wheelState = {
   listenersBound: false
 };
 
+/* ===== Constants ===== */
+
 const DEFAULT_SHORTLIST_LIMIT = 20;
 const COMPARE_LIMIT = 4;
 const COMPARE_STORAGE_KEY = "settlesmart_compare_slugs";
 
 init();
+
+/* ===== Initialisation ===== */
 
 function init() {
   if (!preferences.city) {
@@ -162,6 +175,8 @@ function init() {
   renderPage();
 }
 
+/* ===== Ranking and scoring ===== */
+
 function rankSuburbs() {
   return window.suburbs
     .filter((suburb) => suburb.city === preferences.city)
@@ -232,6 +247,8 @@ function getCurrentPageSuburbs() {
   return sorted.slice(startIndex, startIndex + appState.pageSize);
 }
 
+/* ===== Render pipeline ===== */
+
 function renderPage() {
   const sorted = getSortedShortlistForDisplay();
   const totalPages = sorted.length ? Math.ceil(sorted.length / appState.pageSize) : 0;
@@ -271,6 +288,8 @@ function handleSortChange(event) {
   localStorage.setItem("settlesmart_sort", appState.sortBy);
   renderPage();
 }
+
+/* ===== Hero, top match, and result cards ===== */
 
 function renderHero() {
   const heroImage = cityHeroImages[preferences.city] || cityHeroImages.Melbourne;
@@ -464,6 +483,8 @@ function renderMatches(list, bestMatchSlug) {
     });
   });
 }
+
+/* ===== Pagination ===== */
 
 function renderPagination(totalPages) {
   if (!resultsPagination) return;
@@ -1481,6 +1502,7 @@ function getWheelWinner() {
 
 /* ===== Community explorer ===== */
 
+// Community explorer elements may not be present in all HTML versions.
 function renderCommunityExplorer() {
   // Community explorer elements may not exist in the current HTML version
   if (!cultureList) return;
@@ -1772,6 +1794,8 @@ function getCommunityData(suburb) {
     placesOfWorship: suburb.culture === "high" ? "3+" : "1+"
   };
 }
+
+/* ===== Sort, filter, and view helpers ===== */
 
 function applySort(list, sortBy) {
   const sorted = [...list];

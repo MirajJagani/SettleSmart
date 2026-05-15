@@ -1,9 +1,13 @@
+<!-- suburb.html — Suburb detail profile page.
+     Loads suburb-data.js, Chart.js, and suburb.js.
+     The #suburbProfile div is fully populated by suburb.js at runtime. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Settle-Smart · Suburb Profile</title>
+  <!-- Access guard: redirect to index.html if the session flag is not set -->
   <script>
     (function () {
       if (sessionStorage.getItem("settlesmart_access_granted") !== "true") {
@@ -18,6 +22,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="results-page detail-page">
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg ss-navbar sticky-top">
     <div class="container-xxl">
       <a class="navbar-brand ss-brand" href="index.html">
@@ -30,11 +36,13 @@
     </div>
   </nav>
 
+  <!-- Main content — suburb.js mounts the full profile into #suburbProfile -->
   <main class="section-pad pt-4">
     <div class="container-xxl">
       <div id="suburbProfile"></div>
     </div>
   </main>
+<!-- Footer -->
 <footer class="ss-footer mt-5">
   <div class="container-xxl">
     <div class="row g-4 align-items-start">

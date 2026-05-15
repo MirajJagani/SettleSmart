@@ -1,3 +1,10 @@
+/*
+  SettleSmart - Suburb detail page
+  ---------------------------------
+  Renders the full suburb profile: priority match grid, community snapshot,
+  mini map, risk summary, safety indicator chart, and university distance.
+*/
+
 const preferences = window.getStoredPreferences
   ? window.getStoredPreferences()
   : JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
@@ -482,6 +489,8 @@ function renderPriorityMatchRow(row) {
   `;
 }
 
+/* ─── Priority match rows ───────────────────────────────────────── */
+
 function buildPriorityMatchRows(suburb, preferences) {
   return [
     getBudgetPriorityMatch(suburb, preferences),
@@ -800,6 +809,7 @@ function getUniversityPriorityMatch(suburb, preferences) {
   };
 }
 
+// Fallback community data when Epic 4 database has no entry for this suburb.
 function getFallbackCommunity(suburb) {
   return {
     communityStrength: suburb.culture === "high" ? 82 : suburb.culture === "medium" ? 68 : 54,
@@ -1424,7 +1434,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return;
 
-  // 按钮 loading（单独类别点击时才更新）
+  // Set button loading state (only update when a single category is clicked)
   const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
   let originalHTML = "";
   if (activeBtn) {
@@ -1452,7 +1462,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
     }
   }
 
-  // 渲染标记
+  // Render map markers
   if (elements && elements.length) {
     elements.forEach(el => {
       const elLat = el.lat ?? el.center?.lat;
@@ -2360,7 +2370,7 @@ function renderSafetyTrendChart(suburb) {
   });
 }
 
-// ── Distance to University (Supabase + Nominatim + Haversine) ────────────────
+/* ─── Distance to university (Supabase + Nominatim + Haversine) ─── */
 
 const SUPABASE_URL = "https://tvntdokwhckdhdzojmzb.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_OilvFk1wyG2AzJcm_q-KBg_dmFhloU9";
