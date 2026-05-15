@@ -122,6 +122,51 @@
           </div>
         </div>
 
+        <!-- Epic 7: side-by-side comparison and custom shortlist -->
+        <section class="comparison-panel info-card mb-4" id="comparisonPanel" aria-label="Side-by-side suburb comparison">
+          <div class="comparison-panel-head">
+            <div>
+              <span class="section-kicker">Epic 7 · Compare shortlist</span>
+              <h3 class="comparison-title">Compare suburbs side by side</h3>
+              <p class="comparison-copy">
+                Select 2 to 4 suburbs from your recommendations, or add a custom suburb from your destination city,
+                then compare them against the priorities you chose during onboarding.
+              </p>
+            </div>
+            <span class="comparison-counter" id="comparisonCounter">0 / 4 selected</span>
+          </div>
+
+          <div class="comparison-toolbar">
+            <div class="comparison-tray" id="comparisonTray"></div>
+
+            <div class="custom-compare-card">
+              <label for="customCompareSelect" class="results-sort-label">Add custom suburb</label>
+              <div class="custom-compare-controls">
+                <select id="customCompareSelect" class="form-select ss-sort-select">
+                  <option value="">Choose suburb</option>
+                </select>
+                <button type="button" class="btn ss-btn ss-btn-secondary" id="customCompareAddBtn">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="comparison-feedback hidden" id="comparisonFeedback"></div>
+
+          <div class="comparison-actions">
+            <button type="button" class="btn ss-btn ss-btn-primary" id="renderComparisonBtn">
+              Compare selected suburbs
+            </button>
+            <button type="button" class="btn ss-btn ss-btn-secondary" id="clearComparisonBtn">
+              Clear comparison
+            </button>
+          </div>
+
+          <div class="comparison-table-wrap hidden" id="comparisonTableWrap"></div>
+        </section>
+
+
         <div class="row g-4 mb-5" id="resultsGrid"></div>
         <!-- spin wheel -->
         <div class="spin-wheel-panel info-card mb-4" id="spinWheelPanel">
