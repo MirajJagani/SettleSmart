@@ -41,7 +41,11 @@ const resultsCount = document.getElementById("resultsCount");
 const comparisonPanel = document.getElementById("comparisonPanel");
 const comparisonCounter = document.getElementById("comparisonCounter");
 const comparisonTray = document.getElementById("comparisonTray");
-const customCompareSelect = document.getElementById("customCompareSelect");
+const customComparePicker = document.getElementById("customComparePicker");
+const customCompareInput = document.getElementById("customCompareInput");
+const customCompareValue = document.getElementById("customCompareValue");
+const customCompareToggle = document.getElementById("customCompareToggle");
+const customCompareMenu = document.getElementById("customCompareMenu");
 const customCompareAddBtn = document.getElementById("customCompareAddBtn");
 const comparisonFeedback = document.getElementById("comparisonFeedback");
 const renderComparisonBtn = document.getElementById("renderComparisonBtn");
@@ -344,6 +348,7 @@ function renderTopMatch(match) {
             class="btn ss-btn ss-btn-primary compare-toggle-btn"
             type="button"
             data-compare-slug="${match.slug}"
+            data-open-comparison="true"
           >
             Compare +
           </button>
@@ -538,17 +543,60 @@ function getVisiblePaginationItems(totalPages, currentPage) {
 /* ===== Epic 7: Side-by-side comparison and shortlist ===== */
 
 function setupComparisonHandlers() {
-  if (customCompareAddBtn) {
-    customCompareAddBtn.addEventListener("click", () => {
-      const slug = customCompareSelect?.value || "";
-      if (!slug) {
-        setComparisonMessage("Choose a suburb from the dropdown before adding it.", "info");
-        return;
+  if (customCompareInput) {
+    customCompareInput.addEventListener("input", () => {
+      if (customCompareValue) customCompareValue.value = "";
+      renderCustomCompareMenu(customCompareInput.value, true);
+      updateCustomCompareAddState();
+    });
+
+    customCompareInput.addEventListener("focus", () => {
+      renderCustomCompareMenu(customCompareInput.value, true);
+      updateCustomCompareAddState();
+    });
+
+    customCompareInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        handleCustomCompareAdd();
       }
 
-      addSuburbToCompare(slug, "Custom suburb added to your comparison shortlist.");
+      if (event.key === "Escape") {
+        closeCustomCompareMenu();
+      }
     });
   }
+
+  if (customCompareToggle) {
+    customCompareToggle.addEventListener("click", () => {
+      if (!customCompareMenu || customCompareToggle.disabled) return;
+
+      const shouldOpen = customCompareMenu.classList.contains("hidden");
+      if (shouldOpen) {
+        customCompareInput?.focus();
+        renderCustomCompareMenu(customCompareInput?.value || "", true);
+      } else {
+        closeCustomCompareMenu();
+      }
+    });
+  }
+
+  if (customCompareMenu) {
+    customCompareMenu.addEventListener("click", (event) => {
+      const option = event.target.closest("[data-custom-compare-slug]");
+      if (!option) return;
+      selectCustomCompareSuburb(option.dataset.customCompareSlug);
+    });
+  }
+
+  if (customCompareAddBtn) {
+    customCompareAddBtn.addEventListener("click", handleCustomCompareAdd);
+  }
+
+  document.addEventListener("click", (event) => {
+    if (!customComparePicker || customComparePicker.contains(event.target)) return;
+    closeCustomCompareMenu();
+  });
 
   if (comparisonTray) {
     comparisonTray.addEventListener("click", (event) => {
@@ -576,6 +624,7 @@ function setupComparisonHandlers() {
       appState.compareSlugs = [];
       appState.compareMessage = { text: "Comparison shortlist cleared.", type: "info" };
       saveCompareSelection();
+      clearCustomCompareInput();
       renderComparisonPanel(false);
       updateCompareButtonStates();
     });
@@ -646,21 +695,152 @@ function renderComparisonTray(selectedSuburbs) {
 }
 
 function renderCustomCompareOptions() {
-  if (!customCompareSelect || !customCompareAddBtn) return;
+  const options = getCustomCompareOptions();
+  const limitReached = appState.compareSlugs.length >= COMPARE_LIMIT;
+  const disabled = limitReached || !options.length;
 
+  if (customCompareInput) {
+    customCompareInput.disabled = disabled;
+    customCompareInput.placeholder = limitReached
+      ? `Maximum ${COMPARE_LIMIT} suburbs selected`
+      : options.length
+        ? "Type or choose a suburb"
+        : "No more suburbs available";
+  }
+
+  if (customCompareToggle) {
+    customCompareToggle.disabled = disabled;
+  }
+
+  if (customCompareValue?.value && !options.some((suburb) => suburb.slug === customCompareValue.value)) {
+    clearCustomCompareInput();
+  }
+
+  renderCustomCompareMenu(customCompareInput?.value || "", false);
+  updateCustomCompareAddState();
+}
+
+function getCustomCompareOptions() {
   const selected = new Set(appState.compareSlugs);
-  const options = appState.rankedSuburbs
+  const selectedCity = normalizeCompareSearch(preferences.city);
+
+  return appState.rankedSuburbs
+    .filter((suburb) => normalizeCompareSearch(suburb.city) === selectedCity)
     .filter((suburb) => !selected.has(suburb.slug))
     .sort((a, b) => a.suburb.localeCompare(b.suburb));
+}
 
-  customCompareSelect.innerHTML = `
-    <option value="">Choose suburb</option>
-    ${options.map((suburb) => `<option value="${suburb.slug}">${suburb.suburb}</option>`).join("")}
-  `;
+function renderCustomCompareMenu(query = "", forceOpen = false) {
+  if (!customCompareMenu) return;
 
+  const options = getCustomCompareOptions();
   const limitReached = appState.compareSlugs.length >= COMPARE_LIMIT;
-  customCompareSelect.disabled = limitReached || !options.length;
-  customCompareAddBtn.disabled = limitReached || !options.length;
+  const normalizedQuery = normalizeCompareSearch(query);
+  const visibleOptions = normalizedQuery
+    ? options.filter((suburb) => normalizeCompareSearch(suburb.suburb).includes(normalizedQuery))
+    : options;
+  const cityLabel = preferences.city || "your selected city";
+
+  if (limitReached) {
+    customCompareMenu.innerHTML = `<div class="custom-suburb-empty">Remove a suburb before adding another.</div>`;
+  } else if (!options.length) {
+    customCompareMenu.innerHTML = `<div class="custom-suburb-empty">No more suburbs available for ${cityLabel}.</div>`;
+  } else if (!visibleOptions.length) {
+    customCompareMenu.innerHTML = `<div class="custom-suburb-empty">No matching suburb found in ${cityLabel}. Try another spelling.</div>`;
+  } else {
+    customCompareMenu.innerHTML = visibleOptions.map((suburb) => `
+      <button
+        type="button"
+        class="custom-suburb-option"
+        data-custom-compare-slug="${suburb.slug}"
+        role="option"
+      >
+        <span>${suburb.suburb}</span>
+      </button>
+    `).join("");
+  }
+
+  const shouldShow = forceOpen && !limitReached && !!options.length;
+  customCompareMenu.classList.toggle("hidden", !shouldShow);
+  customCompareInput?.setAttribute("aria-expanded", shouldShow ? "true" : "false");
+}
+
+function selectCustomCompareSuburb(slug) {
+  const suburb = getCustomCompareOptions().find((item) => item.slug === slug);
+  if (!suburb) return;
+
+  if (customCompareInput) customCompareInput.value = suburb.suburb;
+  if (customCompareValue) customCompareValue.value = suburb.slug;
+
+  closeCustomCompareMenu();
+  updateCustomCompareAddState();
+}
+
+function handleCustomCompareAdd() {
+  const slug = resolveCustomCompareSlug();
+
+  if (!slug) {
+    const query = customCompareInput?.value.trim() || "";
+
+    if (!query) {
+      setComparisonMessage("Type a suburb name or choose one from the suggestions before adding it.", "info");
+    } else {
+      setComparisonMessage("Please choose one matching suburb from the suggestions before adding it.", "warning");
+      renderCustomCompareMenu(query, true);
+    }
+
+    return;
+  }
+
+  addSuburbToCompare(slug, "Custom suburb added to your comparison shortlist.", { clearCustomInput: true });
+}
+
+function resolveCustomCompareSlug() {
+  const options = getCustomCompareOptions();
+  const selectedSlug = customCompareValue?.value || "";
+
+  if (selectedSlug && options.some((suburb) => suburb.slug === selectedSlug)) {
+    return selectedSlug;
+  }
+
+  const query = normalizeCompareSearch(customCompareInput?.value || "");
+  if (!query) return "";
+
+  const exactMatch = options.find((suburb) => normalizeCompareSearch(suburb.suburb) === query);
+  if (exactMatch) return exactMatch.slug;
+
+  const startsWithMatches = options.filter((suburb) => normalizeCompareSearch(suburb.suburb).startsWith(query));
+  if (startsWithMatches.length === 1) return startsWithMatches[0].slug;
+
+  const containsMatches = options.filter((suburb) => normalizeCompareSearch(suburb.suburb).includes(query));
+  return containsMatches.length === 1 ? containsMatches[0].slug : "";
+}
+
+function updateCustomCompareAddState() {
+  if (!customCompareAddBtn) return;
+
+  const options = getCustomCompareOptions();
+  const limitReached = appState.compareSlugs.length >= COMPARE_LIMIT;
+  const hasTypedValue = !!(customCompareInput?.value.trim() || customCompareValue?.value);
+  customCompareAddBtn.disabled = limitReached || !options.length || !hasTypedValue;
+}
+
+function clearCustomCompareInput() {
+  if (customCompareInput) customCompareInput.value = "";
+  if (customCompareValue) customCompareValue.value = "";
+  closeCustomCompareMenu();
+}
+
+function closeCustomCompareMenu() {
+  customCompareMenu?.classList.add("hidden");
+  customCompareInput?.setAttribute("aria-expanded", "false");
+}
+
+function normalizeCompareSearch(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
 }
 
 function renderComparisonFeedback() {
@@ -776,7 +956,9 @@ function bindCompareButtons() {
     if (button.dataset.compareBound === "true") return;
 
     button.addEventListener("click", () => {
-      toggleSuburbCompare(button.dataset.compareSlug);
+      toggleSuburbCompare(button.dataset.compareSlug, {
+        openComparison: button.dataset.openComparison === "true"
+      });
     });
 
     button.dataset.compareBound = "true";
@@ -795,47 +977,73 @@ function updateCompareButtonStates() {
   });
 }
 
-function toggleSuburbCompare(slug) {
+function toggleSuburbCompare(slug, options = {}) {
   if (!slug) return;
 
   if (appState.compareSlugs.includes(slug)) {
-    removeSuburbFromCompare(slug);
+    removeSuburbFromCompare(slug, { openComparison: options.openComparison });
     return;
   }
 
-  addSuburbToCompare(slug, "Suburb added to your comparison shortlist.");
+  addSuburbToCompare(slug, "Suburb added to your comparison shortlist.", {
+    openComparison: options.openComparison
+  });
 }
 
-function addSuburbToCompare(slug, successMessage) {
+function addSuburbToCompare(slug, successMessage, options = {}) {
   if (!slug) return;
 
   if (appState.compareSlugs.includes(slug)) {
     setComparisonMessage("This suburb is already in your comparison shortlist.", "info");
+    if (options.openComparison) openComparisonSection();
     return;
   }
 
   if (appState.compareSlugs.length >= COMPARE_LIMIT) {
     setComparisonMessage(`You can compare up to ${COMPARE_LIMIT} suburbs at once. Remove one to add another.`, "warning");
+    if (options.openComparison) openComparisonSection();
     return;
   }
 
   const suburb = getRankedSuburbBySlug(slug);
   if (!suburb) {
     setComparisonMessage("That suburb is not available in the current city shortlist.", "warning");
+    if (options.openComparison) openComparisonSection();
     return;
   }
 
   appState.compareSlugs.push(slug);
   appState.compareMessage = { text: successMessage || "Suburb added.", type: "success" };
   saveCompareSelection();
+
+  if (options.clearCustomInput) {
+    clearCustomCompareInput();
+  }
+
   renderComparisonPanel(false);
+
+  if (options.openComparison) {
+    openComparisonSection();
+  }
 }
 
-function removeSuburbFromCompare(slug) {
+function removeSuburbFromCompare(slug, options = {}) {
   appState.compareSlugs = appState.compareSlugs.filter((item) => item !== slug);
   appState.compareMessage = { text: "Suburb removed from comparison.", type: "info" };
   saveCompareSelection();
   renderComparisonPanel(appState.compareSlugs.length >= 2);
+
+  if (options.openComparison) {
+    openComparisonSection();
+  }
+}
+
+function openComparisonSection() {
+  setResultsView("detail");
+
+  window.setTimeout(() => {
+    comparisonPanel?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 80);
 }
 
 function setComparisonMessage(text, type = "info") {

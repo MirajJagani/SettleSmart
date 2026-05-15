@@ -9,7 +9,7 @@ SettleSmart is a static web prototype that helps international students explore 
 - Generates a suburb shortlist based on overall fit, culture/community fit, and university access
 - Shows a detailed suburb page with a 7-priority match grid
 - Includes a shortlist spin wheel to help users choose which suburb to inspect first
-- Adds Epic 7 side-by-side suburb comparison with a comparison shortlist, custom suburb selector, and priority-based comparison rows
+- Adds Epic 7 side-by-side suburb comparison with a comparison shortlist, searchable custom suburb selector that lists all suburbs from the selected city, top-match comparison jump, and priority-based comparison rows
 - Provides nearby-facility exploration with a mini map and safety/risk information
 
 ## Main pages
@@ -56,7 +56,7 @@ SettleSmart/
 3. Preferences are saved into `localStorage` under `settlesmart_preferences`.
 4. `results.html` loads the saved preferences and uses helpers from `suburb-data.js` to rank suburbs.
 5. `results.js` renders the top match, additional suburb cards, filters, pagination, spin wheel, and comparison tools.
-6. Users can select 2 to 4 suburbs with **Compare +**, add a custom suburb from the selected city, and compare options against their saved priorities.
+6. Users can select 2 to 4 suburbs with **Compare +**, open the full selected-city suburb list or type to choose a custom suburb, and compare options against their saved priorities.
 7. When a suburb card is opened, `suburb.html` reads the selected `slug` and `suburb.js` builds the detailed suburb profile.
 
 ## Scoring model summary

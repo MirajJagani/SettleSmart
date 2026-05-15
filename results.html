@@ -139,15 +139,35 @@
             <div class="comparison-tray" id="comparisonTray"></div>
 
             <div class="custom-compare-card">
-              <label for="customCompareSelect" class="results-sort-label">Add custom suburb</label>
+              <label for="customCompareInput" class="results-sort-label">Add custom suburb</label>
               <div class="custom-compare-controls">
-                <select id="customCompareSelect" class="form-select ss-sort-select">
-                  <option value="">Choose suburb</option>
-                </select>
+                <div class="custom-suburb-picker" id="customComparePicker">
+                  <input
+                    type="text"
+                    id="customCompareInput"
+                    class="custom-suburb-input"
+                    placeholder="Type or choose a suburb"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="customCompareMenu"
+                  />
+                  <input type="hidden" id="customCompareValue" />
+                  <button
+                    type="button"
+                    class="custom-suburb-toggle"
+                    id="customCompareToggle"
+                    aria-label="Open suburb suggestions"
+                  >
+                    ▼
+                  </button>
+                  <div class="custom-suburb-menu hidden" id="customCompareMenu" role="listbox"></div>
+                </div>
                 <button type="button" class="btn ss-btn ss-btn-secondary" id="customCompareAddBtn">
                   Add
                 </button>
               </div>
+              <p class="custom-compare-helper mb-0">Open the list to view all suburbs in your selected city, or type to search quickly.</p>
             </div>
           </div>
 
