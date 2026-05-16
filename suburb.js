@@ -1,10 +1,3 @@
-/*
-  SettleSmart - Suburb detail page
-  ---------------------------------
-  Renders the full suburb profile: priority match grid, community snapshot,
-  mini map, risk summary, safety indicator chart, and university distance.
-*/
-
 const preferences = window.getStoredPreferences
   ? window.getStoredPreferences()
   : JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
@@ -54,61 +47,8 @@ const SAFETY_SERIES_OPTIONS = [
   }
 ];
 
-const SAFETY_NEWS_CATEGORIES = {
-  violent: {
-    label: "Violent crime",
-    className: "violent",
-    keywords: [
-      "assault",
-      "robbery",
-      "violence",
-      "violent",
-      "stabbing",
-      "attack",
-      "harassment",
-      "threat",
-      "weapon"
-    ]
-  },
-
-  property: {
-    label: "Property crime",
-    className: "property",
-    keywords: [
-      "theft",
-      "burglary",
-      "break-in",
-      "stealing",
-      "stolen",
-      "car theft",
-      "vehicle theft",
-      "property damage",
-      "vandalism"
-    ]
-  },
-
-  other: {
-    label: "Other safety news",
-    className: "other",
-    keywords: [
-      "police",
-      "crime",
-      "safety",
-      "incident",
-      "antisocial",
-      "drug",
-      "public order",
-      "investigation",
-      "arrest"
-    ]
-  }
-};
-
-const SAFETY_NEWS_ALL_KEYWORDS = Object.values(SAFETY_NEWS_CATEGORIES)
-  .flatMap((category) => category.keywords);
-
 let activeSafetySeries = ["crimeCountByYear"];
-let showSafetyTrendPrediction = true;
+let showSafetyTrendPrediction = false;
 
 initSuburbPage();
 
@@ -316,26 +256,30 @@ function initSuburbPage() {
       </section>
 
       <section class="info-card suburb-detail-card" id="riskSummarySection">
-        <button
-          type="button"
-          class="risk-summary-toggle"
-          id="riskSummaryToggle"
-          aria-expanded="false"
-          aria-controls="riskSummaryBody"
-        >
-          <div class="suburb-section-head mb-0">
-            <h3>Risk Summary</h3>
-            <p>Risk summary for ${suburb.suburb}.</p>
-          </div>
+        <div class="suburb-section-head">
+          <h3>Risk Summary</h3>
+          <p>Risk summary for ${suburb.suburb}.</p>
+        </div>
 
-          <span class="risk-summary-icon" id="riskSummaryIcon">+</span>
-        </button>
+        <div class="minimap-toggle-row risk-summary-toggle-row">
+          <button
+            type="button"
+            class="minimap-dropdown-btn risk-summary-dropdown-btn"
+            id="riskSummaryToggle"
+            aria-expanded="false"
+            aria-controls="riskSummaryBody"
+          >
+            <span class="minimap-btn-icon">⚠️</span>
+            <span id="riskSummaryBtnLabel">Show risk summary</span>
+            <span class="minimap-chevron" id="riskSummaryChevron">▼</span>
+          </button>
+        </div>
 
         <div class="risk-summary-body hidden" id="riskSummaryBody">
           <p class="suburb-detail-copy text-dark mb-3">${riskSummary}</p>
 
           <p class="muted-line mb-2">
-            Click a crime type below to see simple explanations.
+            Choose a crime type below to read simple explanations.
           </p>
 
           <div class="safety-chart-controls mb-3" aria-label="Risk categories">
@@ -461,42 +405,6 @@ function initSuburbPage() {
         }
       </section>
 
-      <section class="info-card suburb-detail-card" id="safetyNewsSection">
-        <div class="suburb-section-head">
-          <h3>News behind the safety rating</h3>
-          <p>
-            Real safety-related articles for ${suburb.suburb}.
-          </p>
-        </div>
-
-        <div class="safety-news-filter-row" id="safetyNewsFilters" aria-label="Safety news categories">
-          <button type="button" class="safety-news-filter active" data-news-category="all">
-            All
-          </button>
-
-          <button type="button" class="safety-news-filter" data-news-category="violent">
-            Violent crime
-          </button>
-
-          <button type="button" class="safety-news-filter" data-news-category="property">
-            Property crime
-          </button>
-
-          <button type="button" class="safety-news-filter" data-news-category="other">
-            Other safety news
-          </button>
-        </div>
-
-        <div class="safety-news-list" id="safetyNewsList">
-          <p class="safety-news-state">Loading safety news…</p>
-        </div>
-
-        <p class="safety-news-disclaimer">
-          News articles are provided for reference only. They help users verify the safety context,
-          but they do not replace the safety score or official crime data.
-        </p>
-      </section>
-
       <section class="info-card suburb-detail-card" id="distanceSection">
         <div class="suburb-section-head">
           <h3>Distance to university</h3>
@@ -515,7 +423,6 @@ function initSuburbPage() {
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
-    renderSafetyNewsSection(suburb);
     renderDistanceSection(suburb, preferences);
   });
 }
@@ -578,8 +485,6 @@ function renderPriorityMatchRow(row) {
     </div>
   `;
 }
-
-/* ─── Priority match rows ───────────────────────────────────────── */
 
 function buildPriorityMatchRows(suburb, preferences) {
   return [
@@ -899,7 +804,6 @@ function getUniversityPriorityMatch(suburb, preferences) {
   };
 }
 
-// Fallback community data when Epic 4 database has no entry for this suburb.
 function getFallbackCommunity(suburb) {
   return {
     communityStrength: suburb.culture === "high" ? 82 : suburb.culture === "medium" ? 68 : 54,
@@ -1524,7 +1428,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return;
 
-  // Set button loading state (only update when a single category is clicked)
+  // 按钮 loading（单独类别点击时才更新）
   const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
   let originalHTML = "";
   if (activeBtn) {
@@ -1552,7 +1456,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
     }
   }
 
-  // Render map markers
+  // 渲染标记
   if (elements && elements.length) {
     elements.forEach(el => {
       const elLat = el.lat ?? el.center?.lat;
@@ -1702,41 +1606,18 @@ function renderRiskSubcategoryCards(category) {
   grid.classList.remove("hidden");
 
   grid.innerHTML = subcategories.map((item) => `
-    <button
-      type="button"
-      class="suburb-detail-line risk-subcategory-card"
-    >
+    <article class="suburb-detail-line risk-subcategory-card">
       <span>${item.title}</span>
-      <strong class="risk-subcategory-explanation hidden">${item.explanation}</strong>
-    </button>
+      <strong class="risk-subcategory-explanation">${item.explanation}</strong>
+    </article>
   `).join("");
-
-  grid.querySelectorAll(".risk-subcategory-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const explanation = card.querySelector(".risk-subcategory-explanation");
-      const isHidden = explanation.classList.contains("hidden");
-
-      grid.querySelectorAll(".risk-subcategory-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          const explanation = card.querySelector(".risk-subcategory-explanation");
-
-          card.classList.toggle("active");
-          explanation.classList.toggle("hidden");
-        });
-      });
-
-      if (isHidden) {
-        card.classList.add("active");
-        explanation.classList.remove("hidden");
-      }
-    });
-  });
 }
 
 function setupRiskSummaryToggle(suburb, safety) {
   const toggle = document.getElementById("riskSummaryToggle");
   const body = document.getElementById("riskSummaryBody");
-  const icon = document.getElementById("riskSummaryIcon");
+  const label = document.getElementById("riskSummaryBtnLabel");
+  const chevron = document.getElementById("riskSummaryChevron");
   const categoryButtons = document.querySelectorAll(".risk-category-btn");
   const subcategoryGrid = document.getElementById("riskSubcategoryGrid");
 
@@ -1750,8 +1631,12 @@ function setupRiskSummaryToggle(suburb, safety) {
     body.classList.toggle("hidden", !isHidden);
     toggle.setAttribute("aria-expanded", String(isHidden));
 
-    if (icon) {
-      icon.textContent = isHidden ? "−" : "+";
+    if (label) {
+      label.textContent = isHidden ? "Hide risk summary" : "Show risk summary";
+    }
+
+    if (chevron) {
+      chevron.textContent = isHidden ? "▲" : "▼";
     }
 
     if (!isHidden) {
@@ -1839,31 +1724,18 @@ function setupSafetyChartControls(suburb) {
   const controls = document.getElementById("safetyChartControls");
   const trendToggle = document.getElementById("safetyTrendPredictionToggle");
 
+  // If has no safety data, stop.
   if (!controls) {
     return;
   }
 
-  function syncSafetyChartButtons() {
-    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
-      btn.classList.toggle(
-        "active",
-        activeSafetySeries[0] === btn.dataset.safetySeries
-      );
-    });
-
-    if (trendToggle) {
-      trendToggle.classList.toggle("active", showSafetyTrendPrediction);
-    }
-  }
-
-  syncSafetyChartButtons();
-
   controls.addEventListener("click", (event) => {
     const trendButton = event.target.closest("#safetyTrendPredictionToggle");
 
+    // Toggle trend line and next-year prediction.
     if (trendButton) {
       showSafetyTrendPrediction = !showSafetyTrendPrediction;
-      syncSafetyChartButtons();
+      trendButton.classList.toggle("active", showSafetyTrendPrediction);
       renderSafetyTrendChart(suburb);
       return;
     }
@@ -1876,11 +1748,30 @@ function setupSafetyChartControls(suburb) {
 
     const selectedKey = button.dataset.safetySeries;
 
-    activeSafetySeries = [selectedKey];
+    if (activeSafetySeries.includes(selectedKey)) {
+      // Keep at least one line active.
+      if (activeSafetySeries.length === 1) {
+        return;
+      }
 
-    syncSafetyChartButtons();
+      activeSafetySeries = activeSafetySeries.filter((key) => key !== selectedKey);
+    } else {
+      activeSafetySeries.push(selectedKey);
+    }
+
+    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        activeSafetySeries.includes(btn.dataset.safetySeries)
+      );
+    });
+
     renderSafetyTrendChart(suburb);
   });
+
+  if (trendToggle) {
+    trendToggle.classList.toggle("active", showSafetyTrendPrediction);
+  }
 }
 
 function formatNumber(value) {
@@ -2129,12 +2020,6 @@ function buildTrendDataset(dataset, labels) {
 
 function getSafetyChartData(suburb) {
   const selectedOptions = SAFETY_SERIES_OPTIONS.filter((option) => {
-    const isTotalMode = activeSafetySeries.includes("crimeCountByYear");
-
-    if (isTotalMode) {
-      return hasSafetySeries(suburb, option.key);
-    }
-
     return activeSafetySeries.includes(option.key) && hasSafetySeries(suburb, option.key);
   });
 
@@ -2460,187 +2345,7 @@ function renderSafetyTrendChart(suburb) {
   });
 }
 
-/* -------- Safety News (Epic 8) ------------------ */
-
-function escapeHTML(value) {
-  return String(value || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-function getSafetyNewsCategory(article) {
-  if (article.category && SAFETY_NEWS_CATEGORIES[article.category]) {
-    return article.category;
-  }
-
-  const text = `${article.title || ""} ${article.description || ""}`.toLowerCase();
-
-  if (SAFETY_NEWS_CATEGORIES.violent.keywords.some((word) => text.includes(word))) {
-    return "violent";
-  }
-
-  if (SAFETY_NEWS_CATEGORIES.property.keywords.some((word) => text.includes(word))) {
-    return "property";
-  }
-
-  return "other";
-}
-
-function formatSafetyNewsDate(value) {
-  if (!value) return "Unknown date";
-
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return "Unknown date";
-  }
-
-  return date.toLocaleDateString("en-AU", {
-    day: "numeric",
-    month: "short",
-    year: "numeric"
-  });
-}
-
-async function fetchSafetyNewsArticles(suburb) {
-  const response = await fetch(`${SUPABASE_URL}/functions/v1/suburb-news`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "apikey": SUPABASE_ANON_KEY
-    },
-    body: JSON.stringify({
-      suburbSlug: suburb.slug,
-      suburbName: suburb.suburb,
-      city: suburb.city,
-      state: suburb.state || ""
-    })
-  });
-
-  const text = await response.text();
-
-  if (!response.ok) {
-    console.error("Safety news request failed:", response.status, text);
-    throw new Error("Failed to fetch safety news.");
-  }
-
-  const data = JSON.parse(text);
-  return Array.isArray(data.articles) ? data.articles : [];
-}
-
-function renderSafetyNewsCards(articles, selectedCategory = "all") {
-  const list = document.getElementById("safetyNewsList");
-
-  if (!list) return;
-
-  const visibleArticles = selectedCategory === "all"
-    ? articles
-    : articles.filter((article) => getSafetyNewsCategory(article) === selectedCategory);
-
-  if (!visibleArticles.length) {
-    list.innerHTML = `
-      <p class="safety-news-state">
-        No recent safety-related articles found for this category.
-      </p>
-    `;
-    return;
-  }
-
-  list.innerHTML = visibleArticles.map((article) => {
-    const category = getSafetyNewsCategory(article);
-    const categoryMeta = SAFETY_NEWS_CATEGORIES[category] || SAFETY_NEWS_CATEGORIES.other;
-
-    return `
-      <article class="safety-news-card">
-        <div class="safety-news-card-top">
-          <span class="safety-news-category safety-news-category--${categoryMeta.className}">
-            ${categoryMeta.label}
-          </span>
-
-          <span class="safety-news-date">
-            ${formatSafetyNewsDate(article.publishedAt)}
-          </span>
-        </div>
-
-        <h4>${escapeHTML(article.title || "Untitled article")}</h4>
-
-        <p class="safety-news-meta">
-          ${escapeHTML(article.source || "Unknown source")}
-        </p>
-
-        <p class="safety-news-description">
-          ${escapeHTML(article.description || "No summary available.")}
-        </p>
-
-        ${
-          article.url
-            ? `
-              <a
-                class="safety-news-link"
-                href="${escapeHTML(article.url)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read original article
-              </a>
-            `
-            : ""
-        }
-      </article>
-    `;
-  }).join("");
-}
-
-async function renderSafetyNewsSection(suburb) {
-  const list = document.getElementById("safetyNewsList");
-  const filters = document.getElementById("safetyNewsFilters");
-
-  if (!list || !filters) return;
-
-  list.innerHTML = `<p class="safety-news-state">Loading safety news…</p>`;
-
-  try {
-    const articles = await fetchSafetyNewsArticles(suburb);
-
-    if (!articles.length) {
-      list.innerHTML = `
-        <p class="safety-news-state">
-          No recent safety-related articles found for ${escapeHTML(suburb.suburb)}.
-        </p>
-      `;
-      return;
-    }
-
-    renderSafetyNewsCards(articles, "all");
-
-    filters.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-news-category]");
-
-      if (!button) return;
-
-      const category = button.dataset.newsCategory;
-
-      filters.querySelectorAll("[data-news-category]").forEach((btn) => {
-        btn.classList.toggle("active", btn === button);
-      });
-
-      renderSafetyNewsCards(articles, category);
-    });
-  } catch (error) {
-    console.error("Safety news error:", error);
-
-    list.innerHTML = `
-      <p class="safety-news-state safety-news-state--error">
-        Unable to load safety news right now.
-      </p>
-    `;
-  }
-}
-
-/* ─── Distance to university (Supabase + Nominatim + Haversine) ─── */
+// ── Distance to University (Supabase + Nominatim + Haversine) ────────────────
 
 const SUPABASE_URL = "https://tvntdokwhckdhdzojmzb.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_OilvFk1wyG2AzJcm_q-KBg_dmFhloU9";

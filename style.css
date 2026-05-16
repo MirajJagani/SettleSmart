@@ -3833,3 +3833,29 @@ body.landing-page.site-locked .page-glow {
     padding: 13px;
   }
 }
+/* =========================
+   Suburb page risk summary refinements
+   Keeps Risk Summary consistent with the map dropdown and makes explanation cards non-clickable.
+========================= */
+
+.risk-summary-toggle-row {
+  margin-top: 14px;
+}
+
+.risk-summary-dropdown-btn {
+  min-width: 210px;
+  justify-content: center;
+}
+
+.risk-summary-dropdown-btn:hover {
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.risk-subcategory-card {
+  cursor: default;
+}
+
+.risk-subcategory-card:hover {
+  transform: none;
+}
