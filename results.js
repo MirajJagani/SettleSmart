@@ -1052,7 +1052,7 @@ function renderComparisonTable(selectedSuburbs) {
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>Priority</th>
+            <th>Compare by</th>
             ${selectedSuburbs.map((suburb) => `
               <th>
                 <div class="comparison-suburb-head">
@@ -1083,53 +1083,53 @@ function renderComparisonTable(selectedSuburbs) {
 function buildComparisonRows(selectedSuburbs) {
   return [
     {
-      label: "Overall fit",
-      helper: "Based on your saved answers",
+      label: "Match score",
+      helper: "How well this suburb fits your answers",
       values: selectedSuburbs.map((suburb) => `<strong class="comparison-score">${suburb.score}%</strong>`)
     },
     {
-      label: "Rent and budget",
-      helper: `Your budget: $${preferences.budget || "-"}/week`,
+      label: "Weekly rent",
+      helper: `Your chosen budget: $${preferences.budget || "-"}/week`,
       values: selectedSuburbs.map((suburb) => formatBudgetFit(suburb))
     },
     {
-      label: "Housing fit",
-      helper: formatChoiceList(preferences.housing),
+      label: "Housing options",
+      helper: `You selected: ${formatChoiceList(preferences.housing)}`,
       values: selectedSuburbs.map((suburb) => formatPreferenceMatch(preferences.housing, suburb.housing, "housing"))
     },
     {
-      label: "Commute priority",
-      helper: formatChoiceList(preferences.commute),
+      label: "Travel convenience",
+      helper: `You selected: ${formatChoiceList(preferences.commute)}`,
       values: selectedSuburbs.map((suburb) => formatCommuteFit(suburb))
     },
     {
-      label: "Lifestyle match",
-      helper: formatChoiceList(preferences.lifestyle),
+      label: "Lifestyle fit",
+      helper: `You selected: ${formatChoiceList(preferences.lifestyle)}`,
       values: selectedSuburbs.map((suburb) => formatPreferenceMatch(preferences.lifestyle, suburb.lifestyle, "lifestyle"))
     },
     {
-      label: "Language comfort",
-      helper: preferences.language || "No language selected",
+      label: "Languages nearby",
+      helper: preferences.language ? `You selected: ${preferences.language}` : "No language selected",
       values: selectedSuburbs.map((suburb) => formatLanguageFit(suburb))
     },
     {
-      label: "Culture and community",
-      helper: preferences.culture || "No cultural background selected",
+      label: "Community connection",
+      helper: preferences.culture ? `You selected: ${preferences.culture}` : "No cultural background selected",
       values: selectedSuburbs.map((suburb) => formatCultureFit(suburb))
     },
     {
-      label: "University access",
-      helper: preferences.university || "No university selected",
+      label: "University travel",
+      helper: preferences.university ? `Your university: ${preferences.university}` : "No university selected",
       values: selectedSuburbs.map((suburb) => formatUniversityFit(suburb))
     },
     {
-      label: "Safety snapshot",
-      helper: "Latest available yearly counts in the prototype data",
+      label: "Safety trend",
+      helper: "Shows whether recorded incidents went up or down in the latest data",
       values: selectedSuburbs.map((suburb) => formatSafetySnapshot(suburb))
     },
     {
-      label: "Why recommended",
-      helper: "Main reasons from the matching model",
+      label: "Why this suburb",
+      helper: "Simple reasons based on your answers",
       values: selectedSuburbs.map((suburb) => formatReasonSummary(suburb))
     }
   ];
@@ -1279,18 +1279,18 @@ function formatBudgetFit(suburb) {
   const range = parseRentRange(suburb.rentRange);
 
   if (!range || !budget) {
-    return `${suburb.rentRange || "Not available"}<br><span class="comparison-note">Budget fit cannot be calculated.</span>`;
+    return `${suburb.rentRange || "Not available"}<br><span class="comparison-note">We do not have enough rent data to check this.</span>`;
   }
 
   if (budget < range.min) {
-    return `${suburb.rentRange}<br><span class="comparison-status comparison-status--low">Likely above budget</span>`;
+    return `${suburb.rentRange}<br><span class="comparison-status comparison-status--low">May be above your budget</span>`;
   }
 
   if (budget <= range.max) {
-    return `${suburb.rentRange}<br><span class="comparison-status comparison-status--high">Within your budget range</span>`;
+    return `${suburb.rentRange}<br><span class="comparison-status comparison-status--high">Fits your budget</span>`;
   }
 
-  return `${suburb.rentRange}<br><span class="comparison-status comparison-status--medium">Comfortably under budget</span>`;
+  return `${suburb.rentRange}<br><span class="comparison-status comparison-status--medium">Below your budget</span>`;
 }
 
 function formatPreferenceMatch(preferenceList, suburbList, type) {
@@ -1299,104 +1299,122 @@ function formatPreferenceMatch(preferenceList, suburbList, type) {
   const matches = preferencesList.filter((item) => options.includes(item));
 
   if (!preferencesList.length) {
-    return `<span class="comparison-note">No ${type} preference selected</span>`;
+    return `<span class="comparison-note">You did not choose a ${type} preference.</span>`;
   }
 
   if (!matches.length) {
-    return `<span class="comparison-status comparison-status--low">No direct match</span><br><span class="comparison-note">Available: ${options.map(window.formatChoice).join(", ") || "Not available"}</span>`;
+    return `<span class="comparison-status comparison-status--low">Does not closely match your choice</span><br><span class="comparison-note">Available here: ${options.map(window.formatChoice).join(", ") || "Not available"}</span>`;
   }
 
   const statusClass = matches.length === preferencesList.length ? "high" : "medium";
-  const label = matches.length === preferencesList.length ? "Strong match" : "Partial match";
+  const label = matches.length === preferencesList.length ? "Matches your choice" : "Matches some of your choices";
 
   return `<span class="comparison-status comparison-status--${statusClass}">${label}</span><br>${matches.map(window.formatChoice).join(", ")}`;
 }
 
 function formatCommuteFit(suburb) {
   const selectedCommute = Array.isArray(preferences.commute) ? preferences.commute : [];
+  const transportText = getSimpleTransportText(suburb.transport);
 
   if (!selectedCommute.length) {
-    return `${window.formatChoice(suburb.transport)} transport<br><span class="comparison-note">No commute preference selected</span>`;
+    return `${transportText}<br><span class="comparison-note">You did not choose a travel preference.</span>`;
   }
 
   if (suburb.transport === "high") {
-    return `${window.formatChoice(suburb.transport)} transport<br><span class="comparison-status comparison-status--high">Strong commute fit</span>`;
+    return `${transportText}<br><span class="comparison-status comparison-status--high">Easy to travel from here</span>`;
   }
 
   if (suburb.transport === "medium") {
-    return `${window.formatChoice(suburb.transport)} transport<br><span class="comparison-status comparison-status--medium">Moderate commute fit</span>`;
+    return `${transportText}<br><span class="comparison-status comparison-status--medium">Travel should be manageable</span>`;
   }
 
-  return `${window.formatChoice(suburb.transport)} transport<br><span class="comparison-status comparison-status--low">May need extra planning</span>`;
+  return `${transportText}<br><span class="comparison-status comparison-status--low">Travel may need extra planning</span>`;
+}
+
+function getSimpleTransportText(level) {
+  if (level === "high") return "Very good transport access";
+  if (level === "medium") return "Okay transport access";
+  if (level === "low") return "Limited transport access";
+  return "Transport information not available";
 }
 
 function formatLanguageFit(suburb) {
   const languages = suburb.commonLanguages || [];
 
   if (!preferences.language) {
-    return `${languages.slice(0, 3).join(", ") || "Not available"}<br><span class="comparison-note">No language preference selected</span>`;
+    return `${languages.slice(0, 3).join(", ") || "Not available"}<br><span class="comparison-note">You did not choose a language preference.</span>`;
   }
 
   if (languages.includes(preferences.language)) {
-    return `<span class="comparison-status comparison-status--high">${preferences.language} supported</span><br>${languages.slice(0, 3).join(", ")}`;
+    return `<span class="comparison-status comparison-status--high">${preferences.language} is commonly spoken</span><br>${languages.slice(0, 3).join(", ")}`;
   }
 
-  return `<span class="comparison-status comparison-status--medium">Other languages available</span><br>${languages.slice(0, 3).join(", ") || "Not available"}`;
+  return `<span class="comparison-status comparison-status--medium">Your language may be less common here</span><br>${languages.slice(0, 3).join(", ") || "Not available"}`;
 }
 
 function formatCultureFit(suburb) {
   const groups = suburb.culturalGroups || [];
 
   if (preferences.culture && groups.includes(preferences.culture)) {
-    return `<span class="comparison-status comparison-status--high">Strong ${preferences.culture} signal</span><br>${groups.slice(0, 3).join(", ")}`;
+    return `<span class="comparison-status comparison-status--high">${preferences.culture} community present</span><br>${groups.slice(0, 3).join(", ")}`;
   }
 
   if (suburb.culture === "high") {
-    return `<span class="comparison-status comparison-status--high">High cultural diversity</span><br>${groups.slice(0, 3).join(", ") || "Multiple community signals"}`;
+    return `<span class="comparison-status comparison-status--high">Many cultures and communities nearby</span><br>${groups.slice(0, 3).join(", ") || "Multiple community signals"}`;
   }
 
   if (suburb.culture === "medium") {
-    return `<span class="comparison-status comparison-status--medium">Growing community mix</span><br>${groups.slice(0, 3).join(", ") || "Moderate community signals"}`;
+    return `<span class="comparison-status comparison-status--medium">Some cultural diversity nearby</span><br>${groups.slice(0, 3).join(", ") || "Moderate community signals"}`;
   }
 
-  return `<span class="comparison-status comparison-status--low">Limited culture signal</span><br>${groups.slice(0, 3).join(", ") || "Not available"}`;
+  return `<span class="comparison-status comparison-status--low">Smaller cultural community signal</span><br>${groups.slice(0, 3).join(", ") || "Not available"}`;
 }
 
 function formatUniversityFit(suburb) {
   const universityLevel = typeof window.getEpic5UniversityAccessLevel === "function"
     ? window.getEpic5UniversityAccessLevel(suburb, preferences)
     : suburb.university;
+
   const access = window.formatChoice(universityLevel);
+
   const uniScore = typeof window.getEpic5UniversityAccessScore === "function"
     ? window.getEpic5UniversityAccessScore(suburb, preferences)
     : null;
 
   if (uniScore === null) {
-    return access;
+    return `${access} university access`;
   }
 
   const statusClass = uniScore >= 8 ? "high" : uniScore >= 5 ? "medium" : "low";
-  return `${access}<br><span class="comparison-status comparison-status--${statusClass}">${uniScore}/10 access score</span>`;
+  const label = uniScore >= 8
+    ? "Convenient for your university"
+    : uniScore >= 5
+      ? "Reasonable university access"
+      : "May take longer to reach university";
+
+  return `<span class="comparison-status comparison-status--${statusClass}">${label}</span><br><span class="comparison-note">${access} access based on your selected university.</span>`;
 }
 
 function formatSafetySnapshot(suburb) {
   const years = getSafetyYears(suburb);
-  if (!years.length) return `<span class="comparison-note">Safety data not available</span>`;
+  if (!years.length) return `<span class="comparison-note">Safety data is not available.</span>`;
 
   const latestYear = years[years.length - 1];
   const previousYear = years[years.length - 2];
   const latestTotal = getTotalCrimeForYear(suburb, latestYear);
   const previousTotal = previousYear ? getTotalCrimeForYear(suburb, previousYear) : null;
+
   const trend = previousTotal === null
-    ? "Latest available year"
+    ? "Latest available data"
     : latestTotal > previousTotal
-      ? "Higher than previous year"
+      ? "Recorded incidents increased from the year before"
       : latestTotal < previousTotal
-        ? "Lower than previous year"
-        : "Similar to previous year";
+        ? "Recorded incidents decreased from the year before"
+        : "Recorded incidents stayed about the same";
 
   const statusClass = previousTotal === null ? "medium" : latestTotal <= previousTotal ? "high" : "medium";
-  return `${latestYear}: ${latestTotal.toLocaleString()} recorded incidents<br><span class="comparison-status comparison-status--${statusClass}">${trend}</span>`;
+
+  return `Latest data (${latestYear}): ${latestTotal.toLocaleString()} recorded incidents<br><span class="comparison-status comparison-status--${statusClass}">${trend}</span>`;
 }
 
 function getSafetyYears(suburb) {
@@ -1417,9 +1435,36 @@ function getTotalCrimeForYear(suburb, year) {
 
 function formatReasonSummary(suburb) {
   const reasons = suburb.reasons || [];
-  if (!reasons.length) return `<span class="comparison-note">No reasons available</span>`;
+  if (!reasons.length) return `<span class="comparison-note">No matching reasons available.</span>`;
 
-  return `<ul class="comparison-reason-list">${reasons.slice(0, 3).map((reason) => `<li>${reason}</li>`).join("")}</ul>`;
+  return `<ul class="comparison-reason-list">${reasons.slice(0, 3).map((reason) => `<li>${cleanComparisonReason(reason)}</li>`).join("")}</ul>`;
+}
+
+function cleanComparisonReason(reason) {
+  const text = String(reason || "").trim();
+
+  if (!text) return "This suburb matches part of your preferences";
+
+  const cultureMatch = text.match(/supports your (.+) cultural background/i);
+  if (cultureMatch) {
+    return `Has a community connection with your ${cultureMatch[1]} background`;
+  }
+
+  const universityMatch = text.match(/has (low|medium|high) access to (.+)/i);
+  if (universityMatch) {
+    const level = universityMatch[1].toLowerCase();
+    const university = universityMatch[2].replace(/\.$/, "");
+
+    if (level === "high") return `Convenient access to ${university}`;
+    if (level === "medium") return `Reasonable access to ${university}`;
+    return `May be farther from ${university}`;
+  }
+
+  const cleaned = text
+    .replace(/^it\s+/i, "This suburb ")
+    .replace(/\.$/, "");
+
+  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
 }
 
 function formatChoiceList(values) {
