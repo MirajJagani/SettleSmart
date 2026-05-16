@@ -54,6 +54,59 @@ const SAFETY_SERIES_OPTIONS = [
   }
 ];
 
+const SAFETY_NEWS_CATEGORIES = {
+  violent: {
+    label: "Violent crime",
+    className: "violent",
+    keywords: [
+      "assault",
+      "robbery",
+      "violence",
+      "violent",
+      "stabbing",
+      "attack",
+      "harassment",
+      "threat",
+      "weapon"
+    ]
+  },
+
+  property: {
+    label: "Property crime",
+    className: "property",
+    keywords: [
+      "theft",
+      "burglary",
+      "break-in",
+      "stealing",
+      "stolen",
+      "car theft",
+      "vehicle theft",
+      "property damage",
+      "vandalism"
+    ]
+  },
+
+  other: {
+    label: "Other safety news",
+    className: "other",
+    keywords: [
+      "police",
+      "crime",
+      "safety",
+      "incident",
+      "antisocial",
+      "drug",
+      "public order",
+      "investigation",
+      "arrest"
+    ]
+  }
+};
+
+const SAFETY_NEWS_ALL_KEYWORDS = Object.values(SAFETY_NEWS_CATEGORIES)
+  .flatMap((category) => category.keywords);
+
 let activeSafetySeries = ["crimeCountByYear"];
 let showSafetyTrendPrediction = false;
 
@@ -408,6 +461,43 @@ function initSuburbPage() {
         }
       </section>
 
+      <section class="info-card suburb-detail-card" id="safetyNewsSection">
+        <div class="suburb-section-head">
+          <h3>News behind the safety rating</h3>
+          <p>
+            Real safety-related articles for ${suburb.suburb}, grouped by violent crime,
+            property crime, and other safety news.
+          </p>
+        </div>
+
+        <div class="safety-news-filter-row" id="safetyNewsFilters" aria-label="Safety news categories">
+          <button type="button" class="safety-news-filter active" data-news-category="all">
+            All
+          </button>
+
+          <button type="button" class="safety-news-filter" data-news-category="violent">
+            Violent crime
+          </button>
+
+          <button type="button" class="safety-news-filter" data-news-category="property">
+            Property crime
+          </button>
+
+          <button type="button" class="safety-news-filter" data-news-category="other">
+            Other safety news
+          </button>
+        </div>
+
+        <div class="safety-news-list" id="safetyNewsList">
+          <p class="safety-news-state">Loading safety news…</p>
+        </div>
+
+        <p class="safety-news-disclaimer">
+          News articles are provided for reference only. They help users verify the safety context,
+          but they do not replace the safety score or official crime data.
+        </p>
+      </section>
+
       <section class="info-card suburb-detail-card" id="distanceSection">
         <div class="suburb-section-head">
           <h3>Distance to university</h3>
@@ -426,6 +516,7 @@ function initSuburbPage() {
   requestAnimationFrame(() => {
     setupSafetyChartControls(suburb);
     renderSafetyTrendChart(suburb);
+    renderSafetyNewsSection(suburb);
     renderDistanceSection(suburb, preferences);
   });
 }
@@ -2368,6 +2459,186 @@ function renderSafetyTrendChart(suburb) {
       }
     }
   });
+}
+
+/* -------- Safety News (Epic 8) ------------------ */
+
+function escapeHTML(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function getSafetyNewsCategory(article) {
+  if (article.category && SAFETY_NEWS_CATEGORIES[article.category]) {
+    return article.category;
+  }
+
+  const text = `${article.title || ""} ${article.description || ""}`.toLowerCase();
+
+  if (SAFETY_NEWS_CATEGORIES.violent.keywords.some((word) => text.includes(word))) {
+    return "violent";
+  }
+
+  if (SAFETY_NEWS_CATEGORIES.property.keywords.some((word) => text.includes(word))) {
+    return "property";
+  }
+
+  return "other";
+}
+
+function formatSafetyNewsDate(value) {
+  if (!value) return "Unknown date";
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown date";
+  }
+
+  return date.toLocaleDateString("en-AU", {
+    day: "numeric",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+async function fetchSafetyNewsArticles(suburb) {
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/suburb-news`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_ANON_KEY
+    },
+    body: JSON.stringify({
+      suburbSlug: suburb.slug,
+      suburbName: suburb.suburb,
+      city: suburb.city,
+      state: suburb.state || ""
+    })
+  });
+
+  const text = await response.text();
+
+  if (!response.ok) {
+    console.error("Safety news request failed:", response.status, text);
+    throw new Error("Failed to fetch safety news.");
+  }
+
+  const data = JSON.parse(text);
+  return Array.isArray(data.articles) ? data.articles : [];
+}
+
+function renderSafetyNewsCards(articles, selectedCategory = "all") {
+  const list = document.getElementById("safetyNewsList");
+
+  if (!list) return;
+
+  const visibleArticles = selectedCategory === "all"
+    ? articles
+    : articles.filter((article) => getSafetyNewsCategory(article) === selectedCategory);
+
+  if (!visibleArticles.length) {
+    list.innerHTML = `
+      <p class="safety-news-state">
+        No recent safety-related articles found for this category.
+      </p>
+    `;
+    return;
+  }
+
+  list.innerHTML = visibleArticles.map((article) => {
+    const category = getSafetyNewsCategory(article);
+    const categoryMeta = SAFETY_NEWS_CATEGORIES[category] || SAFETY_NEWS_CATEGORIES.other;
+
+    return `
+      <article class="safety-news-card">
+        <div class="safety-news-card-top">
+          <span class="safety-news-category safety-news-category--${categoryMeta.className}">
+            ${categoryMeta.label}
+          </span>
+
+          <span class="safety-news-date">
+            ${formatSafetyNewsDate(article.publishedAt)}
+          </span>
+        </div>
+
+        <h4>${escapeHTML(article.title || "Untitled article")}</h4>
+
+        <p class="safety-news-meta">
+          ${escapeHTML(article.source || "Unknown source")}
+        </p>
+
+        <p class="safety-news-description">
+          ${escapeHTML(article.description || "No summary available.")}
+        </p>
+
+        ${
+          article.url
+            ? `
+              <a
+                class="safety-news-link"
+                href="${escapeHTML(article.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read original article
+              </a>
+            `
+            : ""
+        }
+      </article>
+    `;
+  }).join("");
+}
+
+async function renderSafetyNewsSection(suburb) {
+  const list = document.getElementById("safetyNewsList");
+  const filters = document.getElementById("safetyNewsFilters");
+
+  if (!list || !filters) return;
+
+  list.innerHTML = `<p class="safety-news-state">Loading safety news…</p>`;
+
+  try {
+    const articles = await fetchSafetyNewsArticles(suburb);
+
+    if (!articles.length) {
+      list.innerHTML = `
+        <p class="safety-news-state">
+          No recent safety-related articles found for ${escapeHTML(suburb.suburb)}.
+        </p>
+      `;
+      return;
+    }
+
+    renderSafetyNewsCards(articles, "all");
+
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-news-category]");
+
+      if (!button) return;
+
+      const category = button.dataset.newsCategory;
+
+      filters.querySelectorAll("[data-news-category]").forEach((btn) => {
+        btn.classList.toggle("active", btn === button);
+      });
+
+      renderSafetyNewsCards(articles, category);
+    });
+  } catch (error) {
+    console.error("Safety news error:", error);
+
+    list.innerHTML = `
+      <p class="safety-news-state safety-news-state--error">
+        Unable to load safety news right now.
+      </p>
+    `;
+  }
 }
 
 /* ─── Distance to university (Supabase + Nominatim + Haversine) ─── */

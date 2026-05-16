@@ -2993,6 +2993,153 @@ body.landing-page.site-locked .page-glow {
   cursor: not-allowed;
 }
 
+/* Safety News */
+.safety-news-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.safety-news-filter {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.safety-news-filter:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(31, 27, 50, 0.08);
+}
+
+.safety-news-filter.active {
+  background: rgba(115, 92, 255, 0.12);
+  color: var(--primary-dark);
+  border-color: rgba(115, 92, 255, 0.42);
+}
+
+.safety-news-list {
+  display: grid;
+  gap: 14px;
+}
+
+.safety-news-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.safety-news-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.safety-news-category {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.safety-news-category--violent {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.safety-news-category--property {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+}
+
+.safety-news-category--other {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+
+.safety-news-date {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.safety-news-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.safety-news-meta {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.safety-news-description {
+  margin: 0 0 12px;
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.safety-news-link {
+  display: inline-flex;
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.safety-news-link:hover {
+  text-decoration: underline;
+}
+
+.safety-news-state {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(115, 92, 255, 0.06);
+  color: var(--text-soft);
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.safety-news-state--error {
+  background: rgba(239, 68, 68, 0.08);
+  color: #b91c1c;
+}
+
+.safety-news-disclaimer {
+  margin: 14px 0 0;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+  .safety-news-card-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .safety-news-date {
+    white-space: normal;
+  }
+}
+
 .epic5-top-match-layout {
   gap: 28px;
 }
