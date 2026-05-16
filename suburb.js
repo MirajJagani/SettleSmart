@@ -108,7 +108,7 @@ const SAFETY_NEWS_ALL_KEYWORDS = Object.values(SAFETY_NEWS_CATEGORIES)
   .flatMap((category) => category.keywords);
 
 let activeSafetySeries = ["crimeCountByYear"];
-let showSafetyTrendPrediction = false;
+let showSafetyTrendPrediction = true;
 
 initSuburbPage();
 
@@ -1840,18 +1840,31 @@ function setupSafetyChartControls(suburb) {
   const controls = document.getElementById("safetyChartControls");
   const trendToggle = document.getElementById("safetyTrendPredictionToggle");
 
-  // If has no safety data, stop.
   if (!controls) {
     return;
   }
 
+  function syncSafetyChartButtons() {
+    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        activeSafetySeries[0] === btn.dataset.safetySeries
+      );
+    });
+
+    if (trendToggle) {
+      trendToggle.classList.toggle("active", showSafetyTrendPrediction);
+    }
+  }
+
+  syncSafetyChartButtons();
+
   controls.addEventListener("click", (event) => {
     const trendButton = event.target.closest("#safetyTrendPredictionToggle");
 
-    // Toggle trend line and next-year prediction.
     if (trendButton) {
       showSafetyTrendPrediction = !showSafetyTrendPrediction;
-      trendButton.classList.toggle("active", showSafetyTrendPrediction);
+      syncSafetyChartButtons();
       renderSafetyTrendChart(suburb);
       return;
     }
@@ -1864,30 +1877,11 @@ function setupSafetyChartControls(suburb) {
 
     const selectedKey = button.dataset.safetySeries;
 
-    if (activeSafetySeries.includes(selectedKey)) {
-      // Keep at least one line active.
-      if (activeSafetySeries.length === 1) {
-        return;
-      }
+    activeSafetySeries = [selectedKey];
 
-      activeSafetySeries = activeSafetySeries.filter((key) => key !== selectedKey);
-    } else {
-      activeSafetySeries.push(selectedKey);
-    }
-
-    controls.querySelectorAll("[data-safety-series]").forEach((btn) => {
-      btn.classList.toggle(
-        "active",
-        activeSafetySeries.includes(btn.dataset.safetySeries)
-      );
-    });
-
+    syncSafetyChartButtons();
     renderSafetyTrendChart(suburb);
   });
-
-  if (trendToggle) {
-    trendToggle.classList.toggle("active", showSafetyTrendPrediction);
-  }
 }
 
 function formatNumber(value) {
@@ -2136,6 +2130,12 @@ function buildTrendDataset(dataset, labels) {
 
 function getSafetyChartData(suburb) {
   const selectedOptions = SAFETY_SERIES_OPTIONS.filter((option) => {
+    const isTotalMode = activeSafetySeries.includes("crimeCountByYear");
+
+    if (isTotalMode) {
+      return hasSafetySeries(suburb, option.key);
+    }
+
     return activeSafetySeries.includes(option.key) && hasSafetySeries(suburb, option.key);
   });
 
