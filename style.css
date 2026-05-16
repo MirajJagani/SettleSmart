@@ -256,11 +256,6 @@ button, input, select, textarea { font-family: inherit; }
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.hero-city-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 36px 68px rgba(8, 4, 24, 0.3);
-}
-
 .hero-city-card-main {
   grid-row: 1 / span 2;
   min-height: 520px;
