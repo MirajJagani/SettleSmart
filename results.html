@@ -1,12 +1,9 @@
-<!-- results.html — Shortlist and suburb comparison page.
-     Loads suburb-data.js then results.js, which renders all dynamic content. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Settle-Smart · Your Shortlist</title>
-  <!-- Access guard: redirect to index.html if the session flag is not set -->
   <script>
     (function () {
       if (sessionStorage.getItem("settlesmart_access_granted") !== "true") {
@@ -24,8 +21,6 @@
   <div class="page-glow glow-left"></div>
   <div class="page-glow glow-right"></div>
 
-
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg ss-navbar sticky-top">
     <div class="container-xxl">
       <a class="navbar-brand ss-brand" href="index.html">
@@ -41,7 +36,7 @@
   </nav>
 
   <main>
-    <!-- Page 1: hero banner and top match summary (summaryView) -->
+    <!-- page 1 -->
     <section class="section-pad pt-4">
       <div class="container-xxl">
         <div class="results-hero-banner" id="resultsHeroBanner">
@@ -73,7 +68,7 @@
       </div>
     </section>
 
-    <!-- Page 2: full shortlist, toolbar, comparison panel, and spin wheel (detailView) -->
+    <!-- page 2 -->
     <section class="section-pad pt-4 hidden" id="detailView">
       <div class="container-xxl">
         <div class="results-view-actions results-view-actions-top">
@@ -127,11 +122,13 @@
           </div>
         </div>
 
+
         <!-- Epic 7: side-by-side comparison and custom shortlist -->
         <section class="comparison-panel info-card mb-4" id="comparisonPanel" aria-label="Side-by-side suburb comparison">
           <div class="comparison-panel-head">
             <div>
-              <span class="section-kicker">Compare suburbs side by side</span>
+              <span class="section-kicker">Epic 7 · Compare shortlist</span>
+              <h3 class="comparison-title">Compare suburbs side by side</h3>
               <p class="comparison-copy">
                 Select 2 to 4 suburbs from your recommendations, or add a custom suburb from your destination city,
                 then compare them against the priorities you chose during onboarding.
@@ -172,7 +169,7 @@
                   Add
                 </button>
               </div>
-              <p class="custom-compare-helper mb-0">Open the list to view all suburbs in your selected city, or type to search quickly.</p>
+              <p class="custom-compare-helper mb-0">Type a suburb name or open the list to choose from all suburbs in your selected city.</p>
             </div>
           </div>
 
@@ -189,7 +186,6 @@
 
           <div class="comparison-table-wrap hidden" id="comparisonTableWrap"></div>
         </section>
-
 
         <div class="row g-4 mb-5" id="resultsGrid"></div>
         <!-- spin wheel -->
@@ -227,7 +223,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="ss-footer mt-5">
     <div class="container-xxl">
       <div class="row g-4 align-items-start">

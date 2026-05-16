@@ -3475,11 +3475,6 @@ body.landing-page.site-locked .page-glow {
   align-items: center;
 }
 
-.custom-compare-controls .ss-sort-select {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
 .custom-suburb-picker {
   position: relative;
   flex: 1 1 auto;
@@ -3512,11 +3507,6 @@ body.landing-page.site-locked .page-glow {
   box-shadow: 0 0 0 4px rgba(115, 92, 255, 0.10), 0 14px 30px rgba(31, 27, 50, 0.08);
 }
 
-.custom-suburb-input:disabled {
-  opacity: 0.72;
-  cursor: not-allowed;
-}
-
 .custom-suburb-toggle {
   position: absolute;
   top: 50%;
@@ -3539,11 +3529,6 @@ body.landing-page.site-locked .page-glow {
   background: rgba(115, 92, 255, 0.18);
 }
 
-.custom-suburb-toggle:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-}
-
 .custom-suburb-menu {
   position: absolute;
   z-index: 20;
@@ -3557,22 +3542,6 @@ body.landing-page.site-locked .page-glow {
   border: 1px solid rgba(115, 92, 255, 0.16);
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 22px 44px rgba(31, 27, 50, 0.16);
-}
-
-
-.custom-suburb-menu-summary {
-  position: sticky;
-  top: -8px;
-  z-index: 1;
-  margin: -8px -8px 8px;
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(115, 92, 255, 0.12);
-  border-radius: 18px 18px 0 0;
-  background: rgba(248, 247, 252, 0.96);
-  color: var(--primary-dark);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
 }
 
 .custom-suburb-menu::-webkit-scrollbar {
@@ -3592,7 +3561,6 @@ body.landing-page.site-locked .page-glow {
 .custom-suburb-option {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 12px;
   padding: 11px 12px;
@@ -3612,13 +3580,6 @@ body.landing-page.site-locked .page-glow {
 
 .custom-suburb-option span {
   font-weight: 800;
-}
-
-.custom-suburb-option small {
-  flex: 0 0 auto;
-  color: var(--text-soft);
-  font-size: 0.76rem;
-  font-weight: 700;
 }
 
 .custom-suburb-empty {

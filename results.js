@@ -1,10 +1,3 @@
-/*
-  SettleSmart - Shortlist and comparison results page
-  ---------------------------------------------------
-  Handles suburb ranking, hero rendering, result cards, pagination,
-  spin wheel, community explorer, and Epic 7 side-by-side comparison.
-*/
-
 const preferences = window.getStoredPreferences
   ? window.getStoredPreferences()
   : JSON.parse(localStorage.getItem("settlesmart_preferences") || "{}");
@@ -18,8 +11,6 @@ const cityHeroImages = {
   Canberra: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1600&q=80"
 };
 
-/* ===== App state and DOM refs ===== */
-
 const appState = {
   sortBy: localStorage.getItem("settlesmart_sort") || "match-desc",
   recommendBy: "overall",
@@ -31,7 +22,7 @@ const appState = {
   pageSize: 4,
   suburbQuery: "",
   view: "summary",
-  compareSlugs: JSON.parse(localStorage.getItem("settlesmart_compare_slugs") || "[]"),
+  compareSlugs: [],
   compareMessage: null
 };
 
@@ -89,15 +80,11 @@ const wheelState = {
   listenersBound: false
 };
 
-/* ===== Constants ===== */
-
 const DEFAULT_SHORTLIST_LIMIT = 20;
 const COMPARE_LIMIT = 4;
-const COMPARE_STORAGE_KEY = "settlesmart_compare_slugs";
+const LEGACY_COMPARE_STORAGE_KEY = "settlesmart_compare_slugs";
 
 init();
-
-/* ===== Initialisation ===== */
 
 function init() {
   if (!preferences.city) {
@@ -105,10 +92,14 @@ function init() {
     return;
   }
 
+  // Compare selections should be temporary for each visit. Remove old saved comparison data
+  // from earlier builds so going home, refreshing, or reopening the site starts clean.
+  localStorage.removeItem(LEGACY_COMPARE_STORAGE_KEY);
+
   appState.rankedSuburbs = rankSuburbs();
   appState.compareSlugs = sanitizeCompareSlugs(appState.compareSlugs);
-  saveCompareSelection();
   setupComparisonHandlers();
+  setupComparisonResetGuards();
 
   if (sortSelect) {
     sortSelect.value = appState.sortBy;
@@ -122,7 +113,6 @@ function init() {
       appState.currentPage = 1;
       appState.rankedSuburbs = rankSuburbs();
       appState.compareSlugs = sanitizeCompareSlugs(appState.compareSlugs);
-      saveCompareSelection();
       renderPage();
     });
   }
@@ -175,17 +165,20 @@ function init() {
   renderPage();
 }
 
-/* ===== Ranking and scoring ===== */
-
 function rankSuburbs() {
   return window.suburbs
     .filter((suburb) => suburb.city === preferences.city)
-    .map((suburb) => ({
-      ...suburb,
-      score: getScoreByMode(suburb),
-      reasons: window.buildReasonList(suburb, preferences)
-    }))
-    .sort((a, b) => b.score - a.score);
+    .map((suburb) => {
+      const priorityFit = getPriorityFitBreakdown(suburb);
+
+      return {
+        ...suburb,
+        score: getScoreByMode(suburb, priorityFit),
+        priorityFit,
+        reasons: window.buildReasonList(suburb, preferences)
+      };
+    })
+    .sort(compareRankedSuburbs);
 }
 
 function getMatchBadgeTone(score) {
@@ -194,29 +187,185 @@ function getMatchBadgeTone(score) {
   return "low";
 }
 
-function getScoreByMode(suburb) {
+function getScoreByMode(suburb, existingPriorityFit = null) {
+  const priorityFit = existingPriorityFit || getPriorityFitBreakdown(suburb);
+
   switch (appState.recommendBy) {
     case "community": {
-      // Score based purely on language + culture match + recentArrival
-      let s = 0;
-      if (preferences.language && suburb.commonLanguages?.includes(preferences.language)) s += 35;
-      if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) s += 35;
-      if (suburb.culture === "high") s += 20;
-      else if (suburb.culture === "medium") s += 10;
-      if (suburb.recentArrival === "strong") s += 10;
-      return Math.min(s, 100);
+      // Community view still prioritises culture/language, but uses overall balance as a tie-breaker
+      // so the top suburb is not weak across the other selected priorities.
+      const communityScore = Math.round(
+        (priorityFit.language * 0.34) +
+        (priorityFit.culture * 0.34) +
+        (getLevelScore(suburb.culture) * 0.16) +
+        (getRecentArrivalScore(suburb) * 0.06) +
+        (priorityFit.balancedScore * 0.10)
+      );
+
+      return clampScore(communityScore);
     }
     case "university": {
-      // Score based purely on university proximity
-      const uniScore = typeof window.getEpic5UniversityAccessScore === "function"
-        ? window.getEpic5UniversityAccessScore(suburb, preferences)
-        : 0;
-      return Math.round((uniScore / 10) * 100);
+      // University view prioritises access to the selected university, while still rewarding
+      // suburbs that remain strong for rent, commute, housing, lifestyle, and community fit.
+      const universityScore = Math.round(
+        (priorityFit.university * 0.72) +
+        (priorityFit.balancedScore * 0.28)
+      );
+
+      return clampScore(universityScore);
     }
     case "overall":
     default:
-      return window.getSuburbScore(suburb, preferences);
+      return priorityFit.balancedScore;
   }
+}
+
+function compareRankedSuburbs(a, b) {
+  if (b.score !== a.score) return b.score - a.score;
+
+  const aFit = a.priorityFit || getPriorityFitBreakdown(a);
+  const bFit = b.priorityFit || getPriorityFitBreakdown(b);
+
+  if (bFit.criticalAverage !== aFit.criticalAverage) return bFit.criticalAverage - aFit.criticalAverage;
+  if (bFit.priorityHits !== aFit.priorityHits) return bFit.priorityHits - aFit.priorityHits;
+  if (bFit.lowPriorityCount !== aFit.lowPriorityCount) return aFit.lowPriorityCount - bFit.lowPriorityCount;
+
+  return a.suburb.localeCompare(b.suburb);
+}
+
+function getPriorityFitBreakdown(suburb) {
+  const selectedHousing = window.getPreferenceArray(preferences.housing);
+  const selectedCommute = window.getPreferenceArray(preferences.commute);
+  const selectedLifestyle = window.getPreferenceArray(preferences.lifestyle);
+  const selectedLanguage = String(preferences.language || "").trim();
+  const selectedCulture = String(preferences.culture || "").trim();
+  const selectedUniversity = String(preferences.university || "").trim();
+
+  const rent = getRentPriorityScore(suburb);
+  const housing = selectedHousing.length
+    ? getArrayMatchScore(selectedHousing, suburb.housing)
+    : 100;
+  const commute = selectedCommute.length
+    ? normalizeScore(window.getCommuteScore(suburb, preferences), 12)
+    : 100;
+  const lifestyle = selectedLifestyle.length
+    ? getArrayMatchScore(selectedLifestyle, suburb.lifestyle)
+    : 100;
+  const language = selectedLanguage
+    ? (suburb.commonLanguages?.includes(selectedLanguage) ? 100 : 35)
+    : 100;
+  const culture = selectedCulture
+    ? (suburb.culturalGroups?.includes(selectedCulture) ? 100 : getLevelScore(suburb.culture) * 0.75)
+    : getLevelScore(suburb.culture);
+  const university = selectedUniversity
+    ? normalizeScore(
+        typeof window.getEpic5UniversityAccessScore === "function"
+          ? window.getEpic5UniversityAccessScore(suburb, preferences)
+          : getLevelScore(suburb.university) / 10,
+        10
+      )
+    : getLevelScore(suburb.university);
+
+  const weightedScore = Math.round(
+    (rent * 0.18) +
+    (housing * 0.14) +
+    (commute * 0.15) +
+    (lifestyle * 0.12) +
+    (language * 0.08) +
+    (culture * 0.10) +
+    (university * 0.18) +
+    (100 * 0.05)
+  );
+
+  const selectedPriorityScores = [rent];
+  if (selectedHousing.length) selectedPriorityScores.push(housing);
+  if (selectedCommute.length) selectedPriorityScores.push(commute);
+  if (selectedLifestyle.length) selectedPriorityScores.push(lifestyle);
+  if (selectedLanguage) selectedPriorityScores.push(language);
+  if (selectedCulture) selectedPriorityScores.push(culture);
+  if (selectedUniversity) selectedPriorityScores.push(university);
+
+  const criticalAverage = selectedPriorityScores.length
+    ? Math.round(selectedPriorityScores.reduce((sum, value) => sum + value, 0) / selectedPriorityScores.length)
+    : weightedScore;
+  const weakestPriority = selectedPriorityScores.length ? Math.min(...selectedPriorityScores) : weightedScore;
+  const lowPriorityCount = selectedPriorityScores.filter((value) => value < 45).length;
+  const priorityHits = selectedPriorityScores.filter((value) => value >= 70).length;
+
+  let balancedScore = Math.round((weightedScore * 0.68) + (criticalAverage * 0.22) + (weakestPriority * 0.10));
+
+  // Keep the top match balanced: suburbs with very weak selected priorities drop below
+  // suburbs that are good across most aspects.
+  if (lowPriorityCount >= 2) balancedScore -= 12;
+  if (lowPriorityCount === 1) balancedScore -= 5;
+  if (rent < 40) balancedScore -= 8;
+  if (selectedUniversity && university < 40) balancedScore -= 8;
+  if (selectedCommute.length && commute < 40) balancedScore -= 6;
+  if (selectedHousing.length && housing < 40) balancedScore -= 5;
+
+  return {
+    rent,
+    housing,
+    commute,
+    lifestyle,
+    language,
+    culture,
+    university,
+    weightedScore: clampScore(weightedScore),
+    criticalAverage: clampScore(criticalAverage),
+    weakestPriority: clampScore(weakestPriority),
+    lowPriorityCount,
+    priorityHits,
+    balancedScore: clampScore(balancedScore)
+  };
+}
+
+function getRentPriorityScore(suburb) {
+  if (typeof window.getRentScore === "function") {
+    return normalizeScore(window.getRentScore(suburb.rentRange, preferences.budget), 25);
+  }
+
+  const range = parseRentRange(suburb.rentRange);
+  const budget = Number(preferences.budget || 0);
+  if (!range || !budget) return 50;
+  if (budget >= range.min) return 100;
+  return clampScore(Math.round(100 * (1 - ((range.min - budget) / 300))));
+}
+
+function getArrayMatchScore(selectedValues, suburbValues) {
+  const selected = Array.isArray(selectedValues) ? selectedValues : [];
+  const available = Array.isArray(suburbValues) ? suburbValues : [];
+
+  if (!selected.length) return 100;
+
+  const matches = selected.filter((value) => available.includes(value)).length;
+  return Math.round((matches / selected.length) * 100);
+}
+
+function getLevelScore(level) {
+  if (level === "high" || level === "strong") return 100;
+  if (level === "medium") return 65;
+  if (level === "low") return 30;
+  return 50;
+}
+
+function getRecentArrivalScore(suburb) {
+  if (suburb.recentArrival === "strong") return 100;
+  if (suburb.recentArrival === "medium") return 65;
+  if (suburb.recentArrival === "low") return 35;
+  return 50;
+}
+
+function normalizeScore(value, maxValue) {
+  const numberValue = Number(value || 0);
+  const numberMax = Number(maxValue || 1);
+
+  if (!numberMax) return 0;
+  return clampScore(Math.round((numberValue / numberMax) * 100));
+}
+
+function clampScore(value) {
+  return Math.max(0, Math.min(100, Math.round(Number(value) || 0)));
 }
 
 function getSortedShortlistForDisplay() {
@@ -247,8 +396,6 @@ function getCurrentPageSuburbs() {
   return sorted.slice(startIndex, startIndex + appState.pageSize);
 }
 
-/* ===== Render pipeline ===== */
-
 function renderPage() {
   const sorted = getSortedShortlistForDisplay();
   const totalPages = sorted.length ? Math.ceil(sorted.length / appState.pageSize) : 0;
@@ -268,8 +415,8 @@ function renderPage() {
   renderTopMatch(bestMatch);
   renderMatches(currentPageItems, bestMatch ? bestMatch.slug : "");
   renderPagination(totalPages);
+  renderComparisonPanel(false);
   renderSpinWheel(topWheelItems);
-  renderComparisonPanel();
 
   if (resultsCount) {
     if (appState.suburbQuery) {
@@ -288,8 +435,6 @@ function handleSortChange(event) {
   localStorage.setItem("settlesmart_sort", appState.sortBy);
   renderPage();
 }
-
-/* ===== Hero, top match, and result cards ===== */
 
 function renderHero() {
   const heroImage = cityHeroImages[preferences.city] || cityHeroImages.Melbourne;
@@ -388,7 +533,7 @@ function renderTopMatch(match) {
 
           <div class="top-match-stat-card">
             <span>University access</span>
-            <strong>${window.formatChoice(match.university)}</strong>
+            <strong>${window.formatChoice(getDisplayUniversityLevel(match))}</strong>
           </div>
 
           <div class="top-match-stat-card">
@@ -454,7 +599,7 @@ function renderMatches(list, bestMatchSlug) {
               </div>
               <div class="suburb-stat-box">
                 <span>University access</span>
-                <strong>${window.formatChoice(match.university)}</strong>
+                <strong>${window.formatChoice(getDisplayUniversityLevel(match))}</strong>
               </div>
               <div class="suburb-stat-box">
                 <span>Language comfort</span>
@@ -482,9 +627,10 @@ function renderMatches(list, bestMatchSlug) {
       window.location.href = `suburb.html?slug=${button.dataset.slug}`;
     });
   });
-}
 
-/* ===== Pagination ===== */
+  bindCompareButtons();
+  updateCompareButtonStates();
+}
 
 function renderPagination(totalPages) {
   if (!resultsPagination) return;
@@ -560,8 +706,25 @@ function getVisiblePaginationItems(totalPages, currentPage) {
   return items;
 }
 
-
 /* ===== Epic 7: Side-by-side comparison and shortlist ===== */
+
+function setupComparisonResetGuards() {
+  window.addEventListener("pagehide", () => {
+    appState.compareSlugs = [];
+    appState.compareMessage = null;
+    localStorage.removeItem(LEGACY_COMPARE_STORAGE_KEY);
+  });
+
+  window.addEventListener("pageshow", (event) => {
+    if (!event.persisted) return;
+
+    appState.compareSlugs = [];
+    appState.compareMessage = null;
+    clearCustomCompareInput();
+    renderComparisonPanel(false);
+    updateCompareButtonStates();
+  });
+}
 
 function setupComparisonHandlers() {
   if (customCompareInput) {
@@ -1073,7 +1236,9 @@ function setComparisonMessage(text, type = "info") {
 }
 
 function saveCompareSelection() {
-  localStorage.setItem(COMPARE_STORAGE_KEY, JSON.stringify(appState.compareSlugs));
+  // Keep compare selections temporary. This clears old persistent data from previous builds
+  // and makes the comparison reset after refresh, close, or returning home to refine answers.
+  localStorage.removeItem(LEGACY_COMPARE_STORAGE_KEY);
 }
 
 function sanitizeCompareSlugs(slugs) {
@@ -1198,7 +1363,10 @@ function formatCultureFit(suburb) {
 }
 
 function formatUniversityFit(suburb) {
-  const access = window.formatChoice(suburb.university);
+  const universityLevel = typeof window.getEpic5UniversityAccessLevel === "function"
+    ? window.getEpic5UniversityAccessLevel(suburb, preferences)
+    : suburb.university;
+  const access = window.formatChoice(universityLevel);
   const uniScore = typeof window.getEpic5UniversityAccessScore === "function"
     ? window.getEpic5UniversityAccessScore(suburb, preferences)
     : null;
@@ -1502,7 +1670,6 @@ function getWheelWinner() {
 
 /* ===== Community explorer ===== */
 
-// Community explorer elements may not be present in all HTML versions.
 function renderCommunityExplorer() {
   // Community explorer elements may not exist in the current HTML version
   if (!cultureList) return;
@@ -1768,6 +1935,14 @@ function getPriorityLanguageBadges(suburb) {
   return badges.slice(0, 3);
 }
 
+function getDisplayUniversityLevel(suburb) {
+  if (typeof window.getEpic5UniversityAccessLevel === "function") {
+    return window.getEpic5UniversityAccessLevel(suburb, preferences);
+  }
+
+  return suburb.university;
+}
+
 function getCultureConnectionLabel(suburb) {
   if (preferences.culture && suburb.culturalGroups?.includes(preferences.culture)) {
     return `Strong ${preferences.culture} community`;
@@ -1795,8 +1970,6 @@ function getCommunityData(suburb) {
   };
 }
 
-/* ===== Sort, filter, and view helpers ===== */
-
 function applySort(list, sortBy) {
   const sorted = [...list];
 
@@ -1806,10 +1979,10 @@ function applySort(list, sortBy) {
     case "name-desc":
       return sorted.sort((a, b) => b.suburb.localeCompare(a.suburb));
     case "match-asc":
-      return sorted.sort((a, b) => a.score - b.score);
+      return sorted.sort((a, b) => a.score - b.score || a.suburb.localeCompare(b.suburb));
     case "match-desc":
     default:
-      return sorted.sort((a, b) => b.score - a.score);
+      return sorted.sort(compareRankedSuburbs);
   }
 }
 
