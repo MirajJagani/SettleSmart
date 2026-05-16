@@ -465,8 +465,7 @@ function initSuburbPage() {
         <div class="suburb-section-head">
           <h3>News behind the safety rating</h3>
           <p>
-            Real safety-related articles for ${suburb.suburb}, grouped by violent crime,
-            property crime, and other safety news.
+            Real safety-related articles for ${suburb.suburb}.
           </p>
         </div>
 

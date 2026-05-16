@@ -50,14 +50,19 @@ const NEWS_CATEGORY_KEYWORDS = {
 };
 
 const GNEWS_SEARCH_KEYWORDS = [
-  "crime",
   "police",
+  "crime",
   "safety",
   "assault",
   "theft",
   "burglary",
   "robbery",
-  "fire"
+  "arrest",
+  "charged",
+  "investigation",
+  "stabbing",
+  "fire",
+  "arson"
 ];
 
 function getArticleCategory(article: any) {
@@ -182,7 +187,11 @@ Deno.serve(async (req) => {
     }
 
     const searchName = getNewsSearchName(suburbName);
-    const query = `"${searchName}" AND (${GNEWS_SEARCH_KEYWORDS.join(" OR ")})`;
+    let query = `"${searchName}" AND (${GNEWS_SEARCH_KEYWORDS.join(" OR ")})`;
+
+    if (query.length > 190) {
+      query = `"${searchName}" AND (police OR crime OR safety OR assault OR theft OR burglary OR fire)`;
+    }
 
     const gnewsUrl =
       `https://gnews.io/api/v4/search?` +
@@ -190,7 +199,8 @@ Deno.serve(async (req) => {
       `&lang=en` +
       `&country=au` +
       `&max=10` +
-      `&sortby=publishedAt` +
+      `&sortby=relevance` +
+      `&in=title,description,content` +
       `&apikey=${gnewsApiKey}`;
 
     const gnewsResponse = await fetch(gnewsUrl);
