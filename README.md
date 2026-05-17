@@ -6,10 +6,10 @@ SettleSmart is a static web prototype that helps international students explore 
 
 - Collects user preferences through a guided onboarding flow
 - Saves answers in the browser using `localStorage`
-- Generates a suburb shortlist based on overall fit, culture/community fit, and university access
+- Generates a suburb shortlist using a balanced priority score across rent, housing, commute, lifestyle, language, culture, and university access
 - Shows a detailed suburb page with a 7-priority match grid
 - Includes a shortlist spin wheel to help users choose which suburb to inspect first
-- Adds Epic 7 side-by-side suburb comparison with a comparison shortlist, searchable custom suburb selector that lists all suburbs from the selected city, top-match comparison jump, and priority-based comparison rows
+- Supports Epic 7 side-by-side suburb comparison with Compare + buttons and a custom suburb search/dropdown
 - Provides nearby-facility exploration with a mini map and safety/risk information
 
 ## Main pages
@@ -18,7 +18,7 @@ SettleSmart is a static web prototype that helps international students explore 
 Landing page and 7-step onboarding flow. This page loads `script.js`, which manages the preview password gate, onboarding steps, progress UI, and saving preferences for the rest of the site.
 
 ### `results.html`
-Shortlist and suburb comparison page. This page loads `suburb-data.js` and `results.js`, then ranks suburbs, renders the hero summary, suburb cards, shortlist spin wheel, and Epic 7 side-by-side comparison panel.
+Shortlist and suburb comparison page. This page loads `suburb-data.js` and `results.js`, then ranks suburbs, renders the hero summary, suburb cards, Epic 7 comparison panel, custom suburb selector, and shortlist spin wheel.
 
 ### `suburb.html`
 Suburb profile page. This page loads `suburb-data.js`, `Chart.js`, and `suburb.js` to render the suburb explanation, community snapshot, map, risk summary, and safety indicator.
@@ -55,17 +55,17 @@ SettleSmart/
 2. `script.js` collects city, language, culture, university, budget, housing, commute, and lifestyle preferences.
 3. Preferences are saved into `localStorage` under `settlesmart_preferences`.
 4. `results.html` loads the saved preferences and uses helpers from `suburb-data.js` to rank suburbs.
-5. `results.js` renders the top match, additional suburb cards, filters, pagination, spin wheel, and comparison tools.
-6. Users can select 2 to 4 suburbs with **Compare +**, open the full selected-city suburb list or type to choose a custom suburb, and compare options against their saved priorities.
+5. `results.js` renders the top match, additional suburb cards, filters, pagination, side-by-side comparison, and spin wheel.
+6. Compare selections stay temporary for the current results visit and are cleared when the user refreshes/reopens the site or returns home to refine answers.
 7. When a suburb card is opened, `suburb.html` reads the selected `slug` and `suburb.js` builds the detailed suburb profile.
 
 ## Scoring model summary
 
 The app currently uses a static, client-side scoring approach:
 
-- **Overall fit:** combined score from rent, housing, commute, lifestyle, language, culture, and university access
-- **Community mode:** emphasises language match, cultural background match, and community signals
-- **University mode:** emphasises the selected university access score
+- **Overall fit:** balanced score from rent, housing, commute, lifestyle, language, culture, and university access, with penalties for weak selected priorities so the top match is strong across more aspects
+- **Community mode:** emphasises language match, cultural background match, community signals, and overall balance
+- **University mode:** emphasises the selected university access score while still rewarding overall priority balance
 
 These helpers live in `suburb-data.js`, so any future developer who changes the ranking logic should start there.
 
@@ -124,4 +124,4 @@ The JavaScript files now include function-level comments to make handover easier
 
 ## Current status
 
-This repository now contains the Iteration 3 Epic 7 frontend update for SettleSmart. It keeps the Iteration 2 guided onboarding flow, suburb shortlist, spin wheel, and suburb profile experience intact, while adding side-by-side comparison features for recommended and custom suburbs.
+This repository contains the Iteration 3 frontend prototype for SettleSmart, including the guided onboarding flow, suburb shortlist, suburb profile experience, Epic 7 suburb comparison, custom comparison search, temporary comparison selection reset, and balanced top-match ranking logic. The current build is suitable for demonstration, further UI refinement, and future backend/data integration work.
