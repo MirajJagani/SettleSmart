@@ -1221,12 +1221,12 @@ function renderMap(frame, center, defaultZoom) {
 // ── POI category config ──────────────────────────────────────────────────────
 // POI category config: maps each category to its Nominatim tags, emoji, and display label
 const POI_CATEGORIES = {
-  restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café" },
-  supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery" },
-  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital" },
-  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic" },
-  park:        { tags: ["leisure=park", "leisure=garden"],                             emoji: "🌳", label: "Park" },
-  bus_station: { tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],   emoji: "🚌", label: "Transport" },
+  restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café", limit: 60 },
+  supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery",          limit: 40 },
+  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital",         limit: 20 },
+  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic",        limit: 30 },
+  park:        { tags: ["leisure=park", "leisure=garden"],                             emoji: "🌳", label: "Park",            limit: 30 },
+  bus_station: { tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],   emoji: "🚌", label: "Transport",       limit: 50 },
 };
 
 // ── Overpass QL builder ──────────────────────────────────────────────────────
@@ -1239,64 +1239,72 @@ function buildOverpassQuery(amenity, lat, lon) {
     const [k, v] = tag.split("=");
     return `node["${k}"="${v}"](around:${radius},${lat},${lon});way["${k}"="${v}"](around:${radius},${lat},${lon});`;
   });
-  // No result cap — return everything within the radius
-  return `[out:json][timeout:30];(${parts.join("")});out center;`;
+  // Use per-category limit if defined, otherwise return all results in the radius
+  const cap = cat.limit ? ` ${cat.limit}` : "";
+  return `[out:json][timeout:30];(${parts.join("")});out center${cap};`;
 }
 
 // ── fetch helpers ─────────────────────────────────────────────────────────────
+// Return conventions for all helpers:
+//   []          — request succeeded, genuinely no POI in this area
+//   [el, ...]   — request succeeded, POI found
+//   null        — request failed (network error / timeout / bad response)
+
 async function tryOverpassDirect(query, signal) {
   const endpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
+    { url: "https://overpass-api.de/api/interpreter",       ms: 10000 },
+    { url: "https://overpass.kumi.systems/api/interpreter", ms: 10000 },
   ];
-  for (const url of endpoints) {
+  for (const endpoint of endpoints) {
     if (signal?.aborted) return null;
-    // Combine user abort with a per-request timeout so both are enforced
-    const timeout = AbortSignal.timeout(5000);
-    const combined = signal
-      ? AbortSignal.any([signal, timeout])
-      : timeout;
+    const combined = AbortSignal.any([
+      AbortSignal.timeout(endpoint.ms),
+      ...(signal ? [signal] : []),
+    ]);
     try {
-      const res = await fetch(url, {
+      const res = await fetch(endpoint.url, {
         method: "POST", body: query,
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         signal: combined,
       });
       if (!res.ok) continue;
       const data = await res.json();
-      if (data.elements?.length) return data.elements;
+      // Return the elements array even if empty — empty means no POI, not a failure
+      if (Array.isArray(data.elements)) return data.elements;
     } catch (err) {
       if (err.name === "AbortError" && signal?.aborted) throw err;
       /* timeout or network error — try next endpoint */
     }
   }
-  return null;
+  return null; // all endpoints failed
 }
 
 async function tryOverpassViaProxy(query, signal) {
   const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
   const proxies = [
-    { url: `https://corsproxy.io/?url=${encoded}`,      wrap: false },
+    { url: `https://corsproxy.io/?url=${encoded}`,          wrap: false },
     { url: `https://api.allorigins.win/get?url=${encoded}`, wrap: true  },
   ];
   for (const proxy of proxies) {
     if (signal?.aborted) return null;
-    const timeout = AbortSignal.timeout(5000);
-    const combined = signal ? AbortSignal.any([signal, timeout]) : timeout;
+    const combined = AbortSignal.any([
+      AbortSignal.timeout(10000),
+      ...(signal ? [signal] : []),
+    ]);
     try {
       const res = await fetch(proxy.url, { signal: combined });
       if (!res.ok) continue;
       const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
-      if (raw.elements?.length) return raw.elements;
+      if (Array.isArray(raw.elements)) return raw.elements;
     } catch (err) {
       if (err.name === "AbortError" && signal?.aborted) throw err;
       /* timeout or network error — try next proxy */
     }
   }
-  return null;
+  return null; // all proxies failed
 }
 
-// Nominatim nearby search — last resort, no Overpass needed
+// Nominatim nearby search — last resort
 async function tryNominatimNearby(amenity, lat, lon, signal) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
@@ -1315,9 +1323,13 @@ async function tryNominatimNearby(amenity, lat, lon, signal) {
       "accept-language": "en",
     });
     try {
+      const combined = AbortSignal.any([
+        AbortSignal.timeout(10000),
+        ...(signal ? [signal] : []),
+      ]);
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
         headers: { "Accept-Language": "en" },
-        signal: signal ?? AbortSignal.timeout(5000),
+        signal: combined,
       });
       if (!res.ok) continue;
       const items = await res.json();
@@ -1330,14 +1342,14 @@ async function tryNominatimNearby(amenity, lat, lon, signal) {
           });
         }
       });
-      // Respect Nominatim 1 req/s rate limit
-      await new Promise(r => setTimeout(r, 1100));
+      await new Promise(r => setTimeout(r, 1100)); // Nominatim 1 req/s
     } catch (err) {
-      if (err.name === "AbortError") throw err;
+      if (err.name === "AbortError" && signal?.aborted) throw err;
       /* try next tag */
     }
   }
-  return allResults.length ? allResults : null;
+  // Return empty array (not null) — Nominatim responded but found nothing
+  return allResults;
 }
 
 // ── main render functions ────────────────────────────────────────────────────
@@ -1366,34 +1378,43 @@ async function fetchAndRenderPOI(amenity, center) {
 
   const [lat, lon] = center;
   const query = buildOverpassQuery(amenity, lat, lon);
+
+  // Each helper returns:
+  //   []       — responded, no POI here (not an error)
+  //   [el...]  — responded, POI found
+  //   null     — request failed entirely
+  // We wrap null as a rejected promise so Promise.any skips it,
+  // but treat [] as a valid resolution (genuine empty area).
   let elements = null;
+  let networkFailure = false;
 
   try {
     const sources = [];
 
-    if (query) {
-      sources.push(
-        tryOverpassDirect(query, signal)
-          .then(r => { if (!r?.length) throw new Error("no results"); return r; })
-      );
-      sources.push(
-        tryOverpassViaProxy(query, signal)
-          .then(r => { if (!r?.length) throw new Error("no results"); return r; })
-      );
-    }
-
-    sources.push(
-      tryNominatimNearby(amenity, lat, lon, signal)
-        .then(r => {
-          if (!r?.length) throw new Error("no results");
+    const wrap = (promise, isNominatim = false) =>
+      promise.then(r => {
+        if (r === null) throw new Error("network_failure");
+        // Nominatim returns plain objects; normalise to Overpass shape
+        if (isNominatim) {
           return r.map(item => ({ lat: item.lat, lon: item.lon, tags: { name: item.name } }));
-        })
-    );
+        }
+        return r;
+      });
+
+    if (query) {
+      sources.push(wrap(tryOverpassDirect(query, signal)));
+      sources.push(wrap(tryOverpassViaProxy(query, signal)));
+    }
+    sources.push(wrap(tryNominatimNearby(amenity, lat, lon, signal), true));
 
     elements = await Promise.any(sources);
   } catch (err) {
-    // AggregateError = all sources failed; AbortError = user switched filter
-    if (err.name !== "AggregateError") return;
+    if (err.name === "AbortError") return;
+    if (err.name === "AggregateError") {
+      // All sources returned null (network failure), not empty arrays
+      networkFailure = true;
+      elements = [];
+    }
   }
 
   if (signal.aborted) return;
@@ -1414,11 +1435,14 @@ async function fetchAndRenderPOI(amenity, center) {
       minimapMarkers.push(marker);
     });
   } else {
+    // Show different message depending on whether it was a network failure or genuinely no data
     const frame = document.getElementById("minimapFrame");
     if (frame) {
       const msg = document.createElement("div");
       msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
-      msg.textContent = `Could not load ${cat.label} data — please try again later`;
+      msg.textContent = networkFailure
+        ? `Could not load ${cat.label} data — please try again later`
+        : `No ${cat.label} found within 1.5 km`;
       frame.style.position = "relative";
       frame.appendChild(msg);
       setTimeout(() => msg.remove(), 4000);
