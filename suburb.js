@@ -1214,8 +1214,12 @@ function renderMap(frame, center, defaultZoom) {
   }).addTo(minimapMap);
   minimapMap.setView(center, defaultZoom);
 
-  // Map opens with boundary only; POI loads on filter button click
-  setTimeout(() => minimapMap.invalidateSize(), 300);
+  // Map opens with boundary only; POI loads on filter button click.
+  // Fire invalidateSize at multiple intervals to ensure tiles render correctly
+  // after the container transitions from hidden to visible.
+  setTimeout(() => minimapMap.invalidateSize(), 100);
+  setTimeout(() => minimapMap.invalidateSize(), 400);
+  setTimeout(() => minimapMap.invalidateSize(), 800);
 }
 
 // ── POI category config ──────────────────────────────────────────────────────
@@ -1223,8 +1227,8 @@ function renderMap(frame, center, defaultZoom) {
 const POI_CATEGORIES = {
   restaurant:  { tags: ["amenity=restaurant", "amenity=cafe", "amenity=fast_food"],  emoji: "🍜", label: "Restaurant/Café", limit: 60 },
   supermarket: { tags: ["shop=supermarket", "shop=convenience"],                      emoji: "🛒", label: "Grocery",          limit: 40 },
-  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital",         limit: 20 },
-  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic",        limit: 30 },
+  hospital:    { tags: ["amenity=hospital"],                                           emoji: "🏥", label: "Hospital",         limit: 20, radius: 5000 },
+  doctors:     { tags: ["amenity=doctors", "amenity=clinic"],                          emoji: "👨‍⚕️", label: "GP/Clinic",        limit: 30, radius: 3000 },
   park:        { tags: ["leisure=park", "leisure=garden"],                             emoji: "🌳", label: "Park",            limit: 30 },
   bus_station: { tags: ["highway=bus_stop", "railway=station", "railway=tram_stop"],   emoji: "🚌", label: "Transport",       limit: 50 },
 };
@@ -1234,7 +1238,7 @@ function buildOverpassQuery(amenity, lat, lon) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  const radius = minimapRadius || 1500;
+  const radius = cat.radius || minimapRadius || 1500;
   const parts = cat.tags.map(tag => {
     const [k, v] = tag.split("=");
     return `node["${k}"="${v}"](around:${radius},${lat},${lon});way["${k}"="${v}"](around:${radius},${lat},${lon});`;
@@ -1297,24 +1301,45 @@ async function tryOverpassViaProxy(query, signal) {
   return null;
 }
 
-// Nominatim nearby search — last resort, no Overpass needed
+// Nominatim nearby search — last resort, no Overpass needed.
+// Nominatim /search only accepts a handful of tag parameters directly (amenity=,
+// highway=, etc.).  Tags like shop=supermarket or leisure=park are silently
+// ignored, so we map those to a free-text q= query instead.
+const NOMINATIM_TAG_FALLBACK = {
+  "shop=supermarket": { q: "supermarket" },
+  "shop=convenience": { q: "convenience store" },
+  "leisure=park":     { q: "park" },
+  "leisure=garden":   { q: "garden" },
+};
+
 async function tryNominatimNearby(amenity, lat, lon, signal) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  const delta = (minimapRadius || 1500) / 111000;
+  const delta = (cat.radius || minimapRadius || 1500) / 111000;
   const viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
 
   const allResults = [];
   for (const tag of cat.tags.slice(0, 2)) {
     if (signal?.aborted) break;
     const [k, v] = tag.split("=");
-    const params = new URLSearchParams({
-      format: "json", limit: "50",
-      viewbox, bounded: "1",
-      [k]: v,
-      "accept-language": "en",
-    });
+
+    // Build search params: use q= for tags Nominatim doesn't support natively
+    const override = NOMINATIM_TAG_FALLBACK[tag];
+    const params = override
+      ? new URLSearchParams({
+          format: "json", limit: "50",
+          viewbox, bounded: "1",
+          q: override.q,
+          "accept-language": "en",
+        })
+      : new URLSearchParams({
+          format: "json", limit: "50",
+          viewbox, bounded: "1",
+          [k]: v,
+          "accept-language": "en",
+        });
+
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
         headers: { "Accept-Language": "en" },
@@ -1432,9 +1457,7 @@ async function fetchAndRenderPOI(amenity, center) {
     if (frame) {
       const msg = document.createElement("div");
       msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
-      msg.textContent = allNetworkErrors
-        ? `Could not load ${cat.label} data — please try again later`
-        : `No ${cat.label} found within 1.5 km`;
+      msg.textContent = `No ${cat.label} found nearby`;
       frame.style.position = "relative";
       frame.appendChild(msg);
       setTimeout(() => msg.remove(), 4000);
