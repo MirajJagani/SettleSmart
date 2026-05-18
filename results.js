@@ -233,6 +233,77 @@ function compareRankedSuburbs(a, b) {
   return a.suburb.localeCompare(b.suburb);
 }
 
+// ---------------------------------------------------------------------------
+// getDynamicWeights — literature-based dynamic weight adjustment
+//
+// Base weights follow Nijënstein et al. (2015), Oppewal et al. (2005/2017),
+// and Verhetsel et al. (2017), which consistently rank campus proximity and
+// affordability as the top two factors, with lifestyle amenities at the bottom.
+//
+// Weights are then adjusted dynamically based on which preferences the user
+// actually selected during onboarding:
+//
+//   university selected → university weight raised from 28 % to 35 %,
+//                         lifestyle and commute trimmed to fund the boost.
+//   language selected   → language weight raised from 8 % to 12 %,
+//                         lifestyle and housing trimmed to fund the boost.
+//   culture selected    → culture weight raised from 10 % to 14 %,
+//                         lifestyle and housing trimmed to fund the boost.
+//
+// The total of all weights always sums to 1.0 (100 %).
+// ---------------------------------------------------------------------------
+function getDynamicWeights(selectedUniversity, selectedLanguage, selectedCulture) {
+  // Base weights derived from the literature (Nijënstein 2015, Oppewal 2005/2017).
+  // university and rent are co-equal top factors; lifestyle ranks lowest.
+  const w = {
+    rent:       0.18,
+    housing:    0.14,
+    commute:    0.15,
+    lifestyle:  0.07,  // reduced from 0.12 — literature ranks lifestyle amenities lowest
+    language:   0.08,
+    culture:    0.10,
+    university: 0.28   // raised from 0.18 — campus proximity is #1 or #2 in all three papers
+  };
+  // Base total: 0.18+0.14+0.15+0.07+0.08+0.10+0.28 = 1.00
+
+  // Dynamic adjustment 1: university selected
+  // When the user has explicitly chosen a campus, proximity becomes a hard
+  // constraint (Oppewal 2005). Raise university weight further and trim
+  // commute slightly — the proximity floor fix already handles the overlap
+  // between campus nearness and public transport.
+  if (selectedUniversity) {
+    w.university += 0.07; // 0.28 → 0.35
+    w.commute    -= 0.04; // 0.15 → 0.11
+    w.lifestyle  -= 0.03; // 0.07 → 0.04
+  }
+
+  // Dynamic adjustment 2: language selected
+  // An explicit language preference is a strong identity signal for
+  // international students (Oppewal 2005 social environment factor).
+  if (selectedLanguage) {
+    w.language  += 0.04; // 0.08 → 0.12
+    w.lifestyle -= 0.02; // fund from lifestyle
+    w.housing   -= 0.02; // fund from housing
+  }
+
+  // Dynamic adjustment 3: culture selected
+  // Same reasoning as language — a named cultural background is a specific
+  // signal, not a generic preference.
+  if (selectedCulture) {
+    w.culture   += 0.04; // 0.10 → 0.14
+    w.lifestyle -= 0.02; // fund from lifestyle
+    w.housing   -= 0.02; // fund from housing
+  }
+
+  // Guard: clamp all weights to [0, 1] and renormalise so they always sum to 1.
+  const keys = Object.keys(w);
+  keys.forEach((k) => { w[k] = Math.max(0, w[k]); });
+  const total = keys.reduce((sum, k) => sum + w[k], 0);
+  if (total > 0) keys.forEach((k) => { w[k] = w[k] / total; });
+
+  return w;
+}
+
 function getPriorityFitBreakdown(suburb) {
   const selectedHousing = window.getPreferenceArray(preferences.housing);
   const selectedCommute = window.getPreferenceArray(preferences.commute);
@@ -241,12 +312,12 @@ function getPriorityFitBreakdown(suburb) {
   const selectedCulture = String(preferences.culture || "").trim();
   const selectedUniversity = String(preferences.university || "").trim();
 
+  // Resolve dynamic weights for this user's onboarding selections.
+  const w = getDynamicWeights(selectedUniversity, selectedLanguage, selectedCulture);
+
   const rent = getRentPriorityScore(suburb);
   const housing = selectedHousing.length
     ? getArrayMatchScore(selectedHousing, suburb.housing)
-    : 100;
-  const commute = selectedCommute.length
-    ? normalizeScore(window.getCommuteScore(suburb, preferences), 12)
     : 100;
   const lifestyle = selectedLifestyle.length
     ? getArrayMatchScore(selectedLifestyle, suburb.lifestyle)
@@ -257,6 +328,8 @@ function getPriorityFitBreakdown(suburb) {
   const culture = selectedCulture
     ? (suburb.culturalGroups?.includes(selectedCulture) ? 100 : getLevelScore(suburb.culture) * 0.75)
     : getLevelScore(suburb.culture);
+
+  // University must be computed before commute so the proximity floor can reference it.
   const university = selectedUniversity
     ? normalizeScore(
         typeof window.getEpic5UniversityAccessScore === "function"
@@ -266,15 +339,27 @@ function getPriorityFitBreakdown(suburb) {
       )
     : getLevelScore(suburb.university);
 
+  // Raw commute score from transport data.
+  // If the user selected a university and this suburb has high university access,
+  // the suburb is near campus — commute is effectively solved regardless of public
+  // transport infrastructure. Floor the commute score at 70 so proximity to campus
+  // is not penalised by a low general transport rating.
+  // (Supports Kim, Pagliara & Preston 2005 trade-off finding.)
+  const rawCommute = selectedCommute.length
+    ? normalizeScore(window.getCommuteScore(suburb, preferences), 12)
+    : 100;
+  const universityProximityFloor = (selectedUniversity && university >= 80) ? 70 : 0;
+  const commute = Math.max(rawCommute, universityProximityFloor);
+
+  // Weighted score uses dynamic weights resolved above.
   const weightedScore = Math.round(
-    (rent * 0.18) +
-    (housing * 0.14) +
-    (commute * 0.15) +
-    (lifestyle * 0.12) +
-    (language * 0.08) +
-    (culture * 0.10) +
-    (university * 0.18) +
-    (100 * 0.05)
+    (rent       * w.rent)       +
+    (housing    * w.housing)    +
+    (commute    * w.commute)    +
+    (lifestyle  * w.lifestyle)  +
+    (language   * w.language)   +
+    (culture    * w.culture)    +
+    (university * w.university)
   );
 
   const selectedPriorityScores = [rent];
@@ -300,7 +385,9 @@ function getPriorityFitBreakdown(suburb) {
   if (lowPriorityCount === 1) balancedScore -= 5;
   if (rent < 40) balancedScore -= 8;
   if (selectedUniversity && university < 40) balancedScore -= 8;
-  if (selectedCommute.length && commute < 40) balancedScore -= 6;
+  // Only apply the commute penalty if university proximity hasn't already compensated.
+  // A suburb next to campus (university >= 80) does not need good transport to score well.
+  if (selectedCommute.length && commute < 40 && universityProximityFloor === 0) balancedScore -= 6;
   if (selectedHousing.length && housing < 40) balancedScore -= 5;
 
   return {
