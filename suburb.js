@@ -1245,66 +1245,59 @@ function buildOverpassQuery(amenity, lat, lon) {
 }
 
 // ── fetch helpers ─────────────────────────────────────────────────────────────
-// Return conventions for all helpers:
-//   []          — request succeeded, genuinely no POI in this area
-//   [el, ...]   — request succeeded, POI found
-//   null        — request failed (network error / timeout / bad response)
-
 async function tryOverpassDirect(query, signal) {
   const endpoints = [
-    { url: "https://overpass-api.de/api/interpreter",       ms: 10000 },
-    { url: "https://overpass.kumi.systems/api/interpreter", ms: 10000 },
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
   ];
-  for (const endpoint of endpoints) {
+  for (const url of endpoints) {
     if (signal?.aborted) return null;
-    const combined = AbortSignal.any([
-      AbortSignal.timeout(endpoint.ms),
-      ...(signal ? [signal] : []),
-    ]);
+    // Combine user abort with a per-request timeout so both are enforced
+    const timeout = AbortSignal.timeout(5000);
+    const combined = signal
+      ? AbortSignal.any([signal, timeout])
+      : timeout;
     try {
-      const res = await fetch(endpoint.url, {
+      const res = await fetch(url, {
         method: "POST", body: query,
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         signal: combined,
       });
       if (!res.ok) continue;
       const data = await res.json();
-      // Return the elements array even if empty — empty means no POI, not a failure
-      if (Array.isArray(data.elements)) return data.elements;
+      if (data.elements?.length) return data.elements;
     } catch (err) {
       if (err.name === "AbortError" && signal?.aborted) throw err;
       /* timeout or network error — try next endpoint */
     }
   }
-  return null; // all endpoints failed
+  return null;
 }
 
 async function tryOverpassViaProxy(query, signal) {
   const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
   const proxies = [
-    { url: `https://corsproxy.io/?url=${encoded}`,          wrap: false },
+    { url: `https://corsproxy.io/?url=${encoded}`,      wrap: false },
     { url: `https://api.allorigins.win/get?url=${encoded}`, wrap: true  },
   ];
   for (const proxy of proxies) {
     if (signal?.aborted) return null;
-    const combined = AbortSignal.any([
-      AbortSignal.timeout(10000),
-      ...(signal ? [signal] : []),
-    ]);
+    const timeout = AbortSignal.timeout(5000);
+    const combined = signal ? AbortSignal.any([signal, timeout]) : timeout;
     try {
       const res = await fetch(proxy.url, { signal: combined });
       if (!res.ok) continue;
       const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
-      if (Array.isArray(raw.elements)) return raw.elements;
+      if (raw.elements?.length) return raw.elements;
     } catch (err) {
       if (err.name === "AbortError" && signal?.aborted) throw err;
       /* timeout or network error — try next proxy */
     }
   }
-  return null; // all proxies failed
+  return null;
 }
 
-// Nominatim nearby search — last resort
+// Nominatim nearby search — last resort, no Overpass needed
 async function tryNominatimNearby(amenity, lat, lon, signal) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
@@ -1323,13 +1316,9 @@ async function tryNominatimNearby(amenity, lat, lon, signal) {
       "accept-language": "en",
     });
     try {
-      const combined = AbortSignal.any([
-        AbortSignal.timeout(10000),
-        ...(signal ? [signal] : []),
-      ]);
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
         headers: { "Accept-Language": "en" },
-        signal: combined,
+        signal: signal ?? AbortSignal.timeout(5000),
       });
       if (!res.ok) continue;
       const items = await res.json();
@@ -1342,14 +1331,14 @@ async function tryNominatimNearby(amenity, lat, lon, signal) {
           });
         }
       });
-      await new Promise(r => setTimeout(r, 1100)); // Nominatim 1 req/s
+      // Respect Nominatim 1 req/s rate limit
+      await new Promise(r => setTimeout(r, 1100));
     } catch (err) {
-      if (err.name === "AbortError" && signal?.aborted) throw err;
+      if (err.name === "AbortError") throw err;
       /* try next tag */
     }
   }
-  // Return empty array (not null) — Nominatim responded but found nothing
-  return allResults;
+  return allResults.length ? allResults : null;
 }
 
 // ── main render functions ────────────────────────────────────────────────────
@@ -1379,40 +1368,43 @@ async function fetchAndRenderPOI(amenity, center) {
   const [lat, lon] = center;
   const query = buildOverpassQuery(amenity, lat, lon);
 
-  // Each helper returns:
-  //   []       — responded, no POI here (not an error)
-  //   [el...]  — responded, POI found
-  //   null     — request failed entirely
-  // We wrap null as a rejected promise so Promise.any skips it,
-  // but treat [] as a valid resolution (genuine empty area).
+  // Use a sentinel to distinguish "all sources had network errors" from
+  // "sources responded but found no POI in this area" (which is valid).
+  const NETWORK_ERROR = Symbol("network_error");
   let elements = null;
-  let networkFailure = false;
+  let allNetworkErrors = false;
 
   try {
     const sources = [];
 
-    const wrap = (promise, isNominatim = false) =>
-      promise.then(r => {
-        if (r === null) throw new Error("network_failure");
-        // Nominatim returns plain objects; normalise to Overpass shape
-        if (isNominatim) {
-          return r.map(item => ({ lat: item.lat, lon: item.lon, tags: { name: item.name } }));
-        }
-        return r;
-      });
-
     if (query) {
-      sources.push(wrap(tryOverpassDirect(query, signal)));
-      sources.push(wrap(tryOverpassViaProxy(query, signal)));
+      sources.push(
+        tryOverpassDirect(query, signal).then(r => {
+          if (r === null) throw NETWORK_ERROR;   // null = request failed
+          return r ?? [];                        // empty array = no POI found
+        })
+      );
+      sources.push(
+        tryOverpassViaProxy(query, signal).then(r => {
+          if (r === null) throw NETWORK_ERROR;
+          return r ?? [];
+        })
+      );
     }
-    sources.push(wrap(tryNominatimNearby(amenity, lat, lon, signal), true));
+
+    sources.push(
+      tryNominatimNearby(amenity, lat, lon, signal).then(r => {
+        if (r === null) throw NETWORK_ERROR;
+        return (r ?? []).map(item => ({ lat: item.lat, lon: item.lon, tags: { name: item.name } }));
+      })
+    );
 
     elements = await Promise.any(sources);
   } catch (err) {
-    if (err.name === "AbortError") return;
+    if (err.name === "AbortError") return; // user switched filter
     if (err.name === "AggregateError") {
-      // All sources returned null (network failure), not empty arrays
-      networkFailure = true;
+      // Check if every source threw NETWORK_ERROR vs simply returned no results
+      allNetworkErrors = err.errors?.every(e => e === NETWORK_ERROR) ?? true;
       elements = [];
     }
   }
@@ -1440,7 +1432,7 @@ async function fetchAndRenderPOI(amenity, center) {
     if (frame) {
       const msg = document.createElement("div");
       msg.style.cssText = "position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:1000;background:rgba(255,255,255,0.95);border-radius:8px;padding:7px 16px;font-size:0.82rem;color:#665f85;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.1);white-space:nowrap;";
-      msg.textContent = networkFailure
+      msg.textContent = allNetworkErrors
         ? `Could not load ${cat.label} data — please try again later`
         : `No ${cat.label} found within 1.5 km`;
       frame.style.position = "relative";
