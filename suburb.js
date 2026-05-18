@@ -290,7 +290,7 @@ function initSuburbPage() {
 
         <div class="minimap-body hidden" id="minimapBody">
           <div class="minimap-filters" id="minimapFilters">
-            <button class="minimap-filter-btn active" data-amenity="">All</button>
+            <button class="minimap-filter-btn active" data-amenity="">Default</button>
             <button class="minimap-filter-btn" data-amenity="supermarket">🛒 Grocery</button>
             <button class="minimap-filter-btn" data-amenity="hospital">🏥 Hospital</button>
             <button class="minimap-filter-btn" data-amenity="doctors">👨‍⚕️ GP</button>
@@ -918,8 +918,10 @@ function getFallbackCommunity(suburb) {
 let minimapMap = null;
 let minimapMarkers = [];
 let minimapCenter = null;
-let minimapBounds = null;   // L.LatLngBounds of the suburb polygon, or null
-let activeAmenity = "";
+let minimapBounds = null;       // L.LatLngBounds of the suburb polygon, or null
+let minimapRadius = 1500;       // POI search radius in metres, derived from polygon size
+let activeAmenity = null;       // null = no POI layer; string = category key
+let minimapPoiAbortCtrl = null; // AbortController for in-flight POI requests
 
 function initMiniMap(suburbName, cityName) {
   const toggleBtn = document.getElementById("minimapToggleBtn");
@@ -929,6 +931,7 @@ function initMiniMap(suburbName, cityName) {
 
   if (!toggleBtn) return;
 
+  // ── Toggle map open/close ──────────────────────────────────────────
   toggleBtn.addEventListener("click", async () => {
     const isOpen = !body.classList.contains("hidden");
     if (isOpen) {
@@ -936,107 +939,129 @@ function initMiniMap(suburbName, cityName) {
       chevron.textContent = "▼";
       label.textContent = "Show map & filter facilities";
       toggleBtn.setAttribute("aria-expanded", "false");
+      return;
+    }
+
+    body.classList.remove("hidden");
+    chevron.textContent = "▲";
+    label.textContent = "Hide map";
+    toggleBtn.setAttribute("aria-expanded", "true");
+
+    // Ensure the frame has a visible height before Leaflet initialises
+    const frame = document.getElementById("minimapFrame");
+    if (frame) {
+      frame.style.height = "380px";
+      frame.style.minHeight = "380px";
+      frame.style.display = "block";
+    }
+
+    if (!minimapMap) {
+      // First open: load Leaflet and build the map (boundary only, no POI)
+      await loadLeaflet();
+      await buildMap(suburbName, cityName);
     } else {
-      body.classList.remove("hidden");
-      chevron.textContent = "▲";
-      label.textContent = "Hide map";
-      toggleBtn.setAttribute("aria-expanded", "true");
-
-      // Force the frame to have a visible height before Leaflet initialises
-      const frame = document.getElementById("minimapFrame");
-      if (frame) {
-        frame.style.height = "380px";
-        frame.style.minHeight = "380px";
-        frame.style.display = "block";
-      }
-
-      if (!minimapMap) {
-        await loadLeaflet();
-        await buildMap(suburbName, cityName);
-      } else {
-        setTimeout(() => minimapMap.invalidateSize(), 50);
-      }
+      setTimeout(() => minimapMap.invalidateSize(), 50);
     }
   });
 
+  // ── Filter button clicks ───────────────────────────────────────────
+  // Default state: no button is active; map shows boundary only.
+  // Clicking a button loads that category; clicking the active button again clears it.
   document.getElementById("minimapFilters").addEventListener("click", (e) => {
     const btn = e.target.closest(".minimap-filter-btn");
     if (!btn) return;
+
+    const clicked = btn.dataset.amenity || "";
+
     document.querySelectorAll(".minimap-filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-    activeAmenity = btn.dataset.amenity || "";
+    activeAmenity = clicked || null;
+
+    if (!activeAmenity) {
+      // Default — clear all POI markers
+      if (minimapPoiAbortCtrl) minimapPoiAbortCtrl.abort();
+      clearMinimapMarkers();
+      return;
+    }
+
     if (minimapMap && minimapCenter) {
-      if (activeAmenity === "") {
-        fetchAndRenderAll(minimapCenter);
-      } else {
-        fetchAndRenderPOI(activeAmenity, minimapCenter);
-      }
+      fetchAndRenderPOI(activeAmenity, minimapCenter);
     }
   });
-
 }
 
+function clearMinimapMarkers() {
+  minimapMarkers.forEach(m => { try { m.remove(); } catch {} });
+  minimapMarkers = [];
+}
+
+let leafletLoadPromise = null;
+
 function loadLeaflet() {
-  return new Promise((resolve) => {
+  if (leafletLoadPromise) return leafletLoadPromise;
+
+  leafletLoadPromise = new Promise((resolve, reject) => {
     if (window.L) { resolve(); return; }
 
-    // Load CSS first
-    const css = document.createElement("link");
-    css.rel = "stylesheet";
-    css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-    document.head.appendChild(css);
+    // Load CSS once
+    if (!document.getElementById("leaflet-css")) {
+      const css = document.createElement("link");
+      css.id = "leaflet-css";
+      css.rel = "stylesheet";
+      css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+      document.head.appendChild(css);
+    }
 
-    // Load JS — once loaded, give the CSS a tick to apply before resolving
     const script = document.createElement("script");
     script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-    script.onload = () => {
-      // Wait two animation frames so the browser has painted the CSS
-      requestAnimationFrame(() => requestAnimationFrame(resolve));
+    script.onload = () => requestAnimationFrame(() => requestAnimationFrame(resolve));
+    script.onerror = () => {
+      leafletLoadPromise = null; // Allow retry on next open
+      reject(new Error("Leaflet failed to load"));
     };
     document.head.appendChild(script);
   });
+
+  return leafletLoadPromise;
 }
 
-/* ─── ABS SA2 name → OSM search config ──────────────────────────── */
+/* ─── Suburb center lookup ───────────────────────────────────────── */
 
-// Suburbs that do not resolve cleanly in OSM boundary searches
+// Hard-coded center coords for suburbs that Nominatim misresolves
 const ABS_FIXED_COORDS = {
-  "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 15 },
-  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 15 },
-  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 15 },
-  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 15 },
+  "Melbourne CBD - East":  { lat: -37.8136, lon: 144.9631, zoom: 14 },
+  "Melbourne CBD - North": { lat: -37.8080, lon: 144.9631, zoom: 14 },
+  "Melbourne CBD - West":  { lat: -37.8143, lon: 144.9531, zoom: 14 },
+  "Brisbane City":         { lat: -27.4698, lon: 153.0251, zoom: 14 },
 };
 
-// ABS compound names → preferred OSM suburb name
+// ABS compound names → preferred OSM search name
 const ABS_NAME_MAP = {
-  "Melbourne CBD - East":            null,
-  "Melbourne CBD - North":           null,
-  "Melbourne CBD - West":            null,
-  "Carlton North - Princes Hill":    "Carlton North",
-  "Richmond (South) - Cremorne":     "Cremorne",
-  "Richmond - North":                "Richmond",
-  "South Yarra - North":             "South Yarra",
-  "South Yarra - South":             "South Yarra",
-  "South Yarra - West":              "South Yarra",
-  "St Kilda - Central":              "St Kilda",
-  "St Kilda - West":                 "St Kilda West",
-  "Brunswick - North":               "Brunswick",
-  "Brunswick - South":               "Brunswick",
-  "West Melbourne - Industrial":     "West Melbourne",
-  "West Melbourne - Residential":    "West Melbourne",
-  "Donvale - Park Orchards":         "Donvale",
-  "Sydney (North) - Millers Point":  "Millers Point",
-  "Sydney (South) - Haymarket":      "Haymarket",
-  "Perth (North) - Highgate":        "Highgate",
-  "Perth (West) - Northbridge":      "Northbridge",
-  "Perth - Evandale":                "Evandale",
-  "Brisbane Port - Lytton":          "Lytton",
-  "Prahran - Windsor":               "Prahran",
-  "North Sydney - Lavender Bay":     "Lavender Bay",
-  "South Perth - Kensington":        "South Perth",
+  "Carlton North - Princes Hill":   "Carlton North",
+  "Richmond (South) - Cremorne":    "Cremorne",
+  "Richmond - North":               "Richmond",
+  "South Yarra - North":            "South Yarra",
+  "South Yarra - South":            "South Yarra",
+  "South Yarra - West":             "South Yarra",
+  "St Kilda - Central":             "St Kilda",
+  "St Kilda - West":                "St Kilda West",
+  "Brunswick - North":              "Brunswick",
+  "Brunswick - South":              "Brunswick",
+  "West Melbourne - Industrial":    "West Melbourne",
+  "West Melbourne - Residential":   "West Melbourne",
+  "Donvale - Park Orchards":        "Donvale",
+  "Sydney (North) - Millers Point": "Millers Point",
+  "Sydney (South) - Haymarket":     "Haymarket",
+  "Perth (North) - Highgate":       "Highgate",
+  "Perth (West) - Northbridge":     "Northbridge",
+  "Perth - Evandale":               "Evandale",
+  "Brisbane Port - Lytton":         "Lytton",
+  "Prahran - Windsor":              "Prahran",
+  "North Sydney - Lavender Bay":    "Lavender Bay",
+  "South Perth - Kensington":       "South Perth",
 };
 
-// City bounding boxes (south, west, north, east) used to constrain searches
+// City bounding boxes — keeps Nominatim results inside the correct city
 const CITY_BBOX = {
   melbourne: [-38.5, 144.3, -37.3, 146.0],
   sydney:    [-34.3, 150.3, -33.2, 151.6],
@@ -1050,178 +1075,15 @@ function getCityKey(cityName) {
   return String(cityName || "").trim().toLowerCase().replace(/\s+/g, "");
 }
 
+// Returns a prioritised list of name strings to try in Nominatim
 function getOSMSearchCandidates(suburbName) {
   const preferred = suburbName in ABS_NAME_MAP ? ABS_NAME_MAP[suburbName] : null;
-  const cleanedFull = String(suburbName || "").replace(/\s*\([^)]*\)/g, "").trim();
-  const parts = cleanedFull.split(/\s*-\s*/).map((part) => part.trim()).filter(Boolean);
-  const primary = parts[0] || cleanedFull;
-  const secondary = parts.length > 1 ? parts[1] : null;
-
-  return [...new Set([preferred, cleanedFull, primary, secondary].filter(Boolean))];
+  const cleaned   = String(suburbName || "").replace(/\s*\([^)]*\)/g, "").trim();
+  const parts     = cleaned.split(/\s*-\s*/).map(p => p.trim()).filter(Boolean);
+  return [...new Set([preferred, cleaned, parts[0], parts[1]].filter(Boolean))];
 }
 
-function scoreLookupResult(result) {
-  let score = 0;
-
-  if (result.geojson?.type === "Polygon" || result.geojson?.type === "MultiPolygon") score += 120;
-  if (result.class === "boundary") score += 70;
-  if (result.class === "place") score += 45;
-
-  const goodTypes = [
-    "suburb",
-    "neighbourhood",
-    "quarter",
-    "city_district",
-    "administrative",
-    "town",
-    "village",
-  ];
-  if (goodTypes.includes(result.type)) score += 55;
-
-  const rank = parseInt(result.place_rank || 30, 10);
-  if (rank >= 18 && rank <= 24) score += 35;
-  else if (rank < 16 || rank > 28) score -= 25;
-
-  return score;
-}
-
-/* ─── Phase 1: Overpass — suburb/admin boundaries inside the city bbox ── */
-async function overpassSuburbLookup(searchCandidates, cityName) {
-  const bbox = CITY_BBOX[getCityKey(cityName)];
-  if (!bbox) return null;
-
-  const [south, west, north, east] = bbox;
-  const overpassEndpoints = [
-    "https://overpass-api.de/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
-  ];
-
-  for (const candidate of searchCandidates) {
-    const safeName = candidate.replace(/"/g, '\"');
-    const query = `
-[out:json][timeout:20];
-(
-  relation["boundary"="administrative"]["name"="${safeName}"](${south},${west},${north},${east});
-  relation["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
-  relation["place"="neighbourhood"]["name"="${safeName}"](${south},${west},${north},${east});
-  relation["place"="quarter"]["name"="${safeName}"](${south},${west},${north},${east});
-  way["boundary"="administrative"]["name"="${safeName}"](${south},${west},${north},${east});
-  way["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
-  way["place"="neighbourhood"]["name"="${safeName}"](${south},${west},${north},${east});
-  node["place"="suburb"]["name"="${safeName}"](${south},${west},${north},${east});
-);
-out geom;
-`.trim();
-
-    for (const url of overpassEndpoints) {
-      try {
-        const res = await fetch(url, {
-          method: "POST",
-          body: query,
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          signal: AbortSignal.timeout(15000),
-        });
-        if (!res.ok) continue;
-
-        const data = await res.json();
-        if (!data.elements?.length) continue;
-
-        const scored = data.elements
-          .map((element) => ({
-            element,
-            score:
-              (element.type === "relation" ? 120 : element.type === "way" ? 80 : 20) +
-              (element.tags?.boundary === "administrative" ? 80 : 0) +
-              (element.tags?.place === "suburb" ? 60 : 0) +
-              (element.tags?.place === "neighbourhood" ? 40 : 0),
-          }))
-          .sort((a, b) => b.score - a.score);
-
-        const best = scored[0]?.element;
-        if (!best) continue;
-
-        const built = buildGeoJSONFromOverpass(best);
-        if (built) return built;
-      } catch {
-        // try next endpoint
-      }
-    }
-  }
-
-  return null;
-}
-
-function buildGeoJSONFromOverpass(element) {
-  if (element.type === "node") {
-    return {
-      lat: element.lat,
-      lon: element.lon,
-      geojson: null,
-      _source: "overpass-node",
-    };
-  }
-
-  if (element.type === "way" && element.geometry?.length) {
-    const coords = element.geometry.map((point) => [point.lon, point.lat]);
-    if (
-      coords[0][0] !== coords[coords.length - 1][0] ||
-      coords[0][1] !== coords[coords.length - 1][1]
-    ) {
-      coords.push(coords[0]);
-    }
-
-    const centroid = coords
-      .reduce((acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]], [0, 0])
-      .map((value) => value / coords.length);
-
-    return {
-      lat: centroid[1],
-      lon: centroid[0],
-      geojson: { type: "Polygon", coordinates: [coords] },
-      _source: "overpass-way",
-    };
-  }
-
-  if (element.type === "relation" && element.members) {
-    const outerRings = [];
-
-    for (const member of element.members) {
-      if (member.role === "outer" && member.geometry?.length) {
-        const coords = member.geometry.map((point) => [point.lon, point.lat]);
-        if (
-          coords[0][0] !== coords[coords.length - 1][0] ||
-          coords[0][1] !== coords[coords.length - 1][1]
-        ) {
-          coords.push(coords[0]);
-        }
-        outerRings.push(coords);
-      }
-    }
-
-    if (!outerRings.length) return null;
-
-    const allCoords = outerRings.flat();
-    const centroid = allCoords
-      .reduce((acc, coord) => [acc[0] + coord[0], acc[1] + coord[1]], [0, 0])
-      .map((value) => value / allCoords.length);
-
-    const geojson =
-      outerRings.length === 1
-        ? { type: "Polygon", coordinates: [outerRings[0]] }
-        : { type: "MultiPolygon", coordinates: outerRings.map((ring) => [ring]) };
-
-    return {
-      lat: centroid[1],
-      lon: centroid[0],
-      geojson,
-      _source: "overpass-relation",
-    };
-  }
-
-  return null;
-}
-
-/* ─── Phase 2: Nominatim — bounded city lookup with candidate scoring ─ */
+// Nominatim center-point lookup — only needs lat/lon, no polygon
 async function nominatimSuburbLookup(searchCandidates, cityName) {
   const bbox = CITY_BBOX[getCityKey(cityName)];
   if (!bbox) return null;
@@ -1234,9 +1096,8 @@ async function nominatimSuburbLookup(searchCandidates, cityName) {
     const params = new URLSearchParams({
       q: `${candidate}, ${cityName}, Australia`,
       format: "json",
-      limit: "10",
-      polygon_geojson: "1",
-      addressdetails: "1",
+      limit: "5",
+      addressdetails: "1",       // no polygon_geojson — we don't need it anymore
       "accept-language": "en",
       viewbox: `${west},${north},${east},${south}`,
       bounded: "1",
@@ -1244,74 +1105,71 @@ async function nominatimSuburbLookup(searchCandidates, cityName) {
 
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
-        signal: AbortSignal.timeout(12000),
+        signal: AbortSignal.timeout(5000),
       });
       if (!res.ok) continue;
 
       const results = await res.json();
-      if (!results.length) continue;
-
-      const inCity = results.filter((result) => {
-        const lat = parseFloat(result.lat);
-        const lon = parseFloat(result.lon);
+      const inCity = results.filter(r => {
+        const lat = parseFloat(r.lat), lon = parseFloat(r.lon);
         return lat >= south && lat <= north && lon >= west && lon <= east;
       });
 
-      for (const result of inCity) {
-        const score = scoreLookupResult(result);
-        if (score > bestScore) {
-          bestScore = score;
-          bestMatch = result;
-        }
+      for (const r of inCity) {
+        // Simple scoring: prefer place/suburb over road/building
+        let score = 0;
+        if (r.type === "suburb" || r.type === "neighbourhood") score += 100;
+        if (r.class === "place") score += 50;
+        if (r.class === "boundary") score += 40;
+        const rank = parseInt(r.place_rank || 30, 10);
+        if (rank >= 18 && rank <= 24) score += 30;
+        if (score > bestScore) { bestScore = score; bestMatch = r; }
       }
+
+      // First candidate that returns a usable result wins — no need to try all
+      if (bestMatch) break;
     } catch {
       // try next candidate
     }
+
+    // Respect Nominatim 1 req/s rate limit between candidates
+    await new Promise(r => setTimeout(r, 1100));
   }
 
   if (!bestMatch) return null;
-
-  return {
-    lat: parseFloat(bestMatch.lat),
-    lon: parseFloat(bestMatch.lon),
-    geojson: bestMatch.geojson || null,
-    _source: "nominatim",
-  };
+  return { lat: parseFloat(bestMatch.lat), lon: parseFloat(bestMatch.lon) };
 }
 
-/* ─── Main map builder ──────────────────────────────────────────────── */
+
 async function buildMap(suburbName, cityName) {
   const frame = document.getElementById("minimapFrame");
 
   try {
     if (minimapMap) {
-      try {
-        minimapMap.remove();
-      } catch {}
+      try { minimapMap.remove(); } catch {}
       minimapMap = null;
       minimapMarkers = [];
       minimapCenter = null;
       minimapBounds = null;
+      minimapRadius = 1500;
     }
 
+    // Try fixed coords first (CBD suburbs etc.)
     const fixed = ABS_FIXED_COORDS[suburbName];
     if (fixed) {
       minimapCenter = [fixed.lat, fixed.lon];
-      minimapBounds = null;
-      renderMap(frame, minimapCenter, null, fixed.zoom || 14);
+      renderMap(frame, minimapCenter, fixed.zoom || 14);
       return;
     }
 
+    // Only need the center point — no polygon boundary lookup
     const candidates = getOSMSearchCandidates(suburbName);
     if (!candidates.length) {
       frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
       return;
     }
 
-    let locationData = await overpassSuburbLookup(candidates, cityName);
-    if (!locationData) {
-      locationData = await nominatimSuburbLookup(candidates, cityName);
-    }
+    const locationData = await nominatimSuburbLookup(candidates, cityName);
 
     if (!locationData) {
       frame.innerHTML = `<div class="minimap-error">Could not locate ${suburbName} on the map.</div>`;
@@ -1319,14 +1177,14 @@ async function buildMap(suburbName, cityName) {
     }
 
     minimapCenter = [locationData.lat, locationData.lon];
-    renderMap(frame, minimapCenter, locationData.geojson, 14);
+    renderMap(frame, minimapCenter, 14);
   } catch (err) {
     frame.innerHTML = `<div class="minimap-error">Map failed to load. Please check your connection.</div>`;
     console.error("MiniMap error:", err);
   }
 }
 
-function renderMap(frame, center, geojson, defaultZoom) {
+function renderMap(frame, center, defaultZoom) {
   const mapEl = document.createElement("div");
   mapEl.id = "leafletMap";
   mapEl.style.cssText = "width:100%;height:380px;min-height:380px;display:block;";
@@ -1342,37 +1200,22 @@ function renderMap(frame, center, geojson, defaultZoom) {
     maxZoom: 19,
   }).addTo(minimapMap);
 
-  if (geojson && (geojson.type === "Polygon" || geojson.type === "MultiPolygon")) {
-    const boundaryLayer = L.geoJSON(geojson, {
-      style: {
-        color: "#735cff",
-        weight: 2.5,
-        opacity: 0.85,
-        dashArray: "6 4",
-        fillColor: "#735cff",
-        fillOpacity: 0.07,
-      },
-      interactive: false,
-    }).addTo(minimapMap);
+  // Always render a 3km circle around the suburb center — no polygon boundary lookup needed.
+  minimapBounds = null;
+  minimapRadius = 1500;
+  L.circle(center, {
+    radius: 1500,
+    color: "#735cff",
+    weight: 1.5,
+    dashArray: "6 4",
+    fillColor: "#735cff",
+    fillOpacity: 0.04,
+    interactive: false,
+  }).addTo(minimapMap);
+  minimapMap.setView(center, defaultZoom);
 
-    minimapBounds = boundaryLayer.getBounds();
-    minimapMap.fitBounds(minimapBounds, { padding: [20, 20] });
-  } else {
-    minimapBounds = null;
-    L.circle(center, {
-      radius: 1000,
-      color: "#735cff",
-      weight: 1.5,
-      dashArray: "6 4",
-      fillColor: "#735cff",
-      fillOpacity: 0.04,
-      interactive: false,
-    }).addTo(minimapMap);
-    minimapMap.setView(center, defaultZoom);
-  }
-
+  // Map opens with boundary only; POI loads on filter button click
   setTimeout(() => minimapMap.invalidateSize(), 300);
-  fetchAndRenderAll(center);
 }
 
 // ── POI category config ──────────────────────────────────────────────────────
@@ -1387,98 +1230,94 @@ const POI_CATEGORIES = {
 };
 
 // ── Overpass QL builder ──────────────────────────────────────────────────────
-function buildOverpassQuery(amenity, lat, lon, maxResults) {
+function buildOverpassQuery(amenity, lat, lon) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise 1km radius
-  let areaFilter;
-  if (minimapBounds) {
-    const sw = minimapBounds.getSouthWest();
-    const ne = minimapBounds.getNorthEast();
-    // Overpass bbox format: (south,west,north,east)
-    areaFilter = `(${sw.lat},${sw.lng},${ne.lat},${ne.lng})`;
-    const parts = cat.tags.map(tag => {
-      const [k, v] = tag.split("=");
-      return `node["${k}"="${v}"]${areaFilter};way["${k}"="${v}"]${areaFilter};`;
-    });
-    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
-  } else {
-    const parts = cat.tags.map(tag => {
-      const [k, v] = tag.split("=");
-      return `node["${k}"="${v}"](around:1000,${lat},${lon});way["${k}"="${v}"](around:1000,${lat},${lon});`;
-    });
-    return `[out:json][timeout:25];(${parts.join("")});out center ${maxResults};`;
-  }
+  const radius = minimapRadius || 1500;
+  const parts = cat.tags.map(tag => {
+    const [k, v] = tag.split("=");
+    return `node["${k}"="${v}"](around:${radius},${lat},${lon});way["${k}"="${v}"](around:${radius},${lat},${lon});`;
+  });
+  // No result cap — return everything within the radius
+  return `[out:json][timeout:30];(${parts.join("")});out center;`;
 }
 
 // ── fetch helpers ─────────────────────────────────────────────────────────────
-async function tryOverpassDirect(query) {
+async function tryOverpassDirect(query, signal) {
   const endpoints = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
   ];
   for (const url of endpoints) {
+    if (signal?.aborted) return null;
+    // Combine user abort with a per-request timeout so both are enforced
+    const timeout = AbortSignal.timeout(5000);
+    const combined = signal
+      ? AbortSignal.any([signal, timeout])
+      : timeout;
     try {
       const res = await fetch(url, {
         method: "POST", body: query,
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        signal: AbortSignal.timeout(12000),
+        signal: combined,
       });
       if (!res.ok) continue;
       const data = await res.json();
       if (data.elements?.length) return data.elements;
-    } catch { /* try next */ }
+    } catch (err) {
+      if (err.name === "AbortError" && signal?.aborted) throw err;
+      /* timeout or network error — try next endpoint */
+    }
   }
   return null;
 }
 
-async function tryOverpassViaProxy(query) {
+async function tryOverpassViaProxy(query, signal) {
   const encoded = encodeURIComponent("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query));
   const proxies = [
-    { url: `https://corsproxy.io/?url=${encoded}`,                        wrap: false },
-    { url: `https://api.allorigins.win/get?url=${encoded}`,               wrap: true  },
+    { url: `https://corsproxy.io/?url=${encoded}`,      wrap: false },
+    { url: `https://api.allorigins.win/get?url=${encoded}`, wrap: true  },
   ];
   for (const proxy of proxies) {
+    if (signal?.aborted) return null;
+    const timeout = AbortSignal.timeout(5000);
+    const combined = signal ? AbortSignal.any([signal, timeout]) : timeout;
     try {
-      const res = await fetch(proxy.url, { signal: AbortSignal.timeout(12000) });
+      const res = await fetch(proxy.url, { signal: combined });
       if (!res.ok) continue;
       const raw = proxy.wrap ? JSON.parse((await res.json()).contents) : await res.json();
       if (raw.elements?.length) return raw.elements;
-    } catch { /* try next */ }
+    } catch (err) {
+      if (err.name === "AbortError" && signal?.aborted) throw err;
+      /* timeout or network error — try next proxy */
+    }
   }
   return null;
 }
 
 // Nominatim nearby search — last resort, no Overpass needed
-async function tryNominatimNearby(amenity, lat, lon, maxResults) {
+async function tryNominatimNearby(amenity, lat, lon, signal) {
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return null;
 
-  // Use suburb boundary bbox if available, otherwise ~1km box
-  let viewbox;
-  if (minimapBounds) {
-    const sw = minimapBounds.getSouthWest();
-    const ne = minimapBounds.getNorthEast();
-    viewbox = `${sw.lng},${ne.lat},${ne.lng},${sw.lat}`;
-  } else {
-    const delta = 0.009;
-    viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
-  }
-  // Try each tag separately and merge results
+  const delta = (minimapRadius || 1500) / 111000;
+  const viewbox = `${lon - delta},${lat + delta},${lon + delta},${lat - delta}`;
+
   const allResults = [];
-  for (const tag of cat.tags.slice(0, 2)) { // limit to avoid rate limit
+  for (const tag of cat.tags.slice(0, 2)) {
+    if (signal?.aborted) break;
     const [k, v] = tag.split("=");
     const params = new URLSearchParams({
-      format: "json", limit: String(maxResults),
+      format: "json", limit: "50",
       viewbox, bounded: "1",
-      [`${k}`]: v,
+      [k]: v,
       "accept-language": "en",
     });
     try {
       const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
         headers: { "Accept-Language": "en" },
-        signal: AbortSignal.timeout(10000),
+        signal: signal ?? AbortSignal.timeout(5000),
       });
       if (!res.ok) continue;
       const items = await res.json();
@@ -1491,62 +1330,75 @@ async function tryNominatimNearby(amenity, lat, lon, maxResults) {
           });
         }
       });
-      // small delay between Nominatim requests to respect rate limit
-      await new Promise(r => setTimeout(r, 300));
-    } catch { /* try next tag */ }
+      // Respect Nominatim 1 req/s rate limit
+      await new Promise(r => setTimeout(r, 1100));
+    } catch (err) {
+      if (err.name === "AbortError") throw err;
+      /* try next tag */
+    }
   }
   return allResults.length ? allResults : null;
 }
 
 // ── main render functions ────────────────────────────────────────────────────
-async function fetchAndRenderAll(center) {
-  minimapMarkers.forEach(m => m.remove());
-  minimapMarkers = [];
-  const allCategories = Object.keys(POI_CATEGORIES);
-  for (const cat of allCategories) {
-    await fetchAndRenderPOI(cat, center, 5, true);
-  }
-}
 
-async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = false) {
-  if (!skipClear) {
-    minimapMarkers.forEach(m => m.remove());
-    minimapMarkers = [];
-  }
+// Renders markers for a single POI category.
+// Cancels any in-flight request before starting a new one (debounce via AbortController).
+async function fetchAndRenderPOI(amenity, center) {
+  // Cancel previous in-flight request
+  if (minimapPoiAbortCtrl) minimapPoiAbortCtrl.abort();
+  minimapPoiAbortCtrl = new AbortController();
+  const signal = minimapPoiAbortCtrl.signal;
+
+  clearMinimapMarkers();
+
   if (!amenity) return;
-
   const cat = POI_CATEGORIES[amenity];
   if (!cat) return;
 
-  // 按钮 loading（单独类别点击时才更新）
-  const activeBtn = skipClear ? null : document.querySelector(".minimap-filter-btn.active");
+  const loadingBtn = document.querySelector(".minimap-filter-btn.active");
   let originalHTML = "";
-  if (activeBtn) {
-    originalHTML = activeBtn.innerHTML;
-    activeBtn.disabled = true;
-    activeBtn.innerHTML = originalHTML + " ⏳";
+  if (loadingBtn) {
+    originalHTML = loadingBtn.innerHTML;
+    loadingBtn.disabled = true;
+    loadingBtn.innerHTML = originalHTML + " ⏳";
   }
 
   const [lat, lon] = center;
-  const query = buildOverpassQuery(amenity, lat, lon, maxResults);
+  const query = buildOverpassQuery(amenity, lat, lon);
   let elements = null;
 
-  // 1️⃣ Direct Overpass request
-  if (query) elements = await tryOverpassDirect(query);
+  try {
+    const sources = [];
 
-  // 2️⃣ Overpass via CORS proxy
-  if (!elements && query) elements = await tryOverpassViaProxy(query);
-
-  // 3️⃣ Nominatim fallback
-  if (!elements) {
-    const nominatimResults = await tryNominatimNearby(amenity, lat, lon, maxResults);
-    if (nominatimResults) {
-      // convert to same shape as Overpass elements
-      elements = nominatimResults.map(r => ({ lat: r.lat, lon: r.lon, tags: { name: r.name } }));
+    if (query) {
+      sources.push(
+        tryOverpassDirect(query, signal)
+          .then(r => { if (!r?.length) throw new Error("no results"); return r; })
+      );
+      sources.push(
+        tryOverpassViaProxy(query, signal)
+          .then(r => { if (!r?.length) throw new Error("no results"); return r; })
+      );
     }
+
+    sources.push(
+      tryNominatimNearby(amenity, lat, lon, signal)
+        .then(r => {
+          if (!r?.length) throw new Error("no results");
+          return r.map(item => ({ lat: item.lat, lon: item.lon, tags: { name: item.name } }));
+        })
+    );
+
+    elements = await Promise.any(sources);
+  } catch (err) {
+    // AggregateError = all sources failed; AbortError = user switched filter
+    if (err.name !== "AggregateError") return;
   }
 
-  // 渲染标记
+  if (signal.aborted) return;
+
+  // Render markers
   if (elements && elements.length) {
     elements.forEach(el => {
       const elLat = el.lat ?? el.center?.lat;
@@ -1561,8 +1413,7 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
         .bindPopup(`<strong>${el.tags?.name || el.tags?.["name:en"] || cat.label}</strong>`);
       minimapMarkers.push(marker);
     });
-  } else if (!skipClear) {
-    // All fallbacks failed — show a brief toast on the map
+  } else {
     const frame = document.getElementById("minimapFrame");
     if (frame) {
       const msg = document.createElement("div");
@@ -1574,9 +1425,11 @@ async function fetchAndRenderPOI(amenity, center, maxResults = 20, skipClear = f
     }
   }
 
-  if (activeBtn) {
-    activeBtn.disabled = false;
-    activeBtn.innerHTML = originalHTML;
+  if (loadingBtn && loadingBtn.classList.contains("active")) {
+    loadingBtn.disabled = false;
+    loadingBtn.innerHTML = originalHTML;
+  } else if (loadingBtn) {
+    loadingBtn.disabled = false;
   }
 }
 
